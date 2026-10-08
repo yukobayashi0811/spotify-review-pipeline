@@ -43,6 +43,59 @@ FINAL_EVALUATION = "evals/golden_final_evaluation.json"
 FINAL_CASES = "evals/golden_final_evaluation_cases.csv"
 
 
+NEEDS_REVIEW_ANALYSIS = "evals/golden_needs_review_analysis.json"
+
+
+def needs_review_analysis(prediction_files: list[str], case_files: list[str]) -> dict:
+    """Evaluates each model's needs_review flag as a predictor of its own label errors.
+
+    A row counts as a label error when topic, intent or exact severity differs from the
+    human Golden label. The flag is useful when flagged rows are wrong more often than
+    unflagged rows.
+    """
+    gold = list(read_csv(GOLDEN))
+    result: dict = {}
+    for predictions, cases in zip(prediction_files, case_files):
+        with (ROOT / predictions).open(encoding="utf-8-sig", newline="") as stream:
+            flags = {row["review_id"]: row["needs_review"].strip().lower() == "true"
+                     for row in csv.DictReader(stream)}
+        with (ROOT / cases).open(encoding="utf-8", newline="") as stream:
+            errors = {row["review_id"]: not (row["topic_match"] == row["intent_match"]
+                                             == row["severity_match"] == "True")
+                      for row in csv.DictReader(stream)}
+        flagged = [rid for rid in errors if flags[rid]]
+        unflagged = [rid for rid in errors if not flags[rid]]
+        wrong = [rid for rid in errors if errors[rid]]
+        rate = lambda ids: round(sum(errors[i] for i in ids) / len(ids), 6) if ids else None
+        result[predictions] = {
+            "cases": len(errors),
+            "flagged": len(flagged),
+            "label_error_rows": len(wrong),
+            "error_rate_when_flagged": rate(flagged),
+            "error_rate_when_not_flagged": rate(unflagged),
+            "share_of_error_rows_flagged": round(sum(flags[i] for i in wrong) / len(wrong), 6) if wrong else None,
+            "share_of_flagged_rows_with_error": rate(flagged),
+        }
+    unclear = [row["review_id"] for row in gold if row["intent"] == "unclear"]
+    return {
+        "status": "completed",
+        "model_calls": 0,
+        "golden_labels_sha256": file_sha(GOLDEN),
+        "label_error_definition": "topic, intent or exact severity differs from the human Golden label",
+        "method": (
+            "needs_review is evaluated as a prediction of the model's own label errors: error rates "
+            "are compared between rows the model flagged and rows it did not flag."
+        ),
+        "prediction_sets": result,
+        "ambiguous_cases": {
+            "definition": "Golden reviews whose human intent label is `unclear` (no complaint, request, praise or departure supported by the text)",
+            "count": len(unclear),
+            "review_ids": unclear,
+        },
+        "note": "Fifty cases are a small diagnostic sample; differences of a few rows are within noise.",
+    }
+
+
 def load(path: str) -> dict:
     return json.loads((ROOT / path).read_text(encoding="utf-8"))
 
@@ -170,13 +223,17 @@ def main() -> None:
             check = {**check, "detail": file_sha(GOLDEN), "passed": True}
         elif check["name"] == "golden_evaluation_saved":
             check = {**check, "detail": reports["experiments/distilled/hybrid-golden-50-v1/golden_predictions.csv"]["agreement"], "passed": True}
-        elif check["name"] == "post_completion_comparison":
-            continue
         checks.append(check)
     validation["checks"] = checks
     validation["checks_total"] = len(checks)
     validation["checks_passed"] = sum(bool(c["passed"]) for c in checks)
     dump("experiments/distilled/validation.json", validation)
+
+    analysis = needs_review_analysis([*[p for p, _, _ in SAVED_SETS], FINAL_PREDICTIONS],
+                                     [*[c for _, _, c in SAVED_SETS], FINAL_CASES])
+    dump(NEEDS_REVIEW_ANALYSIS, analysis)
+    print("needs_review (final):", analysis["prediction_sets"][FINAL_PREDICTIONS])
+    print("ambiguous cases:", analysis["ambiguous_cases"]["count"])
 
     for predictions, report in {**reports, FINAL_PREDICTIONS: final}.items():
         a = report["agreement"]

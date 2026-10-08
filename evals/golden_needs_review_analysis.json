@@ -1,0 +1,91 @@
+{
+  "status": "completed",
+  "model_calls": 0,
+  "golden_labels_sha256": "c41cd56359d9069a4eeb799a9d7b57e09ff59fa360b4a47cc237bdb40d415dd5",
+  "label_error_definition": "topic, intent or exact severity differs from the human Golden label",
+  "method": "needs_review is evaluated as a prediction of the model's own label errors: error rates are compared between rows the model flagged and rows it did not flag.",
+  "prediction_sets": {
+    "evals/golden_predictions_local_gemma.csv": {
+      "cases": 50,
+      "flagged": 1,
+      "label_error_rows": 25,
+      "error_rate_when_flagged": 0.0,
+      "error_rate_when_not_flagged": 0.510204,
+      "share_of_error_rows_flagged": 0.0,
+      "share_of_flagged_rows_with_error": 0.0
+    },
+    "experiments/codex_3agent/quality-50-batch50-single/predictions.csv": {
+      "cases": 50,
+      "flagged": 9,
+      "label_error_rows": 16,
+      "error_rate_when_flagged": 0.444444,
+      "error_rate_when_not_flagged": 0.292683,
+      "share_of_error_rows_flagged": 0.25,
+      "share_of_flagged_rows_with_error": 0.444444
+    },
+    "experiments/codex_3agent/quality-50-parallel/predictions.csv": {
+      "cases": 50,
+      "flagged": 7,
+      "label_error_rows": 18,
+      "error_rate_when_flagged": 0.571429,
+      "error_rate_when_not_flagged": 0.325581,
+      "share_of_error_rows_flagged": 0.222222,
+      "share_of_flagged_rows_with_error": 0.571429
+    },
+    "experiments/hybrid/quality-50-local-luna-v3/predictions.csv": {
+      "cases": 50,
+      "flagged": 10,
+      "label_error_rows": 24,
+      "error_rate_when_flagged": 0.7,
+      "error_rate_when_not_flagged": 0.425,
+      "share_of_error_rows_flagged": 0.291667,
+      "share_of_flagged_rows_with_error": 0.7
+    },
+    "experiments/hybrid/quality-50-local-luna-v3/local_predictions.csv": {
+      "cases": 50,
+      "flagged": 5,
+      "label_error_rows": 25,
+      "error_rate_when_flagged": 0.6,
+      "error_rate_when_not_flagged": 0.488889,
+      "share_of_error_rows_flagged": 0.12,
+      "share_of_flagged_rows_with_error": 0.6
+    },
+    "experiments/distilled/pilot-v1/golden_50_predictions.csv": {
+      "cases": 50,
+      "flagged": 13,
+      "label_error_rows": 28,
+      "error_rate_when_flagged": 0.923077,
+      "error_rate_when_not_flagged": 0.432432,
+      "share_of_error_rows_flagged": 0.428571,
+      "share_of_flagged_rows_with_error": 0.923077
+    },
+    "experiments/distilled/hybrid-golden-50-v1/golden_predictions.csv": {
+      "cases": 50,
+      "flagged": 12,
+      "label_error_rows": 27,
+      "error_rate_when_flagged": 0.833333,
+      "error_rate_when_not_flagged": 0.447368,
+      "share_of_error_rows_flagged": 0.37037,
+      "share_of_flagged_rows_with_error": 0.833333
+    },
+    "evals/golden_final_predictions.csv": {
+      "cases": 50,
+      "flagged": 15,
+      "label_error_rows": 24,
+      "error_rate_when_flagged": 0.8,
+      "error_rate_when_not_flagged": 0.342857,
+      "share_of_error_rows_flagged": 0.5,
+      "share_of_flagged_rows_with_error": 0.8
+    }
+  },
+  "ambiguous_cases": {
+    "definition": "Golden reviews whose human intent label is `unclear` (no complaint, request, praise or departure supported by the text)",
+    "count": 3,
+    "review_ids": [
+      "44129679-31a0-4108-9314-086a3456f6ae",
+      "f4c8146a-d5c8-4168-b00e-21af666afc6a",
+      "283b5843-a992-464f-b1dc-9dc7281ff390"
+    ]
+  },
+  "note": "Fifty cases are a small diagnostic sample; differences of a few rows are within noise."
+}

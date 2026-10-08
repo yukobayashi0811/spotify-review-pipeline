@@ -48,6 +48,10 @@ PYTHONPATH=src python3 scripts/rescore_golden.py
 
 Most severity disagreements are one point: the final labels give 3 where the human label is 4 (blocked playback or song selection) and 2 where the human label is 1 (generic criticism with no reported functional problem). The six Luna-labeled rows are too few for a separate accuracy claim.
 
+## needs_review as a prediction
+
+`golden_needs_review_analysis.json` evaluates each model's `needs_review` flag as a prediction of its own label errors (topic, intent or exact severity differing from the human label). For the final labels, the flag was set on 15 of the 50 Golden reviews: 80% of flagged rows had a label error, against 34% of unflagged rows, and the flag caught 12 of the 24 rows with an error. The flag is therefore a useful review queue but misses half of the errors. Three Golden reviews carry the human intent label `unclear` (no complaint, request, praise or departure supported by the text); they are counted as the ambiguous cases.
+
 ## Development evaluations
 
 | Saved predictions | Evaluation | Topic | Intent | Severity exact |
