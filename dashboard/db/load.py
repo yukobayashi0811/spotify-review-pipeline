@@ -33,6 +33,17 @@ SOURCE_FIELDS = ["review_id", "review_text", "review_rating", "review_likes", "a
 EXPECTED = {"source_rows": 660622, "completed": 660609, "quarantined": 13, "membership_rows": 288524}
 
 
+# Refreshed in dependency order after the COPY (topic_rollup reads issue_ranking).
+MATERIALIZED_VIEWS = (
+    "issue_ranking",
+    "topic_rollup",
+    "monthly_trend",
+    "corpus_counts",
+    "label_source_counts",
+    "issue_member_order",
+)
+
+
 def canonical(value) -> str:
     # Same convention as check_submission.py row_sha().
     return json.dumps(value, ensure_ascii=False, separators=(",", ":"), sort_keys=True, allow_nan=False)
@@ -289,9 +300,20 @@ def main() -> int:
                     "INSERT INTO spotify.run_facts VALUES (%s,%s,%s)",
                     (key, json.dumps(value, ensure_ascii=False), source_file),
                 )
+            # Materialized views are computed by PostgreSQL from the rows just loaded.
+            for view in MATERIALIZED_VIEWS:
+                cur.execute(f"REFRESH MATERIALIZED VIEW spotify.{view}")
         conn.commit()
         conn.autocommit = True
+        # VACUUM sets the visibility map after the bulk COPY; ANALYZE refreshes planner stats.
+        conn.execute("VACUUM (ANALYZE) spotify.reviews")
+        conn.execute("VACUUM (ANALYZE) spotify.issue_membership")
         conn.execute("ANALYZE")
+        # The schema is recreated on every load, so re-grant the read-only API role if it exists.
+        if conn.execute("SELECT 1 FROM pg_roles WHERE rolname = 'dashboard_reader'").fetchone():
+            conn.execute("GRANT USAGE ON SCHEMA spotify TO dashboard_reader")
+            conn.execute("GRANT SELECT ON ALL TABLES IN SCHEMA spotify TO dashboard_reader")
+            print("Re-granted read access to dashboard_reader.", flush=True)
 
         print("Verifying database against the committed export ...", flush=True)
         checks: dict[str, dict] = {}

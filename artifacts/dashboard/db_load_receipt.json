@@ -1,11 +1,11 @@
 {
   "status": "pass",
-  "loaded_at_utc": "2026-10-08T01:51:21+00:00",
+  "loaded_at_utc": "2026-10-08T02:14:31+00:00",
   "model_calls": 0,
   "database": {
     "server_version": "17.11",
     "schema": "spotify",
-    "total_relation_size": "262 MB"
+    "total_relation_size": "302 MB"
   },
   "input_files_sha256": {
     "data/spotify_reviews_18months.csv": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
@@ -141,6 +141,6 @@
       "passed": true
     }
   },
-  "wall_seconds": 256.853,
+  "wall_seconds": 362.105,
   "note": "The connection string is intentionally not recorded."
 }

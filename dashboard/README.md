@@ -8,7 +8,9 @@ committed outputs (grading/, artifacts/full_run_v2/, evals/, cost/) + raw CSV
         ▼
 PostgreSQL on Supabase, schema `spotify`
   reviews (660,622) · issue_membership (288,524) · issues (41) · memo · claims · memo_evidence · run_facts
-  views: issue_ranking · topic_rollup · monthly_trend   ← computed from reviews + membership
+  materialized views: issue_ranking · topic_rollup · monthly_trend · corpus_counts
+                      · label_source_counts · issue_member_order
+                      ← computed by PostgreSQL from reviews + membership at load time
         │  read-only role `dashboard_reader`, server-side connection only
         ▼
 Vercel serverless functions  /api/overview /api/ranking /api/topics /api/trend
@@ -32,9 +34,9 @@ No page or API route calls a model. The recommendation text was produced once by
    ./.venv/bin/python dashboard/db/load.py
    ```
 
-   The loader checks the raw CSV SHA-256, re-derives every `source_sha256`, recreates the `spotify` schema, loads all tables in one transaction, recomputes the ranking, topic rollup and memo claims in SQL, and writes `artifacts/dashboard/db_load_receipt.json`. It exits non-zero if any check fails. Locally it loads in about 35 seconds and uses about 260 MB.
+   The loader checks the raw CSV SHA-256, re-derives every `source_sha256`, recreates the `spotify` schema, loads all tables in one transaction, refreshes the materialized views, recomputes the ranking, topic rollup and memo claims in SQL, re-grants the read-only role if it exists, and writes `artifacts/dashboard/db_load_receipt.json`. It exits non-zero if any check fails. Locally it loads in about 40 seconds; against a Supabase free-tier project from a laptop it took about 4 minutes. It uses about 260 MB.
 
-4. In the Supabase SQL editor, run `dashboard/db/roles.sql` after replacing the password. Re-run its `GRANT` lines after any reload, because the loader recreates the schema.
+4. In the Supabase SQL editor, run `dashboard/db/roles.sql` after replacing the password. Later reloads re-grant read access to `dashboard_reader` automatically.
 
 The `spotify` schema is not exposed through Supabase's public Data API, so the anon key cannot read it.
 
@@ -64,7 +66,7 @@ DATABASE_URL='postgres://...' DATABASE_SSL=disable npm run dev   # http://localh
 
 | Path | Purpose |
 |---|---|
-| `db/schema.sql` | Tables, constraints and the computed views |
+| `db/schema.sql` | Tables, constraints and the materialized views |
 | `db/load.py` | Loader and database-side verification (receipt in `artifacts/dashboard/`) |
 | `db/roles.sql` | Read-only role for the deployed backend |
 | `api/*.js` | Serverless backend; `api/_lib/db.js` holds the shared connection |

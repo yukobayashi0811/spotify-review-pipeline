@@ -124,11 +124,16 @@ CREATE TABLE spotify.run_facts (
 
 CREATE INDEX membership_issue_idx ON spotify.issue_membership (issue_id);
 
+-- The aggregates below are MATERIALIZED VIEWS: PostgreSQL computes them from the
+-- stored `reviews` and `issue_membership` rows when db/load.py refreshes them after
+-- loading, so the API reads small precomputed relations instead of scanning
+-- 660,622 rows on every request. The loader then checks them against the export.
+
 -- Baseline ranking recomputed from processed data:
 --   priority_score = severity_sum = complaint_count * mean_severity
 -- Completed complaint/cancellation records only; ties broken by issue ID.
 -- numeric round() rounds half away from zero, i.e. half-up for these positive means.
-CREATE VIEW spotify.issue_ranking AS
+CREATE MATERIALIZED VIEW spotify.issue_ranking AS
 WITH agg AS (
     SELECT m.issue_id,
            count(*)::integer        AS complaint_count,
@@ -144,10 +149,11 @@ SELECT row_number() OVER (ORDER BY a.severity_sum DESC, a.issue_id ASC)::integer
        a.severity_sum,
        to_char(round(a.severity_sum::numeric / a.complaint_count, 6), 'FM999990.000000') AS mean_severity,
        a.severity_sum AS priority_score
-FROM agg a;
+FROM agg a
+WITH NO DATA;
 
 -- Topic rollup of the same baseline (an analytical view, not a claims metric).
-CREATE VIEW spotify.topic_rollup AS
+CREATE MATERIALIZED VIEW spotify.topic_rollup AS
 WITH agg AS (
     SELECT i.topic,
            sum(ir.complaint_count)::integer AS complaint_count,
@@ -161,14 +167,52 @@ SELECT row_number() OVER (ORDER BY severity_sum DESC, topic ASC)::integer AS ran
        topic, issue_count, complaint_count, severity_sum,
        to_char(round(severity_sum::numeric / complaint_count, 6), 'FM999990.000000') AS mean_severity,
        severity_sum AS priority_score
-FROM agg;
+FROM agg
+WITH NO DATA;
 
 -- Monthly volume and complaint share (first and last calendar months are partial).
-CREATE VIEW spotify.monthly_trend AS
+CREATE MATERIALIZED VIEW spotify.monthly_trend AS
 SELECT to_char(date_trunc('month', review_timestamp), 'YYYY-MM') AS month,
        count(*)::integer AS source_rows,
        count(*) FILTER (WHERE status = 'completed')::integer AS completed,
        count(*) FILTER (WHERE status = 'completed' AND intent IN ('complaint', 'cancellation'))::integer AS complaint_or_cancellation
 FROM spotify.reviews
 GROUP BY 1
-ORDER BY 1;
+ORDER BY 1
+WITH NO DATA;
+
+CREATE UNIQUE INDEX issue_ranking_issue_idx ON spotify.issue_ranking (issue_id);
+
+-- Corpus-level counts shown on the dashboard and by /api/health.
+CREATE MATERIALIZED VIEW spotify.corpus_counts AS
+SELECT (SELECT count(*) FROM spotify.reviews)::integer AS source_rows,
+       (SELECT count(*) FROM spotify.reviews WHERE status = 'completed')::integer AS completed,
+       (SELECT count(*) FROM spotify.reviews WHERE status = 'quarantined')::integer AS quarantined,
+       (SELECT count(*) FROM spotify.reviews WHERE cache_source_id IS NOT NULL)::integer AS exact_text_reused_rows,
+       (SELECT count(*) FROM spotify.reviews
+         WHERE status = 'completed' AND intent IN ('complaint', 'cancellation'))::integer AS complaint_or_cancellation,
+       (SELECT count(*) FROM spotify.issue_membership)::integer AS issue_memberships,
+       (SELECT count(*) FROM spotify.issues)::integer AS issues
+WITH NO DATA;
+
+-- Final label source per completed row (Luna teacher vs local classifier).
+CREATE MATERIALIZED VIEW spotify.label_source_counts AS
+SELECT lc.label_source, lc.model, count(*)::integer AS n
+FROM spotify.reviews r JOIN spotify.label_configs lc USING (label_config_id)
+GROUP BY lc.label_source, lc.model
+WITH NO DATA;
+
+-- Member ordering for issue drill-downs: a stable pseudo-random sample order
+-- (md5 of the review ID) and a severity order, so paging never sorts a whole issue.
+CREATE MATERIALIZED VIEW spotify.issue_member_order AS
+SELECT m.issue_id,
+       m.review_id,
+       r.severity,
+       row_number() OVER (PARTITION BY m.issue_id ORDER BY md5(m.review_id::text))::integer AS sample_order,
+       row_number() OVER (PARTITION BY m.issue_id ORDER BY r.severity DESC, m.review_id)::integer AS severity_order
+FROM spotify.issue_membership m
+JOIN spotify.reviews r USING (review_id)
+WITH NO DATA;
+
+CREATE INDEX member_sample_idx ON spotify.issue_member_order (issue_id, sample_order);
+CREATE INDEX member_severity_idx ON spotify.issue_member_order (issue_id, severity_order);

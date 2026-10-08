@@ -15,7 +15,7 @@ This repository is the runnable submission for **Final Assignment – Multi Agen
 - Independent verification: 400 distinct texts (300 local-labeled, 100 Luna test-retest), 192 recorded disagreements; local-stratum agreement topic 72.5%, intent 83.8%, exact severity 74.1%.
 - Cost: the saved Luna calls replay to an estimated $0.46379610 at standard API rates (calls were subscription-authenticated, so this is not an invoice); per-bucket usage and stage times are in [full_run_actuals.md](cost/full_run_actuals.md).
 - Final grading self-check: pass. Unit tests: 40/40 pass.
-- Live dashboard: **URL to be added after deployment** (public, no sign-in). See [Dashboard, backend and database](#dashboard-backend-and-database).
+- Live dashboard: **https://spotify-review-pipeline-dashboard.vercel.app** (public, no sign-in). See [Dashboard, backend and database](#dashboard-backend-and-database).
 - Evaluation requirement: the assignment-required Golden 50 workflow is complete. A later supplemental held-out 60 proposal is not part of the authoritative assignment contract and is out of scope for submission.
 
 The durable status receipt is [run_report.json](artifacts/full_run_v2/run_report.json). The final memo is [memo.md](memo.md).
@@ -54,7 +54,7 @@ Run offline checks:
 
 The saved full-corpus results are served from a database through a deployed backend to a public dashboard. No page or API route calls a model.
 
-- **Database:** PostgreSQL (Supabase), schema `spotify`: all 660,622 records, 288,524 issue memberships, 41 issues, memo, claims, memo evidence and run facts. Ranking, topic rollup and monthly trend are SQL views computed from the stored records and membership.
+- **Database:** PostgreSQL (Supabase), schema `spotify`: all 660,622 records, 288,524 issue memberships, 41 issues, memo, claims, memo evidence and run facts. Ranking, topic rollup, monthly trend and corpus counts are materialized views that PostgreSQL computes from the stored records and membership at load time; the loader then checks them against the export.
 - **Backend:** Vercel serverless functions (`dashboard/api/`) that query the database through a read-only role and return JSON.
 - **Dashboard:** `dashboard/public/`, served by the same deployment. It shows overall metrics, the issue ranking, topic and monthly complaint share, the memo recommendation with every cited number rechecked against the database, issue drill-downs with member reviews, review lookup, and the evaluation results.
 

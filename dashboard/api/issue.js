@@ -14,21 +14,21 @@ export default route(async (query) => {
     WHERE i.issue_id = ${id}`;
   if (!issue) return { __status: 404, error: 'issue_not_found' };
   const severity = await sql`
-    SELECT r.severity, count(*)::int AS n
-    FROM spotify.issue_membership m JOIN spotify.reviews r USING (review_id)
-    WHERE m.issue_id = ${id} GROUP BY r.severity ORDER BY r.severity`;
+    SELECT severity, count(*)::int AS n
+    FROM spotify.issue_member_order
+    WHERE issue_id = ${id} GROUP BY severity ORDER BY severity`;
   const evidence = await sql`
     SELECT e.ordinal, e.review_id, e.severity, e.evidence_quote, r.review_text, r.intent, r.review_timestamp
     FROM spotify.memo_evidence e JOIN spotify.reviews r USING (review_id)
     WHERE e.issue_id = ${id} ORDER BY e.ordinal`;
+  const rankColumn = order === 'severity' ? sql`o.severity_order` : sql`o.sample_order`;
   const members = await sql`
     SELECT r.review_id, r.severity, r.intent, r.sentiment, r.evidence_quote, r.review_text,
            r.review_rating, r.review_timestamp, lc.label_source, r.cache_source_id
-    FROM spotify.issue_membership m
+    FROM spotify.issue_member_order o
     JOIN spotify.reviews r USING (review_id)
     LEFT JOIN spotify.label_configs lc USING (label_config_id)
-    WHERE m.issue_id = ${id}
-    ORDER BY ${order === 'severity' ? sql`r.severity DESC, r.review_id ASC` : sql`md5(r.review_id::text) ASC`}
-    LIMIT ${limit} OFFSET ${offset}`;
+    WHERE o.issue_id = ${id} AND ${rankColumn} > ${offset} AND ${rankColumn} <= ${offset + limit}
+    ORDER BY ${rankColumn}`;
   return { issue, severity_distribution: severity, memo_evidence: evidence, members, order, limit, offset };
 });
