@@ -1,13 +1,14 @@
 {
   "status": "pass",
-  "checked_at_utc": "2026-10-08T02:16:34.248Z",
+  "checked_at_utc": "2026-10-08T02:29:34.450Z",
   "dashboard_url": "https://spotify-review-pipeline-dashboard.vercel.app",
+  "deployed_commit": "b1fd442a6430151456f61f4edd7c8800f746e8b9",
   "model_calls": 0,
   "response_ms": {
-    "health": 263,
-    "overview": 26157,
-    "ranking": 720,
-    "recommendation": 775
+    "health": 262,
+    "overview": 342,
+    "ranking": 57,
+    "recommendation": 69
   },
   "checks": {
     "page_served": {
@@ -19,7 +20,8 @@
       "body": {
         "ok": true,
         "database": "postgresql",
-        "checked_at": "2026-10-08T02:16:08.204Z",
+        "commit": "b1fd442a6430151456f61f4edd7c8800f746e8b9",
+        "checked_at": "2026-10-08T02:29:34.294Z",
         "reviews": 660622,
         "memberships": 288524,
         "issues": 41
