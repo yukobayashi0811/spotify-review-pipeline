@@ -73,6 +73,7 @@ const receipt = {
   status: passed ? 'pass' : 'fail',
   checked_at_utc: new Date().toISOString(),
   dashboard_url: base,
+  deployed_commit: health.body.commit ?? null,
   model_calls: 0,
   response_ms: { health: health.ms, overview: overview.ms, ranking: ranking.ms, recommendation: reco.ms },
   checks,
