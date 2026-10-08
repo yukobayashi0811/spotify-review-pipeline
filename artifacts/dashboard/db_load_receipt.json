@@ -1,0 +1,146 @@
+{
+  "status": "pass",
+  "loaded_at_utc": "2026-10-08T01:51:21+00:00",
+  "model_calls": 0,
+  "database": {
+    "server_version": "17.11",
+    "schema": "spotify",
+    "total_relation_size": "262 MB"
+  },
+  "input_files_sha256": {
+    "data/spotify_reviews_18months.csv": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+    "grading/records.jsonl": "8d8c5c51962c717804964008868a836b7951da17bc00a5e21f0510f7fb24d2f1",
+    "grading/run.json": "09bf8e059a1517c9fd5d01d2ab9f43731b5c8f0f9d51da89daa40288a574645e",
+    "grading/ingestion.json": "5512dd793b0bde3bd51f28b20b440108f3c9bab31233819bea5f32ce19482153",
+    "grading/membership.csv": "9c2811ed0aa838fb0a2c80d7a961e60c62bddfc1fb8ac89dd90904582699da01",
+    "grading/ranking.csv": "c67156b1ec71eba2d497e560d612ec65f3941f10ca47ec787a19d204d34f8653",
+    "grading/claims.csv": "2faf10251d3b191c7dbbc135bde7ae96f1f24f4f7813db5cd6988ac6384f14f8",
+    "grading/calls.jsonl": "00f74bfe9b7a7b9ffbfe34238ee81d864b311acafaa097ea53121345cb9fac81",
+    "artifacts/full_run_v2/issues.csv": "215765bf5e131c6517c7e22b021b959cee75fa7a0c87d00bed896737b023255d",
+    "artifacts/full_run_v2/claims_provenance.csv": "ab0a33c59d6f97d9c7dc1fb690ef2a0e08ada0965e40df6d9b1e6b929af903c4",
+    "artifacts/full_run_v2/memo_payload.json": "1bc5d8c49333e8af99b7d669496a7e538116dcb7f4972a25835535d987fc10e6",
+    "artifacts/full_run_v2/memo_evidence_pack.json": "1ca523168c4abc24fbf61e264c4b468f69f4b4100841d35e0b39c6c7902efbee",
+    "artifacts/full_run_v2/memo.md": "e7a7826dd837368bbde791f49e57a3e081b525a14d4ec2c83e620910d0ac60e7",
+    "artifacts/full_run_v2/topic_rollup.csv": "45cfa0c50d18d457aab63be7132788df4eace29409a938acabc4d39d780ca4d2",
+    "artifacts/full_run_v2/run_report.json": "d26911b2e37ded279efd07e811ffe52fff88491af468c29c73709bf61b2aca32",
+    "artifacts/full_run_v2/sensitivity_analysis.json": "d14e96b0c6b63d5cd40e54db90d5563203a31f4986061d7bacca2af533f6f433",
+    "artifacts/full_run_v2/grouping_comparison.json": "aad8ea04863a8d9823f219ff9784c261f858eafa9f75ba7564d5dbc9bc019238",
+    "evals/verification_final/verification_relinked_report.json": "a9b1295ffb6a109c2baff06500c044a5a27b6fade7c05965c4ee15374a6a3986",
+    "evals/system_tests/system_test_report.json": "66178a5df2f4426421cddce9f97da0b96052db8f54816c84deb68aeed7723413",
+    "evals/recovery/interrupt_resume_check.json": "5fae997b695e975131662501a6122d2ac7cfc2f50e9298cc7085cc767a52cee5",
+    "cost/report.json": "97c196e3ea84f15149a512ec4068a1669ba6ef6b5f6fd618964c15b1fa27c7bc",
+    "cost/full_run_actuals.json": "5398e2fad720ac48bd02392f3cd0bee5fa9fed00532781500732c42b9d363b91",
+    "evals/golden_final_evaluation.json": "77cc9771d0e40d56bd4d298d129317c7326f0263389ce00972c9f0344efa9fb8"
+  },
+  "checks": {
+    "row_counts": {
+      "expected": {
+        "source_rows": 660622,
+        "completed": 660609,
+        "quarantined": 13,
+        "membership_rows": 288524
+      },
+      "actual": {
+        "completed": 660609,
+        "quarantined": 13,
+        "source_rows": 660622,
+        "membership_rows": 288524
+      },
+      "passed": true
+    },
+    "source_sha256_matches_raw_csv": {
+      "mismatches": 0,
+      "passed": true
+    },
+    "ranking_recomputed_in_db_equals_grading_ranking_csv": {
+      "issues": 41,
+      "passed": true
+    },
+    "claims_recomputed_in_db": {
+      "claims": [
+        {
+          "claim_id": "C001",
+          "expected": "28348",
+          "db": "28348",
+          "passed": true
+        },
+        {
+          "claim_id": "C002",
+          "expected": "2.868351",
+          "db": "2.868351",
+          "passed": true
+        },
+        {
+          "claim_id": "C003",
+          "expected": "81312",
+          "db": "81312",
+          "passed": true
+        },
+        {
+          "claim_id": "C004",
+          "expected": "81312",
+          "db": "81312",
+          "passed": true
+        },
+        {
+          "claim_id": "C005",
+          "expected": "27254",
+          "db": "27254",
+          "passed": true
+        },
+        {
+          "claim_id": "C006",
+          "expected": "2.286307",
+          "db": "2.286307",
+          "passed": true
+        },
+        {
+          "claim_id": "C007",
+          "expected": "62311",
+          "db": "62311",
+          "passed": true
+        },
+        {
+          "claim_id": "C008",
+          "expected": "62311",
+          "db": "62311",
+          "passed": true
+        },
+        {
+          "claim_id": "C009",
+          "expected": "21473",
+          "db": "21473",
+          "passed": true
+        },
+        {
+          "claim_id": "C010",
+          "expected": "2.877241",
+          "db": "2.877241",
+          "passed": true
+        },
+        {
+          "claim_id": "C011",
+          "expected": "61783",
+          "db": "61783",
+          "passed": true
+        },
+        {
+          "claim_id": "C012",
+          "expected": "61783",
+          "db": "61783",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "topic_rollup_equals_saved": {
+      "passed": true
+    },
+    "memo_priority_issue_in_db_ranking": {
+      "issue_id": "I_USABILITY_04",
+      "passed": true
+    }
+  },
+  "wall_seconds": 256.853,
+  "note": "The connection string is intentionally not recorded."
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f91a-dd83-7711-9288-4ba8f53295a8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Spotify Wrapped 2022\"],\"evidence_quote\":\"I can't open my spotify wrap 2022...\",\"intent\":\"complaint\",\"needs_review\":true,\"review_id\":\"c1726764-f0ce-4abc-ad9e-6cd143e1b2c7\",\"sentiment\":-0.5,\"severity\":3,\"topic\":\"usability\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11257,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":93,"reasoning_output_tokens":0}}

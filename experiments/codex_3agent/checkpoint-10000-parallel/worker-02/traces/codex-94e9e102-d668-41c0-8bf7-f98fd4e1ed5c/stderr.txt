@@ -1,0 +1,6 @@
+2026-10-01T04:24:48.981849Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T04:24:48.982982Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T04:24:48.983751Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T04:24:48.984534Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T04:24:48.985292Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T06:09:58.877659Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request

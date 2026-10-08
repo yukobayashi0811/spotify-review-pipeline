@@ -1,0 +1,24 @@
+{
+  "artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+  "decision": {
+    "al1_mean_agreement": 0.872,
+    "baseline_mean_agreement": 0.858667,
+    "component_agreement": {
+      "intent": 0.886,
+      "severity_exact": 0.884,
+      "severity_mae": 0.128,
+      "topic": 0.846
+    },
+    "improvement": 0.013333,
+    "minimum_improvement_for_al2": 0.005,
+    "quality_claim": "agreement with held-out saved Luna pseudo-labels; not human accuracy",
+    "run_al2": true
+  },
+  "golden_labels_opened": false,
+  "holdout_prediction_seconds": 0.102096,
+  "manifest_sha256": "90cf94b8103575b9569f7c07d9b1a67b9c67b36a3f2504733a2f74556910de41",
+  "status": "completed",
+  "teacher_texts_available": 12008,
+  "training_and_evaluation_seconds": 52.119859,
+  "training_rows_after_leakage_controls": 11411
+}

@@ -1,0 +1,220 @@
+{
+  "artifacts": {
+    "escalation_state": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-golden-50-v1/escalation/state.db",
+    "final_records": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-golden-50-v1/final/records.jsonl",
+    "final_state": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-golden-50-v1/final/state.db",
+    "local_state": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-golden-50-v1/local/state.db",
+    "routing_decisions": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-golden-50-v1/routing_decisions.csv",
+    "run_report": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-golden-50-v1/runs/hybrid-ac55d9b0-797a-400b-bbc8-d7df438f430a.json"
+  },
+  "cache_mode": "cold_or_partial_resume",
+  "classification_changed_rows": 10,
+  "consistency_repaired_unique_texts": 0,
+  "development_only": true,
+  "distinct_nonempty_texts": 49,
+  "escalation_run": {
+    "cache_hits_total": 0,
+    "completed_total": 10,
+    "evidence_quote_repairs": 0,
+    "failed_records": 0,
+    "fallback_unique": 0,
+    "max_workers_configured": 1,
+    "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+    "pending_unique_at_start": 10,
+    "phase": "initial",
+    "processed_unique": 10,
+    "run_id": "hybrid-ac55d9b0-797a-400b-bbc8-d7df438f430a-luna",
+    "spend_ledger_usd_including_unknown_reservations": 0.0,
+    "unknown_charge_batches_reserved_at_cap": 1,
+    "unsettled_reservation_usd": 0.0
+  },
+  "escalation_status": {
+    "completed": 10
+  },
+  "escalation_wall_seconds": 14.938257,
+  "final_call_count": 2,
+  "final_exact_text_cache_hits": 1,
+  "final_status": {
+    "completed": 50
+  },
+  "golden_labels_loaded": false,
+  "grading_eligible": false,
+  "hybrid_label_config": "hybrid:hybrid-risk-v3-c2322cc4d76d:e6afb9c20e061934",
+  "input_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/artifacts/golden_prediction_input.csv",
+  "input_sha256": "3370aec3cf585951d98998d09ee92609fcffd51a83f4193b43aeef3c66646086",
+  "local_run": {
+    "cache_hits_total": 1,
+    "completed_total": 50,
+    "evidence_quote_repairs": 0,
+    "failed_records": 0,
+    "fallback_unique": 0,
+    "max_workers_configured": 1,
+    "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+    "pending_unique_at_start": 49,
+    "phase": "initial",
+    "processed_unique": 49,
+    "run_id": "hybrid-ac55d9b0-797a-400b-bbc8-d7df438f430a-local",
+    "spend_ledger_usd_including_unknown_reservations": 0.0,
+    "unknown_charge_batches_reserved_at_cap": 0,
+    "unsettled_reservation_usd": 0.0
+  },
+  "local_status": {
+    "completed": 50
+  },
+  "local_wall_seconds": 0.012297,
+  "nonempty_rows": 50,
+  "route_reason_counts": {
+    "cancellation": 1,
+    "high_rating_negative_label": 4,
+    "high_risk_topic": 3,
+    "high_severity": 3,
+    "local_needs_review": 13,
+    "negative_other": 10,
+    "unclear_intent": 6
+  },
+  "routed_rows": 10,
+  "routed_unique_texts": 10,
+  "routing_candidate_rows": 25,
+  "routing_candidate_unique_texts": 25,
+  "routing_cap_rows": 10,
+  "routing_capped_unique_texts": 15,
+  "routing_fraction_unique": 0.20408163265306123,
+  "routing_policy": {
+    "escalate_cancellation": true,
+    "escalate_high_risk_complaints": true,
+    "escalate_needs_review": true,
+    "escalate_negative_other": true,
+    "escalate_rating_contradictions": true,
+    "escalate_unclear": true,
+    "high_risk_topics": [
+      "access",
+      "billing",
+      "support"
+    ],
+    "high_severity_floor": 4,
+    "max_escalation_fraction": 0.2,
+    "version": "hybrid-risk-v3"
+  },
+  "routing_policy_fingerprint": "hybrid-risk-v3-c2322cc4d76d",
+  "run_id": "hybrid-ac55d9b0-797a-400b-bbc8-d7df438f430a",
+  "runtime": {
+    "escalation": {
+      "api_credentials_required": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "calls": [
+        {
+          "api_credentials_present_in_child": false,
+          "auth_mode": "ChatGPT subscription",
+          "billing_mode": "chatgpt_subscription",
+          "caller_advisory_max_output_tokens": 6000,
+          "cli_version": "codex-cli 0.159.3",
+          "disabled_features": [
+            "multi_agent",
+            "apps",
+            "browser_use",
+            "computer_use",
+            "plugins",
+            "image_generation",
+            "shell_tool",
+            "view_image",
+            "goals"
+          ],
+          "duration_seconds": 14.931008,
+          "ephemeral": true,
+          "event_summary": {
+            "event_count": 4,
+            "event_types": {
+              "item.completed": 1,
+              "thread.started": 1,
+              "turn.completed": 1,
+              "turn.started": 1
+            },
+            "forbidden_tool_types": [],
+            "thread_id": "01a0ff6c-33b4-72c1-adb3-036d244281a1",
+            "turn_completed": true,
+            "usage": {
+              "cache_write_input_tokens": 0,
+              "cached_input_tokens": 9984,
+              "input_tokens": 11670,
+              "output_tokens": 507,
+              "reasoning_output_tokens": 0
+            }
+          },
+          "exit_code": 0,
+          "provider": "codex-exec-subscription",
+          "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+          "request_id": "codex-e460e1a3-a017-443c-9009-b2496deaa87e",
+          "requested_effort": "low",
+          "requested_model": "gpt-6-luna",
+          "result_byte_cap": 2000000,
+          "review_count": 10,
+          "review_ids": [
+            "R001",
+            "R002",
+            "R003",
+            "R004",
+            "R005",
+            "R006",
+            "R007",
+            "R008",
+            "R009",
+            "R010"
+          ],
+          "role": "enrich",
+          "stdout_jsonl_parse_errors": [],
+          "timed_out": false,
+          "timeout_seconds": 300.0,
+          "trace_files": {
+            "events_jsonl": {
+              "name": "events.jsonl",
+              "sha256": "ba3d0a5b8bcb7bdb3c660d7dee7ef699393dbe09a7a84f97282405657b2b24b5"
+            },
+            "last_message": {
+              "name": "last-message.json",
+              "sha256": "c974008d7186d119632ea17d89131431a6b1d8fc3a3e6df11f9138797307f54b"
+            },
+            "output_schema": {
+              "name": "output-schema.json",
+              "sha256": "607b59df1ec49ec2df1e99b2eb4a4aa10d3550a8d88f39ebe6154993e6ad3946"
+            },
+            "stderr": {
+              "name": "stderr.txt",
+              "sha256": "606c6b0a037da1c8893b329c292fe9de5311434bfbae4265ca508b76fbabcc2e"
+            }
+          },
+          "workspace_mode": "empty-read-only"
+        }
+      ],
+      "cli_version": "codex-cli 0.159.3",
+      "ephemeral": true,
+      "monetary_cost_usd": "unknown",
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "trace_root": "experiments/distilled/hybrid-golden-50-v1/escalation/traces"
+    },
+    "local": {
+      "api_charges_usd": 0.0,
+      "api_credentials_required": false,
+      "artifact_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/pilot-v1/distilled_model.joblib",
+      "artifact_sha256": "5b90b72652ef2f8138d53217d05935137a2eed7df58512706c87c7a8b2fc9a12",
+      "calls": [
+        {
+          "confidence_threshold": 0.4663134,
+          "duration_seconds": 0.005979,
+          "minimum_confidence_mean": 0.714495,
+          "minimum_confidence_min": 0.359669,
+          "records": 49,
+          "request_id": "local-distilled-f9fc63cc-9d82-49b9-a69b-0964c7e3d838"
+        }
+      ],
+      "model_version": "distilled-tfidf-linear-v1",
+      "network_required": false,
+      "provider": "local-distilled-sklearn"
+    }
+  },
+  "sample_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-golden-50-v1/sample.csv",
+  "sample_rows": 50,
+  "sample_sha256": "3370aec3cf585951d98998d09ee92609fcffd51a83f4193b43aeef3c66646086",
+  "total_wall_seconds": 14.977552
+}

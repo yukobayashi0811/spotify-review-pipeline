@@ -1,0 +1,85 @@
+{
+  "billing_mode": "chatgpt_subscription",
+  "completed_after": 500,
+  "completed_before": 500,
+  "development_only": true,
+  "experiment_id": "codex-dev-20261002T211851Z-11984cae",
+  "grading_eligible": false,
+  "mode": "warm_exact_result_cache_replay",
+  "monetary_cost_usd": "unknown",
+  "new_model_calls": 0,
+  "sample_size": 500,
+  "wall_seconds": 0.067475,
+  "worker_summaries": [
+    {
+      "completed_after": 167,
+      "completed_before": 167,
+      "new_model_calls": 0,
+      "run_enrichment": {
+        "cache_hits_total": 8,
+        "completed_total": 167,
+        "evidence_quote_repairs": 0,
+        "failed_records": 0,
+        "fallback_unique": 0,
+        "max_workers_configured": 1,
+        "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+        "pending_unique_at_start": 0,
+        "phase": "resume",
+        "processed_unique": 0,
+        "run_id": "codex-dev-20261002T211851Z-11984cae-warm-worker-01",
+        "spend_ledger_usd_including_unknown_reservations": 0.0,
+        "unknown_charge_batches_reserved_at_cap": 0,
+        "unsettled_reservation_usd": 0.0
+      },
+      "wall_seconds": 0.00131,
+      "worker_index": 1
+    },
+    {
+      "completed_after": 167,
+      "completed_before": 167,
+      "new_model_calls": 0,
+      "run_enrichment": {
+        "cache_hits_total": 7,
+        "completed_total": 167,
+        "evidence_quote_repairs": 0,
+        "failed_records": 0,
+        "fallback_unique": 0,
+        "max_workers_configured": 1,
+        "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+        "pending_unique_at_start": 0,
+        "phase": "resume",
+        "processed_unique": 0,
+        "run_id": "codex-dev-20261002T211851Z-11984cae-warm-worker-02",
+        "spend_ledger_usd_including_unknown_reservations": 0.0,
+        "unknown_charge_batches_reserved_at_cap": 0,
+        "unsettled_reservation_usd": 0.0
+      },
+      "wall_seconds": 0.00135,
+      "worker_index": 2
+    },
+    {
+      "completed_after": 166,
+      "completed_before": 166,
+      "new_model_calls": 0,
+      "run_enrichment": {
+        "cache_hits_total": 6,
+        "completed_total": 166,
+        "evidence_quote_repairs": 0,
+        "failed_records": 0,
+        "fallback_unique": 0,
+        "max_workers_configured": 1,
+        "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+        "pending_unique_at_start": 0,
+        "phase": "resume",
+        "processed_unique": 0,
+        "run_id": "codex-dev-20261002T211851Z-11984cae-warm-worker-03",
+        "spend_ledger_usd_including_unknown_reservations": 0.0,
+        "unknown_charge_batches_reserved_at_cap": 0,
+        "unsettled_reservation_usd": 0.0
+      },
+      "wall_seconds": 0.001312,
+      "worker_index": 3
+    }
+  ],
+  "workers": 3
+}

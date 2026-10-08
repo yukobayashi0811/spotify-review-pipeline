@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-796e-7890-a9a3-fa85acd75edd"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"all good music\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"54345fb1-3e80-41ef-9181-4d0f9e981213\",\"sentiment\":0.8,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10754,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":78,"reasoning_output_tokens":0}}

@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-10-03T16:57:07Z",
+  "archived_records_path": "archive/grouping_v1/grading/records.jsonl",
+  "current_records_path": "grading/records.jsonl",
+  "archived_records_sha256": "8d8c5c51962c717804964008868a836b7951da17bc00a5e21f0510f7fb24d2f1",
+  "current_records_sha256": "8d8c5c51962c717804964008868a836b7951da17bc00a5e21f0510f7fb24d2f1",
+  "records_unchanged": true,
+  "classification_prompt_sha256": "e417f005c44df4a1693b4470a8646f658a5d115db3ec9cedc20325bdb413def4",
+  "final_local_artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+  "label_config_counts": {
+    "quarantined_null": 13,
+    "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2": 526528,
+    "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable": 134081
+  }
+}

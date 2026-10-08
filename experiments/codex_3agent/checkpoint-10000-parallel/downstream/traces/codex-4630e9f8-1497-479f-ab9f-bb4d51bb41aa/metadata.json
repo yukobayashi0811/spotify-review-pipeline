@@ -1,0 +1,87 @@
+{
+  "api_credentials_present_in_child": false,
+  "auth_mode": "ChatGPT subscription",
+  "billing_mode": "chatgpt_subscription",
+  "caller_advisory_max_output_tokens": 4000,
+  "cli_version": "codex-cli 0.152.0",
+  "disabled_features": [
+    "multi_agent",
+    "apps",
+    "browser_use",
+    "computer_use",
+    "plugins",
+    "image_generation",
+    "shell_tool",
+    "view_image",
+    "goals"
+  ],
+  "duration_seconds": 16.021792,
+  "ephemeral": true,
+  "event_summary": {
+    "event_count": 4,
+    "event_types": {
+      "item.completed": 1,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "forbidden_tool_types": [],
+    "thread_id": "01a0f8fa-dac4-7d90-acf4-0b707275bfc5",
+    "turn_completed": true,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 11690,
+      "output_tokens": 734,
+      "reasoning_output_tokens": 0
+    }
+  },
+  "exit_code": 0,
+  "provider": "codex-exec-subscription",
+  "provider_output_token_cap": "unavailable_in_codex_exec_0.152.0",
+  "request_id": "codex-4630e9f8-1497-479f-ab9f-bb4d51bb41aa",
+  "requested_effort": "low",
+  "requested_model": "gpt-5.6-sol",
+  "result_byte_cap": 2000000,
+  "review_count": 15,
+  "review_ids": [
+    "1dac4114-95bc-4029-9ab4-67ad2ed1be13",
+    "7d26a988-37c4-4f3c-a876-bade969577a5",
+    "982b2743-9b23-491c-a946-56304fc6e45a",
+    "117770a7-cec9-4bc3-8a9f-a5d6f3544b5d",
+    "60511edc-f704-4572-8589-3409fce25701",
+    "68a5d92a-1dca-40ba-b9f8-fc61a24b12a8",
+    "0bf68fb6-2ebc-4035-a0ce-1e306b44f0e9",
+    "10800b01-920d-4c22-91f5-521c45caf4f0",
+    "19781735-5ee7-414a-a034-bc33ccf91101",
+    "004d1c8a-a8c8-4746-b975-cd2f31c2a730",
+    "022dcbce-b629-4b22-8dbf-900f748a3097",
+    "026ecef8-811d-4304-b77d-c5e6c8f68bd1",
+    "12aee9cc-9342-43f7-9027-cf2bce87e3d0",
+    "2d7b2ebe-826f-49cd-a109-b0ab3bf52c2d",
+    "42da37cb-8bbf-4208-b9d1-5cde1a2c9dc4"
+  ],
+  "role": "memo",
+  "stdout_jsonl_parse_errors": [],
+  "timed_out": false,
+  "timeout_seconds": 300.0,
+  "trace_files": {
+    "events_jsonl": {
+      "name": "events.jsonl",
+      "sha256": "a981f8b933cefe9187e76bcab53843f6e8600e8e7348febf56d96d1a7e00770b"
+    },
+    "last_message": {
+      "name": "last-message.json",
+      "sha256": "6e98e7be95beaee6d34ec4ab01299efa1b7a5d9bf10f090e9813438968d027c2"
+    },
+    "output_schema": {
+      "name": "output-schema.json",
+      "sha256": "0cfbf3df5524a661988826af6f01fae1150d6cb38beac5c21d0492f5f378bf41"
+    },
+    "stderr": {
+      "name": "stderr.txt",
+      "sha256": "507a7395692f31e5ea396296ebf0fb5e7e791c6a109a792b82ee80e28c16aa98"
+    }
+  },
+  "workspace_mode": "empty-read-only"
+}

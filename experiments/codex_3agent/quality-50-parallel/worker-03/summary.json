@@ -1,0 +1,41 @@
+{
+  "billing_mode": "chatgpt_subscription",
+  "cached_input_tokens": 0,
+  "call_count": 1,
+  "completed_records": 16,
+  "ingestion_counts": {
+    "duplicate_review_ids": 0,
+    "empty_review_text": 0,
+    "missing_app_version": 4,
+    "records": 16
+  },
+  "input_rows": 16,
+  "input_sha256": "e5ff370b5609bb1150c0b300ef7f4702a59f82d5fb9f82d637c5d614853701c2",
+  "input_tokens": 11396,
+  "interactions_path": "experiments/codex_3agent/quality-50-parallel/worker-03/agent_interactions.jsonl",
+  "monetary_cost_usd": "unknown",
+  "output_tokens": 1347,
+  "records_path": "experiments/codex_3agent/quality-50-parallel/worker-03/development_records.jsonl",
+  "run_enrichment": {
+    "cache_hits_total": 0,
+    "completed_total": 16,
+    "evidence_quote_repairs": 0,
+    "failed_records": 0,
+    "fallback_unique": 0,
+    "max_workers_configured": 1,
+    "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+    "pending_unique_at_start": 16,
+    "phase": "initial",
+    "processed_unique": 16,
+    "run_id": "codex-dev-20261001T034548Z-89bf3ced-worker-03",
+    "spend_ledger_usd_including_unknown_reservations": 0.0,
+    "unknown_charge_batches_reserved_at_cap": 1,
+    "unsettled_reservation_usd": 0.0
+  },
+  "status_counts": {
+    "completed": 16
+  },
+  "token_usage_complete": true,
+  "wall_seconds": 27.890556,
+  "worker_index": 3
+}

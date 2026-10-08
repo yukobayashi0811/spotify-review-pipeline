@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-2ae5-73c1-a931-abf76fb3050c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"I love this app alot, It just changed my whole life.\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"9dfc1040-869d-412b-8bfd-416efad9d15d\",\"sentiment\":1,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10778,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":84,"reasoning_output_tokens":0}}

@@ -1,0 +1,31 @@
+{
+  "hybrid": {
+    "topic": 0.84,
+    "intent": 0.92,
+    "severity_exact": 0.66,
+    "severity_mae_on_valid_predictions": 0.34,
+    "sentiment_mae_on_valid_predictions": 0.186,
+    "entities_exact": 0.54,
+    "evidence_quote_substring": 1.0
+  },
+  "local": {
+    "topic": 0.8,
+    "intent": 0.92,
+    "severity_exact": 0.66,
+    "severity_mae_on_valid_predictions": 0.36,
+    "sentiment_mae_on_valid_predictions": 0.212,
+    "entities_exact": 0.52,
+    "evidence_quote_substring": 1.0
+  },
+  "codex_three_worker_gpt_5_6_sol": {
+    "topic": 0.92,
+    "intent": 0.88,
+    "severity_exact": 0.74,
+    "severity_mae_on_valid_predictions": 0.26,
+    "sentiment_mae_on_valid_predictions": 0.079,
+    "entities_exact": 0.64,
+    "evidence_quote_substring": 1.0,
+    "source": "experiments/codex_3agent/quality-50-parallel/golden_evaluation.json"
+  },
+  "golden_labels_sha256": "c41cd56359d9069a4eeb799a9d7b57e09ff59fa360b4a47cc237bdb40d415dd5"
+}

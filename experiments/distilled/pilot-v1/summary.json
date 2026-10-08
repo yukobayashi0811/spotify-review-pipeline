@@ -1,0 +1,297 @@
+{
+  "artifact_sha256": "5b90b72652ef2f8138d53217d05935137a2eed7df58512706c87c7a8b2fc9a12",
+  "golden_50": {
+    "status": "completed",
+    "cases": 50,
+    "missing_predictions": 0,
+    "agreement": {
+      "topic": 0.8,
+      "intent": 0.76,
+      "severity_exact": 0.64,
+      "severity_mae_on_valid_predictions": 0.4,
+      "sentiment_mae_on_valid_predictions": 0.310196,
+      "entities_exact": 0.44,
+      "evidence_quote_substring": 1.0
+    },
+    "macro_f1": {
+      "topic": 0.734867,
+      "intent": 0.586245,
+      "severity": 0.486402
+    },
+    "normalized_text_group_weighted_agreement": {
+      "topic_match": 0.795918,
+      "intent_match": 0.755102,
+      "severity_match": 0.632653
+    },
+    "normalized_text_groups": 49,
+    "confusion": {
+      "topic": [
+        {
+          "expected": "billing",
+          "predicted": "billing",
+          "count": 1
+        },
+        {
+          "expected": "catalog",
+          "predicted": "catalog",
+          "count": 3
+        },
+        {
+          "expected": "catalog",
+          "predicted": "other",
+          "count": 2
+        },
+        {
+          "expected": "catalog",
+          "predicted": "usability",
+          "count": 2
+        },
+        {
+          "expected": "downloads",
+          "predicted": "downloads",
+          "count": 1
+        },
+        {
+          "expected": "other",
+          "predicted": "billing",
+          "count": 1
+        },
+        {
+          "expected": "other",
+          "predicted": "other",
+          "count": 24
+        },
+        {
+          "expected": "playback",
+          "predicted": "playback",
+          "count": 5
+        },
+        {
+          "expected": "playback",
+          "predicted": "usability",
+          "count": 1
+        },
+        {
+          "expected": "usability",
+          "predicted": "billing",
+          "count": 2
+        },
+        {
+          "expected": "usability",
+          "predicted": "catalog",
+          "count": 1
+        },
+        {
+          "expected": "usability",
+          "predicted": "other",
+          "count": 1
+        },
+        {
+          "expected": "usability",
+          "predicted": "usability",
+          "count": 6
+        }
+      ],
+      "intent": [
+        {
+          "expected": "cancellation",
+          "predicted": "cancellation",
+          "count": 1
+        },
+        {
+          "expected": "cancellation",
+          "predicted": "unclear",
+          "count": 1
+        },
+        {
+          "expected": "complaint",
+          "predicted": "complaint",
+          "count": 18
+        },
+        {
+          "expected": "complaint",
+          "predicted": "request",
+          "count": 2
+        },
+        {
+          "expected": "complaint",
+          "predicted": "unclear",
+          "count": 2
+        },
+        {
+          "expected": "praise",
+          "predicted": "complaint",
+          "count": 2
+        },
+        {
+          "expected": "praise",
+          "predicted": "praise",
+          "count": 17
+        },
+        {
+          "expected": "praise",
+          "predicted": "unclear",
+          "count": 2
+        },
+        {
+          "expected": "request",
+          "predicted": "complaint",
+          "count": 1
+        },
+        {
+          "expected": "request",
+          "predicted": "request",
+          "count": 1
+        },
+        {
+          "expected": "unclear",
+          "predicted": "praise",
+          "count": 1
+        },
+        {
+          "expected": "unclear",
+          "predicted": "request",
+          "count": 1
+        },
+        {
+          "expected": "unclear",
+          "predicted": "unclear",
+          "count": 1
+        }
+      ]
+    },
+    "note": "Quote membership is mechanical; a human must inspect whether the quote supports the label and whether entities are grounded.",
+    "golden_labels_file": "evals/golden_50.csv",
+    "golden_labels_sha256": "c41cd56359d9069a4eeb799a9d7b57e09ff59fa360b4a47cc237bdb40d415dd5",
+    "predictions_file": "experiments/distilled/pilot-v1/golden_50_predictions.csv",
+    "predictions_sha256": "1c35bfc35e49a4b7cd47ba09415e4af6df9b9fb29868f6f3cf95b471b3110b29",
+    "model_calls": 0
+  },
+  "golden_50_prediction_seconds": 0.003273,
+  "holdout_500": {
+    "agreement": {
+      "intent": 0.862,
+      "severity_exact": 0.872,
+      "severity_mae": 0.156,
+      "topic": 0.82
+    },
+    "cases": 500,
+    "routed_by_needs_review_fraction": 0.386,
+    "teacher": "saved Codex Luna pseudo-labels"
+  },
+  "holdout_500_prediction_seconds": 0.032923,
+  "interpretation": "Holdout-500 measures agreement with saved Codex Luna pseudo-labels. Golden-50 measures agreement with independent human labels.",
+  "leakage_audit": {
+    "passed": true,
+    "training_exact_text_overlap_with_golden_50": 0,
+    "training_exact_text_overlap_with_holdout_500": 0,
+    "training_normalized_text_overlap_with_golden_50": 0,
+    "training_normalized_text_overlap_with_holdout_500": 0,
+    "training_review_id_overlap_with_golden_50": 0,
+    "training_review_id_overlap_with_holdout_500": 0
+  },
+  "model_manifest_sha256": "ac84aadb1431edb46f35876c5b2c6e3009be60d5056b3de2606ef2298e4eee6c",
+  "model_version": "distilled-tfidf-linear-v1",
+  "provider_runtime": {
+    "api_charges_usd": 0.0,
+    "api_credentials_required": false,
+    "artifact_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/pilot-v1/distilled_model.joblib",
+    "artifact_sha256": "5b90b72652ef2f8138d53217d05935137a2eed7df58512706c87c7a8b2fc9a12",
+    "calls": [
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.003867,
+        "minimum_confidence_mean": 0.695998,
+        "minimum_confidence_min": 0.29953,
+        "records": 50,
+        "request_id": "local-distilled-671fb688-ed2e-42eb-a1c6-1424c80031ad"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.003274,
+        "minimum_confidence_mean": 0.670734,
+        "minimum_confidence_min": 0.296188,
+        "records": 50,
+        "request_id": "local-distilled-4751785b-16cd-4fc9-93a6-477b9c807f24"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.003038,
+        "minimum_confidence_mean": 0.764689,
+        "minimum_confidence_min": 0.323338,
+        "records": 50,
+        "request_id": "local-distilled-05f091f1-4e4b-4a1c-a269-00df0605bcf9"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.003146,
+        "minimum_confidence_mean": 0.720595,
+        "minimum_confidence_min": 0.348702,
+        "records": 50,
+        "request_id": "local-distilled-7e9653cd-1543-4629-b757-34d47158979e"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.00385,
+        "minimum_confidence_mean": 0.663279,
+        "minimum_confidence_min": 0.239901,
+        "records": 50,
+        "request_id": "local-distilled-836142c8-bafc-49e9-8cad-d6702f29b9af"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.002992,
+        "minimum_confidence_mean": 0.667776,
+        "minimum_confidence_min": 0.291947,
+        "records": 50,
+        "request_id": "local-distilled-daf840a6-29b5-4d6b-a2c6-fe2d37ab1b18"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.003025,
+        "minimum_confidence_mean": 0.646765,
+        "minimum_confidence_min": 0.343053,
+        "records": 50,
+        "request_id": "local-distilled-87676038-fcab-44c3-9dc8-e3832fd4c3c3"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.002852,
+        "minimum_confidence_mean": 0.712858,
+        "minimum_confidence_min": 0.37902,
+        "records": 50,
+        "request_id": "local-distilled-c7733a02-d310-4f90-aa9f-93013a247cd1"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.00306,
+        "minimum_confidence_mean": 0.739733,
+        "minimum_confidence_min": 0.36235,
+        "records": 50,
+        "request_id": "local-distilled-83cadf33-880b-46bd-9205-3e8abd8f50a9"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.002936,
+        "minimum_confidence_mean": 0.69685,
+        "minimum_confidence_min": 0.321969,
+        "records": 50,
+        "request_id": "local-distilled-1651636a-3ce1-4877-9c2d-06f1438729d4"
+      },
+      {
+        "confidence_threshold": 0.4663134,
+        "duration_seconds": 0.003183,
+        "minimum_confidence_mean": 0.719605,
+        "minimum_confidence_min": 0.359669,
+        "records": 50,
+        "request_id": "local-distilled-df1bd428-a0ea-400e-b2c7-72b9793c1880"
+      }
+    ],
+    "model_version": "distilled-tfidf-linear-v1",
+    "network_required": false,
+    "provider": "local-distilled-sklearn"
+  },
+  "status": "completed",
+  "training_rows": 7853,
+  "training_seconds": 7.952846
+}

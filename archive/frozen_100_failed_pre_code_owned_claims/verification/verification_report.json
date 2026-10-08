@@ -1,0 +1,96 @@
+{
+  "agreement": {
+    "intent": 0.5,
+    "severity_exact": 0.9,
+    "severity_mae": 0.1,
+    "topic": 1.0
+  },
+  "already_verified_at_start": 0,
+  "disagreements": [
+    {
+      "first_intent": "praise",
+      "first_severity": 1,
+      "first_topic": "other",
+      "intent_agree": false,
+      "review_id": "1d9f396e-7a8a-414b-a622-3ad6f9570abe",
+      "severity_distance": 0,
+      "topic_agree": true,
+      "verify_intent": "unclear",
+      "verify_severity": 1,
+      "verify_topic": "other"
+    },
+    {
+      "first_intent": "praise",
+      "first_severity": 1,
+      "first_topic": "other",
+      "intent_agree": false,
+      "review_id": "4c0242ca-099a-4c89-b11b-219ef28f1e16",
+      "severity_distance": 0,
+      "topic_agree": true,
+      "verify_intent": "unclear",
+      "verify_severity": 1,
+      "verify_topic": "other"
+    },
+    {
+      "first_intent": "praise",
+      "first_severity": 1,
+      "first_topic": "other",
+      "intent_agree": false,
+      "review_id": "5db4a676-1f15-48cf-b989-a0a0fdb1c7a3",
+      "severity_distance": 0,
+      "topic_agree": true,
+      "verify_intent": "unclear",
+      "verify_severity": 1,
+      "verify_topic": "other"
+    },
+    {
+      "first_intent": "praise",
+      "first_severity": 1,
+      "first_topic": "other",
+      "intent_agree": false,
+      "review_id": "aeee488a-2077-489d-8914-1e01d5f7672f",
+      "severity_distance": 0,
+      "topic_agree": true,
+      "verify_intent": "unclear",
+      "verify_severity": 1,
+      "verify_topic": "other"
+    },
+    {
+      "first_intent": "unclear",
+      "first_severity": 1,
+      "first_topic": "other",
+      "intent_agree": false,
+      "review_id": "def34476-7bdc-443a-ab3d-475cdd5ca2f6",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 2,
+      "verify_topic": "other"
+    }
+  ],
+  "evidence_quote_repairs": 0,
+  "failures": [],
+  "maximum_sample": 10,
+  "metrics": {
+    "intent": 0.5,
+    "severity_exact": 0.9,
+    "severity_mae": 0.1,
+    "topic": 1.0
+  },
+  "minimum_sample": 10,
+  "pending_at_start": 10,
+  "planted_error_test": {
+    "detected": true,
+    "note": "The planted label exists only in this test copy and is excluded from business outputs.",
+    "planted_topic": "access",
+    "review_id": "178c3b49-b689-4fe4-92a2-2257a58e6d95",
+    "synthetic_test": true,
+    "verifier_topic": "other"
+  },
+  "role_independence": "Independent local Gemma prompt/model role; first-pass predictions were not supplied",
+  "sample_fraction": 0.1,
+  "sample_policy": "deterministic SHA-256 ordering of review_id under the declared seed; target=min(completed,max(minimum,round(completed*fraction)),maximum when set)",
+  "sample_seed": "frozen-100-verifier-v1",
+  "selected": 10,
+  "verified": 10
+}

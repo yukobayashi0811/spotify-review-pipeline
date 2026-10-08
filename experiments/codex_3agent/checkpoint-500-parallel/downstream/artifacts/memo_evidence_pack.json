@@ -1,0 +1,173 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING": [
+      {
+        "evidence_quote": "I paid my subscription and im still getting a pause subscription screen and can't access my music",
+        "review_id": "16929558-ce1e-4b87-8738-a1de3f557f66",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "It's impossible to use the app without prime",
+        "review_id": "074efbfd-f69e-46ca-9cea-e5204a192a2a",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "I cant sign up for individual premium.. Whenever i click on the plan it doesnt give me the prompt to pay",
+        "review_id": "1d1480fb-0142-46da-8570-45bf3983bf6d",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG": [
+      {
+        "evidence_quote": "many songs are not present here!",
+        "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "in some songs there is no lyrics",
+        "review_id": "47becad0-8ae5-4a10-9731-fde8f2091862",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "all the songs which have been removee from the app",
+        "review_id": "4b3ace8e-b199-40b3-8ad4-5c0580e38203",
+        "severity": 3
+      }
+    ],
+    "I_OTHER": [
+      {
+        "evidence_quote": "some features are missing in updated version",
+        "review_id": "02777996-211f-447b-94c4-99b61f049f78",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "This is rubbish the app is empty",
+        "review_id": "0b716a9d-85bf-4f4e-8e2e-be71e4a379a6",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Worst",
+        "review_id": "00363dc8-2117-4565-9af9-efadf8fa90cf",
+        "severity": 2
+      }
+    ],
+    "I_PLAYBACK": [
+      {
+        "evidence_quote": "Black screen of death.",
+        "review_id": "065c418e-7f18-42a3-b241-fe693b7a2b0c",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "if I click a a song a have liked it goes to didn't song I never heard or it might play a demo of the song",
+        "review_id": "0853c56b-0fa1-4d12-9cb9-6817d52233f5",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "whenever I try and search for a song I click on it I get 5 ads then after the ads I don't even get the song I wanted",
+        "review_id": "11ad400f-4487-4dfa-a9da-c8d624f4f107",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY": [
+      {
+        "evidence_quote": "always plays adds instead of songs",
+        "review_id": "cf6166ae-d71a-4839-9add-088645ad3b78",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "they've removed the ability to move episode to episode on podcasts from the toolbar",
+        "review_id": "0070e713-4cb7-4d78-954f-1764d5593c91",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "will not let you go to any random song in a playlist while on mobile",
+        "review_id": "08d3a5a9-1ec1-4b10-a5c8-393da33843e1",
+        "severity": 3
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS": {
+      "description": "Users report login failures, account entry errors, token messages, and repeated requests for a new contact number.",
+      "issue_id": "I_ACCESS",
+      "issue_name": "Login and account access"
+    },
+    "I_BILLING": {
+      "description": "Users report premium barriers, pricing concerns, payment or sign-up failures, missing paid access, and restrictions on free downloads.",
+      "issue_id": "I_BILLING",
+      "issue_name": "Premium plans and entitlement"
+    },
+    "I_CATALOG": {
+      "description": "Users report missing songs, podcasts, or lyrics, along with dissatisfaction with recommendations and repetitive DJ selections.",
+      "issue_id": "I_CATALOG",
+      "issue_name": "Content availability and discovery"
+    },
+    "I_DOWNLOADS": {
+      "description": "Users report stalled or unavailable downloads, deleted saved content, storage-transfer failures, and downloaded media remaining inaccessible offline.",
+      "issue_id": "I_DOWNLOADS",
+      "issue_name": "Downloads and offline access"
+    },
+    "I_OTHER": {
+      "description": "Users express general dissatisfaction, particularly with missing features, empty app experiences, and recent updates.",
+      "issue_id": "I_OTHER",
+      "issue_name": "General app and update complaints"
+    },
+    "I_PLAYBACK": {
+      "description": "Users report interrupted or incorrect playback, playlist failures, connectivity problems, poor performance, and blank screens.",
+      "issue_id": "I_PLAYBACK",
+      "issue_name": "Playback and app reliability"
+    },
+    "I_USABILITY": {
+      "description": "Users report removed or hard-to-find controls, mobile navigation restrictions, and frequent advertising interruptions.",
+      "issue_id": "I_USABILITY",
+      "issue_name": "Navigation, controls, and ads"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 60,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.550000",
+      "priority_score": 153,
+      "rank": 1,
+      "severity_sum": 153
+    },
+    {
+      "complaint_count": 43,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.279070",
+      "priority_score": 141,
+      "rank": 2,
+      "severity_sum": 141
+    },
+    {
+      "complaint_count": 43,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.953488",
+      "priority_score": 127,
+      "rank": 3,
+      "severity_sum": 127
+    },
+    {
+      "complaint_count": 63,
+      "issue_id": "I_OTHER",
+      "mean_severity": "1.952381",
+      "priority_score": 123,
+      "rank": 4,
+      "severity_sum": 123
+    },
+    {
+      "complaint_count": 18,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.833333",
+      "priority_score": 51,
+      "rank": 5,
+      "severity_sum": 51
+    }
+  ]
+}

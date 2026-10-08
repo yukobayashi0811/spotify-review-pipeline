@@ -1,0 +1,247 @@
+{
+  "phase": "resume",
+  "run_id": "codex-dev-20261001T035831Z-ff1cb9c5-downstream",
+  "stage_wall_seconds": {
+    "classify": 0.000836,
+    "group": 8.651565,
+    "prepare": 0.004463,
+    "rank": 0.002629,
+    "recommend": 16.356514,
+    "verify": 65.0448
+  },
+  "stages": {
+    "classify": {
+      "cache_hits_total": 21,
+      "completed_total": 500,
+      "evidence_quote_repairs": 0,
+      "failed_records": 0,
+      "fallback_unique": 0,
+      "max_workers_configured": 1,
+      "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+      "pending_unique_at_start": 0,
+      "phase": "resume",
+      "processed_unique": 0,
+      "run_id": "codex-dev-20261001T035831Z-ff1cb9c5-downstream",
+      "spend_ledger_usd_including_unknown_reservations": 0.0,
+      "unknown_charge_batches_reserved_at_cap": 0,
+      "unsettled_reservation_usd": 0.0
+    },
+    "group": {
+      "complaint_or_cancellation_records": 243,
+      "input_hash": "d75fcf135211727aa4525b3d7ab42f3e0eb41f382e3e212b9c598d481f228af0",
+      "issues": 7,
+      "memberships": 243,
+      "model_called": true,
+      "rule": "One issue per complaint/cancellation, deterministically mapped from primary topic."
+    },
+    "prepare": {
+      "counts": {
+        "duplicate_review_ids": 0,
+        "empty_review_text": 0,
+        "missing_app_version": 108,
+        "records": 500
+      },
+      "exact_text": {
+        "distinct_nonempty_texts": 479,
+        "reusable_nonempty_rows": 21
+      },
+      "file_sha256": "a94e31663ee7b7eaa77e23b7a8425b530cc0c866ed5e714953172a0afef6a12f",
+      "first_review": "2022-05-19 14:22:29",
+      "last_review": "2023-11-15 15:44:48",
+      "parsed_rows_sha256": "27cfa70c490531866d922b5020d8329437869b06ab0ea1026893108eb4d814ab",
+      "reviews_by_month": {
+        "2022-05": 14,
+        "2022-06": 19,
+        "2022-07": 21,
+        "2022-08": 31,
+        "2022-09": 22,
+        "2022-10": 18,
+        "2022-11": 18,
+        "2022-12": 21,
+        "2023-01": 17,
+        "2023-02": 23,
+        "2023-03": 20,
+        "2023-04": 21,
+        "2023-05": 22,
+        "2023-06": 19,
+        "2023-07": 56,
+        "2023-08": 26,
+        "2023-09": 25,
+        "2023-10": 79,
+        "2023-11": 28
+      },
+      "reviews_by_rating": {
+        "1": 187,
+        "2": 33,
+        "3": 19,
+        "4": 45,
+        "5": 216
+      }
+    },
+    "rank": {
+      "ranking": [
+        {
+          "complaint_count": 60,
+          "issue_id": "I_USABILITY",
+          "mean_severity": "2.550000",
+          "priority_score": 153,
+          "rank": 1,
+          "severity_sum": 153
+        },
+        {
+          "complaint_count": 43,
+          "issue_id": "I_PLAYBACK",
+          "mean_severity": "3.279070",
+          "priority_score": 141,
+          "rank": 2,
+          "severity_sum": 141
+        },
+        {
+          "complaint_count": 43,
+          "issue_id": "I_BILLING",
+          "mean_severity": "2.953488",
+          "priority_score": 127,
+          "rank": 3,
+          "severity_sum": 127
+        },
+        {
+          "complaint_count": 63,
+          "issue_id": "I_OTHER",
+          "mean_severity": "1.952381",
+          "priority_score": 123,
+          "rank": 4,
+          "severity_sum": 123
+        },
+        {
+          "complaint_count": 18,
+          "issue_id": "I_CATALOG",
+          "mean_severity": "2.833333",
+          "priority_score": 51,
+          "rank": 5,
+          "severity_sum": 51
+        },
+        {
+          "complaint_count": 10,
+          "issue_id": "I_ACCESS",
+          "mean_severity": "3.900000",
+          "priority_score": 39,
+          "rank": 6,
+          "severity_sum": 39
+        },
+        {
+          "complaint_count": 6,
+          "issue_id": "I_DOWNLOADS",
+          "mean_severity": "3.833333",
+          "priority_score": 23,
+          "rank": 7,
+          "severity_sum": 23
+        }
+      ]
+    },
+    "recommend": {
+      "claims": 4,
+      "deterministic_claim_repairs": 0,
+      "input_hash": "9e49f7b1ed543ef57c932e427f88462c52858e5fcffc23fcf9e5bab58beb5a83",
+      "model_called": true,
+      "priority": "Focus next-quarter product effort on I_USABILITY: Navigation, controls, and ads."
+    },
+    "verify": {
+      "agreement": {
+        "intent": 0.98,
+        "severity_exact": 0.9,
+        "severity_mae": 0.1,
+        "topic": 0.98
+      },
+      "disagreements": [
+        {
+          "first_intent": "complaint",
+          "first_severity": 3,
+          "first_topic": "playback",
+          "intent_agree": true,
+          "review_id": "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+          "severity_distance": 1,
+          "topic_agree": true,
+          "verify_intent": "complaint",
+          "verify_severity": 4,
+          "verify_topic": "playback"
+        },
+        {
+          "first_intent": "complaint",
+          "first_severity": 3,
+          "first_topic": "billing",
+          "intent_agree": true,
+          "review_id": "074efbfd-f69e-46ca-9cea-e5204a192a2a",
+          "severity_distance": 1,
+          "topic_agree": true,
+          "verify_intent": "complaint",
+          "verify_severity": 4,
+          "verify_topic": "billing"
+        },
+        {
+          "first_intent": "complaint",
+          "first_severity": 2,
+          "first_topic": "usability",
+          "intent_agree": false,
+          "review_id": "0cc5a3be-e40c-4e9f-918d-53d284e2e5b3",
+          "severity_distance": 1,
+          "topic_agree": true,
+          "verify_intent": "praise",
+          "verify_severity": 1,
+          "verify_topic": "usability"
+        },
+        {
+          "first_intent": "complaint",
+          "first_severity": 3,
+          "first_topic": "billing",
+          "intent_agree": true,
+          "review_id": "1d1480fb-0142-46da-8570-45bf3983bf6d",
+          "severity_distance": 1,
+          "topic_agree": true,
+          "verify_intent": "complaint",
+          "verify_severity": 4,
+          "verify_topic": "billing"
+        },
+        {
+          "first_intent": "complaint",
+          "first_severity": 3,
+          "first_topic": "billing",
+          "intent_agree": true,
+          "review_id": "57aca404-d58b-4bb4-97b1-c64db92f054a",
+          "severity_distance": 1,
+          "topic_agree": true,
+          "verify_intent": "complaint",
+          "verify_severity": 4,
+          "verify_topic": "billing"
+        },
+        {
+          "first_intent": "cancellation",
+          "first_severity": 3,
+          "first_topic": "usability",
+          "intent_agree": true,
+          "review_id": "e16a4550-43e7-4ae1-b538-a65cc652c31b",
+          "severity_distance": 0,
+          "topic_agree": false,
+          "verify_intent": "cancellation",
+          "verify_severity": 3,
+          "verify_topic": "playback"
+        }
+      ],
+      "evidence_quote_repairs": 0,
+      "failures": [],
+      "planted_error_test": {
+        "detected": true,
+        "note": "The planted label exists only in this test copy and is excluded from business outputs.",
+        "planted_topic": "access",
+        "review_id": "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+        "synthetic_test": true,
+        "verifier_topic": "playback"
+      },
+      "sample_fraction": 0.1,
+      "sample_seed": "spotify-verifier-v1",
+      "selected": 50,
+      "verified": 50
+    }
+  },
+  "status": "completed",
+  "wall_seconds": 90.062398
+}

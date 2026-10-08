@@ -1,0 +1,12 @@
+{
+  "completed_records": 100,
+  "development_only": true,
+  "direct_exact_text_cache_hits": 0,
+  "expected_records": 100,
+  "experiment_id": "codex-dev-20261001T200726Z-75e66bd5",
+  "grading_eligible": false,
+  "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+  "merged_calls": 3,
+  "state_path": "experiments/codex_luna/checkpoint-100-normal-usage/consolidated/state.db",
+  "valid": true
+}

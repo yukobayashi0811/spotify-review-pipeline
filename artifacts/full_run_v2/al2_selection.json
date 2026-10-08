@@ -1,0 +1,19 @@
+{
+  "artifact_sha256": "8db19e2cb72392119cbe19a485879990369168f353d2fb3a82441a9fd6c8d6a6",
+  "golden_labels_opened": false,
+  "maximum_topic_fraction": 0.26266666666666666,
+  "router_scored_texts": 484189,
+  "seconds": 143.658548,
+  "selected_distinct_texts": 1500,
+  "status": "selected",
+  "topic_counts": {
+    "access": 16,
+    "billing": 210,
+    "catalog": 223,
+    "downloads": 41,
+    "other": 376,
+    "playback": 232,
+    "support": 8,
+    "usability": 394
+  }
+}

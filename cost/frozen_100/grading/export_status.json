@@ -1,0 +1,8 @@
+{
+  "completed_nonempty": 100,
+  "expected_nonempty": 100,
+  "exported_records": 100,
+  "final_export": true,
+  "input_csv": "cost_100.csv",
+  "source_records": 100
+}

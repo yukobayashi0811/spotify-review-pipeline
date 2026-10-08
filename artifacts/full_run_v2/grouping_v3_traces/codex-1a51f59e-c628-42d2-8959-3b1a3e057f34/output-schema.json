@@ -1,0 +1,55 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "issues": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "actionable": {
+            "enum": [
+              "yes",
+              "no"
+            ],
+            "type": "string"
+          },
+          "coherent": {
+            "enum": [
+              "yes",
+              "no"
+            ],
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "heterogeneous_review_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "issue_id": {
+            "type": "string"
+          },
+          "issue_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "issue_id",
+          "issue_name",
+          "description",
+          "coherent",
+          "actionable",
+          "heterogeneous_review_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "issues"
+  ],
+  "type": "object"
+}

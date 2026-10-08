@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-40dd-76a3-b756-ad2ea08e584f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Boycott Sweden\",\"intent\":\"unclear\",\"needs_review\":false,\"review_id\":\"1452ccc8-49c3-47e8-8a14-31132b31c77d\",\"sentiment\":-0.8,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10758,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":80,"reasoning_output_tokens":0}}

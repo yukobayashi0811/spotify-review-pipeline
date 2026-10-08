@@ -1,0 +1,27 @@
+{
+  "completed_after": 3333,
+  "completed_before": 1336,
+  "new_calls": 45,
+  "resume_id": "resume-20261001T182455Z-f41df37c",
+  "run_enrichment": {
+    "cache_hits_total": 516,
+    "completed_total": 3333,
+    "evidence_quote_repairs": 3,
+    "failed_records": 0,
+    "fallback_unique": 0,
+    "max_workers_configured": 1,
+    "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+    "pending_unique_at_start": 1952,
+    "phase": "resume",
+    "processed_unique": 1952,
+    "run_id": "codex-dev-20261001T040740Z-280a9ec3-resume-20261001T182455Z-f41df37c-worker-03",
+    "spend_ledger_usd_including_unknown_reservations": 0.0,
+    "unknown_charge_batches_reserved_at_cap": 45,
+    "unsettled_reservation_usd": 0.0
+  },
+  "status_counts": {
+    "completed": 3333
+  },
+  "wall_seconds": 2948.215584,
+  "worker_index": 3
+}

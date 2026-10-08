@@ -1,0 +1,13 @@
+{
+  "fresh_100_proof": true,
+  "output_dir": "cost/frozen_100",
+  "state_path": "cost/frozen_100/state.db",
+  "grading_dir": "cost/frozen_100/grading",
+  "local_artifact_path": "experiments/distilled/al2-final-v2/distilled_model.joblib",
+  "local_manifest_path": "experiments/distilled/al2-final-v2/model_manifest.json",
+  "downstream_model": "mlx-community/gemma-4-e4b-it-4bit",
+  "downstream_model_revision": "475b9088d29754a3379866cf5aeb6b41acd313c2",
+  "worker_limit": 1,
+  "legacy_cache_allowed": false,
+  "luna_escalation_limit": 0
+}

@@ -1,0 +1,45 @@
+{
+  "artifact_sha256": "54660fb823922d80c41277b391d912c16b679a531bd250ba61689cb79b7b3b3b",
+  "golden_50": null,
+  "golden_50_prediction_seconds": 0.009709,
+  "golden_labels_opened": false,
+  "holdout_500": {
+    "agreement": {
+      "intent": 0.874,
+      "severity_exact": 0.882,
+      "severity_mae": 0.14,
+      "topic": 0.82
+    },
+    "cases": 500,
+    "routed_by_needs_review_fraction": 0.386,
+    "teacher": "saved Codex Luna pseudo-labels"
+  },
+  "holdout_500_prediction_seconds": 0.104241,
+  "interpretation": "Holdout-500 measures agreement with saved Codex Luna pseudo-labels. Golden labels are opened only when --score-golden is explicitly supplied.",
+  "leakage_audit": {
+    "passed": true,
+    "training_exact_text_overlap_with_golden_50": 0,
+    "training_exact_text_overlap_with_holdout_500": 0,
+    "training_normalized_text_overlap_with_golden_50": 0,
+    "training_normalized_text_overlap_with_holdout_500": 0,
+    "training_review_id_overlap_with_golden_50": 0,
+    "training_review_id_overlap_with_holdout_500": 0
+  },
+  "model_manifest_sha256": "f158488f407c687d73e8c4e2bd99105e5174021a0829e5b73f27831dcb39435a",
+  "model_version": "distilled-tfidf-linear-v2",
+  "provider_runtime": {
+    "api_charges_usd": 0.0,
+    "api_credentials_required": false,
+    "artifact_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/pilot-v2/distilled_model.joblib",
+    "artifact_sha256": "54660fb823922d80c41277b391d912c16b679a531bd250ba61689cb79b7b3b3b",
+    "call_count": 11,
+    "duration_seconds": 0.112925,
+    "model_version": "distilled-tfidf-linear-v2",
+    "network_required": false,
+    "provider": "local-distilled-sklearn",
+    "record_count": 550
+  },
+  "status": "completed",
+  "training_rows": 7853,
+  "training_seconds": 25.108561
+}

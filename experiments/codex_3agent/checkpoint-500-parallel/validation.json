@@ -1,0 +1,54 @@
+{
+  "checks": {
+    "all_calls_codex_and_metered": true,
+    "all_quotes_are_exact_substrings": true,
+    "all_records_completed": true,
+    "all_traces_successful_and_tool_free": true,
+    "benchmark_merge_valid": true,
+    "call_log_has_all_roles": true,
+    "claims_match_ranking": true,
+    "development_boundary_preserved": true,
+    "membership_complete_and_unique": true,
+    "memo_priority_present": true,
+    "no_api_credentials_in_children": true,
+    "ranking_recomputed_exactly": true,
+    "source_hash_matches_plan": true,
+    "source_ids_unique": true,
+    "verification_complete": true,
+    "warm_zero_model_calls": true
+  },
+  "details": {
+    "call_counts": {
+      "enrich:succeeded": 12,
+      "group:succeeded": 1,
+      "memo:succeeded": 1,
+      "verify:succeeded": 1
+    },
+    "calls": 15,
+    "classification_wall_seconds": 234.857582,
+    "completed_records": 500,
+    "downstream_wall_seconds": 90.065059,
+    "input_rows": 500,
+    "input_tokens": 189075,
+    "membership_rows": 243,
+    "output_tokens": 41096,
+    "ranking_issues": 7,
+    "top_issue": {
+      "complaint_count": 60,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.550000",
+      "priority_score": 153,
+      "rank": 1,
+      "severity_sum": 153
+    },
+    "trace_files": 15,
+    "verification_agreement": {
+      "intent": 0.98,
+      "severity_exact": 0.9,
+      "severity_mae": 0.1,
+      "topic": 0.98
+    },
+    "warm_wall_seconds": 0.067099
+  },
+  "status": "pass"
+}

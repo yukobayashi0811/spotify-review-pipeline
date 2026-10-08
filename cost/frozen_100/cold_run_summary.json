@@ -1,0 +1,444 @@
+{
+  "all_stages_skipped_unchanged": false,
+  "classification_artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+  "downstream_model_revision": "475b9088d29754a3379866cf5aeb6b41acd313c2",
+  "input": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/data/cost_100.csv",
+  "mode": "frozen",
+  "new_failed_model_attempts": 1,
+  "new_model_calls": 7,
+  "new_model_calls_by_role": {
+    "enrich": 2,
+    "group": 2,
+    "memo": 2,
+    "verify": 1
+  },
+  "run_id": "frozen-101c0d6d-3cef-423c-813a-fe7ed6d0efd2",
+  "runtime": {
+    "api_charges_usd": 0.0,
+    "api_credentials_required": false,
+    "calls": [
+      {
+        "duration_seconds": 31.472821,
+        "finish_reason": "json_complete",
+        "generated_characters": 2596,
+        "generation_mode": "empty_thought_then_json_prefix",
+        "generation_tokens_per_second": 34.915,
+        "input_tokens": 949,
+        "mlx_peak_memory_gb": 4.92646,
+        "output_tokens": 935,
+        "parsed_json_characters": 1849,
+        "process_memory_after_gb": 2.891121,
+        "process_memory_before_gb": 2.879832,
+        "prompt_tokens_per_second": 1320.774,
+        "role": "verify"
+      },
+      {
+        "duration_seconds": 18.229327,
+        "finish_reason": "json_complete",
+        "generated_characters": 1703,
+        "generation_mode": "empty_thought_then_json_prefix",
+        "generation_tokens_per_second": 28.658,
+        "input_tokens": 2602,
+        "mlx_peak_memory_gb": 5.00473,
+        "output_tokens": 455,
+        "parsed_json_characters": 1406,
+        "process_memory_after_gb": 2.892677,
+        "process_memory_before_gb": 2.890121,
+        "prompt_tokens_per_second": 1208.846,
+        "role": "group"
+      },
+      {
+        "duration_seconds": 10.266954,
+        "finish_reason": "json_complete",
+        "generated_characters": 820,
+        "generation_mode": "empty_thought_then_json_prefix",
+        "generation_tokens_per_second": 25.739,
+        "input_tokens": 1843,
+        "mlx_peak_memory_gb": 5.00473,
+        "output_tokens": 209,
+        "parsed_json_characters": 697,
+        "process_memory_after_gb": 2.894905,
+        "process_memory_before_gb": 2.892694,
+        "prompt_tokens_per_second": 956.294,
+        "role": "group"
+      },
+      {
+        "duration_seconds": 50.413743,
+        "finish_reason": "json_complete",
+        "generated_characters": 2395,
+        "generation_mode": "empty_thought_then_json_prefix",
+        "generation_tokens_per_second": 19.511,
+        "input_tokens": 4584,
+        "mlx_peak_memory_gb": 5.132687,
+        "output_tokens": 881,
+        "parsed_json_characters": 1940,
+        "process_memory_after_gb": 2.896658,
+        "process_memory_before_gb": 2.895004,
+        "prompt_tokens_per_second": 904.598,
+        "role": "memo"
+      },
+      {
+        "duration_seconds": 65.046448,
+        "finish_reason": "json_complete",
+        "generated_characters": 3126,
+        "generation_mode": "empty_thought_then_json_prefix",
+        "generation_tokens_per_second": 17.755,
+        "input_tokens": 4616,
+        "mlx_peak_memory_gb": 5.132687,
+        "output_tokens": 1036,
+        "parsed_json_characters": 2662,
+        "process_memory_after_gb": 2.897805,
+        "process_memory_before_gb": 2.896675,
+        "prompt_tokens_per_second": 720.971,
+        "role": "memo"
+      }
+    ],
+    "electricity_cost_usd": "unknown",
+    "hardware_cost_usd": "unknown",
+    "machine": "arm64",
+    "model_id": "mlx-community/gemma-4-e4b-it-4bit",
+    "model_revision": "475b9088d29754a3379866cf5aeb6b41acd313c2",
+    "network_required": false,
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "provider": "local-mlx",
+    "resolved_local_snapshot": "/Users/Yu/.cache/huggingface/hub/models--mlx-community--gemma-4-e4b-it-4bit/snapshots/475b9088d29754a3379866cf5aeb6b41acd313c2",
+    "runtime": "MLX-LM 0.31.3",
+    "system_memory_gb": 34.36,
+    "temperature": 0.0
+  },
+  "stages": {
+    "classify": {
+      "cache_hits_total": 0,
+      "completed_total": 100,
+      "evidence_quote_repairs": 0,
+      "failed_records": 0,
+      "fallback_unique": 0,
+      "max_workers_configured": 1,
+      "new_model_calls": 2,
+      "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+      "pending_unique_at_start": 100,
+      "phase": "initial",
+      "processed_unique": 100,
+      "run_id": "frozen-101c0d6d-3cef-423c-813a-fe7ed6d0efd2",
+      "spend_ledger_usd_including_unknown_reservations": 0.0,
+      "unknown_charge_batches_reserved_at_cap": 0,
+      "unsettled_reservation_usd": 0.0,
+      "wall_seconds": 0.747576
+    },
+    "export": {
+      "completed_nonempty": 100,
+      "expected_nonempty": 100,
+      "exported_records": 100,
+      "final_export": true,
+      "input_csv": "cost_100.csv",
+      "source_records": 100,
+      "wall_seconds": 0.006685
+    },
+    "group": {
+      "issue_count": 7,
+      "issues": [
+        {
+          "actionable": "yes",
+          "coherent": "yes",
+          "description": "Users are experiencing problems logging into their accounts, including password rejection and being unable to access the account.",
+          "flags_json": "[\"pilot_topic_group\"]",
+          "issue_id": "I_ACCESS_01",
+          "issue_name": "Login/Access Issues",
+          "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+          "topic": "access"
+        },
+        {
+          "actionable": "yes",
+          "coherent": "yes",
+          "description": "Users complain about intrusive advertisements and negative impacts from recent UI updates, such as random song playback or removal of controls for non-subscribers.",
+          "flags_json": "[\"pilot_topic_group\"]",
+          "issue_id": "I_USABILITY_01",
+          "issue_name": "Excessive Ads and UI Changes",
+          "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+          "topic": "usability"
+        },
+        {
+          "actionable": "yes",
+          "coherent": "yes",
+          "description": "Users report various playback issues including crashes, getting stuck on loading screens, and inability to control playback accurately.",
+          "flags_json": "[\"pilot_topic_group\"]",
+          "issue_id": "I_PLAYBACK_01",
+          "issue_name": "Playback Functionality Bugs",
+          "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+          "topic": "playback"
+        },
+        {
+          "actionable": "yes",
+          "coherent": "yes",
+          "description": "A user reports that the offline download feature is not functioning correctly.",
+          "flags_json": "[\"pilot_topic_group\"]",
+          "issue_id": "I_DOWNLOADS_01",
+          "issue_name": "Offline Download Failure",
+          "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+          "topic": "downloads"
+        },
+        {
+          "actionable": "yes",
+          "coherent": "yes",
+          "description": "Users note issues regarding missing songs, inconsistent lyric availability, and unwanted recommendation features.",
+          "flags_json": "[\"pilot_topic_group\"]",
+          "issue_id": "I_CATALOG_01",
+          "issue_name": "Content Availability and Display Issues",
+          "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+          "topic": "catalog"
+        },
+        {
+          "actionable": "yes",
+          "coherent": "yes",
+          "description": "Users complain that recent updates have restricted basic music player features, forcing users to pay for premium access to functions like selecting songs or skipping freely.",
+          "flags_json": "[\"pilot_topic_group\"]",
+          "issue_id": "I_BILLING_01",
+          "issue_name": "Feature restrictions requiring premium subscription",
+          "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+          "topic": "billing"
+        },
+        {
+          "actionable": "no",
+          "coherent": "yes",
+          "description": "Users express extreme dissatisfaction with the app, often citing recent updates or the business model as the cause for uninstalling or boycotting the service.",
+          "flags_json": "[\"pilot_topic_group\"]",
+          "issue_id": "I_OTHER_01",
+          "issue_name": "General negative sentiment regarding the app/updates",
+          "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+          "topic": "other"
+        }
+      ],
+      "membership_count": 52,
+      "membership_owner": "code: one complaint/cancellation issue per fixed primary topic",
+      "naming_and_review_owner": "local-mlx",
+      "scope": "100-review execution proof; not the adopted full-corpus embedding grouping",
+      "version": "pilot-topic-groups-v1",
+      "wall_seconds": 28.503457
+    },
+    "memo_evidence": {
+      "actionable_issues": 6,
+      "sensitivity_status": "not_estimated_for_100_review_execution_proof",
+      "topic_count": 7,
+      "wall_seconds": 0.001975
+    },
+    "prepare": {
+      "counts": {
+        "duplicate_review_ids": 0,
+        "empty_review_text": 0,
+        "missing_app_version": 18,
+        "records": 100
+      },
+      "distinct_nonempty_texts": 100,
+      "exact_text": {
+        "distinct_nonempty_texts": 100,
+        "reusable_nonempty_rows": 0
+      },
+      "file_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+      "first_review": "2022-06-02 10:30:18",
+      "last_review": "2023-11-13 15:07:19",
+      "parsed_rows_sha256": "23f840350257c058a03a508754384902373a593c09dbac3d1bd0481651fa1733",
+      "reviews_by_month": {
+        "2022-06": 5,
+        "2022-07": 5,
+        "2022-08": 6,
+        "2022-09": 5,
+        "2022-10": 4,
+        "2022-11": 1,
+        "2022-12": 2,
+        "2023-01": 4,
+        "2023-02": 4,
+        "2023-03": 7,
+        "2023-04": 4,
+        "2023-05": 5,
+        "2023-06": 4,
+        "2023-07": 11,
+        "2023-08": 3,
+        "2023-09": 6,
+        "2023-10": 19,
+        "2023-11": 5
+      },
+      "reviews_by_rating": {
+        "1": 33,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 43
+      },
+      "wall_seconds": 0.003982
+    },
+    "rank": {
+      "ranking": [
+        {
+          "complaint_count": 10,
+          "issue_id": "I_PLAYBACK_01",
+          "mean_severity": "3.200000",
+          "priority_score": 32,
+          "rank": 1,
+          "severity_sum": 32
+        },
+        {
+          "complaint_count": 14,
+          "issue_id": "I_OTHER_01",
+          "mean_severity": "2.142857",
+          "priority_score": 30,
+          "rank": 2,
+          "severity_sum": 30
+        },
+        {
+          "complaint_count": 10,
+          "issue_id": "I_USABILITY_01",
+          "mean_severity": "2.500000",
+          "priority_score": 25,
+          "rank": 3,
+          "severity_sum": 25
+        },
+        {
+          "complaint_count": 9,
+          "issue_id": "I_BILLING_01",
+          "mean_severity": "2.666667",
+          "priority_score": 24,
+          "rank": 4,
+          "severity_sum": 24
+        },
+        {
+          "complaint_count": 6,
+          "issue_id": "I_CATALOG_01",
+          "mean_severity": "2.666667",
+          "priority_score": 16,
+          "rank": 5,
+          "severity_sum": 16
+        },
+        {
+          "complaint_count": 2,
+          "issue_id": "I_ACCESS_01",
+          "mean_severity": "3.500000",
+          "priority_score": 7,
+          "rank": 6,
+          "severity_sum": 7
+        },
+        {
+          "complaint_count": 1,
+          "issue_id": "I_DOWNLOADS_01",
+          "mean_severity": "3.000000",
+          "priority_score": 3,
+          "rank": 7,
+          "severity_sum": 3
+        }
+      ],
+      "wall_seconds": 0.002176
+    },
+    "recommend": {
+      "alternatives": [
+        "I_USABILITY_01",
+        "I_BILLING_01"
+      ],
+      "claims": 12,
+      "input_hash": "b5bd84b6e782b5c82113ae7a824a7cf66a334e2843615f5abc1a0e90b63b2d8d",
+      "model_called": true,
+      "priority": "playback / I_PLAYBACK_01: High",
+      "priority_issue_id": "I_PLAYBACK_01",
+      "priority_topic": "playback",
+      "wall_seconds": 115.470898
+    },
+    "verify": {
+      "agreement": {
+        "intent": 0.5,
+        "severity_exact": 0.9,
+        "severity_mae": 0.1,
+        "topic": 1.0
+      },
+      "already_verified_at_start": 0,
+      "disagreements": [
+        {
+          "first_intent": "praise",
+          "first_severity": 1,
+          "first_topic": "other",
+          "intent_agree": false,
+          "review_id": "1d9f396e-7a8a-414b-a622-3ad6f9570abe",
+          "severity_distance": 0,
+          "topic_agree": true,
+          "verify_intent": "unclear",
+          "verify_severity": 1,
+          "verify_topic": "other"
+        },
+        {
+          "first_intent": "praise",
+          "first_severity": 1,
+          "first_topic": "other",
+          "intent_agree": false,
+          "review_id": "4c0242ca-099a-4c89-b11b-219ef28f1e16",
+          "severity_distance": 0,
+          "topic_agree": true,
+          "verify_intent": "unclear",
+          "verify_severity": 1,
+          "verify_topic": "other"
+        },
+        {
+          "first_intent": "praise",
+          "first_severity": 1,
+          "first_topic": "other",
+          "intent_agree": false,
+          "review_id": "5db4a676-1f15-48cf-b989-a0a0fdb1c7a3",
+          "severity_distance": 0,
+          "topic_agree": true,
+          "verify_intent": "unclear",
+          "verify_severity": 1,
+          "verify_topic": "other"
+        },
+        {
+          "first_intent": "praise",
+          "first_severity": 1,
+          "first_topic": "other",
+          "intent_agree": false,
+          "review_id": "aeee488a-2077-489d-8914-1e01d5f7672f",
+          "severity_distance": 0,
+          "topic_agree": true,
+          "verify_intent": "unclear",
+          "verify_severity": 1,
+          "verify_topic": "other"
+        },
+        {
+          "first_intent": "unclear",
+          "first_severity": 1,
+          "first_topic": "other",
+          "intent_agree": false,
+          "review_id": "def34476-7bdc-443a-ab3d-475cdd5ca2f6",
+          "severity_distance": 1,
+          "topic_agree": true,
+          "verify_intent": "complaint",
+          "verify_severity": 2,
+          "verify_topic": "other"
+        }
+      ],
+      "evidence_quote_repairs": 0,
+      "failures": [],
+      "maximum_sample": 10,
+      "metrics": {
+        "intent": 0.5,
+        "severity_exact": 0.9,
+        "severity_mae": 0.1,
+        "topic": 1.0
+      },
+      "minimum_sample": 10,
+      "pending_at_start": 10,
+      "planted_error_test": {
+        "detected": true,
+        "note": "The planted label exists only in this test copy and is excluded from business outputs.",
+        "planted_topic": "access",
+        "review_id": "178c3b49-b689-4fe4-92a2-2257a58e6d95",
+        "synthetic_test": true,
+        "verifier_topic": "other"
+      },
+      "role_independence": "Independent local Gemma prompt/model role; first-pass predictions were not supplied",
+      "sample_fraction": 0.1,
+      "sample_policy": "deterministic SHA-256 ordering of review_id under the declared seed; target=min(completed,max(minimum,round(completed*fraction)),maximum when set)",
+      "sample_seed": "frozen-100-verifier-v1",
+      "selected": 10,
+      "verified": 10,
+      "wall_seconds": 31.480177
+    }
+  },
+  "state": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/cost/frozen_100/state.db",
+  "status": "completed",
+  "wall_seconds": 176.246427
+}

@@ -1,0 +1,178 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING": [
+      {
+        "evidence_quote": "They will offer you 3 months and charge you the next month. Customer service is rude, useless and ignorant. They indirectly called me a liar and made me feel bad by forcing me to screenshot proof of what I said was true. Not even a complimentary free month for their disrespectful customer service. Bs company.",
+        "review_id": "10800b01-920d-4c22-91f5-521c45caf4f0",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Worst app ever this app is charging me for playback and",
+        "review_id": "16f22d8d-1583-44c1-ab8c-17485612e9ee",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I had unsubscribed, and Spotify stole My money!!!",
+        "review_id": "41c0c736-6617-466a-8e4d-3a2b551185e5",
+        "severity": 5
+      }
+    ],
+    "I_CATALOG": [
+      {
+        "evidence_quote": "Bro what are you doing bro? 💀 Simply just taking away basic music rights from humans? Literally now I can't even search and play music! Legit bring back those features for free. I ain't buying subscription I don't hav money 💀",
+        "review_id": "088909d0-cf9b-42b5-9259-e03b6d1cfa47",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "wth is happening with this app???? i can't find or listen to any song i try searching. It doesn't show my liked songs now that i have reinstalled it. I am paying for this app u should fix this asap",
+        "review_id": "2d7b2ebe-826f-49cd-a109-b0ab3bf52c2d",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Unable to access any artist or podcast. Uninstalled. Bye.",
+        "review_id": "42da37cb-8bbf-4208-b9d1-5cde1a2c9dc4",
+        "severity": 4
+      }
+    ],
+    "I_OTHER": [
+      {
+        "evidence_quote": "Collects too much personal information",
+        "review_id": "21ddfe12-8433-4bad-b0f8-e7f605c056ae",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Spotify is straight up a stalker app it tries to monitor you is the monitor you completely It's weird at once control of you every single moment of your life",
+        "review_id": "60511edc-f704-4572-8589-3409fce25701",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "This is a very very bad app and is a very data has hacking for our mobile",
+        "review_id": "68a5d92a-1dca-40ba-b9f8-fc61a24b12a8",
+        "severity": 5
+      }
+    ],
+    "I_PLAYBACK": [
+      {
+        "evidence_quote": "Until a few days ago the app was great but now it's not even playing songs. It just keeps loading even when there's active internet and all other apps are able to work..songs just don't play. I've restarting my phone updated the app done literally everything the songs just don't play. Horrible experience.",
+        "review_id": "004d1c8a-a8c8-4746-b975-cd2f31c2a730",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "I can't play song pls fix the bug",
+        "review_id": "022dcbce-b629-4b22-8dbf-900f748a3097",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "It's not working nor playing for me tried it reinstalling many times still didn't work.",
+        "review_id": "026ecef8-811d-4304-b77d-c5e6c8f68bd1",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY": [
+      {
+        "evidence_quote": "I had to delete and uninstall this app more than one time and I still have the same problem with it it's somehow decides to automatically start playing. Even over other media audio applications plus they keep changing the location of where you can shut off the permissions for that. It's absolutely trash and I would suggest that no one use it because it takes takes over too many permissions on your phone and it really really does spy on your privacy",
+        "review_id": "91132204-877d-4ac1-9d08-20d03f1414f6",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I love the selection and the quality however I have one major problem. When asked to watch an ad for 30 minutes of uninterrupted listening upon clicking ok it will play 3 or 4 ads and not ten minutes later play another. Please fix this Spotify. Update: my playlist, that had hundreds of songs that took years to put together, just vanished. Im actually about to cry. Bumped my rating to 1 star. Very upset",
+        "review_id": "ee11e1df-cb73-4c3a-b5e8-7268c7872b01",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Dernière mise à jour horrible. Interface utilisateur inutilisable.",
+        "review_id": "09e134f9-124f-474f-8e0c-324e6e953304",
+        "severity": 4
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS": {
+      "description": "Users report trouble logging in or creating accounts, including errors after updates and access limitations in some locations.",
+      "issue_id": "I_ACCESS",
+      "issue_name": "Login and account access problems"
+    },
+    "I_BILLING": {
+      "description": "Users object to subscription costs and say free-tier restrictions, advertising, or premium features make the service feel poor value.",
+      "issue_id": "I_BILLING",
+      "issue_name": "Subscription cost and premium restrictions"
+    },
+    "I_CATALOG": {
+      "description": "Users report missing songs or content, search problems, and recommendations that are too narrow or repetitive.",
+      "issue_id": "I_CATALOG",
+      "issue_name": "Missing content and discovery issues"
+    },
+    "I_DOWNLOADS": {
+      "description": "Users report difficulty saving downloads, maintaining downloaded libraries, or listening offline.",
+      "issue_id": "I_DOWNLOADS",
+      "issue_name": "Downloads and offline listening problems"
+    },
+    "I_OTHER": {
+      "description": "Users express general dissatisfaction or intent to leave without identifying a specific product problem.",
+      "issue_id": "I_OTHER",
+      "issue_name": "Unspecified dissatisfaction"
+    },
+    "I_PLAYBACK": {
+      "description": "Users report songs failing to start, stopping unexpectedly, or other playback and app reliability problems.",
+      "issue_id": "I_PLAYBACK",
+      "issue_name": "Playback and app reliability problems"
+    },
+    "I_SUPPORT": {
+      "description": "Users report difficulty reaching support or resolving service problems, including slow responses and limited remedies.",
+      "issue_id": "I_SUPPORT",
+      "issue_name": "Support access and issue resolution"
+    },
+    "I_USABILITY": {
+      "description": "Users describe confusing or inconvenient controls, navigation, and interruptions such as ads or unwanted background playback.",
+      "issue_id": "I_USABILITY",
+      "issue_name": "Controls, navigation, and interruptions"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 1151,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.533449",
+      "priority_score": 2916,
+      "rank": 1,
+      "severity_sum": 2916
+    },
+    {
+      "complaint_count": 1259,
+      "issue_id": "I_OTHER",
+      "mean_severity": "1.998411",
+      "priority_score": 2516,
+      "rank": 2,
+      "severity_sum": 2516
+    },
+    {
+      "complaint_count": 729,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.152263",
+      "priority_score": 2298,
+      "rank": 3,
+      "severity_sum": 2298
+    },
+    {
+      "complaint_count": 750,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.789333",
+      "priority_score": 2092,
+      "rank": 4,
+      "severity_sum": 2092
+    },
+    {
+      "complaint_count": 240,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.900000",
+      "priority_score": 696,
+      "rank": 5,
+      "severity_sum": 696
+    }
+  ]
+}

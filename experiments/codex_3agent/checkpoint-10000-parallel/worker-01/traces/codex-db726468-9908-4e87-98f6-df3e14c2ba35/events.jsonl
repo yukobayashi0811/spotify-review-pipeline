@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-7c3f-7b31-b4a2-59b216d12504"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Spotify premium\",\"homepage\",\"Tik-tok\",\"Auto-playing music vids\",\"Tidal premium\"],\"evidence_quote\":\"Unless it changes, byebye Spotify premium, hello Tidal premium!\",\"intent\":\"cancellation\",\"needs_review\":false,\"review_id\":\"c2774d59-69bf-43a7-bf0d-d49b240b33f1\",\"sentiment\":-0.95,\"severity\":3,\"topic\":\"usability\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10856,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":111,"reasoning_output_tokens":0}}

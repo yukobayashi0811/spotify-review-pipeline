@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f91b-276a-7162-8173-af44cb081b85"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"phone\"],\"evidence_quote\":\"I only wish it wasn't limited on the skips.\",\"intent\":\"request\",\"needs_review\":false,\"review_id\":\"ac581cea-24f2-4251-a062-53cdd77cfed7\",\"sentiment\":0.6,\"severity\":1,\"topic\":\"usability\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11273,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":83,"reasoning_output_tokens":0}}

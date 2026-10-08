@@ -1,0 +1,427 @@
+{
+  "cache_chain_rows": 0,
+  "completed_representatives_missing_successful_same_config_enrich_call": 1079,
+  "counts": {
+    "completed": 410044,
+    "distinct_nonempty_texts": 484189,
+    "luna_succeeded": 3960,
+    "quarantined": 13,
+    "record_rows": 410057,
+    "source_rows": 660622
+  },
+  "integrity_check": [
+    "ok"
+  ],
+  "label_config_counts": {
+    "<NULL>": 13,
+    "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2": 275963,
+    "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable": 134081
+  },
+  "missing_call_examples": [
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "004f45a8-5203-4ad5-ba94-d9876aff538d"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "00db0ae0-65e7-4c2c-8caf-a29418bd82ac"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "01232028-0800-4533-9dbe-54a1574c6ea6"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "014c6b11-389d-4017-826d-33320c9d437d"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "01566d48-60f7-4b25-baec-66b05d1f6075"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "017c6854-3d42-426d-97c1-f78177a50c80"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "017ca4db-92ee-4552-bbfc-651f38431c47"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "01c89b61-8312-42f9-9156-1de4c4fca212"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "026e29e9-0f87-4d44-ba85-59484c5928db"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "02eea3cd-bc4c-4766-8e8f-c247a31f04da"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0308cfc3-1ed2-43bf-8758-652b7748ae78"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0309db8d-0f6c-46dd-bdeb-ff454ff9b591"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "037bdf05-401b-420e-b4f5-ba5af37b7fec"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "03b7cad9-c916-471b-bade-bf181642e401"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "03dd8657-7fa0-4269-bc96-1191ca4cf989"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "040094cd-f468-4a13-9946-5b23f9510512"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "04a5370a-0d0b-428d-a24e-ef5354a414eb"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "04afd2b9-f2b3-4324-9518-062cc216387a"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "055ad798-2df3-490e-9b11-99c512a71431"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0594afed-2893-4719-95c3-2804fe4636be"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "05d77903-8ea2-4ca3-8ff2-238b02da75a7"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0602d9a4-625c-4400-a762-21affc0018a2"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "06594950-5341-4f9a-929d-ad231fc4492c"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "06736781-16f0-4dbd-9c82-fad8f9cb8068"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "06927fcd-f80e-4b0a-b188-7101a5c436a9"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "06996167-33aa-4701-8447-6fa2e71d35a0"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "06f33b0d-814a-4c61-b099-85141232d475"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "07c823f3-0b26-4637-9797-a9f90fc463c5"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "07f04a3f-e432-4075-a1d1-5b9a2376226f"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "08b6f294-80c3-493d-b9cb-fa3a61932a6e"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "08d70a14-140c-44a8-bda1-09e7fcdcb62d"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0921d24e-1565-402b-a134-3111c8dfc940"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "092fd6ff-666e-4a83-8d7c-9c2b0542ea4b"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "094b8ed5-566a-4ac3-aa3f-babbcbf48ca1"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "09504891-91dd-4668-9079-45a1be853762"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "098ec243-266a-4c84-8f0c-7b0e9804a418"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "09a75158-2340-43e2-b1ee-3b480f248f26"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "09f04890-2a99-4753-a044-cd4613e4a0de"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "09fb3633-3b42-45a9-ae95-0688df857322"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0a2eca6d-c7ef-4a5c-9ca2-81361174815c"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0a3104bd-e3b0-4c18-846d-30543141be76"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0a56c643-1237-4f5c-a4fa-f9fe9b7e666d"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0a723bdc-0a0c-43a5-9594-2774fe41f83a"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0b583936-1c66-408a-84c9-1f53904e796b"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0b5d38b4-dd94-4f52-b29a-efed1d4c2825"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0c01aa06-520e-4189-993e-8d74fc57ba49"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0c19c1cf-1e63-4296-8a95-4512ffeb3f0f"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0c20367b-820a-4a8a-a666-f9c282fbef4b"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0c2dbc20-1e8d-4239-bfc1-09c25d915ffb"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0c392c0c-b04f-429f-a810-034ee6fb6b1e"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0c4da106-ab23-4e43-952b-889e69009698"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0c9d66bb-f67e-4d64-bac1-abcc9302f334"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0cf34286-d20e-49f8-9182-f38dad4f52cc"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0d2c2a4a-9aa2-4900-b104-2da3c300943b"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0dd06397-b46a-4999-b2a6-7736fcb3881b"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0deaf7a7-f7f0-4767-9e1c-0bcea155b960"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0f06d9f8-95d0-4665-85f9-f9c26fbd37c5"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0f2672e3-9e94-4784-a418-05019c7c070f"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0f3694b4-132f-4ab9-a5c1-18e28aad267f"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0faa46a6-da50-4d7d-b297-544f96426b14"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "0fe0bdb4-324e-4903-a63d-dca7a56af2dd"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "10452a3c-5df0-4da8-afab-40adbb314403"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1076cb39-44f1-4037-a5ad-48e0e834dc95"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "116cd634-49fa-43dd-97f3-bb488928608e"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "117dc415-4d67-468b-80cc-ec7241738c39"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "11910973-9d38-4085-8dd9-e63700fcbbc7"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "11ec1f98-3bd8-40ad-ab12-71e228f11ce4"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "11fdb6c2-7ab2-485b-989a-3c292a5ce98a"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1202cbde-493f-4de3-8c33-f17cc65cfe21"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1271500e-af2b-4b16-9ed1-4fd4cd948713"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "12a6dba4-f3f7-4181-b560-e32ef2a8cf80"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1301b92a-31b9-4437-b943-c8d868d40f03"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "131f8a0a-b9ef-4ef9-ada8-566de2c1ee8c"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "13ffe9dc-4bea-458d-91ef-dab51f59bd3a"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "15191d20-4138-4ac5-baef-96f59a8196c6"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1529b1c3-edc6-4587-ab54-b96ca4e9219a"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1572e419-9f21-4e00-b5ce-c0de90fc4647"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "15dcc047-694b-44fd-a5a8-63942bd2596d"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "16975d3f-e419-4062-a8d5-12a0107e0ef4"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1699c164-fb07-4e5c-875a-5e495210d0d2"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "16e94bb4-055c-4c87-ba26-3a36b4aaf476"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "170a639d-aebc-4612-901a-8b33f32a30f8"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "17485e28-6169-4f8c-bbbb-f35579c99ed0"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "175b2060-61aa-4de5-b8f0-a7e8ba192e4e"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1780a566-f310-4ba2-96d8-c5b4c1d11cb3"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "17f10da8-0449-4aa2-bbb3-a0b55db9eba3"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1817ac59-2dff-40e4-98ec-04078f7254d5"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "184bc019-5a7d-455d-baea-e04489af7b5a"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "18580619-61b2-4f4b-8afc-dd13a24592e9"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "186295a6-5e10-4df7-a59d-a36fe05916d1"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1868b2cc-cb04-405e-847e-42bd5ba40d66"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "189e2daf-8b8c-490e-be57-a9fe671a5fcc"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "18b30eea-7c96-4bf6-92e5-d1bf712d34b4"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "18c3587f-d0ff-4d4b-a89c-bc5c2a4e007d"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "193a5992-57b3-4fea-be54-bd9f9b6c2fc6"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1941f802-5300-40ed-9b5a-60584d3d17f3"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1a43d900-7a6f-4952-b338-b1c7fb58e312"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1a71fa83-4ace-4735-90f3-2e4d65aa494b"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1a73daf2-9b90-422f-82be-76ec8761f7ac"
+    },
+    {
+      "label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+      "review_id": "1a863ff5-89dd-42e1-87f4-9cfc4234e725"
+    }
+  ],
+  "partial_finalized_exact_text_groups": 0,
+  "partial_group_examples": [],
+  "passed": false,
+  "state_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/artifacts/full_run_v2/state.db",
+  "state_sha256": "c587ee475099136908556fc9b210e8bbda20dd5bc9f989a56087f35fa023299a"
+}

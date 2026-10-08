@@ -1,0 +1,57 @@
+{
+  "development_only": true,
+  "grading_eligible": false,
+  "captured_at_utc": "2026-10-01T17:26:53Z",
+  "interruption_type": "operator_safe_interrupt",
+  "process_exit_code": 130,
+  "reason": "A timed-out 50-review batch entered the prior one-review-at-a-time recovery path, causing unacceptable throughput. The process was interrupted only after persisted state was confirmed.",
+  "source_records": 10000,
+  "completed_records": 3228,
+  "remaining_source_records": 6772,
+  "quarantined_records_pending_retry": 6,
+  "direct_exact_text_cache_hits": 1340,
+  "calls": 87,
+  "succeeded_calls": 75,
+  "failed_calls": 12,
+  "worker_snapshots": [
+    {
+      "worker": "worker-01",
+      "source_records": 3334,
+      "completed_records": 1066,
+      "quarantined_records_pending_retry": 2,
+      "calls": 28,
+      "succeeded_calls": 24,
+      "failed_calls": 4,
+      "direct_exact_text_cache_hits": 454
+    },
+    {
+      "worker": "worker-02",
+      "source_records": 3333,
+      "completed_records": 1104,
+      "quarantined_records_pending_retry": 2,
+      "calls": 28,
+      "succeeded_calls": 24,
+      "failed_calls": 4,
+      "direct_exact_text_cache_hits": 443
+    },
+    {
+      "worker": "worker-03",
+      "source_records": 3333,
+      "completed_records": 1058,
+      "quarantined_records_pending_retry": 2,
+      "calls": 31,
+      "succeeded_calls": 27,
+      "failed_calls": 4,
+      "direct_exact_text_cache_hits": 443
+    }
+  ],
+  "state_note": "One additional worker-03 record was materialized from the exact-text cache during the pre-resume inspection; this required no model call. Quarantined non-empty records remain eligible for retry on resume.",
+  "resume_safety": {
+    "completed_records_are_excluded": true,
+    "label_config_unchanged": true,
+    "worker_state_files_preserved": true,
+    "recovery_strategy_after_patch": "failed batch >10 -> consecutive units of at most 10 -> only failed units split to single reviews"
+  },
+  "billing_mode": "chatgpt_subscription",
+  "monetary_cost_usd": "unknown"
+}

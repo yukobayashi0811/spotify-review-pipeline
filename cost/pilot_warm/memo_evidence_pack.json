@@ -1,0 +1,178 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING": [
+      {
+        "evidence_quote": "I m using this app from 5 to 6 year but now m uninstald this app cz his premium adds are everywhere now .",
+        "review_id": "035213ba-b1b9-411c-b028-70296e5f0e73",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "This has become premium just for the creator of spotify to earn money anyways it is a very bad app usless since this new update!",
+        "review_id": "21915fcd-9a35-48ba-b277-6296c4154603",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Vary bad experience.i am uninstalling this app they burn quran and i will bycot this app as it is launched by swedan 🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕",
+        "review_id": "486d1d7a-d6f6-41ea-81ad-ed875452729c",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG": [
+      {
+        "evidence_quote": "many songs are not present here!",
+        "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+        "severity": 2
+      },
+      {
+        "evidence_quote": "in some songs there is no lyrics and in some songs there is lyrics it's so confusing",
+        "review_id": "47becad0-8ae5-4a10-9731-fde8f2091862",
+        "severity": 2
+      },
+      {
+        "evidence_quote": "gospel music isn't much",
+        "review_id": "a1a28752-3256-4f81-b888-3e943343529f",
+        "severity": 2
+      }
+    ],
+    "I_OTHER": [
+      {
+        "evidence_quote": "The update made the app useless .... Uninstall krdia ye app ab bekar hai ... Wynk hi theek h",
+        "review_id": "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Worst app",
+        "review_id": "06a45bd5-3ed9-43af-b7f2-8b9487e2ffff",
+        "severity": 2
+      },
+      {
+        "evidence_quote": "Worst app.",
+        "review_id": "178c3b49-b689-4fe4-92a2-2257a58e6d95",
+        "severity": 2
+      }
+    ],
+    "I_PLAYBACK": [
+      {
+        "evidence_quote": "The latest update has caused my app to crash I cant open the app please fix.",
+        "review_id": "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "We can't even go back few second to play music?",
+        "review_id": "9e5f9745-f8be-48d3-b9de-4d118507d94a",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "it is always stuck downloading songs in the background and gets stuck until I open Spotify",
+        "review_id": "2ffdf599-a0d5-4c01-bf26-025215d44c06",
+        "severity": 3
+      }
+    ],
+    "I_USABILITY": [
+      {
+        "evidence_quote": "it plays any song of the Playlist randomly it really really disappointing for and listeners who don't need disturbance in their song patterns",
+        "review_id": "5c9c17d3-9d6a-4fa1-a2a4-ae98eefbbd25",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Please stop with the recommendations! I use the premium family sub and I want to listen to my playlist without your recommendation adds.",
+        "review_id": "618d1dbb-0186-4537-923a-7b4dabf19afb",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "From last update they removed basic features of music player",
+        "review_id": "7084ced1-0428-4093-9328-442f74719b4f",
+        "severity": 3
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS": {
+      "description": "Users are experiencing issues like being unable to log into their account or password rejection.",
+      "issue_id": "I_ACCESS",
+      "issue_name": "Account access and authentication"
+    },
+    "I_BILLING": {
+      "description": "Complaints include feeling that the app has become overly monetized with premium requirements or excessive ads.",
+      "issue_id": "I_BILLING",
+      "issue_name": "Pricing charges subscriptions and entitlement"
+    },
+    "I_CATALOG": {
+      "description": "Users report missing songs in the catalog or inconsistent availability of lyrics for tracks.",
+      "issue_id": "I_CATALOG",
+      "issue_name": "Catalog search recommendations and lyrics"
+    },
+    "I_DOWNLOADS": {
+      "description": "A specific issue mentioned is that offline playback functionality is not working.",
+      "issue_id": "I_DOWNLOADS",
+      "issue_name": "Downloads saved music and offline listening"
+    },
+    "I_OTHER": {
+      "description": "Users have provided general negative feedback about the application, calling it useless or disappointing.",
+      "issue_id": "I_OTHER",
+      "issue_name": "Other product complaints"
+    },
+    "I_PLAYBACK": {
+      "description": "Technical issues range from background downloading stalls to crashes upon opening the app or playback interruptions.",
+      "issue_id": "I_PLAYBACK",
+      "issue_name": "Playback reliability and performance"
+    },
+    "I_SUPPORT": {
+      "description": "A user has complained about the application's support services.",
+      "issue_id": "I_SUPPORT",
+      "issue_name": "Support access and response"
+    },
+    "I_USABILITY": {
+      "description": "Users complain about excessive advertisements interrupting listening sessions or unwanted changes to the music player experience.",
+      "issue_id": "I_USABILITY",
+      "issue_name": "Controls navigation and ad interruptions"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 14,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.571429",
+      "priority_score": 36,
+      "rank": 1,
+      "severity_sum": 36
+    },
+    {
+      "complaint_count": 11,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.090909",
+      "priority_score": 34,
+      "rank": 2,
+      "severity_sum": 34
+    },
+    {
+      "complaint_count": 13,
+      "issue_id": "I_OTHER",
+      "mean_severity": "2.076923",
+      "priority_score": 27,
+      "rank": 3,
+      "severity_sum": 27
+    },
+    {
+      "complaint_count": 8,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.750000",
+      "priority_score": 22,
+      "rank": 4,
+      "severity_sum": 22
+    },
+    {
+      "complaint_count": 4,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.000000",
+      "priority_score": 8,
+      "rank": 5,
+      "severity_sum": 8
+    }
+  ]
+}

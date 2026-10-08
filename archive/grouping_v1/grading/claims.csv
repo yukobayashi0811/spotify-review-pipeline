@@ -1,0 +1,5 @@
+claim_id,issue_id,metric,value
+C001,I_OTHER_02,complaint_count,42882
+C002,I_OTHER_02,severity_sum,88626
+C003,I_OTHER_02,mean_severity,2.066741
+C004,I_OTHER_02,priority_score,88626

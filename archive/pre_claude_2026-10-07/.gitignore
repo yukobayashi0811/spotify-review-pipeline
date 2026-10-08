@@ -1,0 +1,27 @@
+.env
+.env.*
+!.env.example
+*.db
+*.db-shm
+*.db-wal
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+data/spotify_reviews_18months.csv
+artifacts/runtime/
+artifacts/local-reference.json
+artifacts/self-check.json
+
+# Large local-only files (GitHub rejects files over 100 MB).
+# grading/records.jsonl.gz is the committed, byte-identical compressed export.
+grading/records.jsonl
+artifacts/full_run_v2/group_embeddings.npy
+archive/grouping_v1/grading/records.jsonl
+archive/grouping_v1/artifacts/full_run_v2/grouping_model.joblib
+
+# Local agent scratch areas (absolute-path node_modules symlinks, derived workbooks).
+# outputs/*/golden_50_completed.xlsx is generated from evals/golden_50.csv, not a human labeling artifact.
+.artifact_*/
+outputs/

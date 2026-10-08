@@ -1,0 +1,62 @@
+{
+  "agreement": {
+    "intent": 0.9,
+    "severity_exact": 0.9,
+    "severity_mae": 0.1,
+    "topic": 0.8
+  },
+  "already_verified_at_start": 10,
+  "disagreements": [
+    {
+      "first_intent": "praise",
+      "first_severity": 1,
+      "first_topic": "catalog",
+      "intent_agree": true,
+      "review_id": "9f3794ed-4f4b-4430-a548-9cfd2d0c0084",
+      "severity_distance": 0,
+      "topic_agree": false,
+      "verify_intent": "praise",
+      "verify_severity": 1,
+      "verify_topic": "other"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 2,
+      "first_topic": "usability",
+      "intent_agree": false,
+      "review_id": "b47c203f-366e-4409-922d-cd52aa8bbef6",
+      "severity_distance": 0,
+      "topic_agree": false,
+      "verify_intent": "cancellation",
+      "verify_severity": 2,
+      "verify_topic": "other"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 3,
+      "first_topic": "catalog",
+      "intent_agree": true,
+      "review_id": "e0127547-4edd-44a0-8d5e-e8398bc07086",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 2,
+      "verify_topic": "catalog"
+    }
+  ],
+  "evidence_quote_repairs": 0,
+  "failures": [],
+  "pending_at_start": 0,
+  "planted_error_test": {
+    "detected": true,
+    "note": "The planted label exists only in this test copy and is excluded from business outputs.",
+    "planted_topic": "access",
+    "review_id": "23de7958-ccb0-4356-bc12-094935e6857d",
+    "synthetic_test": true,
+    "verifier_topic": "other"
+  },
+  "sample_fraction": 0.1,
+  "sample_seed": "spotify-verifier-v1",
+  "selected": 10,
+  "verified": 10
+}

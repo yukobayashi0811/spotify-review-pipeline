@@ -1,0 +1,4 @@
+2026-10-01T16:57:11.500710Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T16:57:11.501516Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T16:57:11.502867Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T16:57:12.476224Z  WARN codex_core::tasks: task 01a0f866-0866-7b63-b18a-e4528cb0661a didn't complete gracefully after 100ms

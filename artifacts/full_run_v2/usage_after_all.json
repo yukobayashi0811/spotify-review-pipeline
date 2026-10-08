@@ -1,0 +1,20 @@
+{
+  "captured_at_utc": "2026-10-03T16:48:44Z",
+  "capture_point": "after all 3960 new classification/verification texts, 565 adopted grouping evidence texts, and 2 adopted memo attempts",
+  "source": "Codex account usage-limit readout",
+  "ordinary_usage_allowed": true,
+  "limit_id": "codex",
+  "plan_type": "plus",
+  "window_duration_minutes": 10080,
+  "used_percent": 90,
+  "remaining_percent": 10,
+  "resets_at_unix": 1791580628,
+  "resets_at_utc": "2026-10-09T21:17:08Z",
+  "credits": {
+    "has_credits": false,
+    "unlimited": false,
+    "balance": "0"
+  },
+  "available_full_reset_credits": 2,
+  "attribution_limitation": "This account-level percentage is shared usage and cannot be attributed solely to this assignment."
+}

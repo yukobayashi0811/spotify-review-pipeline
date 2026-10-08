@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-8fbf-7572-82cc-4c407c0dfb79"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"mobile load\"],\"evidence_quote\":\"im trying to pay via mobile load but it says that it has encountered an error\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"4e677b01-c89d-4917-9e95-f82bfebe1a00\",\"sentiment\":-0.7,\"severity\":3,\"topic\":\"billing\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10759,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":94,"reasoning_output_tokens":0}}

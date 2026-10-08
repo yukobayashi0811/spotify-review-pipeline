@@ -1,0 +1,127 @@
+{
+  "status": "completed",
+  "cases": 50,
+  "missing_predictions": 0,
+  "agreement": {
+    "topic": 0.94,
+    "intent": 0.92,
+    "severity_exact": 0.76,
+    "severity_mae_on_valid_predictions": 0.24,
+    "sentiment_mae_on_valid_predictions": 0.072,
+    "entities_exact": 0.64,
+    "evidence_quote_substring": 1.0
+  },
+  "macro_f1": {
+    "topic": 0.906695,
+    "intent": 0.76721,
+    "severity": 0.666976
+  },
+  "normalized_text_group_weighted_agreement": {
+    "topic_match": 0.938776,
+    "intent_match": 0.918367,
+    "severity_match": 0.755102
+  },
+  "normalized_text_groups": 49,
+  "confusion": {
+    "topic": [
+      {
+        "expected": "billing",
+        "predicted": "billing",
+        "count": 1
+      },
+      {
+        "expected": "catalog",
+        "predicted": "catalog",
+        "count": 6
+      },
+      {
+        "expected": "catalog",
+        "predicted": "other",
+        "count": 1
+      },
+      {
+        "expected": "downloads",
+        "predicted": "downloads",
+        "count": 1
+      },
+      {
+        "expected": "other",
+        "predicted": "other",
+        "count": 25
+      },
+      {
+        "expected": "playback",
+        "predicted": "playback",
+        "count": 6
+      },
+      {
+        "expected": "usability",
+        "predicted": "billing",
+        "count": 1
+      },
+      {
+        "expected": "usability",
+        "predicted": "other",
+        "count": 1
+      },
+      {
+        "expected": "usability",
+        "predicted": "usability",
+        "count": 8
+      }
+    ],
+    "intent": [
+      {
+        "expected": "cancellation",
+        "predicted": "cancellation",
+        "count": 1
+      },
+      {
+        "expected": "cancellation",
+        "predicted": "unclear",
+        "count": 1
+      },
+      {
+        "expected": "complaint",
+        "predicted": "complaint",
+        "count": 21
+      },
+      {
+        "expected": "complaint",
+        "predicted": "unclear",
+        "count": 1
+      },
+      {
+        "expected": "praise",
+        "predicted": "praise",
+        "count": 21
+      },
+      {
+        "expected": "request",
+        "predicted": "complaint",
+        "count": 1
+      },
+      {
+        "expected": "request",
+        "predicted": "request",
+        "count": 1
+      },
+      {
+        "expected": "unclear",
+        "predicted": "praise",
+        "count": 1
+      },
+      {
+        "expected": "unclear",
+        "predicted": "unclear",
+        "count": 2
+      }
+    ]
+  },
+  "note": "Quote membership is mechanical; a human must inspect whether the quote supports the label and whether entities are grounded.",
+  "golden_labels_file": "evals/golden_50.csv",
+  "golden_labels_sha256": "c41cd56359d9069a4eeb799a9d7b57e09ff59fa360b4a47cc237bdb40d415dd5",
+  "predictions_file": "experiments/codex_3agent/quality-50-batch50-single/predictions.csv",
+  "predictions_sha256": "a7d9ac4faa793074d36e1ef1ed862f19d715bcb9b02ee6695f849bf6180395e1",
+  "model_calls": 0
+}

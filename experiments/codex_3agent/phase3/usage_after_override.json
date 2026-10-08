@@ -1,0 +1,11 @@
+{
+  "captured_at_local": "2026-09-30",
+  "ordinary_usage_allowed": true,
+  "plan_type": "plus",
+  "used_percent": 77,
+  "window_duration_minutes": 10080,
+  "resets_at_local": "2026-10-07 14:58:20 PDT",
+  "credits_balance": "0",
+  "operator_override_recorded": true,
+  "interpretation": "Account-wide snapshot after the 12-review comparison and 50-review quality run; the change is not attributable solely to these experiments. No reset credit was used."
+}

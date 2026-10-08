@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0ffba-0063-78e3-98a1-99088070f1bf"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Love this app.\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"R001\",\"sentiment\":0.8,\"severity\":1,\"topic\":\"other\"},{\"entities\":[],\"evidence_quote\":\"App is stuck on loading/logo screen\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"R002\",\"sentiment\":-0.7,\"severity\":4,\"topic\":\"playback\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11313,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":105,"reasoning_output_tokens":0}}

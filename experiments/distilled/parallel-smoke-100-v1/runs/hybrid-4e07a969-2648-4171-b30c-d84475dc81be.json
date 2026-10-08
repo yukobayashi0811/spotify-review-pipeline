@@ -1,0 +1,1545 @@
+{
+  "artifacts": {
+    "escalation_state": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/parallel-smoke-100-v1/escalation/state.db",
+    "final_records": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/parallel-smoke-100-v1/final/records.jsonl",
+    "final_state": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/parallel-smoke-100-v1/final/state.db",
+    "local_state": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/parallel-smoke-100-v1/local/state.db",
+    "routing_decisions": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/parallel-smoke-100-v1/routing_decisions.csv",
+    "run_report": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/parallel-smoke-100-v1/runs/hybrid-4e07a969-2648-4171-b30c-d84475dc81be.json"
+  },
+  "cache_mode": "cold_or_partial_resume",
+  "classification_changed_rows": 5,
+  "consistency_repaired_unique_texts": 0,
+  "development_only": true,
+  "distinct_nonempty_texts": 100,
+  "escalation_run": {
+    "cache_hits_total": 0,
+    "completed_total": 5,
+    "evidence_quote_repairs": 0,
+    "failed_records": 0,
+    "fallback_unique": 0,
+    "max_workers_configured": 3,
+    "note": "Deterministic shards ran concurrently with one SQLite checkpoint per worker and a parent-only central merge.",
+    "pending_unique_at_start": 5,
+    "phase": "initial",
+    "processed_unique": 5,
+    "run_id": "hybrid-4e07a969-2648-4171-b30c-d84475dc81be-luna",
+    "spend_ledger_usd_including_unknown_reservations": 0.0,
+    "status_counts": {
+      "completed": 5
+    },
+    "unknown_charge_batches_reserved_at_cap": 3,
+    "unsettled_reservation_usd": 0.0,
+    "worker_summaries": [
+      {
+        "completed_total": 2,
+        "failed_records": 0,
+        "input_rows": 2,
+        "processed_unique": 2,
+        "worker_index": 1
+      },
+      {
+        "completed_total": 2,
+        "failed_records": 0,
+        "input_rows": 2,
+        "processed_unique": 2,
+        "worker_index": 2
+      },
+      {
+        "completed_total": 1,
+        "failed_records": 0,
+        "input_rows": 1,
+        "processed_unique": 1,
+        "worker_index": 3
+      }
+    ]
+  },
+  "escalation_status": {
+    "completed": 5
+  },
+  "escalation_wall_seconds": 5.648101,
+  "final_call_count": 5,
+  "final_exact_text_cache_hits": 0,
+  "final_status": {
+    "completed": 100
+  },
+  "golden_labels_loaded": false,
+  "grading_eligible": false,
+  "hybrid_label_config": "hybrid:hybrid-routing-v4-40d1a343b355:943bb3bc333420ac",
+  "input_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/data/cost_100.csv",
+  "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+  "local_run": {
+    "cache_hits_total": 0,
+    "completed_total": 100,
+    "evidence_quote_repairs": 0,
+    "failed_records": 0,
+    "fallback_unique": 0,
+    "max_workers_configured": 1,
+    "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+    "pending_unique_at_start": 100,
+    "phase": "initial",
+    "processed_unique": 100,
+    "run_id": "hybrid-4e07a969-2648-4171-b30c-d84475dc81be-local",
+    "spend_ledger_usd_including_unknown_reservations": 0.0,
+    "unknown_charge_batches_reserved_at_cap": 0,
+    "unsettled_reservation_usd": 0.0
+  },
+  "local_status": {
+    "completed": 100
+  },
+  "local_wall_seconds": 0.021572,
+  "nonempty_rows": 100,
+  "route_reason_counts": {
+    "cancellation": 5,
+    "high_rating_negative_label": 9,
+    "high_risk_topic": 8,
+    "high_severity": 4,
+    "local_needs_review": 46,
+    "negative_other": 21,
+    "uncertainty_priority": 100,
+    "unclear_intent": 13
+  },
+  "routed_rows": 5,
+  "routed_unique_texts": 5,
+  "routing_candidate_rows": 100,
+  "routing_candidate_unique_texts": 100,
+  "routing_cap_rows": 5,
+  "routing_capped_unique_texts": 95,
+  "routing_fraction_unique": 0.05,
+  "routing_policy": {
+    "escalate_cancellation": true,
+    "escalate_high_risk_complaints": true,
+    "escalate_needs_review": true,
+    "escalate_negative_other": true,
+    "escalate_rating_contradictions": true,
+    "escalate_unclear": true,
+    "high_risk_topics": [
+      "access",
+      "billing",
+      "support"
+    ],
+    "high_severity_floor": 4,
+    "max_escalation_fraction": 0.05,
+    "routing_mode": "uncertainty",
+    "uncertainty_metric": "mean_margin",
+    "version": "hybrid-routing-v4"
+  },
+  "routing_policy_fingerprint": "hybrid-routing-v4-40d1a343b355",
+  "run_id": "hybrid-4e07a969-2648-4171-b30c-d84475dc81be",
+  "runtime": {
+    "escalation": {
+      "max_workers": 3,
+      "provider": "parallel-sharded",
+      "workers": [
+        {
+          "runtime": {
+            "api_credentials_required": false,
+            "auth_mode": "ChatGPT subscription",
+            "billing_mode": "chatgpt_subscription",
+            "calls": [
+              {
+                "api_credentials_present_in_child": false,
+                "auth_mode": "ChatGPT subscription",
+                "billing_mode": "chatgpt_subscription",
+                "caller_advisory_max_output_tokens": 6000,
+                "cli_version": "codex-cli 0.159.3",
+                "disabled_features": [
+                  "multi_agent",
+                  "apps",
+                  "browser_use",
+                  "computer_use",
+                  "plugins",
+                  "image_generation",
+                  "shell_tool",
+                  "view_image",
+                  "goals"
+                ],
+                "duration_seconds": 5.607343,
+                "ephemeral": true,
+                "event_summary": {
+                  "event_count": 4,
+                  "event_types": {
+                    "item.completed": 1,
+                    "thread.started": 1,
+                    "turn.completed": 1,
+                    "turn.started": 1
+                  },
+                  "forbidden_tool_types": [],
+                  "thread_id": "01a0ffba-0063-78e3-98a1-99088070f1bf",
+                  "turn_completed": true,
+                  "usage": {
+                    "cache_write_input_tokens": 0,
+                    "cached_input_tokens": 9984,
+                    "input_tokens": 11313,
+                    "output_tokens": 105,
+                    "reasoning_output_tokens": 0
+                  }
+                },
+                "exit_code": 0,
+                "provider": "codex-exec-subscription",
+                "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+                "request_id": "codex-6365dd06-f1cb-487c-ae3c-0d8a40245669",
+                "requested_effort": "low",
+                "requested_model": "gpt-6-luna",
+                "result_byte_cap": 2000000,
+                "review_count": 2,
+                "review_ids": [
+                  "R001",
+                  "R002"
+                ],
+                "role": "enrich",
+                "stdout_jsonl_parse_errors": [],
+                "timed_out": false,
+                "timeout_seconds": 300.0,
+                "trace_files": {
+                  "events_jsonl": {
+                    "name": "events.jsonl",
+                    "sha256": "6c19415b64a1ff2859353eb5f6ba63dc7573130b32c97c58aca928f9c7a3bf74"
+                  },
+                  "last_message": {
+                    "name": "last-message.json",
+                    "sha256": "dcb2a4c244d6d9fa0b977f36aaf6a8ea3a9d06b62ef82d041941d6bb6866e13a"
+                  },
+                  "output_schema": {
+                    "name": "output-schema.json",
+                    "sha256": "97b1cfde1de9e3b03c0a9750557291deef46acc6024d969be01c93d570a3d993"
+                  },
+                  "stderr": {
+                    "name": "stderr.txt",
+                    "sha256": "f13d5adbd76239b8bdfd2d5d6241557aa950283b7f678f08496925b39ef3ddb1"
+                  }
+                },
+                "workspace_mode": "empty-read-only"
+              }
+            ],
+            "cli_version": "codex-cli 0.159.3",
+            "ephemeral": true,
+            "monetary_cost_usd": "unknown",
+            "provider": "codex-exec-subscription",
+            "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+            "trace_root": "experiments/distilled/parallel-smoke-100-v1/escalation/traces/worker-01"
+          },
+          "worker_index": 1
+        },
+        {
+          "runtime": {
+            "api_credentials_required": false,
+            "auth_mode": "ChatGPT subscription",
+            "billing_mode": "chatgpt_subscription",
+            "calls": [
+              {
+                "api_credentials_present_in_child": false,
+                "auth_mode": "ChatGPT subscription",
+                "billing_mode": "chatgpt_subscription",
+                "caller_advisory_max_output_tokens": 6000,
+                "cli_version": "codex-cli 0.159.3",
+                "disabled_features": [
+                  "multi_agent",
+                  "apps",
+                  "browser_use",
+                  "computer_use",
+                  "plugins",
+                  "image_generation",
+                  "shell_tool",
+                  "view_image",
+                  "goals"
+                ],
+                "duration_seconds": 4.933931,
+                "ephemeral": true,
+                "event_summary": {
+                  "event_count": 4,
+                  "event_types": {
+                    "item.completed": 1,
+                    "thread.started": 1,
+                    "turn.completed": 1,
+                    "turn.started": 1
+                  },
+                  "forbidden_tool_types": [],
+                  "thread_id": "01a0ffba-005e-7953-a095-ed8e2700ba3e",
+                  "turn_completed": true,
+                  "usage": {
+                    "cache_write_input_tokens": 0,
+                    "cached_input_tokens": 9984,
+                    "input_tokens": 11297,
+                    "output_tokens": 117,
+                    "reasoning_output_tokens": 0
+                  }
+                },
+                "exit_code": 0,
+                "provider": "codex-exec-subscription",
+                "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+                "request_id": "codex-4be39f68-b69f-49a9-a795-e1f5bc1b6937",
+                "requested_effort": "low",
+                "requested_model": "gpt-6-luna",
+                "result_byte_cap": 2000000,
+                "review_count": 2,
+                "review_ids": [
+                  "R001",
+                  "R002"
+                ],
+                "role": "enrich",
+                "stdout_jsonl_parse_errors": [],
+                "timed_out": false,
+                "timeout_seconds": 300.0,
+                "trace_files": {
+                  "events_jsonl": {
+                    "name": "events.jsonl",
+                    "sha256": "f6ebb5da0ec8fa78db62e0d6c75fc01b0afb6c4ccc1f471eaa6aa1491ad8bf1f"
+                  },
+                  "last_message": {
+                    "name": "last-message.json",
+                    "sha256": "f4cc80eae378743b4426c267f6e16a946ce64d7b6fc685ce19a405db7af9be7b"
+                  },
+                  "output_schema": {
+                    "name": "output-schema.json",
+                    "sha256": "97b1cfde1de9e3b03c0a9750557291deef46acc6024d969be01c93d570a3d993"
+                  },
+                  "stderr": {
+                    "name": "stderr.txt",
+                    "sha256": "97bfae2cabff0ad4b7ee117c378a998ed93b6875b2802c7091a56d48d4251d2e"
+                  }
+                },
+                "workspace_mode": "empty-read-only"
+              }
+            ],
+            "cli_version": "codex-cli 0.159.3",
+            "ephemeral": true,
+            "monetary_cost_usd": "unknown",
+            "provider": "codex-exec-subscription",
+            "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+            "trace_root": "experiments/distilled/parallel-smoke-100-v1/escalation/traces/worker-02"
+          },
+          "worker_index": 2
+        },
+        {
+          "runtime": {
+            "api_credentials_required": false,
+            "auth_mode": "ChatGPT subscription",
+            "billing_mode": "chatgpt_subscription",
+            "calls": [
+              {
+                "api_credentials_present_in_child": false,
+                "auth_mode": "ChatGPT subscription",
+                "billing_mode": "chatgpt_subscription",
+                "caller_advisory_max_output_tokens": 6000,
+                "cli_version": "codex-cli 0.159.3",
+                "disabled_features": [
+                  "multi_agent",
+                  "apps",
+                  "browser_use",
+                  "computer_use",
+                  "plugins",
+                  "image_generation",
+                  "shell_tool",
+                  "view_image",
+                  "goals"
+                ],
+                "duration_seconds": 4.722029,
+                "ephemeral": true,
+                "event_summary": {
+                  "event_count": 4,
+                  "event_types": {
+                    "item.completed": 1,
+                    "thread.started": 1,
+                    "turn.completed": 1,
+                    "turn.started": 1
+                  },
+                  "forbidden_tool_types": [],
+                  "thread_id": "01a0ffba-005e-7351-8051-1a83949188e8",
+                  "turn_completed": true,
+                  "usage": {
+                    "cache_write_input_tokens": 0,
+                    "cached_input_tokens": 9984,
+                    "input_tokens": 11271,
+                    "output_tokens": 60,
+                    "reasoning_output_tokens": 0
+                  }
+                },
+                "exit_code": 0,
+                "provider": "codex-exec-subscription",
+                "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+                "request_id": "codex-b9621171-1dc5-446a-a838-a3a25a6d07b8",
+                "requested_effort": "low",
+                "requested_model": "gpt-6-luna",
+                "result_byte_cap": 2000000,
+                "review_count": 1,
+                "review_ids": [
+                  "R001"
+                ],
+                "role": "enrich",
+                "stdout_jsonl_parse_errors": [],
+                "timed_out": false,
+                "timeout_seconds": 300.0,
+                "trace_files": {
+                  "events_jsonl": {
+                    "name": "events.jsonl",
+                    "sha256": "5490702d2535a4f4930e9f45b7eff5c00e151b85ab2213f3f3bca03f37433439"
+                  },
+                  "last_message": {
+                    "name": "last-message.json",
+                    "sha256": "5fd373ee82a004fb09126be050f9075424193fb6857222ffe318a3483f85680a"
+                  },
+                  "output_schema": {
+                    "name": "output-schema.json",
+                    "sha256": "a381ea2c641b83ff3cb95a71ba3ac6bbe12504738d9e47a6d28a7d4d3c329588"
+                  },
+                  "stderr": {
+                    "name": "stderr.txt",
+                    "sha256": "099bca6ebf9cf0f8d12afdc891ee41d76ab91f4c652d26e87e70cc8ba09a35fd"
+                  }
+                },
+                "workspace_mode": "empty-read-only"
+              }
+            ],
+            "cli_version": "codex-cli 0.159.3",
+            "ephemeral": true,
+            "monetary_cost_usd": "unknown",
+            "provider": "codex-exec-subscription",
+            "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+            "trace_root": "experiments/distilled/parallel-smoke-100-v1/escalation/traces/worker-03"
+          },
+          "worker_index": 3
+        }
+      ]
+    },
+    "local": {
+      "api_charges_usd": 0.0,
+      "api_credentials_required": false,
+      "artifact_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/pilot-v1/distilled_model.joblib",
+      "artifact_sha256": "5b90b72652ef2f8138d53217d05935137a2eed7df58512706c87c7a8b2fc9a12",
+      "calls": [
+        {
+          "confidence_threshold": 0.4663134,
+          "duration_seconds": 0.006381,
+          "mean_margin_mean": 0.69725,
+          "mean_margin_min": 0.245192,
+          "minimum_confidence_mean": 0.695998,
+          "minimum_confidence_min": 0.29953,
+          "records": 50,
+          "request_id": "local-distilled-5279b99a-db60-4903-ada4-778bf5f725f9",
+          "review_diagnostics": {
+            "R001": {
+              "intent_confidence": 0.9425490435224245,
+              "intent_margin": 0.9055982590869249,
+              "mean_margin": 0.7485822700767338,
+              "minimum_confidence": 0.7569836184699724,
+              "minimum_margin": 0.6630915232011708,
+              "severity_confidence": 0.8095582460494124,
+              "severity_margin": 0.677057027942106,
+              "topic_confidence": 0.7569836184699724,
+              "topic_margin": 0.6630915232011708
+            },
+            "R002": {
+              "intent_confidence": 0.8800215202866534,
+              "intent_margin": 0.8319691443016436,
+              "mean_margin": 0.7489897121249385,
+              "minimum_confidence": 0.76282882766612,
+              "minimum_margin": 0.5934401756580017,
+              "severity_confidence": 0.9079581583875744,
+              "severity_margin": 0.8215598164151704,
+              "topic_confidence": 0.76282882766612,
+              "topic_margin": 0.5934401756580017
+            },
+            "R003": {
+              "intent_confidence": 0.9963821096980137,
+              "intent_margin": 0.9935597593143919,
+              "mean_margin": 0.9249127509684594,
+              "minimum_confidence": 0.8476998782751877,
+              "minimum_margin": 0.782939819036441,
+              "severity_confidence": 0.9990711821653756,
+              "severity_margin": 0.9982386745545452,
+              "topic_confidence": 0.8476998782751877,
+              "topic_margin": 0.782939819036441
+            },
+            "R004": {
+              "intent_confidence": 0.9615439802326946,
+              "intent_margin": 0.9381668779954361,
+              "mean_margin": 0.9412738100431984,
+              "minimum_confidence": 0.9488428919882325,
+              "minimum_margin": 0.9154910399251329,
+              "severity_confidence": 0.9783498457440822,
+              "severity_margin": 0.9701635122090261,
+              "topic_confidence": 0.9488428919882325,
+              "topic_margin": 0.9154910399251329
+            },
+            "R005": {
+              "intent_confidence": 0.948922004196017,
+              "intent_margin": 0.9113174834565033,
+              "mean_margin": 0.5250037728678507,
+              "minimum_confidence": 0.5526720950574792,
+              "minimum_margin": 0.1130032943406521,
+              "severity_confidence": 0.5526720950574792,
+              "severity_margin": 0.1130032943406521,
+              "topic_confidence": 0.6825003860000398,
+              "topic_margin": 0.5506905408063967
+            },
+            "R006": {
+              "intent_confidence": 0.9997942371751677,
+              "intent_margin": 0.9996913301299009,
+              "mean_margin": 0.9793745359680136,
+              "minimum_confidence": 0.9680122982979841,
+              "minimum_margin": 0.9409031705262431,
+              "severity_confidence": 0.9987432658478005,
+              "severity_margin": 0.997529107247897,
+              "topic_confidence": 0.9680122982979841,
+              "topic_margin": 0.9409031705262431
+            },
+            "R007": {
+              "intent_confidence": 0.9361794231150571,
+              "intent_margin": 0.9045986049155509,
+              "mean_margin": 0.8925686912018769,
+              "minimum_confidence": 0.9278898444674516,
+              "minimum_margin": 0.873683290844403,
+              "severity_confidence": 0.932011999657492,
+              "severity_margin": 0.873683290844403,
+              "topic_confidence": 0.9278898444674516,
+              "topic_margin": 0.8994241778456766
+            },
+            "R008": {
+              "intent_confidence": 0.9942181724667514,
+              "intent_margin": 0.9907608309460159,
+              "mean_margin": 0.9336875641653201,
+              "minimum_confidence": 0.8993362129447521,
+              "minimum_margin": 0.828257719922444,
+              "severity_confidence": 0.9900746016697209,
+              "severity_margin": 0.9820441416275,
+              "topic_confidence": 0.8993362129447521,
+              "topic_margin": 0.828257719922444
+            },
+            "R009": {
+              "intent_confidence": 0.9737244218082676,
+              "intent_margin": 0.9584126122973935,
+              "mean_margin": 0.7394850039768756,
+              "minimum_confidence": 0.5700459008245675,
+              "minimum_margin": 0.3136764492972793,
+              "severity_confidence": 0.9647287519822906,
+              "severity_margin": 0.9463659503359538,
+              "topic_confidence": 0.5700459008245675,
+              "topic_margin": 0.3136764492972793
+            },
+            "R010": {
+              "intent_confidence": 0.7012791688516253,
+              "intent_margin": 0.4915564699875979,
+              "mean_margin": 0.7053196460805126,
+              "minimum_confidence": 0.7012791688516253,
+              "minimum_margin": 0.4915564699875979,
+              "severity_confidence": 0.8664459586400538,
+              "severity_margin": 0.7577539917596884,
+              "topic_confidence": 0.899768562803711,
+              "topic_margin": 0.8666484764942516
+            },
+            "R011": {
+              "intent_confidence": 0.9921434438905734,
+              "intent_margin": 0.9872928775138681,
+              "mean_margin": 0.7933572268485589,
+              "minimum_confidence": 0.6604204094386629,
+              "minimum_margin": 0.394988752647336,
+              "severity_confidence": 0.9988157756240585,
+              "severity_margin": 0.9977900503844727,
+              "topic_confidence": 0.6604204094386629,
+              "topic_margin": 0.394988752647336
+            },
+            "R012": {
+              "intent_confidence": 0.8968097832649576,
+              "intent_margin": 0.8183988680273846,
+              "mean_margin": 0.836608865291356,
+              "minimum_confidence": 0.8387777272915586,
+              "minimum_margin": 0.6944734105374196,
+              "severity_confidence": 0.9979185731134438,
+              "severity_margin": 0.9969543173092639,
+              "topic_confidence": 0.8387777272915586,
+              "topic_margin": 0.6944734105374196
+            },
+            "R013": {
+              "intent_confidence": 0.9852999870362266,
+              "intent_margin": 0.9751140643487344,
+              "mean_margin": 0.9505358225028117,
+              "minimum_confidence": 0.9380470859396913,
+              "minimum_margin": 0.893639216024891,
+              "severity_confidence": 0.9906167763649015,
+              "severity_margin": 0.9828541871348098,
+              "topic_confidence": 0.9380470859396913,
+              "topic_margin": 0.893639216024891
+            },
+            "R014": {
+              "intent_confidence": 0.8893940330856087,
+              "intent_margin": 0.7987331534476982,
+              "mean_margin": 0.920567192415262,
+              "minimum_confidence": 0.8893940330856087,
+              "minimum_margin": 0.7987331534476982,
+              "severity_confidence": 0.9859640721365334,
+              "severity_margin": 0.9735933599706789,
+              "topic_confidence": 0.99243868265022,
+              "topic_margin": 0.9893750638274085
+            },
+            "R015": {
+              "intent_confidence": 0.4425758597440326,
+              "intent_margin": 0.09402892659047624,
+              "mean_margin": 0.2603075699547191,
+              "minimum_confidence": 0.4092909780278422,
+              "minimum_margin": 0.04024416382884666,
+              "severity_confidence": 0.7676826497233374,
+              "severity_margin": 0.6466496194448345,
+              "topic_confidence": 0.4092909780278422,
+              "topic_margin": 0.04024416382884666
+            },
+            "R016": {
+              "intent_confidence": 0.9649064612546228,
+              "intent_margin": 0.9355060885630174,
+              "mean_margin": 0.9274430526209404,
+              "minimum_confidence": 0.943609070732166,
+              "minimum_margin": 0.9217423089436361,
+              "severity_confidence": 0.9537274691185839,
+              "severity_margin": 0.9250807603561678,
+              "topic_confidence": 0.943609070732166,
+              "topic_margin": 0.9217423089436361
+            },
+            "R017": {
+              "intent_confidence": 0.4025410980327077,
+              "intent_margin": 0.06165740687964544,
+              "mean_margin": 0.34968272025737757,
+              "minimum_confidence": 0.4025410980327077,
+              "minimum_margin": 0.06165740687964544,
+              "severity_confidence": 0.5319142126507619,
+              "severity_margin": 0.09485708464196485,
+              "topic_confidence": 0.9324700979332619,
+              "topic_margin": 0.8925336692505225
+            },
+            "R018": {
+              "intent_confidence": 0.9017667178831161,
+              "intent_margin": 0.8179429521870695,
+              "mean_margin": 0.5969567390454139,
+              "minimum_confidence": 0.5081050198308258,
+              "minimum_margin": 0.05017118099314638,
+              "severity_confidence": 0.5081050198308258,
+              "severity_margin": 0.05017118099314638,
+              "topic_confidence": 0.9398473668442847,
+              "topic_margin": 0.9227560839560258
+            },
+            "R019": {
+              "intent_confidence": 0.9761198451521337,
+              "intent_margin": 0.967626253501812,
+              "mean_margin": 0.6387463875314862,
+              "minimum_confidence": 0.41882479361414565,
+              "minimum_margin": 0.01629807816739054,
+              "severity_confidence": 0.9620027590886622,
+              "severity_margin": 0.9323148309252559,
+              "topic_confidence": 0.41882479361414565,
+              "topic_margin": 0.01629807816739054
+            },
+            "R020": {
+              "intent_confidence": 0.9907513387950778,
+              "intent_margin": 0.984177624392153,
+              "mean_margin": 0.9763627018388821,
+              "minimum_confidence": 0.9733178331169934,
+              "minimum_margin": 0.9623939208251922,
+              "severity_confidence": 0.9911039637592429,
+              "severity_margin": 0.9825165602993013,
+              "topic_confidence": 0.9733178331169934,
+              "topic_margin": 0.9623939208251922
+            },
+            "R021": {
+              "intent_confidence": 0.5066160118906905,
+              "intent_margin": 0.25097168785034235,
+              "mean_margin": 0.46087985973491813,
+              "minimum_confidence": 0.5066160118906905,
+              "minimum_margin": 0.25097168785034235,
+              "severity_confidence": 0.8184506861023431,
+              "severity_margin": 0.7026783102104001,
+              "topic_confidence": 0.6919261631291016,
+              "topic_margin": 0.4289895811440119
+            },
+            "R022": {
+              "intent_confidence": 0.9841879628910245,
+              "intent_margin": 0.9707902384087579,
+              "mean_margin": 0.9775295125034763,
+              "minimum_confidence": 0.9756538957078137,
+              "minimum_margin": 0.9681749437526525,
+              "severity_confidence": 0.9966496418327672,
+              "severity_margin": 0.9936233553490187,
+              "topic_confidence": 0.9756538957078137,
+              "topic_margin": 0.9681749437526525
+            },
+            "R023": {
+              "intent_confidence": 0.9018888392649839,
+              "intent_margin": 0.8142310165851194,
+              "mean_margin": 0.5859562864431845,
+              "minimum_confidence": 0.5159821841515744,
+              "minimum_margin": 0.3338068755199328,
+              "severity_confidence": 0.7813996124309701,
+              "severity_margin": 0.6098309672245013,
+              "topic_confidence": 0.5159821841515744,
+              "topic_margin": 0.3338068755199328
+            },
+            "R024": {
+              "intent_confidence": 0.8562751402864275,
+              "intent_margin": 0.7918209087226624,
+              "mean_margin": 0.4463404694247138,
+              "minimum_confidence": 0.4505686890424012,
+              "minimum_margin": 0.26186847512788713,
+              "severity_confidence": 0.5758159035372445,
+              "severity_margin": 0.28533202442359196,
+              "topic_confidence": 0.4505686890424012,
+              "topic_margin": 0.26186847512788713
+            },
+            "R025": {
+              "intent_confidence": 0.8237620979197854,
+              "intent_margin": 0.667061580585028,
+              "mean_margin": 0.8253574602925576,
+              "minimum_confidence": 0.8237620979197854,
+              "minimum_margin": 0.667061580585028,
+              "severity_confidence": 0.9849950213109019,
+              "severity_margin": 0.9748334423259091,
+              "topic_confidence": 0.9022472769696362,
+              "topic_margin": 0.8341773579667356
+            },
+            "R026": {
+              "intent_confidence": 0.8796078577365443,
+              "intent_margin": 0.7775474429960517,
+              "mean_margin": 0.8888384523522639,
+              "minimum_confidence": 0.8796078577365443,
+              "minimum_margin": 0.7775474429960517,
+              "severity_confidence": 0.988290334871249,
+              "severity_margin": 0.982017897242426,
+              "topic_confidence": 0.9378283930188154,
+              "topic_margin": 0.906950016818314
+            },
+            "R027": {
+              "intent_confidence": 0.7385215216503236,
+              "intent_margin": 0.5545278885157873,
+              "mean_margin": 0.7315003290559602,
+              "minimum_confidence": 0.7385215216503236,
+              "minimum_margin": 0.5545278885157873,
+              "severity_confidence": 0.8870466078067222,
+              "severity_margin": 0.7928706444635927,
+              "topic_confidence": 0.8978998593993937,
+              "topic_margin": 0.8471024541885004
+            },
+            "R028": {
+              "intent_confidence": 0.9187659297867918,
+              "intent_margin": 0.8555448817515108,
+              "mean_margin": 0.7703276352084644,
+              "minimum_confidence": 0.6887901146050223,
+              "minimum_margin": 0.491031988854904,
+              "severity_confidence": 0.6887901146050223,
+              "severity_margin": 0.491031988854904,
+              "topic_confidence": 0.9742852751793196,
+              "topic_margin": 0.9644060350189783
+            },
+            "R029": {
+              "intent_confidence": 0.6769732231620268,
+              "intent_margin": 0.37456411611411267,
+              "mean_margin": 0.47379550460273995,
+              "minimum_confidence": 0.5448431850286807,
+              "minimum_margin": 0.23083675445012763,
+              "severity_confidence": 0.9063290432594098,
+              "severity_margin": 0.8159856432439795,
+              "topic_confidence": 0.5448431850286807,
+              "topic_margin": 0.23083675445012763
+            },
+            "R030": {
+              "intent_confidence": 0.7658815932358864,
+              "intent_margin": 0.6409076223554963,
+              "mean_margin": 0.45114929915048996,
+              "minimum_confidence": 0.5083278726746975,
+              "minimum_margin": 0.25152204353897417,
+              "severity_confidence": 0.5083278726746975,
+              "severity_margin": 0.25152204353897417,
+              "topic_confidence": 0.6632071597912501,
+              "topic_margin": 0.4610182315569994
+            },
+            "R031": {
+              "intent_confidence": 0.9968295720179685,
+              "intent_margin": 0.9952690424659265,
+              "mean_margin": 0.9350194305017848,
+              "minimum_confidence": 0.896265888990829,
+              "minimum_margin": 0.8251282725731229,
+              "severity_confidence": 0.9915021187502316,
+              "severity_margin": 0.9846609764663049,
+              "topic_confidence": 0.896265888990829,
+              "topic_margin": 0.8251282725731229
+            },
+            "R032": {
+              "intent_confidence": 0.7811698892318348,
+              "intent_margin": 0.6747225791125923,
+              "mean_margin": 0.6952331623905929,
+              "minimum_confidence": 0.7811698892318348,
+              "minimum_margin": 0.6642180086030509,
+              "severity_confidence": 0.8177495033384536,
+              "severity_margin": 0.6642180086030509,
+              "topic_confidence": 0.8215436750624794,
+              "topic_margin": 0.7467588994561353
+            },
+            "R033": {
+              "intent_confidence": 0.9808634470232075,
+              "intent_margin": 0.971673478676785,
+              "mean_margin": 0.6288380277505111,
+              "minimum_confidence": 0.6118839832060365,
+              "minimum_margin": 0.45579739557329685,
+              "severity_confidence": 0.6392577837432543,
+              "severity_margin": 0.45579739557329685,
+              "topic_confidence": 0.6118839832060365,
+              "topic_margin": 0.45904320900145146
+            },
+            "R034": {
+              "intent_confidence": 0.4554183385152338,
+              "intent_margin": 0.058479086749521514,
+              "mean_margin": 0.49369662246285445,
+              "minimum_confidence": 0.4554183385152338,
+              "minimum_margin": 0.058479086749521514,
+              "severity_confidence": 0.9597673239355797,
+              "severity_margin": 0.9431683653123357,
+              "topic_confidence": 0.7093345287729014,
+              "topic_margin": 0.4794424153267061
+            },
+            "R035": {
+              "intent_confidence": 0.3937056638039974,
+              "intent_margin": 0.05233659714027328,
+              "mean_margin": 0.288770421893606,
+              "minimum_confidence": 0.3937056638039974,
+              "minimum_margin": 0.05233659714027328,
+              "severity_confidence": 0.5853333011542713,
+              "severity_margin": 0.3170474977343327,
+              "topic_confidence": 0.6661846680359499,
+              "topic_margin": 0.49692717080621207
+            },
+            "R036": {
+              "intent_confidence": 0.46410565765305534,
+              "intent_margin": 0.15388866516703625,
+              "mean_margin": 0.2740709161288064,
+              "minimum_confidence": 0.46410565765305534,
+              "minimum_margin": 0.15388866516703625,
+              "severity_confidence": 0.5567639782996833,
+              "severity_margin": 0.2739816316551224,
+              "topic_confidence": 0.5830342409093181,
+              "topic_margin": 0.39434245156426057
+            },
+            "R037": {
+              "intent_confidence": 0.9920118759230031,
+              "intent_margin": 0.9876564772206773,
+              "mean_margin": 0.9684598292595462,
+              "minimum_confidence": 0.9704047928741044,
+              "minimum_margin": 0.9427877097981816,
+              "severity_confidence": 0.9704047928741044,
+              "severity_margin": 0.9427877097981816,
+              "topic_confidence": 0.9820844660431033,
+              "topic_margin": 0.9749353007597797
+            },
+            "R038": {
+              "intent_confidence": 0.9751184696832365,
+              "intent_margin": 0.9517986808869864,
+              "mean_margin": 0.9569909970334253,
+              "minimum_confidence": 0.9718190078997321,
+              "minimum_margin": 0.9445463061156987,
+              "severity_confidence": 0.9871339946728784,
+              "severity_margin": 0.9746280040975909,
+              "topic_confidence": 0.9718190078997321,
+              "topic_margin": 0.9445463061156987
+            },
+            "R039": {
+              "intent_confidence": 0.8084084701869207,
+              "intent_margin": 0.6266470391562704,
+              "mean_margin": 0.7986370864404186,
+              "minimum_confidence": 0.8084084701869207,
+              "minimum_margin": 0.6266470391562704,
+              "severity_confidence": 0.9503206488730417,
+              "severity_margin": 0.9156027948787508,
+              "topic_confidence": 0.9135695940642187,
+              "topic_margin": 0.8536614252862347
+            },
+            "R040": {
+              "intent_confidence": 0.5740760175782958,
+              "intent_margin": 0.30346998045580675,
+              "mean_margin": 0.3514757009462129,
+              "minimum_confidence": 0.29952952863533916,
+              "minimum_margin": 0.016627022518700796,
+              "severity_confidence": 0.8225790477465493,
+              "severity_margin": 0.7343300998641312,
+              "topic_confidence": 0.29952952863533916,
+              "topic_margin": 0.016627022518700796
+            },
+            "R041": {
+              "intent_confidence": 0.996523874218546,
+              "intent_margin": 0.9946208037395513,
+              "mean_margin": 0.9776278493030546,
+              "minimum_confidence": 0.9700113000309482,
+              "minimum_margin": 0.9443021555603126,
+              "severity_confidence": 0.9968851048437998,
+              "severity_margin": 0.9939605886092997,
+              "topic_confidence": 0.9700113000309482,
+              "topic_margin": 0.9443021555603126
+            },
+            "R042": {
+              "intent_confidence": 0.5426653209141271,
+              "intent_margin": 0.11274378696808501,
+              "mean_margin": 0.3121797792305084,
+              "minimum_confidence": 0.41642303870348224,
+              "minimum_margin": 0.11274378696808501,
+              "severity_confidence": 0.7802391523065697,
+              "severity_margin": 0.6204615502306681,
+              "topic_confidence": 0.41642303870348224,
+              "topic_margin": 0.203334000492772
+            },
+            "R043": {
+              "intent_confidence": 0.44226716705607505,
+              "intent_margin": 0.10901286840782293,
+              "mean_margin": 0.47846815174423146,
+              "minimum_confidence": 0.44226716705607505,
+              "minimum_margin": 0.10901286840782293,
+              "severity_confidence": 0.7568095079689915,
+              "severity_margin": 0.5323939340149044,
+              "topic_confidence": 0.8601978705301505,
+              "topic_margin": 0.793997652809967
+            },
+            "R044": {
+              "intent_confidence": 0.9074024765990527,
+              "intent_margin": 0.8437924897803005,
+              "mean_margin": 0.8290851338246616,
+              "minimum_confidence": 0.8478616108478819,
+              "minimum_margin": 0.7920402817208272,
+              "severity_confidence": 0.9007038394975733,
+              "severity_margin": 0.8514226299728572,
+              "topic_confidence": 0.8478616108478819,
+              "topic_margin": 0.7920402817208272
+            },
+            "R045": {
+              "intent_confidence": 0.8781197984449479,
+              "intent_margin": 0.796228743694538,
+              "mean_margin": 0.6189612273972894,
+              "minimum_confidence": 0.5098616382538121,
+              "minimum_margin": 0.29915696262168734,
+              "severity_confidence": 0.87462752062206,
+              "severity_margin": 0.761497975875643,
+              "topic_confidence": 0.5098616382538121,
+              "topic_margin": 0.29915696262168734
+            },
+            "R046": {
+              "intent_confidence": 0.7093703530207441,
+              "intent_margin": 0.4971312696597452,
+              "mean_margin": 0.7163346690491351,
+              "minimum_confidence": 0.7093703530207441,
+              "minimum_margin": 0.4971312696597452,
+              "severity_confidence": 0.8844782285780031,
+              "severity_margin": 0.7862170020001588,
+              "topic_confidence": 0.9051188239865803,
+              "topic_margin": 0.8656557354875016
+            },
+            "R047": {
+              "intent_confidence": 0.9901388250338795,
+              "intent_margin": 0.9818418621444109,
+              "mean_margin": 0.9149477959180302,
+              "minimum_confidence": 0.8943884914991252,
+              "minimum_margin": 0.7907230204788298,
+              "severity_confidence": 0.8943884914991252,
+              "severity_margin": 0.7907230204788298,
+              "topic_confidence": 0.9789127138908192,
+              "topic_margin": 0.97227850513085
+            },
+            "R048": {
+              "intent_confidence": 0.36967292367642474,
+              "intent_margin": 0.08923432186523927,
+              "mean_margin": 0.24519162081653056,
+              "minimum_confidence": 0.36967292367642474,
+              "minimum_margin": 0.08923432186523927,
+              "severity_confidence": 0.6440515837932188,
+              "severity_margin": 0.42494110562630255,
+              "topic_confidence": 0.4013721716804193,
+              "topic_margin": 0.22139943495804987
+            },
+            "R049": {
+              "intent_confidence": 0.8760039240730745,
+              "intent_margin": 0.7795678033675909,
+              "mean_margin": 0.5857973572204153,
+              "minimum_confidence": 0.5796781112908005,
+              "minimum_margin": 0.27778113588935394,
+              "severity_confidence": 0.8447903697749789,
+              "severity_margin": 0.7000431324043007,
+              "topic_confidence": 0.5796781112908005,
+              "topic_margin": 0.27778113588935394
+            },
+            "R050": {
+              "intent_confidence": 0.8570818227229742,
+              "intent_margin": 0.7368554304998404,
+              "mean_margin": 0.7912908535036637,
+              "minimum_confidence": 0.8570818227229742,
+              "minimum_margin": 0.7368554304998404,
+              "severity_confidence": 0.9332561540338556,
+              "severity_margin": 0.8856032347004379,
+              "topic_confidence": 0.8649482831518022,
+              "topic_margin": 0.7514138953107129
+            }
+          }
+        },
+        {
+          "confidence_threshold": 0.4663134,
+          "duration_seconds": 0.003452,
+          "mean_margin_mean": 0.639348,
+          "mean_margin_min": 0.07411,
+          "minimum_confidence_mean": 0.670734,
+          "minimum_confidence_min": 0.296188,
+          "records": 50,
+          "request_id": "local-distilled-368b675c-9baf-4664-b71c-82ebc9cc2bdd",
+          "review_diagnostics": {
+            "R001": {
+              "intent_confidence": 0.9945718055135524,
+              "intent_margin": 0.9912707476111354,
+              "mean_margin": 0.9641702419325161,
+              "minimum_confidence": 0.9454376385520324,
+              "minimum_margin": 0.9085616910229465,
+              "severity_confidence": 0.9957498704391219,
+              "severity_margin": 0.9926782871634664,
+              "topic_confidence": 0.9454376385520324,
+              "topic_margin": 0.9085616910229465
+            },
+            "R002": {
+              "intent_confidence": 0.6343196831293689,
+              "intent_margin": 0.38653276786488167,
+              "mean_margin": 0.48718956390059037,
+              "minimum_confidence": 0.6257607015323307,
+              "minimum_margin": 0.2696803776228552,
+              "severity_confidence": 0.6257607015323307,
+              "severity_margin": 0.2696803776228552,
+              "topic_confidence": 0.8709359231255194,
+              "topic_margin": 0.8053555462140344
+            },
+            "R003": {
+              "intent_confidence": 0.9704893229148218,
+              "intent_margin": 0.9524082800431,
+              "mean_margin": 0.6211701643648457,
+              "minimum_confidence": 0.6131653492701828,
+              "minimum_margin": 0.2790709737367279,
+              "severity_confidence": 0.6131653492701828,
+              "severity_margin": 0.2790709737367279,
+              "topic_confidence": 0.7626029435284584,
+              "topic_margin": 0.6320312393147093
+            },
+            "R004": {
+              "intent_confidence": 0.9018904692211084,
+              "intent_margin": 0.8415594407066362,
+              "mean_margin": 0.6673864183071943,
+              "minimum_confidence": 0.6474155316968238,
+              "minimum_margin": 0.3340874950397335,
+              "severity_confidence": 0.6474155316968238,
+              "severity_margin": 0.3340874950397335,
+              "topic_confidence": 0.8861599604424071,
+              "topic_margin": 0.8265123191752131
+            },
+            "R005": {
+              "intent_confidence": 0.6681688366762851,
+              "intent_margin": 0.3841298665957309,
+              "mean_margin": 0.5981707264638793,
+              "minimum_confidence": 0.6170089792595082,
+              "minimum_margin": 0.3841298665957309,
+              "severity_confidence": 0.6170089792595082,
+              "severity_margin": 0.41343485815654013,
+              "topic_confidence": 0.9981887926627933,
+              "topic_margin": 0.9969474546393667
+            },
+            "R006": {
+              "intent_confidence": 0.939191427679804,
+              "intent_margin": 0.9062298178294945,
+              "mean_margin": 0.4288693124208951,
+              "minimum_confidence": 0.5354271775603981,
+              "minimum_margin": 0.09241259093024085,
+              "severity_confidence": 0.5354271775603981,
+              "severity_margin": 0.09241259093024085,
+              "topic_confidence": 0.6351286476226063,
+              "topic_margin": 0.28796552850294993
+            },
+            "R007": {
+              "intent_confidence": 0.9684451316253755,
+              "intent_margin": 0.9464157172790935,
+              "mean_margin": 0.9651363789955774,
+              "minimum_confidence": 0.9684451316253755,
+              "minimum_margin": 0.9464157172790935,
+              "severity_confidence": 0.9893632009091515,
+              "severity_margin": 0.9864366553485834,
+              "topic_confidence": 0.9732019640638481,
+              "topic_margin": 0.9625567643590552
+            },
+            "R008": {
+              "intent_confidence": 0.556117033021042,
+              "intent_margin": 0.22618984674800896,
+              "mean_margin": 0.5512466517252833,
+              "minimum_confidence": 0.556117033021042,
+              "minimum_margin": 0.22618984674800896,
+              "severity_confidence": 0.8406193165221746,
+              "severity_margin": 0.7099292512815438,
+              "topic_confidence": 0.803279250811138,
+              "topic_margin": 0.7176208571462973
+            },
+            "R009": {
+              "intent_confidence": 0.8987461801076045,
+              "intent_margin": 0.838324548067348,
+              "mean_margin": 0.8817538166156723,
+              "minimum_confidence": 0.8987461801076045,
+              "minimum_margin": 0.838324548067348,
+              "severity_confidence": 0.9233471424264071,
+              "severity_margin": 0.8543066625610448,
+              "topic_confidence": 0.9652438454933799,
+              "topic_margin": 0.9526302392186244
+            },
+            "R010": {
+              "intent_confidence": 0.9716925910609051,
+              "intent_margin": 0.9520867469858825,
+              "mean_margin": 0.9717471146671706,
+              "minimum_confidence": 0.9716925910609051,
+              "minimum_margin": 0.9520867469858825,
+              "severity_confidence": 0.9886113818719175,
+              "severity_margin": 0.9827941269176566,
+              "topic_confidence": 0.9876509448216297,
+              "topic_margin": 0.9803604700979727
+            },
+            "R011": {
+              "intent_confidence": 0.8606767577422177,
+              "intent_margin": 0.7240869762777848,
+              "mean_margin": 0.4223196278407677,
+              "minimum_confidence": 0.5324547671895576,
+              "minimum_margin": 0.2443750332919578,
+              "severity_confidence": 0.58397636988816,
+              "severity_margin": 0.2443750332919578,
+              "topic_confidence": 0.5324547671895576,
+              "topic_margin": 0.2984968739525604
+            },
+            "R012": {
+              "intent_confidence": 0.6515751796549275,
+              "intent_margin": 0.42861716100818903,
+              "mean_margin": 0.49493480711482957,
+              "minimum_confidence": 0.6331626345581451,
+              "minimum_margin": 0.42861716100818903,
+              "severity_confidence": 0.6331626345581451,
+              "severity_margin": 0.45396914351542955,
+              "topic_confidence": 0.7265131479909908,
+              "topic_margin": 0.60221811682087
+            },
+            "R013": {
+              "intent_confidence": 0.5666972910566956,
+              "intent_margin": 0.18760130732068636,
+              "mean_margin": 0.30823537544188,
+              "minimum_confidence": 0.4261669142233711,
+              "minimum_margin": 0.18760130732068636,
+              "severity_confidence": 0.6963977809937134,
+              "severity_margin": 0.49963245865243694,
+              "topic_confidence": 0.4261669142233711,
+              "topic_margin": 0.23747236035251673
+            },
+            "R014": {
+              "intent_confidence": 0.9913982938328016,
+              "intent_margin": 0.9860175792119061,
+              "mean_margin": 0.9286901885467644,
+              "minimum_confidence": 0.8978919560466555,
+              "minimum_margin": 0.8148525446542708,
+              "severity_confidence": 0.9917712272454798,
+              "severity_margin": 0.9852004417741161,
+              "topic_confidence": 0.8978919560466555,
+              "topic_margin": 0.8148525446542708
+            },
+            "R015": {
+              "intent_confidence": 0.49982916320679244,
+              "intent_margin": 0.22760851805049925,
+              "mean_margin": 0.1472572833654214,
+              "minimum_confidence": 0.40670064239065207,
+              "minimum_margin": 0.08629580187379204,
+              "severity_confidence": 0.40670064239065207,
+              "severity_margin": 0.08629580187379204,
+              "topic_confidence": 0.42593841935487625,
+              "topic_margin": 0.1278675301719729
+            },
+            "R016": {
+              "intent_confidence": 0.9447547808129986,
+              "intent_margin": 0.9131769904034771,
+              "mean_margin": 0.8290922725008962,
+              "minimum_confidence": 0.7920644062799075,
+              "minimum_margin": 0.7019147934010492,
+              "severity_confidence": 0.9260675914773998,
+              "severity_margin": 0.8721850336981625,
+              "topic_confidence": 0.7920644062799075,
+              "topic_margin": 0.7019147934010492
+            },
+            "R017": {
+              "intent_confidence": 0.904421027690358,
+              "intent_margin": 0.8610832753035076,
+              "mean_margin": 0.8120234284730197,
+              "minimum_confidence": 0.8387567707060803,
+              "minimum_margin": 0.728422567344077,
+              "severity_confidence": 0.9122817746024928,
+              "severity_margin": 0.8465644427714747,
+              "topic_confidence": 0.8387567707060803,
+              "topic_margin": 0.728422567344077
+            },
+            "R018": {
+              "intent_confidence": 0.9702254877065883,
+              "intent_margin": 0.9436253363593515,
+              "mean_margin": 0.8503852629936034,
+              "minimum_confidence": 0.798205466761434,
+              "minimum_margin": 0.6202198648491688,
+              "severity_confidence": 0.798205466761434,
+              "severity_margin": 0.6202198648491688,
+              "topic_confidence": 0.9932931112951937,
+              "topic_margin": 0.9873105877722899
+            },
+            "R019": {
+              "intent_confidence": 0.44914667428767296,
+              "intent_margin": 0.006196529483845137,
+              "mean_margin": 0.07411039095952004,
+              "minimum_confidence": 0.39160909265840793,
+              "minimum_margin": 0.006196529483845137,
+              "severity_confidence": 0.5120409220942266,
+              "severity_margin": 0.18331899429781562,
+              "topic_confidence": 0.39160909265840793,
+              "topic_margin": 0.03281564909689938
+            },
+            "R020": {
+              "intent_confidence": 0.8372319438801755,
+              "intent_margin": 0.7497295441291257,
+              "mean_margin": 0.450614708162834,
+              "minimum_confidence": 0.3258590322616706,
+              "minimum_margin": 0.003632064803968549,
+              "severity_confidence": 0.7368459056700074,
+              "severity_margin": 0.5984825155554077,
+              "topic_confidence": 0.3258590322616706,
+              "topic_margin": 0.003632064803968549
+            },
+            "R021": {
+              "intent_confidence": 0.6460217855194872,
+              "intent_margin": 0.4071856787953929,
+              "mean_margin": 0.47313390768267394,
+              "minimum_confidence": 0.49511600700680036,
+              "minimum_margin": 0.0470545933263527,
+              "severity_confidence": 0.49511600700680036,
+              "severity_margin": 0.0470545933263527,
+              "topic_confidence": 0.9734527547543809,
+              "topic_margin": 0.9651614509262761
+            },
+            "R022": {
+              "intent_confidence": 0.8486426564940209,
+              "intent_margin": 0.785433620591522,
+              "mean_margin": 0.9137799659667126,
+              "minimum_confidence": 0.8486426564940209,
+              "minimum_margin": 0.785433620591522,
+              "severity_confidence": 0.9884992736374011,
+              "severity_margin": 0.9794414716406491,
+              "topic_confidence": 0.9840339217407646,
+              "topic_margin": 0.9764648056679667
+            },
+            "R023": {
+              "intent_confidence": 0.936704857543294,
+              "intent_margin": 0.9064651572253586,
+              "mean_margin": 0.37791703774376356,
+              "minimum_confidence": 0.43908528731059054,
+              "minimum_margin": 0.020424158915850976,
+              "severity_confidence": 0.5824157656209155,
+              "severity_margin": 0.2068617970900813,
+              "topic_confidence": 0.43908528731059054,
+              "topic_margin": 0.020424158915850976
+            },
+            "R024": {
+              "intent_confidence": 0.2961879804205916,
+              "intent_margin": 0.02052541197297303,
+              "mean_margin": 0.3479025942112178,
+              "minimum_confidence": 0.2961879804205916,
+              "minimum_margin": 0.02052541197297303,
+              "severity_confidence": 0.7129200578610019,
+              "severity_margin": 0.4784447305037386,
+              "topic_confidence": 0.6705464954687133,
+              "topic_margin": 0.5447376401569417
+            },
+            "R025": {
+              "intent_confidence": 0.7011285626356913,
+              "intent_margin": 0.5132843914457832,
+              "mean_margin": 0.7194679194037296,
+              "minimum_confidence": 0.7011285626356913,
+              "minimum_margin": 0.5132843914457832,
+              "severity_confidence": 0.8268814371371196,
+              "severity_margin": 0.7105649032585214,
+              "topic_confidence": 0.957132593214583,
+              "topic_margin": 0.9345544635068843
+            },
+            "R026": {
+              "intent_confidence": 0.9101705543430161,
+              "intent_margin": 0.8419755322504118,
+              "mean_margin": 0.9150796927112527,
+              "minimum_confidence": 0.9101705543430161,
+              "minimum_margin": 0.8419755322504118,
+              "severity_confidence": 0.979367018707644,
+              "severity_margin": 0.96730668595332,
+              "topic_confidence": 0.9598197842496643,
+              "topic_margin": 0.9359568599300259
+            },
+            "R027": {
+              "intent_confidence": 0.5623342361685496,
+              "intent_margin": 0.2233135092435874,
+              "mean_margin": 0.21069598164982942,
+              "minimum_confidence": 0.3973686736996671,
+              "minimum_margin": 0.03244941972512094,
+              "severity_confidence": 0.3973686736996671,
+              "severity_margin": 0.03244941972512094,
+              "topic_confidence": 0.581915355175417,
+              "topic_margin": 0.37632501598077994
+            },
+            "R028": {
+              "intent_confidence": 0.9884708320326114,
+              "intent_margin": 0.9810825530079464,
+              "mean_margin": 0.9645530345339764,
+              "minimum_confidence": 0.9592293055262692,
+              "minimum_margin": 0.9393646185638895,
+              "severity_confidence": 0.9825871289093443,
+              "severity_margin": 0.9732119320300934,
+              "topic_confidence": 0.9592293055262692,
+              "topic_margin": 0.9393646185638895
+            },
+            "R029": {
+              "intent_confidence": 0.9080946332651936,
+              "intent_margin": 0.8674425241328119,
+              "mean_margin": 0.8655510089615835,
+              "minimum_confidence": 0.8954187889115981,
+              "minimum_margin": 0.8369836721988076,
+              "severity_confidence": 0.929709037814984,
+              "severity_margin": 0.8922268305531312,
+              "topic_confidence": 0.8954187889115981,
+              "topic_margin": 0.8369836721988076
+            },
+            "R030": {
+              "intent_confidence": 0.5461571356640188,
+              "intent_margin": 0.1239681806472886,
+              "mean_margin": 0.6291050695271466,
+              "minimum_confidence": 0.5461571356640188,
+              "minimum_margin": 0.1239681806472886,
+              "severity_confidence": 0.9657566072788942,
+              "severity_margin": 0.9355915471893378,
+              "topic_confidence": 0.8932038395461543,
+              "topic_margin": 0.8277554807448134
+            },
+            "R031": {
+              "intent_confidence": 0.9212383687554231,
+              "intent_margin": 0.8900064353296002,
+              "mean_margin": 0.8502710408808433,
+              "minimum_confidence": 0.8690510755442068,
+              "minimum_margin": 0.7921304183991902,
+              "severity_confidence": 0.9226822127811849,
+              "severity_margin": 0.8686762689137392,
+              "topic_confidence": 0.8690510755442068,
+              "topic_margin": 0.7921304183991902
+            },
+            "R032": {
+              "intent_confidence": 0.5290783024150044,
+              "intent_margin": 0.17152723582861068,
+              "mean_margin": 0.31730667184818817,
+              "minimum_confidence": 0.42138130737449997,
+              "minimum_margin": 0.12791468235626607,
+              "severity_confidence": 0.7671894706964593,
+              "severity_margin": 0.6524780973596878,
+              "topic_confidence": 0.42138130737449997,
+              "topic_margin": 0.12791468235626607
+            },
+            "R033": {
+              "intent_confidence": 0.652906512940875,
+              "intent_margin": 0.48651045605991583,
+              "mean_margin": 0.6481538103347072,
+              "minimum_confidence": 0.652906512940875,
+              "minimum_margin": 0.48258856399619293,
+              "severity_confidence": 0.699525508525136,
+              "severity_margin": 0.48258856399619293,
+              "topic_confidence": 0.9831430718198764,
+              "topic_margin": 0.975362410948013
+            },
+            "R034": {
+              "intent_confidence": 0.73150190479511,
+              "intent_margin": 0.5387077072387629,
+              "mean_margin": 0.48153091307324664,
+              "minimum_confidence": 0.6324208625235126,
+              "minimum_margin": 0.29295816481374815,
+              "severity_confidence": 0.6324208625235126,
+              "severity_margin": 0.29295816481374815,
+              "topic_confidence": 0.7700446747743743,
+              "topic_margin": 0.6129268671672289
+            },
+            "R035": {
+              "intent_confidence": 0.42248971928324214,
+              "intent_margin": 0.005387490798999028,
+              "mean_margin": 0.4290340839309734,
+              "minimum_confidence": 0.42248971928324214,
+              "minimum_margin": 0.005387490798999028,
+              "severity_confidence": 0.6273983879375806,
+              "severity_margin": 0.3053408073763589,
+              "topic_confidence": 0.9820144431394582,
+              "topic_margin": 0.9763739536175623
+            },
+            "R036": {
+              "intent_confidence": 0.9853412864577185,
+              "intent_margin": 0.9756526813473847,
+              "mean_margin": 0.9495922430298349,
+              "minimum_confidence": 0.9358896738946103,
+              "minimum_margin": 0.882599857271022,
+              "severity_confidence": 0.9358896738946103,
+              "severity_margin": 0.882599857271022,
+              "topic_confidence": 0.9930458219190034,
+              "topic_margin": 0.9905241904710981
+            },
+            "R037": {
+              "intent_confidence": 0.948130275208519,
+              "intent_margin": 0.9237922673229259,
+              "mean_margin": 0.8034380803977759,
+              "minimum_confidence": 0.7390083596763561,
+              "minimum_margin": 0.5197981980950177,
+              "severity_confidence": 0.7390083596763561,
+              "severity_margin": 0.5197981980950177,
+              "topic_confidence": 0.9763227203703895,
+              "topic_margin": 0.9667237757753839
+            },
+            "R038": {
+              "intent_confidence": 0.5701473685120745,
+              "intent_margin": 0.25626113897277736,
+              "mean_margin": 0.21711846512069846,
+              "minimum_confidence": 0.4094959844530322,
+              "minimum_margin": 0.12844781288622892,
+              "severity_confidence": 0.5377321076051474,
+              "severity_margin": 0.2666464435030891,
+              "topic_confidence": 0.4094959844530322,
+              "topic_margin": 0.12844781288622892
+            },
+            "R039": {
+              "intent_confidence": 0.9358890025215537,
+              "intent_margin": 0.8881184499856,
+              "mean_margin": 0.527514604774986,
+              "minimum_confidence": 0.5501013613969926,
+              "minimum_margin": 0.32377709149315104,
+              "severity_confidence": 0.5501013613969926,
+              "severity_margin": 0.3706482728462068,
+              "topic_confidence": 0.6501228296350817,
+              "topic_margin": 0.32377709149315104
+            },
+            "R040": {
+              "intent_confidence": 0.9934276691420191,
+              "intent_margin": 0.9889454158411026,
+              "mean_margin": 0.9542282306377405,
+              "minimum_confidence": 0.9466093381097234,
+              "minimum_margin": 0.8944003839506576,
+              "severity_confidence": 0.9466093381097234,
+              "severity_margin": 0.8944003839506576,
+              "topic_confidence": 0.9864305289442928,
+              "topic_margin": 0.9793388921214613
+            },
+            "R041": {
+              "intent_confidence": 0.9884921402248663,
+              "intent_margin": 0.9803981413873177,
+              "mean_margin": 0.9427122613469577,
+              "minimum_confidence": 0.9500709383480952,
+              "minimum_margin": 0.9022613441454836,
+              "severity_confidence": 0.9500709383480952,
+              "severity_margin": 0.9022613441454836,
+              "topic_confidence": 0.9622029512699343,
+              "topic_margin": 0.9454772985080718
+            },
+            "R042": {
+              "intent_confidence": 0.905131170335831,
+              "intent_margin": 0.8487813920518463,
+              "mean_margin": 0.785309134737373,
+              "minimum_confidence": 0.7748695177695109,
+              "minimum_margin": 0.5772458468618498,
+              "severity_confidence": 0.7748695177695109,
+              "severity_margin": 0.5772458468618498,
+              "topic_confidence": 0.9581197976989148,
+              "topic_margin": 0.9299001652984228
+            },
+            "R043": {
+              "intent_confidence": 0.46022348348010156,
+              "intent_margin": 0.08074075091139371,
+              "mean_margin": 0.16342213667330857,
+              "minimum_confidence": 0.4302040595148418,
+              "minimum_margin": 0.08074075091139371,
+              "severity_confidence": 0.6056831632240535,
+              "severity_margin": 0.2763539359006406,
+              "topic_confidence": 0.4302040595148418,
+              "topic_margin": 0.1331717232078914
+            },
+            "R044": {
+              "intent_confidence": 0.9803473529236386,
+              "intent_margin": 0.9691140362634169,
+              "mean_margin": 0.9638180318532749,
+              "minimum_confidence": 0.9654408433193943,
+              "minimum_margin": 0.9530189228571405,
+              "severity_confidence": 0.9830691588323777,
+              "severity_margin": 0.9693211364392671,
+              "topic_confidence": 0.9654408433193943,
+              "topic_margin": 0.9530189228571405
+            },
+            "R045": {
+              "intent_confidence": 0.9642644379580408,
+              "intent_margin": 0.932573992813357,
+              "mean_margin": 0.9550643942094483,
+              "minimum_confidence": 0.9591939361919704,
+              "minimum_margin": 0.932573992813357,
+              "severity_confidence": 0.9948449150087556,
+              "severity_margin": 0.9902805663857788,
+              "topic_confidence": 0.9591939361919704,
+              "topic_margin": 0.9423386234292092
+            },
+            "R046": {
+              "intent_confidence": 0.9847366413714502,
+              "intent_margin": 0.9745512521144323,
+              "mean_margin": 0.8540412195640084,
+              "minimum_confidence": 0.775445380333279,
+              "minimum_margin": 0.6703971173585714,
+              "severity_confidence": 0.9464075139926147,
+              "severity_margin": 0.9171752892190211,
+              "topic_confidence": 0.775445380333279,
+              "topic_margin": 0.6703971173585714
+            },
+            "R047": {
+              "intent_confidence": 0.9482514415479241,
+              "intent_margin": 0.9035489074222521,
+              "mean_margin": 0.5599877771014863,
+              "minimum_confidence": 0.473203274795763,
+              "minimum_margin": 0.059663301387805956,
+              "severity_confidence": 0.8516896579070259,
+              "severity_margin": 0.7167511224944006,
+              "topic_confidence": 0.473203274795763,
+              "topic_margin": 0.059663301387805956
+            },
+            "R048": {
+              "intent_confidence": 0.914428573139776,
+              "intent_margin": 0.8724808726417844,
+              "mean_margin": 0.7069517716838254,
+              "minimum_confidence": 0.5980485956704564,
+              "minimum_margin": 0.3436218155338011,
+              "severity_confidence": 0.9415379470893607,
+              "severity_margin": 0.9047526268758906,
+              "topic_confidence": 0.5980485956704564,
+              "topic_margin": 0.3436218155338011
+            },
+            "R049": {
+              "intent_confidence": 0.6171205498582859,
+              "intent_margin": 0.37355439427520676,
+              "mean_margin": 0.40733042279712856,
+              "minimum_confidence": 0.5206709503196454,
+              "minimum_margin": 0.10536040517464118,
+              "severity_confidence": 0.5206709503196454,
+              "severity_margin": 0.10536040517464118,
+              "topic_confidence": 0.8122131656664467,
+              "topic_margin": 0.7430764689415377
+            },
+            "R050": {
+              "intent_confidence": 0.9801975515539749,
+              "intent_margin": 0.9685387812823666,
+              "mean_margin": 0.5788896727969004,
+              "minimum_confidence": 0.599623955386144,
+              "minimum_margin": 0.23090224145486987,
+              "severity_confidence": 0.7668226848638251,
+              "severity_margin": 0.5372279956534648,
+              "topic_confidence": 0.599623955386144,
+              "topic_margin": 0.23090224145486987
+            }
+          }
+        }
+      ],
+      "model_version": "distilled-tfidf-linear-v1",
+      "network_required": false,
+      "provider": "local-distilled-sklearn"
+    }
+  },
+  "sample_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/parallel-smoke-100-v1/sample.csv",
+  "sample_rows": 100,
+  "sample_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+  "total_wall_seconds": 5.712309
+}

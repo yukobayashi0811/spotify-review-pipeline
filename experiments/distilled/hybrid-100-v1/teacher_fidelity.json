@@ -1,0 +1,20 @@
+{
+  "distilled_plus_bounded_luna": {
+    "cases": 100,
+    "intent_agreement": 0.85,
+    "severity_exact_agreement": 0.9,
+    "severity_mae": 0.14,
+    "topic_agreement": 0.87
+  },
+  "local_distilled": {
+    "cases": 100,
+    "intent_agreement": 0.81,
+    "severity_exact_agreement": 0.86,
+    "severity_mae": 0.2,
+    "topic_agreement": 0.83
+  },
+  "reference": "saved Codex Luna pseudo-labels; this is teacher fidelity, not human accuracy",
+  "routed_rows": 20,
+  "routing_cap_fraction": 0.2,
+  "status": "completed"
+}

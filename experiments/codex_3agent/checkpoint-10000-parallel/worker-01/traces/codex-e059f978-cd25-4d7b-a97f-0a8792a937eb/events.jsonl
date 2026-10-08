@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f8e0-7d95-7f00-8e55-6e7a78f7f314"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Add problems\",\"intent\":\"complaint\",\"needs_review\":true,\"review_id\":\"1409b1d9-392d-4bdc-a911-fbaed43a7980\",\"sentiment\":-0.4,\"severity\":2,\"topic\":\"other\"},{\"entities\":[\"premium\"],\"evidence_quote\":\"this app only made for premium users\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"7fc0cb67-6ad4-4da6-8d44-10f45f57a552\",\"sentiment\":-0.9,\"severity\":3,\"topic\":\"billing\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10787,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":262,"reasoning_output_tokens":111}}

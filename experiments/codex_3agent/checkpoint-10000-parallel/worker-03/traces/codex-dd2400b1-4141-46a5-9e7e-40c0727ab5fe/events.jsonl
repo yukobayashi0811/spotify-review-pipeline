@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f864-e114-7a71-9c8c-58020bcc8896"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Spotify\",\"amazon\"],\"evidence_quote\":\"Love Spotify\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"4269de90-2d9e-45d0-96e3-d7c00b3f0208\",\"sentiment\":0.9,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10762,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":84,"reasoning_output_tokens":0}}

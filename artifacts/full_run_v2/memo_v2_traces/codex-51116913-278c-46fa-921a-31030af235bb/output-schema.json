@@ -1,0 +1,107 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "alternative_issue_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "alternatives": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "baseline_top_handling": {
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "issue_id": {
+            "type": "string"
+          },
+          "metric": {
+            "enum": [
+              "complaint_count",
+              "severity_sum",
+              "mean_severity",
+              "priority_score"
+            ],
+            "type": "string"
+          },
+          "review_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "sentence": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim_id",
+          "issue_id",
+          "metric",
+          "value",
+          "sentence",
+          "review_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "priority": {
+      "type": "string"
+    },
+    "priority_issue_id": {
+      "type": "string"
+    },
+    "priority_topic": {
+      "enum": [
+        "access",
+        "usability",
+        "playback",
+        "billing",
+        "support"
+      ],
+      "type": "string"
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "sensitivity_interpretation": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "priority_topic",
+    "priority_issue_id",
+    "priority",
+    "rationale",
+    "alternative_issue_ids",
+    "alternatives",
+    "baseline_top_handling",
+    "sensitivity_interpretation",
+    "limitations",
+    "claims"
+  ],
+  "type": "object"
+}

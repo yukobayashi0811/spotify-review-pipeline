@@ -1,0 +1,63 @@
+{
+  "formula": "priority_score = complaint_count * mean_severity = severity_sum",
+  "issue_count": 7,
+  "ranking": [
+    {
+      "complaint_count": 60,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.550000",
+      "priority_score": 153,
+      "rank": 1,
+      "severity_sum": 153
+    },
+    {
+      "complaint_count": 43,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.279070",
+      "priority_score": 141,
+      "rank": 2,
+      "severity_sum": 141
+    },
+    {
+      "complaint_count": 43,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.953488",
+      "priority_score": 127,
+      "rank": 3,
+      "severity_sum": 127
+    },
+    {
+      "complaint_count": 63,
+      "issue_id": "I_OTHER",
+      "mean_severity": "1.952381",
+      "priority_score": 123,
+      "rank": 4,
+      "severity_sum": 123
+    },
+    {
+      "complaint_count": 18,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.833333",
+      "priority_score": 51,
+      "rank": 5,
+      "severity_sum": 51
+    },
+    {
+      "complaint_count": 10,
+      "issue_id": "I_ACCESS",
+      "mean_severity": "3.900000",
+      "priority_score": 39,
+      "rank": 6,
+      "severity_sum": 39
+    },
+    {
+      "complaint_count": 6,
+      "issue_id": "I_DOWNLOADS",
+      "mean_severity": "3.833333",
+      "priority_score": 23,
+      "rank": 7,
+      "severity_sum": 23
+    }
+  ],
+  "tie_break": "priority_score descending, then issue_id ascending"
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-e983-79c1-9a12-76ddaf2e7e00"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Best music streaming platform\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"b756c21a-7637-4006-aef0-f8e93d84d62f\",\"sentiment\":1,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10747,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":77,"reasoning_output_tokens":0}}

@@ -1,0 +1,17 @@
+{
+  "rows": 20,
+  "agreement": {
+    "topic": {
+      "count": 15,
+      "rate": 0.75
+    },
+    "intent": {
+      "count": 5,
+      "rate": 0.25
+    },
+    "severity": {
+      "count": 17,
+      "rate": 0.85
+    }
+  }
+}

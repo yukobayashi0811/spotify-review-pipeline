@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "all_attempts_have_timing": true,
+    "all_calls_local": true,
+    "all_completed": true,
+    "all_roles_present": true,
+    "api_cost_zero": true,
+    "cold_completed_100": true,
+    "exact_id_set": true,
+    "local_total_cost_unknown": true,
+    "quotes_are_source_substrings": true,
+    "ranking_independently_recomputed": true,
+    "record_rows": true,
+    "source_rows": true,
+    "successful_calls_have_usage": true,
+    "unique_record_ids": true,
+    "warm_has_no_enrichment_calls": true,
+    "warm_metadata_zero_new_enrichments": true
+  },
+  "executed_at_utc": "2026-10-03T16:57:07.522226+00:00",
+  "observed": {
+    "api_cost_usd": 0.0,
+    "calls": 7,
+    "cold_wall_seconds": 176.246427,
+    "failed_attempts": 1,
+    "ranking_issues": 7,
+    "successful_calls": 6,
+    "warm_new_enrichment_calls": 0,
+    "warm_wall_seconds": 0.011639
+  },
+  "status": "passed"
+}

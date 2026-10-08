@@ -1,0 +1,8 @@
+{
+  "completed_nonempty": 660609,
+  "expected_nonempty": 660609,
+  "exported_records": 660622,
+  "final_export": true,
+  "input_csv": "spotify_reviews_18months.csv",
+  "source_records": 660622
+}

@@ -1,0 +1,122 @@
+{
+  "api_credentials_present_in_child": false,
+  "auth_mode": "ChatGPT subscription",
+  "billing_mode": "chatgpt_subscription",
+  "caller_advisory_max_output_tokens": 4000,
+  "cli_version": "codex-cli 0.152.0",
+  "disabled_features": [
+    "multi_agent",
+    "apps",
+    "browser_use",
+    "computer_use",
+    "plugins",
+    "image_generation",
+    "shell_tool",
+    "view_image",
+    "goals"
+  ],
+  "duration_seconds": 69.474055,
+  "ephemeral": true,
+  "event_summary": {
+    "event_count": 4,
+    "event_types": {
+      "item.completed": 1,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "forbidden_tool_types": [],
+    "thread_id": "01a0f8bf-544c-7411-9139-9d4e832e1972",
+    "turn_completed": true,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 8448,
+      "input_tokens": 13088,
+      "output_tokens": 3696,
+      "reasoning_output_tokens": 174
+    }
+  },
+  "exit_code": 0,
+  "provider": "codex-exec-subscription",
+  "provider_output_token_cap": "unavailable_in_codex_exec_0.152.0",
+  "request_id": "codex-7e0a6f5b-698e-438d-a3b1-948c738490ec",
+  "requested_effort": "low",
+  "requested_model": "gpt-5.6-sol",
+  "result_byte_cap": 2000000,
+  "review_count": 50,
+  "review_ids": [
+    "baa6377e-a3a1-478f-af3f-d3334c81ea4c",
+    "6d7d5f5c-4b21-4d81-a204-52dfd7ff0aa2",
+    "b1aad591-340d-4ee2-8ebc-60513c645111",
+    "fd8390c1-5649-4d7b-aa37-0887595bfdd6",
+    "f6562ce0-6f95-4945-90e3-e73e4a0d66f5",
+    "940ca0f2-3675-4edb-ac82-5795c32e2c64",
+    "68a5d92a-1dca-40ba-b9f8-fc61a24b12a8",
+    "dbd65458-2b60-463b-bad7-980816c4e459",
+    "2388ec5b-5221-43d6-927f-5aca9691488a",
+    "8f3e7632-bd9a-4c07-b5b7-9e03964d6b0f",
+    "e4a46ede-48ca-43c6-bf21-9143cb887d02",
+    "794d0d73-f0b6-4c70-9eff-f73d669c18af",
+    "783d2240-70e0-4319-8991-2d13040eff2f",
+    "d7c49c38-d0ff-40ba-8268-3ee74ecb09d4",
+    "b4b9b00c-7048-4d62-a9b9-b50145b65984",
+    "cb0a51fb-62bd-4ddf-959e-325df113e570",
+    "6f6c38a1-f3d2-4eb1-b6de-2c84dcfd2235",
+    "03b87353-2f44-4aa7-8a49-522013934c8c",
+    "38d17f88-2a0c-4a38-bea4-4f3062b6e027",
+    "b208b665-f96f-432e-b582-0b0d3a26c864",
+    "cff376d8-b1e4-4d28-9d68-65c456f40438",
+    "c8bbf129-071c-479c-90f3-6be63b4ecec4",
+    "3cdbd0e4-40ea-4a22-81de-85dbacaaacc9",
+    "b0ac92a9-bd74-4717-8615-2e83201a02c5",
+    "b50edb71-4605-4971-b4db-dba823ef0d1a",
+    "1c6f12e6-6c26-452c-8907-5870ad24e4a2",
+    "125c797c-15c2-41d8-9841-68e9fc20660d",
+    "758e3c9c-975d-44ca-b60e-0ff7549eec78",
+    "aa980c90-d201-485c-8276-bdf5a280827f",
+    "eab0376e-8dfd-4285-9a2a-454223a9db6b",
+    "709a4f3e-11d6-4153-bee1-dcde2122c0ce",
+    "18e3876e-08a1-44f6-b993-5a891efd935e",
+    "322574d5-d1e9-45b4-8e1d-0196068ccaaf",
+    "ecdb3113-e0b9-40b4-ad4d-4809088f7cab",
+    "31b1e840-3d0b-43bb-9c9b-fb76332e0357",
+    "290b55dd-0271-4eef-a9cc-d9c94f22a3e7",
+    "0712f878-0890-49a1-a03b-5c05bf9241ed",
+    "e7382d3b-9d14-41d2-a0f6-e7fd568d227c",
+    "f3009299-cd3c-4a60-8459-22415dd7594c",
+    "c6b1b49a-f921-4481-b6d0-5b7f5c535439",
+    "0af056e2-4586-48bc-8ba4-0580b295ccce",
+    "81002f7a-b130-4145-b591-b5124c372716",
+    "75287194-b5e1-4b41-b042-7dbab7f5ca83",
+    "48fcdcc6-ee90-438c-ae69-055a01409e52",
+    "1cbc3ede-fd85-4bfc-b64e-e990f1400887",
+    "834f4606-9732-4988-a75e-1bc4f41d8718",
+    "cb680f4d-8f80-4441-a1df-9883a86224c4",
+    "3accd623-1830-4719-9e44-19da4e54755f",
+    "5f1b0037-56aa-4e78-8885-774c487bb56c",
+    "26dd5af5-221b-4ce2-9cef-2f426aed30b7"
+  ],
+  "role": "enrich",
+  "stdout_jsonl_parse_errors": [],
+  "timed_out": false,
+  "timeout_seconds": 300.0,
+  "trace_files": {
+    "events_jsonl": {
+      "name": "events.jsonl",
+      "sha256": "c6e7a141c407a5a70b7b90994791abdcc52ed8efd36696128df04965ed873b72"
+    },
+    "last_message": {
+      "name": "last-message.json",
+      "sha256": "15ea8086e4b336a6a84c6f2b6e75e2439dee9b0e33c94a1123d0a8b29a0dd322"
+    },
+    "output_schema": {
+      "name": "output-schema.json",
+      "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+    },
+    "stderr": {
+      "name": "stderr.txt",
+      "sha256": "ce2cb8f27ef1d51ba67dbdcf9abfcefe55e466d1679dd423763be73939a4c630"
+    }
+  },
+  "workspace_mode": "empty-read-only"
+}

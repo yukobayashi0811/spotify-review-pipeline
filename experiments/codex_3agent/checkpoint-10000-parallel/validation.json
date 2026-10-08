@@ -1,0 +1,58 @@
+{
+  "checks": {
+    "all_call_providers_are_codex": true,
+    "all_quotes_are_exact_substrings": true,
+    "all_records_completed": true,
+    "all_traces_accounted_and_tool_free": true,
+    "benchmark_merge_valid": true,
+    "call_log_has_all_roles": true,
+    "claims_match_ranking": true,
+    "development_boundary_preserved": true,
+    "failed_calls_preserve_errors": true,
+    "membership_complete_and_unique": true,
+    "memo_priority_present": true,
+    "no_api_credentials_in_children": true,
+    "ranking_recomputed_exactly": true,
+    "source_hash_matches_plan": true,
+    "source_ids_unique": true,
+    "succeeded_calls_are_metered": true,
+    "verification_complete": true,
+    "warm_zero_model_calls": true
+  },
+  "details": {
+    "call_counts": {
+      "enrich:failed": 17,
+      "enrich:succeeded": 217,
+      "group:succeeded": 1,
+      "memo:succeeded": 1,
+      "verify:failed": 1,
+      "verify:succeeded": 20
+    },
+    "calls": 257,
+    "classification_wall_seconds": 2948.350111,
+    "completed_records": 10000,
+    "downstream_wall_seconds": 1460.210185,
+    "input_rows": 10000,
+    "input_tokens": 3072944,
+    "membership_rows": 4570,
+    "output_tokens": 736254,
+    "ranking_issues": 8,
+    "top_issue": {
+      "complaint_count": 1159,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.562554",
+      "priority_score": 2970,
+      "rank": 1,
+      "severity_sum": 2970
+    },
+    "trace_files": 257,
+    "verification_agreement": {
+      "intent": 0.943,
+      "severity_exact": 0.908,
+      "severity_mae": 0.092,
+      "topic": 0.917
+    },
+    "warm_wall_seconds": 0.075573
+  },
+  "status": "pass"
+}

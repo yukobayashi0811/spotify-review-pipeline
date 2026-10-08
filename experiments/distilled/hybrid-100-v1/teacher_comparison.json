@@ -1,0 +1,25 @@
+{
+  "golden_labels_loaded": false,
+  "mean_accuracy": 0.873333,
+  "mean_macro_f1": 0.795208,
+  "metrics": {
+    "intent": {
+      "accuracy": 0.85,
+      "macro_f1": 0.767362
+    },
+    "severity": {
+      "accuracy": 0.9,
+      "macro_f1": 0.883677,
+      "mae": 0.14
+    },
+    "topic": {
+      "accuracy": 0.87,
+      "macro_f1": 0.734585
+    }
+  },
+  "records_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-100-v1/final/records.jsonl",
+  "rows": 100,
+  "status": "completed",
+  "teacher": "saved Codex Luna pseudo-labels, not human ground truth",
+  "teacher_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/codex_luna/checkpoint-100-normal-usage/predictions.csv"
+}

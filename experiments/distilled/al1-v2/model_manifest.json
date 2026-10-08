@@ -1,0 +1,113 @@
+{
+  "artifact_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/al1-v2/distilled_model.joblib",
+  "artifact_sha256": "8db19e2cb72392119cbe19a485879990369168f353d2fb3a82441a9fd6c8d6a6",
+  "created_at_utc": "2026-10-03T04:50:32.557241+00:00",
+  "leakage_controls": {
+    "excluded_by_exact_text_sha256": true,
+    "excluded_by_normalized_text_sha256": true,
+    "excluded_by_review_id": true,
+    "exclusion_files": [
+      {
+        "path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/data/checkpoint_500.csv",
+        "rows": 500,
+        "sha256": "a94e31663ee7b7eaa77e23b7a8425b530cc0c866ed5e714953172a0afef6a12f"
+      },
+      {
+        "path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/artifacts/golden_prediction_input.csv",
+        "rows": 50,
+        "sha256": "3370aec3cf585951d98998d09ee92609fcffd51a83f4193b43aeef3c66646086"
+      }
+    ],
+    "golden_labels_used_for_training_or_thresholds": false
+  },
+  "model_version": "distilled-tfidf-linear-v2",
+  "oof_error_calibration": {
+    "external_checkpoint_used": false,
+    "features": [
+      "mean_margin",
+      "word_count_bucket"
+    ],
+    "folds": 5,
+    "golden_labels_used": false,
+    "method": "5-fold out-of-fold isotonic",
+    "observed_any_label_error_rate": 0.455554,
+    "rows": 9911,
+    "seconds": 26.73115,
+    "word_buckets": [
+      "00-05",
+      "06-15",
+      "16-40",
+      "41+"
+    ]
+  },
+  "python_version": "3.13.15",
+  "scikit_learn_version": "1.9.1",
+  "training_config": {
+    "char_max_features": 80000,
+    "confidence_quantile": 0.2,
+    "random_state": 20261002,
+    "validation_fraction": 0.15,
+    "word_max_features": 60000
+  },
+  "training_report": {
+    "conflicting_normalized_label_groups_removed": 13,
+    "conflicting_normalized_label_rows_removed": 28,
+    "duplicate_training_normalized_texts_removed": 41,
+    "excluded_by_exact_text_after_id_exclusion": 94,
+    "excluded_by_normalized_text_after_exact_exclusion": 47,
+    "excluded_by_review_id": 387,
+    "excluded_files": [
+      {
+        "path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/data/checkpoint_500.csv",
+        "rows": 500,
+        "sha256": "a94e31663ee7b7eaa77e23b7a8425b530cc0c866ed5e714953172a0afef6a12f"
+      },
+      {
+        "path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/artifacts/golden_prediction_input.csv",
+        "rows": 50,
+        "sha256": "3370aec3cf585951d98998d09ee92609fcffd51a83f4193b43aeef3c66646086"
+      }
+    ],
+    "intent_distribution": {
+      "cancellation": 534,
+      "complaint": 4536,
+      "praise": 3307,
+      "request": 551,
+      "unclear": 983
+    },
+    "label_rows": 10508,
+    "labels_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/al1-v2/teacher_labels.csv",
+    "labels_sha256": "356aa3a01b0b28f5d6aa9f91602f631f8fe9e291a4767fdfa3bad52d352a6010",
+    "severity_distribution": {
+      "1": 4817,
+      "2": 2116,
+      "3": 2517,
+      "4": 407,
+      "5": 54
+    },
+    "source_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/al1-v2/teacher_source.csv",
+    "source_rows": 10508,
+    "source_sha256": "9a5d00bcfad93a9977f17792768e997c799aa8b3d0e106f8c010daf77c1265c1",
+    "teacher": "saved Codex Luna classifications; pseudo-labels, not human ground truth",
+    "topic_distribution": {
+      "access": 239,
+      "billing": 1043,
+      "catalog": 957,
+      "downloads": 190,
+      "other": 4447,
+      "playback": 1117,
+      "support": 65,
+      "usability": 1853
+    },
+    "training_rows": 9911
+  },
+  "validation_metrics_against_held-out_luna_pseudo_labels": {
+    "confidence_threshold": 0.41667441,
+    "intent_accuracy": 0.776732,
+    "sentiment_mae": 0.298491,
+    "severity_accuracy": 0.771352,
+    "threshold_quantile": 0.2,
+    "topic_accuracy": 0.743779,
+    "validation_rows": 1487
+  }
+}

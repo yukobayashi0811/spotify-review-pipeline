@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f588-aad2-76f1-9552-803e3532a010"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Music will not play.\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"codex-preflight-001\",\"sentiment\":-0.9,\"severity\":4,\"topic\":\"playback\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10725,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":64,"reasoning_output_tokens":0}}

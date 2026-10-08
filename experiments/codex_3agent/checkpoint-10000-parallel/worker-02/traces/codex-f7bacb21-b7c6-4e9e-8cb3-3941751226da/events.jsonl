@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-d88c-72c1-adef-87f94b1993fd"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"premium\"],\"evidence_quote\":\"login error after updating app\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"1f53fc1d-8988-4866-9a27-60f943508eef\",\"sentiment\":-0.9,\"severity\":4,\"topic\":\"access\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10759,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":184,"reasoning_output_tokens":100}}

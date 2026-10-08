@@ -1,0 +1,47 @@
+{
+  "artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+  "cache_chain_rows": 0,
+  "completed_batches": 30,
+  "component_label_config_counts": {
+    "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2": 277493,
+    "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable": 134081
+  },
+  "direct_exact_text_cache_rows": 165866,
+  "finished_at_unix": 1791005681.7481291,
+  "fixed_pending_queue": {
+    "local_texts": 239981,
+    "teacher_texts": 0,
+    "total_texts": 239981
+  },
+  "local_enrich_calls": 30,
+  "local_label_config": "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2",
+  "local_rows_finalized": 1530,
+  "phase": "initial",
+  "provider_runtime": {
+    "api_charges_usd": 0.0,
+    "api_credentials_required": false,
+    "artifact_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/al2-final-v2/distilled_model.joblib",
+    "artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+    "call_count": 30,
+    "duration_seconds": 0.363415,
+    "model_version": "distilled-tfidf-linear-v2",
+    "network_required": false,
+    "provider": "local-distilled-sklearn",
+    "record_count": 1500
+  },
+  "record_status_counts": {
+    "completed": 411574,
+    "quarantined": 13
+  },
+  "run_id": "full-local-final-ac253a9d-adcd-45c6-bf8d-aaf91328247c",
+  "started_at_unix": 1791005676.970134,
+  "state_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/artifacts/full_run_v2/state.db",
+  "status": "interrupted",
+  "stop_reason": "SIGINT",
+  "teacher_provenance_repair": {
+    "record_rows_rewired": 120963,
+    "teacher_texts_repaired": 1079
+  },
+  "teacher_rows_finalized": 0,
+  "wall_seconds": 4.77803
+}

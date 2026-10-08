@@ -1,0 +1,173 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING": [
+      {
+        "evidence_quote": "impossible to use the app without prime",
+        "review_id": "074efbfd-f69e-46ca-9cea-e5204a192a2a",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "I paid my subscription and im still getting a pause subscription screen and can't access my music...... help me",
+        "review_id": "16929558-ce1e-4b87-8738-a1de3f557f66",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "The very second I signed up for premium it stopped letting me play anything.. lol . Fastest cancelation of a service I've done, ever. Bye bye Spotify. Hello old friend, Bittorrent",
+        "review_id": "a7b7539a-c8d3-4f4e-9edd-d46cd1b1fd12",
+        "severity": 4
+      }
+    ],
+    "I_CATALOG": [
+      {
+        "evidence_quote": "Sometimes has connection issues with google home and tends to get \"tunnel vision\" with its song picks. If there's a few songs that get listened to that aren't the usual, the next update to release radar is crawling with similar songs. Gotten pretty slow loading lately. Really don't understand why some of the settings aren't available. Looks like the equalizer that was built in is gone.",
+        "review_id": "01124066-b5dd-4c79-8618-d1bea99d197a",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Nice app! But many songs are not present here!",
+        "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "It is good but there is a problem that in some songs there is no lyrics and in some songs there is lyrics it's so confusing. However it is good 😊😊.",
+        "review_id": "47becad0-8ae5-4a10-9731-fde8f2091862",
+        "severity": 3
+      }
+    ],
+    "I_OTHER": [
+      {
+        "evidence_quote": "I can't open my spotify wrap 2022...",
+        "review_id": "c1726764-f0ce-4abc-ad9e-6cd143e1b2c7",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Worst",
+        "review_id": "00363dc8-2117-4565-9af9-efadf8fa90cf",
+        "severity": 2
+      },
+      {
+        "evidence_quote": "I hate this application .. 👎",
+        "review_id": "0575ce08-ab04-46f0-aa8a-fbf9cd27e8da",
+        "severity": 2
+      }
+    ],
+    "I_PLAYBACK": [
+      {
+        "evidence_quote": "Black screen of death. Having to Uninstaller and reinstall after closing and opening app 5x to see if it would work.",
+        "review_id": "065c418e-7f18-42a3-b241-fe693b7a2b0c",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Always say no internet connection",
+        "review_id": "3df77a78-ad9a-4456-8be8-8178ffd43d67",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "do not play the songs",
+        "review_id": "46ff0c74-5e86-4e5b-b4cd-36201aab0f9e",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY": [
+      {
+        "evidence_quote": "I've loved Spotify but it's baffling to me how every update they make seems to make the app LESS user friendly. When they removed the daily mixes from the home page, that was a swing and miss. When they first reworked the home page to have a bunch of unnecessary recommendations instead of access to recently played options (which they later reverted) that was a fail. And now they've removed the ability to move episode to episode on podcasts from the toolbar in exchange for playback speed? WHY??",
+        "review_id": "0070e713-4cb7-4d78-954f-1764d5593c91",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "some features are missing in updated version",
+        "review_id": "02777996-211f-447b-94c4-99b61f049f78",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "For free subscription I find this to be a cancerous and even dangerous app while driving. Will try to make your life difficult finding your songs, esp. while on the go, e.g. will not let you go to any random song in a playlist while on mobile, except for the first few uses. For the paid plan, no such ugly surprises, just still not as easy to find your stuff as it should be.",
+        "review_id": "08d3a5a9-1ec1-4b10-a5c8-393da33843e1",
+        "severity": 3
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS": {
+      "description": "Reviews report repeated login failures, incorrect connection or number errors, and accounts being logged out unexpectedly.",
+      "issue_id": "I_ACCESS",
+      "issue_name": "Login and account access problems"
+    },
+    "I_BILLING": {
+      "description": "Reviews describe dissatisfaction with premium pricing and ads, or difficulty subscribing and accessing paid features after payment.",
+      "issue_id": "I_BILLING",
+      "issue_name": "Premium pricing and subscription access"
+    },
+    "I_CATALOG": {
+      "description": "Reviews mention missing songs or lyrics, repetitive recommendations, and unavailable podcasts.",
+      "issue_id": "I_CATALOG",
+      "issue_name": "Missing content and recommendation quality"
+    },
+    "I_DOWNLOADS": {
+      "description": "Reviews report downloads getting stuck, disappearing, or failing to play offline, including after storage changes.",
+      "issue_id": "I_DOWNLOADS",
+      "issue_name": "Downloads and offline listening failures"
+    },
+    "I_OTHER": {
+      "description": "Reviews express general dissatisfaction or describe the app as empty or recent updates as poor, without identifying a more specific issue.",
+      "issue_id": "I_OTHER",
+      "issue_name": "General app dissatisfaction"
+    },
+    "I_PLAYBACK": {
+      "description": "Reviews report playback stopping, failing to start, showing a black screen, or playing a different song than the one selected.",
+      "issue_id": "I_PLAYBACK",
+      "issue_name": "Playback interruptions and wrong tracks"
+    },
+    "I_USABILITY": {
+      "description": "Reviews describe confusing navigation and removed or restricted controls, including difficulty finding content and managing playback.",
+      "issue_id": "I_USABILITY",
+      "issue_name": "Navigation and playback controls"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 62,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.580645",
+      "priority_score": 160,
+      "rank": 1,
+      "severity_sum": 160
+    },
+    {
+      "complaint_count": 42,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.238095",
+      "priority_score": 136,
+      "rank": 2,
+      "severity_sum": 136
+    },
+    {
+      "complaint_count": 58,
+      "issue_id": "I_OTHER",
+      "mean_severity": "1.982759",
+      "priority_score": 115,
+      "rank": 3,
+      "severity_sum": 115
+    },
+    {
+      "complaint_count": 39,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.769231",
+      "priority_score": 108,
+      "rank": 4,
+      "severity_sum": 108
+    },
+    {
+      "complaint_count": 18,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.833333",
+      "priority_score": 51,
+      "rank": 5,
+      "severity_sum": 51
+    }
+  ]
+}

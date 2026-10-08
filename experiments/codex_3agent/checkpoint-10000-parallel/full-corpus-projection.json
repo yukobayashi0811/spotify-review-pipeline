@@ -1,0 +1,37 @@
+{
+  "status": "projection_only",
+  "development_only": true,
+  "grading_eligible": false,
+  "full_corpus_execution_completed": false,
+  "blockers": [
+    "The full 660,622-row CSV is not present in the current project or course workspace.",
+    "Measured runtime and current subscription capacity do not support completing the full run in the current session."
+  ],
+  "full_corpus_profile_from_prior_deterministic_ingestion": {
+    "source_rows": 660622,
+    "nonempty_reviews": 660609,
+    "empty_review_text": 13,
+    "distinct_nonempty_exact_texts": 484189,
+    "direct_exact_text_reuse_candidates": 176420
+  },
+  "classification_basis": {
+    "scope": "final successful 10,000-stage resume segment only",
+    "unique_texts_processed": 5810,
+    "source_records_completed": 5944,
+    "wall_seconds": 2948.350111,
+    "projected_full_distinct_text_hours": 68.251993
+  },
+  "verification_basis": {
+    "verified_reviews": 1000,
+    "initial_wall_seconds": 1435.625206,
+    "resume_wall_seconds": 70.299773,
+    "projected_full_verification_reviews": 66061,
+    "projected_full_verification_hours": 27.634142
+  },
+  "fixed_group_rank_memo_hours": 0.006803,
+  "projected_total_hours": 95.892938,
+  "projected_total_hours_conservative_1_25x": 119.866172,
+  "billing_mode": "chatgpt_subscription",
+  "projected_monetary_cost_usd": "unknown",
+  "usage_note": "The 29% account-wide usage snapshot after the reset is not attributable solely to this experiment and is not converted into a per-review or monetary estimate."
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-7f45-7203-b4b1-4c8c5323323c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"ads\",\"music\"],\"evidence_quote\":\"Volume of ads is way louder than the volume of the music. Makes the app unusable.\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"933b1cf2-8fa9-46aa-9a06-85fd89533a99\",\"sentiment\":-0.9,\"severity\":3,\"topic\":\"usability\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10760,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":99,"reasoning_output_tokens":0}}

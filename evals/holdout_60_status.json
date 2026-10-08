@@ -1,0 +1,12 @@
+{
+  "status": "pending_user_labels",
+  "checked_at_utc": "2026-10-03T16:48:44Z",
+  "accepted_expected_inputs": [
+    "evals/holdout_60_labeled.csv",
+    "evals/holdout_60_labeled.xlsx"
+  ],
+  "labeled_file_found": false,
+  "evaluation_executed": false,
+  "heldout_predictions_exposed": false,
+  "reason": "The sampling and labeling workbook exists, but no completed labeled held-out file is present. Evaluation is deferred without opening or printing per-ID predictions."
+}

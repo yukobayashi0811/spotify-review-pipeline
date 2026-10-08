@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-4273-7f90-8bdd-a2ac5be0bce5"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Baaaaaad\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"ec90f200-58f4-43e4-bb82-48c32c345772\",\"sentiment\":-0.9,\"severity\":2,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10739,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":78,"reasoning_output_tokens":0}}

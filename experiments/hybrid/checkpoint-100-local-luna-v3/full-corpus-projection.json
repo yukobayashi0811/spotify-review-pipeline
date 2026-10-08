@@ -1,0 +1,26 @@
+{
+  "basis": {
+    "distinct_full_corpus_texts": 484189,
+    "hybrid_100_local_wall_seconds": 236.064054,
+    "hybrid_100_luna_wall_seconds": 37.135069,
+    "hybrid_100_routed_distinct_texts": 39,
+    "hybrid_100_routing_fraction": 0.39,
+    "required_verification_hours_from_10000_checkpoint": 17.889
+  },
+  "projection": {
+    "classification_hours": 367.444473,
+    "fixed_downstream_hours": 0.007,
+    "local_first_pass_hours": 317.49894,
+    "luna_escalation_hours": 49.945533,
+    "total_hours_including_required_verification": 385.340473,
+    "total_hours_with_1_25_conservative_multiplier": 481.675591
+  },
+  "status": "projection_not_execution",
+  "decision": "do_not_advance_hybrid_to_500_for_speed",
+  "limitations": [
+    "The routing fraction is estimated from only 100 reviews.",
+    "The projection assumes linear throughput and a stable 39% routing fraction.",
+    "The required verifier estimate is inherited from the saved Luna 10000 checkpoint.",
+    "Subscription Usage is not converted to dollars."
+  ]
+}

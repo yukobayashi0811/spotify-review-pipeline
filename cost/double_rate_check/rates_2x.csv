@@ -1,0 +1,13 @@
+provider,model,billing_item,unit,price_per_unit,currency,effective_date,source_url
+openai,gpt-6-luna,input_tokens,token,0.000000200000,USD,2026-09-30,https://developers.openai.com/api/docs/models/gpt-6-luna
+openai,gpt-6-luna,cached_input_tokens,token,0.000000020000,USD,2026-09-30,https://developers.openai.com/api/docs/models/gpt-6-luna
+openai,gpt-6-luna,output_tokens,token,0.000001000000,USD,2026-09-30,https://developers.openai.com/api/docs/models/gpt-6-luna
+local-mlx,mlx-community/gemma-4-e4b-it-4bit,input_tokens,token,0.000000000000,USD,2026-09-30,local-model-api-charge
+local-mlx,mlx-community/gemma-4-e4b-it-4bit,cached_input_tokens,token,0.000000000000,USD,2026-09-30,local-model-api-charge
+local-mlx,mlx-community/gemma-4-e4b-it-4bit,output_tokens,token,0.000000000000,USD,2026-09-30,local-model-api-charge
+local-distilled-sklearn,distilled-tfidf-linear-v2,input_tokens,token,0.000000000000,USD,2026-10-03,local-model-api-charge
+local-distilled-sklearn,distilled-tfidf-linear-v2,cached_input_tokens,token,0.000000000000,USD,2026-10-03,local-model-api-charge
+local-distilled-sklearn,distilled-tfidf-linear-v2,output_tokens,token,0.000000000000,USD,2026-10-03,local-model-api-charge
+codex-exec-subscription,gpt-6-luna,input_tokens,token,0.000000200000,USD,2026-10-03,https://developers.openai.com/api/docs/models/gpt-6-luna
+codex-exec-subscription,gpt-6-luna,cached_input_tokens,token,0.000000020000,USD,2026-10-03,https://developers.openai.com/api/docs/models/gpt-6-luna
+codex-exec-subscription,gpt-6-luna,output_tokens,token,0.000001000000,USD,2026-10-03,https://developers.openai.com/api/docs/models/gpt-6-luna

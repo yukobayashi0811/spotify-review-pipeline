@@ -1,0 +1,14 @@
+{
+  "al1_mean_agreement": 0.868,
+  "baseline_mean_agreement": 0.858667,
+  "component_agreement": {
+    "intent": 0.884,
+    "severity_exact": 0.876,
+    "severity_mae": 0.14,
+    "topic": 0.844
+  },
+  "improvement": 0.009333,
+  "minimum_improvement_for_al2": 0.005,
+  "quality_claim": "agreement with held-out saved Luna pseudo-labels; not human accuracy",
+  "run_al2": true
+}

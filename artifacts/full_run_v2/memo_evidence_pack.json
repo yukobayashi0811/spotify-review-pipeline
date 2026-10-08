@@ -1,0 +1,1781 @@
+{
+  "actionable_ranking": [
+    {
+      "actionable": "yes",
+      "actionable_rank": 1,
+      "baseline_rank": 1,
+      "coherent": "yes",
+      "complaint_count": 28348,
+      "description": "Users object to limits on song selection and playlist playback, including shuffle behavior and controls that they say require Premium.",
+      "issue_id": "I_USABILITY_04",
+      "issue_name": "Playlist playback and song selection limits",
+      "mean_severity": "2.868351",
+      "priority_score": 81312,
+      "severity_sum": 81312,
+      "topic": "usability"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 2,
+      "baseline_rank": 3,
+      "coherent": "yes",
+      "complaint_count": 27254,
+      "description": "Users report frequent or intrusive ads interrupting music playback, including complaints that an ad-free option still includes ads.",
+      "issue_id": "I_USABILITY_03",
+      "issue_name": "Frequent or intrusive ads",
+      "mean_severity": "2.286307",
+      "priority_score": 62311,
+      "severity_sum": 62311,
+      "topic": "usability"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 3,
+      "baseline_rank": 4,
+      "coherent": "yes",
+      "complaint_count": 21473,
+      "description": "Reviewers say free-plan users are being asked to upgrade to Premium to play chosen songs or use song controls such as seeking and changing tracks.",
+      "issue_id": "I_BILLING_01",
+      "issue_name": "Premium required for song choice and controls",
+      "mean_severity": "2.877241",
+      "priority_score": 61783,
+      "severity_sum": 61783,
+      "topic": "billing"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 4,
+      "baseline_rank": 6,
+      "coherent": "yes",
+      "complaint_count": 17049,
+      "description": "Users say many features or basic use now require Premium, making the free version feel too limited.",
+      "issue_id": "I_BILLING_03",
+      "issue_name": "Extensive Premium requirements",
+      "mean_severity": "2.707549",
+      "priority_score": 46161,
+      "severity_sum": 46161,
+      "topic": "billing"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 5,
+      "baseline_rank": 7,
+      "coherent": "yes",
+      "complaint_count": 8086,
+      "description": "Users say they cannot log in to their account, without identifying a specific sign-in method or error.",
+      "issue_id": "I_ACCESS_03",
+      "issue_name": "General login failure",
+      "mean_severity": "3.806208",
+      "priority_score": 30777,
+      "severity_sum": 30777,
+      "topic": "access"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 6,
+      "baseline_rank": 11,
+      "coherent": "yes",
+      "complaint_count": 8484,
+      "description": "Users say premium prompts and paywalls make the app feel increasingly unusable or irritating.",
+      "issue_id": "I_BILLING_02",
+      "issue_name": "Frequent premium pressure",
+      "mean_severity": "2.623880",
+      "priority_score": 22261,
+      "severity_sum": 22261,
+      "topic": "billing"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 7,
+      "baseline_rank": 12,
+      "coherent": "yes",
+      "complaint_count": 7228,
+      "description": "Users report that songs or complete albums, including local artists' releases, are missing or cannot be found in the catalog.",
+      "issue_id": "I_CATALOG_02",
+      "issue_name": "Songs or albums missing from catalog",
+      "mean_severity": "2.898174",
+      "priority_score": 20948,
+      "severity_sum": 20948,
+      "topic": "catalog"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 8,
+      "baseline_rank": 13,
+      "coherent": "yes",
+      "complaint_count": 7896,
+      "description": "Users say recent updates changed the interface or removed basic features and request restoration of the previous experience.",
+      "issue_id": "I_USABILITY_02",
+      "issue_name": "Recent updates removed features or worsened the interface",
+      "mean_severity": "2.562310",
+      "priority_score": 20232,
+      "severity_sum": 20232,
+      "topic": "usability"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 9,
+      "baseline_rank": 15,
+      "coherent": "yes",
+      "complaint_count": 5691,
+      "description": "Playback unexpectedly pauses or stops during or between songs and may require restarting playback or the app.",
+      "issue_id": "I_PLAYBACK_02",
+      "issue_name": "Playback stops unexpectedly",
+      "mean_severity": "3.064488",
+      "priority_score": 17440,
+      "severity_sum": 17440,
+      "topic": "playback"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 10,
+      "baseline_rank": 17,
+      "coherent": "yes",
+      "complaint_count": 5482,
+      "description": "Reviews mainly report instability, crashes, lag, or slow startup when using the app.",
+      "issue_id": "I_PLAYBACK_07",
+      "issue_name": "App crashes and instability",
+      "mean_severity": "3.081175",
+      "priority_score": 16891,
+      "severity_sum": 16891,
+      "topic": "playback"
+    }
+  ],
+  "claim_rule": "Only baseline issue metrics may appear in claims. Topic rollups and corrected sensitivity values must be described separately and never exported as claims.",
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn.",
+    "Issue-level sensitivity correction cannot allocate predicted non-complaints into a latent issue.",
+    "The adopted grouping retains low_coherence issues even after one bounded split."
+  ],
+  "evidence": {
+    "I_ACCESS_01": [
+      {
+        "evidence_quote": "I had account for 2 years and I used to like Spotify.",
+        "review_id": "0527e24c-baf6-4c33-86bc-46f690b887b8",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Totally been put off Spotify and can only but wonder WHO my personal DATA is being SHARED with & or SOLD to?",
+        "review_id": "09f0dbe7-663a-43c7-aa1e-5ef02ba402a4",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "For the past 3 months Spotify on mobile has been terribly slow, both me and my wife are experiencing this problem on separate accounts, phones and Internet.",
+        "review_id": "0e561e76-68e8-4fdf-80b5-f0ef1d5f87ac",
+        "severity": 5
+      }
+    ],
+    "I_ACCESS_02": [
+      {
+        "evidence_quote": "I lost my playlist and account 🥺",
+        "review_id": "172a610e-c450-41ad-86c5-1de4c46996fb",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Why is there no logging in with phone no. Now l lost alll my music.",
+        "review_id": "1f434b6e-7a79-46fa-a137-41f2ce6b0822",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Best streaming service, but they just delete my account when I've been away for 5 months, so I spend two days recovering my library on my new account.",
+        "review_id": "690f4462-4b3f-4e20-873a-fb3249e1a07e",
+        "severity": 5
+      }
+    ],
+    "I_ACCESS_03": [
+      {
+        "evidence_quote": "Really unhappy, a member of you're customer service team told me to delete my account and he would help me create a new one.",
+        "review_id": "007e72a3-b04b-4037-9799-7bf7ecb34047",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "My account is hacked is 45 do something",
+        "review_id": "0299f9e3-c76e-48d4-9287-1c2d5b0803cd",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Account delete",
+        "review_id": "03e703be-269b-4517-ad1d-c4506f0bd650",
+        "severity": 5
+      }
+    ],
+    "I_BILLING_01": [
+      {
+        "evidence_quote": "I recharged with Spotify premium they charged for 1 year and still I not got membership super fraud is going in India ...",
+        "review_id": "09539715-843b-4fd6-9561-cdec6b773535",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Spotify have been doublecharging me for nearly a year, after acknowledging I'd cancelled a previous account, there's no avenue to Complain and no reimbursement options.",
+        "review_id": "0b0d8523-fa6c-44c6-bed0-421e6e0040f8",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I never signed up for premium and my card was charged, I've now cancelled spotify.",
+        "review_id": "0b6e9d9b-24e6-4d17-a76f-7bdfef267f99",
+        "severity": 5
+      }
+    ],
+    "I_BILLING_02": [
+      {
+        "evidence_quote": "My favourite application for music hands down However, they charged me double ( took me off student plan) without notifying me, plus I'm still a studend",
+        "review_id": "000c2b9a-d116-45dc-b8a8-7b3818d6e834",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I signed up for the free period then after that took on the subscription I canceled the subscription and deleted the app I didn't want it anymore but still they are taking money from my account repeated attempts to try and stop them of all failed and now I don't know what to do I can't stop the money from coming out of my bank account and repeated attempts at trying to contact Spotify have all failed this is so frustrating because I can't stop the money from coming out for a service I don't want",
+        "review_id": "010af209-a1f9-4be9-9273-20fb925f891e",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "this app is the worst they been charging me for over 4 yrs for a service that im not using every time I want to cancel they wont let me in my account or my password username never right need help canceling need to cancel my never used service that I have been paying for 4 yrs",
+        "review_id": "14ff8b9a-059f-4481-a943-7c1e658fb827",
+        "severity": 5
+      }
+    ],
+    "I_BILLING_03": [
+      {
+        "evidence_quote": "I charged for my subscription then also I don't get it",
+        "review_id": "00eaee0f-d8a3-43f8-b5f8-a5bf7bd2c7bd",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "It charged me after I canceled my plan long story short don't put your card on here",
+        "review_id": "01bc38c1-0d0b-4716-a3ed-a7fc3a0aa362",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Have sent them several emails to attempt to cancel since you can't call them but there is no way to cancel because they say they can't find my account but they are charging me for it.",
+        "review_id": "0206e8af-1a8a-46b6-b187-123dc0a2230e",
+        "severity": 5
+      }
+    ],
+    "I_BILLING_04": [
+      {
+        "evidence_quote": "Took the free trial back in early June, Canceled it a few days prior to avoid being charged.",
+        "review_id": "12d6c30c-4557-4e0d-82cf-e2116f9c8329",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I cancelled my 3 month free trial because I couldn't afford it at the time.",
+        "review_id": "1ebffc4e-7546-4506-902a-d9a2cecf315c",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "it still changed me money.",
+        "review_id": "5ada5d18-9f6f-400d-9451-93dedb953ce1",
+        "severity": 5
+      }
+    ],
+    "I_CATALOG_01": [
+      {
+        "evidence_quote": "My spotify doesn't showing any lyrics to all music...please do something",
+        "review_id": "019f2c96-bac2-4486-be48-9d6b5e1abee1",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "I'm giving it 3 stars because of problem I'm unable to see the lyrics I've tried resetting, clearing storage and trying to update it but nothing happened it still doesn't show",
+        "review_id": "04aae9b5-c1d0-4c5a-8454-dad8791ff15d",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "my spotify doesn't even have lyrics , hope u guys can help to fix it",
+        "review_id": "0ca3a4d5-53ce-499a-a0c2-03f62033b809",
+        "severity": 4
+      }
+    ],
+    "I_CATALOG_02": [
+      {
+        "evidence_quote": "Your user data collection is lit bro 🤘🤘too much information...",
+        "review_id": "28f26bc5-5b7c-452e-96a1-d2fe6de78a1c",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Needs more personal control over privacy and followers Search and navigation is very poor",
+        "review_id": "4432357a-672a-4c25-95ff-934b6f75d33f",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "There's more!",
+        "review_id": "51fc6fd0-7b3e-4c0c-b38f-a73366ce23d2",
+        "severity": 5
+      }
+    ],
+    "I_CATALOG_03": [
+      {
+        "evidence_quote": "İ adore Spotify but someone hacked my account last month and destroyed all my fancy algorithm now ı have awfull recomendations I hope you can upgrade the listening history so we can erase what we don't want as suggestions...",
+        "review_id": "767efb7f-ab8c-4eb1-b6fa-66eec54aec9f",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Also fails to understand what music I like.",
+        "review_id": "c40c52a6-70e3-44a6-a6aa-d4d1ac27fe63",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "This app has invasive hidden trackers, collecting our data and giving it to 3 companies called Branch Metrics, comScore, and Adjust.",
+        "review_id": "d0b489d1-5b4c-408b-9984-336c46dae0c9",
+        "severity": 5
+      }
+    ],
+    "I_DOWNLOADS_01": [
+      {
+        "evidence_quote": "I lost all my liked songs for no reason",
+        "review_id": "1b72a43a-0608-4b73-991a-b9fbe84a5ebc",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "They stole my music up rf my phone I downloaded elsewhere noway of the return ing.. has happened so they know they do",
+        "review_id": "231275c2-565e-430d-b93c-b7b1528df446",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Does not save songs and charged after 3 months after deleting account. Not happy.",
+        "review_id": "412557a0-f6fb-4db6-9849-4dc52c009bc7",
+        "severity": 5
+      }
+    ],
+    "I_DOWNLOADS_02": [
+      {
+        "evidence_quote": "offline mode USELESS",
+        "review_id": "b03d6dc9-449a-4647-b112-559186656759",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Downloaded the app, i can't log in, it says I'm offline, i retried and nothing",
+        "review_id": "048c21f3-3258-403d-ba85-10bd45219dd3",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "I don't have words to describe but their is one problem we can't use it offline",
+        "review_id": "0b1bc1ec-2ba2-48e9-be50-f3143ce7a415",
+        "severity": 4
+      }
+    ],
+    "I_DOWNLOADS_03": [
+      {
+        "evidence_quote": "The music is great and i love that i can download and listen offline, but i just cancled my subscription and you guys still charged me, im kinda angry rn cause i just cant spare the money for spotify rn and you guys are still taking my money",
+        "review_id": "549788c4-ab52-4b49-93cb-2acf493e1a57",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I paid. And u people were charging me twice a month.. download my music..get something I don't want",
+        "review_id": "c17d26f1-2c3b-4147-bf38-644ce853e1c9",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "SUCH A BAD MUSIC DO NOT DOWNLOAD AT ALL I HATE THIS APP IT LITERALLY TOOK 100 AND 100 OF MONEY OUT OF MY BANK ACCOUNT FOR NOT GIVE DETAILS OF CARD EVER!!!",
+        "review_id": "de8bb5ea-f98f-4399-b3bd-1b604168fbc7",
+        "severity": 5
+      }
+    ],
+    "I_DOWNLOADS_04": [
+      {
+        "evidence_quote": "This app is hamful download to vest your data",
+        "review_id": "61122961-11f1-4c18-bd75-d805242f721b",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I downloaded the app and activated my account with my bank card and couldnt do it I would like to start it up",
+        "review_id": "e0bc18a4-b798-4215-919a-cbe1f1e0d569",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I would give 5 five stars it deserves but since the last update my downloads are missing when offline and now Im unable to login, I have uninstall and reinstall a nummous times and still nothing.",
+        "review_id": "01a36d09-e547-4e72-b1f4-03c64bcbfd2f",
+        "severity": 4
+      }
+    ],
+    "I_OTHER_01": [
+      {
+        "evidence_quote": "This app is very bad...",
+        "review_id": "059fc478-4cd4-4dc2-a5d6-442bd4b2231d",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Download this app if you want every personal information about you sold for profit to Facebook and Google",
+        "review_id": "06368cfa-d76c-4244-b0fc-fba6f48dcf97",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Dont install this app.its very dangerous for our Personal data",
+        "review_id": "0b357f49-fdf9-4514-8dcf-334020c2cb79",
+        "severity": 5
+      }
+    ],
+    "I_OTHER_02": [
+      {
+        "evidence_quote": "Very bad and its hacks your information",
+        "review_id": "fb6f1fc1-7fba-41df-a586-9d0703b3889a",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I can't really say anything bad about it!",
+        "review_id": "1ee70e30-745d-4061-a7a3-487a3090d6cb",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Can't say anything bad about it.",
+        "review_id": "42e47693-9c9b-4f80-9464-76ae6a77f22a",
+        "severity": 4
+      }
+    ],
+    "I_OTHER_03": [
+      {
+        "evidence_quote": "It takes more data and it's harmful for me",
+        "review_id": "0ae4029d-44d7-4722-a387-0f00617ac608",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "They stole ur data",
+        "review_id": "1326b29d-382b-4814-bee5-32e4187952bd",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Collects too much personal information",
+        "review_id": "21ddfe12-8433-4bad-b0f8-e7f605c056ae",
+        "severity": 5
+      }
+    ],
+    "I_OTHER_04": [
+      {
+        "evidence_quote": "my updated got cancelled 💀",
+        "review_id": "347bb732-d476-40bc-bbd1-c0aa7a45cc5c",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Spotify has erased 100s of my liked songs!!!",
+        "review_id": "903d0c71-57c7-4c0b-9978-80f3a5bc4620",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Uninstalling the app because of last update",
+        "review_id": "00f51d60-9222-4740-9a4f-6a3a0125fad0",
+        "severity": 4
+      }
+    ],
+    "I_OTHER_05": [
+      {
+        "evidence_quote": "I would have been scammed.",
+        "review_id": "0018180b-3823-4186-a59b-56de7189b77a",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "यह एक बहुत ही अच्छा ऐप है इसमें गाने सुनने और बहुत ही अच्छे अच्छे भजन भी मिल जाते हैं सुनहरे गाने भी मिल जाते हैं और इससे हम अपने मोबाइल फोन में रिंगटोन भी लगा सकते हैं एक तरह से यह बहुत ही अच्छा है सबको यूज़ करना चाहिए और सब को कहना चाहिए कि और लोग भी इसे यूज करें धन्यवाद जय श्री राम",
+        "review_id": "052313da-1f08-401a-89dd-9e4597a8282a",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Doesn't even deserve one star.",
+        "review_id": "08d53b76-e7e4-4fd0-b54a-d7266cd07b27",
+        "severity": 4
+      }
+    ],
+    "I_PLAYBACK_01": [
+      {
+        "evidence_quote": "Mobile data los for aapp",
+        "review_id": "040ba487-f330-4f66-9c55-b06dfdb09a66",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Data",
+        "review_id": "19df0d36-1d58-4f7b-8cce-78214ed8f7cc",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I LOST MY DATA DATE",
+        "review_id": "5ee1549f-597f-422d-932e-02adff48246a",
+        "severity": 5
+      }
+    ],
+    "I_PLAYBACK_02": [
+      {
+        "evidence_quote": "ever since the update on the 13th, my phone hasnt let me pause/ see what music im actually listening to.",
+        "review_id": "0004be97-7783-43dc-a4fb-196e7d19b8cf",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Since updating to Android 14, the app will randomly pause while playing music.",
+        "review_id": "0062fc0c-b798-4bb8-8c44-6beb6ec7817e",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Unable to pause or even let a song/podcast play.",
+        "review_id": "00c6c710-d210-4930-bb9e-73d744978f5f",
+        "severity": 4
+      }
+    ],
+    "I_PLAYBACK_03": [
+      {
+        "evidence_quote": "App doesnt even open half the times, I've paid for premium for the last few years as listened to it daily but lately haven't been able to even open a playlist.",
+        "review_id": "002858a0-c997-4b04-b90c-372a3fc0ec61",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "App is crashing whenever I try to play a song. Reinstalled but it makes no difference. Can't even use it right now",
+        "review_id": "00967dd7-f579-4e41-beba-ff8eeb570c1a",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "This app doesn't work for me whenever I play a song it pauses.",
+        "review_id": "0129c2ca-2bcb-4520-91de-c4122b98b776",
+        "severity": 4
+      }
+    ],
+    "I_PLAYBACK_04": [
+      {
+        "evidence_quote": "In the last two days spotify has used over 130 gigabytes of my mobile data.",
+        "review_id": "d11cde86-2700-4862-8d70-885548914274",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Thought spotify was good but Nope! only preview songs can't play anything anymore uninstalling!",
+        "review_id": "04a3e9ec-175d-4557-a781-dd13bd2b54ca",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Spotify became such a worst app it is not even playing the songs and when I opened a song it shows like Spotify is facing something blah blah it was saying.",
+        "review_id": "06d85845-dd1c-4ef6-9594-777aab8e275c",
+        "severity": 4
+      }
+    ],
+    "I_PLAYBACK_05": [
+      {
+        "evidence_quote": "I love Spotify but it continuously stops and freezes and won't play!!!",
+        "review_id": "00392dba-f9fd-4a6b-9859-384efa52ce55",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "After this update my Spotify is not working....when ever I open Spotify it goes offline please resolve this issue 💀",
+        "review_id": "00e0f37b-4998-4f81-ad0e-ad28b57bf831",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Spotify not working everytime i play a song app didn't work Automatic back in home screen why??? Is that",
+        "review_id": "01aa981b-cccc-4e1d-9abe-0d72cd98b050",
+        "severity": 4
+      }
+    ],
+    "I_PLAYBACK_06": [
+      {
+        "evidence_quote": "So I will not be using this app from this point forward and definitely not buying a subscription.",
+        "review_id": "af51c35b-0e3c-4ed1-87e2-7e236451e8e3",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Not bad sound",
+        "review_id": "0534911c-5dee-4a1d-855c-ba82c60e5e11",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Tengo varios días que se reproducen las canciones y en cuestión de minutos deja de sonar.",
+        "review_id": "0b544d4b-e830-42d6-83ab-eb9fc80a53cf",
+        "severity": 4
+      }
+    ],
+    "I_PLAYBACK_07": [
+      {
+        "evidence_quote": "Please uninstall the app it is carrying your data and privacy",
+        "review_id": "be53ef80-7cfd-43e2-affe-de694943d7de",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "App asking my personal deatails mobile data that's why",
+        "review_id": "dffcd1e6-534e-49d5-8a1b-d2cac64680e6",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Data isn't safe in this app leaks data for money.",
+        "review_id": "f3ce755d-f217-4cfc-b6d6-4d896397b49e",
+        "severity": 5
+      }
+    ],
+    "I_PLAYBACK_08": [
+      {
+        "evidence_quote": "I am unable to play anything",
+        "review_id": "4538a329-fb56-4a15-8efa-4358b507f6f3",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Worst app. I would recommend to use YouTube instead of this app. It will tuin your data and your smartphone",
+        "review_id": "beb4add2-a9b6-42b1-b155-2d8ff8ad82de",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Crashes many times, despite subscribing your liked songs and playlists are lost all of a sudden.",
+        "review_id": "df56df49-3a77-4aae-801c-1f0fcecfff5b",
+        "severity": 5
+      }
+    ],
+    "I_PLAYBACK_09": [
+      {
+        "evidence_quote": "When there is no cell signal or wifi available the Branch metric SDK continues to attempt to send data ITS KILLING MY BATTERY",
+        "review_id": "4c5596fb-76c5-4263-a006-552dbc1bc746",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "The support site said to try reinstalling but now I can't even log in because \"somethings wrong, try again\" but it never works.",
+        "review_id": "000442de-7a0f-4b49-b0e2-3f1df0f04fd1",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "It's been fixed and working GREAT.",
+        "review_id": "0019c376-5b6a-4b0a-add6-d077f7eb9cf3",
+        "severity": 4
+      }
+    ],
+    "I_SUPPORT_01": [
+      {
+        "evidence_quote": "Tried to contact support to resolve.",
+        "review_id": "1761af09-42f3-4d48-8715-de9f9d9d2130",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "So I reached out to customer support and explained to them what happened, that I'd never used that acct because the other was already set to my preferences.",
+        "review_id": "9deb857c-341b-4beb-9338-f30ea9485610",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "There's no support besides a chat feature and they just give you the same answer over again and do not help.",
+        "review_id": "a3480f54-6fc5-40e3-8289-e0a5b6dcd1b6",
+        "severity": 5
+      }
+    ],
+    "I_SUPPORT_02": [
+      {
+        "evidence_quote": "The customer support is excellent. My account got hacked and they helped me get back.",
+        "review_id": "9f24d48d-8c1e-4972-a221-c8ace354d932",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Everything is fine but my account got lost and customer support very poor",
+        "review_id": "aa92c51c-eec4-4e98-925d-4ffaca6a1a62",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "There is no customer support 2.",
+        "review_id": "2940c1f7-c32d-485c-b16b-9ac375e6ef95",
+        "severity": 4
+      }
+    ],
+    "I_SUPPORT_03": [
+      {
+        "evidence_quote": "Your customer service is so bad!",
+        "review_id": "2e84bf5b-393a-4c07-8987-93037639460e",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Bad customer service support.",
+        "review_id": "5ef248bc-abbf-4d46-8278-c85461747fe7",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Customer service is really bad...",
+        "review_id": "6625c597-c970-4bc6-9ad2-caed10ae1d2e",
+        "severity": 5
+      }
+    ],
+    "I_SUPPORT_04": [
+      {
+        "evidence_quote": "Looking through through the reviews, I see a lot of 1 star's and no replies of support",
+        "review_id": "57c7f702-2392-4301-936a-df65096fde0a",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Support is no help.",
+        "review_id": "5e947635-d8e5-441f-872d-277627ef3251",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Nor have I gotten any help from the \"support\".",
+        "review_id": "e39ecd50-29f1-4e62-b155-c8d3ad175c57",
+        "severity": 4
+      }
+    ],
+    "I_SUPPORT_05": [
+      {
+        "evidence_quote": "I tried what you said, and it didn't help, and no, I will not contact customer support because you are the only one who is causing the problem fix it or after the promo I am looking elsewhere for a better app",
+        "review_id": "2f245148-7e65-4cda-85e9-8c36005a679e",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Was working great but then Albums just wouldn't open on the app. Told customer service and they haven't done anything in over a month",
+        "review_id": "dd646681-e1f0-4588-8625-5b033bed0c47",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Customer service sent me an email asking how they helped me when I didn't get any help at all and no matter what I do my app says I don't have internet connection when every other app is working just fine.",
+        "review_id": "ea86fcd7-f254-4bda-b9d4-f6ee93d9679a",
+        "severity": 4
+      }
+    ],
+    "I_SUPPORT_06": [
+      {
+        "evidence_quote": "This app makes mistake and that caused a women artist to face harassment,cyber bullying,slvt shamming for no reason, and this community Doesn't response for the crime they made, they support the bullies by not responding, not giving any statement about apologising for their mistake.",
+        "review_id": "4847a969-0777-4d71-a25e-61f3607d3400",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "I dont support bullies!",
+        "review_id": "f533f506-0d74-47f0-a6ad-e755139c8a5c",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "They support cyber bullies",
+        "review_id": "0e4049b6-6cf6-4594-b1fc-e53df7158cc7",
+        "severity": 2
+      }
+    ],
+    "I_SUPPORT_07": [
+      {
+        "evidence_quote": "you all block me i send email because i sy true 2 accounts i report 14 +10 $more then months and i send proof in set spotify block me mo credit nada bad service costumers they care just taking you $ resolve this contact me they but the truth hearts",
+        "review_id": "4939fb2f-9a86-4832-92aa-f2adc76a08a5",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "One thing I can say about Spotify with my chest is that their customer support is outstanding.",
+        "review_id": "bbdaccec-6326-4628-8ef8-1893e9ace3ea",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I've had to call my bank several times and block them because even if I have changed my plan Spotify takes money out of your account as they see fit and when they see fit",
+        "review_id": "fe529d41-c5ed-452b-a72c-342bb22b6b4c",
+        "severity": 5
+      }
+    ],
+    "I_SUPPORT_08": [
+      {
+        "evidence_quote": "Very bad lost my playlist EMAIL support say account was deleted and hacked no response from them so got rid of them all together never heard from them spotify support",
+        "review_id": "e6b73070-1869-4e24-99f1-3246aa33260a",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Spotify replied to my original one-star review and helped me solve the problem.",
+        "review_id": "06366965-2946-4c31-ac88-be91c61e62d7",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "i cant get in contakt whid Spotify",
+        "review_id": "46e567dd-ea08-4749-8661-94d8c8fa574a",
+        "severity": 4
+      }
+    ],
+    "I_SUPPORT_09": [
+      {
+        "evidence_quote": "Giving 5 star for having a great customer service.",
+        "review_id": "1f529d93-3da3-4a53-8d24-fb958e4a0a20",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "No customer service!",
+        "review_id": "6a4d6a77-2e02-44dc-9940-27b0cf51334c",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Customer service is a joke.",
+        "review_id": "71db2b5f-b2e2-47f8-b4f0-8cb05fc08dce",
+        "severity": 5
+      }
+    ],
+    "I_USABILITY_01": [
+      {
+        "evidence_quote": "So I cancelled ...",
+        "review_id": "5bd62838-5872-4519-aff1-ff9a30ad6a72",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "And it's quite irritating .",
+        "review_id": "00989496-dec1-4467-a4b2-7b78de667f8c",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Originally thought the problem was my connect, but this evidently is not the case.",
+        "review_id": "028138d6-17b3-43c7-9f78-742bf124ca14",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY_02": [
+      {
+        "evidence_quote": "The fact that your can't set private mode permanently is straight up evil, and is a conscious decision against good user experience amd privacy.",
+        "review_id": "583243e9-df07-4fd8-a82c-036ebc7669c1",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Never install this because they have many ads and share your card details and hacked your cards.",
+        "review_id": "765ed2d9-e14a-4384-bc04-131442aac251",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Everytime I connect a device it comes on. So extremely aggravating. The settings don't fix it and I'm over it. Uninstalling.",
+        "review_id": "04c2b516-cf46-410a-a007-99f17ba8f98c",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY_03": [
+      {
+        "evidence_quote": "Too many ads and hacked my account very easily",
+        "review_id": "54877642-191f-4a37-bf73-b2eaadbef414",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "There is no way to get a hold of these people and one of the ads on here was a scammer that stole money from me.",
+        "review_id": "6a0bf51d-ce7d-40bc-8d5c-3e63f172028f",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Not OK to use hacked apps full of ads and ad trackers that collect information I never agreed to give.",
+        "review_id": "d5c06c31-d9fa-45f3-b699-c456b44ba1dd",
+        "severity": 5
+      }
+    ],
+    "I_USABILITY_04": [
+      {
+        "evidence_quote": "automatically start playing",
+        "review_id": "91132204-877d-4ac1-9d08-20d03f1414f6",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "can't even recover the playlists set by me last week",
+        "review_id": "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "No scroll bar in my liked songs.",
+        "review_id": "e2195b4e-28b1-4e3b-ab1e-ce2e7c654a4b",
+        "severity": 5
+      }
+    ]
+  },
+  "grouping_comparison": {
+    "adopted": "embedding_v2",
+    "adoption_reason": "embedding_v2 has the higher membership-weighted coherent rate: embedding=0.671792, tfidf=0.461490.",
+    "comparison_rule": "Adopt the version with the higher overall membership-weighted coherent rate",
+    "embedding_v2": {
+      "coherent_issue_count": 19,
+      "coherent_issue_ratio": 0.4634146341463415,
+      "duplicate_normalized_name_count": 0,
+      "duplicate_normalized_names": [],
+      "issue_count": 41,
+      "membership_weighted_coherent_rate_overall": 0.671791601391912,
+      "membership_weighted_coherent_rate_top10": 0.7222369928010471,
+      "top10_incoherent_issue_ids": [
+        "I_PLAYBACK_08",
+        "I_OTHER_03",
+        "I_OTHER_04",
+        "I_USABILITY_01"
+      ],
+      "top10_issue_ids": [
+        "I_USABILITY_04",
+        "I_OTHER_01",
+        "I_USABILITY_03",
+        "I_BILLING_01",
+        "I_PLAYBACK_08",
+        "I_BILLING_03",
+        "I_ACCESS_03",
+        "I_OTHER_03",
+        "I_OTHER_04",
+        "I_USABILITY_01"
+      ]
+    },
+    "tfidf_v1": {
+      "coherent_issue_count": 31,
+      "coherent_issue_ratio": 0.6078431372549019,
+      "duplicate_normalized_name_count": 1,
+      "duplicate_normalized_names": [
+        {
+          "cluster_count": 2,
+          "normalized_name": "phone number login failure",
+          "topic": "access"
+        }
+      ],
+      "issue_count": 51,
+      "membership_weighted_coherent_rate_overall": 0.46149020532087454,
+      "membership_weighted_coherent_rate_top10": 0.2827265786605937,
+      "top10_incoherent_issue_ids": [
+        "I_OTHER_02",
+        "I_USABILITY_06",
+        "I_PLAYBACK_02",
+        "I_PLAYBACK_04",
+        "I_PLAYBACK_05",
+        "I_USABILITY_07"
+      ],
+      "top10_issue_ids": [
+        "I_OTHER_02",
+        "I_USABILITY_06",
+        "I_PLAYBACK_02",
+        "I_USABILITY_04",
+        "I_BILLING_04",
+        "I_PLAYBACK_04",
+        "I_PLAYBACK_05",
+        "I_USABILITY_07",
+        "I_PLAYBACK_01",
+        "I_BILLING_07"
+      ]
+    },
+    "top10_below_70_percent_limitation_required": false
+  },
+  "issues": {
+    "I_ACCESS_01": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most users report being unable to log in, with one report of unexpected new-device login emails.",
+      "issue_id": "I_ACCESS_01",
+      "issue_name": "Unable to log in",
+      "topic": "access"
+    },
+    "I_ACCESS_02": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report being unable to log in or regain access to their accounts and saved music.",
+      "issue_id": "I_ACCESS_02",
+      "issue_name": "Account login and access failures",
+      "topic": "access"
+    },
+    "I_ACCESS_03": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users say they cannot log in to their account, without identifying a specific sign-in method or error.",
+      "issue_id": "I_ACCESS_03",
+      "issue_name": "General login failure",
+      "topic": "access"
+    },
+    "I_BILLING_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Reviewers say free-plan users are being asked to upgrade to Premium to play chosen songs or use song controls such as seeking and changing tracks.",
+      "issue_id": "I_BILLING_01",
+      "issue_name": "Premium required for song choice and controls",
+      "topic": "billing"
+    },
+    "I_BILLING_02": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users say premium prompts and paywalls make the app feel increasingly unusable or irritating.",
+      "issue_id": "I_BILLING_02",
+      "issue_name": "Frequent premium pressure",
+      "topic": "billing"
+    },
+    "I_BILLING_03": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users say many features or basic use now require Premium, making the free version feel too limited.",
+      "issue_id": "I_BILLING_03",
+      "issue_name": "Extensive Premium requirements",
+      "topic": "billing"
+    },
+    "I_BILLING_04": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples complain that updates moved basic features behind the premium paywall; two discuss a free trial or value instead.",
+      "issue_id": "I_BILLING_04",
+      "issue_name": "Basic features moved behind paywall",
+      "topic": "billing"
+    },
+    "I_CATALOG_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Lyrics fail to appear or load for songs where users expect them to be available.",
+      "issue_id": "I_CATALOG_01",
+      "issue_name": "Lyrics fail to display",
+      "topic": "catalog"
+    },
+    "I_CATALOG_02": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report that songs or complete albums, including local artists' releases, are missing or cannot be found in the catalog.",
+      "issue_id": "I_CATALOG_02",
+      "issue_name": "Songs or albums missing from catalog",
+      "topic": "catalog"
+    },
+    "I_CATALOG_03": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Examples mix unwanted recommendations or autoplay, limited song selection, and dissatisfaction with the algorithm or home page.",
+      "issue_id": "I_CATALOG_03",
+      "issue_name": "Music recommendations and catalog dissatisfaction",
+      "topic": "catalog"
+    },
+    "I_DOWNLOADS_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Downloaded tracks may disappear, fail to play offline, or repeatedly require downloading again.",
+      "issue_id": "I_DOWNLOADS_01",
+      "issue_name": "Downloaded tracks disappear or fail offline",
+      "topic": "downloads"
+    },
+    "I_DOWNLOADS_02": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Downloaded music sometimes fails to appear or play offline, or the app incorrectly reports that the user is offline.",
+      "issue_id": "I_DOWNLOADS_02",
+      "issue_name": "Downloaded music unavailable offline",
+      "topic": "downloads"
+    },
+    "I_DOWNLOADS_03": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Users report difficulty downloading or playing music offline, mixed with access expectations, download speed, and family account limitations.",
+      "issue_id": "I_DOWNLOADS_03",
+      "issue_name": "Offline access and downloads",
+      "topic": "downloads"
+    },
+    "I_DOWNLOADS_04": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Most examples express general dislike or advise against downloading the app, while one specifically says downloads fail.",
+      "issue_id": "I_DOWNLOADS_04",
+      "issue_name": "Vague download complaints",
+      "topic": "downloads"
+    },
+    "I_OTHER_01": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Reviews express general dislike of the app, with few details about a specific product problem.",
+      "issue_id": "I_OTHER_01",
+      "issue_name": "General dissatisfaction with the app",
+      "topic": "other"
+    },
+    "I_OTHER_02": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "The examples express nonspecific negative judgments without identifying a particular product problem.",
+      "issue_id": "I_OTHER_02",
+      "issue_name": "Vague negative reaction",
+      "topic": "other"
+    },
+    "I_OTHER_03": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Most examples give generic negative reactions, while a few mention political or religious content without a clear shared product problem.",
+      "issue_id": "I_OTHER_03",
+      "issue_name": "Generic app dislike",
+      "topic": "other"
+    },
+    "I_OTHER_04": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Most examples express dissatisfaction with an unspecified update, while one cites a price increase and cancellation.",
+      "issue_id": "I_OTHER_04",
+      "issue_name": "Unspecified update dissatisfaction",
+      "topic": "other"
+    },
+    "I_OTHER_05": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Most examples are generic insults, while others mention recent poor service or bugs without enough detail to identify a specific problem.",
+      "issue_id": "I_OTHER_05",
+      "issue_name": "Generic quality complaints",
+      "topic": "other"
+    },
+    "I_PLAYBACK_01": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most users report lag, slow loading, or playback interruptions, while one reports connectivity errors despite working internet.",
+      "issue_id": "I_PLAYBACK_01",
+      "issue_name": "Playback and app performance problems",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_02": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Playback unexpectedly pauses or stops during or between songs and may require restarting playback or the app.",
+      "issue_id": "I_PLAYBACK_02",
+      "issue_name": "Playback stops unexpectedly",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_03": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Playback can stop, crash, or fail to continue, often after switching apps; one example instead reports a missing podcast option.",
+      "issue_id": "I_PLAYBACK_03",
+      "issue_name": "Playback stops or crashes",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_04": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Reviews mix unwanted suggested-song playback with interruptions, update-related bugs, and other playback complaints.",
+      "issue_id": "I_PLAYBACK_04",
+      "issue_name": "Unwanted songs and playback problems",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_05": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Examples combine playback failures and interruptions with complaints about mobile playback restrictions and being directed to unwanted songs.",
+      "issue_id": "I_PLAYBACK_05",
+      "issue_name": "Songs fail to play as expected",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_06": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Reports mix poor audio quality with excessive advertising, high data use, and unrelated complaints, so the examples do not describe one consistent problem.",
+      "issue_id": "I_PLAYBACK_06",
+      "issue_name": "Audio quality and listening complaints",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_07": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Reviews mainly report instability, crashes, lag, or slow startup when using the app.",
+      "issue_id": "I_PLAYBACK_07",
+      "issue_name": "App crashes and instability",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_08": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Selecting a song or artist starts different music, a suggested track, or a playlist instead of the requested selection.",
+      "issue_id": "I_PLAYBACK_08",
+      "issue_name": "Requested songs do not play",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_09": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples report a false offline status despite working internet, while a few describe general loading, startup, or regional access failures.",
+      "issue_id": "I_PLAYBACK_09",
+      "issue_name": "False no-internet status",
+      "topic": "playback"
+    },
+    "I_SUPPORT_01": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Examples vary between successful and unsuccessful support experiences, with one focused on difficulty unsubscribing.",
+      "issue_id": "I_SUPPORT_01",
+      "issue_name": "Mixed support experiences",
+      "topic": "support"
+    },
+    "I_SUPPORT_02": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples say support is unavailable or unresponsive, while others describe helpful support or unrelated assistance.",
+      "issue_id": "I_SUPPORT_02",
+      "issue_name": "Hard to reach or unresponsive support",
+      "topic": "support"
+    },
+    "I_SUPPORT_03": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Users give a general negative assessment of customer service without specifying a particular failure.",
+      "issue_id": "I_SUPPORT_03",
+      "issue_name": "Poor customer service",
+      "topic": "support"
+    },
+    "I_SUPPORT_04": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Most examples describe poor or unavailable support in general terms, while one concerns disagreement with a price increase.",
+      "issue_id": "I_SUPPORT_04",
+      "issue_name": "Generally poor support",
+      "topic": "support"
+    },
+    "I_SUPPORT_05": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Customers report difficulty reaching support or getting useful, safe help to resolve app problems.",
+      "issue_id": "I_SUPPORT_05",
+      "issue_name": "Unhelpful support for app issues",
+      "topic": "support"
+    },
+    "I_SUPPORT_06": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Reviews largely accuse Spotify of supporting bullies and demand an apology, without identifying a product issue.",
+      "issue_id": "I_SUPPORT_06",
+      "issue_name": "Objection to alleged support for bullying",
+      "topic": "support"
+    },
+    "I_SUPPORT_07": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "The examples mix unresolved support cases and response praise with complaints about free service, spam, and subscription security.",
+      "issue_id": "I_SUPPORT_07",
+      "issue_name": "Unresolved customer support problems",
+      "topic": "support"
+    },
+    "I_SUPPORT_08": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Examples mix difficult or ineffective support with successful resolutions and unrelated playlist and account problems.",
+      "issue_id": "I_SUPPORT_08",
+      "issue_name": "Mixed support and unresolved problems",
+      "topic": "support"
+    },
+    "I_SUPPORT_09": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples report ineffective or frustrating customer service, while one praises support and another is a broad complaint about customer care.",
+      "issue_id": "I_SUPPORT_09",
+      "issue_name": "Ineffective customer service",
+      "topic": "support"
+    },
+    "I_USABILITY_01": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Users report excessive ads and problems with recent updates, including removed features, slow performance, broken scrolling, and missing songs.",
+      "issue_id": "I_USABILITY_01",
+      "issue_name": "Ads and update-related usability complaints",
+      "topic": "usability"
+    },
+    "I_USABILITY_02": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users say recent updates changed the interface or removed basic features and request restoration of the previous experience.",
+      "issue_id": "I_USABILITY_02",
+      "issue_name": "Recent updates removed features or worsened the interface",
+      "topic": "usability"
+    },
+    "I_USABILITY_03": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report frequent or intrusive ads interrupting music playback, including complaints that an ad-free option still includes ads.",
+      "issue_id": "I_USABILITY_03",
+      "issue_name": "Frequent or intrusive ads",
+      "topic": "usability"
+    },
+    "I_USABILITY_04": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users object to limits on song selection and playlist playback, including shuffle behavior and controls that they say require Premium.",
+      "issue_id": "I_USABILITY_04",
+      "issue_name": "Playlist playback and song selection limits",
+      "topic": "usability"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 28348,
+      "issue_id": "I_USABILITY_04",
+      "mean_severity": "2.868351",
+      "priority_score": 81312,
+      "rank": 1,
+      "severity_sum": 81312
+    },
+    {
+      "complaint_count": 39048,
+      "issue_id": "I_OTHER_01",
+      "mean_severity": "2.032729",
+      "priority_score": 79374,
+      "rank": 2,
+      "severity_sum": 79374
+    },
+    {
+      "complaint_count": 27254,
+      "issue_id": "I_USABILITY_03",
+      "mean_severity": "2.286307",
+      "priority_score": 62311,
+      "rank": 3,
+      "severity_sum": 62311
+    },
+    {
+      "complaint_count": 21473,
+      "issue_id": "I_BILLING_01",
+      "mean_severity": "2.877241",
+      "priority_score": 61783,
+      "rank": 4,
+      "severity_sum": 61783
+    },
+    {
+      "complaint_count": 16876,
+      "issue_id": "I_PLAYBACK_08",
+      "mean_severity": "3.126452",
+      "priority_score": 52762,
+      "rank": 5,
+      "severity_sum": 52762
+    },
+    {
+      "complaint_count": 17049,
+      "issue_id": "I_BILLING_03",
+      "mean_severity": "2.707549",
+      "priority_score": 46161,
+      "rank": 6,
+      "severity_sum": 46161
+    },
+    {
+      "complaint_count": 8086,
+      "issue_id": "I_ACCESS_03",
+      "mean_severity": "3.806208",
+      "priority_score": 30777,
+      "rank": 7,
+      "severity_sum": 30777
+    },
+    {
+      "complaint_count": 14003,
+      "issue_id": "I_OTHER_03",
+      "mean_severity": "2.040706",
+      "priority_score": 28576,
+      "rank": 8,
+      "severity_sum": 28576
+    },
+    {
+      "complaint_count": 13715,
+      "issue_id": "I_OTHER_04",
+      "mean_severity": "2.075538",
+      "priority_score": 28466,
+      "rank": 9,
+      "severity_sum": 28466
+    },
+    {
+      "complaint_count": 9732,
+      "issue_id": "I_USABILITY_01",
+      "mean_severity": "2.419030",
+      "priority_score": 23542,
+      "rank": 10,
+      "severity_sum": 23542
+    }
+  ],
+  "sensitivity_summary": {
+    "adjusted_topics": [
+      {
+        "adjusted_complaint_count": 91985.522502,
+        "adjusted_complaint_count_95ci": {
+          "lower": 78059.13872,
+          "upper": 107387.538469
+        },
+        "adjusted_mean_severity": 2.588401,
+        "adjusted_priority_score": 238095.440779,
+        "adjusted_priority_score_95ci": {
+          "lower": 202189.401794,
+          "upper": 279498.320407
+        },
+        "adjusted_rank": 1,
+        "baseline_complaint_count": 73230,
+        "baseline_priority_score": 187397,
+        "baseline_rank": 1,
+        "topic": "usability"
+      },
+      {
+        "adjusted_complaint_count": 85821.359265,
+        "adjusted_complaint_count_95ci": {
+          "lower": 69819.49377,
+          "upper": 100447.855528
+        },
+        "adjusted_mean_severity": 1.882519,
+        "adjusted_priority_score": 161560.299731,
+        "adjusted_priority_score_95ci": {
+          "lower": 133273.857136,
+          "upper": 183946.976713
+        },
+        "adjusted_rank": 2,
+        "baseline_complaint_count": 84475,
+        "baseline_priority_score": 172230,
+        "baseline_rank": 2,
+        "topic": "other"
+      },
+      {
+        "adjusted_complaint_count": 35385.358452,
+        "adjusted_complaint_count_95ci": {
+          "lower": 25390.285012,
+          "upper": 46225.823214
+        },
+        "adjusted_mean_severity": 2.821237,
+        "adjusted_priority_score": 99830.471944,
+        "adjusted_priority_score_95ci": {
+          "lower": 72203.61066,
+          "upper": 128866.728728
+        },
+        "adjusted_rank": 3,
+        "baseline_complaint_count": 46144,
+        "baseline_priority_score": 142494,
+        "baseline_rank": 3,
+        "topic": "playback"
+      },
+      {
+        "adjusted_complaint_count": 29829.481829,
+        "adjusted_complaint_count_95ci": {
+          "lower": 22747.337812,
+          "upper": 37466.842422
+        },
+        "adjusted_mean_severity": 2.662643,
+        "adjusted_priority_score": 79425.262726,
+        "adjusted_priority_score_95ci": {
+          "lower": 59792.723251,
+          "upper": 100746.786167
+        },
+        "adjusted_rank": 4,
+        "baseline_complaint_count": 49124,
+        "baseline_priority_score": 135844,
+        "baseline_rank": 4,
+        "topic": "billing"
+      },
+      {
+        "adjusted_complaint_count": 26067.510232,
+        "adjusted_complaint_count_95ci": {
+          "lower": 18303.184434,
+          "upper": 35615.82775
+        },
+        "adjusted_mean_severity": 2.428401,
+        "adjusted_priority_score": 63302.359676,
+        "adjusted_priority_score_95ci": {
+          "lower": 43651.302862,
+          "upper": 88120.459567
+        },
+        "adjusted_rank": 5,
+        "baseline_complaint_count": 17630,
+        "baseline_priority_score": 50465,
+        "baseline_rank": 5,
+        "topic": "catalog"
+      },
+      {
+        "adjusted_complaint_count": 12477.0996,
+        "adjusted_complaint_count_95ci": {
+          "lower": 6331.035655,
+          "upper": 18785.877211
+        },
+        "adjusted_mean_severity": 2.925879,
+        "adjusted_priority_score": 36506.480707,
+        "adjusted_priority_score_95ci": {
+          "lower": 18197.727651,
+          "upper": 55910.80713
+        },
+        "adjusted_rank": 6,
+        "baseline_complaint_count": 7179,
+        "baseline_priority_score": 20969,
+        "baseline_rank": 7,
+        "topic": "downloads"
+      },
+      {
+        "adjusted_complaint_count": 10520.452098,
+        "adjusted_complaint_count_95ci": {
+          "lower": 5981.32752,
+          "upper": 14587.221394
+        },
+        "adjusted_mean_severity": 3.36276,
+        "adjusted_priority_score": 35377.760399,
+        "adjusted_priority_score_95ci": {
+          "lower": 19314.445321,
+          "upper": 45694.140247
+        },
+        "adjusted_rank": 7,
+        "baseline_complaint_count": 10180,
+        "baseline_priority_score": 38533,
+        "baseline_rank": 6,
+        "topic": "access"
+      },
+      {
+        "adjusted_complaint_count": 201.798466,
+        "adjusted_complaint_count_95ci": {
+          "lower": 50.415641,
+          "upper": 1021.881914
+        },
+        "adjusted_mean_severity": 2.746958,
+        "adjusted_priority_score": 554.331988,
+        "adjusted_priority_score_95ci": {
+          "lower": 137.030143,
+          "upper": 3186.147708
+        },
+        "adjusted_rank": 8,
+        "baseline_complaint_count": 562,
+        "baseline_priority_score": 1591,
+        "baseline_rank": 8,
+        "topic": "support"
+      }
+    ],
+    "limitations": [
+      "The verifier is an independent model pass, not human ground truth.",
+      "The local stratum has 300 distinct texts; sparse cells depend on smoothing.",
+      "Bootstrap intervals represent verifier-sample uncertainty under this correction model, not total model uncertainty.",
+      "Issue corrections cannot recover false-negative complaints into a specific issue because they were never grouped.",
+      "These corrected estimates are sensitivity outputs and are not claims.csv evidence."
+    ],
+    "rank_stability": {
+      "adjusted_top_issue": "I_OTHER_01",
+      "adjusted_top_issue_bootstrap_top_probability": 0.534,
+      "adjusted_top_topic": "usability",
+      "adjusted_top_topic_bootstrap_top_probability": 1.0,
+      "baseline_top_issue": "I_USABILITY_04",
+      "baseline_top_issue_bootstrap_top_probability": 0.466,
+      "baseline_top_topic": "usability",
+      "baseline_top_topic_bootstrap_top_probability": 1.0,
+      "issue_bootstrap_top_frequency": {
+        "I_OTHER_01": 534,
+        "I_USABILITY_04": 466
+      },
+      "top_issue_unchanged": false,
+      "top_topic_unchanged": true,
+      "topic_bootstrap_top_frequency": {
+        "usability": 1000
+      }
+    },
+    "top_adjusted_issues": [
+      {
+        "adjusted_complaint_count": 26919.837372,
+        "adjusted_complaint_count_95ci": {
+          "lower": 22184.988428,
+          "upper": 30875.969205
+        },
+        "adjusted_mean_severity": 2.032433,
+        "adjusted_priority_score": 54712.760768,
+        "adjusted_priority_score_95ci": {
+          "lower": 45167.617617,
+          "upper": 62759.736237
+        },
+        "adjusted_rank": 1,
+        "baseline_complaint_count": 39048,
+        "baseline_priority_score": 79374,
+        "baseline_rank": 2,
+        "issue_id": "I_OTHER_01",
+        "topic": "other"
+      },
+      {
+        "adjusted_complaint_count": 18801.00581,
+        "adjusted_complaint_count_95ci": {
+          "lower": 15021.952638,
+          "upper": 22519.172806
+        },
+        "adjusted_mean_severity": 2.865771,
+        "adjusted_priority_score": 53879.383074,
+        "adjusted_priority_score_95ci": {
+          "lower": 42886.752969,
+          "upper": 64692.843178
+        },
+        "adjusted_rank": 2,
+        "baseline_complaint_count": 28348,
+        "baseline_priority_score": 81312,
+        "baseline_rank": 1,
+        "issue_id": "I_USABILITY_04",
+        "topic": "usability"
+      },
+      {
+        "adjusted_complaint_count": 19024.271006,
+        "adjusted_complaint_count_95ci": {
+          "lower": 15263.878356,
+          "upper": 21690.294909
+        },
+        "adjusted_mean_severity": 2.273425,
+        "adjusted_priority_score": 43250.249689,
+        "adjusted_priority_score_95ci": {
+          "lower": 35250.139986,
+          "upper": 49371.016191
+        },
+        "adjusted_rank": 3,
+        "baseline_complaint_count": 27254,
+        "baseline_priority_score": 62311,
+        "baseline_rank": 3,
+        "issue_id": "I_USABILITY_03",
+        "topic": "usability"
+      },
+      {
+        "adjusted_complaint_count": 10722.688191,
+        "adjusted_complaint_count_95ci": {
+          "lower": 7631.288277,
+          "upper": 13593.074473
+        },
+        "adjusted_mean_severity": 2.846374,
+        "adjusted_priority_score": 30520.777549,
+        "adjusted_priority_score_95ci": {
+          "lower": 21670.395764,
+          "upper": 38933.012207
+        },
+        "adjusted_rank": 4,
+        "baseline_complaint_count": 21473,
+        "baseline_priority_score": 61783,
+        "baseline_rank": 4,
+        "issue_id": "I_BILLING_01",
+        "topic": "billing"
+      },
+      {
+        "adjusted_complaint_count": 8269.495106,
+        "adjusted_complaint_count_95ci": {
+          "lower": 5638.571792,
+          "upper": 10772.336837
+        },
+        "adjusted_mean_severity": 3.140483,
+        "adjusted_priority_score": 25970.20797,
+        "adjusted_priority_score_95ci": {
+          "lower": 17699.167762,
+          "upper": 33802.447047
+        },
+        "adjusted_rank": 5,
+        "baseline_complaint_count": 16876,
+        "baseline_priority_score": 52762,
+        "baseline_rank": 5,
+        "issue_id": "I_PLAYBACK_08",
+        "topic": "playback"
+      },
+      {
+        "adjusted_complaint_count": 9495.542538,
+        "adjusted_complaint_count_95ci": {
+          "lower": 7220.248095,
+          "upper": 11496.051246
+        },
+        "adjusted_mean_severity": 2.635093,
+        "adjusted_priority_score": 25021.634819,
+        "adjusted_priority_score_95ci": {
+          "lower": 18948.497638,
+          "upper": 30541.85965
+        },
+        "adjusted_rank": 6,
+        "baseline_complaint_count": 17049,
+        "baseline_priority_score": 46161,
+        "baseline_rank": 6,
+        "issue_id": "I_BILLING_03",
+        "topic": "billing"
+      },
+      {
+        "adjusted_complaint_count": 5233.904495,
+        "adjusted_complaint_count_95ci": {
+          "lower": 2137.139295,
+          "upper": 5480.696303
+        },
+        "adjusted_mean_severity": 3.809038,
+        "adjusted_priority_score": 19936.140849,
+        "adjusted_priority_score_95ci": {
+          "lower": 8115.072888,
+          "upper": 20877.660098
+        },
+        "adjusted_rank": 7,
+        "baseline_complaint_count": 8086,
+        "baseline_priority_score": 30777,
+        "baseline_rank": 7,
+        "issue_id": "I_ACCESS_03",
+        "topic": "access"
+      },
+      {
+        "adjusted_complaint_count": 9705.196777,
+        "adjusted_complaint_count_95ci": {
+          "lower": 7586.877363,
+          "upper": 11448.317116
+        },
+        "adjusted_mean_severity": 2.041344,
+        "adjusted_priority_score": 19811.640409,
+        "adjusted_priority_score_95ci": {
+          "lower": 15526.55273,
+          "upper": 23272.614247
+        },
+        "adjusted_rank": 8,
+        "baseline_complaint_count": 14003,
+        "baseline_priority_score": 28576,
+        "baseline_rank": 8,
+        "issue_id": "I_OTHER_03",
+        "topic": "other"
+      },
+      {
+        "adjusted_complaint_count": 9455.402148,
+        "adjusted_complaint_count_95ci": {
+          "lower": 7887.262797,
+          "upper": 10815.539272
+        },
+        "adjusted_mean_severity": 2.074971,
+        "adjusted_priority_score": 19619.687834,
+        "adjusted_priority_score_95ci": {
+          "lower": 16374.150373,
+          "upper": 22461.323136
+        },
+        "adjusted_rank": 9,
+        "baseline_complaint_count": 13715,
+        "baseline_priority_score": 28466,
+        "baseline_rank": 9,
+        "issue_id": "I_OTHER_04",
+        "topic": "other"
+      },
+      {
+        "adjusted_complaint_count": 6794.019706,
+        "adjusted_complaint_count_95ci": {
+          "lower": 5352.434103,
+          "upper": 7806.473244
+        },
+        "adjusted_mean_severity": 2.409436,
+        "adjusted_priority_score": 16369.754224,
+        "adjusted_priority_score_95ci": {
+          "lower": 12984.634103,
+          "upper": 18734.783873
+        },
+        "adjusted_rank": 10,
+        "baseline_complaint_count": 9732,
+        "baseline_priority_score": 23542,
+        "baseline_rank": 10,
+        "issue_id": "I_USABILITY_01",
+        "topic": "usability"
+      }
+    ]
+  },
+  "topic_rollup": [
+    {
+      "complaint_count": 73230,
+      "mean_severity": "2.559020",
+      "priority_score": 187397,
+      "rank": 1,
+      "severity_sum": 187397,
+      "topic": "usability"
+    },
+    {
+      "complaint_count": 84475,
+      "mean_severity": "2.038828",
+      "priority_score": 172230,
+      "rank": 2,
+      "severity_sum": 172230,
+      "topic": "other"
+    },
+    {
+      "complaint_count": 46144,
+      "mean_severity": "3.088029",
+      "priority_score": 142494,
+      "rank": 3,
+      "severity_sum": 142494,
+      "topic": "playback"
+    },
+    {
+      "complaint_count": 49124,
+      "mean_severity": "2.765329",
+      "priority_score": 135844,
+      "rank": 4,
+      "severity_sum": 135844,
+      "topic": "billing"
+    },
+    {
+      "complaint_count": 17630,
+      "mean_severity": "2.862450",
+      "priority_score": 50465,
+      "rank": 5,
+      "severity_sum": 50465,
+      "topic": "catalog"
+    },
+    {
+      "complaint_count": 10180,
+      "mean_severity": "3.785167",
+      "priority_score": 38533,
+      "rank": 6,
+      "severity_sum": 38533,
+      "topic": "access"
+    },
+    {
+      "complaint_count": 7179,
+      "mean_severity": "2.920880",
+      "priority_score": 20969,
+      "rank": 7,
+      "severity_sum": 20969,
+      "topic": "downloads"
+    },
+    {
+      "complaint_count": 562,
+      "mean_severity": "2.830961",
+      "priority_score": 1591,
+      "rank": 8,
+      "severity_sum": 1591,
+      "topic": "support"
+    }
+  ],
+  "verification_summary": {
+    "local": {
+      "interpretation": "independent verifier agreement estimate",
+      "quote_supported_rate": 0.9766666666666667,
+      "row_weighted_intent_agreement": 0.8382387347164736,
+      "row_weighted_severity_exact": 0.7414117644971822,
+      "row_weighted_topic_agreement": 0.7247775093933975,
+      "verified_distinct_texts": 300
+    },
+    "luna": {
+      "interpretation": "same-model Luna test-retest, not independent accuracy",
+      "quote_supported_rate": 0.99,
+      "row_weighted_intent_agreement": 0.9813845442821078,
+      "row_weighted_severity_exact": 0.9654678474741608,
+      "row_weighted_topic_agreement": 0.9585655855994096,
+      "verified_distinct_texts": 100
+    }
+  }
+}

@@ -1,0 +1,5 @@
+claim_id,issue_id,metric,value
+C001,I_USABILITY,complaint_count,60
+C002,I_USABILITY,severity_sum,153
+C003,I_USABILITY,mean_severity,2.550000
+C004,I_USABILITY,priority_score,153

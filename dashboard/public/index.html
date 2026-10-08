@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spotify Review Insights</title>
+  <meta name="description" content="Saved full-corpus results of the Spotify review multi-role pipeline, served from PostgreSQL through a serverless API.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='9' width='3' height='6' rx='1' fill='%232a78d6'/%3E%3Crect x='6.5' y='5' width='3' height='10' rx='1' fill='%232a78d6'/%3E%3Crect x='12' y='1' width='3' height='14' rx='1' fill='%232a78d6'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>Spotify review insights: where should next quarter's product effort go?</h1>
+      <p>Results of the saved full-corpus run over 660,622 Google Play reviews (May 2022 – Nov 2023). Every number on this page is read live from a PostgreSQL database through a serverless API. The page makes no model calls; the recommendation was generated once by the pipeline's memo role and its numbers are rechecked here against the database.</p>
+      <div class="meta-row" id="meta-row"></div>
+    </header>
+
+    <section aria-labelledby="kpi-h">
+      <h2 id="kpi-h" class="sr-only">Overall metrics</h2>
+      <div class="tiles" id="tiles"></div>
+    </section>
+
+    <section aria-labelledby="reco-h">
+      <div class="card reco" id="reco">
+        <div class="eyebrow" id="reco-h">AI-generated recommendation</div>
+        <p class="dim">Loading…</p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <div class="chart-head">
+          <div>
+            <h2>Priority by topic</h2>
+            <p class="sub">Sum of issue severity (= priority score) for completed complaint/cancellation reviews, grouped by primary topic.</p>
+          </div>
+          <button class="btn" data-toggle-table="topics">Show table</button>
+        </div>
+        <div class="chart" id="topic-chart"></div>
+        <div class="table-wrap" id="topic-table" hidden></div>
+      </div>
+      <div class="card">
+        <div class="chart-head">
+          <div>
+            <h2>Complaint share by month</h2>
+            <p class="sub">Complaint + cancellation reviews ÷ classified reviews. May 2022 and Nov 2023 are partial months.</p>
+          </div>
+          <button class="btn" data-toggle-table="trend">Show table</button>
+        </div>
+        <div class="chart" id="trend-chart"></div>
+        <div class="chart" id="volume-chart"></div>
+        <div class="table-wrap" id="trend-table" hidden></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="rank-h">
+      <div class="card">
+        <h2 id="rank-h">Issue ranking</h2>
+        <p class="sub" id="rank-sub">priority_score = severity_sum = complaint_count × mean_severity, recomputed in the database from review records and issue membership.</p>
+        <div class="toolbar">
+          <div class="seg" role="group" aria-label="Issue filter">
+            <button type="button" data-filter="all" aria-pressed="true">All issues</button>
+            <button type="button" data-filter="actionable" aria-pressed="false">Coherent &amp; actionable</button>
+          </div>
+          <label>Topic <select id="topic-filter"><option value="">All topics</option></select></label>
+          <span class="dim" id="rank-count"></span>
+        </div>
+        <div class="table-wrap" id="ranking-table"></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="quality-h">
+      <h2 id="quality-h">Evaluation and run evidence</h2>
+      <p class="sub">Copied from the saved receipts named under each panel.</p>
+      <div class="grid-2" id="quality"></div>
+    </section>
+
+    <section aria-labelledby="lookup-h">
+      <div class="card">
+        <h2 id="lookup-h">Look up a review</h2>
+        <p class="sub">Paste any original review ID to see its processed record, label provenance and issue.</p>
+        <form id="lookup" class="toolbar">
+          <input type="text" id="lookup-id" placeholder="e.g. 08a95031-ae90-400e-9603-acc03c8d86e1" aria-label="Review ID" autocomplete="off">
+          <button class="btn" type="submit">Look up</button>
+        </form>
+        <div id="lookup-result"></div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>Backend: serverless functions under <code>/api</code> read the <code>spotify</code> schema of a PostgreSQL (Supabase) database loaded from the repository's committed outputs by <code>dashboard/db/load.py</code>.</p>
+      <p id="footer-health">Checking database…</p>
+    </footer>
+  </div>
+
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer" aria-label="Issue detail" aria-hidden="true"></aside>
+  <div class="tooltip" id="tooltip" role="status"></div>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

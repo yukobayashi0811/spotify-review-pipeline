@@ -1,0 +1,11 @@
+{
+  "base_api_equivalent_usd": 0.4637961,
+  "base_cold_wall_seconds": 176.246427,
+  "doubled_api_equivalent_usd": 0.9275922,
+  "doubled_cold_wall_seconds": 176.246427,
+  "note": "Only editable monetary rates changed; saved calls and measured runtimes were replayed offline.",
+  "offline_replay": true,
+  "ratio": 2.0,
+  "runtime_unchanged": true,
+  "status": "pass"
+}

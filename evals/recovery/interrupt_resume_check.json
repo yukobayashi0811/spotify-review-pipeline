@@ -1,0 +1,20 @@
+{
+  "added_ids_missing_resume_trace": 0,
+  "after_completed_ids": 660609,
+  "after_minus_before": 249035,
+  "before_completed_ids": 411574,
+  "before_ids_missing_initial_trace": 0,
+  "checks": {
+    "after_minus_before_all_trace_to_resume_enrich": true,
+    "after_minus_before_nonempty": true,
+    "before_all_ids_trace_to_successful_initial_enrich": true,
+    "resume_sent_zero_before_ids": true
+  },
+  "initial_run_id": "full-local-final-ac253a9d-adcd-45c6-bf8d-aaf91328247c",
+  "initial_successful_calls": 30,
+  "passed": true,
+  "resume_run_id": "full-local-final-8b6897d9-a7ec-42b9-9b2a-59a53b91bb7a",
+  "resume_sent_before_ids": 0,
+  "resume_successful_calls": 4770,
+  "trace_rule": "Cache rows trace through their direct cache_source_id to the sent representative."
+}

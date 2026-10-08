@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-0612-7dd1-ae3e-37e3d747a8db"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Listen to it everyday I work or play!\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"4402ac12-8525-40b8-b5b7-501fdae1a284\",\"sentiment\":0.8,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10749,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":83,"reasoning_output_tokens":0}}

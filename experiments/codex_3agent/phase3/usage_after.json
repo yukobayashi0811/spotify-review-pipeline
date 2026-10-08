@@ -1,0 +1,11 @@
+{
+  "captured_at_local": "2026-09-30",
+  "ordinary_usage_allowed": true,
+  "plan_type": "plus",
+  "used_percent": 72,
+  "window_duration_minutes": 10080,
+  "resets_at_local": "2026-10-07 14:58:20 PDT",
+  "credits_balance": "0",
+  "experiment_stop_at_used_percent": 73,
+  "interpretation": "Account-wide snapshot; the one-point change from the preflight snapshot is not attributable solely to this experiment. No reset credit was used."
+}

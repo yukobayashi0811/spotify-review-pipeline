@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "training_exact_text_overlap_with_golden_50": 0,
+  "training_exact_text_overlap_with_holdout_500": 0,
+  "training_normalized_text_overlap_with_golden_50": 0,
+  "training_normalized_text_overlap_with_holdout_500": 0,
+  "training_review_id_overlap_with_golden_50": 0,
+  "training_review_id_overlap_with_holdout_500": 0
+}

@@ -1,0 +1,182 @@
+{
+  "agreement": {
+    "intent": 0.94,
+    "severity_exact": 0.82,
+    "severity_mae": 0.18,
+    "topic": 0.88
+  },
+  "already_verified_at_start": 0,
+  "disagreements": [
+    {
+      "first_intent": "complaint",
+      "first_severity": 3,
+      "first_topic": "playback",
+      "intent_agree": false,
+      "review_id": "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "request",
+      "verify_severity": 4,
+      "verify_topic": "playback"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 2,
+      "first_topic": "usability",
+      "intent_agree": false,
+      "review_id": "0cc5a3be-e40c-4e9f-918d-53d284e2e5b3",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "praise",
+      "verify_severity": 1,
+      "verify_topic": "usability"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 3,
+      "first_topic": "billing",
+      "intent_agree": true,
+      "review_id": "1d1480fb-0142-46da-8570-45bf3983bf6d",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "billing"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 3,
+      "first_topic": "billing",
+      "intent_agree": true,
+      "review_id": "57aca404-d58b-4bb4-97b1-c64db92f054a",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "billing"
+    },
+    {
+      "first_intent": "unclear",
+      "first_severity": 1,
+      "first_topic": "other",
+      "intent_agree": false,
+      "review_id": "5a4a0f00-ce5f-448d-8425-48eeeba76b4d",
+      "severity_distance": 0,
+      "topic_agree": true,
+      "verify_intent": "praise",
+      "verify_severity": 1,
+      "verify_topic": "other"
+    },
+    {
+      "first_intent": "cancellation",
+      "first_severity": 2,
+      "first_topic": "billing",
+      "intent_agree": true,
+      "review_id": "6a4f84b4-18e2-47d9-adb8-2461a9319c11",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "cancellation",
+      "verify_severity": 3,
+      "verify_topic": "billing"
+    },
+    {
+      "first_intent": "request",
+      "first_severity": 3,
+      "first_topic": "usability",
+      "intent_agree": true,
+      "review_id": "77a53aa5-a453-4bcb-8267-d4f44a492dd3",
+      "severity_distance": 1,
+      "topic_agree": false,
+      "verify_intent": "request",
+      "verify_severity": 4,
+      "verify_topic": "playback"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 2,
+      "first_topic": "billing",
+      "intent_agree": true,
+      "review_id": "82aedd59-debc-4147-9ff4-5a95c3d3a4e4",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 3,
+      "verify_topic": "billing"
+    },
+    {
+      "first_intent": "cancellation",
+      "first_severity": 2,
+      "first_topic": "other",
+      "intent_agree": true,
+      "review_id": "b47c203f-366e-4409-922d-cd52aa8bbef6",
+      "severity_distance": 0,
+      "topic_agree": false,
+      "verify_intent": "cancellation",
+      "verify_severity": 2,
+      "verify_topic": "usability"
+    },
+    {
+      "first_intent": "request",
+      "first_severity": 1,
+      "first_topic": "other",
+      "intent_agree": true,
+      "review_id": "c0f03952-e067-4f25-99fc-18a1a045ed9f",
+      "severity_distance": 1,
+      "topic_agree": false,
+      "verify_intent": "request",
+      "verify_severity": 2,
+      "verify_topic": "usability"
+    },
+    {
+      "first_intent": "cancellation",
+      "first_severity": 3,
+      "first_topic": "usability",
+      "intent_agree": true,
+      "review_id": "e16a4550-43e7-4ae1-b538-a65cc652c31b",
+      "severity_distance": 1,
+      "topic_agree": false,
+      "verify_intent": "cancellation",
+      "verify_severity": 4,
+      "verify_topic": "playback"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 2,
+      "first_topic": "catalog",
+      "intent_agree": true,
+      "review_id": "e5e362d7-1057-43bf-a3ca-8ffd93f80789",
+      "severity_distance": 0,
+      "topic_agree": false,
+      "verify_intent": "complaint",
+      "verify_severity": 2,
+      "verify_topic": "usability"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 2,
+      "first_topic": "other",
+      "intent_agree": true,
+      "review_id": "f5cc511f-ae71-4985-a737-1c0075156e2b",
+      "severity_distance": 0,
+      "topic_agree": false,
+      "verify_intent": "complaint",
+      "verify_severity": 2,
+      "verify_topic": "billing"
+    }
+  ],
+  "evidence_quote_repairs": 0,
+  "failures": [],
+  "pending_at_start": 50,
+  "planted_error_test": {
+    "detected": true,
+    "note": "The planted label exists only in this test copy and is excluded from business outputs.",
+    "planted_topic": "access",
+    "review_id": "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+    "synthetic_test": true,
+    "verifier_topic": "playback"
+  },
+  "sample_fraction": 0.1,
+  "sample_seed": "spotify-verifier-v1",
+  "selected": 50,
+  "verified": 50
+}

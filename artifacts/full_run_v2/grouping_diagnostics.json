@@ -1,0 +1,522 @@
+{
+  "access": {
+    "candidates": [
+      {
+        "effective_k": 3,
+        "k": 3,
+        "minimum_cluster_share": 0.2056974459724951,
+        "silhouette": 0.13756507072154858,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 4,
+        "k": 4,
+        "minimum_cluster_share": 0.17445972495088408,
+        "silhouette": 0.11410705888826057,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 5,
+        "k": 5,
+        "minimum_cluster_share": 0.15913555992141454,
+        "silhouette": 0.12966538462634053,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 5,
+        "k": 6,
+        "minimum_cluster_share": 0.12043222003929273,
+        "silhouette": 0.11709965647618233,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 6,
+        "k": 7,
+        "minimum_cluster_share": 0.09341846758349705,
+        "silhouette": 0.11922782316261404,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 8,
+        "minimum_cluster_share": 0.053241650294695485,
+        "silhouette": 0.13614537577184613,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 9,
+        "minimum_cluster_share": 0.043222003929273084,
+        "silhouette": 0.13477891107487855,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 10,
+        "minimum_cluster_share": 0.04332023575638507,
+        "silhouette": 0.1174226689731901,
+        "valid_minimum_share": true
+      }
+    ],
+    "distinct_texts": 9991,
+    "selected_effective_k_after_0_90_merge": 3,
+    "selected_k": 3,
+    "silhouette_sample_size": 9991,
+    "weighted_rows": 10180
+  },
+  "billing": {
+    "candidates": [
+      {
+        "effective_k": 3,
+        "k": 3,
+        "minimum_cluster_share": 0.21582118719973944,
+        "silhouette": 0.1376991877019504,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 3,
+        "k": 4,
+        "minimum_cluster_share": 0.14793176451429035,
+        "silhouette": 0.10462015076535988,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 4,
+        "k": 5,
+        "minimum_cluster_share": 0.13577884537089813,
+        "silhouette": 0.09903429410270323,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 6,
+        "k": 6,
+        "minimum_cluster_share": 0.07749776076866705,
+        "silhouette": 0.12175925776572867,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 7,
+        "minimum_cluster_share": 0.06408272941942839,
+        "silhouette": 0.11255997055987223,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 8,
+        "minimum_cluster_share": 0.09852617864994707,
+        "silhouette": 0.09220473620957151,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 9,
+        "minimum_cluster_share": 0.04486605325299243,
+        "silhouette": 0.0964400083466162,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 9,
+        "k": 10,
+        "minimum_cluster_share": 0.036377330836251116,
+        "silhouette": 0.09924624130452098,
+        "valid_minimum_share": true
+      }
+    ],
+    "distinct_texts": 48800,
+    "selected_effective_k_after_0_90_merge": 3,
+    "selected_k": 3,
+    "silhouette_sample_size": 20000,
+    "weighted_rows": 49124
+  },
+  "catalog": {
+    "candidates": [
+      {
+        "effective_k": 3,
+        "k": 3,
+        "minimum_cluster_share": 0.25643788996029493,
+        "silhouette": 0.11240542641034872,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 4,
+        "k": 4,
+        "minimum_cluster_share": 0.13896766874645491,
+        "silhouette": 0.053593737841437596,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 5,
+        "k": 5,
+        "minimum_cluster_share": 0.10896199659671016,
+        "silhouette": 0.050769354892419606,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 6,
+        "k": 6,
+        "minimum_cluster_share": 0.09307997731140102,
+        "silhouette": 0.04905040064382612,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 7,
+        "minimum_cluster_share": 0.08893930799773114,
+        "silhouette": 0.044257560245501655,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 8,
+        "minimum_cluster_share": 0.09682359614293817,
+        "silhouette": 0.05548268346625962,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 9,
+        "minimum_cluster_share": 0.06352807714123652,
+        "silhouette": 0.05979495520804459,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 9,
+        "k": 10,
+        "minimum_cluster_share": 0.05734543391945547,
+        "silhouette": 0.04878918524650483,
+        "valid_minimum_share": true
+      }
+    ],
+    "distinct_texts": 17469,
+    "selected_effective_k_after_0_90_merge": 3,
+    "selected_k": 3,
+    "silhouette_sample_size": 17469,
+    "weighted_rows": 17630
+  },
+  "downloads": {
+    "candidates": [
+      {
+        "effective_k": 3,
+        "k": 3,
+        "minimum_cluster_share": 0.15280679760412313,
+        "silhouette": 0.10796471586791624,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 3,
+        "k": 4,
+        "minimum_cluster_share": 0.06978687839531968,
+        "silhouette": 0.0644549952420065,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 4,
+        "k": 5,
+        "minimum_cluster_share": 0.05028555509123833,
+        "silhouette": 0.09328457181373763,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 6,
+        "k": 6,
+        "minimum_cluster_share": 0.04150995960440173,
+        "silhouette": 0.08476457233854207,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 7,
+        "minimum_cluster_share": 0.03969912244045132,
+        "silhouette": 0.08098021315783095,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 8,
+        "minimum_cluster_share": 0.042763616102521246,
+        "silhouette": 0.09390474447940611,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 9,
+        "k": 9,
+        "minimum_cluster_share": 0.03162000278590333,
+        "silhouette": 0.0922400634400505,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 10,
+        "k": 10,
+        "minimum_cluster_share": 0.029669870455495195,
+        "silhouette": 0.09441613187974449,
+        "valid_minimum_share": true
+      }
+    ],
+    "distinct_texts": 7057,
+    "selected_effective_k_after_0_90_merge": 3,
+    "selected_k": 3,
+    "silhouette_sample_size": 7057,
+    "weighted_rows": 7179
+  },
+  "other": {
+    "candidates": [
+      {
+        "effective_k": 3,
+        "k": 3,
+        "minimum_cluster_share": 0.20963598697839597,
+        "silhouette": 0.1384638812278075,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 4,
+        "k": 4,
+        "minimum_cluster_share": 0.1265699911216336,
+        "silhouette": 0.1204138217151492,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 5,
+        "k": 5,
+        "minimum_cluster_share": 0.15672092335010357,
+        "silhouette": 0.04061161638816266,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 6,
+        "k": 6,
+        "minimum_cluster_share": 0.12237940218999704,
+        "silhouette": 0.0477580407200522,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 7,
+        "minimum_cluster_share": 0.059934891979875705,
+        "silhouette": 0.058272560052973155,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 8,
+        "minimum_cluster_share": 0.057946137910624446,
+        "silhouette": 0.056196525755537866,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 9,
+        "k": 9,
+        "minimum_cluster_share": 0.053459603432968336,
+        "silhouette": 0.06575341713303534,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 10,
+        "k": 10,
+        "minimum_cluster_share": 0.020147972773009767,
+        "silhouette": 0.07573138129238961,
+        "valid_minimum_share": true
+      }
+    ],
+    "distinct_texts": 51855,
+    "selected_effective_k_after_0_90_merge": 3,
+    "selected_k": 3,
+    "silhouette_sample_size": 20000,
+    "weighted_rows": 84475
+  },
+  "playback": {
+    "candidates": [
+      {
+        "effective_k": 3,
+        "k": 3,
+        "minimum_cluster_share": 0.29115377947295423,
+        "silhouette": 0.06007320816101178,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 4,
+        "k": 4,
+        "minimum_cluster_share": 0.16394330790568654,
+        "silhouette": 0.05394179906640231,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 5,
+        "k": 5,
+        "minimum_cluster_share": 0.1157246879334258,
+        "silhouette": 0.06682038722508307,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 6,
+        "k": 6,
+        "minimum_cluster_share": 0.11405599861303745,
+        "silhouette": 0.06666397229342377,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 7,
+        "minimum_cluster_share": 0.09994798890429958,
+        "silhouette": 0.07264579002201439,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 8,
+        "minimum_cluster_share": 0.08753033980582524,
+        "silhouette": 0.06562511525346329,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 9,
+        "k": 9,
+        "minimum_cluster_share": 0.08677184466019418,
+        "silhouette": 0.05970435308985375,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 10,
+        "k": 10,
+        "minimum_cluster_share": 0.060007801664355064,
+        "silhouette": 0.06335516191930958,
+        "valid_minimum_share": true
+      }
+    ],
+    "distinct_texts": 45792,
+    "selected_effective_k_after_0_90_merge": 7,
+    "selected_k": 7,
+    "silhouette_sample_size": 20000,
+    "weighted_rows": 46144
+  },
+  "support": {
+    "candidates": [
+      {
+        "effective_k": 3,
+        "k": 3,
+        "minimum_cluster_share": 0.25622775800711745,
+        "silhouette": 0.11705627852934461,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 4,
+        "k": 4,
+        "minimum_cluster_share": 0.199288256227758,
+        "silhouette": 0.15195116544539677,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 5,
+        "k": 5,
+        "minimum_cluster_share": 0.06583629893238434,
+        "silhouette": 0.15684405279923674,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 6,
+        "k": 6,
+        "minimum_cluster_share": 0.06761565836298933,
+        "silhouette": 0.15348299994504624,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 7,
+        "minimum_cluster_share": 0.06761565836298933,
+        "silhouette": 0.13880323372314868,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 8,
+        "minimum_cluster_share": 0.04448398576512456,
+        "silhouette": 0.09196261615499077,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 9,
+        "minimum_cluster_share": 0.046263345195729534,
+        "silhouette": 0.10229741454798259,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 10,
+        "k": 10,
+        "minimum_cluster_share": 0.019572953736654804,
+        "silhouette": 0.09980816808070261,
+        "valid_minimum_share": false
+      }
+    ],
+    "distinct_texts": 559,
+    "selected_effective_k_after_0_90_merge": 5,
+    "selected_k": 5,
+    "silhouette_sample_size": 559,
+    "weighted_rows": 562
+  },
+  "usability": {
+    "candidates": [
+      {
+        "effective_k": 3,
+        "k": 3,
+        "minimum_cluster_share": 0.24072101597705858,
+        "silhouette": 0.1837946403848127,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 4,
+        "k": 4,
+        "minimum_cluster_share": 0.12359688652191725,
+        "silhouette": 0.17617398645688898,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 5,
+        "k": 5,
+        "minimum_cluster_share": 0.08369520688242524,
+        "silhouette": 0.14314448817242773,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 6,
+        "k": 6,
+        "minimum_cluster_share": 0.07505120852109791,
+        "silhouette": 0.14034719701022783,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 7,
+        "k": 7,
+        "minimum_cluster_share": 0.054021575856889256,
+        "silhouette": 0.111000415597668,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 8,
+        "k": 8,
+        "minimum_cluster_share": 0.05018435067595248,
+        "silhouette": 0.0816084781370486,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 9,
+        "k": 9,
+        "minimum_cluster_share": 0.05101734261914516,
+        "silhouette": 0.08159144148986425,
+        "valid_minimum_share": true
+      },
+      {
+        "effective_k": 10,
+        "k": 10,
+        "minimum_cluster_share": 0.04718011743820839,
+        "silhouette": 0.08496348861711449,
+        "valid_minimum_share": true
+      }
+    ],
+    "distinct_texts": 69318,
+    "selected_effective_k_after_0_90_merge": 3,
+    "selected_k": 3,
+    "silhouette_sample_size": 20000,
+    "weighted_rows": 73230
+  }
+}

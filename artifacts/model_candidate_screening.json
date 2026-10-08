@@ -1,0 +1,38 @@
+{
+  "status": "measured_development_screening",
+  "decision": "retain_pinned_gemma_4b_pending_human_golden_evaluation",
+  "candidates": [
+    {
+      "model": "mlx-community/Qwen3-0.6B-4bit",
+      "revision": "73e3e38d981303bc594367cd910ea6eb48349da8",
+      "review_count": 1,
+      "duration_seconds": 1.315864,
+      "output_tokens": 88,
+      "valid": false,
+      "observed_failures": ["severity was 0", "evidence_quote was empty", "neutral review was labeled access"]
+    },
+    {
+      "model": "mlx-community/Qwen3-1.7B-4bit",
+      "revision": "3b1b1768f8f8cf8351c712464f906e86c2b8269e",
+      "review_count": 10,
+      "duration_seconds": 12.307202,
+      "output_tokens": 1056,
+      "valid": false,
+      "observed_failures": ["needs_review was omitted from every record", "clear premium-control complaints were labeled support"]
+    },
+    {
+      "model": "mlx-community/gemma-3-1b-it-4bit",
+      "revision": "2d44e83dc9e80843d22fb941d3d699a0b1351aa6",
+      "review_count": 1,
+      "duration_seconds": 3.766277,
+      "output_tokens": 365,
+      "valid": false,
+      "observed_failures": ["returned a schema description instead of the required records envelope"]
+    }
+  ],
+  "limitations": [
+    "Candidates were stopped after decisive schema or obvious taxonomy failures.",
+    "This is not a human-labeled accuracy comparison.",
+    "The pinned Gemma 4B still requires the assignment's golden-50 evaluation."
+  ]
+}

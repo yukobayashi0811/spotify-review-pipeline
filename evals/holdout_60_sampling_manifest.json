@@ -1,0 +1,17 @@
+{
+  "candidate_distinct_texts_after_exclusions": 483336,
+  "csv_sha256": "3eeff534aeeb26249143f78583365a8ce53a0e4410d59e2b4d80c79bb32f040d",
+  "exclusions": {
+    "by_review_id_exact_text_and_normalized_text": true,
+    "golden_human_labels_opened": false,
+    "sources": [
+      "artifacts/golden_prediction_input.csv",
+      "data/checkpoint_500.csv"
+    ]
+  },
+  "prediction_columns_included": false,
+  "sampling_method": "Python random.Random(seed).sample after deterministic hash ordering",
+  "sampling_unit": "distinct exact review text among completed records",
+  "seed": 20261003,
+  "selected": 60
+}

@@ -1,0 +1,16 @@
+actionable_rank,baseline_rank,issue_id,topic,issue_name,description,coherent,actionable,complaint_count,severity_sum,mean_severity,priority_score
+1,1,I_USABILITY_04,usability,Playlist playback and song selection limits,"Users object to limits on song selection and playlist playback, including shuffle behavior and controls that they say require Premium.",yes,yes,28348,81312,2.868351,81312
+2,3,I_USABILITY_03,usability,Frequent or intrusive ads,"Users report frequent or intrusive ads interrupting music playback, including complaints that an ad-free option still includes ads.",yes,yes,27254,62311,2.286307,62311
+3,4,I_BILLING_01,billing,Premium required for song choice and controls,Reviewers say free-plan users are being asked to upgrade to Premium to play chosen songs or use song controls such as seeking and changing tracks.,yes,yes,21473,61783,2.877241,61783
+4,6,I_BILLING_03,billing,Extensive Premium requirements,"Users say many features or basic use now require Premium, making the free version feel too limited.",yes,yes,17049,46161,2.707549,46161
+5,7,I_ACCESS_03,access,General login failure,"Users say they cannot log in to their account, without identifying a specific sign-in method or error.",yes,yes,8086,30777,3.806208,30777
+6,11,I_BILLING_02,billing,Frequent premium pressure,Users say premium prompts and paywalls make the app feel increasingly unusable or irritating.,yes,yes,8484,22261,2.623880,22261
+7,12,I_CATALOG_02,catalog,Songs or albums missing from catalog,"Users report that songs or complete albums, including local artists' releases, are missing or cannot be found in the catalog.",yes,yes,7228,20948,2.898174,20948
+8,13,I_USABILITY_02,usability,Recent updates removed features or worsened the interface,Users say recent updates changed the interface or removed basic features and request restoration of the previous experience.,yes,yes,7896,20232,2.562310,20232
+9,15,I_PLAYBACK_02,playback,Playback stops unexpectedly,Playback unexpectedly pauses or stops during or between songs and may require restarting playback or the app.,yes,yes,5691,17440,3.064488,17440
+10,17,I_PLAYBACK_07,playback,App crashes and instability,"Reviews mainly report instability, crashes, lag, or slow startup when using the app.",yes,yes,5482,16891,3.081175,16891
+11,19,I_CATALOG_01,catalog,Lyrics fail to display,Lyrics fail to appear or load for songs where users expect them to be available.,yes,yes,4521,13156,2.909976,13156
+12,24,I_DOWNLOADS_01,downloads,Downloaded tracks disappear or fail offline,"Downloaded tracks may disappear, fail to play offline, or repeatedly require downloading again.",yes,yes,2374,7314,3.080876,7314
+13,31,I_ACCESS_02,access,Account login and access failures,Users report being unable to log in or regain access to their accounts and saved music.,yes,yes,652,2327,3.569018,2327
+14,32,I_DOWNLOADS_02,downloads,Downloaded music unavailable offline,"Downloaded music sometimes fails to appear or play offline, or the app incorrectly reports that the user is offline.",yes,yes,650,1949,2.998462,1949
+15,38,I_SUPPORT_05,support,Unhelpful support for app issues,"Customers report difficulty reaching support or getting useful, safe help to resolve app problems.",yes,yes,53,143,2.698113,143

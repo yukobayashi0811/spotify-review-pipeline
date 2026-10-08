@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f864-f15d-72f3-a497-d1c04494651b"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Spotify Premium\",\"Amazon Music\",\"playlists\",\"shuffle\",\"offline listening\",\"ads\"],\"evidence_quote\":\"it NEVER plays the actual song\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"4a6c4064-a45c-4804-96f9-238a7e40c938\",\"sentiment\":-0.9,\"severity\":4,\"topic\":\"playback\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10835,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":193,"reasoning_output_tokens":91}}

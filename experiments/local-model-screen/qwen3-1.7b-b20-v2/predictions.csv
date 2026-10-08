@@ -1,0 +1,21 @@
+review_id,topic,intent,sentiment,severity,entities,evidence_quote,needs_review
+084077ee-f9be-446a-9935-9e58550d5153,other,unclear,-0.5,1,[],Thik thak hi hai,true
+ff14ea84-fdec-4363-9b1b-a23dcab287c5,other,unclear,-0.5,1,[],Good at all,true
+dc73ecd9-3293-4ede-90d5-dd6cd1e8d087,other,unclear,-0.5,1,[],Great,true
+a78d831a-69f4-428a-9235-cfdd9775c509,playback,complaint,-0.8,3,"[""app""]","You can't even listen to music you want it just shuffles it, like what the hell? This app is killing it self and forcing you to pay premium for basic things like just listening to music.",true
+d146397f-4a94-4980-be00-ae9212eca3a7,playback,complaint,-0.8,3,"[""app""]","This was fine till the last update, now you can't even pick a certain song without Spotify premium, and now you can only skip 6 songs, like please just let the songs fit my mood!",true
+4c0242ca-099a-4c89-b11b-219ef28f1e16,other,unclear,-0.5,1,[],Love it,true
+42f0c9d1-088c-437b-bfc8-c1c36114a8f0,other,unclear,-0.5,1,[],Fantastic experience,true
+5bc203df-dac3-41ae-8b8d-ee0e8b9d9f50,other,unclear,-0.5,1,[],Awesome app and music,true
+b39971d2-e3f0-4559-96da-a609f54d9cb4,other,unclear,-0.5,1,[],Best for listening songs,true
+797d12c7-78dd-4805-a066-342ace701805,other,unclear,-0.5,1,[],Kudos spotify,true
+9d851b7f-a738-449b-a841-de8076f13276,other,unclear,-0.5,1,[],Great music,true
+ad730d1a-829a-4dc4-9561-7e1cd07e2c30,playback,complaint,-0.8,3,"[""app"", ""premium""]",Why it requires premium just to play next music / to choose music ?? And why the specific part of song cannot be played ?,true
+f44b3617-a645-4375-ae2d-44b742a1a306,other,unclear,-0.5,1,[],Excellent!,true
+5d4d3f47-4b3c-4be4-8f11-6cca41d27068,other,unclear,-0.5,1,[],Good aap,true
+84353026-5e56-4ca4-bfa4-e006d021ef44,other,unclear,-0.5,1,[],Top music app and i can see why.,true
+178c3b49-b689-4fe4-92a2-2257a58e6d95,other,unclear,-0.5,1,[],Worst app.,true
+b92a7381-b5cd-4c77-9176-e5c4b4818c8a,other,unclear,-0.5,1,[],You deserve 0 star,true
+94c9f2f9-36fa-4c11-936e-660514fe7a35,support,complaint,-0.8,3,"[""app"", ""homescreen""]","Spotify is great, but the new homescreen update is horrible. You're not tiktok or Instagram. I don't want to scroll through 1 playlist or album or artist at a time.",true
+e25cf0b6-0285-4cc9-9a4a-5a8a05be929e,other,unclear,-0.5,1,[],Awesome music app can def see y everyone loves it so much best part to me personally is the categories suggested for you personally,true
+9f46904c-4ed3-4799-8949-379b949c7344,other,unclear,-0.5,1,[],Best indeeeeeeeed,true

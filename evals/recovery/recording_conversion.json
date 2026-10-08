@@ -1,0 +1,10 @@
+{
+  "asciinema_cast": "evals/recovery/interrupt_resume.cast",
+  "asciinema_cast_sha256": "9a84521a825dc279140688acd24fe9280771355f2dd38440cb449b468c9921de",
+  "created_at_utc": "2026-10-03T16:52:57.087057+00:00",
+  "source": "evals/recovery/interrupt_resume.typescript",
+  "source_sha256": "35e27fb6ab465f89dba9ea5599d92d2738130fb82658b5d7de51691105713409",
+  "timing_policy": "Section transitions use saved report timestamps; no original per-character timing was inferred or fabricated.",
+  "transcript": "evals/recovery/interrupt_resume_transcript.txt",
+  "transcript_sha256": "500a1a91ee2999032476f4eb9a2c4cbd5ef03f23b7f6cbe1b8eb9f0b29066148"
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-7008-7970-9d43-7635e4d836b3"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"quality of musics and sounds are really amazing plus impressive\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"9110ff38-5b36-4145-b940-3e51a5d35952\",\"sentiment\":0.95,\"severity\":1,\"topic\":\"playback\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10761,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":86,"reasoning_output_tokens":0}}

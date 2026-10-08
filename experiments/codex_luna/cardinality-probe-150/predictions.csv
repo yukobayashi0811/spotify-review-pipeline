@@ -1,0 +1,151 @@
+review_id,topic,intent,sentiment,severity,entities,evidence_quote,needs_review
+084077ee-f9be-446a-9935-9e58550d5153,other,unclear,0.0,1,[],Thik thak hi hai,false
+ff14ea84-fdec-4363-9b1b-a23dcab287c5,other,praise,0.7,1,[],Good at all,false
+dc73ecd9-3293-4ede-90d5-dd6cd1e8d087,other,praise,0.8,1,[],Great,false
+a78d831a-69f4-428a-9235-cfdd9775c509,usability,complaint,-0.9,3,"[""premium""]",forcing you to pay premium for basic things like just listening to music,false
+d146397f-4a94-4980-be00-ae9212eca3a7,other,praise,0.8,1,[],"This was fine till the last update, now you can't even pick a certain song without Spotify premium, and now you can only skip 6 songs, like please just let the songs fit my mood!",true
+4c0242ca-099a-4c89-b11b-219ef28f1e16,other,praise,0.9,1,[],Love it,false
+42f0c9d1-088c-437b-bfc8-c1c36114a8f0,other,praise,0.9,1,[],Fantastic experience,false
+5bc203df-dac3-41ae-8b8d-ee0e8b9d9f50,other,praise,0.9,1,[],Awesome app and music,false
+b39971d2-e3f0-4559-96da-a609f54d9cb4,billing,complaint,-0.7,3,[],Best for listening songs,true
+797d12c7-78dd-4805-a066-342ace701805,other,praise,0.8,1,"[""Spotify""]",Kudos spotify,false
+9d851b7f-a738-449b-a841-de8076f13276,other,praise,0.8,1,[],Great music,false
+ad730d1a-829a-4dc4-9561-7e1cd07e2c30,billing,complaint,-0.7,3,"[""Spotify premium""]",Why it requires premium just to play next music / to choose music ??,false
+f44b3617-a645-4375-ae2d-44b742a1a306,other,praise,0.9,1,[],Excellent!,false
+5d4d3f47-4b3c-4be4-8f11-6cca41d27068,other,praise,0.7,1,[],Good aap,false
+84353026-5e56-4ca4-bfa4-e006d021ef44,other,praise,0.9,1,[],Top music app and i can see why.,false
+178c3b49-b689-4fe4-92a2-2257a58e6d95,other,complaint,-0.9,2,[],Worst app.,false
+b92a7381-b5cd-4c77-9176-e5c4b4818c8a,other,complaint,-0.8,2,[],You deserve 0 star,true
+94c9f2f9-36fa-4c11-936e-660514fe7a35,usability,complaint,-0.7,2,"[""homescreen""]",the new homescreen update is horrible,false
+e25cf0b6-0285-4cc9-9a4a-5a8a05be929e,catalog,praise,0.9,1,"[""categories suggested for you""]",the categories suggested for you personally,false
+9f46904c-4ed3-4799-8949-379b949c7344,other,praise,0.8,1,[],Best indeeeeeeeed,false
+618d1dbb-0186-4537-923a-7b4dabf19afb,catalog,cancellation,-0.7,2,"[""recommendations"", ""playlist"", ""premium family sub""]",Please stop with the recommendations!,false
+277c75cb-ec6a-4387-902d-eb721d038db6,other,praise,0.9,1,[],Amazing,false
+45c561b9-cc47-4d80-95d3-f0d20bc84af3,other,cancellation,-0.9,2,"[""Wynk""]",Uninstall krdia ye app ab bekar hai,false
+ba274609-2cbc-4d6a-9624-276d1c8246e8,other,praise,0.9,1,"[""Spotify""]",I can't use anything else but Spotify,false
+a3605554-5c3a-441d-836e-e9fdea83eb2e,billing,complaint,-0.9,3,"[""skip a song"", ""go to previous song""]",The ability to skip a song or go to previous song has been removed from non subscribed users.,false
+7e91d976-20e5-40f0-a6f5-7312eadf7e78,other,praise,0.9,1,"[""Spotify""]",Love Spotify.. My music go to..,false
+8cb9d355-e14c-4f55-b026-c6abd7bbce0d,other,praise,0.7,1,[],Very kool,false
+4ab2089a-ffa8-49e7-a8a3-aeb583a96796,playback,complaint,-0.7,3,"[""wifi"", ""mobile data"", ""YouTube music""]",if i using wifi not able to connect Internet. But if using mobile data it will work.,false
+b47c203f-366e-4409-922d-cd52aa8bbef6,other,cancellation,-0.8,2,"[""Spotify""]",recent update is very disappointing bye Spotify,false
+9c9757da-6b99-4c95-a0e7-0661ee858027,playback,complaint,-0.6,3,"[""music adjustment""]",music adjustment doesn't work Perporly,false
+23de7958-ccb0-4356-bc12-094935e6857d,other,praise,1.0,1,"[""Spotify""]",I absolutely love Spotify! Best music app there is.,false
+0f2b7fd2-71a6-4657-998e-da44f5893956,other,unclear,0.0,1,"[""Bablu Bharti""]",Bablu Bharti 😎😎,true
+55cc3abf-c295-4591-8c3a-78085cfdefaa,playback,complaint,-0.8,4,"[""app""]",my app to crash I cant open the app,false
+88439ec2-7c49-4c57-bedb-c5e098692aff,usability,cancellation,-0.9,3,"[""new features"", ""go back to the same song"", ""skip songs""]",I would request to remove all the new features .what's the point if we dont get to go back to the same song or skip songs..or choose,false
+3e8bdc92-4934-457e-85cc-8b9d14bf51c0,usability,complaint,-0.45,2,[],it's always every 1 or 2 song then instant ads,false
+c1fe1a70-f5ec-4009-bad6-b75437ba1c0b,other,praise,0.8,1,[],"Most fun i have had recently,where music is concerned.",false
+2be2ae92-6ad1-4c93-8589-65a0ce68fe46,other,praise,0.8,1,[],Very nice app,false
+c2738a4f-e57c-46bc-a4ad-8ec5a4b5d5cd,usability,complaint,-0.8,2,"[""premium""]",Soo trash wayy to many ads I don't want premium but too much ads,true
+21915fcd-9a35-48ba-b277-6296c4154603,billing,complaint,-0.9,3,"[""premium"", ""Youtube music""]",made everthing premium and so usless,false
+7084ced1-0428-4093-9328-442f74719b4f,usability,complaint,-0.6,3,"[""music player""]",they removed basic features of music player,false
+4aee0d75-6901-426e-b0f7-11d042ccc73e,other,praise,0.7,1,[],Good,false
+2ffdf599-a0d5-4c01-bf26-025215d44c06,downloads,cancellation,-0.65,3,"[""Spotify"", ""Hulu""]",stuck downloading songs in the background and gets stuck until I open Spotify,false
+33526c6f-7a49-4b3d-bd20-d1bc191c494c,support,complaint,-0.8,2,"[""APP SUPPORT""]","RUDE APP , THIS APP SUPPORT GUYS",true
+51bfd887-24a0-4741-8b59-68e0a726dd7a,other,complaint,-0.7,2,[],Disappointing,true
+5c9c17d3-9d6a-4fa1-a2a4-ae98eefbbd25,usability,request,-0.65,3,"[""Playlist""]",it plays any song of the Playlist randomly,false
+e575daac-46ab-4da3-b9f5-723bf4000234,other,praise,0.8,1,[],Noiceee,false
+8737ac88-7e76-45ba-aa42-4eb97e3300ec,other,praise,0.9,1,[],It's the best app ever,false
+3e82cf28-6b0a-4980-902c-b6aa154d353a,other,unclear,-0.7,1,"[""Spotify""]",Chanda mangna got real,true
+ed15bb17-865a-492b-ba1b-268f4cab78f6,other,praise,0.7,1,"[""premium""]",Very good app enna advertisement verudu premium best,true
+ca16e65d-d2ff-4453-a495-b8c422809330,other,complaint,-0.6,2,[],Recent update 👎,true
+10f09c93-34ef-4a3b-8ee2-97d7c00d44e0,catalog,praise,0.8,1,[],Love this i can choose from all the music that i enjoy,false
+8decb2ac-5860-49e3-8dce-9ca198ad061e,other,unclear,0.0,1,"[""QURAN""]",That's for the QURAN,true
+035213ba-b1b9-411c-b028-70296e5f0e73,usability,cancellation,-0.8,2,"[""premium ads""]",I m using this app from 5 to 6 year but now m uninstald this app cz his premium adds are everywhere now .,true
+486d1d7a-d6f6-41ea-81ad-ed875452729c,other,cancellation,-1.0,1,[],i am uninstalling this app,true
+dcff57c6-abd6-413b-b255-aec3dc34fcbd,downloads,complaint,-0.7,3,[],Offline not workjng,false
+46ff0c74-5e86-4e5b-b4cd-36201aab0f9e,playback,complaint,-0.8,4,"[""Google assistant"", ""Spotify playlist""]",it says playing your Spotify playlist but do not play the songs,false
+8b6e028a-5f63-4011-9841-cbbade4830eb,other,complaint,-0.8,2,[],Very bad app,true
+67b21b33-e6b9-4d1a-b874-86bc182b9ada,other,unclear,0.0,1,[],Spotify: music and pod system,false
+53e95a47-d326-4579-945d-a7aabd780b12,catalog,praise,1.0,1,"[""mixes"", ""suggestions""]","Love the mixes they make, always fire suggestions!",false
+85383985-844d-4f9b-bcd9-d6016ac35f6b,usability,complaint,-0.6,2,[],adds are too much,false
+9e5f9745-f8be-48d3-b9de-4d118507d94a,usability,cancellation,-0.9,3,[],We can't even go back few second to play music?,false
+0658feaa-5bec-416e-b6b0-3de2a4c14580,catalog,complaint,-0.4,3,[],many songs are not present here!,false
+b9a3e661-0eac-4cc9-a30e-7b1e11ef1315,other,praise,0.7,1,"[""Spotify"", ""Pandora""]",I haven't turned my Pandora on since I loaded Spotify.,false
+85ccf50b-7e85-4068-8765-5c122d61580f,other,praise,1.0,1,[],excellent,false
+23d905f8-8684-41b3-8faa-42571f3eaeee,other,praise,0.8,1,"[""Spotify""]",Not a complaint at all.,false
+2b57a12b-bbbe-457c-83a8-1bec297a5f63,other,praise,0.8,1,"[""Spotify""]",Spotify is a very nice listening 🎧 app on music platform,false
+89ea2c30-db8b-459d-8ab7-bbcb7f92c774,usability,complaint,-0.9,3,"[""premium""]","What kind of stupidity is this? Na queue m lgte h gaane, na skip kr skte h, na random chla skte h, kya bkchodi h ye??? Jaruri h premium lena? Nhi lena bhai thodi to sharam kro saare paise tumhi kma loge kya💀💀 alag hi pagapan h",true
+d7b04025-054b-4929-a507-15b751c39fdc,downloads,request,0.0,1,"[""lyrics""]",download lyrics for offline,false
+7a833667-4fcb-4a40-a88d-c55cfeca3d16,other,praise,0.7,1,"[""Spotify""]",Spotify is just everything you think of when it comes to music,false
+89a8e180-7846-4421-a2b6-fa7787e9d0d2,other,complaint,-0.7,2,[],Too much restrictions,true
+0b52ac4e-1982-46ed-aeaa-74eedaefb5c9,other,praise,0.7,1,[],Sexy app,false
+ab67a772-c3b7-42ba-9b80-8d21d3857018,usability,complaint,-0.8,2,[],The ads are so loud :'(,false
+cf6166ae-d71a-4839-9add-088645ad3b78,usability,cancellation,-0.9,3,[],always plays adds instead of songs,false
+dd90623c-dcd8-45a2-bb5b-3ace2b383667,catalog,request,0.4,1,"[""reggae music colections""]",you have to give us reggae music colections,false
+6c257eba-3dca-49f6-b7f0-4c4484d81e26,playback,complaint,-0.8,3,[],Keep stopping halfway while playing music,false
+1d9f396e-7a8a-414b-a622-3ad6f9570abe,other,praise,0.8,1,[],Exactly good,false
+de0a9cdf-8974-48bc-802f-331228df4619,access,complaint,-0.7,4,"[""password""]",Will not except my password,false
+06a45bd5-3ed9-43af-b7f2-8b9487e2ffff,other,complaint,-0.8,2,[],Worst app,true
+5db4a676-1f15-48cf-b989-a0a0fdb1c7a3,other,praise,0.9,1,[],I'm lovin it,false
+916d1cb1-3a9f-42c0-9c36-fee4b1983c68,other,praise,0.8,1,[],L lovethemusic,false
+ebc64fe2-9553-4528-87d5-cb4bb9783be6,usability,complaint,-0.9,3,[],I just want to listen to one song but nooo I have to go through A HOLE PLAYLIST AND I CAN ONLY SKIP 6 OF THEM 6!!!,false
+d455c11e-c530-4c03-a395-38f5a5cdb8d3,usability,complaint,-0.6,3,"[""blend feature"", ""beta program"", ""settings""]","Rolling out big automatically playing audio elements,without any clear way to disable the automatic playing in the settings?",false
+1807cc68-ba99-4edc-b6f1-2a1478e69109,catalog,complaint,-0.3,2,"[""Spotify recommendations""]",I love Spotify recommendations music type before more than now.,false
+e16a4550-43e7-4ae1-b538-a65cc652c31b,usability,cancellation,-0.9,3,[],I'm leaving spotfy,false
+2d5cdd20-3094-40a5-bc6e-653302b59b56,other,complaint,-0.6,2,[],Noob app,true
+9e3a706c-f502-4664-a23f-33f3480eca64,other,unclear,-0.3,1,[],Useless aap boycott sweden,true
+e0127547-4edd-44a0-8d5e-e8398bc07086,catalog,complaint,-0.5,3,[],sometime the lyrics don't show,false
+66a29b3c-c14d-440e-b722-b23e0c99ae82,playback,complaint,-0.8,4,"[""logo screen""]",App is stuck on loading/logo screen,false
+32fb340f-4f9f-4551-8dae-755221e58d6a,access,complaint,-0.8,4,[],It not letting me into my account,false
+ee3e2bd4-f94d-4e76-b2a6-5f6533d74c7c,other,praise,1.0,1,[],Best music app ever,false
+0a5ff524-27b1-4f3b-a761-17ca48ee731d,other,praise,0.9,1,[],Best app for listening music,false
+47becad0-8ae5-4a10-9731-fde8f2091862,catalog,complaint,-0.3,2,"[""lyrics""]",in some songs there is no lyrics and in some songs there is lyrics it's so confusing.,false
+a1a28752-3256-4f81-b888-3e943343529f,catalog,complaint,-0.25,2,[],gospel music isn't much,false
+a7aebec4-11e0-40d6-abf5-7a4798ebbb98,other,praise,1.0,1,[],One of the best apps in my life :),false
+aeee488a-2077-489d-8914-1e01d5f7672f,other,praise,0.9,1,[],Amazing!!!,false
+884e8712-da13-4890-a39e-731b69f42d6c,other,praise,1.0,1,[],There's no words for how awesome this music app is.,false
+c1ab120a-f91f-4ee3-87f5-66f352e2d47f,other,complaint,-0.8,2,[],now it's a trash,true
+9f3794ed-4f4b-4430-a548-9cfd2d0c0084,other,praise,0.7,1,[],very thank and good for this app,false
+def34476-7bdc-443a-ab3d-475cdd5ca2f6,other,unclear,0.0,1,[],Jsindloe Jeoenkjd Kkeidbsms Ishgnbksl,true
+e5e6c55f-3069-4b7c-9807-f8b5d5bf2726,billing,complaint,-0.8,3,"[""ads"", ""premium""]",Too many ads.... it's literally useless if u hv not taken premium,false
+8e9a5751-c1e8-4d7a-afbe-5239c98a08d0,other,complaint,-0.8,2,[],Shame on you,true
+f7cc1aa7-c306-4f5b-a5e9-911cca07fa60,other,complaint,-0.95,2,[],Hate this application,true
+f1532a7d-a47c-40eb-b41f-da17a379f9fb,other,complaint,-0.8,2,[],Hateful app Waste of time,true
+e85a31f6-786e-4673-94b8-010fea8ce464,catalog,praise,0.9,1,"[""mixes""]",I love the mixes,false
+a7b7539a-c8d3-4f4e-9edd-d46cd1b1fd12,playback,cancellation,-0.95,4,"[""Spotify"", ""Bittorrent""]","Fastest cancelation of a service I've done, ever.",false
+7a8b5434-66b4-4b13-aa91-5ad62a86ec04,other,praise,0.9,1,"[""sportify""]",number one music app for me and others,false
+5e42046c-b29b-4035-ba83-a8e222789e98,usability,complaint,-0.3,2,"[""ads""]",it gives too many ads,false
+8f0071a2-190f-4e20-bec3-3f252e47a6e3,other,praise,0.7,1,[],It's good,false
+0575ce08-ab04-46f0-aa8a-fbf9cd27e8da,other,complaint,-0.8,2,[],I hate this application,true
+2313bd8e-43bd-4777-bff9-3ae753288f0e,usability,complaint,-0.9,3,"[""try premium""]","There's nothing I can do without the ""try premium"" option popping up every damn time.",false
+16929558-ce1e-4b87-8738-a1de3f557f66,billing,complaint,-0.85,4,[],can't access my music,false
+d26566f7-a898-4298-a06a-50bd3f7319c1,catalog,complaint,-0.6,3,"[""playlist recommendations""]",getting bombarded with playlist recommendations when the option is turned off,false
+6db48f4b-20a0-460f-9beb-e07cd20f9fab,other,praise,0.8,1,[],Awesom,false
+890aeb60-e7cf-4f0d-a321-03a1c8b65757,billing,complaint,-0.75,2,[],no basic features,true
+61d5fc66-9bd1-4a18-8185-ae9a451e05a3,other,praise,0.9,1,[],Best experience,false
+d27e9b26-a7af-469c-9a4e-8deea2db72ae,other,complaint,-0.4,2,"[""Joe Rogan"", ""Steven Crowder""]",a platform for idiots like Joe Rogan and Steven Crowder to spread their stupidity.,false
+e667ab56-1b04-4596-bfd9-69f5919dcc10,downloads,request,0.0,1,"[""download button"", ""mobile""]",need the download button on mobile to show for ever song,false
+7e610236-5f6a-404f-a503-ed466c6700eb,other,praise,0.8,1,"[""premium plans""]",Good quality of songs and more number of accounts with premium plans,false
+5fb2a0b0-bb06-4d73-b6ff-1a2d332fae37,other,praise,0.9,1,[],Just awesome,false
+35008b46-daf1-497c-ac9b-fe98f120f912,other,praise,0.7,1,[],Good app,false
+5c581e49-727a-4221-be0a-a59344c78d60,billing,complaint,-0.4,2,"[""premium""]",Good but everything is premium,false
+d635d6c8-460e-452f-8d53-6cd1ea804e98,billing,complaint,-0.9,3,"[""lyrics""]",Why are lyrics premium!?,false
+06d59085-ebf9-454a-ba15-1e8480562352,other,praise,0.8,1,[],Its very amazing,false
+bb77bfb2-6eb8-4c6c-88bb-491c7da75196,other,complaint,-0.7,2,[],Very bad,true
+54fdf931-7807-4af4-9c9b-d87845129bcb,other,praise,0.9,1,[],Love it,false
+15502657-31ee-440e-8df3-2c405b5da275,other,praise,0.9,1,"[""Spotify""]",You can play almost any song for free with just a quick registration.,false
+ec8d58bf-f9e2-42c6-870b-b87c78fe569f,other,unclear,0.0,1,[],Must music,true
+475aa270-a637-4332-ba8d-48def4869f98,other,praise,0.7,1,[],I enjoy it,false
+824cc977-421c-4445-898f-663acfd131f1,other,praise,0.8,1,[],😍🥂 Awesome,false
+8f8c0461-4c41-4829-af15-b2991f18adfe,other,praise,0.8,1,[],Very good app no problems at all,false
+e04b40b8-4ac0-4058-aa91-89986d53586a,usability,praise,0.9,1,[],Easy to use,false
+c3fd591f-890c-4721-bd99-57c3600ae82c,usability,praise,0.8,1,[],easy for streaming different songs,false
+ee17dcd6-07c0-4441-8e64-e7ea57877c78,usability,complaint,-0.7,2,[],Too much adds🙄🥲,false
+b551645f-204f-4134-b3ec-dd37dda36d95,other,praise,0.9,1,[],Best app for listeners,false
+e81ef9d4-212d-47fc-b360-f9a1914f2bcf,other,praise,0.9,1,[],Stunning,false
+6f51891d-fa49-45e5-b2b2-27172682ab8f,other,praise,0.9,1,[],I love this app!,false
+d0ad8f6f-6746-4042-9645-2051184824f6,other,praise,0.7,1,[],Good,false
+9db060c5-2ff5-493a-8a19-01a3da91ff1d,billing,complaint,-0.8,3,"[""songs""]",limited songs of your choice,false
+aa8fec15-2de4-46af-a911-1b49bcb4eb4c,billing,complaint,-0.9,3,"[""Spotify"", ""premium pack""]",you put every basic feature in the premium pack and we can't even listen song in ROW NOW,false
+bc1c4825-00c5-458d-ac00-098ce729c76d,other,praise,0.9,1,"[""Spotify"", ""Premium""]",Best app ever... GET PRENIUM ITS WORTH TRUST!!!,false
+9f7a013a-082e-4ec1-8a65-a1e0a0395d20,catalog,complaint,-0.5,3,"[""lyrics""]",why can't the lyrics of song on my playlist load?,false
+f9e87b89-b080-48a2-a019-5c5dcf1689a6,other,praise,0.8,1,[],I enjoye beautiful music and works very well.,false
+28711041-0c42-432c-a1ad-63be8278ebec,other,complaint,-0.8,2,[],Very bad and pathetic even this rudes my mind more,true
+3df77a78-ad9a-4456-8be8-8178ffd43d67,playback,complaint,-0.8,4,"[""Bollywood songs""]",Most of my favourite Bollywood songs are not present,false
+cc7b79ef-bf37-40fc-a02e-4917b86e422c,usability,complaint,-0.9,2,[],"Worst music app I have ever seen, this is not music app, this is advertisement app... Bakwaas wahiyaad irritating app",false
+7f27bbab-ef19-4fb1-80d8-cd014da3e002,usability,complaint,-0.9,3,"[""lyrics"", ""queue""]",I also can't add songs to queue.,false
+179d79f7-d052-490f-a9d6-f97525b32642,playback,complaint,-0.7,3,"[""new phone""]","it keeps randomly stopping, like it would with no Internet, but I have full bars",false
+77a53aa5-a453-4bcb-8267-d4f44a492dd3,playback,complaint,-0.9,4,"[""Spotify app"", ""skip the music"", ""repeat option""]",the Spotify app not allow to skip the music after update and not play a single song,false
+72ff3e9b-bc33-49a1-b9a6-deb8fb904cc3,other,praise,0.8,1,[],Life changing,false
+6ecd5837-917a-45de-b811-278da3a26a7a,other,complaint,-0.8,2,[],This new update sucks.,true

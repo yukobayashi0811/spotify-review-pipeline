@@ -1,0 +1,8 @@
+{
+  "complaint_or_cancellation_records": 4400,
+  "input_hash": "8fc6487e9e8fd1f71c7490320a48030cac98f6dfabc78782339b2276e0cb618f",
+  "issues": 8,
+  "memberships": 4400,
+  "model_called": false,
+  "rule": "One issue per complaint/cancellation, deterministically mapped from primary topic."
+}

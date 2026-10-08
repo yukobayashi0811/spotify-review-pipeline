@@ -1,0 +1,387 @@
+{
+  "account_usage_after_all": {
+    "attribution_limitation": "This account-level percentage is shared usage and cannot be attributed solely to this assignment.",
+    "available_full_reset_credits": 2,
+    "capture_point": "after all 3960 new classification/verification texts, 565 adopted grouping evidence texts, and 2 adopted memo attempts",
+    "captured_at_utc": "2026-10-03T16:48:44Z",
+    "credits": {
+      "balance": "0",
+      "has_credits": false,
+      "unlimited": false
+    },
+    "limit_id": "codex",
+    "ordinary_usage_allowed": true,
+    "plan_type": "plus",
+    "remaining_percent": 10,
+    "resets_at_unix": 1791580628,
+    "resets_at_utc": "2026-10-09T21:17:08Z",
+    "source": "Codex account usage-limit readout",
+    "used_percent": 90,
+    "window_duration_minutes": 10080
+  },
+  "classification": {
+    "final_label_sources": {
+      "local": 526528,
+      "luna": 134081
+    },
+    "immutable_local_artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+    "providers_and_attempts": [
+      {
+        "cached_input_tokens": 39936,
+        "calls": 4,
+        "input_tokens": 50906,
+        "outcome": "failed",
+        "output_tokens": 9699,
+        "provider": "codex-exec-subscription",
+        "role": "enrich"
+      },
+      {
+        "cached_input_tokens": 2468096,
+        "calls": 259,
+        "input_tokens": 3325102,
+        "outcome": "succeeded",
+        "output_tokens": 595437,
+        "provider": "codex-exec-subscription",
+        "role": "enrich"
+      },
+      {
+        "cached_input_tokens": 0,
+        "calls": 9444,
+        "input_tokens": 0,
+        "outcome": "succeeded",
+        "output_tokens": 0,
+        "provider": "local-distilled-sklearn",
+        "role": "enrich"
+      },
+      {
+        "cached_input_tokens": 9984,
+        "calls": 1,
+        "input_tokens": 12911,
+        "outcome": "failed",
+        "output_tokens": 546,
+        "provider": "codex-exec-subscription",
+        "role": "group"
+      },
+      {
+        "cached_input_tokens": 59904,
+        "calls": 24,
+        "input_tokens": 331573,
+        "outcome": "succeeded",
+        "output_tokens": 10776,
+        "provider": "codex-exec-subscription",
+        "role": "group"
+      },
+      {
+        "cached_input_tokens": 0,
+        "calls": 1,
+        "input_tokens": 25375,
+        "outcome": "failed",
+        "output_tokens": 2279,
+        "provider": "codex-exec-subscription",
+        "role": "memo"
+      },
+      {
+        "cached_input_tokens": 0,
+        "calls": 2,
+        "input_tokens": 39703,
+        "outcome": "succeeded",
+        "output_tokens": 3147,
+        "provider": "codex-exec-subscription",
+        "role": "memo"
+      },
+      {
+        "cached_input_tokens": 9984,
+        "calls": 8,
+        "input_tokens": 101681,
+        "outcome": "succeeded",
+        "output_tokens": 22475,
+        "provider": "codex-exec-subscription",
+        "role": "verify"
+      }
+    ]
+  },
+  "cost_runtime": {
+    "cold_100_seconds": 176.246427,
+    "conservative_api_equivalent_usd": 0.579745,
+    "local_compute_cost": "unknown",
+    "luna_api_equivalent_usd": 0.4637961,
+    "warm_100_seconds": 0.011639,
+    "warm_new_enrichment_calls": 0
+  },
+  "generated_from_saved_evidence": true,
+  "grouping": {
+    "adopted": "embedding_v2",
+    "adoption_reason": "embedding_v2 has the higher membership-weighted coherent rate: embedding=0.671792, tfidf=0.461490.",
+    "comparison_rule": "Adopt the version with the higher overall membership-weighted coherent rate",
+    "embedding_v2": {
+      "coherent_issue_count": 19,
+      "coherent_issue_ratio": 0.4634146341463415,
+      "duplicate_normalized_name_count": 0,
+      "duplicate_normalized_names": [],
+      "issue_count": 41,
+      "membership_weighted_coherent_rate_overall": 0.671791601391912,
+      "membership_weighted_coherent_rate_top10": 0.7222369928010471,
+      "top10_incoherent_issue_ids": [
+        "I_PLAYBACK_08",
+        "I_OTHER_03",
+        "I_OTHER_04",
+        "I_USABILITY_01"
+      ],
+      "top10_issue_ids": [
+        "I_USABILITY_04",
+        "I_OTHER_01",
+        "I_USABILITY_03",
+        "I_BILLING_01",
+        "I_PLAYBACK_08",
+        "I_BILLING_03",
+        "I_ACCESS_03",
+        "I_OTHER_03",
+        "I_OTHER_04",
+        "I_USABILITY_01"
+      ]
+    },
+    "tfidf_v1": {
+      "coherent_issue_count": 31,
+      "coherent_issue_ratio": 0.6078431372549019,
+      "duplicate_normalized_name_count": 1,
+      "duplicate_normalized_names": [
+        {
+          "cluster_count": 2,
+          "normalized_name": "phone number login failure",
+          "topic": "access"
+        }
+      ],
+      "issue_count": 51,
+      "membership_weighted_coherent_rate_overall": 0.46149020532087454,
+      "membership_weighted_coherent_rate_top10": 0.2827265786605937,
+      "top10_incoherent_issue_ids": [
+        "I_OTHER_02",
+        "I_USABILITY_06",
+        "I_PLAYBACK_02",
+        "I_PLAYBACK_04",
+        "I_PLAYBACK_05",
+        "I_USABILITY_07"
+      ],
+      "top10_issue_ids": [
+        "I_OTHER_02",
+        "I_USABILITY_06",
+        "I_PLAYBACK_02",
+        "I_USABILITY_04",
+        "I_BILLING_04",
+        "I_PLAYBACK_04",
+        "I_PLAYBACK_05",
+        "I_USABILITY_07",
+        "I_PLAYBACK_01",
+        "I_BILLING_07"
+      ]
+    },
+    "top10_below_70_percent_limitation_required": false
+  },
+  "heldout_60": {
+    "labeled_file_found": false,
+    "predictions_not_exposed": true,
+    "status": "pending_user_labels"
+  },
+  "input": {
+    "path": "data/spotify_reviews_18months.csv",
+    "sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6"
+  },
+  "interruption_resume": {
+    "cross_platform_cast": "evals/recovery/interrupt_resume.cast",
+    "finalization_wall_seconds": 110.430001,
+    "initial_completed": 411574,
+    "passed": true,
+    "recording": "evals/recovery/interrupt_resume.typescript",
+    "resume_added": 249035,
+    "resume_resent_initial_ids": 0,
+    "text_transcript": "evals/recovery/interrupt_resume_transcript.txt"
+  },
+  "new_luna_ledger": [
+    {
+      "bucket": "AL1",
+      "cached_input_tokens": 297520,
+      "input_tokens": 411732,
+      "output_tokens": 78564,
+      "status": "succeeded",
+      "texts": 1500
+    },
+    {
+      "bucket": "AL2",
+      "cached_input_tokens": 299520,
+      "input_tokens": 401136,
+      "output_tokens": 77477,
+      "status": "succeeded",
+      "texts": 1500
+    },
+    {
+      "bucket": "G",
+      "cached_input_tokens": 29952,
+      "input_tokens": 158953,
+      "output_tokens": 4540,
+      "status": "succeeded",
+      "texts": 510
+    },
+    {
+      "bucket": "G_EMBED_V3",
+      "cached_input_tokens": 29952,
+      "input_tokens": 172620,
+      "output_tokens": 6236,
+      "status": "succeeded",
+      "texts": 565
+    },
+    {
+      "bucket": "H",
+      "cached_input_tokens": 11984,
+      "input_tokens": 14316,
+      "output_tokens": 2578,
+      "status": "succeeded",
+      "texts": 60
+    },
+    {
+      "bucket": "M",
+      "cached_input_tokens": 0,
+      "input_tokens": 14306,
+      "output_tokens": 733,
+      "status": "succeeded",
+      "texts": 1
+    },
+    {
+      "bucket": "M_EMBED_V3",
+      "cached_input_tokens": 0,
+      "input_tokens": 25375,
+      "output_tokens": 2279,
+      "status": "failed",
+      "texts": 1
+    },
+    {
+      "bucket": "M_EMBED_V3",
+      "cached_input_tokens": 0,
+      "input_tokens": 25397,
+      "output_tokens": 2414,
+      "status": "succeeded",
+      "texts": 1
+    },
+    {
+      "bucket": "R",
+      "cached_input_tokens": 99840,
+      "input_tokens": 138286,
+      "output_tokens": 25719,
+      "status": "succeeded",
+      "texts": 500
+    },
+    {
+      "bucket": "V",
+      "cached_input_tokens": 9984,
+      "input_tokens": 101681,
+      "output_tokens": 22475,
+      "status": "succeeded",
+      "texts": 400
+    }
+  ],
+  "recommendation": {
+    "alternative_issue_ids": [
+      "I_USABILITY_03",
+      "I_BILLING_01"
+    ],
+    "claim_count": 12,
+    "priority_issue_id": "I_USABILITY_04",
+    "priority_topic": "usability"
+  },
+  "self_check": {
+    "path": "artifacts/self-check-stage3.json",
+    "status": "pass"
+  },
+  "sensitivity": {
+    "bootstrap_replicates": 1000,
+    "rank_stability": {
+      "adjusted_top_issue": "I_OTHER_01",
+      "adjusted_top_issue_bootstrap_top_probability": 0.534,
+      "adjusted_top_topic": "usability",
+      "adjusted_top_topic_bootstrap_top_probability": 1.0,
+      "baseline_top_issue": "I_USABILITY_04",
+      "baseline_top_issue_bootstrap_top_probability": 0.466,
+      "baseline_top_topic": "usability",
+      "baseline_top_topic_bootstrap_top_probability": 1.0,
+      "issue_bootstrap_top_frequency": {
+        "I_OTHER_01": 534,
+        "I_USABILITY_04": 466
+      },
+      "top_issue_unchanged": false,
+      "top_topic_unchanged": true,
+      "topic_bootstrap_top_frequency": {
+        "usability": 1000
+      }
+    }
+  },
+  "state": {
+    "counts": {
+      "completed": 660609,
+      "distinct_nonempty_texts": 484189,
+      "issues": 41,
+      "membership_rows": 288524,
+      "quarantined": 13,
+      "source_rows": 660622
+    },
+    "path": "artifacts/full_run_v2/state.db"
+  },
+  "status": "completed",
+  "tests": {
+    "errors": 0,
+    "executed_at_utc": "2026-10-03T17:00:46.434564+00:00",
+    "failures": 0,
+    "model_calls": 0,
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.15",
+    "skipped": 0,
+    "successful": true,
+    "test_log": [
+      "test_deterministic_shards_keep_exact_duplicates_together (test_codex_benchmark.CodexBenchmarkTests.test_deterministic_shards_keep_exact_duplicates_together) ... ok",
+      "test_execution_fingerprint_changes_cache_namespace (test_codex_benchmark.CodexBenchmarkTests.test_execution_fingerprint_changes_cache_namespace) ... ok",
+      "test_jsonl_parser_extracts_usage_and_rejectable_tool_type (test_codex_benchmark.CodexBenchmarkTests.test_jsonl_parser_extracts_usage_and_rejectable_tool_type) ... ok",
+      "test_subscription_tokens_are_not_api_priced (test_codex_benchmark.CodexBenchmarkTests.test_subscription_tokens_are_not_api_priced) ... ok",
+      "test_local_billing_mode_has_zero_api_cost (test_distilled.DistilledPipelineTests.test_local_billing_mode_has_zero_api_cost) ... ok",
+      "test_normalized_holdout_leakage_and_conflicts_are_removed (test_distilled.DistilledPipelineTests.test_normalized_holdout_leakage_and_conflicts_are_removed) ... ok",
+      "test_routing_fraction_is_bounded (test_distilled.DistilledPipelineTests.test_routing_fraction_is_bounded) ... ok",
+      "test_routing_policy_rejects_unknown_mode (test_distilled.DistilledPipelineTests.test_routing_policy_rejects_unknown_mode) ... ok",
+      "test_saved_compact_diagnostics_map_back_to_source_ids (test_distilled.DistilledPipelineTests.test_saved_compact_diagnostics_map_back_to_source_ids) ... ok",
+      "test_uncertainty_routing_prioritizes_small_mean_margin (test_distilled.DistilledPipelineTests.test_uncertainty_routing_prioritizes_small_mean_margin) ... ok",
+      "test_checkpoint_before_after_reflect_saved_state (test_full_run.FullRunAcceptanceTests.test_checkpoint_before_after_reflect_saved_state) ... ok",
+      "test_duplicate_finalization_points_directly_to_representative (test_full_run.FullRunAcceptanceTests.test_duplicate_finalization_points_directly_to_representative) ... ok",
+      "test_joint_decode_enforces_hard_severity_one (test_full_run.FullRunAcceptanceTests.test_joint_decode_enforces_hard_severity_one) ... ok",
+      "test_legacy_label_config_is_reproduced_exactly (test_full_run.FullRunAcceptanceTests.test_legacy_label_config_is_reproduced_exactly) ... ok",
+      "test_long_quote_is_exact_source_substring (test_full_run.FullRunAcceptanceTests.test_long_quote_is_exact_source_substring) ... ok",
+      "test_luna_budget_ledger_reserves_without_overrun (test_full_run.FullRunAcceptanceTests.test_luna_budget_ledger_reserves_without_overrun) ... ok",
+      "test_doubling_rates_doubles_api_cost_only (test_pipeline.CostTests.test_doubling_rates_doubles_api_cost_only) ... ok",
+      "test_explicit_projection_run_supports_checkpoint_refresh (test_pipeline.CostTests.test_explicit_projection_run_supports_checkpoint_refresh) ... ok",
+      "test_bounded_retry_resume_cache_and_injection (test_pipeline.PipelineTests.test_bounded_retry_resume_cache_and_injection) ... ok",
+      "test_changed_execution_fingerprint_invalidates_completed_namespace (test_pipeline.PipelineTests.test_changed_execution_fingerprint_invalidates_completed_namespace) ... ok",
+      "test_compact_batch_ids_round_trip_to_source_ids (test_pipeline.PipelineTests.test_compact_batch_ids_round_trip_to_source_ids) ... ok",
+      "test_deterministic_ranking_tie_break (test_pipeline.PipelineTests.test_deterministic_ranking_tie_break) ... ok",
+      "test_enrichment_schema_requires_exact_batch_count (test_pipeline.PipelineTests.test_enrichment_schema_requires_exact_batch_count) ... ok",
+      "test_hybrid_checkpoint_escalates_only_risky_exact_texts (test_pipeline.PipelineTests.test_hybrid_checkpoint_escalates_only_risky_exact_texts) ... ok",
+      "test_hybrid_router_flags_risk_and_rating_contradictions (test_pipeline.PipelineTests.test_hybrid_router_flags_risk_and_rating_contradictions) ... ok",
+      "test_large_failed_batch_recovers_in_ten_row_units (test_pipeline.PipelineTests.test_large_failed_batch_recovers_in_ten_row_units) ... ok",
+      "test_local_json_extraction_accepts_prefilled_brace_and_channel_end (test_pipeline.PipelineTests.test_local_json_extraction_accepts_prefilled_brace_and_channel_end) ... ok",
+      "test_local_json_extraction_ignores_wrappers (test_pipeline.PipelineTests.test_local_json_extraction_ignores_wrappers) ... ok",
+      "test_memo_ids_and_metrics_are_repaired_from_ranking_only (test_pipeline.PipelineTests.test_memo_ids_and_metrics_are_repaired_from_ranking_only) ... ok",
+      "test_packaged_prompts_match_inspectable_prompts (test_pipeline.PipelineTests.test_packaged_prompts_match_inspectable_prompts) ... ok",
+      "test_partial_valid_response_saves_valid_and_retries_only_invalid (test_pipeline.PipelineTests.test_partial_valid_response_saves_valid_and_retries_only_invalid) ... ok",
+      "test_prepare_profiles_and_quarantines_empty (test_pipeline.PipelineTests.test_prepare_profiles_and_quarantines_empty) ... ok",
+      "test_provider_unavailable_stops_without_quarantining_pending_rows (test_pipeline.PipelineTests.test_provider_unavailable_stops_without_quarantining_pending_rows) ... ok",
+      "test_quote_repair_preserves_labels_and_flags_review (test_pipeline.PipelineTests.test_quote_repair_preserves_labels_and_flags_review) ... ok",
+      "test_quote_repair_rejects_cross_review_id_misalignment (test_pipeline.PipelineTests.test_quote_repair_rejects_cross_review_id_misalignment) ... ok",
+      "test_row_hash_uses_exact_six_strings (test_pipeline.PipelineTests.test_row_hash_uses_exact_six_strings) ... ok",
+      "test_temporary_failure_retry_and_capped_fallback (test_pipeline.PipelineTests.test_temporary_failure_retry_and_capped_fallback) ... ok",
+      "test_two_invalid_responses_quarantine_without_third_send (test_pipeline.PipelineTests.test_two_invalid_responses_quarantine_without_third_send) ... ok",
+      "test_validation_rejects_non_substring_quote (test_pipeline.PipelineTests.test_validation_rejects_non_substring_quote) ... ok",
+      "test_verification_recovers_failed_batch_and_warm_resume_skips_calls (test_pipeline.PipelineTests.test_verification_recovers_failed_batch_and_warm_resume_skips_calls) ... ok",
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 40 tests in 0.110s",
+      "",
+      "OK"
+    ],
+    "tests_run": 40,
+    "wall_seconds": 0.17756
+  }
+}

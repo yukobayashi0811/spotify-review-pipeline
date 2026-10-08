@@ -1,0 +1,104 @@
+{
+  "checkpoint": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-100-uncertainty-v2",
+  "checks": [
+    {
+      "detail": 100,
+      "name": "expected_rows",
+      "passed": true
+    },
+    {
+      "detail": 100,
+      "name": "all_completed",
+      "passed": true
+    },
+    {
+      "detail": [],
+      "name": "all_quotes_are_exact_source_substrings",
+      "passed": true
+    },
+    {
+      "detail": [
+        "hybrid:hybrid-routing-v4-0e95d682ab70:b429788c8ee69f7d"
+      ],
+      "name": "single_hybrid_label_namespace",
+      "passed": true
+    },
+    {
+      "detail": 100,
+      "name": "routing_count_matches",
+      "passed": true
+    },
+    {
+      "detail": 20,
+      "name": "routed_count_matches",
+      "passed": true
+    },
+    {
+      "detail": {
+        "cap_rows": 20,
+        "routed_rows": 20
+      },
+      "name": "routing_hard_cap_respected",
+      "passed": true
+    },
+    {
+      "detail": {
+        "metric": "mean_margin",
+        "missing": []
+      },
+      "name": "uncertainty_diagnostics_complete",
+      "passed": true
+    },
+    {
+      "detail": [],
+      "name": "route_controls_final_source",
+      "passed": true
+    },
+    {
+      "detail": false,
+      "name": "golden_labels_not_loaded",
+      "passed": true
+    },
+    {
+      "detail": "cold_or_partial_resume",
+      "name": "cold_run_recorded",
+      "passed": true
+    },
+    {
+      "detail": [
+        "codex-exec-subscription",
+        "local-distilled-sklearn"
+      ],
+      "name": "both_provider_provenances_saved",
+      "passed": true
+    },
+    {
+      "detail": 3,
+      "name": "all_saved_calls_succeeded",
+      "passed": true
+    },
+    {
+      "detail": [],
+      "name": "codex_traces_are_credential_and_tool_free",
+      "passed": true
+    },
+    {
+      "detail": "warm",
+      "name": "warm_run_recorded",
+      "passed": true
+    },
+    {
+      "detail": {
+        "local": 0,
+        "luna": 0
+      },
+      "name": "warm_replay_zero_model_records",
+      "passed": true
+    }
+  ],
+  "checks_passed": 16,
+  "checks_total": 16,
+  "decision_ids_unique": true,
+  "expected_rows": 100,
+  "passed": true
+}

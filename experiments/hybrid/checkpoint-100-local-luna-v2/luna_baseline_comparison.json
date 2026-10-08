@@ -1,0 +1,36 @@
+{
+  "agreement": {
+    "intent": {
+      "count": 91,
+      "rate": 0.91
+    },
+    "severity": {
+      "count": 91,
+      "rate": 0.91
+    },
+    "topic": {
+      "count": 87,
+      "rate": 0.87
+    }
+  },
+  "baseline": "checkpoint-10000-normal-usage-v2 first 100",
+  "by_route": {
+    "local": {
+      "agreement": {
+        "intent": 0.9016393442622951,
+        "severity": 0.8852459016393442,
+        "topic": 0.8852459016393442
+      },
+      "rows": 61
+    },
+    "luna": {
+      "agreement": {
+        "intent": 0.9230769230769231,
+        "severity": 0.9487179487179487,
+        "topic": 0.8461538461538461
+      },
+      "rows": 39
+    }
+  },
+  "rows": 100
+}

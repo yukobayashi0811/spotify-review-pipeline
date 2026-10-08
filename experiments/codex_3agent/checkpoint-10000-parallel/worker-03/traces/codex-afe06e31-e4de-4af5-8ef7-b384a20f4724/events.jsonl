@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-9134-7703-bd5d-db318d1153a8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Quraan\"],\"evidence_quote\":\"Quraan\",\"intent\":\"unclear\",\"needs_review\":true,\"review_id\":\"c83eb52a-220a-42a2-8603-80209d022288\",\"sentiment\":0,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10742,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":78,"reasoning_output_tokens":0}}

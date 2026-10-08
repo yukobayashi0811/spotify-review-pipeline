@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0ffba-005e-7351-8051-1a83949188e8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Will not except my password\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"R001\",\"sentiment\":-0.8,\"severity\":4,\"topic\":\"access\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11271,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":60,"reasoning_output_tokens":0}}

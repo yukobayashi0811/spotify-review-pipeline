@@ -1,0 +1,10 @@
+{
+  "captured_at_local": "2026-09-30",
+  "ordinary_usage_allowed": true,
+  "plan_type": "plus",
+  "used_percent": 71,
+  "window_duration_minutes": 10080,
+  "credits_balance": "0",
+  "experiment_stop_at_used_percent": 73,
+  "interpretation": "Account-wide snapshot; changes are not attributable solely to this experiment."
+}

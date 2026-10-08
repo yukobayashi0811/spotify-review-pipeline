@@ -1,0 +1,41 @@
+{
+  "billing_mode": "chatgpt_subscription",
+  "cached_input_tokens": 0,
+  "call_count": 1,
+  "completed_records": 1,
+  "ingestion_counts": {
+    "duplicate_review_ids": 0,
+    "empty_review_text": 0,
+    "missing_app_version": 0,
+    "records": 1
+  },
+  "input_rows": 1,
+  "input_sha256": "447a793961a92df0197f4776b169ef4daa86cc32ca57639c50de560ce3f28c55",
+  "input_tokens": 11248,
+  "interactions_path": "experiments/codex_luna/preflight-1-normal-usage-v2/worker-01/agent_interactions.jsonl",
+  "monetary_cost_usd": "unknown",
+  "output_tokens": 76,
+  "records_path": "experiments/codex_luna/preflight-1-normal-usage-v2/worker-01/development_records.jsonl",
+  "run_enrichment": {
+    "cache_hits_total": 0,
+    "completed_total": 1,
+    "evidence_quote_repairs": 0,
+    "failed_records": 0,
+    "fallback_unique": 0,
+    "max_workers_configured": 1,
+    "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+    "pending_unique_at_start": 1,
+    "phase": "initial",
+    "processed_unique": 1,
+    "run_id": "codex-dev-20261001T200616Z-0f7abab0-worker-01",
+    "spend_ledger_usd_including_unknown_reservations": 0.0,
+    "unknown_charge_batches_reserved_at_cap": 1,
+    "unsettled_reservation_usd": 0.0
+  },
+  "status_counts": {
+    "completed": 1
+  },
+  "token_usage_complete": true,
+  "wall_seconds": 4.154442,
+  "worker_index": 1
+}

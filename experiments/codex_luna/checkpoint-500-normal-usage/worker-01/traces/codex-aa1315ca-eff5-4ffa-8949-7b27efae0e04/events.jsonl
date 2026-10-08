@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f91b-0231-7bd2-8469-69c4edb22198"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Very bad app only ad\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"92c43612-30bb-4514-bd51-cb7419c7e4d2\",\"sentiment\":-0.8,\"severity\":2,\"topic\":\"usability\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11250,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":82,"reasoning_output_tokens":0}}

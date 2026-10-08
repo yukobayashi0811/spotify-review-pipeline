@@ -1,0 +1,38 @@
+{
+  "agreement": {
+    "intent": 1.0,
+    "severity_exact": 0.9,
+    "severity_mae": 0.1,
+    "topic": 1.0
+  },
+  "already_verified_at_start": 0,
+  "disagreements": [
+    {
+      "first_intent": "complaint",
+      "first_severity": 3,
+      "first_topic": "playback",
+      "intent_agree": true,
+      "review_id": "6c257eba-3dca-49f6-b7f0-4c4484d81e26",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "playback"
+    }
+  ],
+  "evidence_quote_repairs": 0,
+  "failures": [],
+  "pending_at_start": 10,
+  "planted_error_test": {
+    "detected": true,
+    "note": "The planted label exists only in this test copy and is excluded from business outputs.",
+    "planted_topic": "access",
+    "review_id": "23de7958-ccb0-4356-bc12-094935e6857d",
+    "synthetic_test": true,
+    "verifier_topic": "other"
+  },
+  "sample_fraction": 0.1,
+  "sample_seed": "spotify-verifier-v1",
+  "selected": 10,
+  "verified": 10
+}

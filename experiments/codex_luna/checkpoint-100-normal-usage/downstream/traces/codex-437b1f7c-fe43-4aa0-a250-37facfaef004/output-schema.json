@@ -1,0 +1,32 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "issues": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "issue_id": {
+            "type": "string"
+          },
+          "issue_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "issue_id",
+          "issue_name",
+          "description"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "issues"
+  ],
+  "type": "object"
+}

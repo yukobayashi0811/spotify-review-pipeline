@@ -1,0 +1,74 @@
+{
+  "api_credentials_present_in_child": false,
+  "auth_mode": "ChatGPT subscription",
+  "billing_mode": "chatgpt_subscription",
+  "caller_advisory_max_output_tokens": 4000,
+  "cli_version": "codex-cli 0.152.0",
+  "disabled_features": [
+    "multi_agent",
+    "apps",
+    "browser_use",
+    "computer_use",
+    "plugins",
+    "image_generation",
+    "shell_tool",
+    "view_image",
+    "goals"
+  ],
+  "duration_seconds": 61.115774,
+  "ephemeral": true,
+  "event_summary": {
+    "event_count": 12,
+    "event_types": {
+      "error": 7,
+      "item.completed": 2,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "forbidden_tool_types": [],
+    "thread_id": "01a0f852-ce81-7580-a951-87a29274edcd",
+    "turn_completed": true,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 10890,
+      "output_tokens": 211,
+      "reasoning_output_tokens": 110
+    }
+  },
+  "exit_code": 0,
+  "provider": "codex-exec-subscription",
+  "provider_output_token_cap": "unavailable_in_codex_exec_0.152.0",
+  "request_id": "codex-79c243a0-89ab-472d-887c-978b1fb6e28f",
+  "requested_effort": "low",
+  "requested_model": "gpt-5.6-sol",
+  "result_byte_cap": 2000000,
+  "review_count": 1,
+  "review_ids": [
+    "67445de1-8f50-44c7-894e-a44064898877"
+  ],
+  "role": "enrich",
+  "stdout_jsonl_parse_errors": [],
+  "timed_out": false,
+  "timeout_seconds": 300.0,
+  "trace_files": {
+    "events_jsonl": {
+      "name": "events.jsonl",
+      "sha256": "732fc001adeb03ae69381367b479286708cc2fa4a59a084be59d2082f9d9d766"
+    },
+    "last_message": {
+      "name": "last-message.json",
+      "sha256": "fd85be16c54fe352f22d0e67af7c7ba71c1ccf2022ed4ccb701124b6fd91b16c"
+    },
+    "output_schema": {
+      "name": "output-schema.json",
+      "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+    },
+    "stderr": {
+      "name": "stderr.txt",
+      "sha256": "e17f92112ec8cd0edec07a3d8dbc2063f3630b62777cad31b3a54bf94abd037c"
+    }
+  },
+  "workspace_mode": "empty-read-only"
+}

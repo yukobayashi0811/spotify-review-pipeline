@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f91a-bb7b-79c1-8911-caa19baed1c5"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"song\"],\"evidence_quote\":\"it automatically played another song out of nowhere most of the time\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"0e5a2a0d-7f67-48a5-9edd-27064f670656\",\"sentiment\":-0.7,\"severity\":3,\"topic\":\"playback\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11271,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":93,"reasoning_output_tokens":0}}

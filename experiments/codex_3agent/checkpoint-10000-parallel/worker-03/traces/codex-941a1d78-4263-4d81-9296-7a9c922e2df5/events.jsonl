@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-ba11-79a3-96db-dc1f5c976b71"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Great app. Easy to use.\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"ad6823d0-0cf4-4bdf-87d7-1a4b1d2139ff\",\"sentiment\":0.9,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10758,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":85,"reasoning_output_tokens":0}}

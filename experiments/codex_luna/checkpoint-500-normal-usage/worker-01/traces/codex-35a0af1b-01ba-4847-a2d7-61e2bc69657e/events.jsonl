@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f91a-a8c2-7303-87ba-908804397218"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Good music and selection is good too.\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"6524068a-cff5-45b9-bd37-b91a6cb71475\",\"sentiment\":0.8,\"severity\":1,\"topic\":\"catalog\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11259,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":80,"reasoning_output_tokens":0}}

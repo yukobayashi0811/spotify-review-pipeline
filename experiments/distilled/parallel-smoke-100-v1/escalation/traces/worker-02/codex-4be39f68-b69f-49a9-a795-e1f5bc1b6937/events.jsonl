@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0ffba-005e-7953-a095-ed8e2700ba3e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Spotify\"],\"evidence_quote\":\"Spotify is just everything you think of when it comes to music\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"R001\",\"sentiment\":0.7,\"severity\":1,\"topic\":\"other\"},{\"entities\":[\"gospel music\"],\"evidence_quote\":\"gospel music isn't much\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"R002\",\"sentiment\":-0.3,\"severity\":3,\"topic\":\"catalog\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11297,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":117,"reasoning_output_tokens":0}}

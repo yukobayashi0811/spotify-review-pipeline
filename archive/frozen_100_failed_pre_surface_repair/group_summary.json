@@ -1,0 +1,80 @@
+{
+  "issue_count": 7,
+  "issues": [
+    {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users are experiencing problems logging into their accounts, including password rejection and being unable to access the account.",
+      "flags_json": "[\"pilot_topic_group\"]",
+      "issue_id": "I_ACCESS_01",
+      "issue_name": "Login/Access Issues",
+      "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+      "topic": "access"
+    },
+    {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users complain about intrusive advertisements and negative impacts from recent UI updates, such as random song playback or removal of controls for non-subscribers.",
+      "flags_json": "[\"pilot_topic_group\"]",
+      "issue_id": "I_USABILITY_01",
+      "issue_name": "Excessive Ads and UI Changes",
+      "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+      "topic": "usability"
+    },
+    {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report various playback issues including crashes, getting stuck on loading screens, and inability to control playback accurately.",
+      "flags_json": "[\"pilot_topic_group\"]",
+      "issue_id": "I_PLAYBACK_01",
+      "issue_name": "Playback Functionality Bugs",
+      "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+      "topic": "playback"
+    },
+    {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "A user reports that the offline download feature is not functioning correctly.",
+      "flags_json": "[\"pilot_topic_group\"]",
+      "issue_id": "I_DOWNLOADS_01",
+      "issue_name": "Offline Download Failure",
+      "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+      "topic": "downloads"
+    },
+    {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users note issues regarding missing songs, inconsistent lyric availability, and unwanted recommendation features.",
+      "flags_json": "[\"pilot_topic_group\"]",
+      "issue_id": "I_CATALOG_01",
+      "issue_name": "Content Availability and Display Issues",
+      "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+      "topic": "catalog"
+    },
+    {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users complain that recent updates have restricted basic music player features, forcing users to pay for premium access to functions like selecting songs or skipping freely.",
+      "flags_json": "[\"pilot_topic_group\"]",
+      "issue_id": "I_BILLING_01",
+      "issue_name": "Feature restrictions requiring premium subscription",
+      "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+      "topic": "billing"
+    },
+    {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Users express extreme dissatisfaction with the app, often citing recent updates or the business model as the cause for uninstalling or boycotting the service.",
+      "flags_json": "[\"pilot_topic_group\"]",
+      "issue_id": "I_OTHER_01",
+      "issue_name": "General negative sentiment regarding the app/updates",
+      "label_config": "mlx-community/gemma-4-e4b-it-4bit:none:group-pilot-topic-groups-v1:group-v3:revision-475b9088d29754a3379866cf5aeb6b41acd313c2:offline-frozen-100-v1",
+      "topic": "other"
+    }
+  ],
+  "membership_count": 52,
+  "membership_owner": "code: one complaint/cancellation issue per fixed primary topic",
+  "naming_and_review_owner": "local-mlx",
+  "scope": "100-review execution proof; not the adopted full-corpus embedding grouping",
+  "version": "pilot-topic-groups-v1"
+}

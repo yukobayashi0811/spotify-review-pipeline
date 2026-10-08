@@ -1,0 +1,26 @@
+{
+  "classification_artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+  "counts": {
+    "completed": 660609,
+    "issues": 41,
+    "membership": 288524,
+    "quarantined": 13,
+    "source": 660622,
+    "verifier_rows": 400
+  },
+  "export": {
+    "completed_nonempty": 660609,
+    "expected_nonempty": 660609,
+    "exported_records": 660622,
+    "final_export": true,
+    "input_csv": "spotify_reviews_18months.csv",
+    "source_records": 660622
+  },
+  "input_sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+  "mode": "frozen",
+  "new_model_calls": 0,
+  "note": "Warm frozen replay validates the sealed full state and regenerates only the deterministic grading adapter; it never overwrites adopted grouping or memo evidence.",
+  "priority_issue_id": "I_USABILITY_04",
+  "ranking_issues": 41,
+  "status": "completed_saved_state_replay"
+}

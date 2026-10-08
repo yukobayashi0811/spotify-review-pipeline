@@ -1,0 +1,12 @@
+{
+  "captured_at_utc": "2026-10-03T04:24:12Z",
+  "limit_id": "codex",
+  "plan_type": "plus",
+  "used_percent": 61,
+  "window_duration_minutes": 10080,
+  "resets_at_unix": 1791580628,
+  "ordinary_usage_allowed": true,
+  "has_purchased_credits": false,
+  "credit_balance": "0",
+  "source": "Codex account usage tool"
+}

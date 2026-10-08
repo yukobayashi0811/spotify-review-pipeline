@@ -1,0 +1,66 @@
+{
+  "phase": "initial",
+  "run_id": "run-9da2618a-d8c2-4fe1-b76a-99b009cec2dd",
+  "stage_wall_seconds": {
+    "classify": 42.684667,
+    "prepare": 0.003245
+  },
+  "stages": {
+    "classify": {
+      "cache_hits_total": 0,
+      "completed_total": 19,
+      "evidence_quote_repairs": 0,
+      "failed_records": 1,
+      "fallback_unique": 0,
+      "max_workers_configured": 1,
+      "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+      "pending_unique_at_start": 20,
+      "phase": "initial",
+      "processed_unique": 20,
+      "run_id": "run-9da2618a-d8c2-4fe1-b76a-99b009cec2dd",
+      "spend_ledger_usd_including_unknown_reservations": 0.0,
+      "unknown_charge_batches_reserved_at_cap": 0,
+      "unsettled_reservation_usd": 0.0
+    },
+    "prepare": {
+      "counts": {
+        "duplicate_review_ids": 0,
+        "empty_review_text": 0,
+        "missing_app_version": 1,
+        "records": 20
+      },
+      "exact_text": {
+        "distinct_nonempty_texts": 20,
+        "reusable_nonempty_rows": 0
+      },
+      "file_sha256": "1a8a0710bf9599fe43fdf76b5d41b3f4d0ac3336f5e051385be156b3ca57ab5d",
+      "first_review": "2022-07-29 17:29:50",
+      "last_review": "2023-11-09 07:52:46",
+      "parsed_rows_sha256": "333720ee076b7dc6a06c581206c8a0162497fd973dda4e30d850d0e87c14eabe",
+      "reviews_by_month": {
+        "2022-07": 1,
+        "2022-09": 2,
+        "2022-10": 1,
+        "2022-12": 1,
+        "2023-02": 1,
+        "2023-03": 1,
+        "2023-04": 2,
+        "2023-05": 1,
+        "2023-06": 1,
+        "2023-07": 5,
+        "2023-09": 1,
+        "2023-10": 2,
+        "2023-11": 1
+      },
+      "reviews_by_rating": {
+        "1": 4,
+        "2": 3,
+        "3": 1,
+        "4": 1,
+        "5": 11
+      }
+    }
+  },
+  "status": "completed",
+  "wall_seconds": 42.687923
+}

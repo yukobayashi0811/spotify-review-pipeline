@@ -1,0 +1,40 @@
+{
+  "development_only": true,
+  "grading_eligible": false,
+  "interruption_type": "provider_usage_limit",
+  "observed_at_utc": "2026-10-01T17:34:23Z",
+  "provider_message": "You've hit your usage limit. Try again at Oct 7th, 2026 2:58 PM.",
+  "source_records": 10000,
+  "completed_records": 4056,
+  "remaining_source_records": 5944,
+  "quarantined_records": 0,
+  "calls": 105,
+  "succeeded_calls": 90,
+  "failed_calls": 15,
+  "worker_snapshots": [
+    {
+      "worker": "worker-01",
+      "completed_records": 1336,
+      "calls": 34,
+      "succeeded_calls": 29,
+      "failed_calls": 5
+    },
+    {
+      "worker": "worker-02",
+      "completed_records": 1384,
+      "calls": 34,
+      "succeeded_calls": 29,
+      "failed_calls": 5
+    },
+    {
+      "worker": "worker-03",
+      "completed_records": 1336,
+      "calls": 37,
+      "succeeded_calls": 32,
+      "failed_calls": 5
+    }
+  ],
+  "resume_invariant": "Completed records are excluded from subsequent provider calls; failed usage-limit attempts did not quarantine pending records.",
+  "billing_mode": "chatgpt_subscription",
+  "monetary_cost_usd": "unknown"
+}

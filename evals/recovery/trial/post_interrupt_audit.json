@@ -1,0 +1,26 @@
+{
+  "cache_chain_rows": 0,
+  "completed_representatives_missing_successful_same_config_enrich_call": 0,
+  "counts": {
+    "completed": 410145,
+    "distinct_nonempty_texts": 484189,
+    "luna_succeeded": 3960,
+    "quarantined": 13,
+    "record_rows": 410158,
+    "source_rows": 660622
+  },
+  "integrity_check": [
+    "ok"
+  ],
+  "label_config_counts": {
+    "<NULL>": 13,
+    "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2": 276064,
+    "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable": 134081
+  },
+  "missing_call_examples": [],
+  "partial_finalized_exact_text_groups": 0,
+  "partial_group_examples": [],
+  "passed": true,
+  "state_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/evals/recovery/trial/state.db",
+  "state_sha256": "befe625b4eff442f73870cbc2fd89cc2d23299a2f058e9e5160e4752366fae5b"
+}

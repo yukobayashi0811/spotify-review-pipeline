@@ -1,0 +1,178 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING": [
+      {
+        "evidence_quote": "They will offer you 3 months and charge you the next month.",
+        "review_id": "10800b01-920d-4c22-91f5-521c45caf4f0",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "charging me for playback",
+        "review_id": "16f22d8d-1583-44c1-ab8c-17485612e9ee",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I had unsubscribed, and Spotify stole My money!!!",
+        "review_id": "41c0c736-6617-466a-8e4d-3a2b551185e5",
+        "severity": 5
+      }
+    ],
+    "I_CATALOG": [
+      {
+        "evidence_quote": "I can't even search and play music!",
+        "review_id": "088909d0-cf9b-42b5-9259-e03b6d1cfa47",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "i can't find or listen to any song i try searching.",
+        "review_id": "2d7b2ebe-826f-49cd-a109-b0ab3bf52c2d",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "you can't search a specific song",
+        "review_id": "9ad594fe-ea5d-4cad-8744-a07c26cc3de4",
+        "severity": 4
+      }
+    ],
+    "I_OTHER": [
+      {
+        "evidence_quote": "Collects too much personal information",
+        "review_id": "21ddfe12-8433-4bad-b0f8-e7f605c056ae",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Spotify is straight up a stalker app it tries to monitor you is the monitor you completely It's weird at once control of you every single moment of your life",
+        "review_id": "60511edc-f704-4572-8589-3409fce25701",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "a very data has hacking for our mobile",
+        "review_id": "68a5d92a-1dca-40ba-b9f8-fc61a24b12a8",
+        "severity": 5
+      }
+    ],
+    "I_PLAYBACK": [
+      {
+        "evidence_quote": "it's not even playing songs",
+        "review_id": "004d1c8a-a8c8-4746-b975-cd2f31c2a730",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "I can't play song pls fix the bug",
+        "review_id": "022dcbce-b629-4b22-8dbf-900f748a3097",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "not working nor playing for me tried it reinstalling many times still didn't work.",
+        "review_id": "026ecef8-811d-4304-b77d-c5e6c8f68bd1",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY": [
+      {
+        "evidence_quote": "automatically start playing",
+        "review_id": "91132204-877d-4ac1-9d08-20d03f1414f6",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "can't even recover the playlists set by me last week",
+        "review_id": "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "my playlist, that had hundreds of songs that took years to put together, just vanished.",
+        "review_id": "ee11e1df-cb73-4c3a-b5e8-7268c7872b01",
+        "severity": 5
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS": {
+      "description": "Users report difficulty logging in, creating an account, or using the service in some locations.",
+      "issue_id": "I_ACCESS",
+      "issue_name": "Login and account access"
+    },
+    "I_BILLING": {
+      "description": "Users object to subscription requirements and limits on song selection and playback features.",
+      "issue_id": "I_BILLING",
+      "issue_name": "Premium access and feature limits"
+    },
+    "I_CATALOG": {
+      "description": "Users report missing songs, limited catalog content, and search problems.",
+      "issue_id": "I_CATALOG",
+      "issue_name": "Missing content and catalog search"
+    },
+    "I_DOWNLOADS": {
+      "description": "Users report trouble saving music, maintaining downloads, and listening offline.",
+      "issue_id": "I_DOWNLOADS",
+      "issue_name": "Downloads and offline listening"
+    },
+    "I_OTHER": {
+      "description": "Users express general dissatisfaction or disappointment without specifying a particular product problem.",
+      "issue_id": "I_OTHER",
+      "issue_name": "General dissatisfaction"
+    },
+    "I_PLAYBACK": {
+      "description": "Users report songs failing to play or stopping, along with connection and update-related playback problems.",
+      "issue_id": "I_PLAYBACK",
+      "issue_name": "Playback interruptions and failures"
+    },
+    "I_SUPPORT": {
+      "description": "Users report difficulty reaching support, unhelpful responses, and limits on assistance.",
+      "issue_id": "I_SUPPORT",
+      "issue_name": "Support access and assistance"
+    },
+    "I_USABILITY": {
+      "description": "Users report frustrating controls and navigation, frequent ads, and unwanted audio behavior.",
+      "issue_id": "I_USABILITY",
+      "issue_name": "Controls, navigation, and interruptions"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 1181,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.542760",
+      "priority_score": 3003,
+      "rank": 1,
+      "severity_sum": 3003
+    },
+    {
+      "complaint_count": 1297,
+      "issue_id": "I_OTHER",
+      "mean_severity": "2.006939",
+      "priority_score": 2603,
+      "rank": 2,
+      "severity_sum": 2603
+    },
+    {
+      "complaint_count": 687,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.154294",
+      "priority_score": 2167,
+      "rank": 3,
+      "severity_sum": 2167
+    },
+    {
+      "complaint_count": 720,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.791667",
+      "priority_score": 2010,
+      "rank": 4,
+      "severity_sum": 2010
+    },
+    {
+      "complaint_count": 245,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.832653",
+      "priority_score": 694,
+      "rank": 5,
+      "severity_sum": 694
+    }
+  ]
+}

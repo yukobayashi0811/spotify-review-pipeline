@@ -1,0 +1,31 @@
+{
+  "version": "golden-review-provenance-v3",
+  "status": "human_gold",
+  "labels_file": "evals/golden_50.csv",
+  "labels_sha256": "c41cd56359d9069a4eeb799a9d7b57e09ff59fa360b4a47cc237bdb40d415dd5",
+  "label_fields": [
+    "topic",
+    "intent",
+    "sentiment",
+    "severity",
+    "entities",
+    "evidence_quote"
+  ],
+  "rows": 50,
+  "labeled_by": "project author, by hand",
+  "labeling_method": "Every label was assigned manually from the review text in the labeling workbook, following config/labels.md. No model prediction or AI-generated label was viewed or used.",
+  "labeling_workbook": "evals/golden_50_labeling_completed.xlsx",
+  "labeling_workbook_sha256": "72130807fdaa8d6007487ccd376f6d217de7632b25258ceca7c04798ef8523a5",
+  "labeling_workbook_created_utc": "2026-10-01T01:35:55Z",
+  "labeling_workbook_last_saved_utc": "2026-10-07T21:31:36Z",
+  "timestamps_source": "Google Drive file metadata of the labeling workbook",
+  "template_file": "evals/golden_50_labeling.xlsx",
+  "template_sha256": "cf4f4bc6cf718baa7a8484f0807cc05aa2dbaff47427f9ce6f917b8b057f1f53",
+  "selection_file": "evals/golden_50_to_label.csv",
+  "selection_sha256": "1a125c3e509f58b0246ba16d0ea332675a53ffadb1928be4338a0bd7053a11c7",
+  "golden_labels_used_as_model_input": false,
+  "prediction_input_file": "artifacts/golden_prediction_input.csv",
+  "prediction_input_sha256": "3370aec3cf585951d98998d09ee92609fcffd51a83f4193b43aeef3c66646086",
+  "prediction_input_label_fields": [],
+  "golden_use_boundary": "The labels may be opened only after a candidate model has emitted and saved predictions from the sanitized label-free input. They are excluded by review ID, exact-text hash, and normalized-text hash from training and threshold tuning."
+}

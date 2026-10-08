@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-581e-7cd3-ac38-a1a9d3196cf0"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Premium\",\"repeat\",\"shuffle\",\"local music app\"],\"evidence_quote\":\"I have to pay for primium just to repeat a song or shuffle.\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"720314a0-5822-457b-865d-ba7c4dda4cfe\",\"sentiment\":-0.9,\"severity\":3,\"topic\":\"billing\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10781,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":185,"reasoning_output_tokens":85}}

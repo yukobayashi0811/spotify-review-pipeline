@@ -1,0 +1,178 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING": [
+      {
+        "evidence_quote": "It's impossible to use the app without prime",
+        "review_id": "074efbfd-f69e-46ca-9cea-e5204a192a2a",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "can't access my music",
+        "review_id": "16929558-ce1e-4b87-8738-a1de3f557f66",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "I cant sign up for individual premium.. Whenever i click on the plan it doesnt give me the prompt to pay",
+        "review_id": "1d1480fb-0142-46da-8570-45bf3983bf6d",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG": [
+      {
+        "evidence_quote": "many songs are not present here!",
+        "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "This is rubbish the app is empty",
+        "review_id": "0b716a9d-85bf-4f4e-8e2e-be71e4a379a6",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "in some songs there is no lyrics",
+        "review_id": "47becad0-8ae5-4a10-9731-fde8f2091862",
+        "severity": 3
+      }
+    ],
+    "I_OTHER": [
+      {
+        "evidence_quote": "Canvas not available after recent update",
+        "review_id": "384008ad-eb79-4525-a794-b0b67f7fb3f5",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Worst",
+        "review_id": "00363dc8-2117-4565-9af9-efadf8fa90cf",
+        "severity": 2
+      },
+      {
+        "evidence_quote": "I hate this application",
+        "review_id": "0575ce08-ab04-46f0-aa8a-fbf9cd27e8da",
+        "severity": 2
+      }
+    ],
+    "I_PLAYBACK": [
+      {
+        "evidence_quote": "app is shoutdowning",
+        "review_id": "0fcf89b2-0b81-4838-bf5f-41c684e43b2d",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "I'll be canceling my account if it's not corrected soon.",
+        "review_id": "1cdc5bb2-8e8d-4267-8853-6c1dd4c7ef13",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Always say no internet connection",
+        "review_id": "3df77a78-ad9a-4456-8be8-8178ffd43d67",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY": [
+      {
+        "evidence_quote": "can't even recover the playlists set by me last week",
+        "review_id": "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "they've removed the ability to move episode to episode on podcasts from the toolbar",
+        "review_id": "0070e713-4cb7-4d78-954f-1764d5593c91",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "it should play the song",
+        "review_id": "0853c56b-0fa1-4d12-9cb9-6817d52233f5",
+        "severity": 3
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS": {
+      "description": "Reviewers report being unable to log in or get into their accounts, sometimes repeatedly.",
+      "issue_id": "I_ACCESS",
+      "issue_name": "Login and account access problems"
+    },
+    "I_BILLING": {
+      "description": "Reviewers describe music access or sign-up as dependent on Prime or Premium, including difficulty reaching the payment prompt.",
+      "issue_id": "I_BILLING",
+      "issue_name": "Paid plan access and sign-up issues"
+    },
+    "I_CATALOG": {
+      "description": "Reviewers cite missing or removed songs, absent lyrics, and less useful recommendations or repeated DJ selections.",
+      "issue_id": "I_CATALOG",
+      "issue_name": "Missing content and weaker discovery"
+    },
+    "I_DOWNLOADS": {
+      "description": "Reviewers report trouble downloading music, downloads stalling or disappearing, and offline listening failures.",
+      "issue_id": "I_DOWNLOADS",
+      "issue_name": "Download and offline listening problems"
+    },
+    "I_OTHER": {
+      "description": "Reviews express general dissatisfaction or say an update needs rework without identifying a more specific product problem.",
+      "issue_id": "I_OTHER",
+      "issue_name": "General dissatisfaction and update concerns"
+    },
+    "I_PLAYBACK": {
+      "description": "Reviewers describe playback stopping or failing, connection trouble, reinstall needs, or unexpected song changes.",
+      "issue_id": "I_PLAYBACK",
+      "issue_name": "Playback interruptions and failures"
+    },
+    "I_SUPPORT": {
+      "description": "A reviewer characterizes the app's support staff as rude.",
+      "issue_id": "I_SUPPORT",
+      "issue_name": "Negative experience with support"
+    },
+    "I_USABILITY": {
+      "description": "Reviewers mention missing or hard-to-use playback and navigation controls, difficulty finding playlists, and frequent ads.",
+      "issue_id": "I_USABILITY",
+      "issue_name": "Navigation, controls, and ad interruptions"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 67,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.582090",
+      "priority_score": 173,
+      "rank": 1,
+      "severity_sum": 173
+    },
+    {
+      "complaint_count": 38,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.315789",
+      "priority_score": 126,
+      "rank": 2,
+      "severity_sum": 126
+    },
+    {
+      "complaint_count": 58,
+      "issue_id": "I_OTHER",
+      "mean_severity": "1.931034",
+      "priority_score": 112,
+      "rank": 3,
+      "severity_sum": 112
+    },
+    {
+      "complaint_count": 36,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.805556",
+      "priority_score": 101,
+      "rank": 4,
+      "severity_sum": 101
+    },
+    {
+      "complaint_count": 19,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.736842",
+      "priority_score": 52,
+      "rank": 5,
+      "severity_sum": 52
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "disagreement_count": 192,
+  "golden_labels_opened": false,
+  "historical_hybrid_10000_note": "The earlier hybrid-10000 result is an in-training-data evaluation and is not used as quality evidence.",
+  "main_error_patterns": [
+    {
+      "count": 33,
+      "pattern": "severity:3->2"
+    },
+    {
+      "count": 25,
+      "pattern": "severity:3->4"
+    },
+    {
+      "count": 17,
+      "pattern": "severity:1->2"
+    },
+    {
+      "count": 13,
+      "pattern": "topic:billing->usability"
+    },
+    {
+      "count": 10,
+      "pattern": "topic:other->usability"
+    },
+    {
+      "count": 8,
+      "pattern": "topic:playback->usability"
+    },
+    {
+      "count": 7,
+      "pattern": "topic:usability->catalog"
+    },
+    {
+      "count": 7,
+      "pattern": "topic:catalog->usability"
+    },
+    {
+      "count": 7,
+      "pattern": "severity:2->1"
+    },
+    {
+      "count": 7,
+      "pattern": "intent:complaint->request"
+    },
+    {
+      "count": 7,
+      "pattern": "topic:catalog->other"
+    },
+    {
+      "count": 7,
+      "pattern": "topic:usability->playback"
+    },
+    {
+      "count": 7,
+      "pattern": "intent:praise->complaint"
+    },
+    {
+      "count": 6,
+      "pattern": "intent:cancellation->complaint"
+    },
+    {
+      "count": 6,
+      "pattern": "severity:3->1"
+    },
+    {
+      "count": 6,
+      "pattern": "topic:playback->downloads"
+    },
+    {
+      "count": 5,
+      "pattern": "intent:unclear->complaint"
+    },
+    {
+      "count": 5,
+      "pattern": "intent:complaint->unclear"
+    },
+    {
+      "count": 5,
+      "pattern": "intent:request->complaint"
+    },
+    {
+      "count": 5,
+      "pattern": "intent:unclear->praise"
+    }
+  ],
+  "metrics_by_final_source": {
+    "local": {
+      "distinct_texts": 300,
+      "estimated_rows_weight": 483865.98412698414,
+      "interpretation": "independent verifier agreement estimate",
+      "quote_supported_rate": 0.9766666666666667,
+      "row_weighted_intent_agreement": 0.8382387347164736,
+      "row_weighted_severity_exact": 0.7414117644971822,
+      "row_weighted_topic_agreement": 0.7247775093933975
+    },
+    "luna": {
+      "distinct_texts": 100,
+      "estimated_rows_weight": 53668.82352941176,
+      "interpretation": "same-model Luna test-retest, not independent accuracy",
+      "quote_supported_rate": 0.99,
+      "row_weighted_intent_agreement": 0.9813845442821078,
+      "row_weighted_severity_exact": 0.9654678474741608,
+      "row_weighted_topic_agreement": 0.9585655855994096
+    }
+  },
+  "metrics_by_word_count_bucket": {
+    "00-05": {
+      "distinct_texts": 111,
+      "estimated_rows_weight": 192106.8076563959,
+      "quote_supported_rate": 0.972972972972973,
+      "row_weighted_intent_agreement": 0.8536917208914736,
+      "row_weighted_severity_exact": 0.9123333910629812,
+      "row_weighted_topic_agreement": 0.9062385891376341
+    },
+    "06-15": {
+      "distinct_texts": 126,
+      "estimated_rows_weight": 162449.0,
+      "quote_supported_rate": 0.9761904761904762,
+      "row_weighted_intent_agreement": 0.869308105557944,
+      "row_weighted_severity_exact": 0.7764195291309955,
+      "row_weighted_topic_agreement": 0.7672971340959448
+    },
+    "16-40": {
+      "distinct_texts": 102,
+      "estimated_rows_weight": 119983.0,
+      "quote_supported_rate": 1.0,
+      "row_weighted_intent_agreement": 0.8232293446822522,
+      "row_weighted_severity_exact": 0.5871046014165852,
+      "row_weighted_topic_agreement": 0.6279659832034576
+    },
+    "41+": {
+      "distinct_texts": 61,
+      "estimated_rows_weight": 62996.0,
+      "quote_supported_rate": 0.9672131147540983,
+      "row_weighted_intent_agreement": 0.8615342895193997,
+      "row_weighted_severity_exact": 0.6146875015263484,
+      "row_weighted_topic_agreement": 0.44532626003116194
+    }
+  },
+  "new_luna_calls": 0,
+  "selection": {
+    "design": "topic × word-count-bucket stratified deterministic sample of distinct texts",
+    "local_distinct_texts": 300,
+    "luna_distinct_texts": 100,
+    "ordering": "text_sha256 ascending within each stratum",
+    "seed": 0,
+    "weight": "group_size × stratum_population / stratum_sample_size"
+  },
+  "status": "completed_relinked_without_new_model_calls"
+}

@@ -1,0 +1,10 @@
+{
+  "duplicate_review_ids": [],
+  "evidence_quote_failures": [],
+  "exact_text_groups_split_across_workers": [],
+  "expected_records": 500,
+  "merged_records": 500,
+  "missing_review_ids": [],
+  "unknown_review_ids": [],
+  "valid": true
+}

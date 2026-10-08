@@ -1,0 +1,9 @@
+{
+  "captured_at_local": "2026-09-30",
+  "account_wide_used_percent_before_resume": 75,
+  "ordinary_usage_allowed": true,
+  "prior_stop_line_percent": 73,
+  "operator_decision": "Continue the bounded experiment until the service limit is actually reached; the operator will apply a reset if needed.",
+  "scope": "12-review single-worker and three-worker development benchmark only",
+  "interpretation": "This records an operator gate change, not authorization to describe development output as grading evidence or to fabricate missing full-corpus results."
+}

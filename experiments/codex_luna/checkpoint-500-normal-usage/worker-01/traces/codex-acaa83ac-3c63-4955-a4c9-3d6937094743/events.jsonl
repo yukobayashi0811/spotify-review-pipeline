@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f91a-cde5-79b2-b1df-88a44403786e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Spotify\"],\"evidence_quote\":\"Spotify is my go to music app\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"4701dc65-3087-4895-95ac-9c98d6357ae1\",\"sentiment\":0.7,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11253,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":83,"reasoning_output_tokens":0}}

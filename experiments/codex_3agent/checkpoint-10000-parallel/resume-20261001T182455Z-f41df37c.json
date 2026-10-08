@@ -1,0 +1,102 @@
+{
+  "batch_size": 50,
+  "billing_mode": "chatgpt_subscription",
+  "call_count_total": 234,
+  "completed_records": 10000,
+  "development_only": true,
+  "effort": "low",
+  "experiment_id": "codex-dev-20261001T040740Z-280a9ec3",
+  "grading_eligible": false,
+  "input_tokens_total": 2779887,
+  "merge_valid": true,
+  "model": "gpt-5.6-sol",
+  "monetary_cost_usd": "unknown",
+  "output_tokens_total": 656078,
+  "resume_id": "resume-20261001T182455Z-f41df37c",
+  "sample_size": 10000,
+  "wall_seconds": 2948.350111,
+  "worker_summaries": [
+    {
+      "completed_after": 3334,
+      "completed_before": 1336,
+      "new_calls": 40,
+      "resume_id": "resume-20261001T182455Z-f41df37c",
+      "run_enrichment": {
+        "cache_hits_total": 520,
+        "completed_total": 3334,
+        "evidence_quote_repairs": 3,
+        "failed_records": 0,
+        "fallback_unique": 0,
+        "max_workers_configured": 1,
+        "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+        "pending_unique_at_start": 1952,
+        "phase": "resume",
+        "processed_unique": 1952,
+        "run_id": "codex-dev-20261001T040740Z-280a9ec3-resume-20261001T182455Z-f41df37c-worker-01",
+        "spend_ledger_usd_including_unknown_reservations": 0.0,
+        "unknown_charge_batches_reserved_at_cap": 40,
+        "unsettled_reservation_usd": 0.0
+      },
+      "status_counts": {
+        "completed": 3334
+      },
+      "wall_seconds": 2768.809669,
+      "worker_index": 1
+    },
+    {
+      "completed_after": 3333,
+      "completed_before": 1384,
+      "new_calls": 44,
+      "resume_id": "resume-20261001T182455Z-f41df37c",
+      "run_enrichment": {
+        "cache_hits_total": 516,
+        "completed_total": 3333,
+        "evidence_quote_repairs": 3,
+        "failed_records": 0,
+        "fallback_unique": 0,
+        "max_workers_configured": 1,
+        "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+        "pending_unique_at_start": 1906,
+        "phase": "resume",
+        "processed_unique": 1906,
+        "run_id": "codex-dev-20261001T040740Z-280a9ec3-resume-20261001T182455Z-f41df37c-worker-02",
+        "spend_ledger_usd_including_unknown_reservations": 0.0,
+        "unknown_charge_batches_reserved_at_cap": 44,
+        "unsettled_reservation_usd": 0.0
+      },
+      "status_counts": {
+        "completed": 3333
+      },
+      "wall_seconds": 2871.973275,
+      "worker_index": 2
+    },
+    {
+      "completed_after": 3333,
+      "completed_before": 1336,
+      "new_calls": 45,
+      "resume_id": "resume-20261001T182455Z-f41df37c",
+      "run_enrichment": {
+        "cache_hits_total": 516,
+        "completed_total": 3333,
+        "evidence_quote_repairs": 3,
+        "failed_records": 0,
+        "fallback_unique": 0,
+        "max_workers_configured": 1,
+        "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+        "pending_unique_at_start": 1952,
+        "phase": "resume",
+        "processed_unique": 1952,
+        "run_id": "codex-dev-20261001T040740Z-280a9ec3-resume-20261001T182455Z-f41df37c-worker-03",
+        "spend_ledger_usd_including_unknown_reservations": 0.0,
+        "unknown_charge_batches_reserved_at_cap": 45,
+        "unsettled_reservation_usd": 0.0
+      },
+      "status_counts": {
+        "completed": 3333
+      },
+      "wall_seconds": 2948.215584,
+      "worker_index": 3
+    }
+  ],
+  "workers": 3
+}

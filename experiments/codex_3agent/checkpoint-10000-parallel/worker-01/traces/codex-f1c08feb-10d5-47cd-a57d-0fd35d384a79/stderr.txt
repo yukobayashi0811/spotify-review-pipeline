@@ -1,0 +1,5 @@
+2026-10-01T17:28:11.287071Z ERROR codex_skills_extension::host_service: failed to install system skills: io error while remove existing system skills dir: Directory not empty (os error 66)
+2026-10-01T17:28:11.781734Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T17:28:11.783679Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T17:28:11.785801Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-01T17:29:19.445555Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf("/Users/Yu/.codex/shell_snapshots/01a0f882-6aea-7e21-8ea3-4b749ae96d30.1790875691767491000.sh"): Os { code: 2, kind: NotFound, message: "No such file or directory" }

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-aabe-7de0-a796-64585ebcc20e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"The app would not open.\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"3e8e46eb-7327-4fa7-80e9-ebe312b6117c\",\"sentiment\":-1,\"severity\":4,\"topic\":\"playback\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10743,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":81,"reasoning_output_tokens":0}}

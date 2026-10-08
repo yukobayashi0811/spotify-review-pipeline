@@ -1,0 +1,142 @@
+{
+  "comparison": {
+    "adopt_two_workers": false,
+    "adoption_rule": "Adopt only if measured speedup is at least 10% on the same 20 reviews.",
+    "one_warm_worker_seconds": 58.382574,
+    "speedup_ratio": 1.053779,
+    "two_warm_workers_wall_seconds": 55.403043
+  },
+  "limitations": [
+    "This is a 20-review throughput probe, not the required 500-review checkpoint.",
+    "Two workers double resident model copies and may reduce interactive system headroom.",
+    "Production concurrency remains disabled unless this probe shows a material gain and the 500-review checkpoint confirms it."
+  ],
+  "model": "mlx-community/gemma-4-e4b-it-4bit",
+  "model_revision": "475b9088d29754a3379866cf5aeb6b41acd313c2",
+  "population": "same first 20 rows as the batch-size benchmark",
+  "ready": [
+    {
+      "status": "ready",
+      "worker_id": 0
+    },
+    {
+      "status": "ready",
+      "worker_id": 1
+    }
+  ],
+  "status": "measured_development_benchmark",
+  "workers": [
+    {
+      "duration_seconds": 53.807373,
+      "input_tokens": 1341,
+      "output_tokens": 1113,
+      "review_count": 10,
+      "runtime": {
+        "api_charges_usd": 0.0,
+        "api_credentials_required": false,
+        "calls": [
+          {
+            "duration_seconds": 8.809628,
+            "finish_reason": "json_complete",
+            "generated_characters": 340,
+            "generation_mode": "empty_thought_then_json_prefix",
+            "generation_tokens_per_second": 26.06,
+            "input_tokens": 858,
+            "mlx_peak_memory_gb": 4.85183,
+            "output_tokens": 122,
+            "parsed_json_characters": 199,
+            "process_memory_after_gb": 0.658915,
+            "process_memory_before_gb": 0.638616,
+            "prompt_tokens_per_second": 1474.964,
+            "role": "enrich"
+          },
+          {
+            "duration_seconds": 53.807373,
+            "finish_reason": "json_complete",
+            "generated_characters": 2786,
+            "generation_mode": "empty_thought_then_json_prefix",
+            "generation_tokens_per_second": 21.285,
+            "input_tokens": 1341,
+            "mlx_peak_memory_gb": 4.867705,
+            "output_tokens": 1113,
+            "parsed_json_characters": 2039,
+            "process_memory_after_gb": 0.661324,
+            "process_memory_before_gb": 0.658047,
+            "prompt_tokens_per_second": 1018.69,
+            "role": "enrich"
+          }
+        ],
+        "electricity_cost_usd": "unknown",
+        "hardware_cost_usd": "unknown",
+        "machine": "arm64",
+        "model_id": "mlx-community/gemma-4-e4b-it-4bit",
+        "model_revision": "475b9088d29754a3379866cf5aeb6b41acd313c2",
+        "network_required": false,
+        "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+        "provider": "local-mlx",
+        "resolved_local_snapshot": "/Users/Yu/.cache/huggingface/hub/models--mlx-community--gemma-4-e4b-it-4bit/snapshots/475b9088d29754a3379866cf5aeb6b41acd313c2",
+        "runtime": "MLX-LM 0.31.3",
+        "system_memory_gb": 34.36,
+        "temperature": 0.0
+      },
+      "valid_records": 10,
+      "worker_id": 0
+    },
+    {
+      "duration_seconds": 55.319389,
+      "input_tokens": 1366,
+      "output_tokens": 1170,
+      "review_count": 10,
+      "runtime": {
+        "api_charges_usd": 0.0,
+        "api_credentials_required": false,
+        "calls": [
+          {
+            "duration_seconds": 10.262695,
+            "finish_reason": "json_complete",
+            "generated_characters": 334,
+            "generation_mode": "empty_thought_then_json_prefix",
+            "generation_tokens_per_second": 28.065,
+            "input_tokens": 855,
+            "mlx_peak_memory_gb": 4.849308,
+            "output_tokens": 119,
+            "parsed_json_characters": 193,
+            "process_memory_after_gb": 0.706544,
+            "process_memory_before_gb": 0.685703,
+            "prompt_tokens_per_second": 345.05,
+            "role": "enrich"
+          },
+          {
+            "duration_seconds": 55.319389,
+            "finish_reason": "json_complete",
+            "generated_characters": 2972,
+            "generation_mode": "empty_thought_then_json_prefix",
+            "generation_tokens_per_second": 21.781,
+            "input_tokens": 1366,
+            "mlx_peak_memory_gb": 4.879586,
+            "output_tokens": 1170,
+            "parsed_json_characters": 2225,
+            "process_memory_after_gb": 0.709607,
+            "process_memory_before_gb": 0.705675,
+            "prompt_tokens_per_second": 976.901,
+            "role": "enrich"
+          }
+        ],
+        "electricity_cost_usd": "unknown",
+        "hardware_cost_usd": "unknown",
+        "machine": "arm64",
+        "model_id": "mlx-community/gemma-4-e4b-it-4bit",
+        "model_revision": "475b9088d29754a3379866cf5aeb6b41acd313c2",
+        "network_required": false,
+        "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+        "provider": "local-mlx",
+        "resolved_local_snapshot": "/Users/Yu/.cache/huggingface/hub/models--mlx-community--gemma-4-e4b-it-4bit/snapshots/475b9088d29754a3379866cf5aeb6b41acd313c2",
+        "runtime": "MLX-LM 0.31.3",
+        "system_memory_gb": 34.36,
+        "temperature": 0.0
+      },
+      "valid_records": 10,
+      "worker_id": 1
+    }
+  ]
+}

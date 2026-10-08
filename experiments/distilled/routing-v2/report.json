@@ -1,0 +1,182 @@
+{
+  "artifacts": {
+    "routing_cases": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/routing-v2/routing_cases.csv"
+  },
+  "audit_results": {
+    "legacy_risk": {
+      "candidate_rows": 137,
+      "metrics": {
+        "intent": {
+          "accuracy": 0.876,
+          "macro_f1": 0.814168
+        },
+        "severity": {
+          "accuracy": 0.928,
+          "macro_f1": 0.919202,
+          "mae": 0.096
+        },
+        "topic": {
+          "accuracy": 0.888,
+          "macro_f1": 0.761022
+        }
+      },
+      "routing_capacity_rows": 50,
+      "rows": 250,
+      "selected_rows": 50,
+      "selection_score_mean_accuracy": 0.897333,
+      "selection_score_mean_macro_f1": 0.831464
+    },
+    "mean_margin": {
+      "candidate_rows": 250,
+      "metrics": {
+        "intent": {
+          "accuracy": 0.908,
+          "macro_f1": 0.829352
+        },
+        "severity": {
+          "accuracy": 0.932,
+          "macro_f1": 0.905629,
+          "mae": 0.076
+        },
+        "topic": {
+          "accuracy": 0.912,
+          "macro_f1": 0.917118
+        }
+      },
+      "routing_capacity_rows": 50,
+      "rows": 250,
+      "selected_rows": 50,
+      "selection_score_mean_accuracy": 0.917333,
+      "selection_score_mean_macro_f1": 0.884033
+    }
+  },
+  "calibration_results": {
+    "legacy_risk": {
+      "candidate_rows": 135,
+      "metrics": {
+        "intent": {
+          "accuracy": 0.9,
+          "macro_f1": 0.808783
+        },
+        "severity": {
+          "accuracy": 0.916,
+          "macro_f1": 0.68457,
+          "mae": 0.092
+        },
+        "topic": {
+          "accuracy": 0.864,
+          "macro_f1": 0.718644
+        }
+      },
+      "routing_capacity_rows": 50,
+      "rows": 250,
+      "selected_rows": 50,
+      "selection_score_mean_accuracy": 0.893333,
+      "selection_score_mean_macro_f1": 0.737332
+    },
+    "mean_margin": {
+      "candidate_rows": 250,
+      "metrics": {
+        "intent": {
+          "accuracy": 0.94,
+          "macro_f1": 0.895753
+        },
+        "severity": {
+          "accuracy": 0.928,
+          "macro_f1": 0.898391,
+          "mae": 0.076
+        },
+        "topic": {
+          "accuracy": 0.912,
+          "macro_f1": 0.883782
+        }
+      },
+      "routing_capacity_rows": 50,
+      "rows": 250,
+      "selected_rows": 50,
+      "selection_score_mean_accuracy": 0.926667,
+      "selection_score_mean_macro_f1": 0.892642
+    },
+    "minimum_confidence": {
+      "candidate_rows": 250,
+      "metrics": {
+        "intent": {
+          "accuracy": 0.912,
+          "macro_f1": 0.827126
+        },
+        "severity": {
+          "accuracy": 0.928,
+          "macro_f1": 0.717154,
+          "mae": 0.08
+        },
+        "topic": {
+          "accuracy": 0.892,
+          "macro_f1": 0.875009
+        }
+      },
+      "routing_capacity_rows": 50,
+      "rows": 250,
+      "selected_rows": 50,
+      "selection_score_mean_accuracy": 0.910667,
+      "selection_score_mean_macro_f1": 0.80643
+    },
+    "minimum_margin": {
+      "candidate_rows": 250,
+      "metrics": {
+        "intent": {
+          "accuracy": 0.916,
+          "macro_f1": 0.86004
+        },
+        "severity": {
+          "accuracy": 0.924,
+          "macro_f1": 0.686577,
+          "mae": 0.092
+        },
+        "topic": {
+          "accuracy": 0.884,
+          "macro_f1": 0.856534
+        }
+      },
+      "routing_capacity_rows": 50,
+      "rows": 250,
+      "selected_rows": 50,
+      "selection_score_mean_accuracy": 0.908,
+      "selection_score_mean_macro_f1": 0.80105
+    }
+  },
+  "development_only": true,
+  "golden_labels_loaded": false,
+  "local_model": {
+    "artifact_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/pilot-v1/distilled_model.joblib",
+    "artifact_sha256": "5b90b72652ef2f8138d53217d05935137a2eed7df58512706c87c7a8b2fc9a12",
+    "model_version": "distilled-tfidf-linear-v1"
+  },
+  "policy_selection": {
+    "candidate_strategies": [
+      "minimum_confidence",
+      "minimum_margin",
+      "mean_margin"
+    ],
+    "escalation_fraction": 0.2,
+    "selected_strategy": "mean_margin",
+    "selection_objective": "maximum mean macro-F1 across topic, intent, and severity after bounded teacher replacement; mean accuracy then strategy name break ties",
+    "selection_population": "calibration split only"
+  },
+  "source": {
+    "path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/data/checkpoint_500.csv",
+    "rows": 500,
+    "sha256": "a94e31663ee7b7eaa77e23b7a8425b530cc0c866ed5e714953172a0afef6a12f"
+  },
+  "split": {
+    "audit_rows": 250,
+    "calibration_rows": 250,
+    "method": "lowest SHA-256(seed + ':' + review_id) values",
+    "seed": "routing-calibration-v1"
+  },
+  "status": "completed",
+  "teacher": {
+    "description": "saved Codex Luna pseudo-labels, not human ground truth",
+    "path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/codex_luna/checkpoint-500-normal-usage-v2/predictions.csv",
+    "sha256": "1d095e7e94b16da6eddcfaf78fde4fc20cf66fe3571d32da0f82749f6f5ab09e"
+  }
+}

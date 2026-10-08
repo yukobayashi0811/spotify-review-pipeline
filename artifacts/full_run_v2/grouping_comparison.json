@@ -1,0 +1,68 @@
+{
+  "adopted": "embedding_v2",
+  "adoption_reason": "embedding_v2 has the higher membership-weighted coherent rate: embedding=0.671792, tfidf=0.461490.",
+  "comparison_rule": "Adopt the version with the higher overall membership-weighted coherent rate",
+  "embedding_v2": {
+    "coherent_issue_count": 19,
+    "coherent_issue_ratio": 0.4634146341463415,
+    "duplicate_normalized_name_count": 0,
+    "duplicate_normalized_names": [],
+    "issue_count": 41,
+    "membership_weighted_coherent_rate_overall": 0.671791601391912,
+    "membership_weighted_coherent_rate_top10": 0.7222369928010471,
+    "top10_incoherent_issue_ids": [
+      "I_PLAYBACK_08",
+      "I_OTHER_03",
+      "I_OTHER_04",
+      "I_USABILITY_01"
+    ],
+    "top10_issue_ids": [
+      "I_USABILITY_04",
+      "I_OTHER_01",
+      "I_USABILITY_03",
+      "I_BILLING_01",
+      "I_PLAYBACK_08",
+      "I_BILLING_03",
+      "I_ACCESS_03",
+      "I_OTHER_03",
+      "I_OTHER_04",
+      "I_USABILITY_01"
+    ]
+  },
+  "tfidf_v1": {
+    "coherent_issue_count": 31,
+    "coherent_issue_ratio": 0.6078431372549019,
+    "duplicate_normalized_name_count": 1,
+    "duplicate_normalized_names": [
+      {
+        "cluster_count": 2,
+        "normalized_name": "phone number login failure",
+        "topic": "access"
+      }
+    ],
+    "issue_count": 51,
+    "membership_weighted_coherent_rate_overall": 0.46149020532087454,
+    "membership_weighted_coherent_rate_top10": 0.2827265786605937,
+    "top10_incoherent_issue_ids": [
+      "I_OTHER_02",
+      "I_USABILITY_06",
+      "I_PLAYBACK_02",
+      "I_PLAYBACK_04",
+      "I_PLAYBACK_05",
+      "I_USABILITY_07"
+    ],
+    "top10_issue_ids": [
+      "I_OTHER_02",
+      "I_USABILITY_06",
+      "I_PLAYBACK_02",
+      "I_USABILITY_04",
+      "I_BILLING_04",
+      "I_PLAYBACK_04",
+      "I_PLAYBACK_05",
+      "I_USABILITY_07",
+      "I_PLAYBACK_01",
+      "I_BILLING_07"
+    ]
+  },
+  "top10_below_70_percent_limitation_required": false
+}

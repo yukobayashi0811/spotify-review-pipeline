@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-da18-72e2-b1e3-eb7ac3e72ca0"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"lyrics\"],\"evidence_quote\":\"not loading lyrics or the song not existing (it does)\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"520c9ec2-a9aa-4e7e-977b-a39942734702\",\"sentiment\":-0.35,\"severity\":3,\"topic\":\"catalog\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10776,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":156,"reasoning_output_tokens":66}}

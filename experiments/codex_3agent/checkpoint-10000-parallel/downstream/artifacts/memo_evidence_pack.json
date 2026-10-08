@@ -1,0 +1,178 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING": [
+      {
+        "evidence_quote": "i tried the mini premium paid for it 2x yet i wasn't able to have the said 1 day subscription",
+        "review_id": "0bf68fb6-2ebc-4035-a0ce-1e306b44f0e9",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "They will offer you 3 months and charge you the next month.",
+        "review_id": "10800b01-920d-4c22-91f5-521c45caf4f0",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "I miss a payment that I paid did I get charged again a couple days",
+        "review_id": "19781735-5ee7-414a-a034-bc33ccf91101",
+        "severity": 5
+      }
+    ],
+    "I_CATALOG": [
+      {
+        "evidence_quote": "I cannot search anything as it keeps saying no internet connection.",
+        "review_id": "12aee9cc-9342-43f7-9027-cf2bce87e3d0",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "i can't find or listen to any song i try searching.",
+        "review_id": "2d7b2ebe-826f-49cd-a109-b0ab3bf52c2d",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Unable to access any artist or podcast. Uninstalled.",
+        "review_id": "42da37cb-8bbf-4208-b9d1-5cde1a2c9dc4",
+        "severity": 4
+      }
+    ],
+    "I_OTHER": [
+      {
+        "evidence_quote": "it trase our history",
+        "review_id": "117770a7-cec9-4bc3-8a9f-a5d6f3544b5d",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Spotify is straight up a stalker app it tries to monitor you",
+        "review_id": "60511edc-f704-4572-8589-3409fce25701",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "is a very data has hacking for our mobile",
+        "review_id": "68a5d92a-1dca-40ba-b9f8-fc61a24b12a8",
+        "severity": 5
+      }
+    ],
+    "I_PLAYBACK": [
+      {
+        "evidence_quote": "now it's not even playing songs",
+        "review_id": "004d1c8a-a8c8-4746-b975-cd2f31c2a730",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "I can't play song",
+        "review_id": "022dcbce-b629-4b22-8dbf-900f748a3097",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "It's not working nor playing for me tried it reinstalling many times still didn't work.",
+        "review_id": "026ecef8-811d-4304-b77d-c5e6c8f68bd1",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY": [
+      {
+        "evidence_quote": "A lot of users dislike having their playlists available to the public despite not shown on their page.",
+        "review_id": "1dac4114-95bc-4029-9ab4-67ad2ed1be13",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "All my playlist is gone.",
+        "review_id": "7d26a988-37c4-4f3c-a876-bade969577a5",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "All my playlists are gone.",
+        "review_id": "982b2743-9b23-491c-a946-56304fc6e45a",
+        "severity": 5
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS": {
+      "description": "Users report errors or failures when creating accounts, signing in, or accessing the service after updates or while traveling.",
+      "issue_id": "I_ACCESS",
+      "issue_name": "Account login and access failures"
+    },
+    "I_BILLING": {
+      "description": "Users object to subscription requirements and restrictions on features such as skipping, replaying, selecting, downloading, and stream recognition.",
+      "issue_id": "I_BILLING",
+      "issue_name": "Subscription restrictions and entitlements"
+    },
+    "I_CATALOG": {
+      "description": "Users report missing music, search failures, removed content, and dissatisfaction with recommendation features.",
+      "issue_id": "I_CATALOG",
+      "issue_name": "Music availability, search, and recommendations"
+    },
+    "I_DOWNLOADS": {
+      "description": "Users report unavailable downloads or offline mode, deleted and repeatedly restored downloads, and problems with SD card storage.",
+      "issue_id": "I_DOWNLOADS",
+      "issue_name": "Downloads and offline listening"
+    },
+    "I_OTHER": {
+      "description": "Users express broad dissatisfaction, including disappointment after updates and reports that the app no longer works on their devices.",
+      "issue_id": "I_OTHER",
+      "issue_name": "General dissatisfaction and update issues"
+    },
+    "I_PLAYBACK": {
+      "description": "Users report songs stopping or failing to play, slow loading, unwanted audio behavior, and reduced video podcast playback support.",
+      "issue_id": "I_PLAYBACK",
+      "issue_name": "Playback failures and performance"
+    },
+    "I_SUPPORT": {
+      "description": "Users report difficulty contacting customer support and receiving timely responses.",
+      "issue_id": "I_SUPPORT",
+      "issue_name": "Customer support availability and response"
+    },
+    "I_USABILITY": {
+      "description": "Users report intrusive or repeated advertisements and the removal of convenient playback and navigation controls.",
+      "issue_id": "I_USABILITY",
+      "issue_name": "Navigation controls and ad interruptions"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 1159,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.562554",
+      "priority_score": 2970,
+      "rank": 1,
+      "severity_sum": 2970
+    },
+    {
+      "complaint_count": 1414,
+      "issue_id": "I_OTHER",
+      "mean_severity": "2.045262",
+      "priority_score": 2892,
+      "rank": 2,
+      "severity_sum": 2892
+    },
+    {
+      "complaint_count": 807,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.898389",
+      "priority_score": 2339,
+      "rank": 3,
+      "severity_sum": 2339
+    },
+    {
+      "complaint_count": 672,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.214286",
+      "priority_score": 2160,
+      "rank": 4,
+      "severity_sum": 2160
+    },
+    {
+      "complaint_count": 262,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.912214",
+      "priority_score": 763,
+      "rank": 5,
+      "severity_sum": 763
+    }
+  ]
+}

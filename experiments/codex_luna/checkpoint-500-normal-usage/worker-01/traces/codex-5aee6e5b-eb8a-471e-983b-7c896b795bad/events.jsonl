@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f91b-1679-7c72-b5b6-8201e12c4173"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"if you turn you'r phone of the music is steal going to keep going\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"9b7042bf-56c4-4b64-9c8a-3c6c10ca487b\",\"sentiment\":0.8,\"severity\":1,\"topic\":\"playback\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11276,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":95,"reasoning_output_tokens":0}}

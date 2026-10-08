@@ -1,0 +1,12 @@
+{
+  "duplicate_review_ids": [],
+  "evidence_quote_failures": [],
+  "exact_text_groups_split_across_workers": [],
+  "expected_records": 1,
+  "merged_records": 0,
+  "missing_review_ids": [
+    "codex-preflight-001"
+  ],
+  "unknown_review_ids": [],
+  "valid": false
+}

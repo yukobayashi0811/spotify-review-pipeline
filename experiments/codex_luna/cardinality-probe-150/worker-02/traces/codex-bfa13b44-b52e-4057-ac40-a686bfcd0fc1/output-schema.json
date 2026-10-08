@@ -1,0 +1,78 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "records": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "entities": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "evidence_quote": {
+            "type": "string"
+          },
+          "intent": {
+            "enum": [
+              "cancellation",
+              "complaint",
+              "request",
+              "praise",
+              "unclear"
+            ],
+            "type": "string"
+          },
+          "needs_review": {
+            "type": "boolean"
+          },
+          "review_id": {
+            "type": "string"
+          },
+          "sentiment": {
+            "maximum": 1,
+            "minimum": -1,
+            "type": "number"
+          },
+          "severity": {
+            "maximum": 5,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "topic": {
+            "enum": [
+              "access",
+              "usability",
+              "playback",
+              "downloads",
+              "catalog",
+              "billing",
+              "support",
+              "other"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "review_id",
+          "topic",
+          "intent",
+          "sentiment",
+          "severity",
+          "entities",
+          "evidence_quote",
+          "needs_review"
+        ],
+        "type": "object"
+      },
+      "maxItems": 10,
+      "minItems": 10,
+      "type": "array"
+    }
+  },
+  "required": [
+    "records"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,16 @@
+{
+  "classification_input_fields": [
+    "review_text"
+  ],
+  "human_label_fields_copied": [],
+  "note": "Prediction must run from this sanitized file. Scoring reads labels only after predictions are saved.",
+  "rows": 50,
+  "source_fields_copied": [
+    "review_id",
+    "review_text",
+    "review_rating",
+    "review_likes",
+    "app_version",
+    "review_timestamp"
+  ]
+}

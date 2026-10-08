@@ -1,0 +1,514 @@
+{
+  "actionable_ranking": [
+    {
+      "actionable": "yes",
+      "actionable_rank": 1,
+      "baseline_rank": 1,
+      "coherent": "yes",
+      "complaint_count": 10,
+      "description": "Users report various playback issues including crashes, getting stuck on loading screens, and inability to control playback accurately.",
+      "issue_id": "I_PLAYBACK_01",
+      "issue_name": "Playback Functionality Bugs",
+      "mean_severity": "3.200000",
+      "priority_score": 32,
+      "severity_sum": 32,
+      "topic": "playback"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 2,
+      "baseline_rank": 3,
+      "coherent": "yes",
+      "complaint_count": 10,
+      "description": "Users complain about intrusive advertisements and negative impacts from recent UI updates, such as random song playback or removal of controls for non-subscribers.",
+      "issue_id": "I_USABILITY_01",
+      "issue_name": "Excessive Ads and UI Changes",
+      "mean_severity": "2.500000",
+      "priority_score": 25,
+      "severity_sum": 25,
+      "topic": "usability"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 3,
+      "baseline_rank": 4,
+      "coherent": "yes",
+      "complaint_count": 9,
+      "description": "Users complain that recent updates have restricted basic music player features, forcing users to pay for premium access to functions like selecting songs or skipping freely.",
+      "issue_id": "I_BILLING_01",
+      "issue_name": "Feature restrictions requiring premium subscription",
+      "mean_severity": "2.666667",
+      "priority_score": 24,
+      "severity_sum": 24,
+      "topic": "billing"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 4,
+      "baseline_rank": 5,
+      "coherent": "yes",
+      "complaint_count": 6,
+      "description": "Users note issues regarding missing songs, inconsistent lyric availability, and unwanted recommendation features.",
+      "issue_id": "I_CATALOG_01",
+      "issue_name": "Content Availability and Display Issues",
+      "mean_severity": "2.666667",
+      "priority_score": 16,
+      "severity_sum": 16,
+      "topic": "catalog"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 5,
+      "baseline_rank": 6,
+      "coherent": "yes",
+      "complaint_count": 2,
+      "description": "Users are experiencing problems logging into their accounts, including password rejection and being unable to access the account.",
+      "issue_id": "I_ACCESS_01",
+      "issue_name": "Login/Access Issues",
+      "mean_severity": "3.500000",
+      "priority_score": 7,
+      "severity_sum": 7,
+      "topic": "access"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 6,
+      "baseline_rank": 7,
+      "coherent": "yes",
+      "complaint_count": 1,
+      "description": "A user reports that the offline download feature is not functioning correctly.",
+      "issue_id": "I_DOWNLOADS_01",
+      "issue_name": "Offline Download Failure",
+      "mean_severity": "3.000000",
+      "priority_score": 3,
+      "severity_sum": 3,
+      "topic": "downloads"
+    }
+  ],
+  "claim_rule": "Only baseline issue metrics may appear in claims. Topic rollups and corrected sensitivity values must be described separately and never exported as claims.",
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn.",
+    "Issue-level sensitivity correction cannot allocate predicted non-complaints into a latent issue.",
+    "The adopted grouping retains low_coherence issues even after one bounded split."
+  ],
+  "evidence": {
+    "I_ACCESS_01": [
+      {
+        "evidence_quote": "Will not except my password",
+        "review_id": "de0a9cdf-8974-48bc-802f-331228df4619",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "It not letting me into my account and there are to many ads",
+        "review_id": "32fb340f-4f9f-4551-8dae-755221e58d6a",
+        "severity": 3
+      }
+    ],
+    "I_BILLING_01": [
+      {
+        "evidence_quote": "I am using Spotify from past two years From last update they removed basic features of music player",
+        "review_id": "7084ced1-0428-4093-9328-442f74719b4f",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "to restrict all the features jst so people would purchase premium ..",
+        "review_id": "88439ec2-7c49-4c57-bedb-c5e098692aff",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Jaruri h premium lena?",
+        "review_id": "89ea2c30-db8b-459d-8ab7-bbcb7f92c774",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG_01": [
+      {
+        "evidence_quote": "Nice app! But many songs are not present here!",
+        "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "It is good but there is a problem that in some songs there is no lyrics and in some songs there is lyrics it's so confusing.",
+        "review_id": "47becad0-8ae5-4a10-9731-fde8f2091862",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "I am not interested in new music based on my preferences.",
+        "review_id": "618d1dbb-0186-4537-923a-7b4dabf19afb",
+        "severity": 3
+      }
+    ],
+    "I_DOWNLOADS_01": [
+      {
+        "evidence_quote": "Offline not workjng",
+        "review_id": "dcff57c6-abd6-413b-b255-aec3dc34fcbd",
+        "severity": 3
+      }
+    ],
+    "I_OTHER_01": [
+      {
+        "evidence_quote": "Aakhir kar spotify ne bhi apni bhikaariyo vali aukaat dikha di \"Gadar karbe\" Chanda mangna got real Bhikaariyo ko training dena bhi shuru kardo haramiyo",
+        "review_id": "3e82cf28-6b0a-4980-902c-b6aa154d353a",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "I can't use anything else but Spotify 💯👍🏼",
+        "review_id": "ba274609-2cbc-4d6a-9624-276d1c8246e8",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Worst app",
+        "review_id": "06a45bd5-3ed9-43af-b7f2-8b9487e2ffff",
+        "severity": 2
+      }
+    ],
+    "I_PLAYBACK_01": [
+      {
+        "evidence_quote": "I am unable to use my Google assistant on the app.it says playing your Spotify playlist but do not play the songs",
+        "review_id": "46ff0c74-5e86-4e5b-b4cd-36201aab0f9e",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "The latest update has caused my app to crash I cant open the app please fix.",
+        "review_id": "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "App is stuck on loading/logo screen",
+        "review_id": "66a29b3c-c14d-440e-b722-b23e0c99ae82",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY_01": [
+      {
+        "evidence_quote": "Decent,just let me have a solid 4-5 songs without an ad bro, it's always every 1 or 2 song then instant ads, that's all thanks",
+        "review_id": "3e8bdc92-4934-457e-85cc-8b9d14bf51c0",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "I apologise to your team for reverse your updated or change the new features to old features .",
+        "review_id": "5c9c17d3-9d6a-4fa1-a2a4-ae98eefbbd25",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "I don't want to scroll through 1 playlist or album or artist at a time.",
+        "review_id": "94c9f2f9-36fa-4c11-936e-660514fe7a35",
+        "severity": 3
+      }
+    ]
+  },
+  "grouping_comparison": {
+    "adopted": "pilot_topic_groups_v1",
+    "issue_count": 7,
+    "not_comparable_to_full_corpus_selection": true,
+    "scope": "100-review execution proof only"
+  },
+  "issues": {
+    "I_ACCESS_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users are experiencing problems logging into their accounts, including password rejection and being unable to access the account.",
+      "issue_id": "I_ACCESS_01",
+      "issue_name": "Login/Access Issues",
+      "topic": "access"
+    },
+    "I_BILLING_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users complain that recent updates have restricted basic music player features, forcing users to pay for premium access to functions like selecting songs or skipping freely.",
+      "issue_id": "I_BILLING_01",
+      "issue_name": "Feature restrictions requiring premium subscription",
+      "topic": "billing"
+    },
+    "I_CATALOG_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users note issues regarding missing songs, inconsistent lyric availability, and unwanted recommendation features.",
+      "issue_id": "I_CATALOG_01",
+      "issue_name": "Content Availability and Display Issues",
+      "topic": "catalog"
+    },
+    "I_DOWNLOADS_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "A user reports that the offline download feature is not functioning correctly.",
+      "issue_id": "I_DOWNLOADS_01",
+      "issue_name": "Offline Download Failure",
+      "topic": "downloads"
+    },
+    "I_OTHER_01": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Users express extreme dissatisfaction with the app, often citing recent updates or the business model as the cause for uninstalling or boycotting the service.",
+      "issue_id": "I_OTHER_01",
+      "issue_name": "General negative sentiment regarding the app/updates",
+      "topic": "other"
+    },
+    "I_PLAYBACK_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report various playback issues including crashes, getting stuck on loading screens, and inability to control playback accurately.",
+      "issue_id": "I_PLAYBACK_01",
+      "issue_name": "Playback Functionality Bugs",
+      "topic": "playback"
+    },
+    "I_USABILITY_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users complain about intrusive advertisements and negative impacts from recent UI updates, such as random song playback or removal of controls for non-subscribers.",
+      "issue_id": "I_USABILITY_01",
+      "issue_name": "Excessive Ads and UI Changes",
+      "topic": "usability"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 10,
+      "issue_id": "I_PLAYBACK_01",
+      "mean_severity": "3.200000",
+      "priority_score": 32,
+      "rank": 1,
+      "severity_sum": 32
+    },
+    {
+      "complaint_count": 14,
+      "issue_id": "I_OTHER_01",
+      "mean_severity": "2.142857",
+      "priority_score": 30,
+      "rank": 2,
+      "severity_sum": 30
+    },
+    {
+      "complaint_count": 10,
+      "issue_id": "I_USABILITY_01",
+      "mean_severity": "2.500000",
+      "priority_score": 25,
+      "rank": 3,
+      "severity_sum": 25
+    },
+    {
+      "complaint_count": 9,
+      "issue_id": "I_BILLING_01",
+      "mean_severity": "2.666667",
+      "priority_score": 24,
+      "rank": 4,
+      "severity_sum": 24
+    },
+    {
+      "complaint_count": 6,
+      "issue_id": "I_CATALOG_01",
+      "mean_severity": "2.666667",
+      "priority_score": 16,
+      "rank": 5,
+      "severity_sum": 16
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "I_ACCESS_01",
+      "mean_severity": "3.500000",
+      "priority_score": 7,
+      "rank": 6,
+      "severity_sum": 7
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "I_DOWNLOADS_01",
+      "mean_severity": "3.000000",
+      "priority_score": 3,
+      "rank": 7,
+      "severity_sum": 3
+    }
+  ],
+  "sensitivity_summary": {
+    "adjusted_topics": [
+      {
+        "complaint_count": 10,
+        "mean_severity": "3.200000",
+        "priority_score": 32,
+        "rank": 1,
+        "severity_sum": 32,
+        "topic": "playback"
+      },
+      {
+        "complaint_count": 14,
+        "mean_severity": "2.142857",
+        "priority_score": 30,
+        "rank": 2,
+        "severity_sum": 30,
+        "topic": "other"
+      },
+      {
+        "complaint_count": 10,
+        "mean_severity": "2.500000",
+        "priority_score": 25,
+        "rank": 3,
+        "severity_sum": 25,
+        "topic": "usability"
+      },
+      {
+        "complaint_count": 9,
+        "mean_severity": "2.666667",
+        "priority_score": 24,
+        "rank": 4,
+        "severity_sum": 24,
+        "topic": "billing"
+      },
+      {
+        "complaint_count": 6,
+        "mean_severity": "2.666667",
+        "priority_score": 16,
+        "rank": 5,
+        "severity_sum": 16,
+        "topic": "catalog"
+      },
+      {
+        "complaint_count": 2,
+        "mean_severity": "3.500000",
+        "priority_score": 7,
+        "rank": 6,
+        "severity_sum": 7,
+        "topic": "access"
+      },
+      {
+        "complaint_count": 1,
+        "mean_severity": "3.000000",
+        "priority_score": 3,
+        "rank": 7,
+        "severity_sum": 3,
+        "topic": "downloads"
+      }
+    ],
+    "limitations": [
+      "This 100-review proof is too small for a separate weighted sensitivity fit.",
+      "Use artifacts/full_run_v2/sensitivity_analysis.json for the formal analysis."
+    ],
+    "rank_stability": {
+      "baseline_top_issue_id": "I_PLAYBACK_01",
+      "note": "The formal weighted 300-review verifier sensitivity is a full-run artifact."
+    },
+    "top_adjusted_issues": [
+      {
+        "complaint_count": 10,
+        "issue_id": "I_PLAYBACK_01",
+        "mean_severity": "3.200000",
+        "priority_score": 32,
+        "rank": 1,
+        "severity_sum": 32
+      },
+      {
+        "complaint_count": 14,
+        "issue_id": "I_OTHER_01",
+        "mean_severity": "2.142857",
+        "priority_score": 30,
+        "rank": 2,
+        "severity_sum": 30
+      },
+      {
+        "complaint_count": 10,
+        "issue_id": "I_USABILITY_01",
+        "mean_severity": "2.500000",
+        "priority_score": 25,
+        "rank": 3,
+        "severity_sum": 25
+      },
+      {
+        "complaint_count": 9,
+        "issue_id": "I_BILLING_01",
+        "mean_severity": "2.666667",
+        "priority_score": 24,
+        "rank": 4,
+        "severity_sum": 24
+      },
+      {
+        "complaint_count": 6,
+        "issue_id": "I_CATALOG_01",
+        "mean_severity": "2.666667",
+        "priority_score": 16,
+        "rank": 5,
+        "severity_sum": 16
+      },
+      {
+        "complaint_count": 2,
+        "issue_id": "I_ACCESS_01",
+        "mean_severity": "3.500000",
+        "priority_score": 7,
+        "rank": 6,
+        "severity_sum": 7
+      },
+      {
+        "complaint_count": 1,
+        "issue_id": "I_DOWNLOADS_01",
+        "mean_severity": "3.000000",
+        "priority_score": 3,
+        "rank": 7,
+        "severity_sum": 3
+      }
+    ]
+  },
+  "topic_rollup": [
+    {
+      "complaint_count": 10,
+      "mean_severity": "3.200000",
+      "priority_score": 32,
+      "rank": 1,
+      "severity_sum": 32,
+      "topic": "playback"
+    },
+    {
+      "complaint_count": 14,
+      "mean_severity": "2.142857",
+      "priority_score": 30,
+      "rank": 2,
+      "severity_sum": 30,
+      "topic": "other"
+    },
+    {
+      "complaint_count": 10,
+      "mean_severity": "2.500000",
+      "priority_score": 25,
+      "rank": 3,
+      "severity_sum": 25,
+      "topic": "usability"
+    },
+    {
+      "complaint_count": 9,
+      "mean_severity": "2.666667",
+      "priority_score": 24,
+      "rank": 4,
+      "severity_sum": 24,
+      "topic": "billing"
+    },
+    {
+      "complaint_count": 6,
+      "mean_severity": "2.666667",
+      "priority_score": 16,
+      "rank": 5,
+      "severity_sum": 16,
+      "topic": "catalog"
+    },
+    {
+      "complaint_count": 2,
+      "mean_severity": "3.500000",
+      "priority_score": 7,
+      "rank": 6,
+      "severity_sum": 7,
+      "topic": "access"
+    },
+    {
+      "complaint_count": 1,
+      "mean_severity": "3.000000",
+      "priority_score": 3,
+      "rank": 7,
+      "severity_sum": 3,
+      "topic": "downloads"
+    }
+  ],
+  "verification_summary": {
+    "intent": 0.5,
+    "severity_exact": 0.9,
+    "severity_mae": 0.1,
+    "topic": 1.0
+  }
+}

@@ -1,0 +1,12 @@
+{"type":"thread.started","thread_id":"01a0f852-ce81-7580-a951-87a29274edcd"}
+{"type":"turn.started"}
+{"type":"error","message":"Reconnecting... 2/5 (stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known)"}
+{"type":"error","message":"Reconnecting... 3/5 (stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known)"}
+{"type":"error","message":"Reconnecting... 4/5 (stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known)"}
+{"type":"error","message":"Reconnecting... 5/5 (stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known)"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Falling back from WebSockets to HTTPS transport. stream disconnected before completion: failed to lookup address information: nodename nor servname provided, or not known"}}
+{"type":"error","message":"Reconnecting... waiting for network (Connection failed: error sending request)"}
+{"type":"error","message":"Reconnecting... waiting for network (Connection failed: error sending request)"}
+{"type":"error","message":"Reconnecting... waiting for network (Connection failed: error sending request)"}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"{\"records\":[{\"entities\":[\"advertising\",\"podcasts\",\"iHeart\"],\"evidence_quote\":\"I spend more time stopping to find the next episode than I did on Iheart\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"67445de1-8f50-44c7-894e-a44064898877\",\"sentiment\":-0.65,\"severity\":3,\"topic\":\"usability\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10890,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":211,"reasoning_output_tokens":110}}

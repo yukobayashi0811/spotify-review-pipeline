@@ -1,0 +1,240 @@
+{
+  "checkpoint": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/hybrid-500-uncertainty-v2",
+  "checks": [
+    {
+      "detail": {
+        "eligible": 230,
+        "memberships": 230
+      },
+      "name": "one_membership_per_complaint_or_cancellation",
+      "passed": true
+    },
+    {
+      "detail": {
+        "csv": 230,
+        "database": 230
+      },
+      "name": "membership_csv_matches_database",
+      "passed": true
+    },
+    {
+      "detail": {
+        "recomputed": [
+          {
+            "complaint_count": 62,
+            "issue_id": "I_USABILITY",
+            "mean_severity": "2.580645",
+            "priority_score": 160,
+            "rank": 1,
+            "severity_sum": 160
+          },
+          {
+            "complaint_count": 42,
+            "issue_id": "I_PLAYBACK",
+            "mean_severity": "3.238095",
+            "priority_score": 136,
+            "rank": 2,
+            "severity_sum": 136
+          },
+          {
+            "complaint_count": 58,
+            "issue_id": "I_OTHER",
+            "mean_severity": "1.982759",
+            "priority_score": 115,
+            "rank": 3,
+            "severity_sum": 115
+          },
+          {
+            "complaint_count": 39,
+            "issue_id": "I_BILLING",
+            "mean_severity": "2.769231",
+            "priority_score": 108,
+            "rank": 4,
+            "severity_sum": 108
+          },
+          {
+            "complaint_count": 18,
+            "issue_id": "I_CATALOG",
+            "mean_severity": "2.833333",
+            "priority_score": 51,
+            "rank": 5,
+            "severity_sum": 51
+          },
+          {
+            "complaint_count": 6,
+            "issue_id": "I_ACCESS",
+            "mean_severity": "3.833333",
+            "priority_score": 23,
+            "rank": 6,
+            "severity_sum": 23
+          },
+          {
+            "complaint_count": 5,
+            "issue_id": "I_DOWNLOADS",
+            "mean_severity": "3.400000",
+            "priority_score": 17,
+            "rank": 7,
+            "severity_sum": 17
+          }
+        ],
+        "saved": [
+          {
+            "complaint_count": 62,
+            "issue_id": "I_USABILITY",
+            "mean_severity": "2.580645",
+            "priority_score": 160,
+            "rank": 1,
+            "severity_sum": 160
+          },
+          {
+            "complaint_count": 42,
+            "issue_id": "I_PLAYBACK",
+            "mean_severity": "3.238095",
+            "priority_score": 136,
+            "rank": 2,
+            "severity_sum": 136
+          },
+          {
+            "complaint_count": 58,
+            "issue_id": "I_OTHER",
+            "mean_severity": "1.982759",
+            "priority_score": 115,
+            "rank": 3,
+            "severity_sum": 115
+          },
+          {
+            "complaint_count": 39,
+            "issue_id": "I_BILLING",
+            "mean_severity": "2.769231",
+            "priority_score": 108,
+            "rank": 4,
+            "severity_sum": 108
+          },
+          {
+            "complaint_count": 18,
+            "issue_id": "I_CATALOG",
+            "mean_severity": "2.833333",
+            "priority_score": 51,
+            "rank": 5,
+            "severity_sum": 51
+          },
+          {
+            "complaint_count": 6,
+            "issue_id": "I_ACCESS",
+            "mean_severity": "3.833333",
+            "priority_score": 23,
+            "rank": 6,
+            "severity_sum": 23
+          },
+          {
+            "complaint_count": 5,
+            "issue_id": "I_DOWNLOADS",
+            "mean_severity": "3.400000",
+            "priority_score": 17,
+            "rank": 7,
+            "severity_sum": 17
+          }
+        ]
+      },
+      "name": "ranking_recomputed_exactly",
+      "passed": true
+    },
+    {
+      "detail": 7,
+      "name": "issue_definitions_cover_ranking",
+      "passed": true
+    },
+    {
+      "detail": {
+        "saved": 50,
+        "selected": 50
+      },
+      "name": "verification_sample_complete",
+      "passed": true
+    },
+    {
+      "detail": {
+        "intent": 0.88,
+        "severity_exact": 0.78,
+        "severity_mae": 0.22,
+        "topic": 0.86
+      },
+      "name": "verification_metrics_in_bounds",
+      "passed": true
+    },
+    {
+      "detail": {
+        "detected": true,
+        "note": "The planted label exists only in this test copy and is excluded from business outputs.",
+        "planted_topic": "access",
+        "review_id": "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+        "synthetic_test": true,
+        "verifier_topic": "playback"
+      },
+      "name": "planted_error_detected",
+      "passed": true
+    },
+    {
+      "detail": {
+        "invalid_claim_ids": [],
+        "top_issue": "I_USABILITY"
+      },
+      "name": "memo_claims_supported_by_ranking_and_evidence_pack",
+      "passed": true
+    },
+    {
+      "detail": 4,
+      "name": "claims_csv_matches_payload",
+      "passed": true
+    },
+    {
+      "detail": [
+        {
+          "outcome": "succeeded",
+          "provider": "codex-exec-subscription",
+          "role": "verify"
+        },
+        {
+          "outcome": "succeeded",
+          "provider": "codex-exec-subscription",
+          "role": "verify"
+        },
+        {
+          "outcome": "succeeded",
+          "provider": "codex-exec-subscription",
+          "role": "verify"
+        },
+        {
+          "outcome": "succeeded",
+          "provider": "codex-exec-subscription",
+          "role": "group"
+        },
+        {
+          "outcome": "succeeded",
+          "provider": "codex-exec-subscription",
+          "role": "memo"
+        }
+      ],
+      "name": "cold_downstream_roles_succeeded",
+      "passed": true
+    },
+    {
+      "detail": [],
+      "name": "codex_traces_are_credential_and_tool_free",
+      "passed": true
+    },
+    {
+      "detail": {
+        "group_model_called": false,
+        "memo_model_called": false,
+        "provider_calls": 0,
+        "verification_pending": 0
+      },
+      "name": "warm_replay_zero_model_calls",
+      "passed": true
+    }
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "passed": true
+}

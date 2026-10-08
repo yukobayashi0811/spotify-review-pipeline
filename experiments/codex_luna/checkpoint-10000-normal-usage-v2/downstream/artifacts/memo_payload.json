@@ -1,0 +1,63 @@
+{
+  "alternatives": [
+    "I_PLAYBACK ranks third (priority score 2167) and is a focused alternative if Spotify prioritizes playback failures over the broader usability issue."
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "issue_id": "I_USABILITY",
+      "metric": "complaint_count",
+      "review_ids": [
+        "91132204-877d-4ac1-9d08-20d03f1414f6",
+        "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8",
+        "ee11e1df-cb73-4c3a-b5e8-7268c7872b01"
+      ],
+      "sentence": "I_USABILITY has the highest complaint count in the supplied ranking.",
+      "value": "1181"
+    },
+    {
+      "claim_id": "C002",
+      "issue_id": "I_USABILITY",
+      "metric": "severity_sum",
+      "review_ids": [
+        "91132204-877d-4ac1-9d08-20d03f1414f6",
+        "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8",
+        "ee11e1df-cb73-4c3a-b5e8-7268c7872b01"
+      ],
+      "sentence": "I_USABILITY has the highest severity sum in the supplied ranking.",
+      "value": "3003"
+    },
+    {
+      "claim_id": "C003",
+      "issue_id": "I_USABILITY",
+      "metric": "mean_severity",
+      "review_ids": [
+        "91132204-877d-4ac1-9d08-20d03f1414f6",
+        "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8",
+        "ee11e1df-cb73-4c3a-b5e8-7268c7872b01"
+      ],
+      "sentence": "I_USABILITY's mean severity is copied from its row in the supplied ranking.",
+      "value": "2.542760"
+    },
+    {
+      "claim_id": "C004",
+      "issue_id": "I_USABILITY",
+      "metric": "priority_score",
+      "review_ids": [
+        "91132204-877d-4ac1-9d08-20d03f1414f6",
+        "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8",
+        "ee11e1df-cb73-4c3a-b5e8-7268c7872b01"
+      ],
+      "sentence": "I_USABILITY has the highest priority score under the required complaint-count times mean-severity baseline.",
+      "value": "3003"
+    }
+  ],
+  "limitations": [
+    "This is a historical, self-selected review sample, not the complete customer population.",
+    "The pack has no complete customer population, revenue, plan tier, or confirmed churn data.",
+    "The data does not establish causal retention effects.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "priority": "Focus next-quarter effort on I_USABILITY — Controls, navigation, and interruptions.",
+  "rationale": "Under the required complaint_count × mean_severity baseline, I_USABILITY ranks first with a priority score of 3003. Its description covers frustrating controls and navigation, frequent ads, and unwanted audio behavior; the supplied representative reviews include reports of automatic playback and missing playlists. I_PLAYBACK is an alternative focused on songs failing to play, but ranks third with a lower score of 2167. The ranking supports prioritization by complaint volume and severity, not a conclusion about retention impact."
+}

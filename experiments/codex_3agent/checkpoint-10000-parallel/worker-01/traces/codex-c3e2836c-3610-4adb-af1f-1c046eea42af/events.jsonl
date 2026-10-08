@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-c739-7980-b3b3-a8db25f3ac39"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"It's starting to spam me with stuff everytime I open it up\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"81c3c4f2-d4cc-443d-858b-cbdd110aee32\",\"sentiment\":-0.2,\"severity\":2,\"topic\":\"usability\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10757,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":88,"reasoning_output_tokens":0}}

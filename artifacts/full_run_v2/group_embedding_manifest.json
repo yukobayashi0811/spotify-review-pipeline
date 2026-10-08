@@ -1,0 +1,15 @@
+{
+  "device": "mps",
+  "dimensions": 384,
+  "dtype": "float32",
+  "embedding_npy_sha256": "8d9594e4acffb940568a00a4063c1b71003eeb25b4cfb634611d4b5c1c52361c",
+  "input_sha256": "45a3c33afc1055358f3b8d479c1cd78ad323023e9aa55143a5486e43267b7b96",
+  "mapping_csv_sha256": "2db565d04425dc0928c6a636409cb86b88715aed9f7518cff03e604f6a84fb04",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_snapshot_path": "/Users/Yu/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "model_snapshot_tree_sha256": "bcc5e8534a252ee9f4d96ef9c628f5edc71227babe70d49ae3e7a954cb6913b9",
+  "normalized": true,
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "rows": 250841,
+  "selection_rule": "full review text when word_count <= 25; otherwise saved evidence_quote"
+}

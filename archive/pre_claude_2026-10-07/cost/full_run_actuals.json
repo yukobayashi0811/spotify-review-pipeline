@@ -1,0 +1,380 @@
+{
+  "account_usage": {
+    "after_all_used_percent": 90,
+    "after_first_1000_used_percent": 63,
+    "before_first_1000_used_percent": 61,
+    "limitation": "This account-level percentage is shared usage and cannot be attributed solely to this assignment."
+  },
+  "billing_note": "All Luna calls used ChatGPT/Codex subscription authentication. USD figures are API-rate equivalents, not invoices.",
+  "calendar_span_new_luna_utc": [
+    "2026-10-03 04:24:33",
+    "2026-10-03 16:25:00"
+  ],
+  "calendar_span_note": "Calendar span includes development and review pauses; it is not a pipeline runtime.",
+  "failed_attempts_not_in_text_ledger": [
+    {
+      "cached_input_tokens": 9984,
+      "calls": 1,
+      "input_tokens": 12911,
+      "luna_api_equivalent_usd": 0.00066554,
+      "note": "Failed validation attempt of the adopted grouping run; its texts were re-sent and settled in G_EMBED_V3, so the per-text ledger does not carry these tokens.",
+      "output_tokens": 546,
+      "role": "group",
+      "run_id": "embedding-group-v3-5ee24795-41e7-4549-a82a-799c1cde0c3e",
+      "summed_call_seconds": 13.126
+    }
+  ],
+  "final_label_sources": {
+    "local": 526528,
+    "luna": 134081,
+    "quarantined": 13
+  },
+  "first_1000_gate": {
+    "source": "artifacts/full_run_v2/APPROVAL_GATE_REPORT.md",
+    "summed_call_seconds": 994.515,
+    "wall_seconds_three_workers": 442.001
+  },
+  "frozen_v1_stages_not_adopted": {
+    "group_v1_wall_seconds": 234.433516,
+    "note": "Grouping v1 (TF-IDF, 51 issues) and memo v1 ran inside the frozen run but were superseded by the embedding grouping and memo v2.",
+    "recommend_v1_wall_seconds": 15.959661
+  },
+  "generated_at_utc": "2026-10-07T00:38:35Z",
+  "generated_from_saved_evidence": true,
+  "legacy_teacher_10000": {
+    "calls": [
+      {
+        "cached_input_tokens": 39936,
+        "calls": 4,
+        "input_tokens": 50906,
+        "luna_api_equivalent_usd": 0.00634586,
+        "outcome": "failed",
+        "output_tokens": 9699,
+        "summed_call_seconds": 187.325
+      },
+      {
+        "cached_input_tokens": 1759232,
+        "calls": 187,
+        "input_tokens": 2359632,
+        "luna_api_equivalent_usd": 0.28318182,
+        "outcome": "succeeded",
+        "output_tokens": 411099,
+        "summed_call_seconds": 8385.319
+      }
+    ],
+    "source": "state.db calls (run_id codex-dev-*), experiments/codex_3agent/checkpoint-10000-parallel/benchmark_report.json",
+    "teacher_labels_kept": 8448,
+    "total_wall_seconds": "unknown",
+    "total_wall_seconds_reason": "unavailable because two earlier invocations ended before their outer timing report was written",
+    "wall_seconds_final_resume_invocation": 2948.350111,
+    "wall_seconds_scope": "final successful resume invocation only"
+  },
+  "local_and_downstream_stages": [
+    {
+      "rows_or_texts": 484189,
+      "source": "artifacts/full_run_v2/APPROVAL_GATE_REPORT.md",
+      "stage": "Local router preflight: score all distinct texts (first run)",
+      "wall_seconds": 168.874
+    },
+    {
+      "rows_or_texts": 484189,
+      "source": "state.db router_scores.scored_at (min/max)",
+      "stage": "Local router scoring persisted to state (scored_at span)",
+      "wall_seconds": 137.0
+    },
+    {
+      "rows_or_texts": null,
+      "source": "experiments/distilled/al1-v2/summary.json",
+      "stage": "AL1 local model training + evaluation",
+      "wall_seconds": 40.792966
+    },
+    {
+      "rows_or_texts": 484189,
+      "source": "artifacts/full_run_v2/al2_selection.json",
+      "stage": "AL2 selection over router scores",
+      "wall_seconds": 143.658548
+    },
+    {
+      "rows_or_texts": null,
+      "source": "experiments/distilled/al2-final-v2/summary.json",
+      "stage": "Final local model training + evaluation (artifact a5279d07\u2026)",
+      "wall_seconds": 52.119859
+    },
+    {
+      "rows_or_texts": 400,
+      "source": "artifacts/full_run_v2/verification/verification_report.json",
+      "stage": "Verification script (400 texts incl. Luna calls)",
+      "wall_seconds": 368.848412
+    },
+    {
+      "rows_or_texts": null,
+      "source": "state.db calls run_id full-local-final-69de6e18-f2ec-484f-9acc-c3b2db577302 (created_at span; row count not separately receipted)",
+      "stage": "Local finalization, first pass (calls span)",
+      "wall_seconds": 79.0
+    },
+    {
+      "rows_or_texts": 1530,
+      "source": "evals/recovery/initial_finalization_report.json",
+      "stage": "Local finalization, interrupted demo phase (SIGINT)",
+      "wall_seconds": 4.77803
+    },
+    {
+      "rows_or_texts": 249035,
+      "source": "evals/recovery/resume_finalization_report.json",
+      "stage": "Local finalization, resume to completion",
+      "wall_seconds": 110.430001
+    },
+    {
+      "rows_or_texts": 660622,
+      "source": "artifacts/full_run_v2/frozen_run_summary.json",
+      "stage": "Frozen run: prepare (ingest 660,622 rows)",
+      "wall_seconds": 19.388242
+    },
+    {
+      "rows_or_texts": 288524,
+      "source": "artifacts/full_run_v2/grouping_v3_run.json",
+      "stage": "Adopted embedding grouping + Luna naming (v3 rebuild)",
+      "wall_seconds": 349.557455
+    },
+    {
+      "rows_or_texts": null,
+      "source": "artifacts/full_run_v2/frozen_run_summary.json",
+      "stage": "Frozen run: rank",
+      "wall_seconds": 0.450667
+    },
+    {
+      "rows_or_texts": 660622,
+      "source": "artifacts/full_run_v2/frozen_run_summary.json",
+      "stage": "Frozen run: export grading files",
+      "wall_seconds": 6.558723
+    },
+    {
+      "rows_or_texts": null,
+      "source": "state.db luna_ledger bucket M_EMBED_V3",
+      "stage": "Adopted memo (2 Luna attempts; ledger span)",
+      "wall_seconds": 95.0
+    }
+  ],
+  "local_compute_cost": "unknown (hardware/electricity not metered)",
+  "measured_stage_wall_seconds_sum": 1576.457,
+  "measured_stage_wall_seconds_sum_note": "Sum of the separately timed stages listed above (excludes Luna teacher-label runs and the legacy 10,000 run). Stages were run as separate invocations, so no single end-to-end wall time exists.",
+  "model_calls_made_by_this_script": 0,
+  "new_luna_calls": [
+    {
+      "adoption": "adopted (training data)",
+      "bucket": "AL1",
+      "cached_input_tokens": 297520,
+      "calls": 31,
+      "input_tokens": 411732,
+      "ledger_first_reserved_utc": "2026-10-03 04:24:33",
+      "ledger_last_settled_utc": "2026-10-03 04:48:44",
+      "ledger_span_seconds": 1451.0,
+      "luna_api_equivalent_usd": 0.0536784,
+      "output_tokens": 78564,
+      "purpose": "Teacher labels: active-learning round 1",
+      "status": "succeeded",
+      "summed_call_seconds": 1542.165,
+      "texts": 1500
+    },
+    {
+      "adoption": "adopted (training data)",
+      "bucket": "H",
+      "cached_input_tokens": 11984,
+      "calls": 2,
+      "input_tokens": 14316,
+      "ledger_first_reserved_utc": "2026-10-03 04:24:33",
+      "ledger_last_settled_utc": "2026-10-03 04:33:27",
+      "ledger_span_seconds": 534.0,
+      "luna_api_equivalent_usd": 0.00164204,
+      "output_tokens": 2578,
+      "purpose": "Teacher labels: hard/uncertain texts",
+      "status": "succeeded",
+      "summed_call_seconds": 50.671,
+      "texts": 60
+    },
+    {
+      "adoption": "adopted (training data)",
+      "bucket": "R",
+      "cached_input_tokens": 99840,
+      "calls": 11,
+      "input_tokens": 138286,
+      "ledger_first_reserved_utc": "2026-10-03 04:24:33",
+      "ledger_last_settled_utc": "2026-10-03 04:33:27",
+      "ledger_span_seconds": 534.0,
+      "luna_api_equivalent_usd": 0.0177025,
+      "output_tokens": 25719,
+      "purpose": "Teacher labels: random texts",
+      "status": "succeeded",
+      "summed_call_seconds": 501.674,
+      "texts": 500
+    },
+    {
+      "adoption": "adopted (training data)",
+      "bucket": "AL2",
+      "cached_input_tokens": 299520,
+      "calls": 30,
+      "input_tokens": 401136,
+      "ledger_first_reserved_utc": "2026-10-03 04:54:06",
+      "ledger_last_settled_utc": "2026-10-03 05:03:25",
+      "ledger_span_seconds": 559.0,
+      "luna_api_equivalent_usd": 0.0518953,
+      "output_tokens": 77477,
+      "purpose": "Teacher labels: active-learning round 2",
+      "status": "succeeded",
+      "summed_call_seconds": 1575.633,
+      "texts": 1500
+    },
+    {
+      "adoption": "adopted",
+      "bucket": "V",
+      "cached_input_tokens": 9984,
+      "calls": 8,
+      "input_tokens": 101681,
+      "ledger_first_reserved_utc": "2026-10-03 05:10:10",
+      "ledger_last_settled_utc": "2026-10-03 05:13:49",
+      "ledger_span_seconds": 219.0,
+      "luna_api_equivalent_usd": 0.02050704,
+      "output_tokens": 22475,
+      "purpose": "Independent verification sample (300 local / 100 Luna test-retest)",
+      "status": "succeeded",
+      "summed_call_seconds": 462.836,
+      "texts": 400
+    },
+    {
+      "adoption": "superseded (grouping v1 not adopted)",
+      "bucket": "G",
+      "cached_input_tokens": 29952,
+      "calls": 11,
+      "input_tokens": 158953,
+      "ledger_first_reserved_utc": "2026-10-03 05:46:26",
+      "ledger_last_settled_utc": "2026-10-03 05:48:34",
+      "ledger_span_seconds": 128.0,
+      "luna_api_equivalent_usd": 0.01546962,
+      "output_tokens": 4540,
+      "purpose": "Issue naming for TF-IDF grouping v1",
+      "status": "succeeded",
+      "summed_call_seconds": 127.103,
+      "texts": 510
+    },
+    {
+      "adoption": "superseded (memo v1 not adopted)",
+      "bucket": "M",
+      "cached_input_tokens": 0,
+      "calls": 1,
+      "input_tokens": 14306,
+      "ledger_first_reserved_utc": "2026-10-03 05:48:37",
+      "ledger_last_settled_utc": "2026-10-03 05:48:53",
+      "ledger_span_seconds": 16.0,
+      "luna_api_equivalent_usd": 0.0017971,
+      "output_tokens": 733,
+      "purpose": "Memo for grouping v1",
+      "status": "succeeded",
+      "summed_call_seconds": 15.805,
+      "texts": 1
+    },
+    {
+      "adoption": "adopted",
+      "bucket": "G_EMBED_V3",
+      "cached_input_tokens": 29952,
+      "calls": 13,
+      "input_tokens": 172620,
+      "ledger_first_reserved_utc": "2026-10-03 16:08:52",
+      "ledger_last_settled_utc": "2026-10-03 16:12:01",
+      "ledger_span_seconds": 189.0,
+      "luna_api_equivalent_usd": 0.01768432,
+      "output_tokens": 6236,
+      "purpose": "Issue naming/review for adopted embedding grouping",
+      "status": "succeeded",
+      "summed_call_seconds": 174.762,
+      "texts": 565
+    },
+    {
+      "adoption": "adopted",
+      "bucket": "M_EMBED_V3",
+      "cached_input_tokens": 0,
+      "calls": 1,
+      "input_tokens": 25375,
+      "ledger_first_reserved_utc": "2026-10-03 16:23:25",
+      "ledger_last_settled_utc": "2026-10-03 16:24:14",
+      "ledger_span_seconds": 49.0,
+      "luna_api_equivalent_usd": 0.003677,
+      "output_tokens": 2279,
+      "purpose": "Recommendation memo for adopted grouping",
+      "status": "failed",
+      "summed_call_seconds": 48.499,
+      "texts": 1
+    },
+    {
+      "adoption": "adopted",
+      "bucket": "M_EMBED_V3",
+      "cached_input_tokens": 0,
+      "calls": 1,
+      "input_tokens": 25397,
+      "ledger_first_reserved_utc": "2026-10-03 16:24:14",
+      "ledger_last_settled_utc": "2026-10-03 16:25:00",
+      "ledger_span_seconds": 46.0,
+      "luna_api_equivalent_usd": 0.0037467,
+      "output_tokens": 2414,
+      "purpose": "Recommendation memo for adopted grouping",
+      "status": "succeeded",
+      "summed_call_seconds": 45.97,
+      "texts": 1
+    }
+  ],
+  "new_luna_totals": {
+    "adopted": {
+      "cached_input_tokens": 748800,
+      "input_tokens": 1290543,
+      "luna_api_equivalent_usd": 0.1705333,
+      "output_tokens": 217742,
+      "summed_call_seconds": 4402.21,
+      "texts": 4527
+    },
+    "superseded": {
+      "cached_input_tokens": 29952,
+      "input_tokens": 173259,
+      "luna_api_equivalent_usd": 0.01726672,
+      "output_tokens": 5273,
+      "summed_call_seconds": 142.908,
+      "texts": 511
+    }
+  },
+  "rates_source": "cost/rates.csv (codex-exec-subscription gpt-6-luna rows)",
+  "stage_runs_utc": [
+    {
+      "finished_utc": "2026-10-03 05:44:42",
+      "stage": "prepare",
+      "started_utc": "2026-10-03 05:44:23"
+    },
+    {
+      "finished_utc": "2026-10-03 05:44:42",
+      "stage": "classify",
+      "started_utc": "2026-10-03 05:44:42"
+    },
+    {
+      "finished_utc": "2026-10-03 05:44:42",
+      "stage": "verify",
+      "started_utc": "2026-10-03 05:44:42"
+    },
+    {
+      "finished_utc": "2026-10-03 05:48:37",
+      "stage": "group",
+      "started_utc": "2026-10-03 05:44:42"
+    },
+    {
+      "finished_utc": "2026-10-03 05:48:37",
+      "stage": "rank",
+      "started_utc": "2026-10-03 05:48:37"
+    },
+    {
+      "finished_utc": "2026-10-03 05:48:53",
+      "stage": "recommend",
+      "started_utc": "2026-10-03 05:48:37"
+    },
+    {
+      "finished_utc": "2026-10-03 05:49:00",
+      "stage": "export",
+      "started_utc": "2026-10-03 05:48:53"
+    }
+  ]
+}

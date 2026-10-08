@@ -1,0 +1,7 @@
+actionable_rank,baseline_rank,issue_id,topic,issue_name,description,coherent,actionable,complaint_count,severity_sum,mean_severity,priority_score
+1,1,I_PLAYBACK_01,playback,Playback Functionality Bugs,"Users report various playback issues including crashes, getting stuck on loading screens, and inability to control playback accurately.",yes,yes,10,32,3.200000,32
+2,3,I_USABILITY_01,usability,Excessive Ads and UI Changes,"Users complain about intrusive advertisements and negative impacts from recent UI updates, such as random song playback or removal of controls for non-subscribers.",yes,yes,10,25,2.500000,25
+3,4,I_BILLING_01,billing,Feature restrictions requiring premium subscription,"Users complain that recent updates have restricted basic music player features, forcing users to pay for premium access to functions like selecting songs or skipping freely.",yes,yes,9,24,2.666667,24
+4,5,I_CATALOG_01,catalog,Content Availability and Display Issues,"Users note issues regarding missing songs, inconsistent lyric availability, and unwanted recommendation features.",yes,yes,6,16,2.666667,16
+5,6,I_ACCESS_01,access,Login/Access Issues,"Users are experiencing problems logging into their accounts, including password rejection and being unable to access the account.",yes,yes,2,7,3.500000,7
+6,7,I_DOWNLOADS_01,downloads,Offline Download Failure,A user reports that the offline download feature is not functioning correctly.,yes,yes,1,3,3.000000,3

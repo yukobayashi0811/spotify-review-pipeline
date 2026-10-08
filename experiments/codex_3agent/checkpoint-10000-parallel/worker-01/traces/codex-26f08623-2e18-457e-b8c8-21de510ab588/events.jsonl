@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-a37a-73c1-9da2-0f63ea81a45f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"The variety of music is right in my wheelhouse\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"d66b12f2-920e-4f63-a2a1-e3774db15b13\",\"sentiment\":0.9,\"severity\":1,\"topic\":\"catalog\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10752,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":86,"reasoning_output_tokens":0}}

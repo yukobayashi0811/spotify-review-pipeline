@@ -1,0 +1,14 @@
+{
+  "batch_matches": true,
+  "cli_version": "codex-cli 0.159.3",
+  "compatible": true,
+  "expected_label_config": "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable",
+  "maximum_successful_batch": 50,
+  "observed_label_configs": [
+    "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable"
+  ],
+  "prompt_matches": true,
+  "prompt_sha256": "e417f005c44df4a1693b4470a8646f658a5d115db3ec9cedc20325bdb413def4",
+  "reasons": [],
+  "successful_enrich_calls": 187
+}

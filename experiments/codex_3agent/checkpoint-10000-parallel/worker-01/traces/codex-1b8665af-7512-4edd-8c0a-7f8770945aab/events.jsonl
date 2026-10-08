@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-1135-7113-92d7-08aeb360e874"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Uninstalled successfully 🙌.\",\"intent\":\"cancellation\",\"needs_review\":false,\"review_id\":\"4731e584-18a6-4bf5-be2f-092c7b919137\",\"sentiment\":-0.4,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10750,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":80,"reasoning_output_tokens":0}}

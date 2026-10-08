@@ -1,0 +1,27 @@
+{
+  "counts": {
+    "duplicate_review_ids": 0,
+    "empty_review_text": 0,
+    "missing_app_version": 1,
+    "records": 7
+  },
+  "exact_text": {
+    "distinct_nonempty_texts": 7,
+    "reusable_nonempty_rows": 0
+  },
+  "file_sha256": "5f3635c8dca4665fb887d635a41ebd8f9a925aace8669b7cb662c9292e14ce00",
+  "first_review": "2022-10-17 01:31:55",
+  "last_review": "2023-10-15 17:26:14",
+  "parsed_rows_sha256": "dace5672ce57a1dedba14728320442b4be8a97eb5ca4e292c068a48effc8a134",
+  "reviews_by_month": {
+    "2022-10": 1,
+    "2023-04": 1,
+    "2023-07": 4,
+    "2023-10": 1
+  },
+  "reviews_by_rating": {
+    "1": 4,
+    "2": 2,
+    "3": 1
+  }
+}

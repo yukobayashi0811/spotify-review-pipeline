@@ -1,0 +1,5 @@
+# Grading export status
+
+This folder is a scaffold, not a completed full-corpus submission. The actual full-file deterministic profile is included as `ingestion.json`. A real local 100-review cold/warm pilot, the local 500 checkpoint, and an optimized `gpt-6-luna` 10,000-review checkpoint are retained outside this folder. The Luna checkpoint completed all roles, 1,000 blind verifications, a traceable provisional memo, and an 18/18 independent validation receipt under `experiments/codex_luna/checkpoint-10000-normal-usage-v2/`. Model-dependent files in this grading folder remain incomplete because those results are explicitly development-only and the full run has not been executed.
+
+`spotify-pipeline export-grading` refuses to label an incomplete run as final unless `--allow-incomplete` is explicitly supplied. A final export must contain exactly one completed or quarantined record per source ID, all memberships, deterministic ranking, memo claims, call logs, and valid before/after checkpoints.

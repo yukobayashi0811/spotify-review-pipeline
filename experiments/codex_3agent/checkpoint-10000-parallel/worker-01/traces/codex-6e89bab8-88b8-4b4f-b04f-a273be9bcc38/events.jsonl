@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f864-febc-7a93-948a-8d89b146812b"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"lyrics\"],\"evidence_quote\":\"the lyrics don't pop up for some reason\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"852896fe-e12b-4a48-8009-07ec96ef2014\",\"sentiment\":-0.2,\"severity\":3,\"topic\":\"catalog\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10752,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":83,"reasoning_output_tokens":0}}

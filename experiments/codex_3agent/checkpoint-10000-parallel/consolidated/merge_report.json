@@ -1,0 +1,12 @@
+{
+  "completed_records": 10000,
+  "development_only": true,
+  "direct_exact_text_cache_hits": 1552,
+  "expected_records": 10000,
+  "experiment_id": "codex-dev-20261001T040740Z-280a9ec3",
+  "grading_eligible": false,
+  "input_sha256": "eaa62ca6d44d717302904a9c922e99b0b4584d174309cb45295ecbc2ba2a91b5",
+  "merged_calls": 234,
+  "state_path": "experiments/codex_3agent/checkpoint-10000-parallel/consolidated/state.db",
+  "valid": true
+}

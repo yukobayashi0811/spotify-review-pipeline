@@ -1,0 +1,17 @@
+{
+  "name": "spotify-review-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Dashboard and serverless backend for the Spotify review pipeline; reads saved results from PostgreSQL (Supabase).",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "check": "node scripts/check-live.mjs"
+  },
+  "dependencies": {
+    "postgres": "3.4.9"
+  }
+}

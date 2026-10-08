@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-57e8-7f30-99cb-9d227c17d188"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"previous layout\"],\"evidence_quote\":\"Thank you for reverting back to previous layout, much happier.\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"85732ab4-236f-4a1a-bda4-86f17fac4670\",\"sentiment\":0.7,\"severity\":1,\"topic\":\"usability\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10778,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":158,"reasoning_output_tokens":67}}

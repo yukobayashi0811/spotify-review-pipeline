@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1004e-8870-7ba1-81d9-367026268fdd"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"issues\":[{\"coherent\":\"no\",\"description\":\"These examples express broad, unspecified reactions to the app, mostly negative, with one positive comment and no shared specific complaint.\",\"heterogeneous_review_ids\":[\"67ff8ab9-6215-406e-bf3d-5423438a3c2e\"],\"issue_id\":\"I_OTHER_07\",\"issue_name\":\"General app reactions\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11111,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":92,"reasoning_output_tokens":0}}

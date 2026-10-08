@@ -1,0 +1,134 @@
+{
+  "api_credentials_required": false,
+  "auth_mode": "ChatGPT subscription",
+  "billing_mode": "chatgpt_subscription",
+  "calls": [
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 50.532679,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0fe7a-bcf5-7851-b6d9-61012a9051c1",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 12775,
+          "output_tokens": 2488,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-bb3aaada-7baf-4ec3-9c19-026a308f7cdb",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 49,
+      "review_ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011",
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043",
+        "R044",
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "088d7bbefa75195508ec2a340024bfdb805368438bff9ed1d2009aa61f0b4d97"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "53deb437a7fc9ffe89c82ec06570448d04326c0a3281dd4f49ef41090586b156"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "2af922ce261c0d5f599e627ba517ea3b6f48b2205cd8c18cd5fb0a7f6628b15a"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "c0cc8eab4b9ffb70d829d442f3330b127da115197ff8ae6077213d1cc0721fe7"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    }
+  ],
+  "cli_version": "codex-cli 0.159.3",
+  "ephemeral": true,
+  "monetary_cost_usd": "unknown",
+  "provider": "codex-exec-subscription",
+  "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+  "trace_root": "experiments/codex_luna/compact-id-probe-150-v2/worker-02/traces"
+}

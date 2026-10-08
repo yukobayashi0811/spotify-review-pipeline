@@ -1,0 +1,41 @@
+{
+  "billing_mode": "chatgpt_subscription",
+  "cached_input_tokens": 29952,
+  "call_count": 9,
+  "completed_records": 167,
+  "ingestion_counts": {
+    "duplicate_review_ids": 0,
+    "empty_review_text": 0,
+    "missing_app_version": 35,
+    "records": 167
+  },
+  "input_rows": 167,
+  "input_sha256": "daa1fee234bdeb1737be7b7604c27d97c89bf330aed838771647ec3bacad45db",
+  "input_tokens": 111620,
+  "interactions_path": "experiments/codex_luna/checkpoint-500-normal-usage/worker-02/agent_interactions.jsonl",
+  "monetary_cost_usd": "unknown",
+  "output_tokens": 14583,
+  "records_path": "experiments/codex_luna/checkpoint-500-normal-usage/worker-02/development_records.jsonl",
+  "run_enrichment": {
+    "cache_hits_total": 7,
+    "completed_total": 167,
+    "evidence_quote_repairs": 1,
+    "failed_records": 0,
+    "fallback_unique": 0,
+    "max_workers_configured": 1,
+    "note": "Dispatch is intentionally serial in v0.1; max_workers is a hard upper control.",
+    "pending_unique_at_start": 160,
+    "phase": "initial",
+    "processed_unique": 160,
+    "run_id": "codex-dev-20261001T201045Z-a57f932f-worker-02",
+    "spend_ledger_usd_including_unknown_reservations": 0.0,
+    "unknown_charge_batches_reserved_at_cap": 9,
+    "unsettled_reservation_usd": 0.0
+  },
+  "status_counts": {
+    "completed": 167
+  },
+  "token_usage_complete": true,
+  "wall_seconds": 296.456889,
+  "worker_index": 2
+}

@@ -1,0 +1,47 @@
+{
+  "development_only": true,
+  "grading_eligible": false,
+  "model": "gpt-5.6-sol",
+  "effort": "low",
+  "sample_rows": 12,
+  "single_worker": {
+    "workers": 1,
+    "wall_seconds": 29.573365,
+    "completed_records": 12,
+    "failed_records": 0,
+    "calls": 3,
+    "input_tokens": 32632,
+    "cached_input_tokens": 8448,
+    "output_tokens": 1157,
+    "merge_valid": true
+  },
+  "three_workers": {
+    "workers": 3,
+    "wall_seconds": 11.48544,
+    "completed_records": 12,
+    "failed_records": 0,
+    "calls": 3,
+    "input_tokens": 32616,
+    "cached_input_tokens": 16896,
+    "output_tokens": 1230,
+    "merge_valid": true
+  },
+  "comparison": {
+    "wall_time_speedup": 2.574857,
+    "wall_time_reduction_fraction": 0.611629,
+    "parallel_efficiency_fraction": 0.858286,
+    "single_reviews_per_second": 0.405771,
+    "parallel_reviews_per_second": 1.044801,
+    "input_token_change_fraction": -0.00049,
+    "output_token_change_fraction": 0.063094,
+    "topic_agreement": 0.833333,
+    "intent_agreement": 1.0,
+    "severity_exact_agreement": 1.0,
+    "topic_intent_severity_triple_agreement": 0.833333,
+    "evidence_quote_validity_single": 1.0,
+    "evidence_quote_validity_parallel": 1.0
+  },
+  "decision": "Adopt three independent workers for bounded Codex development classification, subject to label-isolated quality evaluation and without treating the outputs as grading evidence.",
+  "monetary_cost_usd": "unknown",
+  "api_credentials_used": false
+}

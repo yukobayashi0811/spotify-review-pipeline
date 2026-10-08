@@ -1,0 +1,9 @@
+issue_id,topic,issue_name,description,label_config
+I_ACCESS,access,Account access and authentication,Users are experiencing issues like being unable to log into their account or password rejection.,mlx-community/gemma-4-e4b-it-4bit:none:group-2026-09-30-v2:group-v1
+I_BILLING,billing,Pricing charges subscriptions and entitlement,Complaints include feeling that the app has become overly monetized with premium requirements or excessive ads.,mlx-community/gemma-4-e4b-it-4bit:none:group-2026-09-30-v2:group-v1
+I_CATALOG,catalog,Catalog search recommendations and lyrics,Users report missing songs in the catalog or inconsistent availability of lyrics for tracks.,mlx-community/gemma-4-e4b-it-4bit:none:group-2026-09-30-v2:group-v1
+I_DOWNLOADS,downloads,Downloads saved music and offline listening,A specific issue mentioned is that offline playback functionality is not working.,mlx-community/gemma-4-e4b-it-4bit:none:group-2026-09-30-v2:group-v1
+I_OTHER,other,Other product complaints,"Users have provided general negative feedback about the application, calling it useless or disappointing.",mlx-community/gemma-4-e4b-it-4bit:none:group-2026-09-30-v2:group-v1
+I_PLAYBACK,playback,Playback reliability and performance,Technical issues range from background downloading stalls to crashes upon opening the app or playback interruptions.,mlx-community/gemma-4-e4b-it-4bit:none:group-2026-09-30-v2:group-v1
+I_SUPPORT,support,Support access and response,A user has complained about the application's support services.,mlx-community/gemma-4-e4b-it-4bit:none:group-2026-09-30-v2:group-v1
+I_USABILITY,usability,Controls navigation and ad interruptions,Users complain about excessive advertisements interrupting listening sessions or unwanted changes to the music player experience.,mlx-community/gemma-4-e4b-it-4bit:none:group-2026-09-30-v2:group-v1

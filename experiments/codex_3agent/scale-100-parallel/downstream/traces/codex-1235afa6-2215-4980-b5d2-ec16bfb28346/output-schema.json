@@ -1,0 +1,75 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "alternatives": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "claims": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "issue_id": {
+            "type": "string"
+          },
+          "metric": {
+            "enum": [
+              "complaint_count",
+              "severity_sum",
+              "mean_severity",
+              "priority_score"
+            ],
+            "type": "string"
+          },
+          "review_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "sentence": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim_id",
+          "issue_id",
+          "metric",
+          "value",
+          "sentence",
+          "review_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "priority": {
+      "type": "string"
+    },
+    "rationale": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "priority",
+    "rationale",
+    "alternatives",
+    "limitations",
+    "claims"
+  ],
+  "type": "object"
+}

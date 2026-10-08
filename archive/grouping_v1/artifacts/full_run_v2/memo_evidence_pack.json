@@ -1,0 +1,393 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING_04": [
+      {
+        "evidence_quote": "Worst all things have been charged even we have to back the music track has been charged",
+        "review_id": "e74882ec-3ddf-4f63-a72a-c5a5c37e5a4f",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Continue with your premium.",
+        "review_id": "07b9732f-da49-46cd-a678-165f370863f6",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "I started using this year it was great then all of a sudden it's started urging me to get premium now I can't listen to songs in peace I'm sick of it now gotta find another app",
+        "review_id": "0a4df455-0dce-48af-a8e8-cf04c2bf7388",
+        "severity": 4
+      }
+    ],
+    "I_OTHER_02": [
+      {
+        "evidence_quote": "I would have been scammed.",
+        "review_id": "0018180b-3823-4186-a59b-56de7189b77a",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "This app is very bad...",
+        "review_id": "059fc478-4cd4-4dc2-a5d6-442bd4b2231d",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "Download this app if you want every personal information about you sold for profit to Facebook and Google",
+        "review_id": "06368cfa-d76c-4244-b0fc-fba6f48dcf97",
+        "severity": 5
+      }
+    ],
+    "I_PLAYBACK_02": [
+      {
+        "evidence_quote": "I am unable to play anything",
+        "review_id": "4538a329-fb56-4a15-8efa-4358b507f6f3",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "And it does it on a very frequent basis.",
+        "review_id": "7f95a380-81af-4f82-ac30-53c958918fe5",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "So I will not be using this app from this point forward and definitely not buying a subscription.",
+        "review_id": "af51c35b-0e3c-4ed1-87e2-7e236451e8e3",
+        "severity": 5
+      }
+    ],
+    "I_USABILITY_04": [
+      {
+        "evidence_quote": "can't even recover the playlists set by me last week",
+        "review_id": "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "This latest update is full of bugs and irritating ads, spotify should bring back the older versions or lose all their listeners.",
+        "review_id": "00915aff-c99b-434c-aeaf-94ed90aaa03e",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "This app played a 30 second ad, and then wouldn't even play the song I wanted to listen to. Awful.",
+        "review_id": "022e62d4-4cee-4143-b705-f31692b9eb0c",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY_06": [
+      {
+        "evidence_quote": "The fact that your can't set private mode permanently is straight up evil, and is a conscious decision against good user experience amd privacy.",
+        "review_id": "583243e9-df07-4fd8-a82c-036ebc7669c1",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "So I cancelled ...",
+        "review_id": "5bd62838-5872-4519-aff1-ff9a30ad6a72",
+        "severity": 5
+      },
+      {
+        "evidence_quote": "There is no way to get a hold of these people and one of the ads on here was a scammer that stole money from me.",
+        "review_id": "6a0bf51d-ce7d-40bc-8d5c-3e63f172028f",
+        "severity": 5
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS_01": {
+      "description": "Reviews mix account security and recovery concerns, app and service access failures, billing disputes, and unrelated playback issues.",
+      "issue_id": "I_ACCESS_01",
+      "issue_name": "Account security and access"
+    },
+    "I_ACCESS_02": {
+      "description": "Reviews mainly describe being logged out or unable to sign in to the app, often with an unhelpful “Something went wrong” message.",
+      "issue_id": "I_ACCESS_02",
+      "issue_name": "App sign-in error"
+    },
+    "I_ACCESS_03": {
+      "description": "Reviews report general difficulty or inability to log in, without a consistent, more specific cause.",
+      "issue_id": "I_ACCESS_03",
+      "issue_name": "General login difficulty"
+    },
+    "I_ACCESS_04": {
+      "description": "Reviews describe being unable to sign in with a phone or mobile number, often despite entering it correctly.",
+      "issue_id": "I_ACCESS_04",
+      "issue_name": "Phone-number login failure"
+    },
+    "I_ACCESS_05": {
+      "description": "Reviews focus on failure to log in with a phone number, with some also noting that other login methods or saved playlists are inaccessible.",
+      "issue_id": "I_ACCESS_05",
+      "issue_name": "Phone-number login failure"
+    },
+    "I_ACCESS_06": {
+      "description": "People report being unable to log in, with a few also mentioning sign-up or account-recovery trouble.",
+      "issue_id": "I_ACCESS_06",
+      "issue_name": "Unable to log in"
+    },
+    "I_ACCESS_07": {
+      "description": "Examples combine sign-in problems with unrelated playback, connectivity, payment, lyrics, and account-feature access complaints.",
+      "issue_id": "I_ACCESS_07",
+      "issue_name": "App access and sign-in problems"
+    },
+    "I_BILLING_01": {
+      "description": "Reviewers object to basic playback controls and other features being moved behind a premium subscription.",
+      "issue_id": "I_BILLING_01",
+      "issue_name": "Basic features moved to premium"
+    },
+    "I_BILLING_02": {
+      "description": "Examples cover varied plan, payment, cancellation, and account problems without one clear shared billing issue.",
+      "issue_id": "I_BILLING_02",
+      "issue_name": "Plan and payment problems"
+    },
+    "I_BILLING_03": {
+      "description": "Examples mix price concerns, free-tier restrictions, subscription value, and a request for social features.",
+      "issue_id": "I_BILLING_03",
+      "issue_name": "Subscription cost and free-tier value"
+    },
+    "I_BILLING_04": {
+      "description": "Listeners complain that songs cannot be freely selected, skipped, replayed, or played in sequence without premium.",
+      "issue_id": "I_BILLING_04",
+      "issue_name": "Playback controls restricted to premium"
+    },
+    "I_BILLING_05": {
+      "description": "Reviewers object to being repeatedly prompted to buy Premium or to features being restricted to paid plans.",
+      "issue_id": "I_BILLING_05",
+      "issue_name": "Repeated Premium prompts"
+    },
+    "I_BILLING_06": {
+      "description": "Reviewers say limits on song choice, skips, playback controls, and other free features pressure them to subscribe to Premium.",
+      "issue_id": "I_BILLING_06",
+      "issue_name": "Free feature restrictions"
+    },
+    "I_BILLING_07": {
+      "description": "Reviewers criticize the combination of ads and restricted listening controls in the free tier, often comparing it unfavorably with Premium.",
+      "issue_id": "I_BILLING_07",
+      "issue_name": "Free tier ads and limits"
+    },
+    "I_CATALOG_01": {
+      "description": "The examples mostly contain brief or unclear references to songs, with one review describing a preference for older songs over sadder selections.",
+      "issue_id": "I_CATALOG_01",
+      "issue_name": "Vague song and selection comments"
+    },
+    "I_CATALOG_02": {
+      "description": "Reviews report that desired songs, including popular, older, local, or regional tracks, are unavailable on Spotify.",
+      "issue_id": "I_CATALOG_02",
+      "issue_name": "Desired songs unavailable"
+    },
+    "I_CATALOG_03": {
+      "description": "Reviews raise varied concerns about recommendations and playlists, with additional complaints about content access, interface, pricing, and other service features.",
+      "issue_id": "I_CATALOG_03",
+      "issue_name": "Recommendations and playlist control"
+    },
+    "I_CATALOG_04": {
+      "description": "Listeners report lyrics missing, disappearing, or being inaccessible.",
+      "issue_id": "I_CATALOG_04",
+      "issue_name": "Missing or inaccessible lyrics"
+    },
+    "I_DOWNLOADS_01": {
+      "description": "Reviews vary between inability to download, missing download options, and needing to add songs to a playlist before downloading; several examples are unrelated to offline downloads.",
+      "issue_id": "I_DOWNLOADS_01",
+      "issue_name": "Downloading songs and playlists"
+    },
+    "I_DOWNLOADS_02": {
+      "description": "Downloaded music, particularly liked songs, fails to load or play reliably in offline mode, sometimes requiring workarounds or reconnecting to the internet.",
+      "issue_id": "I_DOWNLOADS_02",
+      "issue_name": "Downloaded songs fail offline"
+    },
+    "I_DOWNLOADS_03": {
+      "description": "Examples cover repeated or unreliable downloads and offline playback, alongside account-sharing limits, app slowness, and other unrelated playback problems.",
+      "issue_id": "I_DOWNLOADS_03",
+      "issue_name": "Downloads repeatedly fail or restart"
+    },
+    "I_DOWNLOADS_04": {
+      "description": "Reviews report generally being unable to download songs or other content, without a more specific recurring cause.",
+      "issue_id": "I_DOWNLOADS_04",
+      "issue_name": "Unable to download"
+    },
+    "I_DOWNLOADS_05": {
+      "description": "Spotify switches downloads from the selected SD card to internal phone storage, often leading to duplicate downloads and depleted device space.",
+      "issue_id": "I_DOWNLOADS_05",
+      "issue_name": "SD card storage resets"
+    },
+    "I_DOWNLOADS_06": {
+      "description": "Reviews repeatedly advise against downloading the app, without giving a specific reason.",
+      "issue_id": "I_DOWNLOADS_06",
+      "issue_name": "Warnings against downloading"
+    },
+    "I_DOWNLOADS_07": {
+      "description": "Most reviews advise against downloading or report download trouble, while some give only a vague negative reaction or mention unrelated problems.",
+      "issue_id": "I_DOWNLOADS_07",
+      "issue_name": "Download complaints and warnings"
+    },
+    "I_OTHER_01": {
+      "description": "Most reviews are vague negative judgments of the app, while a couple also mention countries or content without a consistent specific issue.",
+      "issue_id": "I_OTHER_01",
+      "issue_name": "Vague negative app ratings"
+    },
+    "I_OTHER_02": {
+      "description": "These brief reviews express mixed reactions, including praise, dislike, and negative emoji, without a consistent specific complaint.",
+      "issue_id": "I_OTHER_02",
+      "issue_name": "Unspecified mixed reactions"
+    },
+    "I_OTHER_03": {
+      "description": "Reviews repeatedly say they hate the app but give no specific reason for that reaction.",
+      "issue_id": "I_OTHER_03",
+      "issue_name": "General app dislike"
+    },
+    "I_OTHER_04": {
+      "description": "Reviews express dissatisfaction with the new update, often through brief negative remarks or emojis.",
+      "issue_id": "I_OTHER_04",
+      "issue_name": "Dislike of the new update"
+    },
+    "I_OTHER_05": {
+      "description": "Reviews express general dislike of the application without identifying a specific problem.",
+      "issue_id": "I_OTHER_05",
+      "issue_name": "General application dislike"
+    },
+    "I_OTHER_06": {
+      "description": "Reviews give brief, nonspecific negative assessments of the app or its experience.",
+      "issue_id": "I_OTHER_06",
+      "issue_name": "General negative app experience"
+    },
+    "I_OTHER_07": {
+      "description": "These examples express broad, unspecified reactions to the app, mostly negative, with one positive comment and no shared specific complaint.",
+      "issue_id": "I_OTHER_07",
+      "issue_name": "General app reactions"
+    },
+    "I_PLAYBACK_01": {
+      "description": "Users say playback restrictions prevent them from selecting, sequencing, repeating, seeking within, or skipping to the songs they want.",
+      "issue_id": "I_PLAYBACK_01",
+      "issue_name": "Restrictions on song playback"
+    },
+    "I_PLAYBACK_02": {
+      "description": "Reports cover varied playback problems, including shuffle behavior, pauses or crashes, missing controls, connection errors, and video playback glitches.",
+      "issue_id": "I_PLAYBACK_02",
+      "issue_name": "Playback interruptions and glitches"
+    },
+    "I_PLAYBACK_03": {
+      "description": "The app reports no internet connection despite the device having an active or fast connection.",
+      "issue_id": "I_PLAYBACK_03",
+      "issue_name": "False no-connection errors"
+    },
+    "I_PLAYBACK_04": {
+      "description": "Reviews describe assorted song and playlist playback mismatches, including playing unintended tracks, stopping early, and repeat or selection failures.",
+      "issue_id": "I_PLAYBACK_04",
+      "issue_name": "Incorrect song and playlist playback"
+    },
+    "I_PLAYBACK_05": {
+      "description": "Examples range across app loading, missing or slow features, crashes, and general playback-related dissatisfaction, without a single consistent complaint.",
+      "issue_id": "I_PLAYBACK_05",
+      "issue_name": "Mixed app performance and playback complaints"
+    },
+    "I_PLAYBACK_06": {
+      "description": "Reports say features are not working, spanning autoplay, karaoke, navigation, repeat, and an unspecified app failure.",
+      "issue_id": "I_PLAYBACK_06",
+      "issue_name": "Playback controls and features not working"
+    },
+    "I_SUPPORT_01": {
+      "description": "Reviewers accuse Spotify of supporting or tolerating bullying and demand an apology to Lisa.",
+      "issue_id": "I_SUPPORT_01",
+      "issue_name": "Alleged support for bullying"
+    },
+    "I_SUPPORT_02": {
+      "description": "Examples span complaints and praise about customer support, account access, app problems, billing, and regional account access, without a single clear support issue.",
+      "issue_id": "I_SUPPORT_02",
+      "issue_name": "Mixed support and account experiences"
+    },
+    "I_SUPPORT_03": {
+      "description": "Reviews criticize poor or unavailable customer service, with several noting difficulty reaching support.",
+      "issue_id": "I_SUPPORT_03",
+      "issue_name": "Poor customer service"
+    },
+    "I_SUPPORT_04": {
+      "description": "Most reviews report that the app is not responding, while a few refer to unresponsive support or trouble logging in.",
+      "issue_id": "I_SUPPORT_04",
+      "issue_name": "App not responding"
+    },
+    "I_SUPPORT_05": {
+      "description": "Reviews describe customer support or responses as poor, without identifying one specific support failure.",
+      "issue_id": "I_SUPPORT_05",
+      "issue_name": "Poor support experience"
+    },
+    "I_SUPPORT_06": {
+      "description": "Reviews describe difficulty getting useful help from Spotify support, including trouble reaching a person or resolving account, payment, and app problems.",
+      "issue_id": "I_SUPPORT_06",
+      "issue_name": "Difficulty getting support"
+    },
+    "I_USABILITY_01": {
+      "description": "People complain that ads are frequent or disruptive.",
+      "issue_id": "I_USABILITY_01",
+      "issue_name": "Disruptive ads"
+    },
+    "I_USABILITY_02": {
+      "description": "People say there are too many ads.",
+      "issue_id": "I_USABILITY_02",
+      "issue_name": "Excessive ads"
+    },
+    "I_USABILITY_03": {
+      "description": "People object to an update that removed or restricted playback controls such as shuffle, replay, seeking, and choosing track order.",
+      "issue_id": "I_USABILITY_03",
+      "issue_name": "Playback controls reduced after update"
+    },
+    "I_USABILITY_04": {
+      "description": "Users report that recent changes make playlists harder to view and control, with unwanted recommendations or shuffle replacing selected songs and ordered playback.",
+      "issue_id": "I_USABILITY_04",
+      "issue_name": "Playlist access and playback controls"
+    },
+    "I_USABILITY_05": {
+      "description": "Reviews complain that frequent or excessive advertisements disrupt use of the app.",
+      "issue_id": "I_USABILITY_05",
+      "issue_name": "Frequent advertisements"
+    },
+    "I_USABILITY_06": {
+      "description": "The examples span unrelated playback restrictions and bugs, podcast promotion and controls, audio volume inconsistency, pop-ups, and general reliability complaints.",
+      "issue_id": "I_USABILITY_06",
+      "issue_name": "Mixed app usability complaints"
+    },
+    "I_USABILITY_07": {
+      "description": "Most examples complain about frequent advertisements, but a few instead concern shuffle and skip limits or widget customization.",
+      "issue_id": "I_USABILITY_07",
+      "issue_name": "Mostly frequent advertisements"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 42882,
+      "issue_id": "I_OTHER_02",
+      "mean_severity": "2.066741",
+      "priority_score": 88626,
+      "rank": 1,
+      "severity_sum": 88626
+    },
+    {
+      "complaint_count": 21640,
+      "issue_id": "I_USABILITY_06",
+      "mean_severity": "2.835813",
+      "priority_score": 61367,
+      "rank": 2,
+      "severity_sum": 61367
+    },
+    {
+      "complaint_count": 15709,
+      "issue_id": "I_PLAYBACK_02",
+      "mean_severity": "3.080591",
+      "priority_score": 48393,
+      "rank": 3,
+      "severity_sum": 48393
+    },
+    {
+      "complaint_count": 16563,
+      "issue_id": "I_USABILITY_04",
+      "mean_severity": "2.839582",
+      "priority_score": 47032,
+      "rank": 4,
+      "severity_sum": 47032
+    },
+    {
+      "complaint_count": 10401,
+      "issue_id": "I_BILLING_04",
+      "mean_severity": "2.917219",
+      "priority_score": 30342,
+      "rank": 5,
+      "severity_sum": 30342
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f8e3-3124-7a60-b8a8-32d044678472"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"loop songs\",\"slider\",\"premium feature\",\"SoundCloud\"],\"evidence_quote\":\"we can't loop songs or even control the slider anymore as it is a \\\"premium feature\\\"\",\"intent\":\"complaint\",\"needs_review\":false,\"review_id\":\"eac15289-856e-4b71-97d9-012bf18bb4ff\",\"sentiment\":-0.85,\"severity\":3,\"topic\":\"billing\"},{\"entities\":[\"Quran Pak\"],\"evidence_quote\":\"And now I'm uninstalling this app.\",\"intent\":\"cancellation\",\"needs_review\":false,\"review_id\":\"d6159d51-817b-4cd2-9180-d694e657d473\",\"sentiment\":-0.9,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10864,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":333,"reasoning_output_tokens":157}}

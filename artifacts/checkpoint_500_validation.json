@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "all_quotes_are_exact_substrings": true,
+    "all_records_completed": true,
+    "call_log_has_all_roles": true,
+    "claims_match_ranking": true,
+    "cost_report_matches_run": true,
+    "direct_cache_provenance_valid": true,
+    "failed_attempts_retained": true,
+    "input_ids_unique": true,
+    "input_sha256_matches": true,
+    "membership_complete_and_unique": true,
+    "ranking_recomputed_exactly": true,
+    "source_ids_match": true,
+    "verification_complete": true
+  },
+  "details": {
+    "call_counts": {
+      "enrich:failed": 2,
+      "enrich:succeeded": 57,
+      "group:succeeded": 1,
+      "memo:succeeded": 1,
+      "verify:succeeded": 5
+    },
+    "completed_records": 500,
+    "direct_cache_reuses": 21,
+    "input_rows": 500,
+    "input_tokens": 90065,
+    "membership_rows": 264,
+    "output_tokens": 66690,
+    "projected_conservative_days": 36.222,
+    "projected_reuse_days": 28.977,
+    "quarantined_records": 0,
+    "ranking_issues": 8,
+    "top_issue": {
+      "complaint_count": 58,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "2.913793",
+      "priority_score": 169,
+      "rank": 1,
+      "severity_sum": 169
+    },
+    "verification_agreement": {
+      "intent": 0.9,
+      "severity_exact": 0.9,
+      "severity_mae": 0.1,
+      "topic": 0.88
+    },
+    "wall_seconds": 2458.466121
+  },
+  "status": "pass"
+}

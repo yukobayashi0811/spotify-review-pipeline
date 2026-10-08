@@ -1,0 +1,9 @@
+{
+  "complaint_or_cancellation_records": 288524,
+  "input_hash": "0b9113e6eed2cbf591288bd29346450931ac6d59a3e70f7ea000efc98eff6ddb",
+  "issues": 51,
+  "memberships": 288524,
+  "model_called": true,
+  "rule": "TF-IDF -> SVD(<=128) -> L2 -> seeded MiniBatchKMeans; the model names clusters but cannot alter membership",
+  "schema_version": "group-v2"
+}

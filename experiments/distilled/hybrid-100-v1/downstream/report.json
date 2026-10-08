@@ -1,0 +1,156 @@
+{
+  "billing_mode": "chatgpt_subscription",
+  "development_only": true,
+  "grading_eligible": false,
+  "grouping": {
+    "complaint_or_cancellation_records": 46,
+    "input_hash": "737e13d07650931aa66c022639c5354f371d4fb04716eb485d0188329141ba16",
+    "issues": 7,
+    "memberships": 46,
+    "model_called": false,
+    "rule": "One issue per complaint/cancellation, deterministically mapped from primary topic."
+  },
+  "monetary_cost_usd": "unknown",
+  "provider_runtime": {
+    "api_credentials_required": false,
+    "auth_mode": "ChatGPT subscription",
+    "billing_mode": "chatgpt_subscription",
+    "calls": [],
+    "cli_version": "codex-cli 0.159.3",
+    "ephemeral": true,
+    "monetary_cost_usd": "unknown",
+    "provider": "codex-exec-subscription",
+    "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+    "trace_root": "experiments/distilled/hybrid-100-v1/downstream/traces"
+  },
+  "ranking": [
+    {
+      "complaint_count": 15,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.600000",
+      "priority_score": 39,
+      "rank": 1,
+      "severity_sum": 39
+    },
+    {
+      "complaint_count": 11,
+      "issue_id": "I_OTHER",
+      "mean_severity": "2.090909",
+      "priority_score": 23,
+      "rank": 2,
+      "severity_sum": 23
+    },
+    {
+      "complaint_count": 7,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.285714",
+      "priority_score": 23,
+      "rank": 3,
+      "severity_sum": 23
+    },
+    {
+      "complaint_count": 5,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.800000",
+      "priority_score": 14,
+      "rank": 4,
+      "severity_sum": 14
+    },
+    {
+      "complaint_count": 4,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.750000",
+      "priority_score": 11,
+      "rank": 5,
+      "severity_sum": 11
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "I_ACCESS",
+      "mean_severity": "4.000000",
+      "priority_score": 8,
+      "rank": 6,
+      "severity_sum": 8
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "I_DOWNLOADS",
+      "mean_severity": "3.000000",
+      "priority_score": 6,
+      "rank": 7,
+      "severity_sum": 6
+    }
+  ],
+  "recommendation": {
+    "claims": 4,
+    "deterministic_claim_repairs": 0,
+    "input_hash": "18c54c6a66595eff59fda640d0bcce6b2ed8a90510784e438543c15ad1a04284",
+    "model_called": false,
+    "priority": "Focus next-quarter product effort on I_USABILITY: controls, navigation, and ad interruptions."
+  },
+  "run_id": "distilled-downstream-e9cfde22-653e-481e-afcc-b7acc751120d",
+  "status": "completed",
+  "verification": {
+    "agreement": {
+      "intent": 0.9,
+      "severity_exact": 0.9,
+      "severity_mae": 0.1,
+      "topic": 0.8
+    },
+    "already_verified_at_start": 10,
+    "disagreements": [
+      {
+        "first_intent": "praise",
+        "first_severity": 1,
+        "first_topic": "catalog",
+        "intent_agree": true,
+        "review_id": "9f3794ed-4f4b-4430-a548-9cfd2d0c0084",
+        "severity_distance": 0,
+        "topic_agree": false,
+        "verify_intent": "praise",
+        "verify_severity": 1,
+        "verify_topic": "other"
+      },
+      {
+        "first_intent": "complaint",
+        "first_severity": 2,
+        "first_topic": "usability",
+        "intent_agree": false,
+        "review_id": "b47c203f-366e-4409-922d-cd52aa8bbef6",
+        "severity_distance": 0,
+        "topic_agree": false,
+        "verify_intent": "cancellation",
+        "verify_severity": 2,
+        "verify_topic": "other"
+      },
+      {
+        "first_intent": "complaint",
+        "first_severity": 3,
+        "first_topic": "catalog",
+        "intent_agree": true,
+        "review_id": "e0127547-4edd-44a0-8d5e-e8398bc07086",
+        "severity_distance": 1,
+        "topic_agree": true,
+        "verify_intent": "complaint",
+        "verify_severity": 2,
+        "verify_topic": "catalog"
+      }
+    ],
+    "evidence_quote_repairs": 0,
+    "failures": [],
+    "pending_at_start": 0,
+    "planted_error_test": {
+      "detected": true,
+      "note": "The planted label exists only in this test copy and is excluded from business outputs.",
+      "planted_topic": "access",
+      "review_id": "23de7958-ccb0-4356-bc12-094935e6857d",
+      "synthetic_test": true,
+      "verifier_topic": "other"
+    },
+    "sample_fraction": 0.1,
+    "sample_seed": "spotify-verifier-v1",
+    "selected": 10,
+    "verified": 10
+  },
+  "wall_seconds": 0.006133
+}

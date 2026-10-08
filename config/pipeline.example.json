@@ -1,0 +1,17 @@
+{
+  "provider": "local-mlx",
+  "model": "mlx-community/gemma-4-e4b-it-4bit",
+  "model_revision": "475b9088d29754a3379866cf5aeb6b41acd313c2",
+  "local_temperature": 0.0,
+  "effort": "none",
+  "batch_size": 10,
+  "max_workers": 1,
+  "max_attempts": 2,
+  "max_output_tokens": 4000,
+  "timeout_seconds": 600,
+  "spend_limit_usd": 25.0,
+  "fallback_model": null,
+  "fallback_effort": "low",
+  "fallback_fraction": 0.02,
+  "verification_fraction": 0.1
+}

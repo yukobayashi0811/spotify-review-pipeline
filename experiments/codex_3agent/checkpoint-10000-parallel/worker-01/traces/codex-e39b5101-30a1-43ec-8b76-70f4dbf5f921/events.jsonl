@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-43e1-77e1-921b-cfdbf275949e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[\"Amazon Music Unlimited\",\"Apple Music\",\"YouTube Music\",\"premium\",\"song radios\",\"PC version\",\"playlists\"],\"evidence_quote\":\"The song radios are seamless\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"6c681caf-ac11-4cfe-b80e-bafa35a9fa77\",\"sentiment\":0.9,\"severity\":1,\"topic\":\"catalog\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10842,"cached_input_tokens":8448,"cache_write_input_tokens":0,"output_tokens":206,"reasoning_output_tokens":105}}

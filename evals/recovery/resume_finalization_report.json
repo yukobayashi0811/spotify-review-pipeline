@@ -1,0 +1,47 @@
+{
+  "artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+  "cache_chain_rows": 0,
+  "completed_batches": 4770,
+  "component_label_config_counts": {
+    "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2": 526528,
+    "gpt-6-luna:low:classify-2026-09-30-v2:enrichment-v1:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:provider-output-cap-unavailable": 134081
+  },
+  "direct_exact_text_cache_rows": 176420,
+  "finished_at_unix": 1791005792.9444091,
+  "fixed_pending_queue": {
+    "local_texts": 238481,
+    "teacher_texts": 0,
+    "total_texts": 238481
+  },
+  "local_enrich_calls": 4770,
+  "local_label_config": "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2",
+  "local_rows_finalized": 249035,
+  "phase": "resume",
+  "provider_runtime": {
+    "api_charges_usd": 0.0,
+    "api_credentials_required": false,
+    "artifact_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/experiments/distilled/al2-final-v2/distilled_model.joblib",
+    "artifact_sha256": "a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8",
+    "call_count": 4770,
+    "duration_seconds": 61.382635,
+    "model_version": "distilled-tfidf-linear-v2",
+    "network_required": false,
+    "provider": "local-distilled-sklearn",
+    "record_count": 238481
+  },
+  "record_status_counts": {
+    "completed": 660609,
+    "quarantined": 13
+  },
+  "run_id": "full-local-final-8b6897d9-a7ec-42b9-9b2a-59a53b91bb7a",
+  "started_at_unix": 1791005682.514435,
+  "state_path": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/artifacts/full_run_v2/state.db",
+  "status": "completed",
+  "stop_reason": null,
+  "teacher_provenance_repair": {
+    "record_rows_rewired": 0,
+    "teacher_texts_repaired": 0
+  },
+  "teacher_rows_finalized": 0,
+  "wall_seconds": 110.430001
+}

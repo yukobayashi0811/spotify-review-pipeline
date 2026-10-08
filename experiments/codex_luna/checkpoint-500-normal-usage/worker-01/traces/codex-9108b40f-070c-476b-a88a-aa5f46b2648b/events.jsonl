@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f91a-f0c3-73c1-a05f-f450425f47d8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"I like that I can still play all my collections.\",\"intent\":\"praise\",\"needs_review\":false,\"review_id\":\"27aeb125-266a-47c9-85f5-bd8a56b4d6c3\",\"sentiment\":0.7,\"severity\":1,\"topic\":\"downloads\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11284,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":88,"reasoning_output_tokens":0}}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f913-25d4-7460-8d67-4b957637b42d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Thik thak hi hai\",\"intent\":\"unclear\",\"needs_review\":true,\"review_id\":\"084077ee-f9be-446a-9935-9e58550d5153\",\"sentiment\":0,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11248,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":76,"reasoning_output_tokens":0}}

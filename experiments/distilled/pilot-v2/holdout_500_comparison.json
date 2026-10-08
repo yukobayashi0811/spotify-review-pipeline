@@ -1,0 +1,11 @@
+{
+  "agreement": {
+    "intent": 0.874,
+    "severity_exact": 0.882,
+    "severity_mae": 0.14,
+    "topic": 0.82
+  },
+  "cases": 500,
+  "routed_by_needs_review_fraction": 0.386,
+  "teacher": "saved Codex Luna pseudo-labels"
+}

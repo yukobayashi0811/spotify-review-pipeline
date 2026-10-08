@@ -1,0 +1,82 @@
+{
+  "api_credentials_present_in_child": false,
+  "auth_mode": "ChatGPT subscription",
+  "billing_mode": "chatgpt_subscription",
+  "caller_advisory_max_output_tokens": 4000,
+  "cli_version": "codex-cli 0.159.3",
+  "disabled_features": [
+    "multi_agent",
+    "apps",
+    "browser_use",
+    "computer_use",
+    "plugins",
+    "image_generation",
+    "shell_tool",
+    "view_image",
+    "goals"
+  ],
+  "duration_seconds": 15.392517,
+  "ephemeral": true,
+  "event_summary": {
+    "event_count": 4,
+    "event_types": {
+      "item.completed": 1,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "forbidden_tool_types": [],
+    "thread_id": "01a0f919-4b80-7433-8dd1-850c08f076d4",
+    "turn_completed": true,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 9984,
+      "input_tokens": 11795,
+      "output_tokens": 727,
+      "reasoning_output_tokens": 0
+    }
+  },
+  "exit_code": 0,
+  "provider": "codex-exec-subscription",
+  "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+  "request_id": "codex-321542df-10e2-4c2b-b470-acd175bdbaa3",
+  "requested_effort": "low",
+  "requested_model": "gpt-6-luna",
+  "result_byte_cap": 2000000,
+  "review_count": 10,
+  "review_ids": [
+    "5fb2a0b0-bb06-4d73-b6ff-1a2d332fae37",
+    "d635d6c8-460e-452f-8d53-6cd1ea804e98",
+    "15502657-31ee-440e-8df3-2c405b5da275",
+    "824cc977-421c-4445-898f-663acfd131f1",
+    "c3fd591f-890c-4721-bd99-57c3600ae82c",
+    "e81ef9d4-212d-47fc-b360-f9a1914f2bcf",
+    "aa8fec15-2de4-46af-a911-1b49bcb4eb4c",
+    "f9e87b89-b080-48a2-a019-5c5dcf1689a6",
+    "cc7b79ef-bf37-40fc-a02e-4917b86e422c",
+    "77a53aa5-a453-4bcb-8267-d4f44a492dd3"
+  ],
+  "role": "enrich",
+  "stdout_jsonl_parse_errors": [],
+  "timed_out": false,
+  "timeout_seconds": 300.0,
+  "trace_files": {
+    "events_jsonl": {
+      "name": "events.jsonl",
+      "sha256": "ad4a718a25e03dcba7750a63ff10d71e68d88466c9dd80027c5b24ddb29a85d5"
+    },
+    "last_message": {
+      "name": "last-message.json",
+      "sha256": "69ad0c6a0eaf6548c8abe93968d154b0043d925b4fa895e954e83a0236aa6745"
+    },
+    "output_schema": {
+      "name": "output-schema.json",
+      "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+    },
+    "stderr": {
+      "name": "stderr.txt",
+      "sha256": "73cd3f90bebd6f1f0d348c46a39a63a05c9f16d1769275dd2229103e9da0d0dc"
+    }
+  },
+  "workspace_mode": "empty-read-only"
+}

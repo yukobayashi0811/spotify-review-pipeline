@@ -1,0 +1,173 @@
+{
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn."
+  ],
+  "evidence": {
+    "I_BILLING": [
+      {
+        "evidence_quote": "It's impossible to use the app without prime",
+        "review_id": "074efbfd-f69e-46ca-9cea-e5204a192a2a",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "can't access my music",
+        "review_id": "16929558-ce1e-4b87-8738-a1de3f557f66",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "cant sign up for individual premium",
+        "review_id": "1d1480fb-0142-46da-8570-45bf3983bf6d",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG": [
+      {
+        "evidence_quote": "many songs are not present here",
+        "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "I love Spotify recommendations music type before more than now.",
+        "review_id": "1807cc68-ba99-4edc-b6f1-2a1478e69109",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "in some songs there is no lyrics",
+        "review_id": "47becad0-8ae5-4a10-9731-fde8f2091862",
+        "severity": 3
+      }
+    ],
+    "I_OTHER": [
+      {
+        "evidence_quote": "Apps automatically starts even after you have disabled all permissions.",
+        "review_id": "8cd35162-9223-42d1-8097-06e22fde94ea",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "Worst",
+        "review_id": "00363dc8-2117-4565-9af9-efadf8fa90cf",
+        "severity": 2
+      },
+      {
+        "evidence_quote": "I hate this application",
+        "review_id": "0575ce08-ab04-46f0-aa8a-fbf9cd27e8da",
+        "severity": 2
+      }
+    ],
+    "I_PLAYBACK": [
+      {
+        "evidence_quote": "Black screen of death.",
+        "review_id": "065c418e-7f18-42a3-b241-fe693b7a2b0c",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "it does NOT play?!",
+        "review_id": "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+        "severity": 4
+      },
+      {
+        "evidence_quote": "Always say no internet connection Most of my favourite Bollywood songs are not present",
+        "review_id": "3df77a78-ad9a-4456-8be8-8178ffd43d67",
+        "severity": 4
+      }
+    ],
+    "I_USABILITY": [
+      {
+        "evidence_quote": "they've removed the ability to move episode to episode on podcasts from the toolbar",
+        "review_id": "0070e713-4cb7-4d78-954f-1764d5593c91",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "some features are missing in updated version",
+        "review_id": "02777996-211f-447b-94c4-99b61f049f78",
+        "severity": 3
+      },
+      {
+        "evidence_quote": "now m uninstald this app",
+        "review_id": "035213ba-b1b9-411c-b028-70296e5f0e73",
+        "severity": 3
+      }
+    ]
+  },
+  "issues": {
+    "I_ACCESS": {
+      "description": "Users report being unable to log in or access their accounts, sometimes after repeated attempts.",
+      "issue_id": "I_ACCESS",
+      "issue_name": "Login and account access problems"
+    },
+    "I_BILLING": {
+      "description": "Users describe premium prompts, difficulty signing up for Premium, and limited access to music without a subscription.",
+      "issue_id": "I_BILLING",
+      "issue_name": "Premium access and subscription barriers"
+    },
+    "I_CATALOG": {
+      "description": "Users report missing songs or lyrics, repetitive playback choices, and recommendations that have worsened.",
+      "issue_id": "I_CATALOG",
+      "issue_name": "Missing music and weaker recommendations"
+    },
+    "I_DOWNLOADS": {
+      "description": "Users report trouble downloading music, listening offline, and keeping downloaded files available.",
+      "issue_id": "I_DOWNLOADS",
+      "issue_name": "Download and offline listening problems"
+    },
+    "I_OTHER": {
+      "description": "Users express broad dissatisfaction with the app or say a recent update needs rework.",
+      "issue_id": "I_OTHER",
+      "issue_name": "General app dissatisfaction"
+    },
+    "I_PLAYBACK": {
+      "description": "Users report playback that stops, fails to start, shows a blank screen, or plays unexpected content.",
+      "issue_id": "I_PLAYBACK",
+      "issue_name": "Playback interruptions and failures"
+    },
+    "I_USABILITY": {
+      "description": "Users report changed or missing controls, difficulty navigating playlists or finding features, and frequent ads.",
+      "issue_id": "I_USABILITY",
+      "issue_name": "Navigation, controls, and ad interruptions"
+    }
+  },
+  "ranking": [
+    {
+      "complaint_count": 68,
+      "issue_id": "I_USABILITY",
+      "mean_severity": "2.602941",
+      "priority_score": 177,
+      "rank": 1,
+      "severity_sum": 177
+    },
+    {
+      "complaint_count": 37,
+      "issue_id": "I_PLAYBACK",
+      "mean_severity": "3.351351",
+      "priority_score": 124,
+      "rank": 2,
+      "severity_sum": 124
+    },
+    {
+      "complaint_count": 59,
+      "issue_id": "I_OTHER",
+      "mean_severity": "1.949153",
+      "priority_score": 115,
+      "rank": 3,
+      "severity_sum": 115
+    },
+    {
+      "complaint_count": 37,
+      "issue_id": "I_BILLING",
+      "mean_severity": "2.864865",
+      "priority_score": 106,
+      "rank": 4,
+      "severity_sum": 106
+    },
+    {
+      "complaint_count": 19,
+      "issue_id": "I_CATALOG",
+      "mean_severity": "2.684211",
+      "priority_score": 51,
+      "rank": 5,
+      "severity_sum": 51
+    }
+  ]
+}

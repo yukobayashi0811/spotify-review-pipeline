@@ -1,0 +1,1600 @@
+{
+  "api_credentials_required": false,
+  "auth_mode": "ChatGPT subscription",
+  "billing_mode": "chatgpt_subscription",
+  "calls": [
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 70.496021,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f917-41fc-7833-bf4b-ddfea7acc9da",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 13602,
+          "output_tokens": 3569,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-05c7fcc9-6021-45e2-a3a2-e3c6c85127f3",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 50,
+      "review_ids": [
+        "ff14ea84-fdec-4363-9b1b-a23dcab287c5",
+        "42f0c9d1-088c-437b-bfc8-c1c36114a8f0",
+        "797d12c7-78dd-4805-a066-342ace701805",
+        "f44b3617-a645-4375-ae2d-44b742a1a306",
+        "178c3b49-b689-4fe4-92a2-2257a58e6d95",
+        "e25cf0b6-0285-4cc9-9a4a-5a8a05be929e",
+        "277c75cb-ec6a-4387-902d-eb721d038db6",
+        "a3605554-5c3a-441d-836e-e9fdea83eb2e",
+        "4ab2089a-ffa8-49e7-a8a3-aeb583a96796",
+        "23de7958-ccb0-4356-bc12-094935e6857d",
+        "88439ec2-7c49-4c57-bedb-c5e098692aff",
+        "2be2ae92-6ad1-4c93-8589-65a0ce68fe46",
+        "7084ced1-0428-4093-9328-442f74719b4f",
+        "4aee0d75-6901-426e-b0f7-11d042ccc73e",
+        "51bfd887-24a0-4741-8b59-68e0a726dd7a",
+        "8737ac88-7e76-45ba-aa42-4eb97e3300ec",
+        "ca16e65d-d2ff-4453-a495-b8c422809330",
+        "035213ba-b1b9-411c-b028-70296e5f0e73",
+        "46ff0c74-5e86-4e5b-b4cd-36201aab0f9e",
+        "53e95a47-d326-4579-945d-a7aabd780b12",
+        "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+        "23d905f8-8684-41b3-8faa-42571f3eaeee",
+        "d7b04025-054b-4929-a507-15b751c39fdc",
+        "0b52ac4e-1982-46ed-aeaa-74eedaefb5c9",
+        "dd90623c-dcd8-45a2-bb5b-3ace2b383667",
+        "de0a9cdf-8974-48bc-802f-331228df4619",
+        "ebc64fe2-9553-4528-87d5-cb4bb9783be6",
+        "e16a4550-43e7-4ae1-b538-a65cc652c31b",
+        "e0127547-4edd-44a0-8d5e-e8398bc07086",
+        "ee3e2bd4-f94d-4e76-b2a6-5f6533d74c7c",
+        "a1a28752-3256-4f81-b888-3e943343529f",
+        "884e8712-da13-4890-a39e-731b69f42d6c",
+        "def34476-7bdc-443a-ab3d-475cdd5ca2f6",
+        "f7cc1aa7-c306-4f5b-a5e9-911cca07fa60",
+        "a7b7539a-c8d3-4f4e-9edd-d46cd1b1fd12",
+        "8f0071a2-190f-4e20-bec3-3f252e47a6e3",
+        "16929558-ce1e-4b87-8738-a1de3f557f66",
+        "890aeb60-e7cf-4f0d-a321-03a1c8b65757",
+        "e667ab56-1b04-4596-bfd9-69f5919dcc10",
+        "35008b46-daf1-497c-ac9b-fe98f120f912",
+        "06d59085-ebf9-454a-ba15-1e8480562352",
+        "ec8d58bf-f9e2-42c6-870b-b87c78fe569f",
+        "8f8c0461-4c41-4829-af15-b2991f18adfe",
+        "ee17dcd6-07c0-4441-8e64-e7ea57877c78",
+        "6f51891d-fa49-45e5-b2b2-27172682ab8f",
+        "bc1c4825-00c5-458d-ac00-098ce729c76d",
+        "28711041-0c42-432c-a1ad-63be8278ebec",
+        "7f27bbab-ef19-4fb1-80d8-cd014da3e002",
+        "72ff3e9b-bc33-49a1-b9a6-deb8fb904cc3",
+        "b03d6dc9-449a-4647-b112-559186656759"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "8dd27c1b34042ff8ddc64ae664ed342c83cb08b7f04d3eec88854d52bb36ba9f"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "af3cdc6d514be160735aea02746e8053501cbc7a0c77b36c1d676fcf8e0a765e"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "162f4f5f12f73e97a0abe4edf25716f0121504fc6b974640eea02e04678c9bb8"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 64.126838,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f918-5525-7ce2-97ce-03c14d2ee14f",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 13686,
+          "output_tokens": 3409,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-3b51893b-7492-4d0f-86fc-8e7d0e6dd764",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 50,
+      "review_ids": [
+        "fe5dadcb-e99c-4675-b8c8-6c2bacb338d7",
+        "e8f2fb9b-ad3b-4fec-8194-ab67956ee50a",
+        "6a2cd434-9ad2-4e66-8968-ad066659d4df",
+        "0b626430-7bf8-4ae4-9a44-f6ffc4324424",
+        "05fa5b8a-a49b-43be-bab5-38af789a65a7",
+        "e3238297-f942-4c8e-96f7-b951b461e707",
+        "55bc2f5d-0157-467b-8f5c-2f9c7d1b0c04",
+        "0fcf89b2-0b81-4838-bf5f-41c684e43b2d",
+        "8f848aef-444d-4f95-8868-8579f690beb0",
+        "7b7b7855-cf14-4b59-bdc6-12916e833002",
+        "6884452c-d727-4c24-9511-017020f73a16",
+        "6abbfa21-bc7b-400f-96b2-b07fe77b5e37",
+        "6455e7cb-ad90-47ad-883f-5b0f0e205af1",
+        "af53cf35-c680-4ccb-b30c-cfd85bb61c57",
+        "c55970e2-9223-4e83-92de-9b7e4aac0663",
+        "f2ffb274-3e65-4454-8181-ca7ac99d698e",
+        "6a4f84b4-18e2-47d9-adb8-2461a9319c11",
+        "7a7e7a59-4d62-46de-b524-7e83e0831caa",
+        "b9ae23d2-1152-4bfe-a876-afc09c005377",
+        "57aca404-d58b-4bb4-97b1-c64db92f054a",
+        "00363dc8-2117-4565-9af9-efadf8fa90cf",
+        "d218ffde-42f9-48f8-a793-832507454b35",
+        "82247807-4a3b-47ac-9daa-8b085dcdd56d",
+        "4ee5a8ba-99dd-48ce-9ad0-67034e4decba",
+        "d3ddb3ad-e576-4638-a100-926ba56caabe",
+        "ed8efdfe-43e3-4baa-bbed-317807663531",
+        "9f1daf2a-dc11-466c-bc25-8c5d20a62690",
+        "bc554ce2-8461-46eb-954d-c81e5b388cf4",
+        "98d936e1-fd1d-475a-89ee-0e1517cb60d3",
+        "bcdf315e-c82d-41f0-9fcd-ba5933dfe77e",
+        "08c07310-e802-4a88-bd97-2a5f240c0b44",
+        "12efd15d-4d4f-4a71-8e71-69d03b6f983a",
+        "02311997-e9a2-41f9-acd2-303988b849a4",
+        "f1abd13b-2391-4b04-8109-efa7f3cfed0b",
+        "c64af4d8-ac17-48fe-ae38-fd54b41b16b1",
+        "24e63383-4646-4f63-ae37-2014857c236b",
+        "61e0ddbb-6ec4-4d3a-acd3-41eb5f64afb7",
+        "507bc222-f269-4f06-82be-b80a34df9691",
+        "4526d439-a6e4-4e0a-b0bc-ae0f9ce5bd96",
+        "0b5db00e-a562-4125-897e-3e73937b53bf",
+        "039112fc-bbed-4540-83cc-890fcb129751",
+        "04750628-d5b6-4492-a94e-1cb611a5d96b",
+        "065c418e-7f18-42a3-b241-fe693b7a2b0c",
+        "9ce5f16c-aef0-48eb-ace1-91905796bc3d",
+        "bb1a158b-e781-4a16-855b-d4f04a61002c",
+        "0fa19eb8-c470-4217-8709-05f850aa9b88",
+        "9e10d59a-0971-4af2-8125-8950bb0d5061",
+        "8216dafb-b5e2-47e2-b342-9f73c203b56e",
+        "86adc9b6-be58-400c-9a08-aa082ff0535c",
+        "b7b8c665-4ca5-4123-8ff4-fc874a4a7f93"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "0589a1c382737509867934e25bec1a88063eb694b09b66acdf1bc932928eade4"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "b6b06548888179b240782ad4ab3bd62d9c21465dc83706c7dbde726c3adf1f45"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "840eda530e70510db2f614870551d2ad07cd4a3354a73e0f8f127eb4a4a47979"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 65.007829,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f919-4faf-7e42-8fd6-f7e3084232ae",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 13701,
+          "output_tokens": 3386,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-4e48851e-3ab9-4e69-ad70-d3dc51f8d69d",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 50,
+      "review_ids": [
+        "02365ec7-f37a-419a-b26d-bf2467d38461",
+        "b543d31c-665d-483e-976a-fb1d1bfc75b3",
+        "6524068a-cff5-45b9-bd37-b91a6cb71475",
+        "0e5a2a0d-7f67-48a5-9edd-27064f670656",
+        "4701dc65-3087-4895-95ac-9c98d6357ae1",
+        "c1726764-f0ce-4abc-ad9e-6cd143e1b2c7",
+        "27aeb125-266a-47c9-85f5-bd8a56b4d6c3",
+        "92c43612-30bb-4514-bd51-cb7419c7e4d2",
+        "9b7042bf-56c4-4b64-9c8a-3c6c10ca487b",
+        "ac581cea-24f2-4251-a062-53cdd77cfed7",
+        "bfda45a9-d2a3-4aa6-8530-9abe87a63df8",
+        "0070e713-4cb7-4d78-954f-1764d5593c91",
+        "4a2ba740-231c-406e-a7a1-c31349e99c44",
+        "ae2e8bbc-49a5-4e88-a9b3-0432f7405274",
+        "8454aa1e-ceb7-4676-adf7-e20f6989f5c9",
+        "ac480d7d-1af8-48ab-b581-ab13ede82e67",
+        "a79455ad-854d-4fa3-9ec6-62c315feeb32",
+        "e09a9cf4-7ab2-49fb-b3f9-543ab70d6aec",
+        "aa94c946-8e7c-48dd-a673-87c5389b2edd",
+        "f91ca58c-f265-47d0-aa63-2da3dd8dd87e",
+        "36f1617b-e4f7-44fb-a7a9-a8236e4c3531",
+        "f5cc511f-ae71-4985-a737-1c0075156e2b",
+        "c13dcedc-50da-48a8-a90d-cfb037a66478",
+        "f782a3f3-b0c8-475c-a34c-cda0fefa272e",
+        "b25beb44-9cc8-4d1e-b375-a4f319419424",
+        "f66a61ed-c4f6-4e7f-8f3b-a4c0d9fbf6af",
+        "c0f03952-e067-4f25-99fc-18a1a045ed9f",
+        "3db7e65c-e5c0-431b-a107-28efeaae5acc",
+        "4519d4b9-f083-4035-b478-338b73322b47",
+        "cc915d09-97ce-4d74-a04e-77d8f2d00e85",
+        "1d1480fb-0142-46da-8570-45bf3983bf6d",
+        "2f40c0be-faf9-450d-8823-da8dbf9ec3f5",
+        "b650e64d-4109-4e5e-84d6-7013f05ea4eb",
+        "4d7c1b3b-b7f8-417e-a984-6ae27c3acef5",
+        "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+        "01124066-b5dd-4c79-8618-d1bea99d197a",
+        "9f3626e0-1bcb-4788-a412-f812102502d1",
+        "eb3e15c2-8576-40e3-9024-2f619aa5b983",
+        "cc646d29-b636-43e2-b980-bbbed306ba6b",
+        "91755919-64e7-4613-94f9-4cfb44976c44",
+        "4f6a50a1-9440-468c-b35f-961bca94fd88",
+        "2117a268-4c74-4795-9a11-00799e3fc450",
+        "4c34f240-76d4-451a-ac74-5bc6bd484825",
+        "7f1073d4-34a7-45b2-80b8-e0c1edcfaa5e",
+        "6d5a2382-f027-4636-810f-bcc075fdb534",
+        "9666e9fe-0bc2-4e4c-8842-2162be0b6610",
+        "e64244cd-2984-4015-bdad-3bb3a5268dd7",
+        "e760f409-29cb-4df0-a601-21534b0c7062",
+        "c3a06276-8d6a-408c-8d8a-000873a2ac62",
+        "a3c6d913-4b67-4025-b34e-3760e5f7795f"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "d7147d1c81d10a21440588c99e0de5f7061e077103b610c234c5d21f1fa7e9e5"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "345e294eb60699c2844da37e503b456807b364a0731b8bfcc9d87ae46661c6e1"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "d554e34d3b20085752a884600ae9ffa4ef6ce8914b54a5c74a1ec5b32cf1dca8"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 14.169227,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91a-4dac-78a1-ab72-04104e02bf39",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11664,
+          "output_tokens": 649,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-a847f59f-ebf2-406c-8403-174db467b98f",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 10,
+      "review_ids": [
+        "02365ec7-f37a-419a-b26d-bf2467d38461",
+        "b543d31c-665d-483e-976a-fb1d1bfc75b3",
+        "6524068a-cff5-45b9-bd37-b91a6cb71475",
+        "0e5a2a0d-7f67-48a5-9edd-27064f670656",
+        "4701dc65-3087-4895-95ac-9c98d6357ae1",
+        "c1726764-f0ce-4abc-ad9e-6cd143e1b2c7",
+        "27aeb125-266a-47c9-85f5-bd8a56b4d6c3",
+        "92c43612-30bb-4514-bd51-cb7419c7e4d2",
+        "9b7042bf-56c4-4b64-9c8a-3c6c10ca487b",
+        "ac581cea-24f2-4251-a062-53cdd77cfed7"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "4c858167584c7e85702e9b919427182c2cc706680499db895c900b7fa9af50c0"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "31a3f1143eafdad7ce185f138d7863a587f726fa5f37820f9a20c0b2f6acc1ff"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "35745fec83d680d8d814527c3b9028a5aee04d0465d3c9483a67d70f5822757c"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 3.926708,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91a-850a-7323-8ee7-f7d34d533633",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11249,
+          "output_tokens": 71,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-67c2ed5c-b72a-4e77-9123-dc26c8500775",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "02365ec7-f37a-419a-b26d-bf2467d38461"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "15789a1194a3937726036de01dc7aac8264b206303a8e2cd49ec5f7925fef718"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "388febb553f05e121a7a32d130eab3737b976be316504fc1a4f41e6885c1c39c"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "e0cb0e5ee060fe980aa538462e9c2a0b702250f48808c29fba21677b30e4da77"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 5.208554,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91a-945f-79e3-ad0f-50ff467b6fd9",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11262,
+          "output_tokens": 83,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-40bc9f97-843d-4c94-9de6-f58f9e58281a",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "b543d31c-665d-483e-976a-fb1d1bfc75b3"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "c0a118ab7cbe5dbae4d6edb6816eaefb5b6f8f2019b58f71e1bb16f80cd5ea13"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "b9dd5ae75393a7103a9cc41ffca290f5b238c2ee398fff901d92fefe0473eaf1"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "16d191e6ec1287e98a69b38882e33a5a05613f3424cf84bac7ab7beb1a8e67d5"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 4.801785,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91a-a8c2-7303-87ba-908804397218",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 11259,
+          "output_tokens": 80,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-35a0af1b-01ba-4847-a2d7-61e2bc69657e",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "6524068a-cff5-45b9-bd37-b91a6cb71475"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "40e0685cedf59afd039e0b47c1e728240220f5922542172474a39e682cb61584"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "4a37ff8a235434a736d12210b7dcb1e819e1b6a8c0f48b0b343afc04be157ea7"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "103ae558bd46dee48a79a8752e319e88da1159d9521b62d9ca584ac56bb698fd"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 4.708127,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91a-bb7b-79c1-8911-caa19baed1c5",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11271,
+          "output_tokens": 93,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-18a9a204-833b-489c-ae07-a89fae85cbb2",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "0e5a2a0d-7f67-48a5-9edd-27064f670656"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "d7131e45f168da3fbaa8e17cb10a2806796517050ca10bd1d8a69645e9bd3294"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "2955202c9f398ad29f5c115354d34dd0e64320a7ff2fedfea99b677676e5e5e2"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "3c4e8d344ad3c85019d4fda9bf4afa844cb5ee2f1bdf641add252120ea4596cb"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 3.997524,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91a-cde5-79b2-b1df-88a44403786e",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11253,
+          "output_tokens": 83,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-acaa83ac-3c63-4955-a4c9-3d6937094743",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "4701dc65-3087-4895-95ac-9c98d6357ae1"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "de895fbf2eae41ac11f1e2a02adeaf57567429a3f97432cb24bc60356d43e49c"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "e0e10e984e7e10cac98cc367c1890b7fef82bfd312de30bfc7fea4d9ceeca5b1"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "5cd9b7d31a84719d5ea23fa99ae5351bd84cf1bfb6e3ce9c11970d0022e4edc4"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 4.924698,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91a-dd83-7711-9288-4ba8f53295a8",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11257,
+          "output_tokens": 93,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-52d1ea48-7854-4202-b0fb-450007bf6e70",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "c1726764-f0ce-4abc-ad9e-6cd143e1b2c7"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "ffdb4a28cd72bfa2a20ab9abbdf6048a676c758a5df4380be69a0ef459046dd4"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "7a6a9810b3d6ca50287ab70601b1a8b0c958e00f45ba5179bdca8f8db218286f"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "858336682ef4cc4c5b2bffa2dcac92c37d01ce87ecdb056497ee0f157a4efc1d"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 4.457021,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91a-f0c3-73c1-a05f-f450425f47d8",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 11284,
+          "output_tokens": 88,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-9108b40f-070c-476b-a88a-aa5f46b2648b",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "27aeb125-266a-47c9-85f5-bd8a56b4d6c3"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "1b818b8f0bd88d476222384f335d28c6277829f4f9b253ac1ef788c2d9bf776c"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "46b5928306848d1992dc3e4d3a934d311ee8e848e707eff2970363893fffc4ca"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "c163253b35a8d448137f4354d2e465c3123fc570dbeca1d5e7a2721bbe43e2cd"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 5.188723,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91b-0231-7bd2-8469-69c4edb22198",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 11250,
+          "output_tokens": 82,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-aa1315ca-eff5-4ffa-8949-7b27efae0e04",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "92c43612-30bb-4514-bd51-cb7419c7e4d2"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "4d7b866e88d63931f22b3a0de93583c3df61451a4a7dfc7504bf3ae5539a7920"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "08d2a1a6ed607df670afc1abbcf3e308e0ab51597a9d96ed029f993a4b3b7afb"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "ed65ea6f8e3970c5e064f0de999fa0f0332810950f5a2ac842a54fbf3278ae0a"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 4.337613,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91b-1679-7c72-b5b6-8201e12c4173",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11276,
+          "output_tokens": 95,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-5aee6e5b-eb8a-471e-983b-7c896b795bad",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "9b7042bf-56c4-4b64-9c8a-3c6c10ca487b"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "8b16e18c0315a51d46931fb77ce6df6a8e0d9f137e11a1c959f5a9925609f8b2"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "6ad77cd56d983414ad0c106d096f27251c208db22703e02c6b91691012d7f94c"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "04be48ae03ec7aea7b1f19a6fdb1088e1d7c03076e48bc418f6cb94ee8802947"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 5.698164,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91b-276a-7162-8173-af44cb081b85",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 11273,
+          "output_tokens": 83,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-f90863af-1d42-41f1-aa62-7a5af48c69be",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 1,
+      "review_ids": [
+        "ac581cea-24f2-4251-a062-53cdd77cfed7"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "c070639be4cf6d975d0ee38199b616a4e19f7f1e358e01573b74fa9672dd7e1d"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "937026537424948730414de36c1fbe0eb98cd5f1030847c56e742fcea311188b"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "b4d538ab97a20382cc52c698eb3a3c5030531d5030e40d06fe163e6b449d5aa3"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 16.71065,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91b-3db1-7e00-92f3-20ad0d2b42f7",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11760,
+          "output_tokens": 727,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-f7586d35-a749-4f15-ada6-76c4338c6112",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 10,
+      "review_ids": [
+        "bfda45a9-d2a3-4aa6-8530-9abe87a63df8",
+        "0070e713-4cb7-4d78-954f-1764d5593c91",
+        "4a2ba740-231c-406e-a7a1-c31349e99c44",
+        "ae2e8bbc-49a5-4e88-a9b3-0432f7405274",
+        "8454aa1e-ceb7-4676-adf7-e20f6989f5c9",
+        "ac480d7d-1af8-48ab-b581-ab13ede82e67",
+        "a79455ad-854d-4fa3-9ec6-62c315feeb32",
+        "e09a9cf4-7ab2-49fb-b3f9-543ab70d6aec",
+        "aa94c946-8e7c-48dd-a673-87c5389b2edd",
+        "f91ca58c-f265-47d0-aa63-2da3dd8dd87e"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "6438f0fb5f63134f547072fabf78439b5f938ecfa1c8462b7a7eb2520e7c19fc"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "698b8072d758f7de30708986cba2102c1a6303b8edd43d28ee36a5d4843beb10"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "7e46b75c57f68a6514c566e57112c22731f155bc2da0b4953ac42846539bd9a0"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 16.867154,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91b-7f07-7c31-ba47-5f64ccd8124a",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11708,
+          "output_tokens": 773,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-64d5f713-9b7a-4737-a55b-0d4a108f8566",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 10,
+      "review_ids": [
+        "36f1617b-e4f7-44fb-a7a9-a8236e4c3531",
+        "f5cc511f-ae71-4985-a737-1c0075156e2b",
+        "c13dcedc-50da-48a8-a90d-cfb037a66478",
+        "f782a3f3-b0c8-475c-a34c-cda0fefa272e",
+        "b25beb44-9cc8-4d1e-b375-a4f319419424",
+        "f66a61ed-c4f6-4e7f-8f3b-a4c0d9fbf6af",
+        "c0f03952-e067-4f25-99fc-18a1a045ed9f",
+        "3db7e65c-e5c0-431b-a107-28efeaae5acc",
+        "4519d4b9-f083-4035-b478-338b73322b47",
+        "cc915d09-97ce-4d74-a04e-77d8f2d00e85"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "544f84b9575c149be78767ecc8f2018556ea2ed285784d7a22fea15a40f2286a"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "39da1a65ec5033ee939264782e64380e9192237ec7d373e3f873a60e65562be0"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "48f420cab6e56f38221bc64f52d0a776e190f46b8a9f3921ba39c12fb6b0a657"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 15.623547,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91b-c0ee-7e62-84b1-5f3ecd2b5ddb",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11787,
+          "output_tokens": 717,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-0f1b9ad8-c352-4cd4-84f7-12db1662d414",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 10,
+      "review_ids": [
+        "1d1480fb-0142-46da-8570-45bf3983bf6d",
+        "2f40c0be-faf9-450d-8823-da8dbf9ec3f5",
+        "b650e64d-4109-4e5e-84d6-7013f05ea4eb",
+        "4d7c1b3b-b7f8-417e-a984-6ae27c3acef5",
+        "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+        "01124066-b5dd-4c79-8618-d1bea99d197a",
+        "9f3626e0-1bcb-4788-a412-f812102502d1",
+        "eb3e15c2-8576-40e3-9024-2f619aa5b983",
+        "cc646d29-b636-43e2-b980-bbbed306ba6b",
+        "91755919-64e7-4613-94f9-4cfb44976c44"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "234346656cdb03d0e80cb74cf18553598c74e52dff5bdcb1c3d895529e979d12"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "a795074de3f89867f17690fc2a5a52399f17ca1a56d88e216b9b724238d06321"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "bfb756aa70bcfaa8ffef5dbb913acd70b36d11ccd466c9646d3805a587ead56e"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 15.433278,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91b-fe02-7de2-900c-fc985c6d5f5e",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11652,
+          "output_tokens": 673,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-c879f93d-418b-40be-bef1-a03ce98b5c42",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 10,
+      "review_ids": [
+        "4f6a50a1-9440-468c-b35f-961bca94fd88",
+        "2117a268-4c74-4795-9a11-00799e3fc450",
+        "4c34f240-76d4-451a-ac74-5bc6bd484825",
+        "7f1073d4-34a7-45b2-80b8-e0c1edcfaa5e",
+        "6d5a2382-f027-4636-810f-bcc075fdb534",
+        "9666e9fe-0bc2-4e4c-8842-2162be0b6610",
+        "e64244cd-2984-4015-bdad-3bb3a5268dd7",
+        "e760f409-29cb-4df0-a601-21534b0c7062",
+        "c3a06276-8d6a-408c-8d8a-000873a2ac62",
+        "a3c6d913-4b67-4025-b34e-3760e5f7795f"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "10e2feb68544064338deac32f853cb803132ea0db26d350f6d0c2bf85ba19567"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "e1acb337b329c536c1a7c034f440efe480eeddc019f0af624d1a4f8ef75c8dab"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "3e578c2ead7d682b7bf0bb5871e965ba5e94ee52148de3578613a4a86b0d1164"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    },
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.159.3",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 15.002611,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f91c-3abc-7122-9c96-6adaed8cc1e4",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 9984,
+          "input_tokens": 11654,
+          "output_tokens": 626,
+          "reasoning_output_tokens": 0
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+      "request_id": "codex-31165a97-5fe5-4705-8b95-484b72090001",
+      "requested_effort": "low",
+      "requested_model": "gpt-6-luna",
+      "result_byte_cap": 2000000,
+      "review_count": 9,
+      "review_ids": [
+        "db98b02f-8a79-4b0c-af77-439171a20781",
+        "aa86aa43-19d5-40b4-8b03-535a96346e18",
+        "6906dfd7-a45a-4d04-aa74-5f34b1ca5ed5",
+        "0a7f2420-1b49-41fa-8cfc-0b2e178bea6b",
+        "16884baa-5a17-45ce-b4de-a0592c90283d",
+        "505989d7-4f1f-4ca7-b815-657f30a84a1c",
+        "a598cfe0-473b-4665-9eb2-4eebb3c1d877",
+        "a6daf56e-9125-4c58-8899-b768f7df7fb1",
+        "3e503f9c-5c5b-4edc-bfd6-a19104c0822e"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "00e17e39185bd9a60f6a84cbf6a1f12367a0ec6dfc9cc82f39d3726da6192761"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "323305fcdb4308f19af921278d833864b90ccf57dbc7f9510b973957c5583125"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "b7d16a4e992e0df2a4721ecc54564e21a912ababf42127e6089df534d517fba1"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    }
+  ],
+  "cli_version": "codex-cli 0.159.3",
+  "ephemeral": true,
+  "monetary_cost_usd": "unknown",
+  "provider": "codex-exec-subscription",
+  "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+  "trace_root": "experiments/codex_luna/checkpoint-500-normal-usage/worker-01/traces"
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0f865-2c20-7bc0-9ab8-a7fb783a6c56"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"records\":[{\"entities\":[],\"evidence_quote\":\"Zi\",\"intent\":\"unclear\",\"needs_review\":true,\"review_id\":\"74517e71-09d8-4a20-a33d-95bb7e1a19ef\",\"sentiment\":0,\"severity\":1,\"topic\":\"other\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10745,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":75,"reasoning_output_tokens":0}}

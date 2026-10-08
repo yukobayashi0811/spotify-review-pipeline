@@ -1,0 +1,134 @@
+{
+  "api_credentials_required": false,
+  "auth_mode": "ChatGPT subscription",
+  "billing_mode": "chatgpt_subscription",
+  "calls": [
+    {
+      "api_credentials_present_in_child": false,
+      "auth_mode": "ChatGPT subscription",
+      "billing_mode": "chatgpt_subscription",
+      "caller_advisory_max_output_tokens": 4000,
+      "cli_version": "codex-cli 0.152.0",
+      "disabled_features": [
+        "multi_agent",
+        "apps",
+        "browser_use",
+        "computer_use",
+        "plugins",
+        "image_generation",
+        "shell_tool",
+        "view_image",
+        "goals"
+      ],
+      "duration_seconds": 72.044858,
+      "ephemeral": true,
+      "event_summary": {
+        "event_count": 4,
+        "event_types": {
+          "item.completed": 1,
+          "thread.started": 1,
+          "turn.completed": 1,
+          "turn.started": 1
+        },
+        "forbidden_tool_types": [],
+        "thread_id": "01a0f59b-47e9-7a11-91b0-2cc0bb3412b1",
+        "turn_completed": true,
+        "usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 8448,
+          "input_tokens": 13083,
+          "output_tokens": 3743,
+          "reasoning_output_tokens": 303
+        }
+      },
+      "exit_code": 0,
+      "provider": "codex-exec-subscription",
+      "provider_output_token_cap": "unavailable_in_codex_exec_0.152.0",
+      "request_id": "codex-feebd691-ef0a-465b-a0b8-f865dd9a75e5",
+      "requested_effort": "low",
+      "requested_model": "gpt-5.6-sol",
+      "result_byte_cap": 2000000,
+      "review_count": 49,
+      "review_ids": [
+        "292ce26a-815d-4bce-a3b6-93cb6c9e7e2c",
+        "a70e8d3e-3f84-46bc-b008-67f476c67963",
+        "0d4f8b48-74c1-4e2a-89b5-11eaa737027e",
+        "991b6b3a-f511-458a-a5b7-234f78048fb5",
+        "599a0d41-989a-40ef-8ed2-e92db76eea46",
+        "0c6ca545-3f89-4da6-b3db-1a352371fb6e",
+        "111f9048-f7bd-4be0-813e-76b8fc49f73f",
+        "b567f70c-edba-4922-ac2a-e945e5eb3472",
+        "b5ee7834-a0eb-4c15-9c7b-935831021922",
+        "1fc8b08f-7d6a-472f-b317-8ceb28d00f22",
+        "947821dc-b356-45dc-a0bc-1903728fad40",
+        "723f07de-9881-4049-8680-1a9e25652914",
+        "47428620-ec21-424d-a515-0b0b0012a5cf",
+        "fc344263-308d-48a1-9715-c380d063b6de",
+        "6112667b-3d71-475c-b1a4-159b87f73d2b",
+        "01d453b0-dca3-42e9-8aa4-5fc167b08070",
+        "ac6cd66d-a9d2-42a4-afb8-2f84beff7fd1",
+        "44129679-31a0-4108-9314-086a3456f6ae",
+        "46842184-32f8-4088-ac15-2a700a7e94ed",
+        "657f1b77-0183-4b06-bf48-5e6d9ab08f9a",
+        "5de7f95b-ccad-41b2-9f63-a13f7c1d9f09",
+        "de48c99b-46fe-4837-8634-e63dbc72a5ea",
+        "aa573851-0b86-4b1b-adf6-210268c08d2a",
+        "372d4e67-59cc-4c54-879f-3e8a202ee554",
+        "47f1406d-4918-4d60-9647-5ca8e610caca",
+        "82780cbe-6435-4efb-84f6-8e5fa47ffc3a",
+        "36609c5c-fe48-4459-86b8-cc78fd3c77cd",
+        "f4c8146a-d5c8-4168-b00e-21af666afc6a",
+        "3ddb3f4e-f7b9-430b-b335-eadc6d321f46",
+        "16d640e9-b281-4746-9562-c7dbcf7126b6",
+        "8cc4fad4-26ec-47b7-96e8-49c7da714eca",
+        "215463ae-95b7-4481-8747-1754b68f31fa",
+        "46c0b49f-83a1-427e-8f0b-cef62e3c94b5",
+        "283b5843-a992-464f-b1dc-9dc7281ff390",
+        "1d15724a-98ff-400a-8083-0d9afc801098",
+        "89ea724c-358f-48ab-9516-cd130d21c471",
+        "2aa566c6-b98d-4513-b900-83702a8db8eb",
+        "8c0546b0-ce43-4a36-9d33-9f979e98d522",
+        "a972945c-6601-4108-882a-afe986866a7b",
+        "b58dd6f0-ad88-4319-b6db-58afb60c37c1",
+        "1a41c7e1-a655-4c63-b4db-c22bdff18003",
+        "dceb14e7-2df0-422f-bb2b-73d7c373159a",
+        "5fba12ea-4980-4f25-a129-f830a3974fd2",
+        "ac4e860a-c042-49cc-90f3-189591c336ac",
+        "9034d675-9582-49b6-a1c1-c4ddabf8baf1",
+        "d2f3874f-d15d-4a2f-bb97-4f1213defa46",
+        "99b93e31-9f15-4daa-88ac-349ab0419c48",
+        "ca63dfbe-7120-4e18-af6e-8ea786cd157d",
+        "083811c7-d469-499b-9bef-5b9fb096653d"
+      ],
+      "role": "enrich",
+      "stdout_jsonl_parse_errors": [],
+      "timed_out": false,
+      "timeout_seconds": 300.0,
+      "trace_files": {
+        "events_jsonl": {
+          "name": "events.jsonl",
+          "sha256": "f6239aa174d178a66301daadfbec6c276e982851322d1360ed535ed868c4bb4f"
+        },
+        "last_message": {
+          "name": "last-message.json",
+          "sha256": "227c7ff7d87ed19c0370f8be7ad3a51c41c398611b7ef2e5abbc14d0d622c0ae"
+        },
+        "output_schema": {
+          "name": "output-schema.json",
+          "sha256": "a6a6ae572c96d9e07d1add7894ab37f93c8f0b5d242d45ca07979cdac8342c82"
+        },
+        "stderr": {
+          "name": "stderr.txt",
+          "sha256": "10283808bb50f9c3fd87a86d30d9413ef6bb6f40f41038cb659f28d3fb4effd7"
+        }
+      },
+      "workspace_mode": "empty-read-only"
+    }
+  ],
+  "cli_version": "codex-cli 0.152.0",
+  "ephemeral": true,
+  "monetary_cost_usd": "unknown",
+  "provider": "codex-exec-subscription",
+  "provider_output_token_cap": "unavailable_in_codex_exec_0.152.0",
+  "trace_root": "experiments/codex_3agent/quality-50-batch50-single/worker-01/traces"
+}
