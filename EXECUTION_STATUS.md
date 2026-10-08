@@ -23,7 +23,7 @@ Updated: 2026-10-07 (America/Los_Angeles)
 
 ## Remaining steps
 
-- Deploy the database (Supabase) and the backend/dashboard (Vercel), run `dashboard/scripts/check-live.mjs` against the live URL, and add the URL to the README.
+- Deployed: https://spotify-review-pipeline-dashboard.vercel.app (Supabase PostgreSQL + Vercel). Load receipt `artifacts/dashboard/db_load_receipt.json`; live check `artifacts/dashboard/live_check.json` (all checks pass).
 - Publishing the repository and checking public links signed out remain user-controlled submission steps.
 
 ## Key receipts

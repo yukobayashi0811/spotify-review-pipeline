@@ -1,0 +1,151 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-10-08T02:16:34.248Z",
+  "dashboard_url": "https://spotify-review-pipeline-dashboard.vercel.app",
+  "model_calls": 0,
+  "response_ms": {
+    "health": 263,
+    "overview": 26157,
+    "ranking": 720,
+    "recommendation": 775
+  },
+  "checks": {
+    "page_served": {
+      "status": 200,
+      "passed": true
+    },
+    "health": {
+      "status": 200,
+      "body": {
+        "ok": true,
+        "database": "postgresql",
+        "checked_at": "2026-10-08T02:16:08.204Z",
+        "reviews": 660622,
+        "memberships": 288524,
+        "issues": 41
+      },
+      "passed": true
+    },
+    "counts_from_database": {
+      "actual": {
+        "source_rows": 660622,
+        "completed": 660609,
+        "quarantined": 13,
+        "exact_text_reused_rows": 176420,
+        "complaint_or_cancellation": 288524,
+        "issue_memberships": 288524
+      },
+      "passed": true
+    },
+    "ranking_equals_grading_ranking_csv": {
+      "issues": 41,
+      "mismatches": [],
+      "passed": true
+    },
+    "memo_claims_equal_claims_csv_and_database": {
+      "claims": [
+        {
+          "claim_id": "C001",
+          "expected": "28348",
+          "displayed_value": "28348",
+          "database_value": "28348",
+          "ranking_value": "28348",
+          "passed": true
+        },
+        {
+          "claim_id": "C002",
+          "expected": "2.868351",
+          "displayed_value": "2.868351",
+          "database_value": "2.868351",
+          "ranking_value": "2.868351",
+          "passed": true
+        },
+        {
+          "claim_id": "C003",
+          "expected": "81312",
+          "displayed_value": "81312",
+          "database_value": "81312",
+          "ranking_value": "81312",
+          "passed": true
+        },
+        {
+          "claim_id": "C004",
+          "expected": "81312",
+          "displayed_value": "81312",
+          "database_value": "81312",
+          "ranking_value": "81312",
+          "passed": true
+        },
+        {
+          "claim_id": "C005",
+          "expected": "27254",
+          "displayed_value": "27254",
+          "database_value": "27254",
+          "ranking_value": "27254",
+          "passed": true
+        },
+        {
+          "claim_id": "C006",
+          "expected": "2.286307",
+          "displayed_value": "2.286307",
+          "database_value": "2.286307",
+          "ranking_value": "2.286307",
+          "passed": true
+        },
+        {
+          "claim_id": "C007",
+          "expected": "62311",
+          "displayed_value": "62311",
+          "database_value": "62311",
+          "ranking_value": "62311",
+          "passed": true
+        },
+        {
+          "claim_id": "C008",
+          "expected": "62311",
+          "displayed_value": "62311",
+          "database_value": "62311",
+          "ranking_value": "62311",
+          "passed": true
+        },
+        {
+          "claim_id": "C009",
+          "expected": "21473",
+          "displayed_value": "21473",
+          "database_value": "21473",
+          "ranking_value": "21473",
+          "passed": true
+        },
+        {
+          "claim_id": "C010",
+          "expected": "2.877241",
+          "displayed_value": "2.877241",
+          "database_value": "2.877241",
+          "ranking_value": "2.877241",
+          "passed": true
+        },
+        {
+          "claim_id": "C011",
+          "expected": "61783",
+          "displayed_value": "61783",
+          "database_value": "61783",
+          "ranking_value": "61783",
+          "passed": true
+        },
+        {
+          "claim_id": "C012",
+          "expected": "61783",
+          "displayed_value": "61783",
+          "database_value": "61783",
+          "ranking_value": "61783",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "recommendation_present": {
+      "priority_issue_id": "I_USABILITY_04",
+      "passed": true
+    }
+  }
+}
