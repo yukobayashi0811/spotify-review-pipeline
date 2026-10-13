@@ -1,0 +1,14 @@
+[
+  {
+    "claim_id": "C013",
+    "issue_id": "I_OTHER_02",
+    "metric": "priority_score",
+    "value": "117639",
+    "sentence": "The baseline top issue is I_OTHER_02, General app dislike (priority score 117639), but it is coherent and explicitly non-actionable because it describes broad dislike without a specific product problem.",
+    "review_ids": [
+      "4cb969c0-544b-494e-9e87-8d704c0c36c4",
+      "cc24a214-e7a8-4cba-82bf-4db431ff8008",
+      "8398472d-f697-4d3a-98be-5abafc94c5d4"
+    ]
+  }
+]

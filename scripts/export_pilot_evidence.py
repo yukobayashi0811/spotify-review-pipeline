@@ -72,7 +72,11 @@ def main() -> int:
             "schema_version": row["schema_version"],
             "label_config": row["label_config"],
             "batch_size": len(review_ids),
-            "worker_limit": 1,
+            # classify_luna sends up to luna.workers requests in parallel; every other stage is serial.
+            "worker_limit": (
+                int(cold.get("declared_controls", {}).get("luna_workers", 1))
+                if row["role"] == "enrich" and not row["model"].startswith("distilled") else 1
+            ),
             "review_ids": review_ids,
             "phase": row["phase"],
             "outcome": row["outcome"],
@@ -141,7 +145,7 @@ def main() -> int:
             "new_model_calls": warm["new_model_calls_this_run"],
         },
         "commands": {
-            "cold": "spotify-pipeline run --input data/cost_100.csv --config config/pipeline.json --output cost/pilot_100",
+            "cold": "spotify-pipeline run --input data/cost_100.csv --config config/pilot_100.json --output cost/pilot_100",
             "warm": "the same command again, unchanged",
         },
     }

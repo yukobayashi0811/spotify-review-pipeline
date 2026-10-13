@@ -23,6 +23,38 @@ TYPICAL_EVIDENCE_RULE = (
     "centroid by cosine similarity of the saved grouping embeddings."
 )
 ALLOWED_PRIORITY_TOPICS = {"access", "usability", "playback", "billing", "support"}
+PRIORITY_RULES = ("coherent_and_actionable", "actionable_only_fallback", "any_issue_fallback")
+
+
+def _rule_accepts(rule: str, value: dict[str, Any]) -> bool:
+    if rule == "coherent_and_actionable":
+        return value["coherent"] == "yes" and value["actionable"] == "yes"
+    if rule == "actionable_only_fallback":
+        return value["actionable"] == "yes"
+    return True
+
+
+def priority_eligibility(
+    issues: dict[str, dict[str, Any]], ranking: list[dict[str, Any]]
+) -> tuple[str, list[str]]:
+    """Which issues the memo may recommend, using the strictest rule that leaves one.
+
+    Normally the priority must be coherent and actionable and sit in an allowed topic.
+    A small input (such as the 100-review pilot) can leave no such issue; then the rule
+    relaxes to actionable issues, then to any ranked issue in an allowed topic, and the
+    memo must say so in its limitations. The full-corpus run uses the strict rule.
+    """
+    ranked = [str(row["issue_id"]) for row in ranking]
+    for rule in PRIORITY_RULES:
+        eligible = [
+            issue_id for issue_id in ranked
+            if issue_id in issues
+            and issues[issue_id]["topic"] in ALLOWED_PRIORITY_TOPICS
+            and _rule_accepts(rule, issues[issue_id])
+        ]
+        if eligible:
+            return rule, eligible
+    raise ValueError("No ranked issue in access, usability, playback, billing or support")
 METRICS = ("complaint_count", "severity_sum", "mean_severity", "priority_score")
 
 
@@ -96,6 +128,17 @@ def run_recommendation(
                 "described separately and never exported as claims."
             ),
         }
+        rule, eligible_priority = priority_eligibility(derived["issues"], ranking_all)
+        if rule != "coherent_and_actionable":
+            # Added only when the strict rule leaves no candidate, so a normal run's pack is unchanged.
+            pack["priority_eligibility"] = {
+                "rule": rule,
+                "eligible_priority_issue_ids": eligible_priority,
+                "instruction": (
+                    "No ranked issue in an allowed topic is both coherent and actionable. Choose the "
+                    "priority from eligible_priority_issue_ids and state this in the limitations."
+                ),
+            }
         input_hash = hashlib.sha256(canonical(pack).encode("utf-8")).hexdigest()
         cached_hash = store.get_metadata("memo_v2_input_hash")
         cached_memo = store.get_metadata("memo_v2_payload")
@@ -174,6 +217,14 @@ def _call_memo_with_one_repair(
         )
     ][:2]
     use_luna_ledger = provider.name == "codex-exec-subscription"
+    if use_luna_ledger and len(ledger_hashes) < 2:
+        # Very small inputs can have fewer than two evidence texts; any two distinct source
+        # texts serve as the two-call ledger sentinels.
+        for (digest,) in store.connection.execute(
+            "SELECT DISTINCT text_sha256 FROM source_rows WHERE text_sha256 IS NOT NULL ORDER BY text_sha256 LIMIT 3"
+        ):
+            if digest not in ledger_hashes and len(ledger_hashes) < 2:
+                ledger_hashes.append(digest)
     if use_luna_ledger and len(ledger_hashes) < 2:
         raise RuntimeError("The memo role requires two distinct ledger sentinels for its two-call cap")
     last_error = ""
@@ -333,13 +384,13 @@ def _repair_code_owned_memo_fields(
     if not isinstance(issue_id, str) or issue_id not in issues:
         return repaired
     by_issue = {str(row["issue_id"]): row for row in ranking}
+    rule, _ = priority_eligibility(issues, ranking)
     eligible = [
         str(row["issue_id"])
         for row in ranking
         if str(row["issue_id"]) != issue_id
         and str(row["issue_id"]) in issues
-        and issues[str(row["issue_id"])]["coherent"] == "yes"
-        and issues[str(row["issue_id"])]["actionable"] == "yes"
+        and _rule_accepts(rule, issues[str(row["issue_id"])])
     ]
     supplied = repaired.get("alternative_issue_ids")
     supplied_prose = repaired.get("alternatives")
@@ -387,6 +438,16 @@ def _repair_code_owned_memo_fields(
             })
     repaired["alternative_issue_ids"] = selected
     repaired["alternatives"] = kept_prose
+    limitations = repaired.get("limitations")
+    if rule != "coherent_and_actionable" and isinstance(limitations, list) and not any(
+        isinstance(value, str) and ("coheren" in value.casefold() or "actionab" in value.casefold())
+        for value in limitations
+    ):
+        limitations.append(
+            "No ranked issue in an allowed topic was judged both coherent and actionable, so the "
+            f"priority was chosen under the relaxed rule '{rule}'. [code-filled]"
+        )
+        log.append({"field": "limitation", "claim_id": "", "action": f"code stated the {rule} priority rule"})
 
     model_claims: dict[tuple[str, str], dict[str, Any]] = {}
     raw_claims = repaired.get("claims")
@@ -458,12 +519,12 @@ def _validate_memo(
     if priority_issue not in issues:
         raise ValueError("Priority issue ID is unknown")
     priority_metadata = issues[priority_issue]
-    if (
-        priority_metadata["topic"] != payload["priority_topic"]
-        or priority_metadata["coherent"] != "yes"
-        or priority_metadata["actionable"] != "yes"
-    ):
-        raise ValueError("Priority issue must be coherent, actionable, and match priority_topic")
+    rule, eligible_priority = priority_eligibility(issues, ranking)
+    if priority_metadata["topic"] != payload["priority_topic"] or priority_issue not in eligible_priority:
+        raise ValueError(
+            "Priority issue must match priority_topic and be one of the eligible issues "
+            f"({rule}): {', '.join(eligible_priority[:10])}"
+        )
     priority_text = payload["priority"].casefold()
     if priority_issue.casefold() not in priority_text and payload["priority_topic"] not in priority_text:
         raise ValueError("Priority text must contain the chosen topic or issue ID")
@@ -477,8 +538,7 @@ def _validate_memo(
         for issue_id, value in issues.items()
         if issue_id != priority_issue
         and issue_id in ranked_ids
-        and value["coherent"] == "yes"
-        and value["actionable"] == "yes"
+        and _rule_accepts(rule, value)
     )
     # Two alternatives are required whenever the ranking has two eligible issues besides
     # the priority; a very small input (for example the 100-review pilot) may have fewer.
@@ -492,8 +552,8 @@ def _validate_memo(
     for issue_id in alternatives:
         if issue_id not in issues:
             raise ValueError(f"Unknown alternative issue ID: {issue_id}")
-        if issues[issue_id]["coherent"] != "yes" or issues[issue_id]["actionable"] != "yes":
-            raise ValueError("Alternative issues must be coherent and actionable")
+        if not _rule_accepts(rule, issues[issue_id]):
+            raise ValueError(f"Alternative issues must satisfy the priority rule ({rule})")
     if len(payload["alternatives"]) < required_alternatives or any(
         not isinstance(value, str) or not value.strip() for value in payload["alternatives"]
     ):
@@ -505,8 +565,7 @@ def _validate_memo(
     other_topic_eligible = any(
         issue_id != priority_issue
         and value["topic"] != priority_topic
-        and value["coherent"] == "yes"
-        and value["actionable"] == "yes"
+        and _rule_accepts(rule, value)
         and issue_id in {str(row["issue_id"]) for row in ranking}
         for issue_id, value in issues.items()
     )
@@ -520,6 +579,13 @@ def _validate_memo(
         not isinstance(value, str) or not value.strip() for value in payload["limitations"]
     ):
         raise ValueError("Memo must include the required material limitations")
+    if rule != "coherent_and_actionable" and not any(
+        "coheren" in value.casefold() or "actionab" in value.casefold() for value in payload["limitations"]
+    ):
+        raise ValueError(
+            "Limitations must state that no coherent and actionable issue was available "
+            f"and the priority was chosen under {rule}"
+        )
 
     if coverage and int(coverage.get("quarantined_rows", 0)) > 0:
         count = str(coverage["quarantined_rows"])

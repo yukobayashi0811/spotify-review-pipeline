@@ -11,3 +11,4 @@ C009,memo_role_validated_against_saved_baseline,"model prose; code-validated iss
 C010,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-88a10e1d-b000-4f88-b48d-0887e0a5d1df
 C011,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-88a10e1d-b000-4f88-b48d-0887e0a5d1df
 C012,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-88a10e1d-b000-4f88-b48d-0887e0a5d1df
+C013,code_linked_after_run_from_saved_baseline,number stated in the memo role's prose without a claim ID; code added the claim from the saved ranking and annotated memo.md,codex-88a10e1d-b000-4f88-b48d-0887e0a5d1df

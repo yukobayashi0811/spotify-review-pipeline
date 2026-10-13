@@ -1,0 +1,145 @@
+{
+  "agreement": {
+    "intent": 0.8,
+    "severity_exact": 0.6,
+    "severity_mae": 0.7,
+    "topic": 0.7
+  },
+  "already_verified_at_start": 0,
+  "by_label_source": {
+    "gpt-6-luna": {
+      "estimated_rows_represented": 5.0,
+      "intent_agreement": 1.0,
+      "interpretation": "same-model test-retest, not independent accuracy",
+      "row_weighted_intent_agreement": 1.0,
+      "row_weighted_severity_exact_agreement": 1.0,
+      "row_weighted_topic_agreement": 1.0,
+      "severity_exact_agreement": 1.0,
+      "severity_mae": 0.0,
+      "topic_agreement": 1.0,
+      "verified_texts": 2
+    },
+    "local_classifier": {
+      "estimated_rows_represented": 95.0,
+      "intent_agreement": 0.75,
+      "interpretation": "independent verifier agreement estimate",
+      "row_weighted_intent_agreement": 0.75,
+      "row_weighted_severity_exact_agreement": 0.5,
+      "row_weighted_topic_agreement": 0.625,
+      "severity_exact_agreement": 0.5,
+      "severity_mae": 0.875,
+      "topic_agreement": 0.625,
+      "verified_texts": 8
+    }
+  },
+  "disagreements": [
+    {
+      "first_intent": "complaint",
+      "first_severity": 2,
+      "first_topic": "billing",
+      "intent_agree": true,
+      "review_id": "21915fcd-9a35-48ba-b277-6296c4154603",
+      "severity_distance": 2,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "billing"
+    },
+    {
+      "first_intent": "cancellation",
+      "first_severity": 3,
+      "first_topic": "playback",
+      "intent_agree": true,
+      "review_id": "2ffdf599-a0d5-4c01-bf26-025215d44c06",
+      "severity_distance": 0,
+      "topic_agree": false,
+      "verify_intent": "cancellation",
+      "verify_severity": 3,
+      "verify_topic": "downloads"
+    },
+    {
+      "first_intent": "cancellation",
+      "first_severity": 2,
+      "first_topic": "other",
+      "intent_agree": false,
+      "review_id": "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
+      "severity_distance": 2,
+      "topic_agree": false,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "usability"
+    },
+    {
+      "first_intent": "unclear",
+      "first_severity": 1,
+      "first_topic": "other",
+      "intent_agree": false,
+      "review_id": "797d12c7-78dd-4805-a066-342ace701805",
+      "severity_distance": 0,
+      "topic_agree": true,
+      "verify_intent": "praise",
+      "verify_severity": 1,
+      "verify_topic": "other"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 3,
+      "first_topic": "billing",
+      "intent_agree": true,
+      "review_id": "ad730d1a-829a-4dc4-9561-7e1cd07e2c30",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "billing"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 2,
+      "first_topic": "usability",
+      "intent_agree": true,
+      "review_id": "e5e6c55f-3069-4b7c-9807-f8b5d5bf2726",
+      "severity_distance": 2,
+      "topic_agree": false,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "billing"
+    }
+  ],
+  "evidence_quote_repairs": 0,
+  "failures": [],
+  "maximum_sample": 400,
+  "metrics": {
+    "intent": 0.8,
+    "severity_exact": 0.6,
+    "severity_mae": 0.7,
+    "topic": 0.7
+  },
+  "minimum_sample": 10,
+  "pending_at_start": 10,
+  "planted_error_test": "not part of the sampled verification; see scripts/run_system_tests.py, which plants predeclared wrong labels in a separate synthetic copy",
+  "role_independence": "Separate GPT-6 Luna verifier prompt; the first-pass labels are never sent. Agreement on the gpt-6-luna stratum is a same-model test-retest, not independent accuracy.",
+  "sample_fraction": 0.1,
+  "sample_policy": "deterministic SHA-256 ordering of review_id under the declared seed; target=min(completed,max(minimum,round(completed*fraction)),maximum when set)",
+  "sample_seed": "pipeline-v4-verifier",
+  "sampling": {
+    "design": "distinct texts stratified by final label source; SHA-256(seed:review_id) order within stratum",
+    "seed": "pipeline-v4-verifier",
+    "strata": {
+      "gpt-6-luna": {
+        "population_rows": 5,
+        "population_texts": 5,
+        "sampled_texts": 2
+      },
+      "local": {
+        "population_rows": 95,
+        "population_texts": 95,
+        "sampled_texts": 8
+      }
+    },
+    "target": 10,
+    "weights": "group_size x stratum population texts / stratum sample (row-weighted estimates)"
+  },
+  "selected": 10,
+  "verified": 10
+}

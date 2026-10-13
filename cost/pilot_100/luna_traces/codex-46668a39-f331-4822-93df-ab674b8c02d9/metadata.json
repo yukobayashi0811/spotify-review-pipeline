@@ -1,0 +1,78 @@
+{
+  "api_credentials_present_in_child": false,
+  "auth_mode": "ChatGPT subscription",
+  "billing_mode": "chatgpt_subscription",
+  "caller_advisory_max_output_tokens": 6000,
+  "cli_version": "codex-cli 0.159.3",
+  "disabled_features": [
+    "multi_agent",
+    "apps",
+    "browser_use",
+    "computer_use",
+    "plugins",
+    "image_generation",
+    "shell_tool",
+    "view_image",
+    "goals"
+  ],
+  "duration_seconds": 10.484945,
+  "ephemeral": true,
+  "event_summary": {
+    "event_count": 4,
+    "event_types": {
+      "item.completed": 1,
+      "thread.started": 1,
+      "turn.completed": 1,
+      "turn.started": 1
+    },
+    "forbidden_tool_types": [],
+    "served_model": null,
+    "thread_id": "01a133ef-6fcf-7062-a82f-ef76338d3851",
+    "turn_completed": true,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 11375,
+      "output_tokens": 254,
+      "reasoning_output_tokens": 0
+    }
+  },
+  "exit_code": 0,
+  "provider": "codex-exec-subscription",
+  "provider_output_token_cap": "unavailable_in_codex_exec_0.159.3",
+  "request_id": "codex-46668a39-f331-4822-93df-ab674b8c02d9",
+  "requested_effort": "low",
+  "requested_model": "gpt-6-luna",
+  "result_byte_cap": 2000000,
+  "review_count": 5,
+  "review_ids": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "R005"
+  ],
+  "role": "enrich",
+  "stdout_jsonl_parse_errors": [],
+  "timed_out": false,
+  "timeout_seconds": 300.0,
+  "trace_files": {
+    "events_jsonl": {
+      "name": "events.jsonl",
+      "sha256": "1f71d09bb427307ceba5d0578ddc63e1ece0bc5025650bad149d57b2d3218fbc"
+    },
+    "last_message": {
+      "name": "last-message.json",
+      "sha256": "2417f9410c43a5082cef362b4d5268574de49be0ade475e2bc80877fa1efa653"
+    },
+    "output_schema": {
+      "name": "output-schema.json",
+      "sha256": "3feb320212f192f970044558230147a3c754dfafd5f706973b825e8a16854bda"
+    },
+    "stderr": {
+      "name": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "workspace_mode": "empty-read-only"
+}

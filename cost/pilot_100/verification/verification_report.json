@@ -1,22 +1,22 @@
 {
   "agreement": {
-    "intent": 0.7,
-    "severity_exact": 0.6,
-    "severity_mae": 0.7,
+    "intent": 0.8,
+    "severity_exact": 0.7,
+    "severity_mae": 0.3,
     "topic": 0.8
   },
   "already_verified_at_start": 0,
   "by_label_source": {
     "gpt-6-luna": {
       "estimated_rows_represented": 5.0,
-      "intent_agreement": 0.5,
+      "intent_agreement": 1.0,
       "interpretation": "same-model test-retest, not independent accuracy",
-      "row_weighted_intent_agreement": 0.5,
+      "row_weighted_intent_agreement": 1.0,
       "row_weighted_severity_exact_agreement": 1.0,
-      "row_weighted_topic_agreement": 0.5,
+      "row_weighted_topic_agreement": 1.0,
       "severity_exact_agreement": 1.0,
       "severity_mae": 0.0,
-      "topic_agreement": 0.5,
+      "topic_agreement": 1.0,
       "verified_texts": 2
     },
     "local_classifier": {
@@ -24,11 +24,11 @@
       "intent_agreement": 0.75,
       "interpretation": "independent verifier agreement estimate",
       "row_weighted_intent_agreement": 0.75,
-      "row_weighted_severity_exact_agreement": 0.5,
-      "row_weighted_topic_agreement": 0.875,
-      "severity_exact_agreement": 0.5,
-      "severity_mae": 0.875,
-      "topic_agreement": 0.875,
+      "row_weighted_severity_exact_agreement": 0.625,
+      "row_weighted_topic_agreement": 0.75,
+      "severity_exact_agreement": 0.625,
+      "severity_mae": 0.375,
+      "topic_agreement": 0.75,
       "verified_texts": 8
     }
   },
@@ -39,23 +39,23 @@
       "first_topic": "billing",
       "intent_agree": true,
       "review_id": "21915fcd-9a35-48ba-b277-6296c4154603",
-      "severity_distance": 2,
+      "severity_distance": 1,
       "topic_agree": true,
       "verify_intent": "complaint",
-      "verify_severity": 4,
+      "verify_severity": 3,
       "verify_topic": "billing"
     },
     {
-      "first_intent": "complaint",
-      "first_severity": 2,
-      "first_topic": "support",
-      "intent_agree": false,
-      "review_id": "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
+      "first_intent": "cancellation",
+      "first_severity": 3,
+      "first_topic": "playback",
+      "intent_agree": true,
+      "review_id": "2ffdf599-a0d5-4c01-bf26-025215d44c06",
       "severity_distance": 0,
       "topic_agree": false,
-      "verify_intent": "unclear",
-      "verify_severity": 2,
-      "verify_topic": "other"
+      "verify_intent": "cancellation",
+      "verify_severity": 3,
+      "verify_topic": "downloads"
     },
     {
       "first_intent": "cancellation",
@@ -63,11 +63,11 @@
       "first_topic": "other",
       "intent_agree": false,
       "review_id": "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
-      "severity_distance": 2,
-      "topic_agree": true,
+      "severity_distance": 0,
+      "topic_agree": false,
       "verify_intent": "complaint",
-      "verify_severity": 4,
-      "verify_topic": "other"
+      "verify_severity": 2,
+      "verify_topic": "usability"
     },
     {
       "first_intent": "unclear",
@@ -99,20 +99,20 @@
       "first_topic": "usability",
       "intent_agree": true,
       "review_id": "e5e6c55f-3069-4b7c-9807-f8b5d5bf2726",
-      "severity_distance": 2,
-      "topic_agree": false,
+      "severity_distance": 1,
+      "topic_agree": true,
       "verify_intent": "complaint",
-      "verify_severity": 4,
-      "verify_topic": "billing"
+      "verify_severity": 3,
+      "verify_topic": "usability"
     }
   ],
-  "evidence_quote_repairs": 1,
+  "evidence_quote_repairs": 0,
   "failures": [],
   "maximum_sample": 400,
   "metrics": {
-    "intent": 0.7,
-    "severity_exact": 0.6,
-    "severity_mae": 0.7,
+    "intent": 0.8,
+    "severity_exact": 0.7,
+    "severity_mae": 0.3,
     "topic": 0.8
   },
   "minimum_sample": 10,

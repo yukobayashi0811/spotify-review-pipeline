@@ -5,7 +5,7 @@ Default mode is offline replay: it reads saved measurements and editable rates
 and never contacts a provider or needs an API key. Importing this module makes
 no calls. The paid pilot is a separate, explicit command:
 
-    spotify-pipeline run --input data/cost_100.csv --config config/pipeline.json \
+    spotify-pipeline run --input data/cost_100.csv --config config/pilot_100.json \
         --output cost/pilot_100          # cold, then run again unchanged (warm)
 
 Offline replay (from the repository root):

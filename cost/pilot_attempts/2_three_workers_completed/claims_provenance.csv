@@ -1,0 +1,13 @@
+claim_id,source,reason,request_id
+C001,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C002,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C003,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C004,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C005,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C006,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C007,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C008,memo_role_validated_against_saved_baseline,"model prose; code-validated issue ID, metric, value, and evidence IDs",codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C009,code_template_from_saved_baseline,the memo role omitted or misstated this metric; code wrote the sentence and value from the saved ranking,codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C010,code_template_from_saved_baseline,the memo role omitted or misstated this metric; code wrote the sentence and value from the saved ranking,codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C011,code_template_from_saved_baseline,the memo role omitted or misstated this metric; code wrote the sentence and value from the saved ranking,codex-0ee46b15-5894-4b05-8144-0d5267f872b8
+C012,code_template_from_saved_baseline,the memo role omitted or misstated this metric; code wrote the sentence and value from the saved ranking,codex-0ee46b15-5894-4b05-8144-0d5267f872b8

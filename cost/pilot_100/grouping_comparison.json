@@ -1,5 +1,5 @@
 {
   "adopted": "embedding_group_v3",
-  "issue_count": 8,
+  "issue_count": 7,
   "scope": "One grouping method is run here. The method was chosen earlier on the full corpus by comparing TF-IDF clustering (v1) with embedding clustering (v2/v3); that comparison is archived in artifacts/full_run_v2/grouping_comparison.json."
 }

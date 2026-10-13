@@ -1,0 +1,196 @@
+{
+  "window": {
+    "first_day": "2022-05-17",
+    "last_day": "2023-11-15",
+    "partial_months": [
+      "2022-05",
+      "2023-11"
+    ]
+  },
+  "definition": "share = completed complaint+cancellation rows / completed (classified) rows in the month; quarantined empty texts excluded",
+  "months": [
+    {
+      "month": "2022-05",
+      "partial_month": true,
+      "classified_rows": 15461,
+      "complaint_or_cancellation_rows": 4711,
+      "quarantined_rows": 0,
+      "share": "0.304702"
+    },
+    {
+      "month": "2022-06",
+      "partial_month": false,
+      "classified_rows": 30338,
+      "complaint_or_cancellation_rows": 8984,
+      "quarantined_rows": 0,
+      "share": "0.296130"
+    },
+    {
+      "month": "2022-07",
+      "partial_month": false,
+      "classified_rows": 32783,
+      "complaint_or_cancellation_rows": 11456,
+      "quarantined_rows": 1,
+      "share": "0.349449"
+    },
+    {
+      "month": "2022-08",
+      "partial_month": false,
+      "classified_rows": 30732,
+      "complaint_or_cancellation_rows": 8679,
+      "quarantined_rows": 0,
+      "share": "0.282409"
+    },
+    {
+      "month": "2022-09",
+      "partial_month": false,
+      "classified_rows": 26933,
+      "complaint_or_cancellation_rows": 7331,
+      "quarantined_rows": 0,
+      "share": "0.272194"
+    },
+    {
+      "month": "2022-10",
+      "partial_month": false,
+      "classified_rows": 27571,
+      "complaint_or_cancellation_rows": 7761,
+      "quarantined_rows": 1,
+      "share": "0.281491"
+    },
+    {
+      "month": "2022-11",
+      "partial_month": false,
+      "classified_rows": 27349,
+      "complaint_or_cancellation_rows": 8243,
+      "quarantined_rows": 0,
+      "share": "0.301400"
+    },
+    {
+      "month": "2022-12",
+      "partial_month": false,
+      "classified_rows": 31742,
+      "complaint_or_cancellation_rows": 11345,
+      "quarantined_rows": 2,
+      "share": "0.357413"
+    },
+    {
+      "month": "2023-01",
+      "partial_month": false,
+      "classified_rows": 28605,
+      "complaint_or_cancellation_rows": 8614,
+      "quarantined_rows": 4,
+      "share": "0.301136"
+    },
+    {
+      "month": "2023-02",
+      "partial_month": false,
+      "classified_rows": 20889,
+      "complaint_or_cancellation_rows": 6063,
+      "quarantined_rows": 0,
+      "share": "0.290248"
+    },
+    {
+      "month": "2023-03",
+      "partial_month": false,
+      "classified_rows": 27237,
+      "complaint_or_cancellation_rows": 9481,
+      "quarantined_rows": 1,
+      "share": "0.348093"
+    },
+    {
+      "month": "2023-04",
+      "partial_month": false,
+      "classified_rows": 25014,
+      "complaint_or_cancellation_rows": 8474,
+      "quarantined_rows": 0,
+      "share": "0.338770"
+    },
+    {
+      "month": "2023-05",
+      "partial_month": false,
+      "classified_rows": 28061,
+      "complaint_or_cancellation_rows": 8990,
+      "quarantined_rows": 1,
+      "share": "0.320373"
+    },
+    {
+      "month": "2023-06",
+      "partial_month": false,
+      "classified_rows": 27117,
+      "complaint_or_cancellation_rows": 10146,
+      "quarantined_rows": 0,
+      "share": "0.374156"
+    },
+    {
+      "month": "2023-07",
+      "partial_month": false,
+      "classified_rows": 85079,
+      "complaint_or_cancellation_rows": 46384,
+      "quarantined_rows": 0,
+      "share": "0.545187"
+    },
+    {
+      "month": "2023-08",
+      "partial_month": false,
+      "classified_rows": 30438,
+      "complaint_or_cancellation_rows": 11398,
+      "quarantined_rows": 0,
+      "share": "0.374466"
+    },
+    {
+      "month": "2023-09",
+      "partial_month": false,
+      "classified_rows": 41634,
+      "complaint_or_cancellation_rows": 21907,
+      "quarantined_rows": 0,
+      "share": "0.526181"
+    },
+    {
+      "month": "2023-10",
+      "partial_month": false,
+      "classified_rows": 89102,
+      "complaint_or_cancellation_rows": 64805,
+      "quarantined_rows": 2,
+      "share": "0.727313"
+    },
+    {
+      "month": "2023-11",
+      "partial_month": true,
+      "classified_rows": 34524,
+      "complaint_or_cancellation_rows": 23142,
+      "quarantined_rows": 1,
+      "share": "0.670316"
+    }
+  ],
+  "year_over_year_full_months": {
+    "2022": {
+      "months": [
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10"
+      ],
+      "complaint_or_cancellation_rows": 44211,
+      "classified_rows": 148357,
+      "share": "0.298004"
+    },
+    "2023": {
+      "months": [
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10"
+      ],
+      "complaint_or_cancellation_rows": 154640,
+      "classified_rows": 273370,
+      "share": "0.565680"
+    }
+  },
+  "notes": [
+    "Review volume is not constant: July 2023, September 2023 and October 2023 have far more reviews than other months, so a shift in who writes reviews can move the share as much as a product change.",
+    "Shares are of self-selected reviews, not of the user base; they describe review content, not churn."
+  ],
+  "model_calls": 0
+}

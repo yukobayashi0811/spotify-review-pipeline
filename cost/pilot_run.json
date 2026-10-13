@@ -22,7 +22,7 @@
       "max_transient_retries": 2,
       "reservation_usd_per_request": 0.01,
       "spend_limit_usd_api_equivalent": 5.0,
-      "spent_usd_api_equivalent": 0.00662678,
+      "spent_usd_api_equivalent": 0.0081027,
       "transient_failures": [],
       "unknown_charge_requests_reserved_at_cap": 0
     },
@@ -37,35 +37,35 @@
       },
       "luna_failed_attempts": 0,
       "luna_usage_tokens": {
-        "cached_input_tokens": 19968,
-        "input_tokens": 62514,
-        "output_tokens": 4345
+        "cached_input_tokens": 0,
+        "input_tokens": 62142,
+        "output_tokens": 3777
       }
     },
-    "run_id": "pipeline-v4-3ef0c57e-ef2a-4795-9ba2-ca48940911f5",
+    "run_id": "pipeline-v4-aa7d8e83-d092-4fbd-be7d-9d77789deb19",
     "stage_wall_seconds": {
-      "classify_local": 0.203566,
-      "classify_luna": 4.456154,
-      "export": 0.007626,
-      "group": 12.825266,
-      "memo_evidence": 0.003142,
-      "prepare": 0.003607,
-      "rank": 0.00238,
-      "recommend": 20.513715,
-      "route": 0.593864,
-      "verify": 6.262169
+      "classify_local": 0.205278,
+      "classify_luna": 10.521893,
+      "export": 0.007942,
+      "group": 17.051309,
+      "memo_evidence": 0.003354,
+      "prepare": 0.003494,
+      "rank": 0.002848,
+      "recommend": 18.709982,
+      "route": 0.580499,
+      "verify": 5.658186
     },
-    "wall_seconds": 44.911438
+    "wall_seconds": 52.786251
   },
   "commands": {
-    "cold": "spotify-pipeline run --input data/cost_100.csv --config config/pipeline.json --output cost/pilot_100",
+    "cold": "spotify-pipeline run --input data/cost_100.csv --config config/pilot_100.json --output cost/pilot_100",
     "warm": "the same command again, unchanged"
   },
   "completed_records": 100,
   "declared_controls": {
     "batch_size_max": 50,
     "invalid_output_retry": "one split retry per failed batch (50 -> 10 -> 1), then quarantine or keep local label",
-    "luna_workers": 3,
+    "luna_workers": 1,
     "max_calls_by_role": {
       "enrich": 5,
       "group": 30,
@@ -204,22 +204,22 @@
   },
   "verification": {
     "agreement": {
-      "intent": 0.7,
-      "severity_exact": 0.6,
-      "severity_mae": 0.7,
+      "intent": 0.8,
+      "severity_exact": 0.7,
+      "severity_mae": 0.3,
       "topic": 0.8
     },
     "by_label_source": {
       "gpt-6-luna": {
         "estimated_rows_represented": 5.0,
-        "intent_agreement": 0.5,
+        "intent_agreement": 1.0,
         "interpretation": "same-model test-retest, not independent accuracy",
-        "row_weighted_intent_agreement": 0.5,
+        "row_weighted_intent_agreement": 1.0,
         "row_weighted_severity_exact_agreement": 1.0,
-        "row_weighted_topic_agreement": 0.5,
+        "row_weighted_topic_agreement": 1.0,
         "severity_exact_agreement": 1.0,
         "severity_mae": 0.0,
-        "topic_agreement": 0.5,
+        "topic_agreement": 1.0,
         "verified_texts": 2
       },
       "local_classifier": {
@@ -227,11 +227,11 @@
         "intent_agreement": 0.75,
         "interpretation": "independent verifier agreement estimate",
         "row_weighted_intent_agreement": 0.75,
-        "row_weighted_severity_exact_agreement": 0.5,
-        "row_weighted_topic_agreement": 0.875,
-        "severity_exact_agreement": 0.5,
-        "severity_mae": 0.875,
-        "topic_agreement": 0.875,
+        "row_weighted_severity_exact_agreement": 0.625,
+        "row_weighted_topic_agreement": 0.75,
+        "severity_exact_agreement": 0.625,
+        "severity_mae": 0.375,
+        "topic_agreement": 0.75,
         "verified_texts": 8
       }
     },
@@ -274,7 +274,7 @@
         "output_tokens": 0
       }
     },
-    "run_id": "pipeline-v4-537befd2-a8ec-4907-9f3e-cced660c3293",
+    "run_id": "pipeline-v4-ed8efdb6-5135-4598-8141-c28b385e6adf",
     "stage_wall_seconds": {
       "classify_local": 0.0,
       "classify_luna": 0.0,
@@ -287,6 +287,6 @@
       "route": 0.0,
       "verify": 0.0
     },
-    "wall_seconds": 0.0135
+    "wall_seconds": 0.013509
   }
 }

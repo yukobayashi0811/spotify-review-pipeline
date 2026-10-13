@@ -12,15 +12,15 @@ Updated: 2026-10-12 (America/Los_Angeles)
 - Grading export in `grading/`; contract checker: pass, no issues (`artifacts/self_check_final.json`). Ranking regenerated from the export matches (`artifacts/rerank_from_grading.csv`).
 - Golden 50 rescored against the final labels (topic 82%, intent 80%, exact severity 64%) with a categorized error analysis.
 - Fresh held-out 30 labeled blind by the author and scored (topic 63%, intent 83%, exact severity 40%).
-- 100-review pilot of the same command: cold 44.9 s with 5 Luna requests, warm 0.0135 s with 0 requests; offline calculator and its self-check pass.
+- 100-review pilot of the same command with one worker: cold 52.8 s with 5 Luna requests ($0.00810270), warm 0.0135 s with 0 requests; offline calculator and its self-check pass. Earlier attempts in `cost/pilot_attempts/`.
 - Measured full-run cost: 525 Luna requests, $0.929008 API-equivalent (subscription calls, not an invoice), 6,528 s wall time.
 - System tests (planted errors, prompt injection): pass.
-- Unit tests: 47/47 pass (`artifacts/test_results.json`).
+- Unit tests: 48/48 pass (`artifacts/test_results.json`).
 
-## Remaining steps
+## Published
 
-- Reload the dashboard database from the final run (`dashboard/db/load.py`) and re-run the live check (`dashboard/scripts/check-live.mjs`).
-- Commit and push; check the public links signed out.
+- Repository: https://github.com/yukobayashi0811/spotify-review-pipeline (public).
+- Dashboard: https://spotify-review-pipeline-dashboard.vercel.app, reloaded from the final run; load receipt `artifacts/dashboard/db_load_receipt.json` and live check `artifacts/dashboard/live_check.json` (all checks pass).
 
 ## Key receipts
 
@@ -29,7 +29,9 @@ Updated: 2026-10-12 (America/Los_Angeles)
 - Recommendation: `memo.md`, `artifacts/full_run_v4/memo_payload.json`, `claims_provenance.csv`
 - Sensitivity: `artifacts/full_run_v4/sensitivity_analysis.md`
 - Evaluation: `evals/golden_final_evaluation.json`, `evals/golden_final_error_analysis.md`, `evals/holdout_30_evaluation.json`
-- Verification: `artifacts/full_run_v4/verification/`
+- Verification: `artifacts/full_run_v4/verification/` (every prediction in `verifier_predictions.csv`)
+- Quarantine log: `artifacts/full_run_v4/quarantine.jsonl`
+- Trend over comparable periods: `artifacts/full_run_v4/trend_comparison.md`
 - System tests: `evals/system_tests/system_test_report.json`
 - Resume: `evals/recovery_v4/interrupt_resume_check.json`, recording and transcript
 - Cost: `cost/report.md`, `cost/full_run_v4_actuals.md`, `cost/replay_check.json`

@@ -15,26 +15,26 @@ Luna requests ran through the Codex CLI with ChatGPT subscription authentication
 | Result cache at start | empty (new output directory and state database) |
 | Routed to Luna | 5 of 100 distinct texts (limit 5; 5 eligible) |
 | Verification sample | 10 of 10 sampled rows verified |
-| End-to-end wall time | 44.911 s |
+| End-to-end wall time | 52.786 s |
 | Requests / failed attempts / missing usage | 7 / 0 / 0 |
-| API-equivalent cost | $0.00662678 |
-| Per 1,000 input rows / per completed record | $0.066268 / $0.00006627 |
-| Throughput | 2.227 rows/s |
+| API-equivalent cost | $0.00810270 |
+| Per 1,000 input rows / per completed record | $0.081027 / $0.00008103 |
+| Throughput | 1.894 rows/s |
 | Local compute cost | unknown: hardware, electricity and memory were not metered (local classifier, embeddings, SQLite) |
 
 ### By stage
 
 | Stage | Provider / model / effort | Prompt / schema | Batch max (requests by size) | Workers | Attempts (ok/failed, retries, fallbacks) | Tokens in / cached / out | API-equiv. USD | Stage wall s | Summed call s |
 |---|---|---|---|---|---|---|---|---|---|
-| classify_luna | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-02-v3 / enrichment-v2 | 5 ({'5': 1}) | 1 | 1 (1/0, 0, 0) | 11385 / 9984 / 253 | 0.00036644 | 4.456 | 4.423 |
-| classify_local | local-distilled-sklearn / `distilled-tfidf-linear-v2` / none | 2026-10-02-v3 / enrichment-v2 | 50 ({'45': 1, '50': 1}) | 1 | 2 (2/0, 0, 0) | 0 / 0 / 0 | 0.00000000 | 0.204 | 0.021 |
-| verify | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-12-v4 / enrichment-v2 | 10 ({'10': 1}) | 1 | 1 (1/0, 0, 0) | 11413 / 9984 / 514 | 0.00049974 | 6.262 | 6.249 |
-| group | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-03-v3 / group-v3 | 29 ({'20': 1, '29': 1}) | 1 | 2 (2/0, 0, 0) | 24146 / 0 / 918 | 0.00287360 | 12.825 | 11.022 |
-| recommend | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-12-v3 / memo-v3 | 18 ({'18': 1}) | 1 | 1 (1/0, 0, 0) | 15570 / 0 / 2660 | 0.00288700 | 20.514 | 20.494 |
+| classify_luna | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-02-v3 / enrichment-v2 | 5 ({'5': 1}) | 1 | 1 (1/0, 0, 0) | 11375 / 0 / 254 | 0.00126450 | 10.522 | 10.485 |
+| classify_local | local-distilled-sklearn / `distilled-tfidf-linear-v2` / none | 2026-10-02-v3 / enrichment-v2 | 50 ({'45': 1, '50': 1}) | 1 | 2 (2/0, 0, 0) | 0 / 0 / 0 | 0.00000000 | 0.205 | 0.021 |
+| verify | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-12-v4 / enrichment-v2 | 10 ({'10': 1}) | 1 | 1 (1/0, 0, 0) | 11409 / 0 / 486 | 0.00138390 | 5.658 | 5.643 |
+| group | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-03-v3 / group-v3 | 29 ({'19': 1, '29': 1}) | 1 | 2 (2/0, 0, 0) | 24097 / 0 / 889 | 0.00285420 | 17.051 | 15.272 |
+| recommend | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-12-v3 / memo-v3 | 17 ({'17': 1}) | 1 | 1 (1/0, 0, 0) | 15261 / 0 / 2148 | 0.00260010 | 18.710 | 18.688 |
 
 ## Measured pilot (warm run, same command)
 
-- Wall time 0.013500 s; every stage skipped unchanged: True.
+- Wall time 0.013509 s; every stage skipped unchanged: True.
 - New requests 0 (new enrichment requests 0); incremental API-equivalent cost $0.00000000.
 
 ## Full-run projection (estimate)

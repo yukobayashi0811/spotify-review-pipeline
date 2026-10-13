@@ -1,0 +1,8 @@
+review_id,first_pass_source,topic,verifier_topic,intent,verifier_intent,severity,verifier_severity,review_text
+21915fcd-9a35-48ba-b277-6296c4154603,local_classifier,billing,billing,complaint,complaint,2,3,This app the new update has made everthing premium and so usless i thought this app is good but no. Youtube music is better than this usless app. This has become premium just for the creator of spotify to earn money anyways it is a very bad app usless since this new update! Worthless app
+2ffdf599-a0d5-4c01-bf26-025215d44c06,local_classifier,playback,downloads,cancellation,cancellation,3,3,"I like the app, but I don't like that it is always stuck downloading songs in the background and gets stuck until I open Spotify. Idk if it's clever marketing to get the user to open the app, or if it's a bug...either way it is very annoying and has forced me to consider canceling my premium after years of being a subscriber to Hulu/Spotify. I'm sure no one reads these reviews after reading a few of the others. Shame on you spotify"
+33526c6f-7a49-4b3d-bd20-d1bc191c494c,gpt-6-luna,support,other,complaint,complaint,2,2,"RUDE APP , THIS APP SUPPORT GUYS 🤮🤮🤮🤮🤮🤮🤮🤮🤮🤮. تطبيق سيء ، بدعم المثليين 🤮🤮🤮"
+45c561b9-cc47-4d80-95d3-f0d20bc84af3,local_classifier,other,usability,cancellation,complaint,2,2,The update made the app useless .... Uninstall krdia ye app ab bekar hai ... Wynk hi theek h
+797d12c7-78dd-4805-a066-342ace701805,local_classifier,other,other,unclear,praise,1,1,Kudos spotify
+dcff57c6-abd6-413b-b255-aec3dc34fcbd,local_classifier,downloads,downloads,complaint,complaint,3,4,Offline not workjng
+e5e6c55f-3069-4b7c-9807-f8b5d5bf2726,local_classifier,usability,usability,complaint,complaint,2,3,Too many ads.... it's literally useless if u hv not taken premium

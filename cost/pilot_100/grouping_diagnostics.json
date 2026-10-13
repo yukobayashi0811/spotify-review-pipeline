@@ -77,12 +77,12 @@
         "valid_minimum_share": true
       }
     ],
-    "distinct_texts": 13,
+    "distinct_texts": 14,
     "rule": "fewer than 30 distinct texts -> one cluster",
     "selected_effective_k_after_0_90_merge": 1,
     "selected_k": 1,
     "small_topic_single_cluster": true,
-    "weighted_rows": 13
+    "weighted_rows": 14
   },
   "playback": {
     "candidates": [
@@ -100,23 +100,6 @@
     "selected_k": 1,
     "small_topic_single_cluster": true,
     "weighted_rows": 10
-  },
-  "support": {
-    "candidates": [
-      {
-        "effective_k": 1,
-        "k": 1,
-        "minimum_cluster_share": 1.0,
-        "silhouette": 0.0,
-        "valid_minimum_share": true
-      }
-    ],
-    "distinct_texts": 1,
-    "rule": "fewer than 30 distinct texts -> one cluster",
-    "selected_effective_k_after_0_90_merge": 1,
-    "selected_k": 1,
-    "small_topic_single_cluster": true,
-    "weighted_rows": 1
   },
   "usability": {
     "candidates": [

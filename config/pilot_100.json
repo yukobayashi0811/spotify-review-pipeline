@@ -1,0 +1,37 @@
+{
+  "description": "100-review cost/runtime pilot configuration: identical to config/pipeline.json (the final full-run configuration) except luna.workers = 1, because the cost specification asks for the pilot to start with one worker. The full run used 3 workers for the classify_luna stage; every other stage sends one request at a time in both configurations.",
+  "output_dir": "runs/{input_stem}",
+  "local_artifact_path": "experiments/distilled/al2-final-v2/distilled_model.joblib",
+  "local_manifest_path": "experiments/distilled/al2-final-v2/model_manifest.json",
+  "luna": {
+    "model": "gpt-6-luna",
+    "effort": "low",
+    "codex_executable": "codex",
+    "expected_cli_version": "codex-cli 0.159.3",
+    "timeout_seconds": 300,
+    "max_transient_retries": 2,
+    "backoff_base_seconds": 2.0,
+    "max_group_calls": 30,
+    "workers": 1
+  },
+  "routing": {
+    "policy": "risk-route-v1",
+    "max_fraction_of_distinct_texts": 0.05
+  },
+  "verification": {
+    "sample_fraction": 0.1,
+    "minimum": 10,
+    "maximum": 400,
+    "seed": "pipeline-v4-verifier",
+    "luna_stratum_share": 0.25
+  },
+  "budget": {
+    "spend_limit_usd_api_equivalent": 5.0,
+    "rates_usd_per_million": {
+      "input_tokens": 0.1,
+      "cached_input_tokens": 0.01,
+      "output_tokens": 0.5
+    }
+  },
+  "sensitivity_iterations": 1000
+}

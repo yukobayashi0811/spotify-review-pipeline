@@ -1,0 +1,71 @@
+{
+  "distinct_texts": 100,
+  "eligible_texts": 5,
+  "limit": 5,
+  "policy": "risk-route-v1",
+  "routed": [
+    {
+      "group_size": 1,
+      "local_intent": "complaint",
+      "local_severity": 4,
+      "local_topic": "playback",
+      "p_err": 0.643653,
+      "priority": 1.930958,
+      "representative_review_id": "46ff0c74-5e86-4e5b-b4cd-36201aab0f9e",
+      "risk_weight": 3,
+      "rule_hit": false,
+      "text_sha256": "22e9c6f1282c4cbb57c2109db374e18c59bef354b1cf74f2082890a0e839d668"
+    },
+    {
+      "group_size": 1,
+      "local_intent": "complaint",
+      "local_severity": 4,
+      "local_topic": "access",
+      "p_err": 0.401361,
+      "priority": 1.204082,
+      "representative_review_id": "de0a9cdf-8974-48bc-802f-331228df4619",
+      "risk_weight": 3,
+      "rule_hit": false,
+      "text_sha256": "b2874f9aad12ff6ec7738631d1924c3d5579f358a0b3f2a136582b16cf068603"
+    },
+    {
+      "group_size": 1,
+      "local_intent": "complaint",
+      "local_severity": 2,
+      "local_topic": "other",
+      "p_err": 0.333333,
+      "priority": 1.0,
+      "representative_review_id": "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
+      "risk_weight": 3,
+      "rule_hit": true,
+      "text_sha256": "600a0ce736fb3d713df26b9687161e4371303de777d48dd4e82d5c0a404628e5"
+    },
+    {
+      "group_size": 1,
+      "local_intent": "complaint",
+      "local_severity": 4,
+      "local_topic": "playback",
+      "p_err": 0.296296,
+      "priority": 0.888889,
+      "representative_review_id": "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+      "risk_weight": 3,
+      "rule_hit": false,
+      "text_sha256": "ce24667b27b04feff74fc2ec57e9362b606817ea54041a9c617c97cb568baee8"
+    },
+    {
+      "group_size": 1,
+      "local_intent": "complaint",
+      "local_severity": 4,
+      "local_topic": "playback",
+      "p_err": 0.179104,
+      "priority": 0.537313,
+      "representative_review_id": "66a29b3c-c14d-440e-b722-b23e0c99ae82",
+      "risk_weight": 3,
+      "rule_hit": false,
+      "text_sha256": "45649a9dd2663b9cd84036a3753e54716db5ebe9d7db97171129b705587f6d83"
+    }
+  ],
+  "routed_rows": 5,
+  "routed_texts": 5,
+  "rule": "eligible if the local router predicts topic=support or severity>=4, or a billing/privacy/fraud/support term matches; ordered by p_err x rows x risk weight (3 for rule/severity>=4, 2 complaint/cancellation, 1 otherwise), then text hash; capped at floor(max_fraction x distinct texts)"
+}

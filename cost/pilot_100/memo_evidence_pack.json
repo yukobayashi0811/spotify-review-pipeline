@@ -6,9 +6,9 @@
       "baseline_rank": 4,
       "coherent": "yes",
       "complaint_count": 9,
-      "description": "Users object to basic playback controls and features being restricted to Premium, including selecting songs, skipping, and seeking within tracks.",
+      "description": "Listeners object to core playback controls and song selection being restricted to Premium, including limits on skipping and choosing tracks.",
       "issue_id": "I_BILLING_01",
-      "issue_name": "Basic playback restricted to Premium",
+      "issue_name": "Core playback features require Premium",
       "mean_severity": "2.666667",
       "priority_score": 24,
       "severity_sum": 24,
@@ -20,9 +20,9 @@
       "baseline_rank": 6,
       "coherent": "yes",
       "complaint_count": 2,
-      "description": "Users report being unable to sign in because their password is rejected or account access is blocked.",
+      "description": "Users report being unable to access their account, including password rejection.",
       "issue_id": "I_ACCESS_01",
-      "issue_name": "Account sign-in problems",
+      "issue_name": "Account access failure",
       "mean_severity": "3.500000",
       "priority_score": 7,
       "severity_sum": 7,
@@ -34,7 +34,7 @@
       "baseline_rank": 7,
       "coherent": "yes",
       "complaint_count": 1,
-      "description": "A user reports that offline listening is not working.",
+      "description": "The user reports that offline listening does not work.",
       "issue_id": "I_DOWNLOADS_01",
       "issue_name": "Offline listening failure",
       "mean_severity": "3.000000",
@@ -130,21 +130,21 @@
     ],
     "I_OTHER_01": [
       {
-        "centroid_cosine": 0.805178,
+        "centroid_cosine": 0.804191,
         "evidence_quote": "Very bad app",
         "review_id": "8b6e028a-5f63-4011-9841-cbbade4830eb",
         "selection": "modal_severity_closest_to_centroid",
         "severity": 2
       },
       {
-        "centroid_cosine": 0.789167,
+        "centroid_cosine": 0.786001,
         "evidence_quote": "Worst app",
         "review_id": "06a45bd5-3ed9-43af-b7f2-8b9487e2ffff",
         "selection": "modal_severity_closest_to_centroid",
         "severity": 2
       },
       {
-        "centroid_cosine": 0.75844,
+        "centroid_cosine": 0.754881,
         "evidence_quote": "Worst app.",
         "review_id": "178c3b49-b689-4fe4-92a2-2257a58e6d95",
         "selection": "modal_severity_closest_to_centroid",
@@ -174,15 +174,6 @@
         "severity": 3
       }
     ],
-    "I_SUPPORT_01": [
-      {
-        "centroid_cosine": 1.0,
-        "evidence_quote": "THIS APP SUPPORT GUYS",
-        "review_id": "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
-        "selection": "modal_severity_closest_to_centroid",
-        "severity": 2
-      }
-    ],
     "I_USABILITY_01": [
       {
         "centroid_cosine": 0.702296,
@@ -210,38 +201,38 @@
   "evidence_selection_rule": "Per issue: the most common severity among member rows (ties -> higher severity); among distinct member texts with that severity, the three closest to the issue centroid by cosine similarity of the saved grouping embeddings.",
   "grouping_comparison": {
     "adopted": "embedding_group_v3",
-    "issue_count": 8,
+    "issue_count": 7,
     "scope": "One grouping method is run here. The method was chosen earlier on the full corpus by comparing TF-IDF clustering (v1) with embedding clustering (v2/v3); that comparison is archived in artifacts/full_run_v2/grouping_comparison.json."
   },
   "issues": {
     "I_ACCESS_01": {
       "actionable": "yes",
       "coherent": "yes",
-      "description": "Users report being unable to sign in because their password is rejected or account access is blocked.",
+      "description": "Users report being unable to access their account, including password rejection.",
       "issue_id": "I_ACCESS_01",
-      "issue_name": "Account sign-in problems",
+      "issue_name": "Account access failure",
       "topic": "access"
     },
     "I_BILLING_01": {
       "actionable": "yes",
       "coherent": "yes",
-      "description": "Users object to basic playback controls and features being restricted to Premium, including selecting songs, skipping, and seeking within tracks.",
+      "description": "Listeners object to core playback controls and song selection being restricted to Premium, including limits on skipping and choosing tracks.",
       "issue_id": "I_BILLING_01",
-      "issue_name": "Basic playback restricted to Premium",
+      "issue_name": "Core playback features require Premium",
       "topic": "billing"
     },
     "I_CATALOG_01": {
-      "actionable": "yes",
+      "actionable": "no",
       "coherent": "no",
-      "description": "Examples report missing songs, limited gospel music, and lyrics that are absent or fail to appear, as well as vague praise and dissatisfaction with recommendations.",
+      "description": "The examples mix limited music availability, missing lyrics, recommendations, and general praise.",
       "issue_id": "I_CATALOG_01",
-      "issue_name": "Catalog and lyrics gaps",
+      "issue_name": "Catalog and lyrics feedback",
       "topic": "catalog"
     },
     "I_DOWNLOADS_01": {
       "actionable": "yes",
       "coherent": "yes",
-      "description": "A user reports that offline listening is not working.",
+      "description": "The user reports that offline listening does not work.",
       "issue_id": "I_DOWNLOADS_01",
       "issue_name": "Offline listening failure",
       "topic": "downloads"
@@ -249,33 +240,25 @@
     "I_OTHER_01": {
       "actionable": "no",
       "coherent": "no",
-      "description": "Reviews express general dissatisfaction, disappointment with updates, unspecified restrictions, or unrelated boycott sentiment without a consistent, specific product problem.",
+      "description": "These reviews express broad dissatisfaction or praise without identifying a specific product problem; one cites a recent update, while others give no actionable detail or raise unrelated objections.",
       "issue_id": "I_OTHER_01",
-      "issue_name": "General dissatisfaction and mixed complaints",
+      "issue_name": "General dissatisfaction and unrelated reactions",
       "topic": "other"
     },
     "I_PLAYBACK_01": {
       "actionable": "no",
       "coherent": "no",
-      "description": "Examples cover playback interruptions, loading and launch failures, control behavior, assistant playback, and background downloads, alongside a vague inability-to-play complaint.",
+      "description": "Examples mention varied playback problems, including stopping, loading, crashes, controls, and automatic playback.",
       "issue_id": "I_PLAYBACK_01",
-      "issue_name": "Playback and app behavior",
+      "issue_name": "Playback and app behavior problems",
       "topic": "playback"
-    },
-    "I_SUPPORT_01": {
-      "actionable": "no",
-      "coherent": "yes",
-      "description": "The reviewer objects to Spotify's support of LGBTQ+ people, without identifying a product support problem.",
-      "issue_id": "I_SUPPORT_01",
-      "issue_name": "Objection to LGBTQ+ support",
-      "topic": "support"
     },
     "I_USABILITY_01": {
       "actionable": "yes",
       "coherent": "no",
-      "description": "Examples mention frequent or intrusive ads, limited song selection controls for non-subscribers, and difficulty navigating directly to a song.",
+      "description": "Users complain about frequent or loud ads, restricted song selection and skipping, and a preference for older features.",
       "issue_id": "I_USABILITY_01",
-      "issue_name": "Ads and listening controls",
+      "issue_name": "Free-tier listening restrictions and ads",
       "topic": "usability"
     }
   },
@@ -421,12 +404,12 @@
       "severity_sum": 31
     },
     {
-      "complaint_count": 13,
+      "complaint_count": 14,
       "issue_id": "I_OTHER_01",
-      "mean_severity": "2.153846",
-      "priority_score": 28,
+      "mean_severity": "2.142857",
+      "priority_score": 30,
       "rank": 2,
-      "severity_sum": 28
+      "severity_sum": 30
     },
     {
       "complaint_count": 10,
@@ -467,14 +450,6 @@
       "priority_score": 3,
       "rank": 7,
       "severity_sum": 3
-    },
-    {
-      "complaint_count": 1,
-      "issue_id": "I_SUPPORT_01",
-      "mean_severity": "2.000000",
-      "priority_score": 2,
-      "rank": 8,
-      "severity_sum": 2
     }
   ],
   "sensitivity_summary": {
@@ -488,11 +463,11 @@
         "topic": "playback"
       },
       {
-        "complaint_count": 13,
-        "mean_severity": "2.153846",
-        "priority_score": 28,
+        "complaint_count": 14,
+        "mean_severity": "2.142857",
+        "priority_score": 30,
         "rank": 2,
-        "severity_sum": 28,
+        "severity_sum": 30,
         "topic": "other"
       },
       {
@@ -534,14 +509,6 @@
         "rank": 7,
         "severity_sum": 3,
         "topic": "downloads"
-      },
-      {
-        "complaint_count": 1,
-        "mean_severity": "2.000000",
-        "priority_score": 2,
-        "rank": 8,
-        "severity_sum": 2,
-        "topic": "support"
       }
     ],
     "limitations": [
@@ -561,12 +528,12 @@
         "severity_sum": 31
       },
       {
-        "complaint_count": 13,
+        "complaint_count": 14,
         "issue_id": "I_OTHER_01",
-        "mean_severity": "2.153846",
-        "priority_score": 28,
+        "mean_severity": "2.142857",
+        "priority_score": 30,
         "rank": 2,
-        "severity_sum": 28
+        "severity_sum": 30
       },
       {
         "complaint_count": 10,
@@ -607,14 +574,6 @@
         "priority_score": 3,
         "rank": 7,
         "severity_sum": 3
-      },
-      {
-        "complaint_count": 1,
-        "issue_id": "I_SUPPORT_01",
-        "mean_severity": "2.000000",
-        "priority_score": 2,
-        "rank": 8,
-        "severity_sum": 2
       }
     ]
   },
@@ -628,11 +587,11 @@
       "topic": "playback"
     },
     {
-      "complaint_count": 13,
-      "mean_severity": "2.153846",
-      "priority_score": 28,
+      "complaint_count": 14,
+      "mean_severity": "2.142857",
+      "priority_score": 30,
       "rank": 2,
-      "severity_sum": 28,
+      "severity_sum": 30,
       "topic": "other"
     },
     {
@@ -674,20 +633,12 @@
       "rank": 7,
       "severity_sum": 3,
       "topic": "downloads"
-    },
-    {
-      "complaint_count": 1,
-      "mean_severity": "2.000000",
-      "priority_score": 2,
-      "rank": 8,
-      "severity_sum": 2,
-      "topic": "support"
     }
   ],
   "verification_summary": {
-    "intent": 0.7,
-    "severity_exact": 0.6,
-    "severity_mae": 0.7,
+    "intent": 0.8,
+    "severity_exact": 0.7,
+    "severity_mae": 0.3,
     "topic": 0.8
   }
 }

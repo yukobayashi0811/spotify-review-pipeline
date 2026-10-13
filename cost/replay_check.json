@@ -9,7 +9,7 @@
     "input_checksum_matches_manifest": true
   },
   "passed": true,
-  "measured_api_usd": 0.00662678,
-  "measured_api_usd_with_2x_rates": 0.01325356,
+  "measured_api_usd": 0.0081027,
+  "measured_api_usd_with_2x_rates": 0.0162054,
   "model_calls": 0
 }

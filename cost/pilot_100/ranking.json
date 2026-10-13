@@ -1,6 +1,6 @@
 {
   "formula": "priority_score = complaint_count * mean_severity = severity_sum",
-  "issue_count": 8,
+  "issue_count": 7,
   "ranking": [
     {
       "complaint_count": 10,
@@ -11,12 +11,12 @@
       "severity_sum": 31
     },
     {
-      "complaint_count": 13,
+      "complaint_count": 14,
       "issue_id": "I_OTHER_01",
-      "mean_severity": "2.153846",
-      "priority_score": 28,
+      "mean_severity": "2.142857",
+      "priority_score": 30,
       "rank": 2,
-      "severity_sum": 28
+      "severity_sum": 30
     },
     {
       "complaint_count": 10,
@@ -57,14 +57,6 @@
       "priority_score": 3,
       "rank": 7,
       "severity_sum": 3
-    },
-    {
-      "complaint_count": 1,
-      "issue_id": "I_SUPPORT_01",
-      "mean_severity": "2.000000",
-      "priority_score": 2,
-      "rank": 8,
-      "severity_sum": 2
     }
   ],
   "tie_break": "priority_score descending, then issue_id ascending"

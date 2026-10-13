@@ -1,6 +1,6 @@
 {
   "all_stages_skipped_unchanged": true,
-  "config": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/config/pipeline.json",
+  "config": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/config/pilot_100.json",
   "counts": {
     "completed": 100,
     "exact_text_reuse_rows": 0,
@@ -10,7 +10,7 @@
   "declared_controls": {
     "batch_size_max": 50,
     "invalid_output_retry": "one split retry per failed batch (50 -> 10 -> 1), then quarantine or keep local label",
-    "luna_workers": 3,
+    "luna_workers": 1,
     "max_calls_by_role": {
       "enrich": 5,
       "group": 30,
@@ -47,7 +47,7 @@
   },
   "output": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/cost/pilot_100",
   "pipeline_version": "pipeline-v4",
-  "run_id": "pipeline-v4-537befd2-a8ec-4907-9f3e-cced660c3293",
+  "run_id": "pipeline-v4-ed8efdb6-5135-4598-8141-c28b385e6adf",
   "stages": {
     "classify_local": {
       "cache_hits_total": 0,
@@ -61,7 +61,7 @@
       "routed_kept_local_after_luna_failure": 0,
       "routed_labeled_by_luna": 5,
       "skipped_unchanged": true,
-      "source_wall_seconds": 0.203566,
+      "source_wall_seconds": 0.205278,
       "wall_seconds": 0.0
     },
     "classify_luna": {
@@ -72,7 +72,7 @@
         "interrupted": false,
         "pending_texts_at_start": 5,
         "succeeded_batches": 1,
-        "wall_seconds": 4.429
+        "wall_seconds": 10.494
       },
       "phase": "initial",
       "resumed_after_failure": false,
@@ -83,9 +83,9 @@
         "processed_unique": 0
       },
       "skipped_unchanged": true,
-      "source_wall_seconds": 4.456154,
+      "source_wall_seconds": 10.521893,
       "wall_seconds": 0.0,
-      "workers": 3
+      "workers": 1
     },
     "export": {
       "completed_nonempty": 100,
@@ -96,15 +96,15 @@
       "resumed_after_failure": false,
       "skipped_unchanged": true,
       "source_records": 100,
-      "source_wall_seconds": 0.007626,
+      "source_wall_seconds": 0.007942,
       "wall_seconds": 0.0
     },
     "group": {
       "complaint_or_cancellation_records": 52,
-      "input_hash": "36b13843671028ee0cd988e90fe683275f5c60d0c1d15f443b3f1edcd583cf80",
-      "issues": 8,
+      "input_hash": "c526537d85bdc5595acf2156dca2f024c80f5a9758fc9b64e8485921fbf1896e",
+      "issues": 7,
       "luna_distinct_texts": {
-        "succeeded": 49
+        "succeeded": 48
       },
       "memberships": 52,
       "model_called": true,
@@ -112,7 +112,7 @@
       "rule": "Pinned MiniLM embeddings -> L2 normalization -> seeded weighted MiniBatchKMeans(k=3..10) -> code-owned centroid merges; Luna names and reviews bounded representatives but cannot alter membership",
       "schema_version": "group-v3",
       "skipped_unchanged": true,
-      "source_wall_seconds": 12.825266,
+      "source_wall_seconds": 17.051309,
       "wall_seconds": 0.0
     },
     "memo_evidence": {
@@ -121,8 +121,8 @@
       "resumed_after_failure": false,
       "sensitivity": "not_estimated",
       "skipped_unchanged": true,
-      "source_wall_seconds": 0.003142,
-      "topics": 8,
+      "source_wall_seconds": 0.003354,
+      "topics": 7,
       "wall_seconds": 0.0
     },
     "prepare": {
@@ -136,7 +136,7 @@
       "file_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
       "resumed_after_failure": false,
       "skipped_unchanged": true,
-      "source_wall_seconds": 0.003607,
+      "source_wall_seconds": 0.003494,
       "wall_seconds": 0.0
     },
     "rank": {
@@ -150,12 +150,12 @@
           "severity_sum": 31
         },
         {
-          "complaint_count": 13,
+          "complaint_count": 14,
           "issue_id": "I_OTHER_01",
-          "mean_severity": "2.153846",
-          "priority_score": 28,
+          "mean_severity": "2.142857",
+          "priority_score": 30,
           "rank": 2,
-          "severity_sum": 28
+          "severity_sum": 30
         },
         {
           "complaint_count": 10,
@@ -196,19 +196,11 @@
           "priority_score": 3,
           "rank": 7,
           "severity_sum": 3
-        },
-        {
-          "complaint_count": 1,
-          "issue_id": "I_SUPPORT_01",
-          "mean_severity": "2.000000",
-          "priority_score": 2,
-          "rank": 8,
-          "severity_sum": 2
         }
       ],
       "resumed_after_failure": false,
       "skipped_unchanged": true,
-      "source_wall_seconds": 0.00238,
+      "source_wall_seconds": 0.002848,
       "wall_seconds": 0.0
     },
     "recommend": {
@@ -217,14 +209,14 @@
         "I_DOWNLOADS_01"
       ],
       "claims": 12,
-      "input_hash": "c8d41caf2948a5e3623980233349088351f088b18a1f4c5e71723d16734208c8",
+      "input_hash": "56fddd751dd1ef4bfd7420d40eac1f30aac40c6bf8dfd77ae77e0ff5bf8de849",
       "model_called": true,
-      "priority": "billing / I_BILLING_01: Focus next-quarter product effort on making the basic playback controls available and predictable for users on the basic tier, covering song selection, skipping, and seeking within tracks. The issue is coherent and actionable in the supplied issue metadata and ranks first in the actionable issue list. The three cited evidence records are typical severity-3 examples selected by severity frequency and centroid proximity, not worst-case examples.",
+      "priority": "Focus next-quarter product effort on clarifying and evaluating the free-tier boundary for core playback controls and song selection, including skipping limits. This is the highest-ranked coherent, actionable issue in the actionable ranking. Its topic rollup is 9 complaints and priority score 24, while playback leads the topic rollup at 31 but maps to an incoherent, generic actionable=no issue. Representative billing reviews are typical examples selected by severity and centroid proximity, not extreme cases.",
       "priority_issue_id": "I_BILLING_01",
       "priority_topic": "billing",
       "resumed_after_failure": false,
       "skipped_unchanged": true,
-      "source_wall_seconds": 20.513715,
+      "source_wall_seconds": 18.709982,
       "wall_seconds": 0.0
     },
     "route": {
@@ -236,21 +228,21 @@
       "routed_rows": 5,
       "routed_texts": 5,
       "skipped_unchanged": true,
-      "source_wall_seconds": 0.593864,
+      "source_wall_seconds": 0.580499,
       "wall_seconds": 0.0
     },
     "verify": {
       "by_label_source": {
         "gpt-6-luna": {
           "estimated_rows_represented": 5.0,
-          "intent_agreement": 0.5,
+          "intent_agreement": 1.0,
           "interpretation": "same-model test-retest, not independent accuracy",
-          "row_weighted_intent_agreement": 0.5,
+          "row_weighted_intent_agreement": 1.0,
           "row_weighted_severity_exact_agreement": 1.0,
-          "row_weighted_topic_agreement": 0.5,
+          "row_weighted_topic_agreement": 1.0,
           "severity_exact_agreement": 1.0,
           "severity_mae": 0.0,
-          "topic_agreement": 0.5,
+          "topic_agreement": 1.0,
           "verified_texts": 2
         },
         "local_classifier": {
@@ -258,27 +250,27 @@
           "intent_agreement": 0.75,
           "interpretation": "independent verifier agreement estimate",
           "row_weighted_intent_agreement": 0.75,
-          "row_weighted_severity_exact_agreement": 0.5,
-          "row_weighted_topic_agreement": 0.875,
-          "severity_exact_agreement": 0.5,
-          "severity_mae": 0.875,
-          "topic_agreement": 0.875,
+          "row_weighted_severity_exact_agreement": 0.625,
+          "row_weighted_topic_agreement": 0.75,
+          "severity_exact_agreement": 0.625,
+          "severity_mae": 0.375,
+          "topic_agreement": 0.75,
           "verified_texts": 8
         }
       },
       "metrics": {
-        "intent": 0.7,
-        "severity_exact": 0.6,
-        "severity_mae": 0.7,
+        "intent": 0.8,
+        "severity_exact": 0.7,
+        "severity_mae": 0.3,
         "topic": 0.8
       },
       "resumed_after_failure": false,
       "sampled": 10,
       "skipped_unchanged": true,
-      "source_wall_seconds": 6.262169,
+      "source_wall_seconds": 5.658186,
       "wall_seconds": 0.0
     }
   },
   "status": "completed",
-  "wall_seconds": 0.0135
+  "wall_seconds": 0.013509
 }

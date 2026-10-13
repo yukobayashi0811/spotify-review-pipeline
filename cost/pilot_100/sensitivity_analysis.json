@@ -9,12 +9,12 @@
       "severity_sum": 31
     },
     {
-      "complaint_count": 13,
+      "complaint_count": 14,
       "issue_id": "I_OTHER_01",
-      "mean_severity": "2.153846",
-      "priority_score": 28,
+      "mean_severity": "2.142857",
+      "priority_score": 30,
       "rank": 2,
-      "severity_sum": 28
+      "severity_sum": 30
     },
     {
       "complaint_count": 10,
@@ -55,14 +55,6 @@
       "priority_score": 3,
       "rank": 7,
       "severity_sum": 3
-    },
-    {
-      "complaint_count": 1,
-      "issue_id": "I_SUPPORT_01",
-      "mean_severity": "2.000000",
-      "priority_score": 2,
-      "rank": 8,
-      "severity_sum": 2
     }
   ],
   "limitations": [
@@ -84,11 +76,11 @@
       "topic": "playback"
     },
     {
-      "complaint_count": 13,
-      "mean_severity": "2.153846",
-      "priority_score": 28,
+      "complaint_count": 14,
+      "mean_severity": "2.142857",
+      "priority_score": 30,
       "rank": 2,
-      "severity_sum": 28,
+      "severity_sum": 30,
       "topic": "other"
     },
     {
@@ -130,14 +122,6 @@
       "rank": 7,
       "severity_sum": 3,
       "topic": "downloads"
-    },
-    {
-      "complaint_count": 1,
-      "mean_severity": "2.000000",
-      "priority_score": 2,
-      "rank": 8,
-      "severity_sum": 2,
-      "topic": "support"
     }
   ]
 }

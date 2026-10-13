@@ -8,7 +8,7 @@ The required baseline is complaint_count × mean_severity = severity_sum, using 
 
 ## Baseline and sensitivity interpretation
 
-The baseline top issue is I_OTHER_02, General app dislike (priority score 117639), but it is coherent and explicitly non-actionable because it describes broad dislike without a specific product problem. Do not treat it as an effort recommendation. Generic actionable=no issues remain in the baseline and issue-level ranking as descriptive burden; exclude them from actionable issue selection. If sensitivity correction elevates a generic non-actionable issue, report that as a sensitivity estimate and keep it out of the recommendation unless the supplied metadata identifies a coherent actionable problem.
+The baseline top issue is I_OTHER_02, General app dislike (priority score 117639 [C013]), but it is coherent and explicitly non-actionable because it describes broad dislike without a specific product problem. Do not treat it as an effort recommendation. Generic actionable=no issues remain in the baseline and issue-level ranking as descriptive burden; exclude them from actionable issue selection. If sensitivity correction elevates a generic non-actionable issue, report that as a sensitivity estimate and keep it out of the recommendation unless the supplied metadata identifies a coherent actionable problem.
 
 The correction leaves generic I_OTHER_02 at the top adjusted issue position (bootstrap top probability 1.0) and shifts topic estimates from baseline usability-first to adjusted other-first (994/1000 bootstrap top frequency; billing 6/1000). These estimates do not make a generic non-actionable label a coherent product task. I_BILLING_04 remains the leading actionable baseline issue, while its adjusted priority estimate and interval are model outputs, not claims.
 
@@ -26,6 +26,7 @@ The correction leaves generic I_OTHER_02 at the top adjusted issue position (boo
 - The baseline severity sum for I_PLAYBACK_01 is recorded as follows. [C010; I_PLAYBACK_01; severity_sum=44827; reviews: 47b4bee4-51b3-4e2d-85e2-625d5a70e879, 34ef9137-7d10-41cb-a31d-7ff6648cec58, 7dc4c848-847e-4958-9a60-622dc8f92ba1]
 - The baseline mean severity for I_PLAYBACK_01 is recorded as follows. [C011; I_PLAYBACK_01; mean_severity=3.102429; reviews: 47b4bee4-51b3-4e2d-85e2-625d5a70e879, 34ef9137-7d10-41cb-a31d-7ff6648cec58, 7dc4c848-847e-4958-9a60-622dc8f92ba1]
 - Using complaint count multiplied by mean severity, the baseline priority score for I_PLAYBACK_01 is recorded as follows. [C012; I_PLAYBACK_01; priority_score=44827; reviews: 47b4bee4-51b3-4e2d-85e2-625d5a70e879, 34ef9137-7d10-41cb-a31d-7ff6648cec58, 7dc4c848-847e-4958-9a60-622dc8f92ba1]
+- Baseline priority score of I_OTHER_02, stated in the prose above; linked by code after the run. [C013; I_OTHER_02; priority_score=117639; reviews: 4cb969c0-544b-494e-9e87-8d704c0c36c4, cc24a214-e7a8-4cba-82bf-4db431ff8008, 8398472d-f697-4d3a-98be-5abafc94c5d4]
 
 Representative review IDs are typical members of each issue (the most common severity, closest to the issue centroid), not its most severe reviews. Each number above is copied by code from the saved baseline ranking.
 

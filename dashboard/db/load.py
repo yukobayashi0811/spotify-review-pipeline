@@ -185,6 +185,12 @@ def main() -> int:
     run_summary = read_json(full / "run_summary.json")
     provenance = {row["claim_id"]: row for row in read_csv(full / "claims_provenance.csv")}
     payload_claims = {claim["claim_id"]: claim for claim in payload["claims"]}
+    linked_path = full / "claims_code_linked.json"
+    if linked_path.exists():
+        # Claims that code linked after the run (scripts/link_memo_claims.py); provenance says so.
+        inputs[f"{run_rel}/claims_code_linked.json"] = file_sha(linked_path)
+        for claim in read_json(linked_path):
+            payload_claims.setdefault(claim["claim_id"], claim)
 
     print("Connecting and loading ...", flush=True)
     sha_mismatches = 0

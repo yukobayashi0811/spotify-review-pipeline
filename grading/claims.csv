@@ -11,3 +11,4 @@ C009,I_PLAYBACK_01,complaint_count,14449
 C010,I_PLAYBACK_01,severity_sum,44827
 C011,I_PLAYBACK_01,mean_severity,3.102429
 C012,I_PLAYBACK_01,priority_score,44827
+C013,I_OTHER_02,priority_score,117639

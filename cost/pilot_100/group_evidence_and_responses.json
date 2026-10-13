@@ -156,28 +156,27 @@
           {
             "actionable": "yes",
             "coherent": "yes",
-            "description": "Users report being unable to sign in because their password is rejected or account access is blocked.",
+            "description": "Users report being unable to access their account, including password rejection.",
             "heterogeneous_review_ids": [],
             "issue_id": "TMP_ACCESS_01",
-            "issue_name": "Account sign-in problems"
+            "issue_name": "Account access failure"
           },
           {
             "actionable": "yes",
             "coherent": "no",
-            "description": "Examples mention frequent or intrusive ads, limited song selection controls for non-subscribers, and difficulty navigating directly to a song.",
+            "description": "Users complain about frequent or loud ads, restricted song selection and skipping, and a preference for older features.",
             "heterogeneous_review_ids": [
-              "a3605554-5c3a-441d-836e-e9fdea83eb2e",
               "94c9f2f9-36fa-4c11-936e-660514fe7a35",
               "ebc64fe2-9553-4528-87d5-cb4bb9783be6",
               "5c9c17d3-9d6a-4fa1-a2a4-ae98eefbbd25"
             ],
             "issue_id": "TMP_USABILITY_01",
-            "issue_name": "Ads and listening controls"
+            "issue_name": "Free-tier listening restrictions and ads"
           },
           {
             "actionable": "no",
             "coherent": "no",
-            "description": "Examples cover playback interruptions, loading and launch failures, control behavior, assistant playback, and background downloads, alongside a vague inability-to-play complaint.",
+            "description": "Examples mention varied playback problems, including stopping, loading, crashes, controls, and automatic playback.",
             "heterogeneous_review_ids": [
               "2ffdf599-a0d5-4c01-bf26-025215d44c06",
               "9c9757da-6b99-4c95-a0e7-0661ee858027",
@@ -189,26 +188,28 @@
               "66a29b3c-c14d-440e-b722-b23e0c99ae82"
             ],
             "issue_id": "TMP_PLAYBACK_01",
-            "issue_name": "Playback and app behavior"
+            "issue_name": "Playback and app behavior problems"
           },
           {
             "actionable": "yes",
             "coherent": "yes",
-            "description": "A user reports that offline listening is not working.",
+            "description": "The user reports that offline listening does not work.",
             "heterogeneous_review_ids": [],
             "issue_id": "TMP_DOWNLOADS_01",
             "issue_name": "Offline listening failure"
           },
           {
-            "actionable": "yes",
+            "actionable": "no",
             "coherent": "no",
-            "description": "Examples report missing songs, limited gospel music, and lyrics that are absent or fail to appear, as well as vague praise and dissatisfaction with recommendations.",
+            "description": "The examples mix limited music availability, missing lyrics, recommendations, and general praise.",
             "heterogeneous_review_ids": [
+              "47becad0-8ae5-4a10-9731-fde8f2091862",
               "7a833667-4fcb-4a40-a88d-c55cfeca3d16",
-              "618d1dbb-0186-4537-923a-7b4dabf19afb"
+              "618d1dbb-0186-4537-923a-7b4dabf19afb",
+              "e0127547-4edd-44a0-8d5e-e8398bc07086"
             ],
             "issue_id": "TMP_CATALOG_01",
-            "issue_name": "Catalog and lyrics gaps"
+            "issue_name": "Catalog and lyrics feedback"
           }
         ]
       }
@@ -261,16 +262,6 @@
         {
           "examples": [
             {
-              "review_id": "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
-              "review_text": "RUDE APP , THIS APP SUPPORT GUYS 🤮🤮🤮🤮🤮🤮🤮🤮🤮🤮. تطبيق سيء ، بدعم المثليين 🤮🤮🤮"
-            }
-          ],
-          "issue_id": "TMP_SUPPORT_01",
-          "topic": "support"
-        },
-        {
-          "examples": [
-            {
               "review_id": "8b6e028a-5f63-4011-9841-cbbade4830eb",
               "review_text": "Very bad app"
             },
@@ -287,12 +278,16 @@
               "review_text": "Used to love the app but recent update is very disappointing bye Spotify"
             },
             {
+              "review_id": "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
+              "review_text": "The update made the app useless .... Uninstall krdia ye app ab bekar hai ... Wynk hi theek h"
+            },
+            {
               "review_id": "c1ab120a-f91f-4ee3-87f5-66f352e2d47f",
               "review_text": "It was a good app . But now it's a trash 🗑️"
             },
             {
-              "review_id": "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
-              "review_text": "The update made the app useless .... Uninstall krdia ye app ab bekar hai ... Wynk hi theek h"
+              "review_id": "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
+              "review_text": "RUDE APP , THIS APP SUPPORT GUYS 🤮🤮🤮🤮🤮🤮🤮🤮🤮🤮. تطبيق سيء ، بدعم المثليين 🤮🤮🤮"
             },
             {
               "review_id": "486d1d7a-d6f6-41ea-81ad-ed875452729c",
@@ -303,50 +298,39 @@
               "review_text": "Noob app"
             },
             {
-              "review_id": "ca16e65d-d2ff-4453-a495-b8c422809330",
-              "review_text": "Recent update 👎"
-            },
-            {
-              "review_id": "89a8e180-7846-4421-a2b6-fa7787e9d0d2",
-              "review_text": "Too much restrictions"
+              "review_id": "ba274609-2cbc-4d6a-9624-276d1c8246e8",
+              "review_text": "I can't use anything else but Spotify 💯👍🏼"
             }
           ],
           "issue_id": "TMP_OTHER_01",
           "topic": "other"
         }
       ],
-      "new_distinct_texts_reserved": 20,
+      "new_distinct_texts_reserved": 19,
       "response": {
         "issues": [
           {
             "actionable": "yes",
             "coherent": "yes",
-            "description": "Users object to basic playback controls and features being restricted to Premium, including selecting songs, skipping, and seeking within tracks.",
+            "description": "Listeners object to core playback controls and song selection being restricted to Premium, including limits on skipping and choosing tracks.",
             "heterogeneous_review_ids": [
               "23d905f8-8684-41b3-8faa-42571f3eaeee"
             ],
             "issue_id": "TMP_BILLING_01",
-            "issue_name": "Basic playback restricted to Premium"
-          },
-          {
-            "actionable": "no",
-            "coherent": "yes",
-            "description": "The reviewer objects to Spotify's support of LGBTQ+ people, without identifying a product support problem.",
-            "heterogeneous_review_ids": [],
-            "issue_id": "TMP_SUPPORT_01",
-            "issue_name": "Objection to LGBTQ+ support"
+            "issue_name": "Core playback features require Premium"
           },
           {
             "actionable": "no",
             "coherent": "no",
-            "description": "Reviews express general dissatisfaction, disappointment with updates, unspecified restrictions, or unrelated boycott sentiment without a consistent, specific product problem.",
+            "description": "These reviews express broad dissatisfaction or praise without identifying a specific product problem; one cites a recent update, while others give no actionable detail or raise unrelated objections.",
             "heterogeneous_review_ids": [
+              "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
               "486d1d7a-d6f6-41ea-81ad-ed875452729c",
-              "ca16e65d-d2ff-4453-a495-b8c422809330",
-              "89a8e180-7846-4421-a2b6-fa7787e9d0d2"
+              "2d5cdd20-3094-40a5-bc6e-653302b59b56",
+              "ba274609-2cbc-4d6a-9624-276d1c8246e8"
             ],
             "issue_id": "TMP_OTHER_01",
-            "issue_name": "General dissatisfaction and mixed complaints"
+            "issue_name": "General dissatisfaction and unrelated reactions"
           }
         ]
       }

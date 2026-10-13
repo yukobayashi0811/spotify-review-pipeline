@@ -61,6 +61,7 @@ Per-topic human counts: usability 10, playback 6, downloads 1, catalog 7, billin
 
 - Quote is an exact substring of the review: 50/50 (checked in code).
 - Quote is the whole review text: 43/50. The local classifier copies the text (or its first sentence) rather than selecting the clause that supports the label, so for long reviews a valid quote can be a weak justification; the quote is mechanically valid in every case, and whether it supports the label is part of the per-case review above.
+- Quote supports the predicted label (read for all 50): yes 41, partially 5, no 4. In every 'no' row the quote is fine and the label is wrong (the quote is the review's own text); details in the `quote_supports_label` / `quote_support_note` columns of the cases file.
 - Predicted entities not found in the text (unsupported additions): 0 rows.
 - Entity list is only the brand name 'Spotify': 9 rows; the human lists name product features instead, which is the main reason entity exact match is 0.48.
 

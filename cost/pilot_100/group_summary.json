@@ -1,9 +1,9 @@
 {
   "complaint_or_cancellation_records": 52,
-  "input_hash": "36b13843671028ee0cd988e90fe683275f5c60d0c1d15f443b3f1edcd583cf80",
-  "issues": 8,
+  "input_hash": "c526537d85bdc5595acf2156dca2f024c80f5a9758fc9b64e8485921fbf1896e",
+  "issues": 7,
   "luna_distinct_texts": {
-    "succeeded": 49
+    "succeeded": 48
   },
   "memberships": 52,
   "model_called": true,

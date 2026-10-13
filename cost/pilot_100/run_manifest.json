@@ -1,7 +1,38 @@
 {
-  "code_commit": "5daeee303703595ad93ddfa4b1c6b95f73f46c66",
-  "config_file": "config/pipeline.json",
-  "config_sha256": "12e6cc4da24b97b084c574857a3d67447a9536e6b87d1cc297fe9518a005ec92",
+  "code_commit": "eb84cf69ba5898469e4334ac09a1e5e42dede8b3",
+  "code_files_sha256": {
+    "__init__.py": "8ea08ec2acf6dfdd7071d00aae151ec85b2bc916eceb4fdefdc62b62ba58d86f",
+    "classify.py": "75460227d7b13234ee83819ac39353a125920b3af5d2299746715e1c726354eb",
+    "cli.py": "b8c98bc164275e544e5c4014f4b792e50098252a8e33cccfd33041e001b2a340",
+    "codex_benchmark.py": "c8fa347066a3ab8bd97c66490c6380a5bb3c6dbee71173e92f46347b0ac5d2a6",
+    "constants.py": "e51871e0cc428fc3ca04f838cfcb608f22f8dc9c8be35bff6c7cbfc3b4107248",
+    "costs.py": "8a6262bfe28fc383a27443c72a1753af8be3e6b4548f59c021c004eb4ac9baca",
+    "distilled.py": "aab9a510a90ea9b3751f03edbd1da84187f4832fc9cddc65e58ec20ddb0709bb",
+    "downstream_analysis.py": "4a86fdd6a37203922a149d0634923f892e9cfa3b1aac58bcf15441e3be3c4408",
+    "evaluate.py": "a2dc6786bb55f770b98e4d31ba0dfe85976ae05835ba7246fd2e977accf13bbd",
+    "export.py": "f91bb596c9a214d94761df5f761c12498e0c7cca6184e51087abd3d95b61b0e9",
+    "frozen_run.py": "1950e8ad95b6e9ce1e5e8fbb3a4091921a20e0db0094f7e2e433706e5771fdd7",
+    "full_run.py": "aa2479f5d73ff8a6c909fa672345a4759d4f322b71ca78b0a4c161de32799d7a",
+    "group.py": "9dc77d5adb7f3aeadb0860010aed0219418375c5062eae7b8741d3c533afc692",
+    "guard.py": "fd8b1d616b9f01b54177ccd900cbcd6082581c013b91dd1b95349315bfb6ff6f",
+    "hybrid.py": "10c9165f46367af1983e42538678043c4171a06ce3067bf448d0ec771df9a87e",
+    "io_utils.py": "12b01765c524ce14c2388ce6138e3295c318b807b228927382c29265ac382fde",
+    "legacy_luna.py": "f8897bcf4634a49a40b1df7a8d1640e2f195ce6d5ff4a4f2d2e243e60c7890cd",
+    "orchestrator.py": "4c2258280ddaaed59a93d5c6de76a8f73aa54cbdafa7935243fe752d57be7862",
+    "pilot_group.py": "1f3ae0d39cc6fd552caf631afed76e5d1e1f584f8087bed9551ee34f2dc7274f",
+    "pipeline_run.py": "4648e21b8d75bfee2643e34bf9fe50df7780017c52bc84dce2aea7c9761c8e70",
+    "prepare.py": "f622a130ce58eaf4b481bafbc97ca0fc2c36ba36bddaebd5406657373f231676",
+    "providers.py": "d48b11ed01019830ed2b533c00f0b237d3bdd7ab02a03ea5b3175522cc42d411",
+    "rank.py": "8b8197dd3c2aa841c06689df3b918bf4f97e5fa2880315e15c12f81def409078",
+    "recommend.py": "3f1e1153b8807d215817b21bc272e46afdf7692922db08ae9f82eae90009ec17",
+    "schemas.py": "12e2ff2c66a0b82feef4da776932a352d5e47c91480faa0a048173f56972c5dc",
+    "sensitivity.py": "9e49929d9b3b35e8c8015bd9387ce255aa5ede90a6a3261cc3e63e86c93a0e16",
+    "storage.py": "1211e0bd5f35e0dd7717185f177dd9b67552cb9ba3c6928ef3446e3c13b88ed8",
+    "verify.py": "d85cc27d30c92aae92b876cde8b5953f115603643609228b907f589813614977"
+  },
+  "code_uncommitted_changes": true,
+  "config_file": "config/pilot_100.json",
+  "config_sha256": "620fab7465e7a937825c0494673a8d0e088a2d71635566f902225885ac9d2f96",
   "input_file": "cost_100.csv",
   "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
   "label_configs": {
@@ -67,5 +98,5 @@
     "verify": "5e0ad332b26a09d38eebee3e2ca7620cf7c93af0cb4b6fdf2f425a1d1c21e0f6"
   },
   "python": "3.13.15",
-  "run_id": "pipeline-v4-537befd2-a8ec-4907-9f3e-cced660c3293"
+  "run_id": "pipeline-v4-ed8efdb6-5135-4598-8141-c28b385e6adf"
 }

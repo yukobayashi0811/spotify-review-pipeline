@@ -71,6 +71,22 @@ NON_ENGLISH = {
 }
 
 
+# Does the saved evidence quote support the predicted label? Assigned by reading all 50
+# quotes against the review text and the predicted topic/intent/severity (review_id prefix
+# -> (judgement, reason)); every row not listed was judged "yes".
+QUOTE_SUPPORT = {
+    "1fc8b08f": ("no", "'No ads at all!' is praise for Duo Premium, not a billing complaint"),
+    "ac6cd66d": ("no", "Tagalog 'all the songs are on Spotify' is praise, not a catalog complaint"),
+    "46842184": ("no", "Indonesian 'the lyrics are sometimes missing' supports a catalog complaint, not unclear"),
+    "283b5843": ("no", "the text asks for a free month in passing; it does not support a billing request"),
+    "36609c5c": ("partial", "a one-word insult ('beggars'); unclear is defensible but so is a generic complaint"),
+    "f4c8146a": ("partial", "'Unconditional love' plus a name; praise for the app is not explicit"),
+    "46c0b49f": ("partial", "the quote is about ad loudness (usability), while the predicted topic is playback"),
+    "5de7f95b": ("partial", "a boycott with a stated personal departure; the quote fits cancellation better than unclear"),
+    "b58dd6f0": ("partial", "supports a request, but organizing saved albums is usability rather than catalog"),
+}
+
+
 def matrix(rows: list[dict], field: str, labels: list[str]) -> list[str]:
     counts = Counter((row[f"gold_{field}"], row[f"pred_{field}"]) for row in rows)
     used = [label for label in labels if any(label in pair for pair in counts)]
@@ -104,6 +120,8 @@ def main() -> int:
             "gold_entities": g["entities"],
             "unsupported_entities": json.dumps(unsupported, ensure_ascii=False),
             "entity_is_brand_only": pred_entities in (["Spotify"], ["spotify"]),
+            "quote_supports_label": QUOTE_SUPPORT.get(review_id[:8], ("yes", ""))[0],
+            "quote_support_note": QUOTE_SUPPORT.get(review_id[:8], ("yes", ""))[1],
             "review_text": text.replace("\n", " "),
         }
         row["mismatch"] = ",".join(f for f in ("topic", "intent", "severity") if str(row[f"gold_{f}"]) != str(row[f"pred_{f}"]))
@@ -179,6 +197,10 @@ def main() -> int:
         "",
         f"- Quote is an exact substring of the review: {sum(row['quote_is_substring'] for row in rows)}/{len(rows)} (checked in code).",
         f"- Quote is the whole review text: {sum(row['quote_is_full_text'] for row in rows)}/{len(rows)}. The local classifier copies the text (or its first sentence) rather than selecting the clause that supports the label, so for long reviews a valid quote can be a weak justification; the quote is mechanically valid in every case, and whether it supports the label is part of the per-case review above.",
+        f"- Quote supports the predicted label (read for all {len(rows)}): yes {sum(row['quote_supports_label'] == 'yes' for row in rows)}, "
+        f"partially {sum(row['quote_supports_label'] == 'partial' for row in rows)}, no {sum(row['quote_supports_label'] == 'no' for row in rows)}. "
+        "In every 'no' row the quote is fine and the label is wrong (the quote is the review's own text); details in the "
+        "`quote_supports_label` / `quote_support_note` columns of the cases file.",
         f"- Predicted entities not found in the text (unsupported additions): {sum(row['unsupported_entities'] != '[]' for row in rows)} rows.",
         f"- Entity list is only the brand name 'Spotify': {sum(row['entity_is_brand_only'] for row in rows)} rows; the human lists name product features instead, which is the main reason entity exact match is {headline['entities_exact']:.2f}.",
         "",

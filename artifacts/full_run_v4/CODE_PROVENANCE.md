@@ -36,5 +36,7 @@
 Changes made after the full run finished (none of them touches a stage the full run executed with different inputs, and none changes a saved number):
 
 - `recommend.py`: the memo validator now requires `min(2, eligible issues)` alternatives instead of exactly two. The 100-review pilot has only one eligible alternative, so its memo failed validation; the full run has 19 eligible alternatives and passed under the old rule. Fixed before the pilot was rerun.
+- `recommend.py` (second change, before the one-worker pilot): when no ranked issue in an allowed topic is both coherent and actionable — which happened in a 100-review pilot, where the only such issue was in `downloads` — the priority rule now relaxes to actionable issues (then to any ranked issue) and the memo must say so in its limitations. In the full run a coherent and actionable issue exists, so the strict rule applies and its memo validates unchanged.
+- `recommend.py` (third change): on an input with fewer than two evidence texts, the memo's two-request ledger now uses any two distinct source texts as its sentinels instead of stopping. Found by `scripts/robustness_sweep.py`; it does not apply to the full run.
 - `evaluate.py`: the Golden scorer's row-count check now uses its `expected_rows` argument (it still said 50), so the held-out 30 can be scored with the same code. Not used by the pipeline run.
 - `pipeline_run.py`: `run_manifest.json` now also records `code_uncommitted_changes` and per-file source hashes (this file exists because the final run's manifest did not).

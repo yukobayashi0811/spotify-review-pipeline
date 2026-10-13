@@ -1,0 +1,37 @@
+{
+  "artifact_sha256": "dfd52b46c3eedd428fdb0fa6ee3dbde7982fb43f0727c139b1ca609c19512775",
+  "candidate_k": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "embedding": {
+    "device": "mps",
+    "dimensions": 384,
+    "dtype": "float32",
+    "embedding_npy_sha256": "688633b6d9f4ff9d92c29c155453ebaff66bd5bcd6a3cbe6c3d9baca3fcb6a77",
+    "input_sha256": "583ead21c969f653186ed4d7ed6c637345122b694dd71bb7b46bce1d3557bb1a",
+    "mapping_csv_sha256": "08ddc48dc91abeb41693bf0b7b1bbdd4527d46d8b95bcb69716379dd3bbed138",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_snapshot_path": "/Users/Yu/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "model_snapshot_tree_sha256": "bcc5e8534a252ee9f4d96ef9c628f5edc71227babe70d49ae3e7a954cb6913b9",
+    "normalized": true,
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "rows": 52,
+    "selection_rule": "full review text when word_count <= 25; otherwise saved evidence_quote"
+  },
+  "initial_cluster_cap_for_bounded_split": 48,
+  "input_sha256": "74040d5bfba022617f41488f16ddf7fdf63f571fec3585e949a4880f7694309c",
+  "minimum_cluster_share": 0.02,
+  "minimum_texts_for_coherence_split": 20,
+  "post_naming_merge_threshold": 0.85,
+  "pre_naming_centroid_merge_threshold": 0.9,
+  "schema_version": "group-v3",
+  "seed": 20261003,
+  "small_topic_single_cluster_below_distinct_texts": 30
+}

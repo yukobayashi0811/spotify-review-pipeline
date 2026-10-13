@@ -284,3 +284,26 @@ class InterruptResumeTests(unittest.TestCase):
             self.assertTrue((after - before - cached) & resume)
             luna_rows = sum(row.get("label_config", "").startswith("gpt-6-luna") for row in records.values())
             self.assertGreater(luna_rows, 100)
+
+
+class PriorityEligibilityTests(unittest.TestCase):
+    def test_strict_rule_then_fallbacks(self) -> None:
+        from spotify_pipeline.recommend import priority_eligibility
+
+        ranking = [{"issue_id": i} for i in ("I_PLAYBACK_01", "I_OTHER_01", "I_DOWNLOADS_01", "I_BILLING_01")]
+        issues = {
+            "I_PLAYBACK_01": {"topic": "playback", "coherent": "no", "actionable": "yes"},
+            "I_OTHER_01": {"topic": "other", "coherent": "yes", "actionable": "no"},
+            "I_DOWNLOADS_01": {"topic": "downloads", "coherent": "yes", "actionable": "yes"},
+            "I_BILLING_01": {"topic": "billing", "coherent": "yes", "actionable": "yes"},
+        }
+        self.assertEqual(priority_eligibility(issues, ranking), ("coherent_and_actionable", ["I_BILLING_01"]))
+        issues["I_BILLING_01"]["coherent"] = "no"
+        # Downloads is coherent and actionable but not an allowed priority topic.
+        self.assertEqual(
+            priority_eligibility(issues, ranking),
+            ("actionable_only_fallback", ["I_PLAYBACK_01", "I_BILLING_01"]),
+        )
+        for value in issues.values():
+            value["actionable"] = "no"
+        self.assertEqual(priority_eligibility(issues, ranking)[0], "any_issue_fallback")

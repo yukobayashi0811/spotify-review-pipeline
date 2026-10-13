@@ -1,6 +1,6 @@
 {
   "errors": 0,
-  "executed_at_utc": "2026-10-13T05:03:20.818954+00:00",
+  "executed_at_utc": "2026-10-13T06:44:05.882776+00:00",
   "failures": 0,
   "model_calls": 0,
   "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
@@ -55,12 +55,13 @@
     "test_transient_errors_back_off_then_succeed (test_pipeline_run.GuardTests.test_transient_errors_back_off_then_succeed) ... ok",
     "test_interrupt_then_resume_meets_contract_rules (test_pipeline_run.InterruptResumeTests.test_interrupt_then_resume_meets_contract_rules) ... ok",
     "test_cold_then_warm_run_on_100_reviews (test_pipeline_run.PipelineRunTests.test_cold_then_warm_run_on_100_reviews) ... ok",
+    "test_strict_rule_then_fallbacks (test_pipeline_run.PriorityEligibilityTests.test_strict_rule_then_fallbacks) ... ok",
     "",
     "----------------------------------------------------------------------",
-    "Ran 47 tests in 6.767s",
+    "Ran 48 tests in 6.680s",
     "",
     "OK"
   ],
-  "tests_run": 47,
-  "wall_seconds": 6.844372
+  "tests_run": 48,
+  "wall_seconds": 6.749217
 }
