@@ -1,14 +1,14 @@
 {
   "status": "pass",
-  "checked_at_utc": "2026-10-13T05:13:43.866Z",
+  "checked_at_utc": "2026-10-13T06:56:37.607Z",
   "dashboard_url": "https://spotify-review-pipeline-dashboard.vercel.app",
-  "deployed_commit": "b9101f977700c881e2dff3a2ef317575d931e072",
+  "deployed_commit": "f173e73ec41cc503cce2cf0c294d64753cb16a46",
   "model_calls": 0,
   "response_ms": {
-    "health": 266,
-    "overview": 406,
-    "ranking": 385,
-    "recommendation": 824
+    "health": 294,
+    "overview": 562,
+    "ranking": 561,
+    "recommendation": 561
   },
   "checks": {
     "page_served": {
@@ -20,8 +20,8 @@
       "body": {
         "ok": true,
         "database": "postgresql",
-        "commit": "b9101f977700c881e2dff3a2ef317575d931e072",
-        "checked_at": "2026-10-13T05:13:43.231Z",
+        "commit": "f173e73ec41cc503cce2cf0c294d64753cb16a46",
+        "checked_at": "2026-10-13T06:56:37.255Z",
         "reviews": 660622,
         "memberships": 287914,
         "issues": 44
@@ -146,6 +146,14 @@
           "displayed_value": "44827",
           "database_value": "44827",
           "ranking_value": "44827",
+          "passed": true
+        },
+        {
+          "claim_id": "C013",
+          "expected": "117639",
+          "displayed_value": "117639",
+          "database_value": "117639",
+          "ranking_value": "117639",
           "passed": true
         }
       ],
