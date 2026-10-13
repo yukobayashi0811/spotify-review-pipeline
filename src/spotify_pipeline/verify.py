@@ -9,6 +9,10 @@ from typing import Any
 
 from .classify import ModelConfig, _call_event, _failed_event, _failed_result_event, chunks
 from .constants import PROMPT_VERSION, SCHEMA_VERSION, TOPICS
+
+# The verifier prompt is versioned separately from the classifier prompt.
+# 2026-10-12-v4 added the explicit premium-only-controls billing boundary.
+VERIFY_PROMPT_VERSION = "2026-10-12-v4"
 from .io_utils import write_json
 from .providers import Provider, ProviderUnavailableError
 from .schemas import (
@@ -32,26 +36,57 @@ def run_verification(
     minimum_sample: int = 10,
     maximum_sample: int | None = None,
     seed: str = "spotify-verifier-v1",
+    selected_ids: list[str] | None = None,
 ) -> dict[str, Any]:
+    """Blind re-labeling of a declared sample; code compares with first-pass labels.
+
+    ``selected_ids`` lets the caller supply a predeclared (for example
+    stratified) sample; otherwise the first rows by SHA-256(seed:review_id) are used.
+    """
     if not 0 < sample_fraction <= 1:
         raise ValueError("sample_fraction must be in (0,1]")
     if maximum_sample is not None and maximum_sample < minimum_sample:
         raise ValueError("maximum_sample must be at least minimum_sample")
     prompt = Path(prompt_path).read_text(encoding="utf-8")
-    verifier_config = f"{config.model}:{config.effort}:verify-{PROMPT_VERSION}:{SCHEMA_VERSION}"
+    verifier_config = f"{config.model}:{config.effort}:verify-{VERIFY_PROMPT_VERSION}:{SCHEMA_VERSION}"
     if config.execution_fingerprint:
         verifier_config += f":{config.execution_fingerprint}"
     with Store(state_path) as store:
-        completed = list(store.completed_records())
-        target = min(len(completed), max(minimum_sample, round(len(completed) * sample_fraction)))
-        if maximum_sample is not None:
-            target = min(target, maximum_sample)
-        selected = sorted(
-            completed,
-            key=lambda row: hashlib.sha256(
-                f"{seed}:{row['review_id']}".encode("utf-8")
-            ).hexdigest(),
-        )[:target]
+        completed_ids = [
+            str(row[0]) for row in store.connection.execute(
+                "SELECT review_id FROM records WHERE status='completed'"
+            )
+        ]
+        if selected_ids is None:
+            target = min(
+                len(completed_ids),
+                max(minimum_sample, round(len(completed_ids) * sample_fraction)),
+            )
+            if maximum_sample is not None:
+                target = min(target, maximum_sample)
+            chosen = sorted(
+                completed_ids,
+                key=lambda review_id: hashlib.sha256(
+                    f"{seed}:{review_id}".encode("utf-8")
+                ).hexdigest(),
+            )[:target]
+        else:
+            allowed = set(completed_ids)
+            chosen = [review_id for review_id in selected_ids if review_id in allowed]
+            target = len(chosen)
+        selected = []
+        for offset in range(0, len(chosen), 500):
+            part = chosen[offset:offset + 500]
+            rows = {
+                str(row["review_id"]): dict(row)
+                for row in store.connection.execute(
+                    "SELECT r.*,s.review_text,s.text_sha256 FROM records r "
+                    "JOIN source_rows s USING(review_id) WHERE r.review_id IN (%s)"
+                    % ",".join("?" for _ in part),
+                    part,
+                )
+            }
+            selected.extend(rows[review_id] for review_id in part)
         selected_ids = {row["review_id"] for row in selected}
         existing_ids = {
             row[0]
@@ -206,18 +241,6 @@ def run_verification(
             item["severity_distance"] = abs(item["first_severity"] - item["verify_severity"])
             comparisons.append(item)
 
-        planted = None
-        if comparisons:
-            base = comparisons[0]
-            wrong_topic = next(topic for topic in TOPICS if topic != base["verify_topic"])
-            planted = {
-                "synthetic_test": True,
-                "review_id": base["review_id"],
-                "planted_topic": wrong_topic,
-                "verifier_topic": base["verify_topic"],
-                "detected": wrong_topic != base["verify_topic"],
-                "note": "The planted label exists only in this test copy and is excluded from business outputs.",
-            }
         result_report = {
             "sample_seed": seed,
             "sample_fraction": sample_fraction,
@@ -250,7 +273,10 @@ def run_verification(
                 or not item["intent_agree"]
                 or item["severity_distance"] != 0
             ],
-            "planted_error_test": planted,
+            "planted_error_test": (
+                "not part of the sampled verification; see scripts/run_system_tests.py, which "
+                "plants predeclared wrong labels in a separate synthetic copy"
+            ),
         }
     write_json(output_path, result_report)
     return result_report

@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "doubling_rates_doubles_measured_api_usd": true,
+    "doubling_rates_doubles_projected_api_usd": true,
+    "doubling_rates_leaves_measured_time_unchanged": true,
+    "doubling_rates_leaves_local_compute_unchanged": true,
+    "changing_projected_volume_leaves_measured_pilot_unchanged": true,
+    "pilot_ids_match_cost_100": true,
+    "input_checksum_matches_manifest": true
+  },
+  "passed": true,
+  "measured_api_usd": 0.00662678,
+  "measured_api_usd_with_2x_rates": 0.01325356,
+  "model_calls": 0
+}

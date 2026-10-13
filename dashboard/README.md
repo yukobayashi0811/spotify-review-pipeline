@@ -3,11 +3,11 @@
 The deployed dashboard shows the saved full-corpus results: overall metrics, the issue ranking, the topic rollup, monthly complaint share, the AI-generated recommendation (memo role output) with every cited number rechecked against the database, and traceable issue/review evidence.
 
 ```text
-committed outputs (grading/, artifacts/full_run_v2/, evals/, cost/) + raw CSV
+committed outputs (grading/, artifacts/full_run_v4/, evals/, cost/) + raw CSV
         │  dashboard/db/load.py  (zero model calls; verifies hashes and recomputes ranking/claims)
         ▼
 PostgreSQL on Supabase, schema `spotify`
-  reviews (660,622) · issue_membership (288,524) · issues (41) · memo · claims · memo_evidence · run_facts
+  reviews (660,622) · issue_membership (287,914) · issues (44) · memo · claims · memo_evidence · run_facts
   materialized views: issue_ranking · topic_rollup · monthly_trend · corpus_counts
                       · label_source_counts · issue_member_order
                       ← computed by PostgreSQL from reviews + membership at load time
@@ -20,7 +20,7 @@ Vercel serverless functions  /api/overview /api/ranking /api/topics /api/trend
 Static dashboard (public/index.html + app.js), same Vercel deployment
 ```
 
-No page or API route calls a model. The recommendation text was produced once by the pipeline's memo role (`artifacts/full_run_v2/memo_payload.json`); the API recomputes each cited number from `reviews` + `issue_membership` and reports whether it still matches.
+No page or API route calls a model. The recommendation text was produced once by the pipeline's memo role (`artifacts/full_run_v4/memo_payload.json`); the API recomputes each cited number from `reviews` + `issue_membership` and reports whether it still matches.
 
 ## 1. Load the database (Supabase)
 
@@ -51,7 +51,7 @@ The `spotify` schema is not exposed through Supabase's public Data API, so the a
    node dashboard/scripts/check-live.mjs https://<your-app>.vercel.app
    ```
 
-   This writes `artifacts/dashboard/live_check.json`, comparing all 41 ranking rows and all 12 memo claims with `grading/ranking.csv` and `grading/claims.csv`.
+   This writes `artifacts/dashboard/live_check.json`, comparing all 44 ranking rows and all 12 memo claims with `grading/ranking.csv` and `grading/claims.csv`.
 
 ## Local run
 

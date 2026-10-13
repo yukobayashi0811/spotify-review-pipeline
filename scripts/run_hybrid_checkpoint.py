@@ -37,7 +37,7 @@ def main() -> int:
     parser.add_argument("--luna-effort", default="low", choices=("low", "medium", "high"))
     parser.add_argument("--luna-batch-size", type=int, default=50)
     parser.add_argument("--luna-timeout-seconds", type=float, default=300.0)
-    parser.add_argument("--codex", default="/Users/Yu/.local/bin/codex")
+    parser.add_argument("--codex", default="codex")
     parser.add_argument("--expected-cli-version", default="codex-cli 0.159.3")
     parser.add_argument("--acknowledge", required=True)
     args = parser.parse_args()

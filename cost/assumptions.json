@@ -1,0 +1,48 @@
+{
+  "_note": "Editable projection assumptions for cost/calculator.py. Measured pilot values are read from pilot_run.json and pilot_calls.jsonl and are never changed by these settings.",
+  "full_run": {
+    "source_rows": 660622,
+    "nonempty_rows": 660609,
+    "empty_text_quarantines": 13,
+    "distinct_nonempty_texts": 484189
+  },
+  "controls": {
+    "budget_usd": 5.0,
+    "output_token_cap_per_request": 6000,
+    "max_workers": 3,
+    "max_fallback_fraction": 0.05
+  },
+  "reference_calls": {
+    "path": "reference_full_run_calls.jsonl",
+    "description": "Saved GPT-6 Luna calls from the earlier full-corpus run (50-review batches; its other evidence is in archive/v2_full_run_evidence/), used before the final run for per-request token and duration percentiles at production batch size. One row per request ID. The final run's measured totals are in cost/full_run_v4_actuals.md."
+  },
+  "scenarios": {
+    "base": {
+      "route_fraction": "measured",
+      "_route_fraction": "measured = pilot eligible texts / distinct texts, capped at controls.max_fallback_fraction; cap = the cap itself",
+      "token_percentile": 50,
+      "duration_percentile": 50,
+      "failed_attempt_rate": "reference",
+      "group_requests": 14,
+      "memo_requests": 1,
+      "local_seconds_per_1000_distinct_texts": 0.4,
+      "fixed_local_seconds": 210
+    },
+    "conservative": {
+      "route_fraction": "cap",
+      "token_percentile": 90,
+      "duration_percentile": 90,
+      "failed_attempt_rate": 0.05,
+      "group_requests": 28,
+      "memo_requests": 2,
+      "local_seconds_per_1000_distinct_texts": 0.8,
+      "fixed_local_seconds": 420
+    }
+  },
+  "sources": {
+    "local_seconds_per_1000_distinct_texts": "Full run: local finalization 79 s + 4.8 s + 110.4 s for 484,189 distinct texts (archive/v2_full_run_evidence/cost/full_run_actuals.json, earlier full run) = 0.40 s per 1,000; the conservative case doubles it.",
+    "fixed_local_seconds": "Full run: ingest 19.4 s + export 6.6 s + rank 0.5 s + embedding and clustering about 180 s (adopted grouping took 349.6 s including about 170 s of Luna naming requests) = about 210 s; the conservative case doubles it.",
+    "group_requests": "Full run: 13 successful + 1 failed naming request for the adopted grouping (565 evidence texts).",
+    "verification_rows": "min(maximum, max(minimum, sample_fraction x nonempty rows)) from config/pipeline.json."
+  }
+}

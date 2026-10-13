@@ -194,7 +194,7 @@ function renderTiles(o) {
   $('#meta-row').replaceChildren(
     h('span', {}, `Source SHA-256 ${src?.analysis_sha256?.slice(0, 12)}…`),
     h('span', {}, `Reviews ${ing?.first_review?.slice(0, 10)} → ${ing?.last_review?.slice(0, 10)}`),
-    h('span', {}, `Labels: ${o.label_sources.map((l) => `${fmt.format(l.n)} ${l.label_source === 'luna_teacher' ? 'Luna (teacher)' : 'local classifier'}`).join(' · ')}`),
+    h('span', {}, `Labels: ${o.label_sources.map((l) => `${fmt.format(l.n)} ${l.label_source === 'local_classifier' ? 'local classifier' : 'GPT-6 Luna'}`).join(' · ')}`),
   );
 }
 
@@ -298,11 +298,11 @@ function renderQuality(o) {
     const L = v.metrics_by_final_source.local, U = v.metrics_by_final_source.luna;
     panels.push(h('div', { class: 'card' },
       h('h3', {}, 'Independent verification (blind re-labeling)'),
-      h('p', { class: 'sub' }, `${L.distinct_texts + U.distinct_texts} distinct texts re-labeled by a separate verifier role that never saw the first prediction. Row-weighted agreement; ${v.disagreement_count} disagreements are listed in the receipt.`),
-      h('div', { class: 'table-wrap' }, table(['Final label source', 'Topic', 'Intent', 'Severity exact', 'Quote supports label'], [
-        [`Local classifier (${L.distinct_texts} texts)`, pct(L.row_weighted_topic_agreement), pct(L.row_weighted_intent_agreement), pct(L.row_weighted_severity_exact), pct(L.quote_supported_rate)],
-        [`Luna labels, same-model retest (${U.distinct_texts})`, pct(U.row_weighted_topic_agreement), pct(U.row_weighted_intent_agreement), pct(U.row_weighted_severity_exact), pct(U.quote_supported_rate)],
-      ], [1, 2, 3, 4])),
+      h('p', { class: 'sub' }, `${L.distinct_texts + U.distinct_texts} distinct texts, stratified by label source, re-labeled by a separate verifier role that never saw the first prediction. Row-weighted agreement; ${v.disagreement_count} disagreements are listed in the receipt.`),
+      h('div', { class: 'table-wrap' }, table(['Final label source', 'Topic', 'Intent', 'Severity exact'], [
+        [`Local classifier (${L.distinct_texts} texts)`, pct(L.row_weighted_topic_agreement), pct(L.row_weighted_intent_agreement), pct(L.row_weighted_severity_exact)],
+        [`GPT-6 Luna labels, same-model retest (${U.distinct_texts})`, pct(U.row_weighted_topic_agreement), pct(U.row_weighted_intent_agreement), pct(U.row_weighted_severity_exact)],
+      ], [1, 2, 3])),
       h('p', { class: 'dim', style: 'font-size:12.5px' }, 'Agreement with the verifier model is not human accuracy. Luna-labelled rows verified by Luna measure test–retest consistency only.'),
       source(o.verification.source_file)));
   }
@@ -312,8 +312,12 @@ function renderQuality(o) {
       h('h3', {}, 'Sensitivity to classification error'),
       h('p', { class: 'sub' }, 'Verifier confusion rates were used to re-estimate counts in 1,000 bootstrap draws.'),
       h('ul', { class: 'plain' },
-        h('li', {}, `Top topic stays `, h('strong', {}, sens.baseline_top_topic), ` in ${pct(sens.baseline_top_topic_bootstrap_top_probability, 0)} of draws.`),
-        h('li', {}, `Top issue ${sens.baseline_top_issue} stays first in ${pct(sens.baseline_top_issue_bootstrap_top_probability, 1)} of draws; the generic, non-actionable ${sens.adjusted_top_issue} leads in ${pct(sens.adjusted_top_issue_bootstrap_top_probability, 1)}.`)),
+        sens.top_topic_unchanged
+          ? h('li', {}, `Top topic stays `, h('strong', {}, sens.baseline_top_topic), ` in ${pct(sens.baseline_top_topic_bootstrap_top_probability, 0)} of draws.`)
+          : h('li', {}, `Top topic changes: `, h('strong', {}, sens.baseline_top_topic), ` leads the baseline; after correction `, h('strong', {}, sens.adjusted_top_topic), ` leads in ${pct(sens.adjusted_top_topic_bootstrap_top_probability, 1)} of draws and ${sens.baseline_top_topic} in ${pct(sens.baseline_top_topic_bootstrap_top_probability, 0)}.`),
+        sens.top_issue_unchanged
+          ? h('li', {}, `Top issue ${sens.baseline_top_issue} stays first in ${pct(sens.baseline_top_issue_bootstrap_top_probability, 1)} of draws.`)
+          : h('li', {}, `Top issue ${sens.baseline_top_issue} stays first in ${pct(sens.baseline_top_issue_bootstrap_top_probability, 1)} of draws; ${sens.adjusted_top_issue} leads in ${pct(sens.adjusted_top_issue_bootstrap_top_probability, 1)}.`)),
       source(o.sensitivity.source_file)));
   }
   const g = o.golden_evaluation?.value;
@@ -322,25 +326,41 @@ function renderQuality(o) {
     const row = (label, x) => [label, pct(x.topic), pct(x.intent), pct(x.severity_exact), pct(x.severity_within_1)];
     const rows = [row(`All final labels (${g.cases})`, A)];
     if (S.local_classifier) rows.push(row(`Local classifier (${S.local_classifier.cases})`, S.local_classifier));
-    if (S.luna_teacher) rows.push(row(`Luna labels (${S.luna_teacher.cases})`, S.luna_teacher));
+    const SL = S['gpt-6-luna'] || S.luna_teacher;
+    if (SL) rows.push(row(`GPT-6 Luna labels (${SL.cases})`, SL));
     panels.push(h('div', { class: 'card' },
       h('h3', {}, 'Golden 50 (human labels)'),
       h('p', { class: 'sub' }, `Final labels of the 50 hand-labeled reviews. Sentiment MAE ${(A.sentiment_mae_on_valid_predictions ?? 0).toFixed(2)}; evidence quotes are exact source text in ${pct(A.evidence_quote_substring)}.`),
       h('div', { class: 'table-wrap' }, table(['Final label source', 'Topic', 'Intent', 'Severity exact', 'Severity ±1'], rows, [1, 2, 3, 4])),
-      h('p', { class: 'dim', style: 'font-size:12.5px' }, 'Golden labels were never model inputs. Six Luna-labelled rows are too few for a separate accuracy claim.'),
+      h('p', { class: 'dim', style: 'font-size:12.5px' }, 'Golden labels were never model inputs. Per-source rows are small samples, not separate accuracy claims.'),
       source(o.golden_evaluation.source_file)));
   }
-  const ir = o.interrupt_resume?.value, st = o.system_tests?.value, gc = o.grouping_comparison?.value, cp = o.cost_pilot?.value;
+  const ho = o.holdout_evaluation?.value;
+  if (ho) {
+    const A = { ...(ho.agreement || {}), severity_within_1: ho.severity_within_1 }, S = ho.by_label_source || {};
+    const row = (label, x) => [label, pct(x.topic), pct(x.intent), pct(x.severity_exact), pct(x.severity_within_1)];
+    const rows = [row(`All final labels (${ho.cases})`, A)];
+    if (S.local_classifier) rows.push(row(`Local classifier (${S.local_classifier.rows})`, S.local_classifier));
+    if (S['gpt-6-luna']) rows.push(row(`GPT-6 Luna labels (${S['gpt-6-luna'].rows})`, S['gpt-6-luna']));
+    panels.push(h('div', { class: 'card' },
+      h('h3', {}, 'Fresh held-out 30 (human labels)'),
+      h('p', { class: 'sub' }, 'Thirty reviews outside the Golden 50, labeled by hand from the text alone without seeing any prediction, and never used for tuning.'),
+      h('div', { class: 'table-wrap' }, table(['Final label source', 'Topic', 'Intent', 'Severity exact', 'Severity ±1'], rows, [1, 2, 3, 4])),
+      h('p', { class: 'dim', style: 'font-size:12.5px' }, 'Thirty reviews give wide uncertainty: one review moves a rate by 3.3 points.'),
+      source(o.holdout_evaluation.source_file)));
+  }
+  const ir = o.interrupt_resume?.value, st = o.system_tests?.value, gc = o.grouping_comparison?.value, cp = o.cost_pilot?.value, fu = o.full_run_luna_usage?.value;
   panels.push(h('div', { class: 'card' },
     h('h3', {}, 'Run controls and tests'),
     h('ul', { class: 'plain' },
       ir && h('li', {}, `Interrupt & resume: ${fmt.format(ir.before_completed_ids)} rows complete before the interruption, ${fmt.format(ir.after_completed_ids)} after resume; ${ir.resume_sent_before_ids} already-complete IDs re-sent `, check(ir.passed, 'pass', 'fail')),
-      st && h('li', {}, 'Planted wrong label detected by the verifier ', check(st.planted_error_detected, 'yes', 'no'), ' · injected instructions ignored, IDs and quotes stayed grounded ',
-        check(st.all_luna_ids_authoritative && st.all_luna_quotes_grounded && st.all_verifier_ids_authoritative && st.all_verifier_quotes_grounded, 'yes', 'no')),
-      gc && h('li', {}, `Grouping: adopted ${gc.adopted.replace('_', ' ')} (membership-weighted coherent rate ${pct(gc.embedding_v2.membership_weighted_coherent_rate_overall)} vs ${pct(gc.tfidf_v1.membership_weighted_coherent_rate_overall)} for TF-IDF v1).`),
-      cp && h('li', {}, `100-review pilot: cold ${cp.cold_wall_seconds.toFixed(1)} s, warm ${cp.warm_wall_seconds.toFixed(3)} s with ${cp.warm_new_enrichment_calls} new enrichment calls. All saved Luna calls ≈ $${cp.all_measured_api_equivalent_usd.toFixed(2)} at API rates (subscription-authenticated; estimate, not an invoice).`),
+      st && h('li', {}, 'Predeclared wrong labels flagged by the verifier ', check(st.planted_errors_flagged && st.controls_not_flagged_on_topic, 'yes', 'no'), ' · injected instructions ignored, IDs and quotes stayed grounded ',
+        check(st.no_injected_label_obeyed && st.only_known_review_ids_returned && st.all_injection_quotes_are_substrings, 'yes', 'no')),
+      gc && h('li', {}, `Grouping method: embedding clustering, chosen on the previous full run over TF-IDF clustering (membership-weighted coherent rate ${pct(gc.embedding_v2.membership_weighted_coherent_rate_overall)} vs ${pct(gc.tfidf_v1.membership_weighted_coherent_rate_overall)}).`),
+      cp && cp.cold_wall_seconds != null && h('li', {}, `100-review pilot with the final pipeline: cold ${cp.cold_wall_seconds.toFixed(1)} s ($${(cp.cold_api_equivalent_usd ?? 0).toFixed(5)} at API-equivalent rates; subscription calls, not an invoice), warm ${cp.warm_wall_seconds.toFixed(3)} s with ${cp.warm_new_enrichment_calls} new enrichment calls.`),
+      fu && fu.api_equivalent_usd != null && h('li', {}, `Full run: ${fmt.format(fu.requests_total)} GPT-6 Luna requests (including ${fu.failed_attempts_total} failed attempts that were retried), $${fu.api_equivalent_usd.toFixed(4)} at API-equivalent rates, ${fmt.format(Math.round(fu.wall_seconds?.total_seconds ?? 0))} s wall time over both invocations.`),
     ),
-    source('evals/recovery/interrupt_resume_check.json · evals/system_tests/system_test_report.json · artifacts/full_run_v2/grouping_comparison.json · cost/report.json')));
+    source('evals/recovery_v4/interrupt_resume_check.json · evals/system_tests/system_test_report.json · artifacts/full_run_v2/grouping_comparison.json · cost/report.json · cost/full_run_v4_actuals.json')));
   $('#quality').replaceChildren(...panels);
 }
 
@@ -352,7 +372,7 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawe
 
 function reviewItem(r) {
   return h('blockquote', { class: 'ev' }, quoted(r.review_text, r.evidence_quote),
-    h('span', { class: 'who' }, `Review ${r.review_id} · ${r.intent} · severity ${r.severity}`, r.label_source ? ` · ${r.label_source === 'luna_teacher' ? 'Luna label' : 'local classifier'}` : ''));
+    h('span', { class: 'who' }, `Review ${r.review_id} · ${r.intent} · severity ${r.severity}`, r.label_source ? ` · ${r.label_source === 'local_classifier' ? 'local classifier' : 'GPT-6 Luna label'}` : ''));
 }
 
 async function openIssue(id) {

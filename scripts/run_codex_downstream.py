@@ -22,7 +22,7 @@ def main() -> int:
         description="Merge a sharded Codex development run and execute downstream roles."
     )
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--codex", default="/Users/Yu/.local/bin/codex")
+    parser.add_argument("--codex", default="codex")
     parser.add_argument("--expected-cli-version", default="codex-cli 0.159.3")
     parser.add_argument("--acknowledge", required=True, help=f"Must equal {ACKNOWLEDGEMENT!r}.")
     args = parser.parse_args()

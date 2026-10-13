@@ -30,7 +30,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 SOURCE_FIELDS = ["review_id", "review_text", "review_rating", "review_likes", "app_version", "review_timestamp"]
-EXPECTED = {"source_rows": 660622, "completed": 660609, "quarantined": 13, "membership_rows": 288524}
+EXPECTED = {"source_rows": 660622, "completed": 660609, "quarantined": 13}
+DEFAULT_RUN_DIR = "artifacts/full_run_v4"
 
 
 # Refreshed in dependency order after the COPY (topic_rollup reads issue_ranking).
@@ -80,7 +81,7 @@ def open_records(grading: Path):
 def label_source(label_config: str) -> tuple[str, str]:
     model = label_config.split(":", 1)[0]
     if model.startswith("gpt-6-luna"):
-        return "luna_teacher", model
+        return "gpt-6-luna", model
     if model.startswith("distilled-"):
         return "local_classifier", model
     raise ValueError(f"Unrecognised label_config: {label_config[:80]}")
@@ -97,6 +98,7 @@ def main() -> int:
     parser.add_argument("--raw-csv", type=Path, default=None)
     parser.add_argument("--receipt", type=Path, default=None)
     parser.add_argument("--database-url-env", default="DATABASE_URL")
+    parser.add_argument("--run-dir", default=DEFAULT_RUN_DIR, help="Saved full-corpus run folder")
     args = parser.parse_args()
 
     try:
@@ -107,7 +109,10 @@ def main() -> int:
 
     root = args.root.resolve()
     grading = root / "grading"
-    full = root / "artifacts" / "full_run_v2"
+    full = root / args.run_dir
+    run_rel = args.run_dir.rstrip("/")
+    expected = dict(EXPECTED)
+    expected["membership_rows"] = len(read_csv(grading / "membership.csv"))
     raw_csv = args.raw_csv or root / "data" / "spotify_reviews_18months.csv"
     receipt_path = args.receipt or root / "artifacts" / "dashboard" / "db_load_receipt.json"
     url = os.environ.get(args.database_url_env)
@@ -149,30 +154,35 @@ def main() -> int:
         "grading/ranking.csv": grading / "ranking.csv",
         "grading/claims.csv": grading / "claims.csv",
         "grading/calls.jsonl": grading / "calls.jsonl",
-        "artifacts/full_run_v2/issues.csv": full / "issues.csv",
-        "artifacts/full_run_v2/claims_provenance.csv": full / "claims_provenance.csv",
-        "artifacts/full_run_v2/memo_payload.json": full / "memo_payload.json",
-        "artifacts/full_run_v2/memo_evidence_pack.json": full / "memo_evidence_pack.json",
-        "artifacts/full_run_v2/memo.md": full / "memo.md",
-        "artifacts/full_run_v2/topic_rollup.csv": full / "topic_rollup.csv",
-        "artifacts/full_run_v2/run_report.json": full / "run_report.json",
-        "artifacts/full_run_v2/sensitivity_analysis.json": full / "sensitivity_analysis.json",
-        "artifacts/full_run_v2/grouping_comparison.json": full / "grouping_comparison.json",
-        "evals/verification_final/verification_relinked_report.json": root / "evals" / "verification_final" / "verification_relinked_report.json",
+        f"{run_rel}/issues.csv": full / "issues.csv",
+        f"{run_rel}/claims_provenance.csv": full / "claims_provenance.csv",
+        f"{run_rel}/memo_payload.json": full / "memo_payload.json",
+        f"{run_rel}/memo_evidence_pack.json": full / "memo_evidence_pack.json",
+        f"{run_rel}/memo.md": full / "memo.md",
+        f"{run_rel}/topic_rollup.csv": full / "topic_rollup.csv",
+        f"{run_rel}/run_summary.json": full / "run_summary.json",
+        f"{run_rel}/sensitivity_analysis.json": full / "sensitivity_analysis.json",
+        f"{run_rel}/verification/verification_report.json": full / "verification" / "verification_report.json",
+        "artifacts/full_run_v2/grouping_comparison.json": root / "artifacts" / "full_run_v2" / "grouping_comparison.json",
         "evals/system_tests/system_test_report.json": root / "evals" / "system_tests" / "system_test_report.json",
-        "evals/recovery/interrupt_resume_check.json": root / "evals" / "recovery" / "interrupt_resume_check.json",
+        "evals/recovery_v4/interrupt_resume_check.json": root / "evals" / "recovery_v4" / "interrupt_resume_check.json",
         "cost/report.json": root / "cost" / "report.json",
-        "cost/full_run_actuals.json": root / "cost" / "full_run_actuals.json",
     }
     golden_eval = root / "evals" / "golden_final_evaluation.json"
     if golden_eval.exists():
         small_files["evals/golden_final_evaluation.json"] = golden_eval
+    holdout_eval = root / "evals" / "holdout_30_evaluation.json"
+    if holdout_eval.exists():
+        small_files["evals/holdout_30_evaluation.json"] = holdout_eval
+    actuals_path = root / "cost" / "full_run_v4_actuals.json"
+    if actuals_path.exists():
+        small_files["cost/full_run_v4_actuals.json"] = actuals_path
     for name, path in small_files.items():
         inputs[name] = file_sha(path)
 
     payload = read_json(full / "memo_payload.json")
     pack = read_json(full / "memo_evidence_pack.json")
-    run_report = read_json(full / "run_report.json")
+    run_summary = read_json(full / "run_summary.json")
     provenance = {row["claim_id"]: row for row in read_csv(full / "claims_provenance.csv")}
     payload_claims = {claim["claim_id"]: claim for claim in payload["claims"]}
 
@@ -266,35 +276,81 @@ def main() -> int:
                         (issue_id, ordinal, item["review_id"], item.get("severity"), item.get("evidence_quote")),
                     )
 
-            verification = read_json(root / "evals" / "verification_final" / "verification_relinked_report.json")
+            verification = read_json(full / "verification" / "verification_report.json")
             sensitivity = read_json(full / "sensitivity_analysis.json")
             cost = read_json(root / "cost" / "report.json")
+            by_source = verification.get("by_label_source", {})
+
+            def verifier_stratum(key: str) -> dict:
+                value = by_source.get(key) or {}
+                return {
+                    "distinct_texts": value.get("verified_texts", 0),
+                    "row_weighted_topic_agreement": value.get("row_weighted_topic_agreement"),
+                    "row_weighted_intent_agreement": value.get("row_weighted_intent_agreement"),
+                    "row_weighted_severity_exact": value.get("row_weighted_severity_exact_agreement"),
+                    "quote_supported_rate": None,
+                }
+
+            label_counts: dict[str, int] = {}
+            for config, (_, count) in configs.items():
+                kind = label_source(config)[0]
+                label_counts[kind] = label_counts.get(kind, 0) + count
+            measured = cost.get("measured_pilot", {})
+            luna_usage = run_summary.get("new_model_calls_this_run", {}).get("luna_usage_tokens", {})
             facts = {
                 "source": (run, "grading/run.json"),
                 "ingestion": (read_json(grading / "ingestion.json"), "grading/ingestion.json"),
-                "state_counts": (run_report["state"]["counts"], "artifacts/full_run_v2/run_report.json"),
-                "final_label_sources": (run_report["classification"]["final_label_sources"], "artifacts/full_run_v2/run_report.json"),
+                "state_counts": (run_summary.get("counts"), f"{run_rel}/run_summary.json"),
+                "final_label_sources": (label_counts, "grading/records.jsonl.gz"),
                 "verification": ({
-                    "selection": verification.get("selection"),
-                    "metrics_by_final_source": verification.get("metrics_by_final_source"),
-                    "metrics_by_word_count_bucket": verification.get("metrics_by_word_count_bucket"),
-                    "disagreement_count": verification.get("disagreement_count"),
-                    "main_error_patterns": verification.get("main_error_patterns"),
-                }, "evals/verification_final/verification_relinked_report.json"),
+                    "selection": verification.get("sampling"),
+                    "metrics_by_final_source": {
+                        "local": verifier_stratum("local_classifier"),
+                        "luna": verifier_stratum("gpt-6-luna"),
+                    },
+                    "disagreement_count": len(verification.get("disagreements", [])),
+                }, f"{run_rel}/verification/verification_report.json"),
                 "sensitivity": ({
                     "method": sensitivity.get("method"),
                     "rank_stability": sensitivity.get("rank_stability"),
                     "topics": sensitivity.get("topics"),
-                }, "artifacts/full_run_v2/sensitivity_analysis.json"),
-                "grouping_comparison": (read_json(full / "grouping_comparison.json"), "artifacts/full_run_v2/grouping_comparison.json"),
+                }, f"{run_rel}/sensitivity_analysis.json"),
+                "grouping_comparison": (
+                    read_json(root / "artifacts" / "full_run_v2" / "grouping_comparison.json"),
+                    "artifacts/full_run_v2/grouping_comparison.json",
+                ),
                 "system_tests": (read_json(root / "evals" / "system_tests" / "system_test_report.json").get("checks"), "evals/system_tests/system_test_report.json"),
-                "interrupt_resume": (read_json(root / "evals" / "recovery" / "interrupt_resume_check.json"), "evals/recovery/interrupt_resume_check.json"),
-                "cost_pilot": (cost.get("pilot", {}) | {"ids": None}, "cost/report.json"),
-                "cost_projection": (cost.get("projection"), "cost/report.json"),
-                "full_run_actuals": (read_json(root / "cost" / "full_run_actuals.json"), "cost/full_run_actuals.json"),
+                "interrupt_resume": (read_json(root / "evals" / "recovery_v4" / "interrupt_resume_check.json"), "evals/recovery_v4/interrupt_resume_check.json"),
+                "cost_pilot": ({
+                    "cold_wall_seconds": measured.get("cold", {}).get("wall_seconds"),
+                    "cold_api_equivalent_usd": measured.get("cold", {}).get("api_equivalent_usd"),
+                    "warm_wall_seconds": measured.get("warm", {}).get("wall_seconds"),
+                    "warm_new_enrichment_calls": measured.get("warm", {}).get("new_enrichment_requests"),
+                }, "cost/report.json"),
+                "cost_projection": (cost.get("projections"), "cost/report.json"),
+                "full_run_luna_usage": ({
+                    "tokens": luna_usage,
+                    "requests_by_role": run_summary.get("new_model_calls_this_run", {}).get("luna_by_role"),
+                    "note": "last invocation of the full run; see the run folder's run_log.jsonl for every invocation",
+                }, f"{run_rel}/run_summary.json"),
             }
+            if actuals_path.exists():
+                actuals = read_json(actuals_path)
+                facts["full_run_luna_usage"] = ({
+                    "requests_total": actuals.get("luna_requests_total"),
+                    "failed_attempts_total": actuals.get("luna_failed_attempts_total"),
+                    "requests_by_role": {
+                        role: value.get("attempts")
+                        for role, value in (actuals.get("luna_requests_by_role") or {}).items()
+                    },
+                    "api_equivalent_usd": actuals.get("api_equivalent_usd"),
+                    "wall_seconds": actuals.get("wall_seconds"),
+                    "note": "every invocation of the full run (the deliberately interrupted one and the resume)",
+                }, "cost/full_run_v4_actuals.json")
             if golden_eval.exists():
                 facts["golden_evaluation"] = (read_json(golden_eval), "evals/golden_final_evaluation.json")
+            if holdout_eval.exists():
+                facts["holdout_evaluation"] = (read_json(holdout_eval), "evals/holdout_30_evaluation.json")
             for key, (value, source_file) in facts.items():
                 cur.execute(
                     "INSERT INTO spotify.run_facts VALUES (%s,%s,%s)",
@@ -320,8 +376,8 @@ def main() -> int:
         counts = dict(conn.execute("SELECT status, count(*) FROM spotify.reviews GROUP BY status").fetchall())
         counts["source_rows"] = sum(counts.values())
         counts["membership_rows"] = conn.execute("SELECT count(*) FROM spotify.issue_membership").fetchone()[0]
-        checks["row_counts"] = {"expected": EXPECTED, "actual": counts,
-                                "passed": all(counts.get(k) == v for k, v in EXPECTED.items())}
+        checks["row_counts"] = {"expected": expected, "actual": counts,
+                                "passed": all(counts.get(k) == v for k, v in expected.items())}
         checks["source_sha256_matches_raw_csv"] = {"mismatches": sha_mismatches, "passed": sha_mismatches == 0}
 
         fields = ["rank", "issue_id", "complaint_count", "severity_sum", "mean_severity", "priority_score"]

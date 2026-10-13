@@ -75,7 +75,7 @@ def main() -> int:
         help="Use three isolated Codex workers for the 10,000-review stage.",
     )
     parser.add_argument("--luna-timeout-seconds", type=float, default=300.0)
-    parser.add_argument("--codex", default="/Users/Yu/.local/bin/codex")
+    parser.add_argument("--codex", default="codex")
     parser.add_argument("--expected-cli-version", default="codex-cli 0.159.3")
     parser.add_argument("--acknowledge", required=True)
     args = parser.parse_args()

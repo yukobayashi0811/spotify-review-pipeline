@@ -9,7 +9,7 @@
   "recovery_dir": "evals/recovery/grading",
   "golden_input_path": "artifacts/golden_prediction_input.csv",
   "checkpoint_500_path": "data/checkpoint_500.csv",
-  "codex_executable": "/Users/Yu/.local/bin/codex",
+  "codex_executable": "codex",
   "routing_policy_fingerprint": "calibrated-error-group-risk-v1",
   "new_luna_distinct_limit": 3960,
   "mandatory_stop_after_new_luna_texts": 1000,

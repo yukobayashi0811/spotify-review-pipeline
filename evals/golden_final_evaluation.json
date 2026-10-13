@@ -3,24 +3,24 @@
   "cases": 50,
   "missing_predictions": 0,
   "agreement": {
-    "topic": 0.84,
-    "intent": 0.82,
-    "severity_exact": 0.66,
-    "severity_mae_on_valid_predictions": 0.4,
-    "sentiment_mae_on_valid_predictions": 0.258504,
-    "entities_exact": 0.46,
+    "topic": 0.82,
+    "intent": 0.8,
+    "severity_exact": 0.64,
+    "severity_mae_on_valid_predictions": 0.46,
+    "sentiment_mae_on_valid_predictions": 0.291236,
+    "entities_exact": 0.48,
     "evidence_quote_substring": 1.0,
-    "severity_within_1": 0.94
+    "severity_within_1": 0.92
   },
   "macro_f1": {
-    "topic": 0.79026,
-    "intent": 0.641426,
-    "severity": 0.5375
+    "topic": 0.775108,
+    "intent": 0.631728,
+    "severity": 0.489453
   },
   "normalized_text_group_weighted_agreement": {
-    "topic_match": 0.836735,
-    "intent_match": 0.816327,
-    "severity_match": 0.653061
+    "topic_match": 0.816327,
+    "intent_match": 0.795918,
+    "severity_match": 0.632653
   },
   "normalized_text_groups": 49,
   "confusion": {
@@ -58,7 +58,12 @@
       {
         "expected": "playback",
         "predicted": "playback",
-        "count": 6
+        "count": 5
+      },
+      {
+        "expected": "playback",
+        "predicted": "support",
+        "count": 1
       },
       {
         "expected": "usability",
@@ -95,7 +100,12 @@
       {
         "expected": "complaint",
         "predicted": "complaint",
-        "count": 19
+        "count": 18
+      },
+      {
+        "expected": "complaint",
+        "predicted": "praise",
+        "count": 1
       },
       {
         "expected": "complaint",
@@ -143,27 +153,27 @@
   "golden_labels_file": "evals/golden_50.csv",
   "golden_labels_sha256": "c41cd56359d9069a4eeb799a9d7b57e09ff59fa360b4a47cc237bdb40d415dd5",
   "predictions_file": "evals/golden_final_predictions.csv",
-  "predictions_sha256": "bf07c204140d8cfbce8d2a4bcd926069b8e921008c1891d133a2489dabeeaa3c",
+  "predictions_sha256": "808140d3835308503412c79a73a2ca92b19561aeb6329a48d32e095590330d32",
   "model_calls": 0,
   "scope": "Final full-corpus labels (grading export) of the 50 Golden reviews",
   "label_sources": {
-    "local_classifier": 44,
-    "luna_teacher": 6
+    "local_classifier": 48,
+    "gpt-6-luna": 2
   },
   "by_label_source": {
-    "local_classifier": {
-      "cases": 44,
-      "topic": 0.818182,
-      "intent": 0.795455,
-      "severity_exact": 0.613636,
-      "severity_within_1": 0.931818
+    "gpt-6-luna": {
+      "cases": 2,
+      "topic": 0.5,
+      "intent": 0.5,
+      "severity_exact": 0.5,
+      "severity_within_1": 0.5
     },
-    "luna_teacher": {
-      "cases": 6,
-      "topic": 1.0,
-      "intent": 1.0,
-      "severity_exact": 1.0,
-      "severity_within_1": 1.0
+    "local_classifier": {
+      "cases": 48,
+      "topic": 0.833333,
+      "intent": 0.8125,
+      "severity_exact": 0.645833,
+      "severity_within_1": 0.9375
     }
   }
 }

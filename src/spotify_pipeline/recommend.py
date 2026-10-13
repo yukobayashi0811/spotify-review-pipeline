@@ -14,9 +14,14 @@ from .schemas import MEMO_SCHEMA
 from .storage import Store
 
 
-MEMO_SCHEMA_VERSION = "memo-v2"
-MEMO_PROMPT_VERSION = "2026-10-03-v2"
-MEMO_BUCKET = "M_EMBED_V3"
+MEMO_SCHEMA_VERSION = "memo-v3"
+MEMO_PROMPT_VERSION = "2026-10-12-v3"
+MEMO_BUCKET = "M_MEMO_V3"
+TYPICAL_EVIDENCE_RULE = (
+    "Per issue: the most common severity among member rows (ties -> higher severity); "
+    "among distinct member texts with that severity, the three closest to the issue "
+    "centroid by cosine similarity of the saved grouping embeddings."
+)
 ALLOWED_PRIORITY_TOPICS = {"access", "usability", "playback", "billing", "support"}
 METRICS = ("complaint_count", "severity_sum", "mean_severity", "priority_score")
 
@@ -33,7 +38,7 @@ def run_recommendation(
     evidence_per_issue: int = 3,
 ) -> dict[str, Any]:
     if top_n != 10 or evidence_per_issue != 3:
-        raise ValueError("Memo v2 requires top_n=10 and at most three representatives per issue")
+        raise ValueError("The memo role requires top_n=10 and at most three representatives per issue")
     artifacts = Path(artifacts_dir)
     artifacts.mkdir(parents=True, exist_ok=True)
     prompt = Path(prompt_path).read_text(encoding="utf-8")
@@ -48,20 +53,11 @@ def run_recommendation(
         ranking_all = store.get_metadata("ranking", [])
         if not ranking_all:
             raise ValueError("No ranking is available; run grouping and ranking first")
-        evidence: dict[str, list[dict[str, Any]]] = {}
-        for issue_id in sorted(derived["issues"]):
-            evidence[issue_id] = [
-                dict(row)
-                for row in store.connection.execute(
-                    """
-                    SELECT r.review_id,r.severity,r.evidence_quote
-                    FROM membership m JOIN records r USING(review_id)
-                    WHERE m.issue_id=?
-                    ORDER BY r.severity DESC,r.review_id ASC LIMIT ?
-                    """,
-                    (issue_id, evidence_per_issue),
-                )
-            ]
+        evidence = _typical_evidence(
+            store, artifacts, sorted(derived["issues"]), per_issue=evidence_per_issue
+        )
+        coverage = _coverage(store)
+        trend = _monthly_trend(store)
 
         sensitivity = _read_required_json(artifacts / "sensitivity_analysis.json")
         comparison = _read_required_json(artifacts / "grouping_comparison.json")
@@ -81,6 +77,9 @@ def run_recommendation(
             "topic_rollup": derived["topic_rollup"],
             "issues": derived["issues"],
             "evidence": evidence,
+            "evidence_selection_rule": TYPICAL_EVIDENCE_RULE,
+            "coverage": coverage,
+            "monthly_trend": trend,
             "verification_summary": verification["metrics"],
             "sensitivity_summary": sensitivity_summary,
             "grouping_comparison": comparison,
@@ -92,15 +91,18 @@ def run_recommendation(
                 "The adopted grouping retains low_coherence issues even after one bounded split.",
             ],
             "claim_rule": (
-                "Only baseline issue metrics may appear in claims. Topic rollups and corrected "
-                "sensitivity values must be described separately and never exported as claims."
+                "Only baseline issue metrics may appear in claims. Topic rollups, monthly "
+                "trend shares, coverage counts and corrected sensitivity values must be "
+                "described separately and never exported as claims."
             ),
         }
         input_hash = hashlib.sha256(canonical(pack).encode("utf-8")).hexdigest()
         cached_hash = store.get_metadata("memo_v2_input_hash")
         cached_memo = store.get_metadata("memo_v2_payload")
         if cached_hash == input_hash and cached_memo:
-            memo = _validate_memo(cached_memo, ranking_all, evidence, derived["issues"])
+            memo = _validate_memo(
+                cached_memo, ranking_all, evidence, derived["issues"], coverage=coverage
+            )
             provenance = store.get_metadata("memo_v2_claims_provenance", [])
             model_called = False
         else:
@@ -115,6 +117,7 @@ def run_recommendation(
                 config=config,
                 run_id=run_id,
                 memo_config=memo_config,
+                coverage=coverage,
             )
             store.set_metadata("memo_v2_input_hash", input_hash)
             store.set_metadata("memo_v2_payload", memo)
@@ -156,7 +159,7 @@ def _call_memo_with_one_repair(
     *, store: Store, provider: Provider, prompt: str, pack: dict[str, Any],
     ranking: list[dict[str, Any]], evidence: dict[str, list[dict[str, Any]]],
     issues: dict[str, dict[str, Any]], config: ModelConfig, run_id: str,
-    memo_config: str,
+    memo_config: str, coverage: dict[str, Any] | None = None,
 ) -> tuple[dict[str, Any], list[dict[str, str]]]:
     review_ids = [
         item["review_id"] for items in evidence.values() for item in items
@@ -172,7 +175,7 @@ def _call_memo_with_one_repair(
     ][:2]
     use_luna_ledger = provider.name == "codex-exec-subscription"
     if use_luna_ledger and len(ledger_hashes) < 2:
-        raise RuntimeError("Memo v2 requires two distinct ledger sentinels for its two-call cap")
+        raise RuntimeError("The memo role requires two distinct ledger sentinels for its two-call cap")
     last_error = ""
     for attempt in range(2):
         admitted = (
@@ -198,10 +201,12 @@ def _call_memo_with_one_repair(
                 max_output_tokens=min(config.max_output_tokens, 6000),
                 timeout_seconds=config.timeout_seconds,
             )
+            repairs: list[dict[str, str]] = []
             candidate = _repair_code_owned_memo_fields(
-                result.payload, ranking=ranking, evidence=evidence, issues=issues
+                result.payload, ranking=ranking, evidence=evidence, issues=issues,
+                repairs=repairs,
             )
-            memo = _validate_memo(candidate, ranking, evidence, issues)
+            memo = _validate_memo(candidate, ranking, evidence, issues, coverage=coverage)
             event = _call_event(
                 result=result, run_id=run_id, role="memo", review_ids=review_ids,
                 model=config.model, effort=config.effort, phase="initial",
@@ -221,15 +226,28 @@ def _call_memo_with_one_repair(
                     output_tokens=result.output_tokens,
                     duration_seconds=result.duration_seconds,
                 )
+            code_filled = {
+                item["claim_id"] for item in repairs if item.get("field") == "claim"
+            }
             provenance = [
                 {
                     "claim_id": claim["claim_id"],
-                    "source": "memo_role_validated_against_saved_baseline",
-                    "reason": "model prose; code-validated issue ID, metric, value, and evidence IDs",
+                    "source": (
+                        "code_template_from_saved_baseline"
+                        if claim["claim_id"] in code_filled
+                        else "memo_role_validated_against_saved_baseline"
+                    ),
+                    "reason": (
+                        "the memo role omitted or misstated this metric; code wrote the "
+                        "sentence and value from the saved ranking"
+                        if claim["claim_id"] in code_filled
+                        else "model prose; code-validated issue ID, metric, value, and evidence IDs"
+                    ),
                     "request_id": result.request_id,
                 }
                 for claim in memo["claims"]
             ]
+            store.set_metadata("memo_code_repairs", repairs)
             return memo, provenance
         except Exception as error:
             last_error = f"{type(error).__name__}: {error}"
@@ -246,7 +264,7 @@ def _call_memo_with_one_repair(
                 store.settle_luna(
                     bucket=MEMO_BUCKET,
                     text_hashes=admitted,
-                    request_id=result.request_id if result else f"memo-v2-failed-{attempt + 1}",
+                    request_id=result.request_id if result else f"memo-v3-failed-{attempt + 1}",
                     succeeded=False,
                     input_tokens=result.input_tokens if result else None,
                     cached_input_tokens=result.cached_input_tokens if result else None,
@@ -256,7 +274,7 @@ def _call_memo_with_one_repair(
                 )
             if attempt == 1:
                 raise RuntimeError(
-                    "Memo v2 failed strict validation after the single allowed repair: "
+                    "Memo failed strict validation after the single allowed repair: "
                     + last_error
                 ) from error
     raise AssertionError("unreachable")
@@ -277,23 +295,30 @@ def _reserve_memo_call(store: Store, digest: str) -> list[str]:
         global_limit=base + 2,
     )
     if admitted != [digest]:
-        raise RuntimeError("Memo v2 Luna ledger call cap is exhausted")
+        raise RuntimeError("The memo role's two-call Luna ledger cap is exhausted")
     return admitted
 
 
 def _repair_code_owned_memo_fields(
     payload: dict[str, Any], *, ranking: list[dict[str, Any]],
     evidence: dict[str, list[dict[str, Any]]], issues: dict[str, dict[str, Any]],
+    repairs: list[dict[str, str]] | None = None,
 ) -> dict[str, Any]:
-    """Normalize code-verifiable IDs and metrics without changing model rationale.
+    """Make code-verifiable fields exact without replacing valid model prose.
 
-    The model already selects ``priority_topic`` and ``priority_issue_id``. If its
-    human-readable priority sentence omits both literal identifiers, prefix those
-    saved choices. Alternatives are restricted to the highest-ranked eligible
-    issues, and numerical claims are rebuilt verbatim from the saved baseline.
-    This prevents an otherwise useful local memo from inventing IDs or numbers.
+    * ``priority`` gets the chosen topic/issue prefixed if it names neither.
+    * ``alternative_issue_ids`` keeps the model's eligible choices; only when fewer
+      than two are valid does code add the next eligible issues (preferring one
+      outside the priority topic), with template prose recorded as code-filled.
+    * Each required (issue, metric) claim keeps the model's sentence when its
+      value already equals the saved baseline; otherwise code writes the sentence
+      and value from the saved ranking and records the repair.
+
+    Every repair is appended to ``repairs`` so provenance shows which text came
+    from the memo role and which from code.
     """
 
+    log = repairs if repairs is not None else []
     repaired = deepcopy(payload)
     if not isinstance(repaired, dict):
         return repaired
@@ -304,6 +329,7 @@ def _repair_code_owned_memo_fields(
         folded = priority.casefold()
         if topic.casefold() not in folded and issue_id.casefold() not in folded:
             repaired["priority"] = f"{topic} / {issue_id}: {priority}"
+            log.append({"field": "priority", "claim_id": "", "action": "prefixed topic/issue"})
     if not isinstance(issue_id, str) or issue_id not in issues:
         return repaired
     by_issue = {str(row["issue_id"]): row for row in ranking}
@@ -311,42 +337,101 @@ def _repair_code_owned_memo_fields(
         str(row["issue_id"])
         for row in ranking
         if str(row["issue_id"]) != issue_id
+        and str(row["issue_id"]) in issues
         and issues[str(row["issue_id"])]["coherent"] == "yes"
         and issues[str(row["issue_id"])]["actionable"] == "yes"
     ]
     supplied = repaired.get("alternative_issue_ids")
+    supplied_prose = repaired.get("alternatives")
+    prose = [value for value in supplied_prose if isinstance(value, str)] if isinstance(
+        supplied_prose, list
+    ) else []
     selected: list[str] = []
     if isinstance(supplied, list):
         for value in supplied:
             if value in eligible and value not in selected:
                 selected.append(value)
-    for value in eligible:
-        if len(selected) >= 2:
-            break
-        if value not in selected:
-            selected.append(value)
-    repaired["alternative_issue_ids"] = selected[:2]
-    repaired["alternatives"] = [
-        (
-            f"{value} was not selected because the deterministic pilot baseline ranks "
-            f"{value} below {issue_id}; it remains an eligible follow-up."
+    if len(selected) < 2:
+        priority_topic = issues[issue_id]["topic"]
+        has_other_topic = any(issues[value]["topic"] != priority_topic for value in selected)
+        ordered = sorted(
+            eligible,
+            key=lambda value: (
+                has_other_topic or issues[value]["topic"] == priority_topic,
+                eligible.index(value),
+            ),
         )
-        for value in selected[:2]
+        for value in ordered:
+            if len(selected) >= 2:
+                break
+            if value not in selected:
+                selected.append(value)
+                log.append({
+                    "field": "alternative", "claim_id": "",
+                    "action": f"code added eligible alternative {value}",
+                })
+    kept_prose = [
+        text for text in prose if any(value in text for value in selected)
     ]
+    for value in selected:
+        if not any(value in text for text in kept_prose):
+            row, top = by_issue[value], by_issue[issue_id]
+            kept_prose.append(
+                f"{value} ({issues[value]['topic']}) was not selected: its baseline "
+                f"priority score is {row['priority_score']} versus {top['priority_score']} "
+                f"for {issue_id}. [code-filled]"
+            )
+            log.append({
+                "field": "alternative_prose", "claim_id": "",
+                "action": f"code wrote the reason for {value}",
+            })
+    repaired["alternative_issue_ids"] = selected
+    repaired["alternatives"] = kept_prose
+
+    model_claims: dict[tuple[str, str], dict[str, Any]] = {}
+    raw_claims = repaired.get("claims")
+    if isinstance(raw_claims, list):
+        for claim in raw_claims:
+            if (
+                isinstance(claim, dict)
+                and isinstance(claim.get("issue_id"), str)
+                and claim.get("metric") in METRICS
+            ):
+                model_claims.setdefault((claim["issue_id"], claim["metric"]), claim)
     claims: list[dict[str, Any]] = []
-    for selected_issue in [issue_id, *selected[:2]]:
+    for selected_issue in [issue_id, *selected]:
         row = by_issue[selected_issue]
-        review_ids = [item["review_id"] for item in evidence[selected_issue]][:3]
+        allowed = [item["review_id"] for item in evidence.get(selected_issue, [])]
         for metric in METRICS:
             claim_id = f"C{len(claims) + 1:03d}"
             value = str(row[metric])
+            original = model_claims.get((selected_issue, metric))
+            sentence = original.get("sentence") if original else None
+            cited = original.get("review_ids") if original else None
+            if (
+                original is not None
+                and str(original.get("value")) == value
+                and isinstance(sentence, str)
+                and sentence.strip()
+            ):
+                review_ids = [rid for rid in (cited or []) if rid in allowed] or allowed[:3]
+                claims.append({
+                    "claim_id": claim_id, "issue_id": selected_issue, "metric": metric,
+                    "value": value, "sentence": sentence, "review_ids": review_ids[:3],
+                })
+                continue
             claims.append({
-                "claim_id": claim_id,
-                "issue_id": selected_issue,
-                "metric": metric,
+                "claim_id": claim_id, "issue_id": selected_issue, "metric": metric,
                 "value": value,
-                "sentence": f"{selected_issue} has baseline {metric}={value}.",
-                "review_ids": review_ids,
+                "sentence": f"{selected_issue} has baseline {metric} {value}.",
+                "review_ids": allowed[:3],
+            })
+            log.append({
+                "field": "claim", "claim_id": claim_id,
+                "action": (
+                    "memo role omitted this metric" if original is None
+                    else f"memo role value {original.get('value')!r} replaced by saved {value!r}"
+                ),
             })
     repaired["claims"] = claims
     return repaired
@@ -357,6 +442,7 @@ def _validate_memo(
     ranking: list[dict[str, Any]],
     evidence: dict[str, list[dict[str, Any]]],
     issues: dict[str, dict[str, Any]],
+    coverage: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     if not isinstance(payload, dict) or set(payload) != set(MEMO_SCHEMA["required"]):
         raise ValueError("Memo response does not match the required top-level schema")
@@ -385,8 +471,22 @@ def _validate_memo(
         if not isinstance(payload[key], list):
             raise ValueError(f"Memo {key} must be a list")
     alternatives = payload["alternative_issue_ids"]
-    if len(alternatives) < 2 or len(alternatives) != len(set(alternatives)):
-        raise ValueError("Memo must contain at least two unique alternative issue IDs")
+    ranked_ids = {str(row["issue_id"]) for row in ranking}
+    eligible_alternatives = sum(
+        1
+        for issue_id, value in issues.items()
+        if issue_id != priority_issue
+        and issue_id in ranked_ids
+        and value["coherent"] == "yes"
+        and value["actionable"] == "yes"
+    )
+    # Two alternatives are required whenever the ranking has two eligible issues besides
+    # the priority; a very small input (for example the 100-review pilot) may have fewer.
+    required_alternatives = min(2, eligible_alternatives)
+    if len(alternatives) < required_alternatives or len(alternatives) != len(set(alternatives)):
+        raise ValueError(
+            f"Memo must contain at least {required_alternatives} unique alternative issue IDs"
+        )
     if priority_issue in alternatives:
         raise ValueError("Priority issue cannot also be an alternative")
     for issue_id in alternatives:
@@ -394,18 +494,39 @@ def _validate_memo(
             raise ValueError(f"Unknown alternative issue ID: {issue_id}")
         if issues[issue_id]["coherent"] != "yes" or issues[issue_id]["actionable"] != "yes":
             raise ValueError("Alternative issues must be coherent and actionable")
-    if len(payload["alternatives"]) < 2 or any(
+    if len(payload["alternatives"]) < required_alternatives or any(
         not isinstance(value, str) or not value.strip() for value in payload["alternatives"]
     ):
-        raise ValueError("Memo must explain at least two alternatives")
+        raise ValueError(f"Memo must explain at least {required_alternatives} alternatives")
     for issue_id in alternatives:
         if not any(issue_id in value for value in payload["alternatives"]):
             raise ValueError(f"Alternatives prose must explain why {issue_id} was not selected")
+    priority_topic = issues[priority_issue]["topic"]
+    other_topic_eligible = any(
+        issue_id != priority_issue
+        and value["topic"] != priority_topic
+        and value["coherent"] == "yes"
+        and value["actionable"] == "yes"
+        and issue_id in {str(row["issue_id"]) for row in ranking}
+        for issue_id, value in issues.items()
+    )
+    if other_topic_eligible and all(
+        issues[issue_id]["topic"] == priority_topic for issue_id in alternatives
+    ):
+        raise ValueError(
+            "At least one alternative must come from a topic other than the priority topic"
+        )
     if len(payload["limitations"]) < 4 or any(
         not isinstance(value, str) or not value.strip() for value in payload["limitations"]
     ):
         raise ValueError("Memo must include the required material limitations")
 
+    if coverage and int(coverage.get("quarantined_rows", 0)) > 0:
+        count = str(coverage["quarantined_rows"])
+        if not any(count in value for value in payload["limitations"]):
+            raise ValueError(
+                f"Limitations must disclose the {count} quarantined (unclassified) rows"
+            )
     by_issue = {str(row["issue_id"]): row for row in ranking}
     required_issues = {priority_issue, *alternatives}
     seen_claim_ids: set[str] = set()
@@ -467,6 +588,12 @@ def _render_memo(memo: dict[str, Any]) -> str:
             f"- {claim['sentence']} [{claim['claim_id']}; {claim['issue_id']}; "
             f"{claim['metric']}={claim['value']}; reviews: {reviews}]"
         )
+    lines.extend([
+        "",
+        "Representative review IDs are typical members of each issue (the most common "
+        "severity, closest to the issue centroid), not its most severe reviews. Each "
+        "number above is copied by code from the saved baseline ranking.",
+    ])
     lines.extend(["", "## Alternatives not selected", ""])
     lines.extend(f"- {item}" for item in memo["alternatives"])
     lines.extend(["", "## Limitations", ""])
@@ -481,3 +608,177 @@ def _read_required_json(path: Path) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise ValueError(f"Expected JSON object: {path}")
     return value
+
+
+def _coverage(store: Store) -> dict[str, Any]:
+    """Denominators and label sources the memo must state (code-computed)."""
+    source = store.source_count()
+    statuses = {
+        str(row[0]): int(row[1])
+        for row in store.connection.execute("SELECT status,COUNT(*) FROM records GROUP BY status")
+    }
+    reasons = {
+        str(row[0]): int(row[1])
+        for row in store.connection.execute(
+            "SELECT reason,COUNT(*) FROM records WHERE status='quarantined' GROUP BY reason"
+        )
+    }
+    sources: dict[str, int] = {}
+    for label_config, count in store.connection.execute(
+        "SELECT label_config,COUNT(*) FROM records WHERE status='completed' GROUP BY label_config"
+    ):
+        sources[_label_source(str(label_config))] = (
+            sources.get(_label_source(str(label_config)), 0) + int(count)
+        )
+    complaint = int(store.connection.execute(
+        "SELECT COUNT(*) FROM records WHERE status='completed' "
+        "AND intent IN ('complaint','cancellation')"
+    ).fetchone()[0])
+    return {
+        "source_rows": source,
+        "classified_rows": statuses.get("completed", 0),
+        "quarantined_rows": statuses.get("quarantined", 0),
+        "quarantine_reasons": reasons,
+        "unaccounted_rows": source - sum(statuses.values()),
+        "complaint_or_cancellation_rows": complaint,
+        "label_sources_by_row": dict(sorted(sources.items())),
+    }
+
+
+def _label_source(label_config: str) -> str:
+    if label_config.startswith("distilled-tfidf-linear"):
+        return "local_classifier"
+    if label_config.startswith("gpt-6-luna"):
+        return "gpt-6-luna"
+    return label_config.split(":", 1)[0] or "unknown"
+
+
+def _monthly_trend(store: Store) -> dict[str, Any]:
+    rows = [
+        {
+            "month": str(row[0]),
+            "classified_rows": int(row[1]),
+            "complaint_or_cancellation_rows": int(row[2]),
+        }
+        for row in store.connection.execute(
+            """
+            SELECT substr(s.review_timestamp,1,7) AS month,
+                   COUNT(*) AS classified,
+                   SUM(r.intent IN ('complaint','cancellation')) AS complaints
+            FROM records r JOIN source_rows s USING(review_id)
+            WHERE r.status='completed'
+            GROUP BY month ORDER BY month
+            """
+        )
+    ]
+    for index, row in enumerate(rows):
+        row["share"] = (
+            f"{row['complaint_or_cancellation_rows'] / row['classified_rows']:.6f}"
+            if row["classified_rows"] else None
+        )
+        row["partial_month"] = index in (0, len(rows) - 1)
+    return {
+        "rule": (
+            "share = complaint_or_cancellation_rows / classified_rows per calendar month; "
+            "the first and last months of the input are treated as partial"
+        ),
+        "months": rows,
+        "context_only": "Trend figures may qualify the recommendation but are never claims.",
+    }
+
+
+def _typical_evidence(
+    store: Store, artifacts: Path, issue_ids: list[str], *, per_issue: int
+) -> dict[str, list[dict[str, Any]]]:
+    """Select typical (not most severe) member reviews for every issue."""
+    embeddings = _embedding_lookup(artifacts)
+    evidence: dict[str, list[dict[str, Any]]] = {}
+    for issue_id in issue_ids:
+        severity_counts = store.connection.execute(
+            """
+            SELECT r.severity,COUNT(*) AS n
+            FROM membership m JOIN records r USING(review_id)
+            WHERE m.issue_id=? GROUP BY r.severity
+            ORDER BY n DESC, r.severity DESC LIMIT 1
+            """,
+            (issue_id,),
+        ).fetchone()
+        if severity_counts is None:
+            evidence[issue_id] = []
+            continue
+        modal = int(severity_counts["severity"])
+        candidates = [
+            dict(row)
+            for row in store.connection.execute(
+                """
+                SELECT MIN(r.review_id) AS review_id, r.severity, s.text_sha256,
+                       MIN(r.evidence_quote) AS evidence_quote
+                FROM membership m JOIN records r USING(review_id)
+                JOIN source_rows s USING(review_id)
+                WHERE m.issue_id=? AND r.severity=?
+                GROUP BY s.text_sha256
+                """,
+                (issue_id, modal),
+            )
+        ]
+        scored = None
+        if embeddings is not None:
+            vectors, index_by_hash, centroids = embeddings
+            centroid = centroids.get(issue_id)
+            if centroid is not None and all(
+                row["text_sha256"] in index_by_hash for row in candidates
+            ):
+                import numpy as np
+
+                positions = [index_by_hash[row["text_sha256"]] for row in candidates]
+                similarity = np.asarray(vectors[positions], dtype=np.float32) @ np.asarray(
+                    centroid, dtype=np.float32
+                )
+                scored = [
+                    (float(value), row) for value, row in zip(similarity.tolist(), candidates)
+                ]
+                scored.sort(key=lambda item: (-item[0], item[1]["review_id"]))
+        if scored is None:
+            ordered = sorted(
+                candidates,
+                key=lambda row: hashlib.sha256(row["review_id"].encode()).hexdigest(),
+            )
+            evidence[issue_id] = [
+                {
+                    "review_id": row["review_id"], "severity": row["severity"],
+                    "evidence_quote": row["evidence_quote"],
+                    "selection": "modal_severity_hash_order_no_embeddings",
+                }
+                for row in ordered[:per_issue]
+            ]
+        else:
+            evidence[issue_id] = [
+                {
+                    "review_id": row["review_id"], "severity": row["severity"],
+                    "evidence_quote": row["evidence_quote"],
+                    "selection": "modal_severity_closest_to_centroid",
+                    "centroid_cosine": round(value, 6),
+                }
+                for value, row in scored[:per_issue]
+            ]
+    return evidence
+
+
+def _embedding_lookup(artifacts: Path) -> tuple[Any, dict[str, int], dict[str, Any]] | None:
+    array = artifacts / "group_embeddings.npy"
+    mapping = artifacts / "group_embedding_map.csv"
+    model = artifacts / "grouping_model.joblib"
+    if not (array.is_file() and mapping.is_file() and model.is_file()):
+        return None
+    import csv
+
+    import joblib
+    import numpy as np
+
+    with mapping.open(encoding="utf-8", newline="") as stream:
+        index_by_hash = {
+            row["text_sha256"]: int(row["embedding_index"]) for row in csv.DictReader(stream)
+        }
+    bundle = joblib.load(model)
+    centroids = bundle.get("final_centroids", {}) if isinstance(bundle, dict) else {}
+    return np.load(array, mmap_mode="r"), index_by_hash, centroids

@@ -1,0 +1,2178 @@
+{
+  "actionable_ranking": [
+    {
+      "actionable": "yes",
+      "actionable_rank": 1,
+      "baseline_rank": 2,
+      "coherent": "yes",
+      "complaint_count": 22475,
+      "description": "Users report that core listening controls, including song choice, skipping, or seeking, require Premium.",
+      "issue_id": "I_BILLING_04",
+      "issue_name": "Listening controls restricted to Premium",
+      "mean_severity": "2.854194",
+      "priority_score": 64148,
+      "severity_sum": 64148,
+      "topic": "billing"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 2,
+      "baseline_rank": 3,
+      "coherent": "yes",
+      "complaint_count": 26570,
+      "description": "Users report ads appearing too frequently during music or podcast listening.",
+      "issue_id": "I_USABILITY_01",
+      "issue_name": "Frequent ads",
+      "mean_severity": "2.266127",
+      "priority_score": 60211,
+      "severity_sum": 60211,
+      "topic": "usability"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 3,
+      "baseline_rank": 5,
+      "coherent": "yes",
+      "complaint_count": 14449,
+      "description": "Music playback stops, pauses, or fails to start, sometimes requiring users to restart the app, switch tracks, or reinstall it.",
+      "issue_id": "I_PLAYBACK_01",
+      "issue_name": "Playback stops or fails",
+      "mean_severity": "3.102429",
+      "priority_score": 44827,
+      "severity_sum": 44827,
+      "topic": "playback"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 4,
+      "baseline_rank": 6,
+      "coherent": "yes",
+      "complaint_count": 14633,
+      "description": "The app intermittently freezes, crashes, stops responding, or stops working during playback across devices.",
+      "issue_id": "I_PLAYBACK_02",
+      "issue_name": "App freezes, crashes, or stops responding",
+      "mean_severity": "2.980523",
+      "priority_score": 43614,
+      "severity_sum": 43614,
+      "topic": "playback"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 5,
+      "baseline_rank": 16,
+      "coherent": "yes",
+      "complaint_count": 4274,
+      "description": "Lyrics are missing, unavailable, or fail to load for songs.",
+      "issue_id": "I_CATALOG_04",
+      "issue_name": "Lyrics not displaying",
+      "mean_severity": "2.905943",
+      "priority_score": 12420,
+      "severity_sum": 12420,
+      "topic": "catalog"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 6,
+      "baseline_rank": 17,
+      "coherent": "yes",
+      "complaint_count": 5164,
+      "description": "Examples consistently say that ads are too frequent or excessive.",
+      "issue_id": "I_USABILITY_03",
+      "issue_name": "Excessive ads",
+      "mean_severity": "2.239543",
+      "priority_score": 11565,
+      "severity_sum": 11565,
+      "topic": "usability"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 7,
+      "baseline_rank": 18,
+      "coherent": "yes",
+      "complaint_count": 2730,
+      "description": "Users report being unable to log in, sometimes citing a generic error message or repeated unsuccessful attempts.",
+      "issue_id": "I_ACCESS_08",
+      "issue_name": "Unable to log in",
+      "mean_severity": "3.879853",
+      "priority_score": 10592,
+      "severity_sum": 10592,
+      "topic": "access"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 8,
+      "baseline_rank": 20,
+      "coherent": "yes",
+      "complaint_count": 2132,
+      "description": "Downloaded music is unavailable or cannot be played when the device is offline, despite being saved for offline listening.",
+      "issue_id": "I_DOWNLOADS_01",
+      "issue_name": "Downloaded music unavailable offline",
+      "mean_severity": "2.970919",
+      "priority_score": 6334,
+      "severity_sum": 6334,
+      "topic": "downloads"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 9,
+      "baseline_rank": 22,
+      "coherent": "yes",
+      "complaint_count": 1487,
+      "description": "Users specifically report that phone-number login does not work.",
+      "issue_id": "I_ACCESS_03",
+      "issue_name": "Phone-number login failure",
+      "mean_severity": "3.860794",
+      "priority_score": 5741,
+      "severity_sum": 5741,
+      "topic": "access"
+    },
+    {
+      "actionable": "yes",
+      "actionable_rank": 10,
+      "baseline_rank": 24,
+      "coherent": "yes",
+      "complaint_count": 1520,
+      "description": "Users are signed out, locked out, or rejected when trying to return to an existing account.",
+      "issue_id": "I_ACCESS_07",
+      "issue_name": "Unable to regain account access",
+      "mean_severity": "3.449342",
+      "priority_score": 5243,
+      "severity_sum": 5243,
+      "topic": "access"
+    }
+  ],
+  "claim_rule": "Only baseline issue metrics may appear in claims. Topic rollups, monthly trend shares, coverage counts and corrected sensitivity values must be described separately and never exported as claims.",
+  "coverage": {
+    "classified_rows": 660609,
+    "complaint_or_cancellation_rows": 287914,
+    "label_sources_by_row": {
+      "gpt-6-luna": 23200,
+      "local_classifier": 637409
+    },
+    "quarantine_reasons": {
+      "empty_review_text": 13
+    },
+    "quarantined_rows": 13,
+    "source_rows": 660622,
+    "unaccounted_rows": 0
+  },
+  "dataset_limits": [
+    "Historical self-selected app reviews are not the complete customer population.",
+    "No revenue, plan tier, confirmed cancellation, or causal retention data is available.",
+    "Cancellation language is expressed intent, not observed churn.",
+    "Issue-level sensitivity correction cannot allocate predicted non-complaints into a latent issue.",
+    "The adopted grouping retains low_coherence issues even after one bounded split."
+  ],
+  "evidence": {
+    "I_ACCESS_01": [
+      {
+        "centroid_cosine": 0.922055,
+        "evidence_quote": "I can't able to login the app",
+        "review_id": "ce1080f7-55e4-45c5-84d7-1848a7966dcb",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.919878,
+        "evidence_quote": "I can't even log in to this app",
+        "review_id": "0fd81b71-33a4-466d-bb9f-0892152ca227",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.917725,
+        "evidence_quote": "I can't even log in this app",
+        "review_id": "94133139-6aa9-4225-a293-16c977f4a43c",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      }
+    ],
+    "I_ACCESS_02": [
+      {
+        "centroid_cosine": 0.717792,
+        "evidence_quote": "I can't access my Playlist anymore for absolutely no reason.",
+        "review_id": "8c895214-40d8-4deb-b8c3-8f492ca94183",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.709791,
+        "evidence_quote": "then I can't access my music",
+        "review_id": "7e20d5c2-e39d-4b39-aefa-5d180a11fdbf",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.707786,
+        "evidence_quote": "Can't access anything.",
+        "review_id": "f04d7d2a-88e5-4119-9c0c-8c5b907fda0f",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_ACCESS_03": [
+      {
+        "centroid_cosine": 0.949939,
+        "evidence_quote": "I cannot login with my phone number",
+        "review_id": "b95e9545-f7fb-403b-9644-a797cde03e2a",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.949169,
+        "evidence_quote": "I can't log in using my phone number",
+        "review_id": "af4045ef-d6ed-4cd1-afb3-0550a7007244",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.948797,
+        "evidence_quote": "can not log in with my phone number",
+        "review_id": "aedddb61-5206-45cd-a19e-b3055872dfc6",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      }
+    ],
+    "I_ACCESS_04": [
+      {
+        "centroid_cosine": 0.853347,
+        "evidence_quote": "can't install this app",
+        "review_id": "1a72256c-9684-44b8-bb5f-0d1700898a30",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.852017,
+        "evidence_quote": "I can't install this app",
+        "review_id": "a0353f52-5845-489e-a982-3c5389dfc464",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.850568,
+        "evidence_quote": "I used to have this app but now I can't even install it, I've tried everything recommended to fix the problem but it doesn't work.",
+        "review_id": "101a1143-2cdd-4f4d-a7f9-838c30c345b2",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_ACCESS_05": [
+      {
+        "centroid_cosine": 0.819249,
+        "evidence_quote": "login Karo toh ho nahi raha hai",
+        "review_id": "b5a3b6e7-6628-4457-88df-ceeac86b3dc7",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.809217,
+        "evidence_quote": "or I'd bhi login nhi hui",
+        "review_id": "f433f201-c7c9-4be0-8a03-d179ca6455e6",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.80843,
+        "evidence_quote": "login bhi nhi hota hai",
+        "review_id": "523b0d15-2ae0-4d62-aa27-b744e2e0105a",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      }
+    ],
+    "I_ACCESS_06": [
+      {
+        "centroid_cosine": 0.919585,
+        "evidence_quote": "not able to login to my Spotify account",
+        "review_id": "cc10514b-dc54-424b-bc6e-bb0ec893603b",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.915035,
+        "evidence_quote": "I have not been able to login my Spotify app for the past two months.",
+        "review_id": "08c28f8a-da0e-4f4c-9494-bf47ca5894ff",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.914549,
+        "evidence_quote": "I can't even log in to my Spotify account",
+        "review_id": "879470cc-6577-476a-a9d1-bc46db5fdcff",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      }
+    ],
+    "I_ACCESS_07": [
+      {
+        "centroid_cosine": 0.846597,
+        "evidence_quote": "it sighned me out and when I tryed to login it said that this account is already being used",
+        "review_id": "c6a3d830-cc4e-43c0-95f7-ccad5f3384be",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.817616,
+        "evidence_quote": "BUT for some reason it kicked me out of my account and won't let me log back in which is really annoying and a problem.",
+        "review_id": "4c9a7e9a-59ea-4249-b4ab-cb5f3937ae10",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.789328,
+        "evidence_quote": "I had to make new account and soon as I made it I was logged off .",
+        "review_id": "195c0d8d-3760-4258-a47c-302f60f677f8",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_ACCESS_08": [
+      {
+        "centroid_cosine": 0.948035,
+        "evidence_quote": "I CANNOT log in",
+        "review_id": "1192c453-b856-4b02-888f-31606d320547",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.948035,
+        "evidence_quote": "I cannot log in",
+        "review_id": "818e18a5-4ec6-4883-96e1-f11f7be844ee",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      },
+      {
+        "centroid_cosine": 0.948035,
+        "evidence_quote": "I cannot log in",
+        "review_id": "c3fb21a2-7ca9-4211-935e-1b8ccda896b1",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 4
+      }
+    ],
+    "I_BILLING_01": [
+      {
+        "centroid_cosine": 0.914004,
+        "evidence_quote": "Ever since they have started to force everyone to buy premium by removing all the features one by one this app has become the worst !!!",
+        "review_id": "60a7e51a-b5a8-48ac-b468-7a1bdc9f22aa",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.910456,
+        "evidence_quote": "this app was good at first but now they are doing unwanted things so that people would buy premium.....",
+        "review_id": "8f1f4f4f-d27c-4e07-b293-444b5d784ae4",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.909732,
+        "evidence_quote": "This is the worst app, all the basic features have been included in premium: Those who do not have premium, what should they do by keeping this app...",
+        "review_id": "09258bad-a953-4742-aaab-c3b9f72136de",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_BILLING_02": [
+      {
+        "centroid_cosine": 0.671733,
+        "evidence_quote": "Hate pay for what I can get for free no",
+        "review_id": "17ed75c5-6f21-4656-b8bd-fc722062a810",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.670277,
+        "evidence_quote": "you have to pay for everything now and because of that don't like it anymore",
+        "review_id": "aa38074f-09c9-4e74-9c55-74f1a0fff697",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.669265,
+        "evidence_quote": "you are putting everything in your subscription we have to paid for everything 🙏😞",
+        "review_id": "49db02cd-9599-41d2-b1c4-3b04bc55366d",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_BILLING_03": [
+      {
+        "centroid_cosine": 0.920248,
+        "evidence_quote": "EVERY FREAKING THING ASKS FOR PREMIUM",
+        "review_id": "c343628c-f380-4c18-9180-da0fd047f114",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.909433,
+        "evidence_quote": "Everything is asking for premium.",
+        "review_id": "dec243c3-8ae5-4e31-9ff4-d06569fa0c24",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.909433,
+        "evidence_quote": "Everything is asking for premium.",
+        "review_id": "ec0b7c83-8d2a-4972-9175-087ab892154f",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_BILLING_04": [
+      {
+        "centroid_cosine": 0.920452,
+        "evidence_quote": "C'mon why you aren't letting us play the songs of our choice without premium just the way it was a month ago, from 3-4 years I sticked to spotify, but now I leave this app, and many would too.",
+        "review_id": "08ebe7dd-6a4f-4afe-b85e-a1d79d976c5b",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.898992,
+        "evidence_quote": "hate this app now everything has turned to premium even changing the song needs premium who needs this? Spotify do better",
+        "review_id": "f66e1b45-15ae-4348-a0ad-694ebfa80bd8",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.898196,
+        "evidence_quote": "This app is so annoying because before sometime to listening songs must require premium",
+        "review_id": "d2ec681f-9c41-44b1-beef-e959f8c27be8",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG_01": [
+      {
+        "centroid_cosine": 0.796775,
+        "evidence_quote": "Many songs are not present.",
+        "review_id": "a6dc9504-9fbc-4ed9-bd6b-4382c127f877",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.795196,
+        "evidence_quote": "Not all songs are present",
+        "review_id": "09967956-990b-4244-a528-5fabec0b9ddf",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.794679,
+        "evidence_quote": "It's actually hard to find songs you like within so many.",
+        "review_id": "2e6a156f-92c1-46d3-9e0a-822527d538cb",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG_02": [
+      {
+        "centroid_cosine": 0.746131,
+        "evidence_quote": "But yesterday when I searched a bollywood song in here I just couldn't find it!",
+        "review_id": "0e32243c-a62d-4be8-87fe-07eb8d33b4e5",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.743909,
+        "evidence_quote": "Can't search disired hindi song. Hate this",
+        "review_id": "bea128d5-2c93-480f-bae1-5f432a0f0770",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.730656,
+        "evidence_quote": "(will tried to search \"Naiyo Lagda Dil\" from Kisi ka Bhai kisi ki Jaan) instead of my this search app is showing some unpopular song results and playlist with photo of this song, which wasted your time to search song.",
+        "review_id": "6bd72aaf-fc7a-446a-aca5-3efb5f5faf86",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG_03": [
+      {
+        "centroid_cosine": 0.875354,
+        "evidence_quote": "I love spotify but I don't like how they play songs that aren't on my play lists",
+        "review_id": "ee7dba53-d631-4514-8af1-8ad95c048b98",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.854569,
+        "evidence_quote": "It's good & all but when I'm exploring Spotify's playlists for me, it doesn't keep track of the songs I don't like.",
+        "review_id": "f693e418-8836-44ab-8a5a-296f62819e55",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.85417,
+        "evidence_quote": "I Like spotify but not all the songs in it",
+        "review_id": "5325a654-56a6-4fe6-b8ad-c63d48142499",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG_04": [
+      {
+        "centroid_cosine": 0.893136,
+        "evidence_quote": "The songs won't show lyrics anymore. Please fix this",
+        "review_id": "ac4dab20-1a63-4fd9-b3c4-c2efc0730550",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.887709,
+        "evidence_quote": "The lyrics are not showing up for almost every song..",
+        "review_id": "21b2e1e7-00aa-4c32-aaad-028f9adc90f2",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.885297,
+        "evidence_quote": "Lyrics are not even showing up",
+        "review_id": "c74e63d7-15fb-4e8d-a3b2-eb2bf7b5e811",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG_05": [
+      {
+        "centroid_cosine": 0.85321,
+        "evidence_quote": "Good selection of music, podcasts, etc. Bad that most of the time it doesn't play the song I want.",
+        "review_id": "190b90a7-2e38-4f5f-95ca-dbf6ede34e3f",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.850315,
+        "evidence_quote": "Overall a good app, but I'm tired of music recommendations that I'm not interested in, and podcasts that I've listened to one time, continually showing up on my homepage.",
+        "review_id": "53108248-431c-4c39-b85b-9296cc10ac70",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.829859,
+        "evidence_quote": "I found that the app is great and selection of music / podcasts very extensive.",
+        "review_id": "6e7aabaa-ce2a-4827-ba39-7d4386625743",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG_06": [
+      {
+        "centroid_cosine": 0.902413,
+        "evidence_quote": "Good app every song is not available though",
+        "review_id": "5fa185c3-348a-433f-af41-d0d684215053",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.900236,
+        "evidence_quote": "Good app but I didn't find so many songs in it that indeed to listen",
+        "review_id": "19a796be-71a7-4fa5-a70b-af91c7f9bd5e",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.894032,
+        "evidence_quote": "Good app but some songs are not available on this app.",
+        "review_id": "a44e4cdc-d737-4f30-8c41-f330aa366808",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_CATALOG_07": [
+      {
+        "centroid_cosine": 0.889592,
+        "evidence_quote": "Some songs can't be found even after I search for it.",
+        "review_id": "b1ad6357-56b7-4e54-ac34-3207240c417f",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.878576,
+        "evidence_quote": "Not all songs are available",
+        "review_id": "2c581639-061a-4c57-b0cc-f06272147966",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.875068,
+        "evidence_quote": "Some songs are not found.",
+        "review_id": "f99e9079-4a31-4203-99ba-7e95f87c28c2",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_DOWNLOADS_01": [
+      {
+        "centroid_cosine": 0.904028,
+        "evidence_quote": "Downloaded content won't play when I'm offline. You pay for Premium yet cannot listen to music on an airplane journey or on the underground train.",
+        "review_id": "059069c2-043a-42f3-82a9-af384b93a06c",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.89898,
+        "evidence_quote": "The only thing - downloading music to listen offline doesn't work.",
+        "review_id": "3ae8307f-c733-47a9-8a33-9df2002f8ff8",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.897808,
+        "evidence_quote": "Frequently, my downloaded music won't play offline. Pretty frustrating for a paid service. Otherwise great.",
+        "review_id": "94d1d74e-84db-49db-8a99-269e582b0dd5",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_DOWNLOADS_02": [
+      {
+        "centroid_cosine": 0.90648,
+        "evidence_quote": "This app is very very worst don't download 🙏",
+        "review_id": "c686b540-a499-4b62-8c11-fe327da2a76c",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.898935,
+        "evidence_quote": "This app is bad and not download any one this app",
+        "review_id": "e27020f4-f1a9-4430-b660-886e1f15442b",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.897118,
+        "evidence_quote": "This app is very bad please don't download this app",
+        "review_id": "bbbab282-c83f-466d-b30f-1e35e384c826",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_DOWNLOADS_03": [
+      {
+        "centroid_cosine": 0.864125,
+        "evidence_quote": "Dont download",
+        "review_id": "0013b370-1907-44dd-8f58-fba9ef53add6",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.864125,
+        "evidence_quote": "Dont Download",
+        "review_id": "c5687f39-00b6-4aac-8765-7edb7ca9cec7",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.857099,
+        "evidence_quote": "to download is a problem",
+        "review_id": "1ffbe3fa-34d4-47d8-bf29-7a2de54390b1",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_DOWNLOADS_04": [
+      {
+        "centroid_cosine": 0.866065,
+        "evidence_quote": "Downloaded songs in my playlist disappears everytime have to download everytime.",
+        "review_id": "d9363687-7982-48db-925a-6a3c090fba2c",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.85289,
+        "evidence_quote": "Have had problems in the past where my downloaded songs suddenly disappeared and I had to redownload all 20-30 Gb of them.",
+        "review_id": "0ba0711d-1fe7-4911-9ab8-46675117fbf5",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.846575,
+        "evidence_quote": "Downloaded songs always disappear",
+        "review_id": "577112da-0b74-42e9-be11-0cc4628406c8",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_DOWNLOADS_05": [
+      {
+        "centroid_cosine": 0.875325,
+        "evidence_quote": "The premium of this app is totally awesome but some time it slow to download song and you can't download songs directly",
+        "review_id": "d36b9592-f84a-432d-9fc8-cc730b900d90",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.872378,
+        "evidence_quote": "I love this app it's very good for listening to all the songs I need ,the only thing that I don't like is that I can't download the songs, songs can be downloaded in premium version only",
+        "review_id": "a2ec44bb-4f8b-4e34-9eec-b1c574636994",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.859367,
+        "evidence_quote": "This is a good app . But can't download songs 👁️",
+        "review_id": "ac74d258-56bf-4086-8319-9ab608716b06",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_OTHER_01": [
+      {
+        "centroid_cosine": 0.888268,
+        "evidence_quote": "Very bad worst",
+        "review_id": "04a910f9-e7b0-42d2-a714-23131c18408e",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.887281,
+        "evidence_quote": "Bad",
+        "review_id": "00665918-49bf-4653-ba11-42949ec3ccb4",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.887281,
+        "evidence_quote": "bad",
+        "review_id": "01696578-3eca-4b8f-949c-61f2e0359567",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_OTHER_02": [
+      {
+        "centroid_cosine": 0.900971,
+        "evidence_quote": "Worst app I hate this 😠😡😡",
+        "review_id": "4cb969c0-544b-494e-9e87-8d704c0c36c4",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.900971,
+        "evidence_quote": "Worst app i hate this app🤮",
+        "review_id": "cc24a214-e7a8-4cba-82bf-4db431ff8008",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.900462,
+        "evidence_quote": "Worst app I hate this app 😡😡",
+        "review_id": "8398472d-f697-4d3a-98be-5abafc94c5d4",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_OTHER_03": [
+      {
+        "centroid_cosine": 0.900284,
+        "evidence_quote": "new update is the worst",
+        "review_id": "2935aa31-39ba-4fe2-9a8c-c875d6ab6808",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.900284,
+        "evidence_quote": "New update is the worst",
+        "review_id": "3895c70e-65b1-4f58-a087-12bc33ad7ab7",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.900284,
+        "evidence_quote": "NEW UPDATE IS THE WORST",
+        "review_id": "3a5f9304-bd58-4357-8a53-112aa0a46e5e",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_PLAYBACK_01": [
+      {
+        "centroid_cosine": 0.878217,
+        "evidence_quote": "Sometimes it just stops playing music then I have to switch to a completely different playlist to make it work again.",
+        "review_id": "47b4bee4-51b3-4e2d-85e2-625d5a70e879",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.873983,
+        "evidence_quote": "Whenever I do manage to get a song to play, it stops working again after the song finishes.",
+        "review_id": "34ef9137-7d10-41cb-a31d-7ff6648cec58",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.868711,
+        "evidence_quote": "Also it often happens where i have to reinstall the app because the music in my playlist just doesnt play.",
+        "review_id": "7dc4c848-847e-4958-9a60-622dc8f92ba1",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_PLAYBACK_02": [
+      {
+        "centroid_cosine": 0.835799,
+        "evidence_quote": "The app is laggy and keeps crashing.",
+        "review_id": "1c7a350b-1c80-4582-b07f-18b17eda0b1a",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.832858,
+        "evidence_quote": "It sometimes stop playing and I have to open the app again.",
+        "review_id": "66f9e25b-3a66-4583-a1aa-efa4f4cd5195",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.831311,
+        "evidence_quote": "Also, the app keeps crashing on my TV, playstation, and phone",
+        "review_id": "e906c144-1db7-4c36-a701-a0ee9b495586",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_PLAYBACK_03": [
+      {
+        "centroid_cosine": 0.860704,
+        "evidence_quote": "This is the worst music app because it doesnt play the music you are trying to play and some songs dont go to your playlist",
+        "review_id": "b6d3cf8f-2a33-4a09-b3da-0cb4315fe5a8",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.858469,
+        "evidence_quote": "K but one thing I HATE about this app is that when you go to the song and click on it the app plays an ENTIRE playlist and half the time the song ISNT ON THE PLAYLIST",
+        "review_id": "d6448676-554d-4006-ab0f-8a67d35e03ce",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.856182,
+        "evidence_quote": "Great music app but it plays music I don't like in my fav songs and idk why I'd play some random song not on list never using again :)",
+        "review_id": "f1d3d511-8b9f-4994-b803-2f0bf8413505",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_SUPPORT_01": [
+      {
+        "centroid_cosine": 0.926586,
+        "evidence_quote": "Terrible customer service",
+        "review_id": "2037d948-044f-4efa-85b2-3eb60440c3f1",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.92463,
+        "evidence_quote": "Customer service is terrible",
+        "review_id": "ec4d1150-f6bb-40f6-ad56-2cef526ec60f",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.90212,
+        "evidence_quote": "Worst customer service",
+        "review_id": "ce7dc028-8003-4d20-ace2-9dd2a2dcb93f",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_SUPPORT_02": [
+      {
+        "centroid_cosine": 0.871828,
+        "evidence_quote": "not give the proper solution",
+        "review_id": "00040bde-f864-444e-9d2f-a13f01cd334b",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.871828,
+        "evidence_quote": "Spotify sent a bot to talk to me when I sent a detailed explanation of the problem and wasted my time.",
+        "review_id": "5ccb76a8-69e4-490f-a90e-4c49ac041956",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_SUPPORT_03": [
+      {
+        "centroid_cosine": 0.810849,
+        "evidence_quote": "Support is impossible to contact.",
+        "review_id": "32dc4042-c270-459e-a8bc-8a1b68f55648",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.799319,
+        "evidence_quote": "There's no customer support person available who can help",
+        "review_id": "43ab4d11-a490-4635-bc80-08d9752364e2",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.784892,
+        "evidence_quote": "your customer service doesn't provide any help",
+        "review_id": "86098d7d-b4f6-469f-9e70-b3ab80e95af9",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_SUPPORT_04": [
+      {
+        "centroid_cosine": 0.847696,
+        "evidence_quote": "no customer support",
+        "review_id": "ff5b9ccf-c915-4086-abd9-28c8a8d70eff",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.826466,
+        "evidence_quote": "the customer support is the worst I've seen.",
+        "review_id": "0da32d2c-f430-44a3-81f9-93aa2d2f9782",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.802095,
+        "evidence_quote": "Support for this app is horrible.",
+        "review_id": "5d5e7f65-a77b-4bc1-b58e-58a8fe36c77b",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_SUPPORT_05": [
+      {
+        "centroid_cosine": 0.741479,
+        "evidence_quote": "Very Poor Response",
+        "review_id": "3fdf5064-b264-40fa-bca3-f5ca48099734",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.741479,
+        "evidence_quote": "Very poor response",
+        "review_id": "a5f41357-4b92-4ee4-8967-7a974ce57d43",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.721712,
+        "evidence_quote": "Bad response",
+        "review_id": "918fade1-e534-42b1-9887-4c7d6c753e48",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_SUPPORT_06": [
+      {
+        "centroid_cosine": 0.832187,
+        "evidence_quote": "No way to cancel subscription",
+        "review_id": "0ea05cd7-f2ac-4d24-9572-1be6cef8d2d4",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.793137,
+        "evidence_quote": "Instantly cancelled my subscription",
+        "review_id": "9d68b372-0a20-42a3-8cd2-d30c8846684b",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.691441,
+        "evidence_quote": "I closed my account and premium",
+        "review_id": "83bd294b-0d0e-474f-b721-520b3133a8f4",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_SUPPORT_07": [
+      {
+        "centroid_cosine": 1.0,
+        "evidence_quote": "Guys, pack up shop, and walk into oncoming traffic.",
+        "review_id": "57f59e6b-7ab8-48c4-9342-458581bc4ee3",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_SUPPORT_08": [
+      {
+        "centroid_cosine": 0.838602,
+        "evidence_quote": "my issue is still not resolved",
+        "review_id": "477f0525-da53-4977-82fa-7339169b84f3",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.82856,
+        "evidence_quote": "Spotify Customer support still hasn't resolved",
+        "review_id": "3aba9646-746b-47d9-aa23-4196e5c7e0f6",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.82797,
+        "evidence_quote": "I am only able to reach out to the Spotify community for help",
+        "review_id": "96ab9741-740e-46f2-b698-2fe6d9c07c7c",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_SUPPORT_09": [
+      {
+        "centroid_cosine": 0.902718,
+        "evidence_quote": "No customer is poor service",
+        "review_id": "e139dcf4-a267-41dd-a3f9-5489680bf58e",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.891755,
+        "evidence_quote": "Very poor customer service",
+        "review_id": "b99de19f-ceb3-42e0-b5d4-ef94770256ec",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.876481,
+        "evidence_quote": "Customer support very poor",
+        "review_id": "fff4fc4e-83e4-467d-a188-5dcbcfdc3995",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_USABILITY_01": [
+      {
+        "centroid_cosine": 0.894042,
+        "evidence_quote": "Ads after ads useless too much ads i don't like we use this apps to listen songs not to listen ads.",
+        "review_id": "1b78673c-5923-4c03-95eb-25d470704b4d",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.874092,
+        "evidence_quote": "This thing is too bad that ads in this app are increasing day by day . Before listening one song there where almost 5 ads",
+        "review_id": "c3b882ce-7665-49e1-b778-6b6b86d1104b",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.869677,
+        "evidence_quote": "Too much ads after every 2 songs there was 2-3 ads in starting I love this app very much I think it is very good app after 1 year I have this app very much because of too much ads.",
+        "review_id": "fee308b6-50f6-4d27-bc29-98fb1c59f02a",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_USABILITY_02": [
+      {
+        "centroid_cosine": 0.88228,
+        "evidence_quote": "It's also really annoying how with the shuffle feature it doesn't play all the songs on the playlists before reverting back to the first song played.",
+        "review_id": "1a1a86c1-6cc8-4c13-b5a4-d1ec8cc4e5cb",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.876649,
+        "evidence_quote": "i wish it didnt shuffle whats playing and add random songs to my playlist when im trying to add only one song.",
+        "review_id": "05bb08c6-cc8a-41cf-bc32-7c0087d42241",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.872605,
+        "evidence_quote": "It is too bad ,now we can't play in order in our playlist,they disable shuffle button and we can't even select what part we want to hear of a song",
+        "review_id": "7b58dcdf-bb0c-4a81-9efa-ce10aecae1d5",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_USABILITY_03": [
+      {
+        "centroid_cosine": 0.864289,
+        "evidence_quote": "There is too much adds",
+        "review_id": "831409ee-bdfc-4bdb-bdc0-5fef346e02f9",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.861618,
+        "evidence_quote": "Too many addss",
+        "review_id": "1f580002-653e-496a-98df-943a7cd4adb2",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      },
+      {
+        "centroid_cosine": 0.859711,
+        "evidence_quote": "Too much of adds",
+        "review_id": "02b6e2e7-fd63-4340-a52e-7c8c673493f0",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 2
+      }
+    ],
+    "I_USABILITY_04": [
+      {
+        "centroid_cosine": 0.87587,
+        "evidence_quote": "Worst app for listing music The update is a complete waste You can't even select which song to play after other You can't select shuffle or play in order or play 1 song repeated You can't play whichever song you like after six hours of shifting from one song to other And to get all of the things which you must have , they ask you to buy a premium version I'm deleting my Spotify rn This is the worst thing you did",
+        "review_id": "e098aded-fdf7-4f31-b5b0-0ca9c4d570e8",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.867532,
+        "evidence_quote": "This isn't a good app anymore, this new update sucks I had a playlist on YouTube and I was like let's move it to Spotify so I can choose songs easier and fast, now you can only skip 6 songs and hour and you can't choose the exact song you want.",
+        "review_id": "6b38e586-cc56-4c6d-aa32-9817353f955b",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.861313,
+        "evidence_quote": "Amazing app but my least favirite part is that when i make a new playlist spotify adds songs i never heard before and frankly dont like to my playlists",
+        "review_id": "3c198f31-123c-4b72-a772-d0003b512751",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ],
+    "I_USABILITY_05": [
+      {
+        "centroid_cosine": 0.837899,
+        "evidence_quote": "The new updates of this app makes it worst because removal of basic features.....",
+        "review_id": "6bc0ace8-2612-4e36-9e9a-305f52ff9325",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.826568,
+        "evidence_quote": "the new update just removed the basic features it's just annoying now literally made this app worst",
+        "review_id": "026fe5e8-25b0-4ab4-b999-0c445f4b9684",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      },
+      {
+        "centroid_cosine": 0.813203,
+        "evidence_quote": "The new UI is awful and I've had to reinstall an old version and block updates to make the app usable.",
+        "review_id": "2f38be72-8841-4f71-adf3-56ffc8e48c84",
+        "selection": "modal_severity_closest_to_centroid",
+        "severity": 3
+      }
+    ]
+  },
+  "evidence_selection_rule": "Per issue: the most common severity among member rows (ties -> higher severity); among distinct member texts with that severity, the three closest to the issue centroid by cosine similarity of the saved grouping embeddings.",
+  "grouping_comparison": {
+    "adopted": "embedding_group_v3",
+    "issue_count": 44,
+    "scope": "One grouping method is run here. The method was chosen earlier on the full corpus by comparing TF-IDF clustering (v1) with embedding clustering (v2/v3); that comparison is archived in artifacts/full_run_v2/grouping_comparison.json."
+  },
+  "issues": {
+    "I_ACCESS_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users say the app does not allow them to log in or access their account, with little detail about the cause.",
+      "issue_id": "I_ACCESS_01",
+      "issue_name": "App login unavailable",
+      "topic": "access"
+    },
+    "I_ACCESS_02": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Examples describe trouble accessing the app, music, or playlists, alongside vague reports that something is not working and a device-specific notification issue.",
+      "issue_id": "I_ACCESS_02",
+      "issue_name": "Access and login problems",
+      "topic": "access"
+    },
+    "I_ACCESS_03": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users specifically report that phone-number login does not work.",
+      "issue_id": "I_ACCESS_03",
+      "issue_name": "Phone-number login failure",
+      "topic": "access"
+    },
+    "I_ACCESS_04": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples report being unable to install the app, while a few object to installing it or say it should be deleted.",
+      "issue_id": "I_ACCESS_04",
+      "issue_name": "App installation failure",
+      "topic": "access"
+    },
+    "I_ACCESS_05": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report being unable to log in, including failures with phone-number login and repeated errors.",
+      "issue_id": "I_ACCESS_05",
+      "issue_name": "General login failures",
+      "topic": "access"
+    },
+    "I_ACCESS_06": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report being unable to log in to an existing account, often encountering repeated errors.",
+      "issue_id": "I_ACCESS_06",
+      "issue_name": "Login failures",
+      "topic": "access"
+    },
+    "I_ACCESS_07": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users are signed out, locked out, or rejected when trying to return to an existing account.",
+      "issue_id": "I_ACCESS_07",
+      "issue_name": "Unable to regain account access",
+      "topic": "access"
+    },
+    "I_ACCESS_08": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report being unable to log in, sometimes citing a generic error message or repeated unsuccessful attempts.",
+      "issue_id": "I_ACCESS_08",
+      "issue_name": "Unable to log in",
+      "topic": "access"
+    },
+    "I_BILLING_01": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Reviews broadly object to basic features being moved behind Premium without identifying one specific feature problem.",
+      "issue_id": "I_BILLING_01",
+      "issue_name": "Basic features require Premium",
+      "topic": "billing"
+    },
+    "I_BILLING_02": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Reviews express dissatisfaction with payment requirements, subscription cost, or inability to afford Premium.",
+      "issue_id": "I_BILLING_02",
+      "issue_name": "Payment and subscription cost",
+      "topic": "billing"
+    },
+    "I_BILLING_03": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Reviews broadly object that many features or functions require Premium, without identifying a specific restricted feature.",
+      "issue_id": "I_BILLING_03",
+      "issue_name": "Features require Premium",
+      "topic": "billing"
+    },
+    "I_BILLING_04": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report that core listening controls, including song choice, skipping, or seeking, require Premium.",
+      "issue_id": "I_BILLING_04",
+      "issue_name": "Listening controls restricted to Premium",
+      "topic": "billing"
+    },
+    "I_CATALOG_01": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples report missing songs, while others describe difficulty choosing among many tracks, uninteresting selection, or alleged stream filtering.",
+      "issue_id": "I_CATALOG_01",
+      "issue_name": "Catalog availability and selection",
+      "topic": "catalog"
+    },
+    "I_CATALOG_02": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Reports include difficulty finding songs, language-specific search or lyrics issues, podcast language mismatch, and missing local files.",
+      "issue_id": "I_CATALOG_02",
+      "issue_name": "Catalog search and content issues",
+      "topic": "catalog"
+    },
+    "I_CATALOG_03": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Examples mix unwanted or repetitive playback and recommendations with missing songs, playlist behavior, and general catalog praise.",
+      "issue_id": "I_CATALOG_03",
+      "issue_name": "Playback and catalog mismatches",
+      "topic": "catalog"
+    },
+    "I_CATALOG_04": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Lyrics are missing, unavailable, or fail to load for songs.",
+      "issue_id": "I_CATALOG_04",
+      "issue_name": "Lyrics not displaying",
+      "topic": "catalog"
+    },
+    "I_CATALOG_05": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Examples combine unwanted recommendations with ad burden, interface and audio quality complaints, and general praise for the catalog.",
+      "issue_id": "I_CATALOG_05",
+      "issue_name": "Unwanted music recommendations",
+      "topic": "catalog"
+    },
+    "I_CATALOG_06": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples report unavailable or missing songs, while others describe playback restrictions, missing lyrics, or liked songs disappearing.",
+      "issue_id": "I_CATALOG_06",
+      "issue_name": "Missing or unavailable songs",
+      "topic": "catalog"
+    },
+    "I_CATALOG_07": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples say songs are unavailable or absent, with additional reports of search connectivity failure and a specific catalog omission.",
+      "issue_id": "I_CATALOG_07",
+      "issue_name": "Songs unavailable in search",
+      "topic": "catalog"
+    },
+    "I_DOWNLOADS_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Downloaded music is unavailable or cannot be played when the device is offline, despite being saved for offline listening.",
+      "issue_id": "I_DOWNLOADS_01",
+      "issue_name": "Downloaded music unavailable offline",
+      "topic": "downloads"
+    },
+    "I_DOWNLOADS_02": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Most examples express general dislike without a specific download problem; one reports the app appearing offline while the user is connected.",
+      "issue_id": "I_DOWNLOADS_02",
+      "issue_name": "Vague negative reactions to the app",
+      "topic": "downloads"
+    },
+    "I_DOWNLOADS_03": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Reports describe downloads that fail, take too long, or disappear or save to the wrong storage location.",
+      "issue_id": "I_DOWNLOADS_03",
+      "issue_name": "Download failures and storage issues",
+      "topic": "downloads"
+    },
+    "I_DOWNLOADS_04": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples report downloaded songs disappearing, alongside reports of offline playback failing or downloads moving to internal storage.",
+      "issue_id": "I_DOWNLOADS_04",
+      "issue_name": "Downloaded songs disappear",
+      "topic": "downloads"
+    },
+    "I_DOWNLOADS_05": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Reports cover missing or difficult downloads, download restrictions and limits, repeated downloads, offline access, and finding downloaded tracks.",
+      "issue_id": "I_DOWNLOADS_05",
+      "issue_name": "Download access and reliability",
+      "topic": "downloads"
+    },
+    "I_OTHER_01": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "Reviews give brief, nonspecific negative assessments without describing a product problem.",
+      "issue_id": "I_OTHER_01",
+      "issue_name": "Vague negative ratings",
+      "topic": "other"
+    },
+    "I_OTHER_02": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "These reviews broadly dislike the app without describing a specific product problem.",
+      "issue_id": "I_OTHER_02",
+      "issue_name": "General app dislike",
+      "topic": "other"
+    },
+    "I_OTHER_03": {
+      "actionable": "no",
+      "coherent": "yes",
+      "description": "These reviews express general dissatisfaction with a recent update but do not identify a specific change or problem.",
+      "issue_id": "I_OTHER_03",
+      "issue_name": "General dissatisfaction with recent update",
+      "topic": "other"
+    },
+    "I_PLAYBACK_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Music playback stops, pauses, or fails to start, sometimes requiring users to restart the app, switch tracks, or reinstall it.",
+      "issue_id": "I_PLAYBACK_01",
+      "issue_name": "Playback stops or fails",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_02": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "The app intermittently freezes, crashes, stops responding, or stops working during playback across devices.",
+      "issue_id": "I_PLAYBACK_02",
+      "issue_name": "App freezes, crashes, or stops responding",
+      "topic": "playback"
+    },
+    "I_PLAYBACK_03": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Reports describe songs failing to play as selected, unexpected track choices or repetition, and playback advancing or becoming silent.",
+      "issue_id": "I_PLAYBACK_03",
+      "issue_name": "Unexpected song selection and playback",
+      "topic": "playback"
+    },
+    "I_SUPPORT_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users describe customer service as very poor, with one report that chat takes too long to connect.",
+      "issue_id": "I_SUPPORT_01",
+      "issue_name": "Poor customer service",
+      "topic": "support"
+    },
+    "I_SUPPORT_02": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report support failing to address account access concerns, including unhelpful automated interactions.",
+      "issue_id": "I_SUPPORT_02",
+      "issue_name": "Unhelpful support for account issues",
+      "topic": "support"
+    },
+    "I_SUPPORT_03": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report difficulty reaching support or getting useful help and resolution.",
+      "issue_id": "I_SUPPORT_03",
+      "issue_name": "Difficulty contacting support",
+      "topic": "support"
+    },
+    "I_SUPPORT_04": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users describe support as unresponsive, ineffective, or unable to resolve problems.",
+      "issue_id": "I_SUPPORT_04",
+      "issue_name": "Unresponsive customer support",
+      "topic": "support"
+    },
+    "I_SUPPORT_05": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report support responses that are poor, dismissive, ineffective, or absent.",
+      "issue_id": "I_SUPPORT_05",
+      "issue_name": "Poor or ineffective support responses",
+      "topic": "support"
+    },
+    "I_SUPPORT_06": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Examples mix difficulty canceling or disconnecting subscriptions with completed cancellations and general intent to cancel.",
+      "issue_id": "I_SUPPORT_06",
+      "issue_name": "Subscription cancellation difficulties",
+      "topic": "support"
+    },
+    "I_SUPPORT_07": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "The example is an abusive expression of dissatisfaction without a specific support problem.",
+      "issue_id": "I_SUPPORT_07",
+      "issue_name": "Unspecified abusive complaint",
+      "topic": "support"
+    },
+    "I_SUPPORT_08": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Reviewers report difficulty reaching Spotify support, receiving responses, or getting their issues resolved.",
+      "issue_id": "I_SUPPORT_08",
+      "issue_name": "Unresponsive or inaccessible support",
+      "topic": "support"
+    },
+    "I_SUPPORT_09": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report poor support that is difficult to reach and unhelpful when contacted.",
+      "issue_id": "I_SUPPORT_09",
+      "issue_name": "Hard-to-reach, unhelpful support",
+      "topic": "support"
+    },
+    "I_USABILITY_01": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Users report ads appearing too frequently during music or podcast listening.",
+      "issue_id": "I_USABILITY_01",
+      "issue_name": "Frequent ads",
+      "topic": "usability"
+    },
+    "I_USABILITY_02": {
+      "actionable": "no",
+      "coherent": "no",
+      "description": "Reviews mention shuffle behavior and limits on choosing or playing songs, but also mix in playlist changes and song selection issues that are not specific to shuffle.",
+      "issue_id": "I_USABILITY_02",
+      "issue_name": "Shuffle and song selection problems",
+      "topic": "usability"
+    },
+    "I_USABILITY_03": {
+      "actionable": "yes",
+      "coherent": "yes",
+      "description": "Examples consistently say that ads are too frequent or excessive.",
+      "issue_id": "I_USABILITY_03",
+      "issue_name": "Excessive ads",
+      "topic": "usability"
+    },
+    "I_USABILITY_04": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Most examples complain that Spotify adds recommended or unwanted songs to playlists, while others describe song selection limits or missing library content.",
+      "issue_id": "I_USABILITY_04",
+      "issue_name": "Unwanted songs added to playlists",
+      "topic": "usability"
+    },
+    "I_USABILITY_05": {
+      "actionable": "yes",
+      "coherent": "no",
+      "description": "Reports describe removed or changed features and a degraded interface after updates, with one separate Android Auto voice command issue.",
+      "issue_id": "I_USABILITY_05",
+      "issue_name": "Update-related feature and interface changes",
+      "topic": "usability"
+    }
+  },
+  "monthly_trend": {
+    "context_only": "Trend figures may qualify the recommendation but are never claims.",
+    "months": [
+      {
+        "classified_rows": 15461,
+        "complaint_or_cancellation_rows": 4711,
+        "month": "2022-05",
+        "partial_month": true,
+        "share": "0.304702"
+      },
+      {
+        "classified_rows": 30338,
+        "complaint_or_cancellation_rows": 8984,
+        "month": "2022-06",
+        "partial_month": false,
+        "share": "0.296130"
+      },
+      {
+        "classified_rows": 32783,
+        "complaint_or_cancellation_rows": 11456,
+        "month": "2022-07",
+        "partial_month": false,
+        "share": "0.349449"
+      },
+      {
+        "classified_rows": 30732,
+        "complaint_or_cancellation_rows": 8679,
+        "month": "2022-08",
+        "partial_month": false,
+        "share": "0.282409"
+      },
+      {
+        "classified_rows": 26933,
+        "complaint_or_cancellation_rows": 7331,
+        "month": "2022-09",
+        "partial_month": false,
+        "share": "0.272194"
+      },
+      {
+        "classified_rows": 27571,
+        "complaint_or_cancellation_rows": 7761,
+        "month": "2022-10",
+        "partial_month": false,
+        "share": "0.281491"
+      },
+      {
+        "classified_rows": 27349,
+        "complaint_or_cancellation_rows": 8243,
+        "month": "2022-11",
+        "partial_month": false,
+        "share": "0.301400"
+      },
+      {
+        "classified_rows": 31742,
+        "complaint_or_cancellation_rows": 11345,
+        "month": "2022-12",
+        "partial_month": false,
+        "share": "0.357413"
+      },
+      {
+        "classified_rows": 28605,
+        "complaint_or_cancellation_rows": 8614,
+        "month": "2023-01",
+        "partial_month": false,
+        "share": "0.301136"
+      },
+      {
+        "classified_rows": 20889,
+        "complaint_or_cancellation_rows": 6063,
+        "month": "2023-02",
+        "partial_month": false,
+        "share": "0.290248"
+      },
+      {
+        "classified_rows": 27237,
+        "complaint_or_cancellation_rows": 9481,
+        "month": "2023-03",
+        "partial_month": false,
+        "share": "0.348093"
+      },
+      {
+        "classified_rows": 25014,
+        "complaint_or_cancellation_rows": 8474,
+        "month": "2023-04",
+        "partial_month": false,
+        "share": "0.338770"
+      },
+      {
+        "classified_rows": 28061,
+        "complaint_or_cancellation_rows": 8990,
+        "month": "2023-05",
+        "partial_month": false,
+        "share": "0.320373"
+      },
+      {
+        "classified_rows": 27117,
+        "complaint_or_cancellation_rows": 10146,
+        "month": "2023-06",
+        "partial_month": false,
+        "share": "0.374156"
+      },
+      {
+        "classified_rows": 85079,
+        "complaint_or_cancellation_rows": 46384,
+        "month": "2023-07",
+        "partial_month": false,
+        "share": "0.545187"
+      },
+      {
+        "classified_rows": 30438,
+        "complaint_or_cancellation_rows": 11398,
+        "month": "2023-08",
+        "partial_month": false,
+        "share": "0.374466"
+      },
+      {
+        "classified_rows": 41634,
+        "complaint_or_cancellation_rows": 21907,
+        "month": "2023-09",
+        "partial_month": false,
+        "share": "0.526181"
+      },
+      {
+        "classified_rows": 89102,
+        "complaint_or_cancellation_rows": 64805,
+        "month": "2023-10",
+        "partial_month": false,
+        "share": "0.727313"
+      },
+      {
+        "classified_rows": 34524,
+        "complaint_or_cancellation_rows": 23142,
+        "month": "2023-11",
+        "partial_month": true,
+        "share": "0.670316"
+      }
+    ],
+    "rule": "share = complaint_or_cancellation_rows / classified_rows per calendar month; the first and last months of the input are treated as partial"
+  },
+  "ranking": [
+    {
+      "complaint_count": 57872,
+      "issue_id": "I_OTHER_02",
+      "mean_severity": "2.032745",
+      "priority_score": 117639,
+      "rank": 1,
+      "severity_sum": 117639
+    },
+    {
+      "complaint_count": 22475,
+      "issue_id": "I_BILLING_04",
+      "mean_severity": "2.854194",
+      "priority_score": 64148,
+      "rank": 2,
+      "severity_sum": 64148
+    },
+    {
+      "complaint_count": 26570,
+      "issue_id": "I_USABILITY_01",
+      "mean_severity": "2.266127",
+      "priority_score": 60211,
+      "rank": 3,
+      "severity_sum": 60211
+    },
+    {
+      "complaint_count": 16304,
+      "issue_id": "I_PLAYBACK_03",
+      "mean_severity": "2.930079",
+      "priority_score": 47772,
+      "rank": 4,
+      "severity_sum": 47772
+    },
+    {
+      "complaint_count": 14449,
+      "issue_id": "I_PLAYBACK_01",
+      "mean_severity": "3.102429",
+      "priority_score": 44827,
+      "rank": 5,
+      "severity_sum": 44827
+    },
+    {
+      "complaint_count": 14633,
+      "issue_id": "I_PLAYBACK_02",
+      "mean_severity": "2.980523",
+      "priority_score": 43614,
+      "rank": 6,
+      "severity_sum": 43614
+    },
+    {
+      "complaint_count": 14367,
+      "issue_id": "I_USABILITY_04",
+      "mean_severity": "2.784089",
+      "priority_score": 39999,
+      "rank": 7,
+      "severity_sum": 39999
+    },
+    {
+      "complaint_count": 13282,
+      "issue_id": "I_USABILITY_02",
+      "mean_severity": "2.938865",
+      "priority_score": 39034,
+      "rank": 8,
+      "severity_sum": 39034
+    },
+    {
+      "complaint_count": 14260,
+      "issue_id": "I_USABILITY_05",
+      "mean_severity": "2.605750",
+      "priority_score": 37158,
+      "rank": 9,
+      "severity_sum": 37158
+    },
+    {
+      "complaint_count": 15906,
+      "issue_id": "I_OTHER_03",
+      "mean_severity": "2.054571",
+      "priority_score": 32680,
+      "rank": 10,
+      "severity_sum": 32680
+    }
+  ],
+  "sensitivity_summary": {
+    "adjusted_topics": [
+      {
+        "adjusted_complaint_count": 106008.488635,
+        "adjusted_complaint_count_95ci": {
+          "lower": 94084.572602,
+          "upper": 118960.431145
+        },
+        "adjusted_mean_severity": 2.050062,
+        "adjusted_priority_score": 217323.970899,
+        "adjusted_priority_score_95ci": {
+          "lower": 193769.357789,
+          "upper": 243629.61094
+        },
+        "adjusted_rank": 1,
+        "baseline_complaint_count": 85199,
+        "baseline_priority_score": 173195,
+        "baseline_rank": 2,
+        "topic": "other"
+      },
+      {
+        "adjusted_complaint_count": 57293.884993,
+        "adjusted_complaint_count_95ci": {
+          "lower": 42955.609448,
+          "upper": 70899.373646
+        },
+        "adjusted_mean_severity": 2.781072,
+        "adjusted_priority_score": 159338.430048,
+        "adjusted_priority_score_95ci": {
+          "lower": 118381.136281,
+          "upper": 197912.762109
+        },
+        "adjusted_rank": 2,
+        "baseline_complaint_count": 48875,
+        "baseline_priority_score": 134753,
+        "baseline_rank": 4,
+        "topic": "billing"
+      },
+      {
+        "adjusted_complaint_count": 56662.458508,
+        "adjusted_complaint_count_95ci": {
+          "lower": 45895.615195,
+          "upper": 68165.067647
+        },
+        "adjusted_mean_severity": 2.519616,
+        "adjusted_priority_score": 142767.630234,
+        "adjusted_priority_score_95ci": {
+          "lower": 113604.713728,
+          "upper": 175246.891743
+        },
+        "adjusted_rank": 3,
+        "baseline_complaint_count": 73643,
+        "baseline_priority_score": 187967,
+        "baseline_rank": 1,
+        "topic": "usability"
+      },
+      {
+        "adjusted_complaint_count": 39526.169432,
+        "adjusted_complaint_count_95ci": {
+          "lower": 30071.582478,
+          "upper": 49828.483776
+        },
+        "adjusted_mean_severity": 2.930684,
+        "adjusted_priority_score": 115838.719266,
+        "adjusted_priority_score_95ci": {
+          "lower": 87546.345814,
+          "upper": 145439.022429
+        },
+        "adjusted_rank": 4,
+        "baseline_complaint_count": 45386,
+        "baseline_priority_score": 136213,
+        "baseline_rank": 3,
+        "topic": "playback"
+      },
+      {
+        "adjusted_complaint_count": 14292.313772,
+        "adjusted_complaint_count_95ci": {
+          "lower": 10579.070831,
+          "upper": 19141.701584
+        },
+        "adjusted_mean_severity": 2.622454,
+        "adjusted_priority_score": 37480.929523,
+        "adjusted_priority_score_95ci": {
+          "lower": 28182.723761,
+          "upper": 49123.056702
+        },
+        "adjusted_rank": 5,
+        "baseline_complaint_count": 17816,
+        "baseline_priority_score": 50758,
+        "baseline_rank": 5,
+        "topic": "catalog"
+      },
+      {
+        "adjusted_complaint_count": 5781.085978,
+        "adjusted_complaint_count_95ci": {
+          "lower": 2700.73097,
+          "upper": 7963.259638
+        },
+        "adjusted_mean_severity": 2.919105,
+        "adjusted_priority_score": 16875.59803,
+        "adjusted_priority_score_95ci": {
+          "lower": 8239.081991,
+          "upper": 22538.410807
+        },
+        "adjusted_rank": 6,
+        "baseline_complaint_count": 7166,
+        "baseline_priority_score": 20559,
+        "baseline_rank": 7,
+        "topic": "downloads"
+      },
+      {
+        "adjusted_complaint_count": 1807.700176,
+        "adjusted_complaint_count_95ci": {
+          "lower": 1260.299756,
+          "upper": 3471.531234
+        },
+        "adjusted_mean_severity": 3.023692,
+        "adjusted_priority_score": 5465.928745,
+        "adjusted_priority_score_95ci": {
+          "lower": 4405.663993,
+          "upper": 9192.646177
+        },
+        "adjusted_rank": 7,
+        "baseline_complaint_count": 9510,
+        "baseline_priority_score": 34887,
+        "baseline_rank": 6,
+        "topic": "access"
+      },
+      {
+        "adjusted_complaint_count": 1275.727411,
+        "adjusted_complaint_count_95ci": {
+          "lower": 1234.965486,
+          "upper": 2196.231111
+        },
+        "adjusted_mean_severity": 3.497638,
+        "adjusted_priority_score": 4462.032995,
+        "adjusted_priority_score_95ci": {
+          "lower": 4320.720285,
+          "upper": 6956.495335
+        },
+        "adjusted_rank": 8,
+        "baseline_complaint_count": 319,
+        "baseline_priority_score": 809,
+        "baseline_rank": 8,
+        "topic": "support"
+      }
+    ],
+    "limitations": [
+      "The verifier is an independent model pass, not human ground truth.",
+      "The local stratum has 290 verified texts; sparse cells depend on smoothing.",
+      "Bootstrap intervals represent verifier-sample uncertainty under this correction model, not total model uncertainty.",
+      "Issue corrections cannot recover false-negative complaints into a specific issue because they were never grouped.",
+      "These corrected estimates are sensitivity outputs and are not claims.csv evidence."
+    ],
+    "rank_stability": {
+      "adjusted_top_issue": "I_OTHER_02",
+      "adjusted_top_issue_bootstrap_top_probability": 1.0,
+      "adjusted_top_topic": "other",
+      "adjusted_top_topic_bootstrap_top_probability": 0.994,
+      "baseline_top_issue": "I_OTHER_02",
+      "baseline_top_issue_bootstrap_top_probability": 1.0,
+      "baseline_top_topic": "usability",
+      "baseline_top_topic_bootstrap_top_probability": 0.0,
+      "issue_bootstrap_top_frequency": {
+        "I_OTHER_02": 1000
+      },
+      "top_issue_unchanged": true,
+      "top_topic_unchanged": false,
+      "topic_bootstrap_top_frequency": {
+        "billing": 6,
+        "other": 994
+      }
+    },
+    "top_adjusted_issues": [
+      {
+        "adjusted_complaint_count": 52562.922589,
+        "adjusted_complaint_count_95ci": {
+          "lower": 48186.867381,
+          "upper": 55342.369284
+        },
+        "adjusted_mean_severity": 2.028922,
+        "adjusted_priority_score": 106646.052332,
+        "adjusted_priority_score_95ci": {
+          "lower": 97793.92019,
+          "upper": 112240.73776
+        },
+        "adjusted_rank": 1,
+        "baseline_complaint_count": 57872,
+        "baseline_priority_score": 117639,
+        "baseline_rank": 1,
+        "issue_id": "I_OTHER_02",
+        "topic": "other"
+      },
+      {
+        "adjusted_complaint_count": 15161.022747,
+        "adjusted_complaint_count_95ci": {
+          "lower": 11086.479363,
+          "upper": 18718.121129
+        },
+        "adjusted_mean_severity": 2.860156,
+        "adjusted_priority_score": 43362.891254,
+        "adjusted_priority_score_95ci": {
+          "lower": 31764.635843,
+          "upper": 53532.546481
+        },
+        "adjusted_rank": 2,
+        "baseline_complaint_count": 22475,
+        "baseline_priority_score": 64148,
+        "baseline_rank": 2,
+        "issue_id": "I_BILLING_04",
+        "topic": "billing"
+      },
+      {
+        "adjusted_complaint_count": 17909.980233,
+        "adjusted_complaint_count_95ci": {
+          "lower": 15337.644319,
+          "upper": 20511.523788
+        },
+        "adjusted_mean_severity": 2.203274,
+        "adjusted_priority_score": 39460.588438,
+        "adjusted_priority_score_95ci": {
+          "lower": 33134.910662,
+          "upper": 45473.789781
+        },
+        "adjusted_rank": 3,
+        "baseline_complaint_count": 26570,
+        "baseline_priority_score": 60211,
+        "baseline_rank": 3,
+        "issue_id": "I_USABILITY_01",
+        "topic": "usability"
+      },
+      {
+        "adjusted_complaint_count": 11113.831682,
+        "adjusted_complaint_count_95ci": {
+          "lower": 8490.371647,
+          "upper": 13098.333486
+        },
+        "adjusted_mean_severity": 2.961962,
+        "adjusted_priority_score": 32918.751868,
+        "adjusted_priority_score_95ci": {
+          "lower": 24932.164125,
+          "upper": 39012.538518
+        },
+        "adjusted_rank": 4,
+        "baseline_complaint_count": 14633,
+        "baseline_priority_score": 43614,
+        "baseline_rank": 6,
+        "issue_id": "I_PLAYBACK_02",
+        "topic": "playback"
+      },
+      {
+        "adjusted_complaint_count": 11211.932637,
+        "adjusted_complaint_count_95ci": {
+          "lower": 7886.709927,
+          "upper": 14287.431396
+        },
+        "adjusted_mean_severity": 2.916416,
+        "adjusted_priority_score": 32698.657121,
+        "adjusted_priority_score_95ci": {
+          "lower": 22900.350777,
+          "upper": 41884.187992
+        },
+        "adjusted_rank": 5,
+        "baseline_complaint_count": 16304,
+        "baseline_priority_score": 47772,
+        "baseline_rank": 4,
+        "issue_id": "I_PLAYBACK_03",
+        "topic": "playback"
+      },
+      {
+        "adjusted_complaint_count": 10147.420708,
+        "adjusted_complaint_count_95ci": {
+          "lower": 7397.29687,
+          "upper": 12688.608801
+        },
+        "adjusted_mean_severity": 3.108147,
+        "adjusted_priority_score": 31539.677563,
+        "adjusted_priority_score_95ci": {
+          "lower": 22956.899845,
+          "upper": 39362.510364
+        },
+        "adjusted_rank": 6,
+        "baseline_complaint_count": 14449,
+        "baseline_priority_score": 44827,
+        "baseline_rank": 5,
+        "issue_id": "I_PLAYBACK_01",
+        "topic": "playback"
+      },
+      {
+        "adjusted_complaint_count": 14166.939268,
+        "adjusted_complaint_count_95ci": {
+          "lower": 13111.78925,
+          "upper": 15017.114857
+        },
+        "adjusted_mean_severity": 2.051325,
+        "adjusted_priority_score": 29061.003435,
+        "adjusted_priority_score_95ci": {
+          "lower": 26916.281184,
+          "upper": 30808.076159
+        },
+        "adjusted_rank": 7,
+        "baseline_complaint_count": 15906,
+        "baseline_priority_score": 32680,
+        "baseline_rank": 10,
+        "issue_id": "I_OTHER_03",
+        "topic": "other"
+      },
+      {
+        "adjusted_complaint_count": 10764.022575,
+        "adjusted_complaint_count_95ci": {
+          "lower": 9650.674847,
+          "upper": 11326.396086
+        },
+        "adjusted_mean_severity": 2.002714,
+        "adjusted_priority_score": 21557.259771,
+        "adjusted_priority_score_95ci": {
+          "lower": 19329.35266,
+          "upper": 22682.940512
+        },
+        "adjusted_rank": 8,
+        "baseline_complaint_count": 11421,
+        "baseline_priority_score": 22876,
+        "baseline_rank": 13,
+        "issue_id": "I_OTHER_01",
+        "topic": "other"
+      },
+      {
+        "adjusted_complaint_count": 8109.409749,
+        "adjusted_complaint_count_95ci": {
+          "lower": 6056.942181,
+          "upper": 9948.224629
+        },
+        "adjusted_mean_severity": 2.569567,
+        "adjusted_priority_score": 20837.67155,
+        "adjusted_priority_score_95ci": {
+          "lower": 15245.430404,
+          "upper": 25724.538884
+        },
+        "adjusted_rank": 9,
+        "baseline_complaint_count": 14260,
+        "baseline_priority_score": 37158,
+        "baseline_rank": 9,
+        "issue_id": "I_USABILITY_05",
+        "topic": "usability"
+      },
+      {
+        "adjusted_complaint_count": 7107.148909,
+        "adjusted_complaint_count_95ci": {
+          "lower": 4889.637693,
+          "upper": 9105.680264
+        },
+        "adjusted_mean_severity": 2.925375,
+        "adjusted_priority_score": 20791.077368,
+        "adjusted_priority_score_95ci": {
+          "lower": 14173.553805,
+          "upper": 26762.732336
+        },
+        "adjusted_rank": 10,
+        "baseline_complaint_count": 13282,
+        "baseline_priority_score": 39034,
+        "baseline_rank": 8,
+        "issue_id": "I_USABILITY_02",
+        "topic": "usability"
+      }
+    ]
+  },
+  "topic_rollup": [
+    {
+      "complaint_count": 73643,
+      "mean_severity": "2.552408",
+      "priority_score": 187967,
+      "rank": 1,
+      "severity_sum": 187967,
+      "topic": "usability"
+    },
+    {
+      "complaint_count": 85199,
+      "mean_severity": "2.032829",
+      "priority_score": 173195,
+      "rank": 2,
+      "severity_sum": 173195,
+      "topic": "other"
+    },
+    {
+      "complaint_count": 45386,
+      "mean_severity": "3.001212",
+      "priority_score": 136213,
+      "rank": 3,
+      "severity_sum": 136213,
+      "topic": "playback"
+    },
+    {
+      "complaint_count": 48875,
+      "mean_severity": "2.757095",
+      "priority_score": 134753,
+      "rank": 4,
+      "severity_sum": 134753,
+      "topic": "billing"
+    },
+    {
+      "complaint_count": 17816,
+      "mean_severity": "2.849012",
+      "priority_score": 50758,
+      "rank": 5,
+      "severity_sum": 50758,
+      "topic": "catalog"
+    },
+    {
+      "complaint_count": 9510,
+      "mean_severity": "3.668454",
+      "priority_score": 34887,
+      "rank": 6,
+      "severity_sum": 34887,
+      "topic": "access"
+    },
+    {
+      "complaint_count": 7166,
+      "mean_severity": "2.868965",
+      "priority_score": 20559,
+      "rank": 7,
+      "severity_sum": 20559,
+      "topic": "downloads"
+    },
+    {
+      "complaint_count": 319,
+      "mean_severity": "2.536050",
+      "priority_score": 809,
+      "rank": 8,
+      "severity_sum": 809,
+      "topic": "support"
+    }
+  ],
+  "verification_summary": {
+    "intent": 0.874359,
+    "severity_exact": 0.807692,
+    "severity_mae": 0.202564,
+    "topic": 0.812821
+  }
+}

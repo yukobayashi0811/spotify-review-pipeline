@@ -1,0 +1,2222 @@
+{
+  "confusion_matrices": {
+    "00-05": {
+      "intent_binary": {
+        "complaint_or_cancellation": {
+          "complaint_or_cancellation": {
+            "smoothed_probability": 0.9666464346049184,
+            "weighted_count": 44591.75333333334
+          },
+          "not_complaint_or_cancellation": {
+            "smoothed_probability": 0.03335356539508158,
+            "weighted_count": 1537.6466666666668
+          }
+        },
+        "not_complaint_or_cancellation": {
+          "complaint_or_cancellation": {
+            "smoothed_probability": 0.02128321980443997,
+            "weighted_count": 3075.2933333333335
+          },
+          "not_complaint_or_cancellation": {
+            "smoothed_probability": 0.9787167801955601,
+            "weighted_count": 141463.49333333338
+          }
+        }
+      },
+      "topic": {
+        "access": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "billing": {
+          "access": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.9954711512333565,
+            "weighted_count": 1537.6466666666668
+          },
+          "catalog": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          }
+        },
+        "catalog": {
+          "access": {
+            "smoothed_probability": 0.00012993369050661146,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.00012993369050661146,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.39971414588088544,
+            "weighted_count": 3075.2933333333335
+          },
+          "downloads": {
+            "smoothed_probability": 0.00012993369050661146,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.5995062519760749,
+            "weighted_count": 4612.9400000000005
+          },
+          "playback": {
+            "smoothed_probability": 0.00012993369050661146,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.00012993369050661146,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.00012993369050661146,
+            "weighted_count": 0.0
+          }
+        },
+        "downloads": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "other": {
+          "access": {
+            "smoothed_probability": 6.135024025981089e-06,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.009439634267495717,
+            "weighted_count": 1537.6466666666668
+          },
+          "catalog": {
+            "smoothed_probability": 0.009439634267495717,
+            "weighted_count": 1537.6466666666668
+          },
+          "downloads": {
+            "smoothed_probability": 6.135024025981089e-06,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.9810900563448787,
+            "weighted_count": 159915.25333333336
+          },
+          "playback": {
+            "smoothed_probability": 6.135024025981089e-06,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 6.135024025981089e-06,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 6.135024025981089e-06,
+            "weighted_count": 0.0
+          }
+        },
+        "playback": {
+          "access": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.9977297002771928,
+            "weighted_count": 3075.2933333333335
+          },
+          "support": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          }
+        },
+        "support": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "usability": {
+          "access": {
+            "smoothed_probability": 6.500062833940727e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 6.500062833940727e-05,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 6.500062833940727e-05,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 6.500062833940727e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 6.500062833940727e-05,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 6.500062833940727e-05,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 6.500062833940727e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.9995449956016241,
+            "weighted_count": 15376.466666666669
+          }
+        }
+      }
+    },
+    "06-15": {
+      "intent_binary": {
+        "complaint_or_cancellation": {
+          "complaint_or_cancellation": {
+            "smoothed_probability": 0.9189041928635934,
+            "weighted_count": 52279.986666666686
+          },
+          "not_complaint_or_cancellation": {
+            "smoothed_probability": 0.08109580713640663,
+            "weighted_count": 4612.9400000000005
+          }
+        },
+        "not_complaint_or_cancellation": {
+          "complaint_or_cancellation": {
+            "smoothed_probability": 0.07693154277630163,
+            "weighted_count": 7688.233333333334
+          },
+          "not_complaint_or_cancellation": {
+            "smoothed_probability": 0.9230684572236983,
+            "weighted_count": 92258.80000000003
+          }
+        }
+      },
+      "topic": {
+        "access": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "billing": {
+          "access": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.6663537187599752,
+            "weighted_count": 9225.880000000001
+          },
+          "catalog": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.22216605208512374,
+            "weighted_count": 3075.2933333333335
+          },
+          "playback": {
+            "smoothed_probability": 0.11111913541641089,
+            "weighted_count": 1537.6466666666668
+          },
+          "support": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          }
+        },
+        "catalog": {
+          "access": {
+            "smoothed_probability": 5.000648417411457e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 5.000648417411457e-05,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.6920807398025944,
+            "weighted_count": 13838.820000000003
+          },
+          "downloads": {
+            "smoothed_probability": 5.000648417411457e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.3076192212923609,
+            "weighted_count": 6150.586666666667
+          },
+          "playback": {
+            "smoothed_probability": 5.000648417411457e-05,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 5.000648417411457e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 5.000648417411457e-05,
+            "weighted_count": 0.0
+          }
+        },
+        "downloads": {
+          "access": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.4990270144045112,
+            "weighted_count": 1537.6466666666668
+          },
+          "other": {
+            "smoothed_probability": 0.4990270144045112,
+            "weighted_count": 1537.6466666666668
+          },
+          "playback": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          }
+        },
+        "other": {
+          "access": {
+            "smoothed_probability": 0.020419267510302437,
+            "weighted_count": 1537.6466666666668
+          },
+          "billing": {
+            "smoothed_probability": 1.3270926946820648e-05,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 1.3270926946820648e-05,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 1.3270926946820648e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.9182831171779497,
+            "weighted_count": 69194.10000000002
+          },
+          "playback": {
+            "smoothed_probability": 0.020419267510302437,
+            "weighted_count": 1537.6466666666668
+          },
+          "support": {
+            "smoothed_probability": 1.3270926946820648e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.040825264093658054,
+            "weighted_count": 3075.2933333333335
+          }
+        },
+        "playback": {
+          "access": {
+            "smoothed_probability": 0.00010829683729916351,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.00010829683729916351,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.00010829683729916351,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.00010829683729916351,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.00010829683729916351,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.9992419221389058,
+            "weighted_count": 9225.880000000001
+          },
+          "support": {
+            "smoothed_probability": 0.00010829683729916351,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.00010829683729916351,
+            "weighted_count": 0.0
+          }
+        },
+        "support": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "usability": {
+          "access": {
+            "smoothed_probability": 2.8269451597139197e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.043496697468432904,
+            "weighted_count": 1537.6466666666668
+          },
+          "catalog": {
+            "smoothed_probability": 0.043496697468432904,
+            "weighted_count": 1537.6466666666668
+          },
+          "downloads": {
+            "smoothed_probability": 2.8269451597139197e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.1739019815189402,
+            "weighted_count": 6150.586666666667
+          },
+          "playback": {
+            "smoothed_probability": 2.8269451597139197e-05,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 2.8269451597139197e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.7389915457378055,
+            "weighted_count": 26139.993333333343
+          }
+        }
+      }
+    },
+    "16-40": {
+      "intent_binary": {
+        "complaint_or_cancellation": {
+          "complaint_or_cancellation": {
+            "smoothed_probability": 0.9333208085426781,
+            "weighted_count": 64581.160000000025
+          },
+          "not_complaint_or_cancellation": {
+            "smoothed_probability": 0.066679191457322,
+            "weighted_count": 4612.9400000000005
+          }
+        },
+        "not_complaint_or_cancellation": {
+          "complaint_or_cancellation": {
+            "smoothed_probability": 0.09376651198129683,
+            "weighted_count": 4612.9400000000005
+          },
+          "not_complaint_or_cancellation": {
+            "smoothed_probability": 0.9062334880187032,
+            "weighted_count": 44591.75333333335
+          }
+        }
+      },
+      "topic": {
+        "access": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "billing": {
+          "access": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.6663537187599752,
+            "weighted_count": 9225.880000000001
+          },
+          "catalog": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.11111913541641089,
+            "weighted_count": 1537.6466666666668
+          },
+          "playback": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 7.221874769802741e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.22216605208512374,
+            "weighted_count": 3075.2933333333335
+          }
+        },
+        "catalog": {
+          "access": {
+            "smoothed_probability": 3.611980795820504e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.055575622115532325,
+            "weighted_count": 1537.6466666666668
+          },
+          "catalog": {
+            "smoothed_probability": 0.5554311428836995,
+            "weighted_count": 15376.46666666667
+          },
+          "downloads": {
+            "smoothed_probability": 0.11111512442310645,
+            "weighted_count": 3075.2933333333335
+          },
+          "other": {
+            "smoothed_probability": 0.11111512442310645,
+            "weighted_count": 3075.2933333333335
+          },
+          "playback": {
+            "smoothed_probability": 3.611980795820504e-05,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 3.611980795820504e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.16665462673068057,
+            "weighted_count": 4612.9400000000005
+          }
+        },
+        "downloads": {
+          "access": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.9977297002771928,
+            "weighted_count": 3075.2933333333335
+          },
+          "other": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.0003243285318296021,
+            "weighted_count": 0.0
+          }
+        },
+        "other": {
+          "access": {
+            "smoothed_probability": 4.3341264784788934e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.06668689259023289,
+            "weighted_count": 1537.6466666666668
+          },
+          "catalog": {
+            "smoothed_probability": 4.3341264784788934e-05,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 4.3341264784788934e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.9330530598210584,
+            "weighted_count": 21527.05333333334
+          },
+          "playback": {
+            "smoothed_probability": 4.3341264784788934e-05,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 4.3341264784788934e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 4.3341264784788934e-05,
+            "weighted_count": 0.0
+          }
+        },
+        "playback": {
+          "access": {
+            "smoothed_probability": 5.417188522494332e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 5.417188522494332e-05,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 5.417188522494332e-05,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 5.417188522494332e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.0833513906284083,
+            "weighted_count": 1537.6466666666668
+          },
+          "playback": {
+            "smoothed_probability": 0.8330263593170586,
+            "weighted_count": 15376.46666666667
+          },
+          "support": {
+            "smoothed_probability": 5.417188522494332e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.0833513906284083,
+            "weighted_count": 1537.6466666666668
+          }
+        },
+        "support": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "usability": {
+          "access": {
+            "smoothed_probability": 3.09611134607156e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.23806722565924976,
+            "weighted_count": 7688.233333333334
+          },
+          "catalog": {
+            "smoothed_probability": 0.04763821402261853,
+            "weighted_count": 1537.6466666666668
+          },
+          "downloads": {
+            "smoothed_probability": 3.09611134607156e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.09524546693177634,
+            "weighted_count": 3075.2933333333335
+          },
+          "playback": {
+            "smoothed_probability": 0.04763821402261853,
+            "weighted_count": 1537.6466666666668
+          },
+          "support": {
+            "smoothed_probability": 3.09611134607156e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.5713179960233546,
+            "weighted_count": 18451.760000000006
+          }
+        }
+      }
+    },
+    "41+": {
+      "intent_binary": {
+        "complaint_or_cancellation": {
+          "complaint_or_cancellation": {
+            "smoothed_probability": 0.8845961446173681,
+            "weighted_count": 35365.873333333344
+          },
+          "not_complaint_or_cancellation": {
+            "smoothed_probability": 0.11540385538263184,
+            "weighted_count": 4612.9400000000005
+          }
+        },
+        "not_complaint_or_cancellation": {
+          "complaint_or_cancellation": {
+            "smoothed_probability": 0.00021668754089977332,
+            "weighted_count": 0.0
+          },
+          "not_complaint_or_cancellation": {
+            "smoothed_probability": 0.9997833124591002,
+            "weighted_count": 4612.9400000000005
+          }
+        }
+      },
+      "topic": {
+        "access": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "billing": {
+          "access": {
+            "smoothed_probability": 7.22187476980274e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.8884475520974009,
+            "weighted_count": 12301.173333333336
+          },
+          "catalog": {
+            "smoothed_probability": 7.22187476980274e-05,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 7.22187476980274e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 7.22187476980274e-05,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 7.22187476980274e-05,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 7.22187476980274e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.11111913541641087,
+            "weighted_count": 1537.6466666666668
+          }
+        },
+        "catalog": {
+          "access": {
+            "smoothed_probability": 9.283735081811366e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 9.283735081811366e-05,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.4283459664337274,
+            "weighted_count": 4612.9400000000005
+          },
+          "downloads": {
+            "smoothed_probability": 9.283735081811366e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.4283459664337274,
+            "weighted_count": 4612.9400000000005
+          },
+          "playback": {
+            "smoothed_probability": 9.283735081811366e-05,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 9.283735081811366e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.14284388037845455,
+            "weighted_count": 1537.6466666666668
+          }
+        },
+        "downloads": {
+          "access": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.9954711512333565,
+            "weighted_count": 1537.6466666666668
+          },
+          "catalog": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.0006469783952347885,
+            "weighted_count": 0.0
+          }
+        },
+        "other": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "playback": {
+          "access": {
+            "smoothed_probability": 0.00016237491718879222,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.49951287524843363,
+            "weighted_count": 3075.2933333333335
+          },
+          "catalog": {
+            "smoothed_probability": 0.00016237491718879222,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.00016237491718879222,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.00016237491718879222,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.49951287524843363,
+            "weighted_count": 3075.2933333333335
+          },
+          "support": {
+            "smoothed_probability": 0.00016237491718879222,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.00016237491718879222,
+            "weighted_count": 0.0
+          }
+        },
+        "support": {
+          "access": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "catalog": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "support": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 0.0
+          }
+        },
+        "usability": {
+          "access": {
+            "smoothed_probability": 8.124022409303413e-05,
+            "weighted_count": 0.0
+          },
+          "billing": {
+            "smoothed_probability": 0.37483751955181394,
+            "weighted_count": 4612.9400000000005
+          },
+          "catalog": {
+            "smoothed_probability": 8.124022409303413e-05,
+            "weighted_count": 0.0
+          },
+          "downloads": {
+            "smoothed_probability": 8.124022409303413e-05,
+            "weighted_count": 0.0
+          },
+          "other": {
+            "smoothed_probability": 8.124022409303413e-05,
+            "weighted_count": 0.0
+          },
+          "playback": {
+            "smoothed_probability": 0.125,
+            "weighted_count": 1537.6466666666668
+          },
+          "support": {
+            "smoothed_probability": 8.124022409303413e-05,
+            "weighted_count": 0.0
+          },
+          "usability": {
+            "smoothed_probability": 0.4997562793277209,
+            "weighted_count": 6150.586666666667
+          }
+        }
+      }
+    }
+  },
+  "issues": [
+    {
+      "adjusted_complaint_count": 52562.922589,
+      "adjusted_complaint_count_95ci": {
+        "lower": 48186.867381,
+        "upper": 55342.369284
+      },
+      "adjusted_mean_severity": 2.028922,
+      "adjusted_priority_score": 106646.052332,
+      "adjusted_priority_score_95ci": {
+        "lower": 97793.92019,
+        "upper": 112240.73776
+      },
+      "adjusted_rank": 1,
+      "baseline_complaint_count": 57872,
+      "baseline_priority_score": 117639,
+      "baseline_rank": 1,
+      "issue_id": "I_OTHER_02",
+      "topic": "other"
+    },
+    {
+      "adjusted_complaint_count": 15161.022747,
+      "adjusted_complaint_count_95ci": {
+        "lower": 11086.479363,
+        "upper": 18718.121129
+      },
+      "adjusted_mean_severity": 2.860156,
+      "adjusted_priority_score": 43362.891254,
+      "adjusted_priority_score_95ci": {
+        "lower": 31764.635843,
+        "upper": 53532.546481
+      },
+      "adjusted_rank": 2,
+      "baseline_complaint_count": 22475,
+      "baseline_priority_score": 64148,
+      "baseline_rank": 2,
+      "issue_id": "I_BILLING_04",
+      "topic": "billing"
+    },
+    {
+      "adjusted_complaint_count": 17909.980233,
+      "adjusted_complaint_count_95ci": {
+        "lower": 15337.644319,
+        "upper": 20511.523788
+      },
+      "adjusted_mean_severity": 2.203274,
+      "adjusted_priority_score": 39460.588438,
+      "adjusted_priority_score_95ci": {
+        "lower": 33134.910662,
+        "upper": 45473.789781
+      },
+      "adjusted_rank": 3,
+      "baseline_complaint_count": 26570,
+      "baseline_priority_score": 60211,
+      "baseline_rank": 3,
+      "issue_id": "I_USABILITY_01",
+      "topic": "usability"
+    },
+    {
+      "adjusted_complaint_count": 11113.831682,
+      "adjusted_complaint_count_95ci": {
+        "lower": 8490.371647,
+        "upper": 13098.333486
+      },
+      "adjusted_mean_severity": 2.961962,
+      "adjusted_priority_score": 32918.751868,
+      "adjusted_priority_score_95ci": {
+        "lower": 24932.164125,
+        "upper": 39012.538518
+      },
+      "adjusted_rank": 4,
+      "baseline_complaint_count": 14633,
+      "baseline_priority_score": 43614,
+      "baseline_rank": 6,
+      "issue_id": "I_PLAYBACK_02",
+      "topic": "playback"
+    },
+    {
+      "adjusted_complaint_count": 11211.932637,
+      "adjusted_complaint_count_95ci": {
+        "lower": 7886.709927,
+        "upper": 14287.431396
+      },
+      "adjusted_mean_severity": 2.916416,
+      "adjusted_priority_score": 32698.657121,
+      "adjusted_priority_score_95ci": {
+        "lower": 22900.350777,
+        "upper": 41884.187992
+      },
+      "adjusted_rank": 5,
+      "baseline_complaint_count": 16304,
+      "baseline_priority_score": 47772,
+      "baseline_rank": 4,
+      "issue_id": "I_PLAYBACK_03",
+      "topic": "playback"
+    },
+    {
+      "adjusted_complaint_count": 10147.420708,
+      "adjusted_complaint_count_95ci": {
+        "lower": 7397.29687,
+        "upper": 12688.608801
+      },
+      "adjusted_mean_severity": 3.108147,
+      "adjusted_priority_score": 31539.677563,
+      "adjusted_priority_score_95ci": {
+        "lower": 22956.899845,
+        "upper": 39362.510364
+      },
+      "adjusted_rank": 6,
+      "baseline_complaint_count": 14449,
+      "baseline_priority_score": 44827,
+      "baseline_rank": 5,
+      "issue_id": "I_PLAYBACK_01",
+      "topic": "playback"
+    },
+    {
+      "adjusted_complaint_count": 14166.939268,
+      "adjusted_complaint_count_95ci": {
+        "lower": 13111.78925,
+        "upper": 15017.114857
+      },
+      "adjusted_mean_severity": 2.051325,
+      "adjusted_priority_score": 29061.003435,
+      "adjusted_priority_score_95ci": {
+        "lower": 26916.281184,
+        "upper": 30808.076159
+      },
+      "adjusted_rank": 7,
+      "baseline_complaint_count": 15906,
+      "baseline_priority_score": 32680,
+      "baseline_rank": 10,
+      "issue_id": "I_OTHER_03",
+      "topic": "other"
+    },
+    {
+      "adjusted_complaint_count": 10764.022575,
+      "adjusted_complaint_count_95ci": {
+        "lower": 9650.674847,
+        "upper": 11326.396086
+      },
+      "adjusted_mean_severity": 2.002714,
+      "adjusted_priority_score": 21557.259771,
+      "adjusted_priority_score_95ci": {
+        "lower": 19329.35266,
+        "upper": 22682.940512
+      },
+      "adjusted_rank": 8,
+      "baseline_complaint_count": 11421,
+      "baseline_priority_score": 22876,
+      "baseline_rank": 13,
+      "issue_id": "I_OTHER_01",
+      "topic": "other"
+    },
+    {
+      "adjusted_complaint_count": 8109.409749,
+      "adjusted_complaint_count_95ci": {
+        "lower": 6056.942181,
+        "upper": 9948.224629
+      },
+      "adjusted_mean_severity": 2.569567,
+      "adjusted_priority_score": 20837.67155,
+      "adjusted_priority_score_95ci": {
+        "lower": 15245.430404,
+        "upper": 25724.538884
+      },
+      "adjusted_rank": 9,
+      "baseline_complaint_count": 14260,
+      "baseline_priority_score": 37158,
+      "baseline_rank": 9,
+      "issue_id": "I_USABILITY_05",
+      "topic": "usability"
+    },
+    {
+      "adjusted_complaint_count": 7107.148909,
+      "adjusted_complaint_count_95ci": {
+        "lower": 4889.637693,
+        "upper": 9105.680264
+      },
+      "adjusted_mean_severity": 2.925375,
+      "adjusted_priority_score": 20791.077368,
+      "adjusted_priority_score_95ci": {
+        "lower": 14173.553805,
+        "upper": 26762.732336
+      },
+      "adjusted_rank": 10,
+      "baseline_complaint_count": 13282,
+      "baseline_priority_score": 39034,
+      "baseline_rank": 8,
+      "issue_id": "I_USABILITY_02",
+      "topic": "usability"
+    },
+    {
+      "adjusted_complaint_count": 7486.934697,
+      "adjusted_complaint_count_95ci": {
+        "lower": 5015.053539,
+        "upper": 9681.112225
+      },
+      "adjusted_mean_severity": 2.763897,
+      "adjusted_priority_score": 20693.119299,
+      "adjusted_priority_score_95ci": {
+        "lower": 13649.407313,
+        "upper": 27018.305292
+      },
+      "adjusted_rank": 11,
+      "baseline_complaint_count": 14367,
+      "baseline_priority_score": 39999,
+      "baseline_rank": 7,
+      "issue_id": "I_USABILITY_04",
+      "topic": "usability"
+    },
+    {
+      "adjusted_complaint_count": 7699.638851,
+      "adjusted_complaint_count_95ci": {
+        "lower": 5483.153925,
+        "upper": 9376.22307
+      },
+      "adjusted_mean_severity": 2.643208,
+      "adjusted_priority_score": 20351.746975,
+      "adjusted_priority_score_95ci": {
+        "lower": 14635.399066,
+        "upper": 24794.849402
+      },
+      "adjusted_rank": 12,
+      "baseline_complaint_count": 11588,
+      "baseline_priority_score": 30532,
+      "baseline_rank": 11,
+      "issue_id": "I_BILLING_01",
+      "topic": "billing"
+    },
+    {
+      "adjusted_complaint_count": 6834.963191,
+      "adjusted_complaint_count_95ci": {
+        "lower": 4863.439031,
+        "upper": 7963.043418
+      },
+      "adjusted_mean_severity": 2.738319,
+      "adjusted_priority_score": 18716.312941,
+      "adjusted_priority_score_95ci": {
+        "lower": 13494.022285,
+        "upper": 21826.791374
+      },
+      "adjusted_rank": 13,
+      "baseline_complaint_count": 9721,
+      "baseline_priority_score": 26556,
+      "baseline_rank": 12,
+      "issue_id": "I_BILLING_03",
+      "topic": "billing"
+    },
+    {
+      "adjusted_complaint_count": 3659.610352,
+      "adjusted_complaint_count_95ci": {
+        "lower": 2309.885264,
+        "upper": 4207.549623
+      },
+      "adjusted_mean_severity": 2.640692,
+      "adjusted_priority_score": 9663.902202,
+      "adjusted_priority_score_95ci": {
+        "lower": 6465.828344,
+        "upper": 11153.103981
+      },
+      "adjusted_rank": 14,
+      "baseline_complaint_count": 5091,
+      "baseline_priority_score": 13517,
+      "baseline_rank": 14,
+      "issue_id": "I_BILLING_02",
+      "topic": "billing"
+    },
+    {
+      "adjusted_complaint_count": 3812.883041,
+      "adjusted_complaint_count_95ci": {
+        "lower": 3377.517608,
+        "upper": 4234.470756
+      },
+      "adjusted_mean_severity": 2.183794,
+      "adjusted_priority_score": 8326.551073,
+      "adjusted_priority_score_95ci": {
+        "lower": 7321.025383,
+        "upper": 9313.455803
+      },
+      "adjusted_rank": 15,
+      "baseline_complaint_count": 5164,
+      "baseline_priority_score": 11565,
+      "baseline_rank": 17,
+      "issue_id": "I_USABILITY_03",
+      "topic": "usability"
+    },
+    {
+      "adjusted_complaint_count": 2381.532772,
+      "adjusted_complaint_count_95ci": {
+        "lower": 1637.286589,
+        "upper": 3043.335777
+      },
+      "adjusted_mean_severity": 2.784,
+      "adjusted_priority_score": 6630.186849,
+      "adjusted_priority_score_95ci": {
+        "lower": 4535.154218,
+        "upper": 8501.920739
+      },
+      "adjusted_rank": 16,
+      "baseline_complaint_count": 4739,
+      "baseline_priority_score": 13247,
+      "baseline_rank": 15,
+      "issue_id": "I_CATALOG_01",
+      "topic": "catalog"
+    },
+    {
+      "adjusted_complaint_count": 2240.480915,
+      "adjusted_complaint_count_95ci": {
+        "lower": 1601.12198,
+        "upper": 2801.637419
+      },
+      "adjusted_mean_severity": 2.901305,
+      "adjusted_priority_score": 6500.317417,
+      "adjusted_priority_score_95ci": {
+        "lower": 4653.205949,
+        "upper": 8128.156317
+      },
+      "adjusted_rank": 17,
+      "baseline_complaint_count": 4274,
+      "baseline_priority_score": 12420,
+      "baseline_rank": 16,
+      "issue_id": "I_CATALOG_04",
+      "topic": "catalog"
+    },
+    {
+      "adjusted_complaint_count": 1385.625427,
+      "adjusted_complaint_count_95ci": {
+        "lower": 895.545507,
+        "upper": 1869.779461
+      },
+      "adjusted_mean_severity": 2.886042,
+      "adjusted_priority_score": 3998.972655,
+      "adjusted_priority_score_95ci": {
+        "lower": 2577.682451,
+        "upper": 5404.203695
+      },
+      "adjusted_rank": 18,
+      "baseline_complaint_count": 2823,
+      "baseline_priority_score": 8170,
+      "baseline_rank": 19,
+      "issue_id": "I_CATALOG_03",
+      "topic": "catalog"
+    },
+    {
+      "adjusted_complaint_count": 1106.838498,
+      "adjusted_complaint_count_95ci": {
+        "lower": 172.689166,
+        "upper": 1433.594129
+      },
+      "adjusted_mean_severity": 2.96157,
+      "adjusted_priority_score": 3277.979743,
+      "adjusted_priority_score_95ci": {
+        "lower": 510.369794,
+        "upper": 4243.903226
+      },
+      "adjusted_rank": 19,
+      "baseline_complaint_count": 2132,
+      "baseline_priority_score": 6334,
+      "baseline_rank": 20,
+      "issue_id": "I_DOWNLOADS_01",
+      "topic": "downloads"
+    },
+    {
+      "adjusted_complaint_count": 1148.919674,
+      "adjusted_complaint_count_95ci": {
+        "lower": 786.90285,
+        "upper": 1488.145477
+      },
+      "adjusted_mean_severity": 2.787786,
+      "adjusted_priority_score": 3202.942681,
+      "adjusted_priority_score_95ci": {
+        "lower": 2193.185058,
+        "upper": 4156.725841
+      },
+      "adjusted_rank": 20,
+      "baseline_complaint_count": 2232,
+      "baseline_priority_score": 6249,
+      "baseline_rank": 21,
+      "issue_id": "I_CATALOG_06",
+      "topic": "catalog"
+    },
+    {
+      "adjusted_complaint_count": 1001.573033,
+      "adjusted_complaint_count_95ci": {
+        "lower": 149.480961,
+        "upper": 1307.236007
+      },
+      "adjusted_mean_severity": 2.919494,
+      "adjusted_priority_score": 2924.086215,
+      "adjusted_priority_score_95ci": {
+        "lower": 441.251038,
+        "upper": 3805.773935
+      },
+      "adjusted_rank": 21,
+      "baseline_complaint_count": 1793,
+      "baseline_priority_score": 5247,
+      "baseline_rank": 23,
+      "issue_id": "I_DOWNLOADS_05",
+      "topic": "downloads"
+    },
+    {
+      "adjusted_complaint_count": 832.976047,
+      "adjusted_complaint_count_95ci": {
+        "lower": 589.742914,
+        "upper": 1050.948601
+      },
+      "adjusted_mean_severity": 2.96807,
+      "adjusted_priority_score": 2472.331242,
+      "adjusted_priority_score_95ci": {
+        "lower": 1750.889717,
+        "upper": 3120.256421
+      },
+      "adjusted_rank": 22,
+      "baseline_complaint_count": 1607,
+      "baseline_priority_score": 4778,
+      "baseline_rank": 26,
+      "issue_id": "I_CATALOG_07",
+      "topic": "catalog"
+    },
+    {
+      "adjusted_complaint_count": 583.046524,
+      "adjusted_complaint_count_95ci": {
+        "lower": 98.641575,
+        "upper": 779.563392
+      },
+      "adjusted_mean_severity": 3.016512,
+      "adjusted_priority_score": 1758.766961,
+      "adjusted_priority_score_95ci": {
+        "lower": 296.487869,
+        "upper": 2350.087838
+      },
+      "adjusted_rank": 23,
+      "baseline_complaint_count": 1344,
+      "baseline_priority_score": 4085,
+      "baseline_rank": 28,
+      "issue_id": "I_DOWNLOADS_04",
+      "topic": "downloads"
+    },
+    {
+      "adjusted_complaint_count": 611.104175,
+      "adjusted_complaint_count_95ci": {
+        "lower": 431.129409,
+        "upper": 774.176844
+      },
+      "adjusted_mean_severity": 2.82737,
+      "adjusted_priority_score": 1727.817902,
+      "adjusted_priority_score_95ci": {
+        "lower": 1214.504012,
+        "upper": 2195.498093
+      },
+      "adjusted_rank": 24,
+      "baseline_complaint_count": 1199,
+      "baseline_priority_score": 3398,
+      "baseline_rank": 29,
+      "issue_id": "I_CATALOG_02",
+      "topic": "catalog"
+    },
+    {
+      "adjusted_complaint_count": 529.566348,
+      "adjusted_complaint_count_95ci": {
+        "lower": 66.165689,
+        "upper": 789.751389
+      },
+      "adjusted_mean_severity": 2.521452,
+      "adjusted_priority_score": 1335.27632,
+      "adjusted_priority_score_95ci": {
+        "lower": 171.411705,
+        "upper": 1950.582381
+      },
+      "adjusted_rank": 25,
+      "baseline_complaint_count": 1050,
+      "baseline_priority_score": 2597,
+      "baseline_rank": 30,
+      "issue_id": "I_DOWNLOADS_02",
+      "topic": "downloads"
+    },
+    {
+      "adjusted_complaint_count": 315.32672,
+      "adjusted_complaint_count_95ci": {
+        "lower": 297.031488,
+        "upper": 330.412377
+      },
+      "adjusted_mean_severity": 3.878185,
+      "adjusted_priority_score": 1222.895231,
+      "adjusted_priority_score_95ci": {
+        "lower": 1151.240559,
+        "upper": 1281.624765
+      },
+      "adjusted_rank": 26,
+      "baseline_complaint_count": 2730,
+      "baseline_priority_score": 10592,
+      "baseline_rank": 18,
+      "issue_id": "I_ACCESS_08",
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 453.641319,
+      "adjusted_complaint_count_95ci": {
+        "lower": 285.647184,
+        "upper": 618.751929
+      },
+      "adjusted_mean_severity": 2.621028,
+      "adjusted_priority_score": 1189.006413,
+      "adjusted_priority_score_95ci": {
+        "lower": 733.234552,
+        "upper": 1655.183882
+      },
+      "adjusted_rank": 27,
+      "baseline_complaint_count": 942,
+      "baseline_priority_score": 2496,
+      "baseline_rank": 31,
+      "issue_id": "I_CATALOG_05",
+      "topic": "catalog"
+    },
+    {
+      "adjusted_complaint_count": 329.129748,
+      "adjusted_complaint_count_95ci": {
+        "lower": 60.684047,
+        "upper": 507.55819
+      },
+      "adjusted_mean_severity": 2.756259,
+      "adjusted_priority_score": 907.166936,
+      "adjusted_priority_score_95ci": {
+        "lower": 166.513878,
+        "upper": 1382.463457
+      },
+      "adjusted_rank": 28,
+      "baseline_complaint_count": 847,
+      "baseline_priority_score": 2296,
+      "baseline_rank": 33,
+      "issue_id": "I_DOWNLOADS_03",
+      "topic": "downloads"
+    },
+    {
+      "adjusted_complaint_count": 171.180049,
+      "adjusted_complaint_count_95ci": {
+        "lower": 160.131856,
+        "upper": 179.989229
+      },
+      "adjusted_mean_severity": 3.860935,
+      "adjusted_priority_score": 660.915026,
+      "adjusted_priority_score_95ci": {
+        "lower": 618.252526,
+        "upper": 694.957826
+      },
+      "adjusted_rank": 29,
+      "baseline_complaint_count": 1487,
+      "baseline_priority_score": 5741,
+      "baseline_rank": 22,
+      "issue_id": "I_ACCESS_03",
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 174.449042,
+      "adjusted_complaint_count_95ci": {
+        "lower": 162.824174,
+        "upper": 183.760774
+      },
+      "adjusted_mean_severity": 3.447996,
+      "adjusted_priority_score": 601.49954,
+      "adjusted_priority_score_95ci": {
+        "lower": 561.017065,
+        "upper": 633.925167
+      },
+      "adjusted_rank": 30,
+      "baseline_complaint_count": 1520,
+      "baseline_priority_score": 5243,
+      "baseline_rank": 24,
+      "issue_id": "I_ACCESS_07",
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 151.57213,
+      "adjusted_complaint_count_95ci": {
+        "lower": 141.745712,
+        "upper": 159.421079
+      },
+      "adjusted_mean_severity": 3.660348,
+      "adjusted_priority_score": 554.806696,
+      "adjusted_priority_score_95ci": {
+        "lower": 518.666743,
+        "upper": 583.692162
+      },
+      "adjusted_rank": 31,
+      "baseline_complaint_count": 1315,
+      "baseline_priority_score": 4813,
+      "baseline_rank": 25,
+      "issue_id": "I_ACCESS_01",
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 148.461815,
+      "adjusted_complaint_count_95ci": {
+        "lower": 138.272861,
+        "upper": 156.765666
+      },
+      "adjusted_mean_severity": 3.530459,
+      "adjusted_priority_score": 524.138296,
+      "adjusted_priority_score_95ci": {
+        "lower": 488.200317,
+        "upper": 553.301098
+      },
+      "adjusted_rank": 32,
+      "baseline_complaint_count": 1294,
+      "baseline_priority_score": 4567,
+      "baseline_rank": 27,
+      "issue_id": "I_ACCESS_06",
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 82.860175,
+      "adjusted_complaint_count_95ci": {
+        "lower": 76.976821,
+        "upper": 87.765853
+      },
+      "adjusted_mean_severity": 3.434197,
+      "adjusted_priority_score": 284.558129,
+      "adjusted_priority_score_95ci": {
+        "lower": 263.912633,
+        "upper": 301.962097
+      },
+      "adjusted_rank": 33,
+      "baseline_complaint_count": 725,
+      "baseline_priority_score": 2493,
+      "baseline_rank": 32,
+      "issue_id": "I_ACCESS_02",
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 27.902336,
+      "adjusted_complaint_count_95ci": {
+        "lower": 26.311807,
+        "upper": 29.241629
+      },
+      "adjusted_mean_severity": 3.071074,
+      "adjusted_priority_score": 85.690131,
+      "adjusted_priority_score_95ci": {
+        "lower": 80.711735,
+        "upper": 89.837212
+      },
+      "adjusted_rank": 34,
+      "baseline_complaint_count": 241,
+      "baseline_priority_score": 741,
+      "baseline_rank": 34,
+      "issue_id": "I_ACCESS_04",
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 22.879365,
+      "adjusted_complaint_count_95ci": {
+        "lower": 21.449301,
+        "upper": 24.007602
+      },
+      "adjusted_mean_severity": 3.519581,
+      "adjusted_priority_score": 80.525783,
+      "adjusted_priority_score_95ci": {
+        "lower": 75.49669,
+        "upper": 84.546792
+      },
+      "adjusted_rank": 35,
+      "baseline_complaint_count": 198,
+      "baseline_priority_score": 697,
+      "baseline_rank": 35,
+      "issue_id": "I_ACCESS_05",
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 12.162739,
+      "adjusted_complaint_count_95ci": {
+        "lower": 11.203879,
+        "upper": 12.994858
+      },
+      "adjusted_mean_severity": 2.779506,
+      "adjusted_priority_score": 33.806401,
+      "adjusted_priority_score_95ci": {
+        "lower": 30.999183,
+        "upper": 36.228066
+      },
+      "adjusted_rank": 36,
+      "baseline_complaint_count": 107,
+      "baseline_priority_score": 298,
+      "baseline_rank": 36,
+      "issue_id": "I_SUPPORT_03",
+      "topic": "support"
+    },
+    {
+      "adjusted_complaint_count": 6.66149,
+      "adjusted_complaint_count_95ci": {
+        "lower": 6.222505,
+        "upper": 7.016951
+      },
+      "adjusted_mean_severity": 2.425137,
+      "adjusted_priority_score": 16.155024,
+      "adjusted_priority_score_95ci": {
+        "lower": 15.063117,
+        "upper": 17.044665
+      },
+      "adjusted_rank": 37,
+      "baseline_complaint_count": 58,
+      "baseline_priority_score": 141,
+      "baseline_rank": 37,
+      "issue_id": "I_SUPPORT_04",
+      "topic": "support"
+    },
+    {
+      "adjusted_complaint_count": 4.747614,
+      "adjusted_complaint_count_95ci": {
+        "lower": 4.454101,
+        "upper": 4.977123
+      },
+      "adjusted_mean_severity": 2.189793,
+      "adjusted_priority_score": 10.396294,
+      "adjusted_priority_score_95ci": {
+        "lower": 9.761865,
+        "upper": 10.915967
+      },
+      "adjusted_rank": 38,
+      "baseline_complaint_count": 41,
+      "baseline_priority_score": 90,
+      "baseline_rank": 38,
+      "issue_id": "I_SUPPORT_01",
+      "topic": "support"
+    },
+    {
+      "adjusted_complaint_count": 3.903104,
+      "adjusted_complaint_count_95ci": {
+        "lower": 3.640996,
+        "upper": 4.125335
+      },
+      "adjusted_mean_severity": 2.613191,
+      "adjusted_priority_score": 10.199557,
+      "adjusted_priority_score_95ci": {
+        "lower": 9.482935,
+        "upper": 10.810093
+      },
+      "adjusted_rank": 39,
+      "baseline_complaint_count": 34,
+      "baseline_priority_score": 89,
+      "baseline_rank": 39,
+      "issue_id": "I_SUPPORT_08",
+      "topic": "support"
+    },
+    {
+      "adjusted_complaint_count": 3.820694,
+      "adjusted_complaint_count_95ci": {
+        "lower": 3.596999,
+        "upper": 4.008387
+      },
+      "adjusted_mean_severity": 2.210265,
+      "adjusted_priority_score": 8.444745,
+      "adjusted_priority_score_95ci": {
+        "lower": 7.949738,
+        "upper": 8.86103
+      },
+      "adjusted_rank": 40,
+      "baseline_complaint_count": 33,
+      "baseline_priority_score": 73,
+      "baseline_rank": 40,
+      "issue_id": "I_SUPPORT_09",
+      "topic": "support"
+    },
+    {
+      "adjusted_complaint_count": 3.34589,
+      "adjusted_complaint_count_95ci": {
+        "lower": 3.108178,
+        "upper": 3.550356
+      },
+      "adjusted_mean_severity": 2.403856,
+      "adjusted_priority_score": 8.043037,
+      "adjusted_priority_score_95ci": {
+        "lower": 7.453738,
+        "upper": 8.57748
+      },
+      "adjusted_rank": 41,
+      "baseline_complaint_count": 29,
+      "baseline_priority_score": 70,
+      "baseline_rank": 41,
+      "issue_id": "I_SUPPORT_05",
+      "topic": "support"
+    },
+    {
+      "adjusted_complaint_count": 1.566315,
+      "adjusted_complaint_count_95ci": {
+        "lower": 1.386883,
+        "upper": 1.732521
+      },
+      "adjusted_mean_severity": 2.854921,
+      "adjusted_priority_score": 4.471705,
+      "adjusted_priority_score_95ci": {
+        "lower": 3.953231,
+        "upper": 4.953382
+      },
+      "adjusted_rank": 42,
+      "baseline_complaint_count": 14,
+      "baseline_priority_score": 40,
+      "baseline_rank": 42,
+      "issue_id": "I_SUPPORT_06",
+      "topic": "support"
+    },
+    {
+      "adjusted_complaint_count": 0.22724,
+      "adjusted_complaint_count_95ci": {
+        "lower": 0.206859,
+        "upper": 0.24479
+      },
+      "adjusted_mean_severity": 3.0,
+      "adjusted_priority_score": 0.681719,
+      "adjusted_priority_score_95ci": {
+        "lower": 0.620578,
+        "upper": 0.734369
+      },
+      "adjusted_rank": 43,
+      "baseline_complaint_count": 2,
+      "baseline_priority_score": 6,
+      "baseline_rank": 43,
+      "issue_id": "I_SUPPORT_02",
+      "topic": "support"
+    },
+    {
+      "adjusted_complaint_count": 0.116665,
+      "adjusted_complaint_count_95ci": {
+        "lower": 0.105554,
+        "upper": 0.124998
+      },
+      "adjusted_mean_severity": 2.0,
+      "adjusted_priority_score": 0.23333,
+      "adjusted_priority_score_95ci": {
+        "lower": 0.211109,
+        "upper": 0.249996
+      },
+      "adjusted_rank": 44,
+      "baseline_complaint_count": 1,
+      "baseline_priority_score": 2,
+      "baseline_rank": 44,
+      "issue_id": "I_SUPPORT_07",
+      "topic": "support"
+    }
+  ],
+  "limitations": [
+    "The verifier is an independent model pass, not human ground truth.",
+    "The local stratum has 290 verified texts; sparse cells depend on smoothing.",
+    "Bootstrap intervals represent verifier-sample uncertainty under this correction model, not total model uncertainty.",
+    "Issue corrections cannot recover false-negative complaints into a specific issue because they were never grouped.",
+    "These corrected estimates are sensitivity outputs and are not claims.csv evidence."
+  ],
+  "method": {
+    "assumption": "Within each word bucket, intent and topic correction factors are applied independently. Issue estimates can remove likely false positives or topic misassignments but cannot allocate predicted non-complaints into a latent issue.",
+    "bootstrap_iterations": 1000,
+    "bootstrap_seed": 20261003,
+    "sample_weights_used": true,
+    "smoothing": "Laplace alpha=1.0 on P(verifier label | saved prediction, word bucket)",
+    "use": "sensitivity analysis only; not exported as memo claims",
+    "verification_distinct_texts": 290,
+    "verification_population": "verifier_records final_source=local only",
+    "word_buckets": [
+      "00-05",
+      "06-15",
+      "16-40",
+      "41+"
+    ]
+  },
+  "rank_stability": {
+    "adjusted_top_issue": "I_OTHER_02",
+    "adjusted_top_issue_bootstrap_top_probability": 1.0,
+    "adjusted_top_topic": "other",
+    "adjusted_top_topic_bootstrap_top_probability": 0.994,
+    "baseline_top_issue": "I_OTHER_02",
+    "baseline_top_issue_bootstrap_top_probability": 1.0,
+    "baseline_top_topic": "usability",
+    "baseline_top_topic_bootstrap_top_probability": 0.0,
+    "issue_bootstrap_top_frequency": {
+      "I_OTHER_02": 1000
+    },
+    "top_issue_unchanged": true,
+    "top_topic_unchanged": false,
+    "topic_bootstrap_top_frequency": {
+      "billing": 6,
+      "other": 994
+    }
+  },
+  "topics": [
+    {
+      "adjusted_complaint_count": 106008.488635,
+      "adjusted_complaint_count_95ci": {
+        "lower": 94084.572602,
+        "upper": 118960.431145
+      },
+      "adjusted_mean_severity": 2.050062,
+      "adjusted_priority_score": 217323.970899,
+      "adjusted_priority_score_95ci": {
+        "lower": 193769.357789,
+        "upper": 243629.61094
+      },
+      "adjusted_rank": 1,
+      "baseline_complaint_count": 85199,
+      "baseline_priority_score": 173195,
+      "baseline_rank": 2,
+      "topic": "other"
+    },
+    {
+      "adjusted_complaint_count": 57293.884993,
+      "adjusted_complaint_count_95ci": {
+        "lower": 42955.609448,
+        "upper": 70899.373646
+      },
+      "adjusted_mean_severity": 2.781072,
+      "adjusted_priority_score": 159338.430048,
+      "adjusted_priority_score_95ci": {
+        "lower": 118381.136281,
+        "upper": 197912.762109
+      },
+      "adjusted_rank": 2,
+      "baseline_complaint_count": 48875,
+      "baseline_priority_score": 134753,
+      "baseline_rank": 4,
+      "topic": "billing"
+    },
+    {
+      "adjusted_complaint_count": 56662.458508,
+      "adjusted_complaint_count_95ci": {
+        "lower": 45895.615195,
+        "upper": 68165.067647
+      },
+      "adjusted_mean_severity": 2.519616,
+      "adjusted_priority_score": 142767.630234,
+      "adjusted_priority_score_95ci": {
+        "lower": 113604.713728,
+        "upper": 175246.891743
+      },
+      "adjusted_rank": 3,
+      "baseline_complaint_count": 73643,
+      "baseline_priority_score": 187967,
+      "baseline_rank": 1,
+      "topic": "usability"
+    },
+    {
+      "adjusted_complaint_count": 39526.169432,
+      "adjusted_complaint_count_95ci": {
+        "lower": 30071.582478,
+        "upper": 49828.483776
+      },
+      "adjusted_mean_severity": 2.930684,
+      "adjusted_priority_score": 115838.719266,
+      "adjusted_priority_score_95ci": {
+        "lower": 87546.345814,
+        "upper": 145439.022429
+      },
+      "adjusted_rank": 4,
+      "baseline_complaint_count": 45386,
+      "baseline_priority_score": 136213,
+      "baseline_rank": 3,
+      "topic": "playback"
+    },
+    {
+      "adjusted_complaint_count": 14292.313772,
+      "adjusted_complaint_count_95ci": {
+        "lower": 10579.070831,
+        "upper": 19141.701584
+      },
+      "adjusted_mean_severity": 2.622454,
+      "adjusted_priority_score": 37480.929523,
+      "adjusted_priority_score_95ci": {
+        "lower": 28182.723761,
+        "upper": 49123.056702
+      },
+      "adjusted_rank": 5,
+      "baseline_complaint_count": 17816,
+      "baseline_priority_score": 50758,
+      "baseline_rank": 5,
+      "topic": "catalog"
+    },
+    {
+      "adjusted_complaint_count": 5781.085978,
+      "adjusted_complaint_count_95ci": {
+        "lower": 2700.73097,
+        "upper": 7963.259638
+      },
+      "adjusted_mean_severity": 2.919105,
+      "adjusted_priority_score": 16875.59803,
+      "adjusted_priority_score_95ci": {
+        "lower": 8239.081991,
+        "upper": 22538.410807
+      },
+      "adjusted_rank": 6,
+      "baseline_complaint_count": 7166,
+      "baseline_priority_score": 20559,
+      "baseline_rank": 7,
+      "topic": "downloads"
+    },
+    {
+      "adjusted_complaint_count": 1807.700176,
+      "adjusted_complaint_count_95ci": {
+        "lower": 1260.299756,
+        "upper": 3471.531234
+      },
+      "adjusted_mean_severity": 3.023692,
+      "adjusted_priority_score": 5465.928745,
+      "adjusted_priority_score_95ci": {
+        "lower": 4405.663993,
+        "upper": 9192.646177
+      },
+      "adjusted_rank": 7,
+      "baseline_complaint_count": 9510,
+      "baseline_priority_score": 34887,
+      "baseline_rank": 6,
+      "topic": "access"
+    },
+    {
+      "adjusted_complaint_count": 1275.727411,
+      "adjusted_complaint_count_95ci": {
+        "lower": 1234.965486,
+        "upper": 2196.231111
+      },
+      "adjusted_mean_severity": 3.497638,
+      "adjusted_priority_score": 4462.032995,
+      "adjusted_priority_score_95ci": {
+        "lower": 4320.720285,
+        "upper": 6956.495335
+      },
+      "adjusted_rank": 8,
+      "baseline_complaint_count": 319,
+      "baseline_priority_score": 809,
+      "baseline_rank": 8,
+      "topic": "support"
+    }
+  ]
+}

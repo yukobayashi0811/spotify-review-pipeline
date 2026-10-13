@@ -68,7 +68,7 @@ def main() -> int:
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--prompt", type=Path, default=PROJECT_ROOT / "prompts/verify.md")
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--codex", default="/Users/Yu/.local/bin/codex")
+    parser.add_argument("--codex", default="codex")
     parser.add_argument("--workers", type=int, default=3)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)

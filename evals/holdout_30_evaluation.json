@@ -1,0 +1,158 @@
+{
+  "status": "completed",
+  "cases": 30,
+  "missing_predictions": 0,
+  "agreement": {
+    "topic": 0.633333,
+    "intent": 0.833333,
+    "severity_exact": 0.4,
+    "severity_mae_on_valid_predictions": 0.833333,
+    "sentiment_mae_on_valid_predictions": 0.332267,
+    "entities_exact": 0.566667,
+    "evidence_quote_substring": 1.0
+  },
+  "macro_f1": {
+    "topic": 0.503205,
+    "intent": 0.671429,
+    "severity": 0.236364
+  },
+  "normalized_text_group_weighted_agreement": {
+    "topic_match": 0.633333,
+    "intent_match": 0.833333,
+    "severity_match": 0.4
+  },
+  "normalized_text_groups": 30,
+  "confusion": {
+    "topic": [
+      {
+        "expected": "catalog",
+        "predicted": "other",
+        "count": 1
+      },
+      {
+        "expected": "other",
+        "predicted": "billing",
+        "count": 2
+      },
+      {
+        "expected": "other",
+        "predicted": "downloads",
+        "count": 1
+      },
+      {
+        "expected": "other",
+        "predicted": "other",
+        "count": 11
+      },
+      {
+        "expected": "playback",
+        "predicted": "playback",
+        "count": 1
+      },
+      {
+        "expected": "usability",
+        "predicted": "access",
+        "count": 1
+      },
+      {
+        "expected": "usability",
+        "predicted": "billing",
+        "count": 1
+      },
+      {
+        "expected": "usability",
+        "predicted": "catalog",
+        "count": 3
+      },
+      {
+        "expected": "usability",
+        "predicted": "playback",
+        "count": 2
+      },
+      {
+        "expected": "usability",
+        "predicted": "usability",
+        "count": 7
+      }
+    ],
+    "intent": [
+      {
+        "expected": "cancellation",
+        "predicted": "cancellation",
+        "count": 1
+      },
+      {
+        "expected": "complaint",
+        "predicted": "cancellation",
+        "count": 1
+      },
+      {
+        "expected": "complaint",
+        "predicted": "complaint",
+        "count": 12
+      },
+      {
+        "expected": "complaint",
+        "predicted": "request",
+        "count": 1
+      },
+      {
+        "expected": "complaint",
+        "predicted": "unclear",
+        "count": 1
+      },
+      {
+        "expected": "praise",
+        "predicted": "praise",
+        "count": 10
+      },
+      {
+        "expected": "request",
+        "predicted": "complaint",
+        "count": 1
+      },
+      {
+        "expected": "request",
+        "predicted": "request",
+        "count": 1
+      },
+      {
+        "expected": "unclear",
+        "predicted": "cancellation",
+        "count": 1
+      },
+      {
+        "expected": "unclear",
+        "predicted": "unclear",
+        "count": 1
+      }
+    ]
+  },
+  "note": "Quote membership is mechanical; a human must inspect whether the quote supports the label and whether entities are grounded.",
+  "set": "held-out 30 (fresh; labeled blind by a person from review text only, no predictions shown; never a model input and never used for tuning)",
+  "sampling": "first 30 by review_id of a seeded random 60 excluding Golden 50 and checkpoint_500 (evals/holdout_60_sampling_manifest.json)",
+  "labels_file": "evals/holdout_30.csv",
+  "labels_sha256": "afb8d6f706f8a0220869457c4ee85567b89be016c9c64019ea9c54ca319768e4",
+  "labeled_workbook_sha256": "7af67a08195ba562f7fc5771cec60b5304c2041d30c3524c58e51999b99481ad",
+  "predictions_file": "evals/holdout_30_predictions.csv",
+  "predictions_sha256": "e62ee6a4892118e275536a8334ce30eec0af85bb144a2160ea5d4f33f95d830d",
+  "severity_within_1": 0.766667,
+  "by_label_source": {
+    "local_classifier": {
+      "rows": 29,
+      "topic": 0.655172,
+      "intent": 0.827586,
+      "severity_exact": 0.37931,
+      "severity_within_1": 0.758621
+    },
+    "gpt-6-luna": {
+      "rows": 1,
+      "topic": 0.0,
+      "intent": 1.0,
+      "severity_exact": 1.0,
+      "severity_within_1": 1.0
+    }
+  },
+  "ambiguous_cases_marked_unclear_by_labeler": 2,
+  "model_calls": 0
+}

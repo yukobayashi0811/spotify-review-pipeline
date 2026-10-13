@@ -1,0 +1,105 @@
+{
+  "run_ids": [
+    "pipeline-v4-85ac80d9-ba45-4f8e-9a0d-c72a9a04c966",
+    "pipeline-v4-2de0b222-7dcd-434a-afeb-f63894e4da42"
+  ],
+  "source": "grading/calls.jsonl (both invocations) and evals/recovery_v4 run summaries",
+  "rows": {
+    "completed": 660609,
+    "exact_text_reuse_rows": 176420,
+    "quarantined": 13,
+    "source_rows": 660622
+  },
+  "luna_requests_by_role": {
+    "enrich": {
+      "attempts": 497,
+      "succeeded": 458,
+      "failed": 39,
+      "input_tokens": 6685677,
+      "cached_input_tokens": 4637696,
+      "output_tokens": 1280885,
+      "missing_usage": 0,
+      "summed_request_seconds": 14136.3,
+      "by_phase": {
+        "initial": 48,
+        "resume": 449
+      },
+      "api_equivalent_usd": 0.89161756
+    },
+    "group": {
+      "attempts": 14,
+      "succeeded": 13,
+      "failed": 1,
+      "input_tokens": 182371,
+      "cached_input_tokens": 49920,
+      "output_tokens": 6189,
+      "missing_usage": 0,
+      "summed_request_seconds": 108.5,
+      "by_phase": {
+        "initial": 8,
+        "coherence_split_once": 6
+      },
+      "api_equivalent_usd": 0.0168388
+    },
+    "memo": {
+      "attempts": 1,
+      "succeeded": 1,
+      "failed": 0,
+      "input_tokens": 28350,
+      "cached_input_tokens": 0,
+      "output_tokens": 2651,
+      "missing_usage": 0,
+      "summed_request_seconds": 22.0,
+      "by_phase": {
+        "initial": 1
+      },
+      "api_equivalent_usd": 0.0041605
+    },
+    "verify": {
+      "attempts": 13,
+      "succeeded": 11,
+      "failed": 2,
+      "input_tokens": 158240,
+      "cached_input_tokens": 119808,
+      "output_tokens": 22700,
+      "missing_usage": 0,
+      "summed_request_seconds": 259.5,
+      "by_phase": {
+        "initial": 13
+      },
+      "api_equivalent_usd": 0.01639128
+    }
+  },
+  "luna_requests_total": 525,
+  "luna_failed_attempts_total": 42,
+  "local_classifier_batches": 9226,
+  "api_equivalent_usd": 0.92900814,
+  "api_equivalent_usd_from_run_guard_ledger": 0.92900814,
+  "wall_seconds": {
+    "interrupted_invocation_seconds": 688.1,
+    "resume_invocation_seconds": 5839.9,
+    "total_seconds": 6528.0
+  },
+  "projection_comparison": {
+    "base/no_reuse": {
+      "projected_usd": 1.131731,
+      "projected_wall_seconds": 11403.6
+    },
+    "base/with_exact_text_reuse": {
+      "projected_usd": 0.842979,
+      "projected_wall_seconds": 8485.5
+    },
+    "conservative/no_reuse": {
+      "projected_usd": 1.316507,
+      "projected_wall_seconds": 15056.8
+    },
+    "conservative/with_exact_text_reuse": {
+      "projected_usd": 0.987149,
+      "projected_wall_seconds": 11257.8
+    }
+  },
+  "budget_usd": 5.0,
+  "within_budget": true,
+  "note": "API-equivalent USD = usage x cost/rates.csv; requests ran under a ChatGPT subscription through the Codex CLI, so this is not an invoice. Local compute cost was not metered.",
+  "model_calls": 0
+}

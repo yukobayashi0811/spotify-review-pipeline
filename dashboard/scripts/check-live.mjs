@@ -31,6 +31,14 @@ async function get(path) {
 const savedRanking = parseCsv(await readFile(join(root, 'grading', 'ranking.csv'), 'utf8'));
 const savedClaims = parseCsv(await readFile(join(root, 'grading', 'claims.csv'), 'utf8'));
 const fields = ['rank', 'issue_id', 'complaint_count', 'severity_sum', 'mean_severity', 'priority_score'];
+const exportStatus = JSON.parse(await readFile(join(root, 'grading', 'export_status.json'), 'utf8'));
+const savedMemberships = (await readFile(join(root, 'grading', 'membership.csv'), 'utf8')).trim().split(/\r?\n/).length - 1;
+const expectedCounts = {
+  source_rows: exportStatus.source_records,
+  completed: exportStatus.completed_nonempty,
+  quarantined: exportStatus.source_records - exportStatus.completed_nonempty,
+  issue_memberships: savedMemberships,
+};
 
 const [health, overview, ranking, reco, page] = await Promise.all([
   get('health'), get('overview'), get('ranking'), get('recommendation'),
@@ -62,7 +70,8 @@ const checks = {
   health: { status: health.status, body: health.body, passed: health.status === 200 && health.body.ok === true },
   counts_from_database: {
     actual: counts,
-    passed: counts.source_rows === 660622 && counts.completed === 660609 && counts.quarantined === 13 && counts.issue_memberships === 288524,
+    expected_from_grading_export: expectedCounts,
+    passed: Object.entries(expectedCounts).every(([key, value]) => counts[key] === value),
   },
   ranking_equals_grading_ranking_csv: { issues: liveRanking.length, mismatches: rankingMismatches, passed: liveRanking.length === savedRanking.length && rankingMismatches.length === 0 },
   memo_claims_equal_claims_csv_and_database: { claims: claimResults, passed: claimResults.every((c) => c.passed) },

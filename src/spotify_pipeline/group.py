@@ -22,6 +22,10 @@ EMBEDDING_REVISION = "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
 RANDOM_SEED = 20261003
 NAMING_BUCKET = "G_EMBED_V3"
 NAMING_TEXT_LIMIT = 600
+# Topics with fewer distinct complaint texts than this form a single cluster.
+SMALL_TOPIC_TEXTS = 30
+# Incoherent clusters smaller than this are flagged, not split.
+MIN_SPLIT_TEXTS = 20
 INITIAL_CLUSTER_CAP = 48
 TOPICS = (
     "access", "usability", "playback", "downloads",
@@ -77,7 +81,37 @@ def run_grouping(
         diagnostics: dict[str, Any] = {}
         for topic in TOPICS:
             topic_indexes = np.asarray(by_topic.get(topic, []), dtype=np.int64)
-            if len(topic_indexes) < 4:
+            if len(topic_indexes) == 0:
+                continue
+            if len(topic_indexes) < SMALL_TOPIC_TEXTS:
+                # Small inputs (for example the 100-review pilot): too few distinct
+                # texts for k=3..10 with ten representatives each, so the whole
+                # topic is one code-owned cluster. Full-corpus topics never take
+                # this branch.
+                topic_embeddings = np.asarray(embeddings[topic_indexes], dtype=np.float32)
+                weights = np.asarray(
+                    [rows[int(index)]["group_size"] for index in topic_indexes],
+                    dtype=np.float64,
+                )
+                single = {
+                    "k": 1,
+                    "labels": np.zeros(len(topic_indexes), dtype=np.int32),
+                    "centroids": np.vstack([_weighted_centroid(topic_embeddings, weights)]),
+                    "effective_k": 1,
+                    "silhouette": 0.0,
+                    "minimum_cluster_share": 1.0,
+                    "valid_minimum_share": True,
+                }
+                candidates[topic] = [single]
+                diagnostics[topic] = {
+                    "distinct_texts": int(len(topic_indexes)),
+                    "weighted_rows": int(weights.sum()),
+                    "small_topic_single_cluster": True,
+                    "rule": f"fewer than {SMALL_TOPIC_TEXTS} distinct texts -> one cluster",
+                    "candidates": [{"k": 1, "effective_k": 1, "silhouette": 0.0,
+                                    "minimum_cluster_share": 1.0,
+                                    "valid_minimum_share": True}],
+                }
                 continue
             topic_embeddings = np.asarray(embeddings[topic_indexes], dtype=np.float32)
             weights = np.asarray(
@@ -87,7 +121,7 @@ def run_grouping(
                 len(topic_indexes), min(20_000, len(topic_indexes))
             )
             topic_candidates: list[dict[str, Any]] = []
-            for k in range(3, min(10, len(topic_indexes) - 1) + 1):
+            for k in range(3, min(10, len(topic_indexes) // 10) + 1):
                 model = MiniBatchKMeans(
                     n_clusters=k,
                     random_state=RANDOM_SEED,
@@ -192,6 +226,12 @@ def run_grouping(
         split_parent: dict[str, str] = {}
         for issue in post_merged:
             if issue["coherent"] == "yes":
+                final_issues.append(issue)
+                continue
+            if len(issue["member_indexes"]) < MIN_SPLIT_TEXTS:
+                issue["flags"] = sorted(
+                    set(issue.get("flags", [])) | {"low_coherence", "too_small_to_split"}
+                )
                 final_issues.append(issue)
                 continue
             member_indexes = np.asarray(issue["member_indexes"], dtype=np.int64)
@@ -353,6 +393,8 @@ def run_grouping(
                 "post_naming_merge_threshold": 0.85,
                 "minimum_cluster_share": 0.02,
                 "candidate_k": [3, 4, 5, 6, 7, 8, 9, 10],
+                "small_topic_single_cluster_below_distinct_texts": SMALL_TOPIC_TEXTS,
+                "minimum_texts_for_coherence_split": MIN_SPLIT_TEXTS,
                 "initial_cluster_cap_for_bounded_split": INITIAL_CLUSTER_CAP,
             },
         )
@@ -632,7 +674,7 @@ def _make_issue(
         [position for position in range(len(members)) if position not in selected_positions],
         dtype=np.int64,
     )
-    needed = 10 - len(closest_positions)
+    needed = min(10, len(members)) - len(closest_positions)
     random_positions: list[int] = []
     if needed > 0:
         rng_seed = int(hashlib.sha256(temporary_id.encode()).hexdigest()[:16], 16)
@@ -642,14 +684,14 @@ def _make_issue(
             for value in rng.choice(remaining, size=min(needed, len(remaining)), replace=False)
         ]
     positions = [*closest_positions, *random_positions]
-    if len(positions) < 10:
+    if len(positions) < min(10, len(members)):
         for position in range(len(members)):
             if position not in positions:
                 positions.append(position)
-            if len(positions) == 10:
+            if len(positions) == min(10, len(members)):
                 break
-    if len(positions) != 10:
-        raise RuntimeError(f"Cluster {temporary_id} has fewer than ten distinct texts")
+    if len(positions) != min(10, len(members)):
+        raise RuntimeError(f"Cluster {temporary_id} representative selection failed")
     examples = []
     for position, selection_method in [
         *[(value, "centroid_close") for value in positions[:8]],

@@ -27,7 +27,7 @@ def main() -> int:
     parser.add_argument("--workers", type=int, choices=(1, 3), required=True)
     parser.add_argument("--model", default="gpt-6-luna")
     parser.add_argument("--effort", default="low", choices=("low", "medium", "high"))
-    parser.add_argument("--codex", default="/Users/Yu/.local/bin/codex")
+    parser.add_argument("--codex", default="codex")
     parser.add_argument("--expected-cli-version", default="codex-cli 0.159.3")
     parser.add_argument("--batch-size", type=int, default=4, help="1-50 reviews per call")
     parser.add_argument("--timeout-seconds", type=float, default=300.0)

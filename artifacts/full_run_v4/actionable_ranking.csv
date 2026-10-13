@@ -1,0 +1,21 @@
+actionable_rank,baseline_rank,issue_id,topic,issue_name,description,coherent,actionable,complaint_count,severity_sum,mean_severity,priority_score
+1,2,I_BILLING_04,billing,Listening controls restricted to Premium,"Users report that core listening controls, including song choice, skipping, or seeking, require Premium.",yes,yes,22475,64148,2.854194,64148
+2,3,I_USABILITY_01,usability,Frequent ads,Users report ads appearing too frequently during music or podcast listening.,yes,yes,26570,60211,2.266127,60211
+3,5,I_PLAYBACK_01,playback,Playback stops or fails,"Music playback stops, pauses, or fails to start, sometimes requiring users to restart the app, switch tracks, or reinstall it.",yes,yes,14449,44827,3.102429,44827
+4,6,I_PLAYBACK_02,playback,"App freezes, crashes, or stops responding","The app intermittently freezes, crashes, stops responding, or stops working during playback across devices.",yes,yes,14633,43614,2.980523,43614
+5,16,I_CATALOG_04,catalog,Lyrics not displaying,"Lyrics are missing, unavailable, or fail to load for songs.",yes,yes,4274,12420,2.905943,12420
+6,17,I_USABILITY_03,usability,Excessive ads,Examples consistently say that ads are too frequent or excessive.,yes,yes,5164,11565,2.239543,11565
+7,18,I_ACCESS_08,access,Unable to log in,"Users report being unable to log in, sometimes citing a generic error message or repeated unsuccessful attempts.",yes,yes,2730,10592,3.879853,10592
+8,20,I_DOWNLOADS_01,downloads,Downloaded music unavailable offline,"Downloaded music is unavailable or cannot be played when the device is offline, despite being saved for offline listening.",yes,yes,2132,6334,2.970919,6334
+9,22,I_ACCESS_03,access,Phone-number login failure,Users specifically report that phone-number login does not work.,yes,yes,1487,5741,3.860794,5741
+10,24,I_ACCESS_07,access,Unable to regain account access,"Users are signed out, locked out, or rejected when trying to return to an existing account.",yes,yes,1520,5243,3.449342,5243
+11,25,I_ACCESS_01,access,App login unavailable,"Users say the app does not allow them to log in or access their account, with little detail about the cause.",yes,yes,1315,4813,3.660076,4813
+12,27,I_ACCESS_06,access,Login failures,"Users report being unable to log in to an existing account, often encountering repeated errors.",yes,yes,1294,4567,3.529366,4567
+13,35,I_ACCESS_05,access,General login failures,"Users report being unable to log in, including failures with phone-number login and repeated errors.",yes,yes,198,697,3.520202,697
+14,36,I_SUPPORT_03,support,Difficulty contacting support,Users report difficulty reaching support or getting useful help and resolution.,yes,yes,107,298,2.785047,298
+15,37,I_SUPPORT_04,support,Unresponsive customer support,"Users describe support as unresponsive, ineffective, or unable to resolve problems.",yes,yes,58,141,2.431034,141
+16,38,I_SUPPORT_01,support,Poor customer service,"Users describe customer service as very poor, with one report that chat takes too long to connect.",yes,yes,41,90,2.195122,90
+17,39,I_SUPPORT_08,support,Unresponsive or inaccessible support,"Reviewers report difficulty reaching Spotify support, receiving responses, or getting their issues resolved.",yes,yes,34,89,2.617647,89
+18,40,I_SUPPORT_09,support,"Hard-to-reach, unhelpful support",Users report poor support that is difficult to reach and unhelpful when contacted.,yes,yes,33,73,2.212121,73
+19,41,I_SUPPORT_05,support,Poor or ineffective support responses,"Users report support responses that are poor, dismissive, ineffective, or absent.",yes,yes,29,70,2.413793,70
+20,43,I_SUPPORT_02,support,Unhelpful support for account issues,"Users report support failing to address account access concerns, including unhelpful automated interactions.",yes,yes,2,6,3.000000,6

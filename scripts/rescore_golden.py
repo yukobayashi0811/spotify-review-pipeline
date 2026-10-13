@@ -160,7 +160,7 @@ def export_final_predictions() -> dict[str, str]:
                 }
             )
     return {
-        review_id: ("luna_teacher" if found[review_id]["label_config"].startswith("gpt-6-luna") else "local_classifier")
+        review_id: ("gpt-6-luna" if found[review_id]["label_config"].startswith("gpt-6-luna") else "local_classifier")
         for review_id in golden_ids
     }
 

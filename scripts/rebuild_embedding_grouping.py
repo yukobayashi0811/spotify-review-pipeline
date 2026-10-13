@@ -27,7 +27,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--state", type=Path, required=True)
     parser.add_argument("--artifacts", type=Path, required=True)
-    parser.add_argument("--codex", default="/Users/Yu/.local/bin/codex")
+    parser.add_argument("--codex", default="codex")
     parser.add_argument("--expected-cli-version", default="codex-cli 0.159.3")
     parser.add_argument("--acknowledge", required=True)
     args = parser.parse_args()

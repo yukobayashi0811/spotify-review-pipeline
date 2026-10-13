@@ -37,7 +37,7 @@ def main() -> int:
     parser.add_argument("--verification-sample-fraction", type=float, default=0.10)
     parser.add_argument("--verification-minimum-sample", type=int, default=10)
     parser.add_argument("--verification-maximum-sample", type=int)
-    parser.add_argument("--codex", default="/Users/Yu/.local/bin/codex")
+    parser.add_argument("--codex", default="codex")
     parser.add_argument("--expected-cli-version", default="codex-cli 0.159.3")
     parser.add_argument("--acknowledge", required=True)
     args = parser.parse_args()

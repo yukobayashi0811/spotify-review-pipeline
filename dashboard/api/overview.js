@@ -33,5 +33,7 @@ export default route(async () => {
     cost_pilot: f.cost_pilot,
     cost_projection: f.cost_projection,
     golden_evaluation: f.golden_evaluation || null,
+    holdout_evaluation: f.holdout_evaluation || null,
+    full_run_luna_usage: f.full_run_luna_usage || null,
   };
 });

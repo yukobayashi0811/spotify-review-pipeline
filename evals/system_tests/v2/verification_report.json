@@ -1,0 +1,58 @@
+{
+  "agreement": {
+    "intent": 0.777778,
+    "severity_exact": 0.666667,
+    "severity_mae": 0.777778,
+    "topic": 0.777778
+  },
+  "already_verified_at_start": 0,
+  "disagreements": [
+    {
+      "first_intent": "praise",
+      "first_severity": 1,
+      "first_topic": "catalog",
+      "intent_agree": false,
+      "review_id": "PLT001",
+      "severity_distance": 3,
+      "topic_agree": false,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "access"
+    },
+    {
+      "first_intent": "praise",
+      "first_severity": 1,
+      "first_topic": "billing",
+      "intent_agree": false,
+      "review_id": "PLT002",
+      "severity_distance": 3,
+      "topic_agree": false,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "playback"
+    },
+    {
+      "first_intent": "complaint",
+      "first_severity": 3,
+      "first_topic": "downloads",
+      "intent_agree": true,
+      "review_id": "SYN004",
+      "severity_distance": 1,
+      "topic_agree": true,
+      "verify_intent": "complaint",
+      "verify_severity": 4,
+      "verify_topic": "downloads"
+    }
+  ],
+  "evidence_quote_repairs": 0,
+  "failures": [],
+  "maximum_sample": 9,
+  "minimum_sample": 9,
+  "pending_at_start": 9,
+  "planted_error_test": "not part of the sampled verification; see scripts/run_system_tests.py, which plants predeclared wrong labels in a separate synthetic copy",
+  "sample_fraction": 1.0,
+  "sample_policy": "deterministic SHA-256 ordering of review_id under the declared seed; target=min(completed,max(minimum,round(completed*fraction)),maximum when set)",
+  "sample_seed": "system-test-v2",
+  "selected": 9,
+  "verified": 9
+}

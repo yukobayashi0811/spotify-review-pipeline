@@ -17,6 +17,7 @@ from .full_run import run_full
 from .frozen_run import run_frozen
 from .io_utils import atomic_write_text, canonical, file_sha, write_json
 from .orchestrator import run_pipeline
+from .pipeline_run import run_pipeline as run_final_pipeline
 from .prepare import ingest
 from .providers import LocalMLXProvider, OpenAIResponsesProvider, Provider
 from .rank import rerank
@@ -42,10 +43,29 @@ def build_parser() -> argparse.ArgumentParser:
     full.add_argument("--config", required=True, type=Path)
     full.add_argument("--mode", choices=("frozen", "training"), default="frozen")
 
-    run = commands.add_parser("run", help="Run with the selected local or API provider")
-    _add_run_arguments(run)
+    run = commands.add_parser(
+        "run",
+        help=(
+            "Final pipeline (pipeline-v4) for any input CSV: prepare -> local classify -> "
+            "risk-routed Luna -> blind Luna verify -> group -> rank -> Luna memo -> export. "
+            "Makes GPT-6 Luna calls through the Codex CLI unless every stage is cached."
+        ),
+    )
+    run.add_argument("--input", required=True, type=Path)
+    run.add_argument("--config", type=Path, default=Path("config/pipeline.json"))
+    run.add_argument("--output", type=Path, help="Output directory (default: runs/<input stem>)")
+    run.add_argument(
+        "--interrupt-after-luna-batches", type=int,
+        help="Resume demonstration: stop after this many saved Luna batches (exit 75); "
+             "rerun the same command without this flag to resume",
+    )
 
-    pilot = commands.add_parser("pilot", help="Cold or warm 100-review pilot")
+    dev_run = commands.add_parser(
+        "dev-run", help="Legacy development orchestrator (local MLX or OpenAI API provider)"
+    )
+    _add_run_arguments(dev_run)
+
+    pilot = commands.add_parser("pilot", help="Legacy development cold/warm pilot (superseded by run)")
     _add_run_arguments(pilot)
     pilot.add_argument("--mode", required=True, choices=("cold", "warm"))
     pilot.add_argument("--cost-dir", required=True, type=Path)
@@ -167,6 +187,11 @@ def main(argv: list[str] | None = None) -> None:
                 else run_full(args.input, args.config)
             )
         elif args.command == "run":
+            result = run_final_pipeline(
+                args.input, args.config, output_dir=args.output,
+                interrupt_after_luna_batches=args.interrupt_after_luna_batches,
+            )
+        elif args.command == "dev-run":
             provider = _provider_for_args(args)
             result = run_pipeline(
                 input_csv=args.input,

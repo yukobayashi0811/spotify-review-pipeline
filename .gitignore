@@ -20,6 +20,9 @@ grading/records.jsonl
 artifacts/full_run_v2/group_embeddings.npy
 archive/grouping_v1/grading/records.jsonl
 archive/grouping_v1/artifacts/full_run_v2/grouping_model.joblib
+artifacts/full_run_v4/group_embeddings.npy
+# the final run's own copy of the grading export; the committed copy is grading/ (records.jsonl.gz)
+artifacts/full_run_v4/grading/
 
 # Local agent scratch areas (absolute-path node_modules symlinks, derived workbooks).
 .artifact_*/
@@ -32,3 +35,6 @@ dashboard/.vercel/
 
 # Local-only backups and material removed from the submission
 local_only/
+
+# macFUSE placeholder files
+.fuse_hidden*

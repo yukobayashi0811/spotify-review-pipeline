@@ -1,0 +1,596 @@
+{
+  "all_stages_skipped_unchanged": false,
+  "config": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/config/pipeline.json",
+  "counts": {
+    "completed": 660609,
+    "exact_text_reuse_rows": 176420,
+    "quarantined": 13,
+    "source_rows": 660622
+  },
+  "declared_controls": {
+    "batch_size_max": 50,
+    "invalid_output_retry": "one split retry per failed batch (50 -> 10 -> 1), then quarantine or keep local label",
+    "luna_workers": 3,
+    "max_calls_by_role": {
+      "enrich": 1457,
+      "group": 30,
+      "memo": 2,
+      "verify": 26
+    },
+    "max_route_fraction_of_distinct_texts": 0.05,
+    "max_transient_retries": 2,
+    "route_limit_texts": 24209,
+    "route_policy": "risk-route-v1",
+    "spend_limit_usd_api_equivalent": 5.0,
+    "verification_sample_rows": 400
+  },
+  "enrichment_phase": "resume",
+  "guard": {
+    "allowlist": {
+      "gpt-6-luna": [
+        "low"
+      ]
+    },
+    "calls_by_role": {
+      "enrich": 449,
+      "group": 14,
+      "memo": 1,
+      "verify": 13
+    },
+    "max_calls_by_role": {
+      "enrich": 1457,
+      "group": 30,
+      "memo": 2,
+      "verify": 26
+    },
+    "max_transient_retries": 2,
+    "reservation_usd_per_request": 0.01,
+    "spend_limit_usd_api_equivalent": 5.0,
+    "spent_usd_api_equivalent": 0.83124182,
+    "transient_failures": [],
+    "unknown_charge_requests_reserved_at_cap": 0
+  },
+  "input": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/data/spotify_reviews_18months.csv",
+  "new_model_calls_this_run": {
+    "local_classifier_batches": 9226,
+    "luna_attempts": 477,
+    "luna_by_role": {
+      "enrich": 449,
+      "group": 14,
+      "memo": 1,
+      "verify": 13
+    },
+    "luna_failed_attempts": 35,
+    "luna_usage_tokens": {
+      "cached_input_tokens": 4495872,
+      "input_tokens": 6411343,
+      "output_tokens": 1189472
+    }
+  },
+  "output": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/artifacts/full_run_v4",
+  "pipeline_version": "pipeline-v4",
+  "run_id": "pipeline-v4-2de0b222-7dcd-434a-afeb-f63894e4da42",
+  "stages": {
+    "classify_local": {
+      "cache_hits_total": 176420,
+      "completed_total": 660609,
+      "failed_records": 0,
+      "label_config": "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2",
+      "pending_unique_at_start": 461294,
+      "processed_unique": 461294,
+      "quarantined_total": 13,
+      "resumed_after_failure": false,
+      "routed_kept_local_after_luna_failure": 0,
+      "routed_labeled_by_luna": 22895,
+      "wall_seconds": 339.004217
+    },
+    "classify_luna": {
+      "label_config": "gpt-6-luna:low:classify-2026-10-02-v3:enrichment-v2:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:pipeline-v4",
+      "parallel": {
+        "batches": 417,
+        "failed_batches": 32,
+        "interrupted": false,
+        "pending_texts_at_start": 20845,
+        "succeeded_batches": 385,
+        "wall_seconds": 3959.867
+      },
+      "phase": "resume",
+      "resumed_after_failure": true,
+      "routed_texts": 22895,
+      "serial_recovery": {
+        "failed_records": 0,
+        "pending_unique_at_start": 1600,
+        "processed_unique": 1600
+      },
+      "wall_seconds": 4751.198207,
+      "workers": 3
+    },
+    "export": {
+      "completed_nonempty": 660609,
+      "expected_nonempty": 660609,
+      "exported_records": 660622,
+      "final_export": true,
+      "input_csv": "spotify_reviews_18months.csv",
+      "resumed_after_failure": false,
+      "source_records": 660622,
+      "wall_seconds": 9.414212
+    },
+    "group": {
+      "complaint_or_cancellation_records": 287914,
+      "input_hash": "4a8062b5c2d9fe98fcff04e4e9ac14c39e55292cdbb61a8e07c369052ec5313a",
+      "issues": 44,
+      "luna_distinct_texts": {
+        "succeeded": 530
+      },
+      "memberships": 287914,
+      "model_called": true,
+      "resumed_after_failure": false,
+      "rule": "Pinned MiniLM embeddings -> L2 normalization -> seeded weighted MiniBatchKMeans(k=3..10) -> code-owned centroid merges; Luna names and reviews bounded representatives but cannot alter membership",
+      "schema_version": "group-v3",
+      "wall_seconds": 432.74907
+    },
+    "memo_evidence": {
+      "actionable_issues": 20,
+      "rank_stability": {
+        "adjusted_top_issue": "I_OTHER_02",
+        "adjusted_top_issue_bootstrap_top_probability": 1.0,
+        "adjusted_top_topic": "other",
+        "adjusted_top_topic_bootstrap_top_probability": 0.994,
+        "baseline_top_issue": "I_OTHER_02",
+        "baseline_top_issue_bootstrap_top_probability": 1.0,
+        "baseline_top_topic": "usability",
+        "baseline_top_topic_bootstrap_top_probability": 0.0,
+        "issue_bootstrap_top_frequency": {
+          "I_OTHER_02": 1000
+        },
+        "top_issue_unchanged": true,
+        "top_topic_unchanged": false,
+        "topic_bootstrap_top_frequency": {
+          "billing": 6,
+          "other": 994
+        }
+      },
+      "resumed_after_failure": false,
+      "sensitivity": "estimated",
+      "topics": 8,
+      "wall_seconds": 5.50289
+    },
+    "prepare": {
+      "counts": {
+        "duplicate_review_ids": 0,
+        "empty_review_text": 13,
+        "missing_app_version": 159701,
+        "records": 660622
+      },
+      "distinct_nonempty_texts": 484189,
+      "file_sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+      "resumed_after_failure": false,
+      "skipped_unchanged": true,
+      "source_wall_seconds": 45.110541,
+      "wall_seconds": 0.0
+    },
+    "rank": {
+      "ranking": [
+        {
+          "complaint_count": 57872,
+          "issue_id": "I_OTHER_02",
+          "mean_severity": "2.032745",
+          "priority_score": 117639,
+          "rank": 1,
+          "severity_sum": 117639
+        },
+        {
+          "complaint_count": 22475,
+          "issue_id": "I_BILLING_04",
+          "mean_severity": "2.854194",
+          "priority_score": 64148,
+          "rank": 2,
+          "severity_sum": 64148
+        },
+        {
+          "complaint_count": 26570,
+          "issue_id": "I_USABILITY_01",
+          "mean_severity": "2.266127",
+          "priority_score": 60211,
+          "rank": 3,
+          "severity_sum": 60211
+        },
+        {
+          "complaint_count": 16304,
+          "issue_id": "I_PLAYBACK_03",
+          "mean_severity": "2.930079",
+          "priority_score": 47772,
+          "rank": 4,
+          "severity_sum": 47772
+        },
+        {
+          "complaint_count": 14449,
+          "issue_id": "I_PLAYBACK_01",
+          "mean_severity": "3.102429",
+          "priority_score": 44827,
+          "rank": 5,
+          "severity_sum": 44827
+        },
+        {
+          "complaint_count": 14633,
+          "issue_id": "I_PLAYBACK_02",
+          "mean_severity": "2.980523",
+          "priority_score": 43614,
+          "rank": 6,
+          "severity_sum": 43614
+        },
+        {
+          "complaint_count": 14367,
+          "issue_id": "I_USABILITY_04",
+          "mean_severity": "2.784089",
+          "priority_score": 39999,
+          "rank": 7,
+          "severity_sum": 39999
+        },
+        {
+          "complaint_count": 13282,
+          "issue_id": "I_USABILITY_02",
+          "mean_severity": "2.938865",
+          "priority_score": 39034,
+          "rank": 8,
+          "severity_sum": 39034
+        },
+        {
+          "complaint_count": 14260,
+          "issue_id": "I_USABILITY_05",
+          "mean_severity": "2.605750",
+          "priority_score": 37158,
+          "rank": 9,
+          "severity_sum": 37158
+        },
+        {
+          "complaint_count": 15906,
+          "issue_id": "I_OTHER_03",
+          "mean_severity": "2.054571",
+          "priority_score": 32680,
+          "rank": 10,
+          "severity_sum": 32680
+        },
+        {
+          "complaint_count": 11588,
+          "issue_id": "I_BILLING_01",
+          "mean_severity": "2.634795",
+          "priority_score": 30532,
+          "rank": 11,
+          "severity_sum": 30532
+        },
+        {
+          "complaint_count": 9721,
+          "issue_id": "I_BILLING_03",
+          "mean_severity": "2.731818",
+          "priority_score": 26556,
+          "rank": 12,
+          "severity_sum": 26556
+        },
+        {
+          "complaint_count": 11421,
+          "issue_id": "I_OTHER_01",
+          "mean_severity": "2.002977",
+          "priority_score": 22876,
+          "rank": 13,
+          "severity_sum": 22876
+        },
+        {
+          "complaint_count": 5091,
+          "issue_id": "I_BILLING_02",
+          "mean_severity": "2.655078",
+          "priority_score": 13517,
+          "rank": 14,
+          "severity_sum": 13517
+        },
+        {
+          "complaint_count": 4739,
+          "issue_id": "I_CATALOG_01",
+          "mean_severity": "2.795315",
+          "priority_score": 13247,
+          "rank": 15,
+          "severity_sum": 13247
+        },
+        {
+          "complaint_count": 4274,
+          "issue_id": "I_CATALOG_04",
+          "mean_severity": "2.905943",
+          "priority_score": 12420,
+          "rank": 16,
+          "severity_sum": 12420
+        },
+        {
+          "complaint_count": 5164,
+          "issue_id": "I_USABILITY_03",
+          "mean_severity": "2.239543",
+          "priority_score": 11565,
+          "rank": 17,
+          "severity_sum": 11565
+        },
+        {
+          "complaint_count": 2730,
+          "issue_id": "I_ACCESS_08",
+          "mean_severity": "3.879853",
+          "priority_score": 10592,
+          "rank": 18,
+          "severity_sum": 10592
+        },
+        {
+          "complaint_count": 2823,
+          "issue_id": "I_CATALOG_03",
+          "mean_severity": "2.894084",
+          "priority_score": 8170,
+          "rank": 19,
+          "severity_sum": 8170
+        },
+        {
+          "complaint_count": 2132,
+          "issue_id": "I_DOWNLOADS_01",
+          "mean_severity": "2.970919",
+          "priority_score": 6334,
+          "rank": 20,
+          "severity_sum": 6334
+        },
+        {
+          "complaint_count": 2232,
+          "issue_id": "I_CATALOG_06",
+          "mean_severity": "2.799731",
+          "priority_score": 6249,
+          "rank": 21,
+          "severity_sum": 6249
+        },
+        {
+          "complaint_count": 1487,
+          "issue_id": "I_ACCESS_03",
+          "mean_severity": "3.860794",
+          "priority_score": 5741,
+          "rank": 22,
+          "severity_sum": 5741
+        },
+        {
+          "complaint_count": 1793,
+          "issue_id": "I_DOWNLOADS_05",
+          "mean_severity": "2.926380",
+          "priority_score": 5247,
+          "rank": 23,
+          "severity_sum": 5247
+        },
+        {
+          "complaint_count": 1520,
+          "issue_id": "I_ACCESS_07",
+          "mean_severity": "3.449342",
+          "priority_score": 5243,
+          "rank": 24,
+          "severity_sum": 5243
+        },
+        {
+          "complaint_count": 1315,
+          "issue_id": "I_ACCESS_01",
+          "mean_severity": "3.660076",
+          "priority_score": 4813,
+          "rank": 25,
+          "severity_sum": 4813
+        },
+        {
+          "complaint_count": 1607,
+          "issue_id": "I_CATALOG_07",
+          "mean_severity": "2.973242",
+          "priority_score": 4778,
+          "rank": 26,
+          "severity_sum": 4778
+        },
+        {
+          "complaint_count": 1294,
+          "issue_id": "I_ACCESS_06",
+          "mean_severity": "3.529366",
+          "priority_score": 4567,
+          "rank": 27,
+          "severity_sum": 4567
+        },
+        {
+          "complaint_count": 1344,
+          "issue_id": "I_DOWNLOADS_04",
+          "mean_severity": "3.039435",
+          "priority_score": 4085,
+          "rank": 28,
+          "severity_sum": 4085
+        },
+        {
+          "complaint_count": 1199,
+          "issue_id": "I_CATALOG_02",
+          "mean_severity": "2.834028",
+          "priority_score": 3398,
+          "rank": 29,
+          "severity_sum": 3398
+        },
+        {
+          "complaint_count": 1050,
+          "issue_id": "I_DOWNLOADS_02",
+          "mean_severity": "2.473333",
+          "priority_score": 2597,
+          "rank": 30,
+          "severity_sum": 2597
+        },
+        {
+          "complaint_count": 942,
+          "issue_id": "I_CATALOG_05",
+          "mean_severity": "2.649682",
+          "priority_score": 2496,
+          "rank": 31,
+          "severity_sum": 2496
+        },
+        {
+          "complaint_count": 725,
+          "issue_id": "I_ACCESS_02",
+          "mean_severity": "3.438621",
+          "priority_score": 2493,
+          "rank": 32,
+          "severity_sum": 2493
+        },
+        {
+          "complaint_count": 847,
+          "issue_id": "I_DOWNLOADS_03",
+          "mean_severity": "2.710744",
+          "priority_score": 2296,
+          "rank": 33,
+          "severity_sum": 2296
+        },
+        {
+          "complaint_count": 241,
+          "issue_id": "I_ACCESS_04",
+          "mean_severity": "3.074689",
+          "priority_score": 741,
+          "rank": 34,
+          "severity_sum": 741
+        },
+        {
+          "complaint_count": 198,
+          "issue_id": "I_ACCESS_05",
+          "mean_severity": "3.520202",
+          "priority_score": 697,
+          "rank": 35,
+          "severity_sum": 697
+        },
+        {
+          "complaint_count": 107,
+          "issue_id": "I_SUPPORT_03",
+          "mean_severity": "2.785047",
+          "priority_score": 298,
+          "rank": 36,
+          "severity_sum": 298
+        },
+        {
+          "complaint_count": 58,
+          "issue_id": "I_SUPPORT_04",
+          "mean_severity": "2.431034",
+          "priority_score": 141,
+          "rank": 37,
+          "severity_sum": 141
+        },
+        {
+          "complaint_count": 41,
+          "issue_id": "I_SUPPORT_01",
+          "mean_severity": "2.195122",
+          "priority_score": 90,
+          "rank": 38,
+          "severity_sum": 90
+        },
+        {
+          "complaint_count": 34,
+          "issue_id": "I_SUPPORT_08",
+          "mean_severity": "2.617647",
+          "priority_score": 89,
+          "rank": 39,
+          "severity_sum": 89
+        },
+        {
+          "complaint_count": 33,
+          "issue_id": "I_SUPPORT_09",
+          "mean_severity": "2.212121",
+          "priority_score": 73,
+          "rank": 40,
+          "severity_sum": 73
+        },
+        {
+          "complaint_count": 29,
+          "issue_id": "I_SUPPORT_05",
+          "mean_severity": "2.413793",
+          "priority_score": 70,
+          "rank": 41,
+          "severity_sum": 70
+        },
+        {
+          "complaint_count": 14,
+          "issue_id": "I_SUPPORT_06",
+          "mean_severity": "2.857143",
+          "priority_score": 40,
+          "rank": 42,
+          "severity_sum": 40
+        },
+        {
+          "complaint_count": 2,
+          "issue_id": "I_SUPPORT_02",
+          "mean_severity": "3.000000",
+          "priority_score": 6,
+          "rank": 43,
+          "severity_sum": 6
+        },
+        {
+          "complaint_count": 1,
+          "issue_id": "I_SUPPORT_07",
+          "mean_severity": "2.000000",
+          "priority_score": 2,
+          "rank": 44,
+          "severity_sum": 2
+        }
+      ],
+      "resumed_after_failure": false,
+      "wall_seconds": 0.404518
+    },
+    "recommend": {
+      "alternatives": [
+        "I_USABILITY_01",
+        "I_PLAYBACK_01"
+      ],
+      "claims": 12,
+      "input_hash": "1b1302ba38812edd80b5813e8d692e6249964204373c3d0c8267b944d972f330",
+      "model_called": true,
+      "priority": "billing / I_BILLING_04: Focus next-quarter effort on making core listening controls, including song choice, skipping, and seeking, consistently available under the relevant product rules and clearly communicated. The issue is coherent and actionable in the supplied metadata, with the highest actionable baseline issue priority score. Its typical evidence examples describe limits on song choice and changing tracks; treat these as representative examples, not the most severe cases.",
+      "priority_issue_id": "I_BILLING_04",
+      "priority_topic": "billing",
+      "resumed_after_failure": false,
+      "wall_seconds": 27.156272
+    },
+    "route": {
+      "distinct_texts": 484189,
+      "eligible_texts": 22895,
+      "limit": 24209,
+      "policy": "risk-route-v1",
+      "resumed_after_failure": false,
+      "routed_rows": 23200,
+      "routed_texts": 22895,
+      "skipped_unchanged": true,
+      "source_wall_seconds": 124.645625,
+      "wall_seconds": 0.0
+    },
+    "verify": {
+      "by_label_source": {
+        "gpt-6-luna": {
+          "estimated_rows_represented": 23124.0,
+          "intent_agreement": 0.94,
+          "interpretation": "same-model test-retest, not independent accuracy",
+          "row_weighted_intent_agreement": 0.940594,
+          "row_weighted_severity_exact_agreement": 0.762376,
+          "row_weighted_topic_agreement": 0.851485,
+          "severity_exact_agreement": 0.76,
+          "severity_mae": 0.25,
+          "topic_agreement": 0.85,
+          "verified_texts": 100
+        },
+        "local_classifier": {
+          "estimated_rows_represented": 510498.7,
+          "intent_agreement": 0.851724,
+          "interpretation": "independent verifier agreement estimate",
+          "row_weighted_intent_agreement": 0.870482,
+          "row_weighted_severity_exact_agreement": 0.846386,
+          "row_weighted_topic_agreement": 0.825301,
+          "severity_exact_agreement": 0.824138,
+          "severity_mae": 0.186207,
+          "topic_agreement": 0.8,
+          "verified_texts": 290
+        }
+      },
+      "metrics": {
+        "intent": 0.874359,
+        "severity_exact": 0.807692,
+        "severity_mae": 0.202564,
+        "topic": 0.812821
+      },
+      "resumed_after_failure": false,
+      "sampled": 400,
+      "wall_seconds": 262.843705
+    }
+  },
+  "status": "completed",
+  "wall_seconds": 5839.87701
+}

@@ -14,7 +14,7 @@ CREATE SCHEMA spotify;
 CREATE TABLE spotify.label_configs (
     label_config_id smallint PRIMARY KEY,
     label_config    text NOT NULL UNIQUE,
-    label_source    text NOT NULL CHECK (label_source IN ('luna_teacher', 'local_classifier')),
+    label_source    text NOT NULL CHECK (label_source IN ('gpt-6-luna', 'local_classifier')),
     model           text NOT NULL,
     record_count    integer NOT NULL
 );

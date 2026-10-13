@@ -319,7 +319,9 @@ class Store:
         )
         return {row["status"]: row["n"] for row in rows}
 
-    def iter_pending_unique(self, label_config: str) -> Iterator[dict[str, str]]:
+    def iter_pending_unique(
+        self, label_config: str, restrict_text_sha256: set[str] | None = None
+    ) -> Iterator[dict[str, str]]:
         query = """
         WITH pending AS (
             SELECT s.*, s.rowid AS source_rowid,
@@ -339,6 +341,8 @@ class Store:
             source.pop("source_rowid", None)
             source.pop("text_rank", None)
             digest = source["text_sha256"]
+            if restrict_text_sha256 is not None and digest not in restrict_text_sha256:
+                continue
             cached = self.connection.execute(
                 "SELECT c.source_review_id,c.result_json,r.status "
                 "FROM result_cache c "
@@ -353,9 +357,16 @@ class Store:
                 continue
             yield source
 
-    def expand_new_duplicate_cache_hits(self, label_config: str) -> int:
-        rows = self.connection.execute(
-            """
+    def expand_new_duplicate_cache_hits(
+        self, label_config: str, text_hashes: Iterable[str] | None = None
+    ) -> int:
+        """Copy exact-text cache hits to rows that do not yet carry ``label_config``.
+
+        When ``text_hashes`` is given (the texts just saved by one batch), only rows
+        with those hashes are examined, so each batch costs O(batch) instead of a
+        scan of every pending row.
+        """
+        query = """
             SELECT s.*
             FROM source_rows s
             LEFT JOIN records r ON r.review_id=s.review_id
@@ -365,10 +376,15 @@ class Store:
                 OR r.status <> 'completed'
                 OR COALESCE(r.label_config,'') <> ?
               )
-            ORDER BY s.rowid
-            """,
-            (label_config,),
-        ).fetchall()
+        """
+        parameters: list[Any] = [label_config]
+        if text_hashes is not None:
+            hashes = sorted(set(text_hashes))
+            if not hashes:
+                return 0
+            query += " AND s.text_sha256 IN (%s)" % ",".join("?" for _ in hashes)
+            parameters.extend(hashes)
+        rows = self.connection.execute(query + " ORDER BY s.rowid", parameters).fetchall()
         saved = 0
         for row in rows:
             source = dict(row)

@@ -1,6 +1,6 @@
 {
   "errors": 0,
-  "executed_at_utc": "2026-10-03T17:00:46.434564+00:00",
+  "executed_at_utc": "2026-10-13T05:03:20.818954+00:00",
   "failures": 0,
   "model_calls": 0,
   "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
@@ -48,12 +48,19 @@
     "test_two_invalid_responses_quarantine_without_third_send (test_pipeline.PipelineTests.test_two_invalid_responses_quarantine_without_third_send) ... ok",
     "test_validation_rejects_non_substring_quote (test_pipeline.PipelineTests.test_validation_rejects_non_substring_quote) ... ok",
     "test_verification_recovers_failed_batch_and_warm_resume_skips_calls (test_pipeline.PipelineTests.test_verification_recovers_failed_batch_and_warm_resume_skips_calls) ... ok",
+    "test_allowlist_rejects_other_models (test_pipeline_run.GuardTests.test_allowlist_rejects_other_models) ... ok",
+    "test_call_cap_and_spend_cap (test_pipeline_run.GuardTests.test_call_cap_and_spend_cap) ... ok",
+    "test_reported_served_model_must_match (test_pipeline_run.GuardTests.test_reported_served_model_must_match) ... ok",
+    "test_transient_errors_are_bounded (test_pipeline_run.GuardTests.test_transient_errors_are_bounded) ... ok",
+    "test_transient_errors_back_off_then_succeed (test_pipeline_run.GuardTests.test_transient_errors_back_off_then_succeed) ... ok",
+    "test_interrupt_then_resume_meets_contract_rules (test_pipeline_run.InterruptResumeTests.test_interrupt_then_resume_meets_contract_rules) ... ok",
+    "test_cold_then_warm_run_on_100_reviews (test_pipeline_run.PipelineRunTests.test_cold_then_warm_run_on_100_reviews) ... ok",
     "",
     "----------------------------------------------------------------------",
-    "Ran 40 tests in 0.110s",
+    "Ran 47 tests in 6.767s",
     "",
     "OK"
   ],
-  "tests_run": 40,
-  "wall_seconds": 0.17756
+  "tests_run": 47,
+  "wall_seconds": 6.844372
 }

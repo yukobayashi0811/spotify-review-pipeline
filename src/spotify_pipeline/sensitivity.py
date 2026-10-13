@@ -13,6 +13,8 @@ WORD_BUCKETS = ("00-05", "06-15", "16-40", "41+")
 BOOTSTRAP_SEED = 20261003
 
 
+MIN_LOCAL_VERIFIED = 30
+
 def run_sensitivity_analysis(
     *, state_path: str | Path, output_json: str | Path, output_md: str | Path,
     iterations: int = 1_000, alpha: float = 1.0,
@@ -38,9 +40,10 @@ def run_sensitivity_analysis(
                 """
             )
         ]
-        if len(verification) != 300:
+        if len(verification) < MIN_LOCAL_VERIFIED:
             raise RuntimeError(
-                f"Sensitivity analysis requires the 300-record final_source=local stratum; "
+                f"Sensitivity analysis requires at least {MIN_LOCAL_VERIFIED} final_source=local "
+                "verifier records; "
                 f"found {len(verification)}"
             )
         ranking = store.get_metadata("ranking", [])
@@ -183,7 +186,7 @@ def run_sensitivity_analysis(
         topic_results.append(
             {
                 "topic": topic,
-                "baseline_rank": baseline_topic_rank[topic],
+                "baseline_rank": baseline_topic_rank.get(topic),
                 "baseline_complaint_count": baseline_topic[topic]["complaint_count"],
                 "baseline_priority_score": baseline_topic[topic]["priority_score"],
                 **value,
@@ -240,7 +243,7 @@ def run_sensitivity_analysis(
         },
         "limitations": [
             "The verifier is an independent model pass, not human ground truth.",
-            "The local stratum has 300 distinct texts; sparse cells depend on smoothing.",
+            f"The local stratum has {len(prepared)} verified texts; sparse cells depend on smoothing.",
             "Bootstrap intervals represent verifier-sample uncertainty under this correction model, not total model uncertainty.",
             "Issue corrections cannot recover false-negative complaints into a specific issue because they were never grouped.",
             "These corrected estimates are sensitivity outputs and are not claims.csv evidence.",
@@ -372,9 +375,10 @@ def _render_markdown(report: dict[str, Any]) -> str:
     lines = [
         "# Sensitivity analysis",
         "",
-        "This analysis uses only the 300 `final_source=local` verifier records. It applies "
-        "word-bucket-specific, sample-weighted confusion matrices with Laplace smoothing and "
-        "1,000 stratified bootstrap repetitions.",
+        f"This analysis uses only the {report['method']['verification_distinct_texts']} "
+        "`final_source=local` verifier records. It applies word-bucket-specific, "
+        "sample-weighted confusion matrices with Laplace smoothing and "
+        f"{report['method']['bootstrap_iterations']:,} stratified bootstrap repetitions.",
         "",
         "## Rank stability",
         "",

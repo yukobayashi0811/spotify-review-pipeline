@@ -70,12 +70,12 @@
     },
     "evals/golden_final_predictions.csv": {
       "cases": 50,
-      "flagged": 15,
-      "label_error_rows": 24,
-      "error_rate_when_flagged": 0.8,
-      "error_rate_when_not_flagged": 0.342857,
-      "share_of_error_rows_flagged": 0.5,
-      "share_of_flagged_rows_with_error": 0.8
+      "flagged": 16,
+      "label_error_rows": 25,
+      "error_rate_when_flagged": 0.75,
+      "error_rate_when_not_flagged": 0.382353,
+      "share_of_error_rows_flagged": 0.48,
+      "share_of_flagged_rows_with_error": 0.75
     }
   },
   "ambiguous_cases": {

@@ -1,59 +1,55 @@
-# 100-review cost and runtime report
+# 100-review cost and runtime calculator
 
-## Measured pilot
+Generated offline by `python3 cost/calculator.py` from `pilot_calls.jsonl`, `pilot_run.json`, `cost/rates.csv` (rate multiplier 1.0) and `assumptions.json`. No provider was contacted.
 
-- Provider: local-distilled plus local-mlx; Luna shown only as API-rate equivalent
-- Rows: 100
-- Input SHA-256: c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e
-- Completed / failed or quarantined: 100 / 0
-- Unique nonempty texts: 100
-- Direct exact-text cache hits: 0
-- Batch size / worker limit: 50 / 1
-- Successful calls: 6
-- Failed attempts: 1
-- Input tokens: 14594
-- Cached input tokens: 0
-- Output tokens: 3516
-- Pilot API spend: $0.00000000
-- One-time Luna API-equivalent estimate: $0.46379610
-- Cold API spend: $0.00000000
-- Warm incremental API spend: $0.00000000
-- Cold wall time: 176.246427 seconds
-- Warm wall time: 0.011639 seconds
-- Warm new enrichment calls: 0
-- Warm saved-result reuses: 100
-- Cold throughput: 0.567387 rows/second
-- Cold cost per 1,000 input rows: $0.00000000
-- Cold cost per completed record: $0.0000000000
-- Hardware and electricity cost: unknown (API charge is tracked separately)
+Luna requests ran through the Codex CLI with ChatGPT subscription authentication. USD figures are usage x the editable API-equivalent rates, not an invoice.
 
-## One-time measured Luna work, API-rate equivalent
+## Measured pilot (cold run)
 
-- Estimated equivalent: $0.46379610
-- Actual billing mode: ChatGPT subscription; this is not an API invoice.
-- Pricing basis: editable GPT-6 Luna standard token rates in `rates.csv`.
-- Evidence: {"declared_teacher_and_verifier_texts": {"existing_teacher": 8448, "new_teacher": 3560, "new_total": 3960, "new_verifier": 400}, "selected_grouping_565": {"attempted_distinct_review_ids": 565, "cached_input_tokens": 39936, "calls": 14, "input_tokens": 185531, "output_tokens": 6782, "successful_distinct_review_ids": 565}, "selected_memo_two_attempts": {"attempted_distinct_review_ids": 50, "cached_input_tokens": 0, "calls": 2, "input_tokens": 50772, "output_tokens": 4693, "successful_distinct_review_ids": 50}, "teacher_existing_8448": {"attempted_distinct_review_ids": 8448, "cached_input_tokens": 1759232, "calls": 187, "input_tokens": 2359632, "output_tokens": 411099, "successful_distinct_review_ids": 8448}, "teacher_existing_failed_attempts": {"attempted_distinct_review_ids": 200, "cached_input_tokens": 39936, "calls": 4, "input_tokens": 50906, "output_tokens": 9699, "successful_distinct_review_ids": 0}, "teacher_new_3560": {"attempted_distinct_review_ids": 3560, "cached_input_tokens": 728832, "calls": 74, "input_tokens": 990637, "output_tokens": 189038, "successful_distinct_review_ids": 3560}, "token_source": "saved provider call rows and Luna ledger request IDs", "verification_new_400": {"attempted_distinct_review_ids": 400, "cached_input_tokens": 9984, "calls": 8, "input_tokens": 101681, "output_tokens": 22475, "successful_distinct_review_ids": 400}}
+| Measure | Value |
+|---|---|
+| Input | `cost_100.csv`, sha256 `c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e` (matches manifest: True) |
+| Pilot IDs | 100 (all present in pilot_records.jsonl: True) |
+| Completed / failed or quarantined | 100 / 0 |
+| Distinct nonempty texts / exact-text cache-hit rows | 100 / 0 |
+| Result cache at start | empty (new output directory and state database) |
+| Routed to Luna | 5 of 100 distinct texts (limit 5; 5 eligible) |
+| Verification sample | 10 of 10 sampled rows verified |
+| End-to-end wall time | 44.911 s |
+| Requests / failed attempts / missing usage | 7 / 0 / 0 |
+| API-equivalent cost | $0.00662678 |
+| Per 1,000 input rows / per completed record | $0.066268 / $0.00006627 |
+| Throughput | 2.227 rows/s |
+| Local compute cost | unknown: hardware, electricity and memory were not metered (local classifier, embeddings, SQLite) |
 
-## Full-run projection
+### By stage
 
-- Rows / nonempty / empty: 660622 / 660609 / 13
-- Distinct nonempty texts with exact reuse: 484189
-- Base reuse API cost: $0.463796
-- Base no-reuse API cost: $0.463796
-- Conservative reuse API cost: $0.579745
-- Base reuse elapsed time: 5049.17 seconds
-- Base no-reuse elapsed time: 6368.044 seconds
-- Conservative reuse elapsed time: 6311.463 seconds
-- Base reuse elapsed time: 0.058 days
-- Base no-reuse elapsed time: 0.074 days
-- Conservative reuse elapsed time: 0.073 days
-- Base reuse throughput: 130.837733 rows/second
-- Verification rule: declared fixed sample
-- Projected verification texts: 400
-- Pilot verification rate: 0.1
-- Budget: $25.00
-- Base exceeds budget: False
-- Conservative exceeds budget: False
-- Total cost including local compute: unknown
+| Stage | Provider / model / effort | Prompt / schema | Batch max (requests by size) | Workers | Attempts (ok/failed, retries, fallbacks) | Tokens in / cached / out | API-equiv. USD | Stage wall s | Summed call s |
+|---|---|---|---|---|---|---|---|---|---|
+| classify_luna | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-02-v3 / enrichment-v2 | 5 ({'5': 1}) | 1 | 1 (1/0, 0, 0) | 11385 / 9984 / 253 | 0.00036644 | 4.456 | 4.423 |
+| classify_local | local-distilled-sklearn / `distilled-tfidf-linear-v2` / none | 2026-10-02-v3 / enrichment-v2 | 50 ({'45': 1, '50': 1}) | 1 | 2 (2/0, 0, 0) | 0 / 0 / 0 | 0.00000000 | 0.204 | 0.021 |
+| verify | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-12-v4 / enrichment-v2 | 10 ({'10': 1}) | 1 | 1 (1/0, 0, 0) | 11413 / 9984 / 514 | 0.00049974 | 6.262 | 6.249 |
+| group | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-03-v3 / group-v3 | 29 ({'20': 1, '29': 1}) | 1 | 2 (2/0, 0, 0) | 24146 / 0 / 918 | 0.00287360 | 12.825 | 11.022 |
+| recommend | codex-exec-subscription / `gpt-6-luna` / low | 2026-10-12-v3 / memo-v3 | 18 ({'18': 1}) | 1 | 1 (1/0, 0, 0) | 15570 / 0 / 2660 | 0.00288700 | 20.514 | 20.494 |
 
-The projection is an initial extrapolation. Refresh after 500 and 10,000 reviews.
+## Measured pilot (warm run, same command)
+
+- Wall time 0.013500 s; every stage skipped unchanged: True.
+- New requests 0 (new enrichment requests 0); incremental API-equivalent cost $0.00000000.
+
+## Full-run projection (estimate)
+
+All 660,622 rows accounted for: 660,609 nonempty outputs and 13 empty-text quarantines. Exact-text reuse reduces first-pass work to 484,189 distinct texts (176,420 reused rows); the no-reuse rows show the comparison.
+
+Per-request tokens and durations come from the saved full-run GPT-6 Luna requests at the production batch size of 50 (`reference_full_run_calls.jsonl`), because the pilot's batches are smaller. Local fixed overhead (ingest, export, embeddings/clustering) is added once per run; memo and grouping requests are fixed counts, not per review.
+
+Controls: budget $5.0, output-token cap 6000 per request, max workers 3, max fallback (routed) fraction 0.05.
+
+| Scenario | Distinct texts | Routed fraction | Luna requests (enrich/verify/group/memo) | Failed-attempt rate | API-equiv. USD | Local s | Luna summed s | Est. wall s | Budget |
+|---|---:|---:|---|---:|---:|---:|---:|---:|---|
+| base/with_exact_text_reuse | 484,189 | 0.05 (measured) | 485/8/14/1 | 0.020906 | 0.842979 | 403.7 | 24245.6 | 8485.5 | within |
+| base/no_reuse | 660,609 | 0.05 (measured) | 661/8/14/1 | 0.020906 | 1.131731 | 474.2 | 32788.1 | 11403.6 | within |
+| conservative/with_exact_text_reuse | 484,189 | 0.05 (cap) | 485/8/28/2 | 0.05 | 0.987149 | 807.4 | 31351.4 | 11257.8 | within |
+| conservative/no_reuse | 660,609 | 0.05 (cap) | 661/8/28/2 | 0.05 | 1.316507 | 948.5 | 42324.9 | 15056.8 | within |
+
+Wall-time estimate = local compute + summed Luna request seconds / workers. Summed request seconds are not wall time when requests overlap. Local compute cost (hardware, electricity) is unknown and not included in USD.

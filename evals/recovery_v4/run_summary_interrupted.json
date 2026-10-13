@@ -1,0 +1,98 @@
+{
+  "all_stages_skipped_unchanged": false,
+  "config": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/config/pipeline.json",
+  "counts": {
+    "completed": 2190,
+    "exact_text_reuse_rows": 140,
+    "quarantined": 13,
+    "source_rows": 660622
+  },
+  "declared_controls": {
+    "batch_size_max": 50,
+    "invalid_output_retry": "one split retry per failed batch (50 -> 10 -> 1), then quarantine or keep local label",
+    "luna_workers": 3,
+    "max_calls_by_role": {
+      "enrich": 1457,
+      "group": 30,
+      "memo": 2,
+      "verify": 26
+    },
+    "max_route_fraction_of_distinct_texts": 0.05,
+    "max_transient_retries": 2,
+    "route_limit_texts": 24209,
+    "route_policy": "risk-route-v1",
+    "spend_limit_usd_api_equivalent": 5.0,
+    "verification_sample_rows": 400
+  },
+  "enrichment_phase": "initial",
+  "error": "ControlledInterrupt: Controlled interruption after 41 saved Luna batches; rerun the same command to resume",
+  "failed_stage": "classify_luna",
+  "guard": {
+    "allowlist": {
+      "gpt-6-luna": [
+        "low"
+      ]
+    },
+    "calls_by_role": {
+      "enrich": 48
+    },
+    "max_calls_by_role": {
+      "enrich": 1457,
+      "group": 30,
+      "memo": 2,
+      "verify": 26
+    },
+    "max_transient_retries": 2,
+    "reservation_usd_per_request": 0.01,
+    "spend_limit_usd_api_equivalent": 5.0,
+    "spent_usd_api_equivalent": 0.09776632,
+    "transient_failures": [],
+    "unknown_charge_requests_reserved_at_cap": 0
+  },
+  "input": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/data/spotify_reviews_18months.csv",
+  "new_model_calls_this_run": {
+    "local_classifier_batches": 0,
+    "luna_attempts": 48,
+    "luna_by_role": {
+      "enrich": 48,
+      "group": 0,
+      "memo": 0,
+      "verify": 0
+    },
+    "luna_failed_attempts": 7,
+    "luna_usage_tokens": {
+      "cached_input_tokens": 311552,
+      "input_tokens": 643295,
+      "output_tokens": 122953
+    }
+  },
+  "output": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/artifacts/full_run_v4",
+  "pipeline_version": "pipeline-v4",
+  "run_id": "pipeline-v4-85ac80d9-ba45-4f8e-9a0d-c72a9a04c966",
+  "stages": {
+    "prepare": {
+      "counts": {
+        "duplicate_review_ids": 0,
+        "empty_review_text": 13,
+        "missing_app_version": 159701,
+        "records": 660622
+      },
+      "distinct_nonempty_texts": 484189,
+      "file_sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+      "resumed_after_failure": false,
+      "wall_seconds": 45.110541
+    },
+    "route": {
+      "distinct_texts": 484189,
+      "eligible_texts": 22895,
+      "limit": 24209,
+      "policy": "risk-route-v1",
+      "resumed_after_failure": false,
+      "routed_rows": 23200,
+      "routed_texts": 22895,
+      "wall_seconds": 124.645625
+    }
+  },
+  "status": "failed",
+  "wall_seconds": 688.073891
+}

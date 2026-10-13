@@ -1,5 +1,7 @@
 # Mandatory 1,000-text Luna gate
 
+> Historical snapshot written when the run paused at its mandatory gate. Approval was given afterwards (the file `APPROVED_AFTER_1000` now exists) and the run continued to 3,960 new Luna texts; final figures of that earlier run are in `archive/v2_full_run_evidence/cost/full_run_actuals.md` and `artifacts/full_run_v2/run_report.json`. The final submission run is `artifacts/full_run_v4/`.
+
 Status: **approval required; no later Luna stage has been started**.
 
 - Distinct new texts sent: 1,000

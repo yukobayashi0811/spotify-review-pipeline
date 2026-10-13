@@ -63,11 +63,12 @@ def score_golden(
     predictions_csv: str | Path,
     output_json: str | Path,
     cases_csv: str | Path,
+    expected_rows: int = 50,
 ) -> dict[str, Any]:
-    gold = _read_gold(golden_csv)
+    gold = _read_gold(golden_csv, expected_rows)
     predictions = _read_predictions(predictions_csv)
-    if len(gold) != 50:
-        raise ValueError(f"Golden set must contain exactly 50 rows, found {len(gold)}")
+    if len(gold) != expected_rows:
+        raise ValueError(f"Golden set must contain exactly {expected_rows} rows, found {len(gold)}")
     extra_prediction_ids = sorted(set(predictions) - set(gold))
     if extra_prediction_ids:
         raise ValueError(
@@ -174,11 +175,11 @@ def score_golden(
     return report
 
 
-def _read_gold(path: str | Path) -> dict[str, dict[str, Any]]:
+def _read_gold(path: str | Path, expected_rows: int = 50) -> dict[str, dict[str, Any]]:
     result = {}
     rows = list(read_csv(path))
-    if len(rows) != 50:
-        raise ValueError(f"Golden set must contain exactly 50 rows, found {len(rows)}")
+    if len(rows) != expected_rows:
+        raise ValueError(f"Label set must contain exactly {expected_rows} rows, found {len(rows)}")
     for row in rows:
         if row["review_id"] in result:
             raise ValueError(f"Duplicate Golden review_id: {row['review_id']}")

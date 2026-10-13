@@ -1,6 +1,8 @@
 # Distilled text classifier + bounded Codex Luna experiment
 
-This experiment tests a faster alternative to per-review local generation. It remains development evidence and is not yet promoted to the full-corpus model stage.
+> **Status (final):** this folder holds the development history of the local classifier. The model used for the final full-corpus run (`pipeline-v4`, which labels all texts except the risk-routed ones) is **`al2-final-v2/`** (`distilled-tfidf-linear-v2`, artifact SHA-256 `a5279d07…`): the same TF-IDF/linear design retrained on 12,008 saved GPT-6 Luna teacher labels (the legacy 10,000-review run plus the H, R, AL1 and AL2 buckets of the full run; see `al2-final-v2/model_manifest.json` and `archive/v2_full_run_evidence/cost/full_run_actuals.md`). Golden 50, checkpoint_500 and their exact/normalized texts were excluded from training. The `pilot-v1` model and the "distilled + 20% Luna" configuration described below were **not** promoted: that configuration failed its predeclared Golden-50 promotion gate, which is why the final design adds active-learning teacher labels and risk routing instead.
+
+This experiment tested a faster alternative to per-review local generation.
 
 ## Leakage-safe training
 

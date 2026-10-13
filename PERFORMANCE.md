@@ -1,4 +1,6 @@
-# Performance investigation
+# Performance investigation (historical, development only)
+
+> This file records an early development path that ran a local Gemma model through MLX for every review. It is **not** the final pipeline: the final run uses the sealed TF-IDF/linear classifier plus bounded GPT-6 Luna requests (`README.md`, `docs/architecture.md`). The projections below (for example 23 days) describe that abandoned path and were the reason it was replaced.
 
 All comparisons below are measured on the same Apple Silicon machine with MLX-LM 0.31.3. API charge was zero. Hardware and electricity costs remain unknown.
 

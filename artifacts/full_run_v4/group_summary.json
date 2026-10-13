@@ -1,0 +1,12 @@
+{
+  "complaint_or_cancellation_records": 287914,
+  "input_hash": "4a8062b5c2d9fe98fcff04e4e9ac14c39e55292cdbb61a8e07c369052ec5313a",
+  "issues": 44,
+  "luna_distinct_texts": {
+    "succeeded": 530
+  },
+  "memberships": 287914,
+  "model_called": true,
+  "rule": "Pinned MiniLM embeddings -> L2 normalization -> seeded weighted MiniBatchKMeans(k=3..10) -> code-owned centroid merges; Luna names and reviews bounded representatives but cannot alter membership",
+  "schema_version": "group-v3"
+}

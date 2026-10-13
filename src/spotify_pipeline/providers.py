@@ -521,8 +521,12 @@ def _codex_event_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
     forbidden: set[str] = set()
     usage: dict[str, Any] | None = None
     thread_id: str | None = None
+    served_models: set[str] = set()
     turn_completed = False
     for event in events:
+        for container in (event, event.get("item"), event.get("turn")):
+            if isinstance(container, dict) and isinstance(container.get("model"), str):
+                served_models.add(container["model"])
         event_type = str(event.get("type", "unknown"))
         event_types[event_type] = event_types.get(event_type, 0) + 1
         if event_type == "thread.started" and isinstance(event.get("thread_id"), str):
@@ -545,6 +549,12 @@ def _codex_event_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
         "turn_completed": turn_completed,
         "usage": usage,
         "forbidden_tool_types": sorted(forbidden),
+        # Codex CLI 0.159.3 events do not name the served model; if a later
+        # version does, GuardedProvider compares it with the requested model.
+        "served_model": (
+            sorted(served_models)[0] if len(served_models) == 1
+            else ("multiple:" + ",".join(sorted(served_models)) if served_models else None)
+        ),
     }
 
 

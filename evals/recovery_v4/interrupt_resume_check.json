@@ -1,0 +1,16 @@
+{
+  "before_completed_ids": 2190,
+  "after_completed_ids": 660609,
+  "after_minus_before": 658419,
+  "resume_sent_before_ids": 0,
+  "successful_initial_enrich_calls": 41,
+  "successful_resume_enrich_calls": 9643,
+  "checks": {
+    "before_nonempty_and_strict_subset_of_after": true,
+    "before_ids_trace_to_successful_initial_calls_or_cache": true,
+    "resume_sent_zero_before_ids": true,
+    "resume_completed_new_ids": true
+  },
+  "passed": true,
+  "model_calls": 0
+}

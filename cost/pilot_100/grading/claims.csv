@@ -1,0 +1,13 @@
+claim_id,issue_id,metric,value
+C001,I_BILLING_01,complaint_count,9
+C002,I_BILLING_01,severity_sum,24
+C003,I_BILLING_01,mean_severity,2.666667
+C004,I_BILLING_01,priority_score,24
+C005,I_ACCESS_01,complaint_count,2
+C006,I_ACCESS_01,severity_sum,7
+C007,I_ACCESS_01,mean_severity,3.500000
+C008,I_ACCESS_01,priority_score,7
+C009,I_DOWNLOADS_01,complaint_count,1
+C010,I_DOWNLOADS_01,severity_sum,3
+C011,I_DOWNLOADS_01,mean_severity,3.000000
+C012,I_DOWNLOADS_01,priority_score,3

@@ -1,94 +1,91 @@
 {
-  "batch_size": 50,
-  "cold_new_enrichment_calls": 2,
-  "cold_new_model_calls_by_role": {
-    "enrich": 2,
-    "group": 2,
-    "memo": 2,
-    "verify": 1
+  "checksum_matches_manifest": true,
+  "cold": {
+    "guard": {
+      "allowlist": {
+        "gpt-6-luna": [
+          "low"
+        ]
+      },
+      "calls_by_role": {
+        "enrich": 1,
+        "group": 2,
+        "memo": 1,
+        "verify": 1
+      },
+      "max_calls_by_role": {
+        "enrich": 5,
+        "group": 30,
+        "memo": 2,
+        "verify": 5
+      },
+      "max_transient_retries": 2,
+      "reservation_usd_per_request": 0.01,
+      "spend_limit_usd_api_equivalent": 5.0,
+      "spent_usd_api_equivalent": 0.00662678,
+      "transient_failures": [],
+      "unknown_charge_requests_reserved_at_cap": 0
+    },
+    "new_model_calls": {
+      "local_classifier_batches": 2,
+      "luna_attempts": 5,
+      "luna_by_role": {
+        "enrich": 1,
+        "group": 2,
+        "memo": 1,
+        "verify": 1
+      },
+      "luna_failed_attempts": 0,
+      "luna_usage_tokens": {
+        "cached_input_tokens": 19968,
+        "input_tokens": 62514,
+        "output_tokens": 4345
+      }
+    },
+    "run_id": "pipeline-v4-3ef0c57e-ef2a-4795-9ba2-ca48940911f5",
+    "stage_wall_seconds": {
+      "classify_local": 0.203566,
+      "classify_luna": 4.456154,
+      "export": 0.007626,
+      "group": 12.825266,
+      "memo_evidence": 0.003142,
+      "prepare": 0.003607,
+      "rank": 0.00238,
+      "recommend": 20.513715,
+      "route": 0.593864,
+      "verify": 6.262169
+    },
+    "wall_seconds": 44.911438
   },
-  "cold_stage_wall_seconds": {
-    "classify": 0.747576,
-    "export": 0.006685,
-    "group": 28.503457,
-    "memo_evidence": 0.001975,
-    "prepare": 0.003982,
-    "rank": 0.002176,
-    "recommend": 115.470898,
-    "verify": 31.480177
+  "commands": {
+    "cold": "spotify-pipeline run --input data/cost_100.csv --config config/pipeline.json --output cost/pilot_100",
+    "warm": "the same command again, unchanged"
   },
-  "cold_verification_selected": 10,
-  "cold_wall_seconds": 176.246427,
   "completed_records": 100,
-  "controls": {
-    "fallback_fraction": 0,
-    "luna_escalation_limit": 0,
-    "max_output_tokens": 6000,
-    "max_workers": 1,
-    "memo_attempt_limit": 2,
-    "spend_limit_usd": 1
+  "declared_controls": {
+    "batch_size_max": 50,
+    "invalid_output_retry": "one split retry per failed batch (50 -> 10 -> 1), then quarantine or keep local label",
+    "luna_workers": 3,
+    "max_calls_by_role": {
+      "enrich": 5,
+      "group": 30,
+      "memo": 2,
+      "verify": 5
+    },
+    "max_route_fraction_of_distinct_texts": 0.05,
+    "max_transient_retries": 2,
+    "route_limit_texts": 5,
+    "route_policy": "risk-route-v1",
+    "spend_limit_usd_api_equivalent": 5.0,
+    "verification_sample_rows": 10
   },
-  "direct_exact_text_cache_hits": 0,
+  "distinct_nonempty_texts": 100,
+  "exact_text_cache_hits_rows": 0,
+  "failed_or_quarantined_records": 0,
+  "input_file": "cost_100.csv",
   "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
-  "model": "distilled-tfidf-linear-v2 + pinned local Gemma",
-  "one_time_fixed_evidence": {
-    "declared_teacher_and_verifier_texts": {
-      "existing_teacher": 8448,
-      "new_teacher": 3560,
-      "new_total": 3960,
-      "new_verifier": 400
-    },
-    "selected_grouping_565": {
-      "attempted_distinct_review_ids": 565,
-      "cached_input_tokens": 39936,
-      "calls": 14,
-      "input_tokens": 185531,
-      "output_tokens": 6782,
-      "successful_distinct_review_ids": 565
-    },
-    "selected_memo_two_attempts": {
-      "attempted_distinct_review_ids": 50,
-      "cached_input_tokens": 0,
-      "calls": 2,
-      "input_tokens": 50772,
-      "output_tokens": 4693,
-      "successful_distinct_review_ids": 50
-    },
-    "teacher_existing_8448": {
-      "attempted_distinct_review_ids": 8448,
-      "cached_input_tokens": 1759232,
-      "calls": 187,
-      "input_tokens": 2359632,
-      "output_tokens": 411099,
-      "successful_distinct_review_ids": 8448
-    },
-    "teacher_existing_failed_attempts": {
-      "attempted_distinct_review_ids": 200,
-      "cached_input_tokens": 39936,
-      "calls": 4,
-      "input_tokens": 50906,
-      "output_tokens": 9699,
-      "successful_distinct_review_ids": 0
-    },
-    "teacher_new_3560": {
-      "attempted_distinct_review_ids": 3560,
-      "cached_input_tokens": 728832,
-      "calls": 74,
-      "input_tokens": 990637,
-      "output_tokens": 189038,
-      "successful_distinct_review_ids": 3560
-    },
-    "token_source": "saved provider call rows and Luna ledger request IDs",
-    "verification_new_400": {
-      "attempted_distinct_review_ids": 400,
-      "cached_input_tokens": 9984,
-      "calls": 8,
-      "input_tokens": 101681,
-      "output_tokens": 22475,
-      "successful_distinct_review_ids": 400
-    }
-  },
-  "pilot_ids": [
+  "manifest_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+  "pilot_review_ids": [
     "084077ee-f9be-446a-9935-9e58550d5153",
     "ff14ea84-fdec-4363-9b1b-a23dcab287c5",
     "dc73ecd9-3293-4ede-90d5-dd6cd1e8d087",
@@ -191,112 +188,105 @@
     "e5e6c55f-3069-4b7c-9807-f8b5d5bf2726"
   ],
   "pilot_rows": 100,
-  "projection_run_id": "frozen-101c0d6d-3cef-423c-813a-fe7ed6d0efd2",
-  "projection_verification_texts": 400,
-  "provider": "local-distilled plus local-mlx; Luna shown only as API-rate equivalent",
-  "provider_runtime": {
-    "api_charges_usd": 0.0,
-    "api_credentials_required": false,
-    "calls": [
-      {
-        "duration_seconds": 31.472821,
-        "finish_reason": "json_complete",
-        "generated_characters": 2596,
-        "generation_mode": "empty_thought_then_json_prefix",
-        "generation_tokens_per_second": 34.915,
-        "input_tokens": 949,
-        "mlx_peak_memory_gb": 4.92646,
-        "output_tokens": 935,
-        "parsed_json_characters": 1849,
-        "process_memory_after_gb": 2.891121,
-        "process_memory_before_gb": 2.879832,
-        "prompt_tokens_per_second": 1320.774,
-        "role": "verify"
+  "record_ids_match_input": true,
+  "result_cache_at_start": "empty (new output directory and state database)",
+  "routing": {
+    "distinct_texts": 100,
+    "eligible_texts": 5,
+    "limit": 5,
+    "policy": "risk-route-v1",
+    "routed_rows": 5,
+    "routed_texts": 5,
+    "rule": "eligible if the local router predicts topic=support or severity>=4, or a billing/privacy/fraud/support term matches; ordered by p_err x rows x risk weight (3 for rule/severity>=4, 2 complaint/cancellation, 1 otherwise), then text hash; capped at floor(max_fraction x distinct texts)"
+  },
+  "status_counts": {
+    "completed": 100
+  },
+  "verification": {
+    "agreement": {
+      "intent": 0.7,
+      "severity_exact": 0.6,
+      "severity_mae": 0.7,
+      "topic": 0.8
+    },
+    "by_label_source": {
+      "gpt-6-luna": {
+        "estimated_rows_represented": 5.0,
+        "intent_agreement": 0.5,
+        "interpretation": "same-model test-retest, not independent accuracy",
+        "row_weighted_intent_agreement": 0.5,
+        "row_weighted_severity_exact_agreement": 1.0,
+        "row_weighted_topic_agreement": 0.5,
+        "severity_exact_agreement": 1.0,
+        "severity_mae": 0.0,
+        "topic_agreement": 0.5,
+        "verified_texts": 2
       },
-      {
-        "duration_seconds": 18.229327,
-        "finish_reason": "json_complete",
-        "generated_characters": 1703,
-        "generation_mode": "empty_thought_then_json_prefix",
-        "generation_tokens_per_second": 28.658,
-        "input_tokens": 2602,
-        "mlx_peak_memory_gb": 5.00473,
-        "output_tokens": 455,
-        "parsed_json_characters": 1406,
-        "process_memory_after_gb": 2.892677,
-        "process_memory_before_gb": 2.890121,
-        "prompt_tokens_per_second": 1208.846,
-        "role": "group"
-      },
-      {
-        "duration_seconds": 10.266954,
-        "finish_reason": "json_complete",
-        "generated_characters": 820,
-        "generation_mode": "empty_thought_then_json_prefix",
-        "generation_tokens_per_second": 25.739,
-        "input_tokens": 1843,
-        "mlx_peak_memory_gb": 5.00473,
-        "output_tokens": 209,
-        "parsed_json_characters": 697,
-        "process_memory_after_gb": 2.894905,
-        "process_memory_before_gb": 2.892694,
-        "prompt_tokens_per_second": 956.294,
-        "role": "group"
-      },
-      {
-        "duration_seconds": 50.413743,
-        "finish_reason": "json_complete",
-        "generated_characters": 2395,
-        "generation_mode": "empty_thought_then_json_prefix",
-        "generation_tokens_per_second": 19.511,
-        "input_tokens": 4584,
-        "mlx_peak_memory_gb": 5.132687,
-        "output_tokens": 881,
-        "parsed_json_characters": 1940,
-        "process_memory_after_gb": 2.896658,
-        "process_memory_before_gb": 2.895004,
-        "prompt_tokens_per_second": 904.598,
-        "role": "memo"
-      },
-      {
-        "duration_seconds": 65.046448,
-        "finish_reason": "json_complete",
-        "generated_characters": 3126,
-        "generation_mode": "empty_thought_then_json_prefix",
-        "generation_tokens_per_second": 17.755,
-        "input_tokens": 4616,
-        "mlx_peak_memory_gb": 5.132687,
-        "output_tokens": 1036,
-        "parsed_json_characters": 2662,
-        "process_memory_after_gb": 2.897805,
-        "process_memory_before_gb": 2.896675,
-        "prompt_tokens_per_second": 720.971,
-        "role": "memo"
+      "local_classifier": {
+        "estimated_rows_represented": 95.0,
+        "intent_agreement": 0.75,
+        "interpretation": "independent verifier agreement estimate",
+        "row_weighted_intent_agreement": 0.75,
+        "row_weighted_severity_exact_agreement": 0.5,
+        "row_weighted_topic_agreement": 0.875,
+        "severity_exact_agreement": 0.5,
+        "severity_mae": 0.875,
+        "topic_agreement": 0.875,
+        "verified_texts": 8
       }
-    ],
-    "electricity_cost_usd": "unknown",
-    "hardware_cost_usd": "unknown",
-    "machine": "arm64",
-    "model_id": "mlx-community/gemma-4-e4b-it-4bit",
-    "model_revision": "475b9088d29754a3379866cf5aeb6b41acd313c2",
-    "network_required": false,
-    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
-    "provider": "local-mlx",
-    "resolved_local_snapshot": "/Users/Yu/.cache/huggingface/hub/models--mlx-community--gemma-4-e4b-it-4bit/snapshots/475b9088d29754a3379866cf5aeb6b41acd313c2",
-    "runtime": "MLX-LM 0.31.3",
-    "system_memory_gb": 34.36,
-    "temperature": 0.0
+    },
+    "sampled_rows": 10,
+    "sampling": {
+      "design": "distinct texts stratified by final label source; SHA-256(seed:review_id) order within stratum",
+      "seed": "pipeline-v4-verifier",
+      "strata": {
+        "gpt-6-luna": {
+          "population_rows": 5,
+          "population_texts": 5,
+          "sampled_texts": 2
+        },
+        "local": {
+          "population_rows": 95,
+          "population_texts": 95,
+          "sampled_texts": 8
+        }
+      },
+      "target": 10,
+      "weights": "group_size x stratum population texts / stratum sample (row-weighted estimates)"
+    },
+    "verified_rows": 10
   },
-  "quarantined_or_failed_records": 0,
-  "unique_nonempty_texts": 100,
-  "warm_new_enrichment_calls": 0,
-  "warm_new_model_calls_by_role": {
-    "enrich": 0,
-    "group": 0,
-    "memo": 0,
-    "verify": 0
-  },
-  "warm_saved_result_reuses": 100,
-  "warm_wall_seconds": 0.011639,
-  "worker_limit": 1
+  "warm": {
+    "all_stages_skipped_unchanged": true,
+    "new_model_calls": {
+      "local_classifier_batches": 0,
+      "luna_attempts": 0,
+      "luna_by_role": {
+        "enrich": 0,
+        "group": 0,
+        "memo": 0,
+        "verify": 0
+      },
+      "luna_failed_attempts": 0,
+      "luna_usage_tokens": {
+        "cached_input_tokens": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    "run_id": "pipeline-v4-537befd2-a8ec-4907-9f3e-cced660c3293",
+    "stage_wall_seconds": {
+      "classify_local": 0.0,
+      "classify_luna": 0.0,
+      "export": 0.0,
+      "group": 0.0,
+      "memo_evidence": 0.0,
+      "prepare": 0.0,
+      "rank": 0.0,
+      "recommend": 0.0,
+      "route": 0.0,
+      "verify": 0.0
+    },
+    "wall_seconds": 0.0135
+  }
 }

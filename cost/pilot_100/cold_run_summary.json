@@ -1,0 +1,286 @@
+{
+  "all_stages_skipped_unchanged": false,
+  "config": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/config/pipeline.json",
+  "counts": {
+    "completed": 100,
+    "exact_text_reuse_rows": 0,
+    "quarantined": 0,
+    "source_rows": 100
+  },
+  "declared_controls": {
+    "batch_size_max": 50,
+    "invalid_output_retry": "one split retry per failed batch (50 -> 10 -> 1), then quarantine or keep local label",
+    "luna_workers": 3,
+    "max_calls_by_role": {
+      "enrich": 5,
+      "group": 30,
+      "memo": 2,
+      "verify": 5
+    },
+    "max_route_fraction_of_distinct_texts": 0.05,
+    "max_transient_retries": 2,
+    "route_limit_texts": 5,
+    "route_policy": "risk-route-v1",
+    "spend_limit_usd_api_equivalent": 5.0,
+    "verification_sample_rows": 10
+  },
+  "enrichment_phase": "initial",
+  "guard": {
+    "allowlist": {
+      "gpt-6-luna": [
+        "low"
+      ]
+    },
+    "calls_by_role": {
+      "enrich": 1,
+      "group": 2,
+      "memo": 1,
+      "verify": 1
+    },
+    "max_calls_by_role": {
+      "enrich": 5,
+      "group": 30,
+      "memo": 2,
+      "verify": 5
+    },
+    "max_transient_retries": 2,
+    "reservation_usd_per_request": 0.01,
+    "spend_limit_usd_api_equivalent": 5.0,
+    "spent_usd_api_equivalent": 0.00662678,
+    "transient_failures": [],
+    "unknown_charge_requests_reserved_at_cap": 0
+  },
+  "input": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/data/cost_100.csv",
+  "new_model_calls_this_run": {
+    "local_classifier_batches": 2,
+    "luna_attempts": 5,
+    "luna_by_role": {
+      "enrich": 1,
+      "group": 2,
+      "memo": 1,
+      "verify": 1
+    },
+    "luna_failed_attempts": 0,
+    "luna_usage_tokens": {
+      "cached_input_tokens": 19968,
+      "input_tokens": 62514,
+      "output_tokens": 4345
+    }
+  },
+  "output": "/Users/Yu/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/spotify-review-pipeline/cost/pilot_100",
+  "pipeline_version": "pipeline-v4",
+  "run_id": "pipeline-v4-3ef0c57e-ef2a-4795-9ba2-ca48940911f5",
+  "stages": {
+    "classify_local": {
+      "cache_hits_total": 0,
+      "completed_total": 100,
+      "failed_records": 0,
+      "label_config": "distilled-tfidf-linear-v2:none:classify-2026-10-02-v3:enrichment-v2:artifact-a5279d07c4657d3347d1749e8f6a7d207f6b4272603927ac28f5572a1a3c55f8:sklearn-1.9.1:final-local-v2",
+      "pending_unique_at_start": 95,
+      "processed_unique": 95,
+      "quarantined_total": 0,
+      "resumed_after_failure": false,
+      "routed_kept_local_after_luna_failure": 0,
+      "routed_labeled_by_luna": 5,
+      "wall_seconds": 0.203566
+    },
+    "classify_luna": {
+      "label_config": "gpt-6-luna:low:classify-2026-10-02-v3:enrichment-v2:codex-cli-0.159.3:subscription:ephemeral:empty-read-only:tools-disabled:pipeline-v4",
+      "parallel": {
+        "batches": 1,
+        "failed_batches": 0,
+        "interrupted": false,
+        "pending_texts_at_start": 5,
+        "succeeded_batches": 1,
+        "wall_seconds": 4.429
+      },
+      "phase": "initial",
+      "resumed_after_failure": false,
+      "routed_texts": 5,
+      "serial_recovery": {
+        "failed_records": 0,
+        "pending_unique_at_start": 0,
+        "processed_unique": 0
+      },
+      "wall_seconds": 4.456154,
+      "workers": 3
+    },
+    "export": {
+      "completed_nonempty": 100,
+      "expected_nonempty": 100,
+      "exported_records": 100,
+      "final_export": true,
+      "input_csv": "cost_100.csv",
+      "resumed_after_failure": false,
+      "source_records": 100,
+      "wall_seconds": 0.007626
+    },
+    "group": {
+      "complaint_or_cancellation_records": 52,
+      "input_hash": "36b13843671028ee0cd988e90fe683275f5c60d0c1d15f443b3f1edcd583cf80",
+      "issues": 8,
+      "luna_distinct_texts": {
+        "succeeded": 49
+      },
+      "memberships": 52,
+      "model_called": true,
+      "resumed_after_failure": false,
+      "rule": "Pinned MiniLM embeddings -> L2 normalization -> seeded weighted MiniBatchKMeans(k=3..10) -> code-owned centroid merges; Luna names and reviews bounded representatives but cannot alter membership",
+      "schema_version": "group-v3",
+      "wall_seconds": 12.825266
+    },
+    "memo_evidence": {
+      "actionable_issues": 3,
+      "rank_stability": null,
+      "resumed_after_failure": false,
+      "sensitivity": "not_estimated",
+      "topics": 8,
+      "wall_seconds": 0.003142
+    },
+    "prepare": {
+      "counts": {
+        "duplicate_review_ids": 0,
+        "empty_review_text": 0,
+        "missing_app_version": 18,
+        "records": 100
+      },
+      "distinct_nonempty_texts": 100,
+      "file_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+      "resumed_after_failure": false,
+      "wall_seconds": 0.003607
+    },
+    "rank": {
+      "ranking": [
+        {
+          "complaint_count": 10,
+          "issue_id": "I_PLAYBACK_01",
+          "mean_severity": "3.100000",
+          "priority_score": 31,
+          "rank": 1,
+          "severity_sum": 31
+        },
+        {
+          "complaint_count": 13,
+          "issue_id": "I_OTHER_01",
+          "mean_severity": "2.153846",
+          "priority_score": 28,
+          "rank": 2,
+          "severity_sum": 28
+        },
+        {
+          "complaint_count": 10,
+          "issue_id": "I_USABILITY_01",
+          "mean_severity": "2.500000",
+          "priority_score": 25,
+          "rank": 3,
+          "severity_sum": 25
+        },
+        {
+          "complaint_count": 9,
+          "issue_id": "I_BILLING_01",
+          "mean_severity": "2.666667",
+          "priority_score": 24,
+          "rank": 4,
+          "severity_sum": 24
+        },
+        {
+          "complaint_count": 6,
+          "issue_id": "I_CATALOG_01",
+          "mean_severity": "2.666667",
+          "priority_score": 16,
+          "rank": 5,
+          "severity_sum": 16
+        },
+        {
+          "complaint_count": 2,
+          "issue_id": "I_ACCESS_01",
+          "mean_severity": "3.500000",
+          "priority_score": 7,
+          "rank": 6,
+          "severity_sum": 7
+        },
+        {
+          "complaint_count": 1,
+          "issue_id": "I_DOWNLOADS_01",
+          "mean_severity": "3.000000",
+          "priority_score": 3,
+          "rank": 7,
+          "severity_sum": 3
+        },
+        {
+          "complaint_count": 1,
+          "issue_id": "I_SUPPORT_01",
+          "mean_severity": "2.000000",
+          "priority_score": 2,
+          "rank": 8,
+          "severity_sum": 2
+        }
+      ],
+      "resumed_after_failure": false,
+      "wall_seconds": 0.00238
+    },
+    "recommend": {
+      "alternatives": [
+        "I_ACCESS_01",
+        "I_DOWNLOADS_01"
+      ],
+      "claims": 12,
+      "input_hash": "c8d41caf2948a5e3623980233349088351f088b18a1f4c5e71723d16734208c8",
+      "model_called": true,
+      "priority": "billing / I_BILLING_01: Focus next-quarter product effort on making the basic playback controls available and predictable for users on the basic tier, covering song selection, skipping, and seeking within tracks. The issue is coherent and actionable in the supplied issue metadata and ranks first in the actionable issue list. The three cited evidence records are typical severity-3 examples selected by severity frequency and centroid proximity, not worst-case examples.",
+      "priority_issue_id": "I_BILLING_01",
+      "priority_topic": "billing",
+      "resumed_after_failure": false,
+      "wall_seconds": 20.513715
+    },
+    "route": {
+      "distinct_texts": 100,
+      "eligible_texts": 5,
+      "limit": 5,
+      "policy": "risk-route-v1",
+      "resumed_after_failure": false,
+      "routed_rows": 5,
+      "routed_texts": 5,
+      "wall_seconds": 0.593864
+    },
+    "verify": {
+      "by_label_source": {
+        "gpt-6-luna": {
+          "estimated_rows_represented": 5.0,
+          "intent_agreement": 0.5,
+          "interpretation": "same-model test-retest, not independent accuracy",
+          "row_weighted_intent_agreement": 0.5,
+          "row_weighted_severity_exact_agreement": 1.0,
+          "row_weighted_topic_agreement": 0.5,
+          "severity_exact_agreement": 1.0,
+          "severity_mae": 0.0,
+          "topic_agreement": 0.5,
+          "verified_texts": 2
+        },
+        "local_classifier": {
+          "estimated_rows_represented": 95.0,
+          "intent_agreement": 0.75,
+          "interpretation": "independent verifier agreement estimate",
+          "row_weighted_intent_agreement": 0.75,
+          "row_weighted_severity_exact_agreement": 0.5,
+          "row_weighted_topic_agreement": 0.875,
+          "severity_exact_agreement": 0.5,
+          "severity_mae": 0.875,
+          "topic_agreement": 0.875,
+          "verified_texts": 8
+        }
+      },
+      "metrics": {
+        "intent": 0.7,
+        "severity_exact": 0.6,
+        "severity_mae": 0.7,
+        "topic": 0.8
+      },
+      "resumed_after_failure": false,
+      "sampled": 10,
+      "wall_seconds": 6.262169
+    }
+  },
+  "status": "completed",
+  "wall_seconds": 44.911438
+}

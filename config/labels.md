@@ -9,7 +9,7 @@ These definitions reproduce the assignment's common labels. `review_rating` is s
 - `playback`: playback failure, crashes, lag, connection failures, audio quality, or resource use. Example: “Every song stops after ten seconds.”
 - `downloads`: downloading, saved music, offline listening, or disappearing downloads. Example: “My downloaded songs vanished.”
 - `catalog`: missing songs or artists, search/discovery, recommendations, or lyrics. Example: “Lyrics are missing for this track.”
-- `billing`: price, charges, subscriptions, paywalls, or premium entitlement. Example: “I paid but Premium did not activate.” A paid-plan mention alone is not billing.
+- `billing`: price, charges, subscriptions, paywalls, premium entitlement, or explicitly premium-only controls. Examples: “I paid but Premium did not activate.”; “You have to pay just to skip songs.” A paid-plan mention alone is not billing (“I'm a Premium user and the app crashes” is playback).
 - `support`: contacting support or the support response. Example: “Support has not answered my ticket.”
 - `other`: general praise or criticism, unrelated content, or no supported specific topic. Example: “Great app.”
 

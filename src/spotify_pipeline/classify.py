@@ -253,7 +253,9 @@ def _attempt_recovery_batch(
                 config.label_config,
                 prior_attempts + attempts_used,
             )
-        store.expand_new_duplicate_cache_hits(config.label_config)
+        store.expand_new_duplicate_cache_hits(
+            config.label_config, [row["text_sha256"] for row in rows]
+        )
     return {
         "validated": validated is not None,
         "attempts_used": attempts_used,
@@ -331,7 +333,13 @@ def run_enrichment(
     run_id: str,
     phase: str,
     interrupt_after_batches: int | None = None,
+    restrict_text_sha256: set[str] | None = None,
 ) -> dict[str, Any]:
+    """Classify pending distinct texts in validated batches of at most 50.
+
+    ``restrict_text_sha256`` limits this pass to the named exact texts (used to
+    send a declared, capped routed subset to a model after a local pass).
+    """
     config.validate()
     if phase not in {"initial", "resume"}:
         raise ValueError("phase must be initial or resume")
@@ -344,7 +352,9 @@ def run_enrichment(
     unknown_charge_attempts = 0
     evidence_quote_repairs = 0
     with Store(state_path) as store:
-        pending = list(store.iter_pending_unique(config.label_config))
+        pending = list(
+            store.iter_pending_unique(config.label_config, restrict_text_sha256)
+        )
         for batch in chunks(pending, config.batch_size):
             original_batch = list(batch)
             partial_saved_ids: set[str] = set()
@@ -471,7 +481,10 @@ def run_enrichment(
                                         result.request_id,
                                     ),
                                 )
-                            store.expand_new_duplicate_cache_hits(config.label_config)
+                            store.expand_new_duplicate_cache_hits(
+                                config.label_config,
+                                [row["text_sha256"] for row in batch],
+                            )
                             evidence_quote_repairs += len(repaired_ids)
             if partial_saved_ids:
                 batch = [row for row in batch if row["review_id"] not in partial_saved_ids]
@@ -640,7 +653,9 @@ def run_enrichment(
                         label_config,
                         attempts_used + int(use_fallback),
                     )
-                store.expand_new_duplicate_cache_hits(label_config)
+                store.expand_new_duplicate_cache_hits(
+                    label_config, [row["text_sha256"] for row in batch]
+                )
             processed_unique += len(original_batch)
             batch_count += 1
             if interrupt_after_batches is not None and batch_count >= interrupt_after_batches:
@@ -743,17 +758,23 @@ def _failed_event(
 
 
 def _versions_from_label_config(label_config: str) -> tuple[str, str]:
-    """Recover the immutable logical prompt/schema versions from a label config."""
+    """Recover the logical prompt/schema versions from any role's label config.
 
-    marker = ":classify-"
-    if marker not in label_config:
-        return PROMPT_VERSION, SCHEMA_VERSION
-    suffix = label_config.split(marker, 1)[1]
-    prompt_version, separator, rest = suffix.partition(":")
-    if not separator:
-        return PROMPT_VERSION, SCHEMA_VERSION
-    schema_version = rest.split(":", 1)[0]
-    return prompt_version, schema_version
+    Label configs look like ``model:effort:<role>-<prompt_version>:<schema>[:...]``
+    for the classify, verify, group and memo roles.
+    """
+
+    for role in ("classify", "verify", "group", "memo"):
+        marker = f":{role}-"
+        if marker not in label_config:
+            continue
+        suffix = label_config.split(marker, 1)[1]
+        prompt_version, separator, rest = suffix.partition(":")
+        if not separator:
+            break
+        schema_version = rest.split(":", 1)[0]
+        return prompt_version, schema_version
+    return PROMPT_VERSION, SCHEMA_VERSION
 
 
 def _failed_result_event(

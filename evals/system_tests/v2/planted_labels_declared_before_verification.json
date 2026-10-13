@@ -1,0 +1,42 @@
+{
+  "CTL001": {
+    "correct_topic": "catalog",
+    "planted": false,
+    "stored_label": {
+      "intent": "praise",
+      "sentiment": 0.8,
+      "severity": 1,
+      "topic": "catalog"
+    }
+  },
+  "CTL002": {
+    "correct_topic": "usability",
+    "planted": false,
+    "stored_label": {
+      "intent": "complaint",
+      "sentiment": -0.6,
+      "severity": 2,
+      "topic": "usability"
+    }
+  },
+  "PLT001": {
+    "correct_topic": "access",
+    "planted": true,
+    "stored_label": {
+      "intent": "praise",
+      "sentiment": 0.6,
+      "severity": 1,
+      "topic": "catalog"
+    }
+  },
+  "PLT002": {
+    "correct_topic": "playback",
+    "planted": true,
+    "stored_label": {
+      "intent": "praise",
+      "sentiment": 0.5,
+      "severity": 1,
+      "topic": "billing"
+    }
+  }
+}

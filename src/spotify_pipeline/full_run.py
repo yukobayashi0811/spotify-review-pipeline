@@ -63,7 +63,7 @@ def run_full(input_path: str | Path, config_path: str | Path) -> dict[str, Any]:
     started = time.perf_counter()
     legacy_state = _resolve(root, config["legacy_state_path"])
     prompt_path = _resolve(root, config["classification_prompt_path"])
-    cli_version = _cli_version(_resolve(root, config["codex_executable"]))
+    cli_version = _cli_version(_executable(root, config["codex_executable"]))
     compatibility = check_legacy_compatibility(
         legacy_state_path=legacy_state,
         prompt_path=prompt_path,
@@ -160,7 +160,7 @@ def run_full(input_path: str | Path, config_path: str | Path) -> dict[str, Any]:
         state_path=state_path,
         output=output,
         prompt_path=prompt_path,
-        executable=_resolve(root, config["codex_executable"]),
+        executable=_executable(root, config["codex_executable"]),
         workers=int(config.get("luna_workers", 3)),
         global_limit=int(config["new_luna_distinct_limit"]),
         stop_after_new=None if approval_file.is_file() else stop_after,
@@ -189,6 +189,18 @@ def run_full(input_path: str | Path, config_path: str | Path) -> dict[str, Any]:
 def _resolve(root: Path, value: str | Path) -> Path:
     path = Path(value).expanduser()
     return path.resolve() if path.is_absolute() else (root / path).resolve()
+
+
+def _executable(root: Path, value: str) -> Path:
+    """A bare command name (``codex``) is looked up on PATH; a path is resolved."""
+    if "/" not in str(value):
+        import shutil
+
+        found = shutil.which(str(value))
+        if found is None:
+            raise RuntimeError(f"Executable {value!r} was not found on PATH")
+        return Path(found)
+    return _resolve(root, value)
 
 
 def _state_has_source(path: Path) -> bool:

@@ -5,12 +5,20 @@ on:
   pull_request:
 
 jobs:
-  unit:
+  offline-checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-      - run: python -m pip install -e .
-      - run: python -m unittest discover -s tests -v
+          python-version: "3.13"
+      - name: Install (no model credentials needed)
+        run: python -m pip install -e '.[dev,distilled]'
+      - name: Unit tests (no model calls; Luna is replaced by a fixture)
+        run: python scripts/run_tests.py --output /tmp/test_results.json
+      - name: Ranking regenerated from the committed grading export
+        run: python scripts/rerank_from_grading.py --output /tmp/rerank.csv
+      - name: Offline cost calculator and its arithmetic self-check
+        run: |
+          python cost/calculator.py --output-dir /tmp/cost-report
+          python cost/calculator.py --self-check

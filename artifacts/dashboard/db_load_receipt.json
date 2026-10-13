@@ -1,36 +1,37 @@
 {
   "status": "pass",
-  "loaded_at_utc": "2026-10-08T02:14:31+00:00",
+  "loaded_at_utc": "2026-10-13T05:12:27+00:00",
   "model_calls": 0,
   "database": {
     "server_version": "17.11",
     "schema": "spotify",
-    "total_relation_size": "302 MB"
+    "total_relation_size": "300 MB"
   },
   "input_files_sha256": {
     "data/spotify_reviews_18months.csv": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
-    "grading/records.jsonl": "8d8c5c51962c717804964008868a836b7951da17bc00a5e21f0510f7fb24d2f1",
+    "grading/records.jsonl.gz": "ed67701846b18d960c7be218131894aa0291d1399daeb53c3765dfd5e100b7bb",
     "grading/run.json": "09bf8e059a1517c9fd5d01d2ab9f43731b5c8f0f9d51da89daa40288a574645e",
     "grading/ingestion.json": "5512dd793b0bde3bd51f28b20b440108f3c9bab31233819bea5f32ce19482153",
-    "grading/membership.csv": "9c2811ed0aa838fb0a2c80d7a961e60c62bddfc1fb8ac89dd90904582699da01",
-    "grading/ranking.csv": "c67156b1ec71eba2d497e560d612ec65f3941f10ca47ec787a19d204d34f8653",
-    "grading/claims.csv": "2faf10251d3b191c7dbbc135bde7ae96f1f24f4f7813db5cd6988ac6384f14f8",
-    "grading/calls.jsonl": "00f74bfe9b7a7b9ffbfe34238ee81d864b311acafaa097ea53121345cb9fac81",
-    "artifacts/full_run_v2/issues.csv": "215765bf5e131c6517c7e22b021b959cee75fa7a0c87d00bed896737b023255d",
-    "artifacts/full_run_v2/claims_provenance.csv": "ab0a33c59d6f97d9c7dc1fb690ef2a0e08ada0965e40df6d9b1e6b929af903c4",
-    "artifacts/full_run_v2/memo_payload.json": "1bc5d8c49333e8af99b7d669496a7e538116dcb7f4972a25835535d987fc10e6",
-    "artifacts/full_run_v2/memo_evidence_pack.json": "1ca523168c4abc24fbf61e264c4b468f69f4b4100841d35e0b39c6c7902efbee",
-    "artifacts/full_run_v2/memo.md": "e7a7826dd837368bbde791f49e57a3e081b525a14d4ec2c83e620910d0ac60e7",
-    "artifacts/full_run_v2/topic_rollup.csv": "45cfa0c50d18d457aab63be7132788df4eace29409a938acabc4d39d780ca4d2",
-    "artifacts/full_run_v2/run_report.json": "d26911b2e37ded279efd07e811ffe52fff88491af468c29c73709bf61b2aca32",
-    "artifacts/full_run_v2/sensitivity_analysis.json": "d14e96b0c6b63d5cd40e54db90d5563203a31f4986061d7bacca2af533f6f433",
+    "grading/membership.csv": "e2422f7ca38b048b8110ba02f570ae6bea989125dfc0d3a558fc89527f683c4b",
+    "grading/ranking.csv": "c1eda6c16a37a53e6ee71a630bda5c8faf485ca604d35c6be5468a00bc63a7b2",
+    "grading/claims.csv": "6302279ae938da2907c33e6e3bb4a8a89cd5e01290a74776e6066decba368141",
+    "grading/calls.jsonl": "49d62756e9711da7596dc15171ac93e984f900be83288ae9637448b82a96750b",
+    "artifacts/full_run_v4/issues.csv": "5686fe9dbdef36d4cbfbbcba4f1e6ef37c3d93d2d897a0ae07d0f78aa3bb51e6",
+    "artifacts/full_run_v4/claims_provenance.csv": "1c14a56c7f7a3866c2064fe93188fb0119a17b4b11d6e3b3cc590bd6660ffb48",
+    "artifacts/full_run_v4/memo_payload.json": "d6c069c9917437b106ca4e8dab4b4815fb0551ddc07e5c686543dcb52f45cddf",
+    "artifacts/full_run_v4/memo_evidence_pack.json": "5381f114f27b82dfbd0b724d66baccbac0feadf2f82ee72eb958cadf60b2923a",
+    "artifacts/full_run_v4/memo.md": "b48fff4b4cf5b37b83de236781d4c2734dd3f7ced7b3772716917f1d4c4c8f64",
+    "artifacts/full_run_v4/topic_rollup.csv": "700e01f831c16a7ea5d44833d13f4a1b8044a92dcbefef3ea6b1f674e99f402c",
+    "artifacts/full_run_v4/run_summary.json": "9fdb3eae0c1daab5bd7319133c3e7c00a405ae8d6fca09d9bac9c89b7798fbea",
+    "artifacts/full_run_v4/sensitivity_analysis.json": "50ca79b5e1a939e43f7a4990e60be95ebeb82276b6c762b8d931b58850d18e65",
+    "artifacts/full_run_v4/verification/verification_report.json": "a0a9bad6a8585439427838073d902761acca643c06d1d16c0b743214c181c090",
     "artifacts/full_run_v2/grouping_comparison.json": "aad8ea04863a8d9823f219ff9784c261f858eafa9f75ba7564d5dbc9bc019238",
-    "evals/verification_final/verification_relinked_report.json": "a9b1295ffb6a109c2baff06500c044a5a27b6fade7c05965c4ee15374a6a3986",
-    "evals/system_tests/system_test_report.json": "66178a5df2f4426421cddce9f97da0b96052db8f54816c84deb68aeed7723413",
-    "evals/recovery/interrupt_resume_check.json": "5fae997b695e975131662501a6122d2ac7cfc2f50e9298cc7085cc767a52cee5",
-    "cost/report.json": "97c196e3ea84f15149a512ec4068a1669ba6ef6b5f6fd618964c15b1fa27c7bc",
-    "cost/full_run_actuals.json": "5398e2fad720ac48bd02392f3cd0bee5fa9fed00532781500732c42b9d363b91",
-    "evals/golden_final_evaluation.json": "77cc9771d0e40d56bd4d298d129317c7326f0263389ce00972c9f0344efa9fb8"
+    "evals/system_tests/system_test_report.json": "d59a8271677c5c7256d253be9e28daec4910ae5003b5ba72a8bd3653e617d118",
+    "evals/recovery_v4/interrupt_resume_check.json": "dffba6a42db97ba4dd85060b9d6b2287d9221147199c22f47b081fa4599c40ce",
+    "cost/report.json": "bcbce93f6ffb01082ddf68c232771252752ac6ae86eb52bf2068337f00afcdb4",
+    "evals/golden_final_evaluation.json": "f4adf22f59cd90108662ecab8bd326e72766fba99e88ed1ef55af8f09d71df6e",
+    "evals/holdout_30_evaluation.json": "08735c7eef4f581fe1733519faba64c98c86d4ed78e03ae720c0bc911aa76dbc",
+    "cost/full_run_v4_actuals.json": "aa9d803a19c9ff54e722e1acd671c5f95b44681c397c3b56efcbbaa732bdbb60"
   },
   "checks": {
     "row_counts": {
@@ -38,13 +39,13 @@
         "source_rows": 660622,
         "completed": 660609,
         "quarantined": 13,
-        "membership_rows": 288524
+        "membership_rows": 287914
       },
       "actual": {
         "completed": 660609,
         "quarantined": 13,
         "source_rows": 660622,
-        "membership_rows": 288524
+        "membership_rows": 287914
       },
       "passed": true
     },
@@ -53,81 +54,81 @@
       "passed": true
     },
     "ranking_recomputed_in_db_equals_grading_ranking_csv": {
-      "issues": 41,
+      "issues": 44,
       "passed": true
     },
     "claims_recomputed_in_db": {
       "claims": [
         {
           "claim_id": "C001",
-          "expected": "28348",
-          "db": "28348",
+          "expected": "22475",
+          "db": "22475",
           "passed": true
         },
         {
           "claim_id": "C002",
-          "expected": "2.868351",
-          "db": "2.868351",
+          "expected": "64148",
+          "db": "64148",
           "passed": true
         },
         {
           "claim_id": "C003",
-          "expected": "81312",
-          "db": "81312",
+          "expected": "2.854194",
+          "db": "2.854194",
           "passed": true
         },
         {
           "claim_id": "C004",
-          "expected": "81312",
-          "db": "81312",
+          "expected": "64148",
+          "db": "64148",
           "passed": true
         },
         {
           "claim_id": "C005",
-          "expected": "27254",
-          "db": "27254",
+          "expected": "26570",
+          "db": "26570",
           "passed": true
         },
         {
           "claim_id": "C006",
-          "expected": "2.286307",
-          "db": "2.286307",
+          "expected": "60211",
+          "db": "60211",
           "passed": true
         },
         {
           "claim_id": "C007",
-          "expected": "62311",
-          "db": "62311",
+          "expected": "2.266127",
+          "db": "2.266127",
           "passed": true
         },
         {
           "claim_id": "C008",
-          "expected": "62311",
-          "db": "62311",
+          "expected": "60211",
+          "db": "60211",
           "passed": true
         },
         {
           "claim_id": "C009",
-          "expected": "21473",
-          "db": "21473",
+          "expected": "14449",
+          "db": "14449",
           "passed": true
         },
         {
           "claim_id": "C010",
-          "expected": "2.877241",
-          "db": "2.877241",
+          "expected": "44827",
+          "db": "44827",
           "passed": true
         },
         {
           "claim_id": "C011",
-          "expected": "61783",
-          "db": "61783",
+          "expected": "3.102429",
+          "db": "3.102429",
           "passed": true
         },
         {
           "claim_id": "C012",
-          "expected": "61783",
-          "db": "61783",
+          "expected": "44827",
+          "db": "44827",
           "passed": true
         }
       ],
@@ -137,10 +138,10 @@
       "passed": true
     },
     "memo_priority_issue_in_db_ranking": {
-      "issue_id": "I_USABILITY_04",
+      "issue_id": "I_BILLING_04",
       "passed": true
     }
   },
-  "wall_seconds": 362.105,
+  "wall_seconds": 374.649,
   "note": "The connection string is intentionally not recorded."
 }
